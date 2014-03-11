@@ -5,8 +5,125 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>mathematics</title>
         <link rel="stylesheet" type="text/css" href="./css/snailya.css" />
+        <style>
+
+.bs-docs-sidebar.affix {
+    position: static;
+}
+
+@media (min-width:768px) {
+    .bs-docs-sidebar {
+        padding-left: 20px;
+    }
+}
+
+.bs-docs-sidenav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bs-docs-sidebar .nav>li>a {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+    padding: 4px 20px;
+}
+
+.bs-docs-sidebar .nav>li>a:hover,.bs-docs-sidebar .nav>li>a:focus {
+    padding-left: 19px;
+    color: #563d7c;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 1px solid #563d7c;
+}
+
+.bs-docs-sidebar .nav>.active>a,.bs-docs-sidebar .nav>.active:hover>a,.bs-docs-sidebar .nav>.active:focus>a {
+    padding-left: 18px;
+    font-weight: 700;
+    color: #563d7c;
+    background-color: transparent;
+    border-left: 2px solid #563d7c;
+}
+
+.bs-docs-sidebar .nav .nav {
+    display: none;
+    padding-bottom: 10px;
+}
+
+.bs-docs-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+
+.bs-docs-sidebar .nav .nav>li>a:hover,.bs-docs-sidebar .nav .nav>li>a:focus {
+    padding-left: 29px;
+}
+
+.bs-docs-sidebar .nav .nav>.active>a,.bs-docs-sidebar .nav .nav>.active:hover>a,.bs-docs-sidebar .nav .nav>.active:focus>a {
+    font-weight: 500;
+    padding-left: 28px;
+}
+
+
+.bs-docs-sidebar .nav .nav .nav >li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 40px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.bs-docs-sidebar .nav .nav .nav>li>a:hover,.bs-docs-sidebar .nav .nav .nav>li>a:focus {
+    padding-left: 39px;
+}
+
+.bs-docs-sidebar .nav .nav .nav>.active>a,.bs-docs-sidebar .nav .nav .nav>.active:hover>a,.bs-docs-sidebar .nav .nav .nav>.active:focus>a {
+    font-weight: 500;
+    padding-left: 38px;
+}
+
+
+@media (min-width:992px) {
+    .bs-docs-sidebar .nav>.active>ul {
+        display: block;
+    }
+
+    .bs-docs-sidebar.affix,.bs-docs-sidebar.affix-bottom {
+        width: 213px;
+    }
+
+    .bs-docs-sidebar.affix {
+        position: fixed;
+        top: 20px;
+    }
+
+    .bs-docs-sidebar.affix-bottom {
+        position: absolute;
+    }
+
+    .bs-docs-sidebar.affix-bottom .bs-docs-sidenav,.bs-docs-sidebar.affix .bs-docs-sidenav {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width:1200px) {
+    .bs-docs-sidebar.affix-bottom,.bs-docs-sidebar.affix {
+        width: 263px;
+    }
+}
+
+        </style>
     </head>
     <body>
+    <script src="./js/jquery.min.js"></script>
 
     <div class="navbar navbar-default" role="navigation">
       <div class="container">
@@ -32,6 +149,97 @@
   <div class="body container">
     <div id="content">
         
+<script>
+$("#content").parent().css("max-width", "1300px")
+</script>
+
+
+<div class="row">
+    <div class="bs-docs-container">
+        <div class="col-md-3">
+            <div class="bs-docs-sidebar hidden-print" role="complementary">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <h1 id="type">type</h1>
+<h2 id="preface">preface</h2>
+<p>actually there are only two main things in the way for adopting hott as a working foundation:</p>
+<ul>
+<li>general hit</li>
+<li>computation rule for <span class="math">\(J\)</span> for hit and ua</li>
+</ul>
+<p>but as i already has an mental model for what the type theory is, and i think it is good enough to just make it here and study classical math using the mental foundation rather than set theory</p>
+<p>and one important thing is, when studying the <span class="math">\(Id_A\)</span> structure, you should have a clear mental model</p>
+<p>so: <strong>we take type theory as implicit foundation for our study</strong>, there are sometimes useful to think higher groups and higher categories, but we can always study them in a classical setting and then translate into hott</p>
+<hr />
+<h2 id="idea">idea</h2>
+<p>the underlaying logic of mathematical theory</p>
+<ul>
+<li>judgement</li>
+<li><span class="math">\(\Gamma ctx\)</span></li>
+<li><span class="math">\(\Gamma\vdash a: A\)</span></li>
+<li><span class="math">\(\Gamma a\equiv a': A\)</span></li>
+<li><p>inference rule, derivation</p></li>
+<li><span id="cross-universe" class="definition">universe</span></li>
+<li><span id="cross-function" class="definition">function</span></li>
+<li><span id="cross-identity-type" class="definition">identity type</span> <span class="math">\(Id_A: A\to A\to \mathcal{U}\)</span>, <span id="cross-refl" class="definition">refl</span></li>
+<li><p><span id="cross-inductive-type" class="definition">inductive type</span></p></li>
+</ul>
+<p>most rules see <span id="cross-Homotopy-Type-Theory" class="definition">Homotopy Type Theory</span> appendix 2</p>
+<p>the operational semantics is generally understandable, and the inductor and recursor is just to understand the primitive, by giving things they can do</p>
+<p>for a implementation, see Coq, or my implementation <a href="https://github.com/molikto/snailya">https://github.com/molikto/snailya</a></p>
+<h2 id="my-view">my view</h2>
+<p>set theory is static, it just presents the function as the result, and the <span class="math">\(Nat\)</span> as result. but in type theory, it is not the case</p>
+<p>one interesting case is function extensionality, which is implied by univalence axiom, which i believe is good, the functions will be equal not just equal, but there is more in here. if we see the fact that it is implied by univalence, then we should inspect why univalence is true, and also, are all <span class="math">\(id\)</span> is freely generated? because we have three source to generate <span class="math">\(id\)</span>, in higher inductive type and in univalence, they are one for <span class="math">\(=_A\)</span> and one for <span class="math">\(=_\mathcal{U}\)</span>, so we are ok here.</p>
+<p>one more issue, if we have a good system to do mathematics in computer, then we should have a pretty printer for as but much cleaver, because machines now understand what we are talking about and can give us much more help</p>
+<p>remember in set theory, we also have things like universe, it is the class and set structure, but i think the universe idea is more elegent~</p>
+<h3 id="syntax-for-inductive-type-and-higher-inductive-type">syntax for inductive type and higher inductive type</h3>
+<ul>
+<li>it is possible to think that parameterized inductive type actually brings nothing new, it is just a convenient notation?</li>
+<li>the truth is in the inductor, because when you apply a match, you should always be careful how you use them, and this is protected by the inductor (?)</li>
+<li>for general inductive type, the constructor do not depend on previous constructors, but for higher inductive type, this is inevitable.</li>
+<li>so in ordinary mathematics, the notation of function is collapsed, but in hott, we have a better structure, but why? this seems very unreasonable</li>
+<li>the thing is all about we can identify more things, we do this not by making things just equal, i.e. like in ETT and set theory, we forget things, but by equivalences, we identify things and as long as we are not caring what the id results in, i.e. in the type checker level, we just have more power, because we can identify more things equal</li>
+<li>in type theory, the notation of equal is by <span class="math">\(X=Y: \forall x(x\in X \Leftrightarrow x\in Y)\)</span>, but in HoTT, all equal is freely generated, although the <span class="math">\(J\)</span> is wired</li>
+<li>i still do not understand why type theory</li>
+<li><p>the thing is always how are you going to define the inductor.</p></li>
+<li><p><span class="math">\(J\)</span> hold but not <span class="math">\(UIP\)</span> <a href="http://homotopytypetheory.org/2011/04/10/just-kidding-understanding-identity-elimination-in-homotopy-type-theory">http://homotopytypetheory.org/2011/04/10/just-kidding-understanding-identity-elimination-in-homotopy-type-theory</a></p></li>
+</ul>
+<h3 id="problems">problems</h3>
+<p>let me state the main problems</p>
+<ul>
+<li>you do not know how to define a higher inductive type, and now as axioms, it is only propositional equal</li>
+<li>define the accepted form</li>
+<li>define the elem and intro</li>
+<li>there are computation lacking in univalence</li>
+<li><p>and inductor for hit</p></li>
+<li><p>finally i can get an feeling about 0-type, if you have two para path, then they must be joined by an surface, if you have two surface, then they must be joint by a 3-dim ball…. then you will have a very strong point, but it is nontheless a point!!!</p></li>
+<li><p>it seems to me that type theory has some mixed things together. i do not know if this is really good, they are like packaged delivery…</p></li>
+<li><p>it is really some kind of miracle that it turns out two entirely different things turns out to be the same. h-types etc..</p></li>
+</ul>
+<p><a href="#cross-universe">universe</a></p>
+<p><a href="#cross-identity-type">identity type</a></p>
+<p><a href="#cross-test2">test2</a></p>
+<ul>
+<li>on the <strong>effitiviness</strong> of type theory and category theory in mathematics…</li>
+</ul>
+<h3 id="ias-notes">IAS notes</h3>
+<ul>
+<li>definitional eq is just compute to same value… by Martif</li>
+</ul>
+<h2 id="resource">resource</h2>
+<p>the type theory here is <em>homotopy type theory</em>, see the book <span id="cross-Homotopy-Type-Theory" class="definition">Homotopy Type Theory</span></p>
+<p>CMU course: <span id="cross-2013-fall-15-819" class="definition">2013-fall-15-819</span></p>
+    </div>
+    <div class="col-md-2">
+    </div>
+</div>
+
+</div>
+<script src="./js/jquery.toc.js"></script>
+<script src="./js/toc.js"></script>
+<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
     </div>
   </div>
 
@@ -41,6 +249,6 @@
       </div>
     </div>
 
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+      <script src="./js/bootstrap.min.js"></script>
     </body>
 </html>
