@@ -58,33 +58,39 @@ $("#content").parent().css("max-width", "1300px")
     </div>
     <div class="col-md-8">
         <h1 id="type">type</h1>
-<h2 id="preface">preface</h2>
-<p>actually there are only two main things in the way for adopting hott as a working foundation:</p>
+<h2 id="idea">idea</h2>
+<p>type theory is the underlaying logic of mathematical theory</p>
+<h3 id="state-of-art">state of art</h3>
+<p>actually there are only two main things in the way for adopting <a href="#cross-hott">hott</a> as a working foundation:</p>
 <ul>
 <li>general hit</li>
-<li>computation rule for <span class="math">\(J\)</span> for hit and ua</li>
+<li>computation rule for <span class="math">\(J\)</span> for <a href="#cross-higher-inductive-type">higher inductive type</a> and <a href="#cross-univalence-axiom">univalence axiom</a></li>
 </ul>
 <p>but as i already has an mental model for what the type theory is, and i think it is good enough to just make it here and study classical math using the mental foundation rather than set theory</p>
 <p>and one important thing is, when studying the <span class="math">\(Id_A\)</span> structure, you should have a clear mental model</p>
-<p>so: <strong>we take type theory as implicit foundation for our study</strong>, there are sometimes useful to think higher groups and higher categories, but we can always study them in a classical setting and then translate into hott</p>
-<hr />
-<h2 id="idea">idea</h2>
-<p>the underlaying logic of mathematical theory</p>
+<p>so: <strong>we take type theory as implicit foundation for our study</strong>, there are sometimes useful to think higher groups and higher categories, but we can always study them in a classical setting and then translate into <a href="#cross-hott">hott</a></p>
+<h2 id="definition">definition</h2>
 <ul>
-<li>judgement</li>
+<li><span><span id="cross-type"></span><span id="cross-hott"></span><span id="cross-type-theory" class="crosslink">type theory</span></span>
+<ul>
+<li><span id="cross-judgment" class="crosslink">judgment</span>
+<ul>
 <li><span class="math">\(\Gamma ctx\)</span></li>
 <li><span class="math">\(\Gamma\vdash a: A\)</span></li>
 <li><span class="math">\(\Gamma a\equiv a': A\)</span></li>
-<li><p>inference rule, derivation</p></li>
-<li><span id="cross-universe" class="crosslink">universe</span></li>
-<li><span><span id="cross-test2"></span><span id="cross-function" class="crosslink">function</span></span></li>
-<li><span id="cross-identity-type" class="crosslink">identity type</span> <span class="math">\(Id_A: A\to A\to \mathcal{U}\)</span>, <span id="cross-refl" class="crosslink">refl</span></li>
-<li><p><span id="cross-inductive-type" class="crosslink">inductive type</span></p></li>
+</ul></li>
+<li><span id="cross-inference-rule" class="crosslink">inference rule</span>, <span id="cross-derivation" class="crosslink">derivation</span></li>
+<li>types
+<ul>
+<li><span id="cross-universe" class="crosslink">universe</span> <span class="math">\(\mathscr{U}\)</span></li>
+<li><span id="cross-function" class="crosslink">function</span></li>
+<li><span id="cross-identity-type" class="crosslink">identity type</span>, <span id="cross-reflection" class="crosslink">reflection</span> <span class="math">\({\text{refl}}\)</span></li>
+<li><span><span id="cross-higher-inductive-type"></span><span id="cross-inductive-type" class="crosslink">inductive type</span></span></li>
+</ul></li>
+</ul></li>
 </ul>
-<p>most rules see <span id="cross-Homotopy-Type-Theory" class="crosslink">Homotopy Type Theory</span> appendix 2</p>
-<p>the operational semantics is generally understandable, and the inductor and recursor is just to understand the primitive, by giving things they can do</p>
-<p>for a implementation, see Coq, or my implementation <a href="https://github.com/molikto/snailya">https://github.com/molikto/snailya</a></p>
-<h2 id="my-view">my view</h2>
+<p>most rules see <a href="#cross-res-hott">res-hott</a> appendix 2</p>
+<h2 id="random">random</h2>
 <p>set theory is static, it just presents the function as the result, and the <span class="math">\(Nat\)</span> as result. but in type theory, it is not the case</p>
 <p>one interesting case is function extensionality, which is implied by univalence axiom, which i believe is good, the functions will be equal not just equal, but there is more in here. if we see the fact that it is implied by univalence, then we should inspect why univalence is true, and also, are all <span class="math">\(id\)</span> is freely generated? because we have three source to generate <span class="math">\(id\)</span>, in higher inductive type and in univalence, they are one for <span class="math">\(=_A\)</span> and one for <span class="math">\(=_\mathcal{U}\)</span>, so we are ok here.</p>
 <p>one more issue, if we have a good system to do mathematics in computer, then we should have a pretty printer for as but much cleaver, because machines now understand what we are talking about and can give us much more help</p>
@@ -104,62 +110,1236 @@ $("#content").parent().css("max-width", "1300px")
 <h3 id="problems">problems</h3>
 <p>let me state the main problems</p>
 <ul>
-<li>you do not know how to define a higher inductive type, and now as axioms, it is only propositional equal</li>
+<li>you do not know how to define a higher inductive type, and now as axioms, it is only propositional equal
+<ul>
 <li>define the accepted form</li>
 <li>define the elem and intro</li>
-<li>there are computation lacking in univalence</li>
-<li><p>and inductor for hit</p></li>
+</ul></li>
+<li>there are computation lacking in univalence
+<ul>
+<li>and inductor for hit</li>
+</ul></li>
 <li><p>finally i can get an feeling about 0-type, if you have two para path, then they must be joined by an surface, if you have two surface, then they must be joint by a 3-dim ball…. then you will have a very strong point, but it is nontheless a point!!!</p></li>
 <li><p>it seems to me that type theory has some mixed things together. i do not know if this is really good, they are like packaged delivery…</p></li>
 <li><p>it is really some kind of miracle that it turns out two entirely different things turns out to be the same. h-types etc..</p></li>
-</ul>
-<p><a href="#cross-universe">universe</a></p>
-<p><a href="#cross-identity-type">identity type</a></p>
-<p><a href="#cross-test2">test2</a></p>
-<ul>
-<li>on the <strong>effitiviness</strong> of type theory and category theory in mathematics…</li>
+<li><p>on the <strong>effitiviness</strong> of type theory and category theory in mathematics…</p></li>
 </ul>
 <h3 id="ias-notes">IAS notes</h3>
 <ul>
 <li>definitional eq is just compute to same value… by Martif</li>
 </ul>
+<h3 id="res-cmu-course-notes"><a href="#cross-res-cmu-course">res-cmu-course</a> notes</h3>
+<p>the course has different way telling HTT, it first use IPL, the <em>type theory without variables</em> and corresponding Hayting algebra, then go IPL with type, then ITT… i think this is wired</p>
+<ul>
+<li>notes of week 1-3 is not about type theory but ITT</li>
+<li>week 4
+<ul>
+<li>judgments</li>
+<li>…</li>
+</ul></li>
+<li><p>in ITT, <span class="math">\(refl\)</span> is the only intro rule!!!!… so it is so boring….</p></li>
+<li><p>think <span class="math">\(Id\)</span> as inductively generated family indexed by <span class="math">\(x\)</span> and <span class="math">\(y\)</span></p></li>
+<li>in ITT… he saids the <span class="math">\(Id-elem\)</span> is because we only have one <span class="math">\(Id-intro\)</span> so the whole big formula is just… shitty…
+<ul>
+<li>we will introduce new form of <span class="math">\(Id\)</span> but the shittly rule will continue to be valid… how?</li>
+</ul></li>
+<li><p>what i am thinking is that, the computation rule of identity is just that applying <span class="math">\(trans(p_1, p_2)\)</span> will not compute because the inductor <span class="math">\(J\)</span> only compute when <span class="math">\(J(a, a, refl_a)\)</span> so we can see that <span class="math">\(refl_x = relf_x^{-1}\)</span> by definition, or say, by computing the inductive, but we are not going to compute for different <span class="math">\(p_1 \neq \p_2\)</span> it is just like <span class="math">\(succ(x)\)</span> will not compute, but can we get something out? like in <span class="math">\(\Pi\)</span>?</p></li>
+<li><p>fibers</p></li>
+<li><p>by computation, we means that all elements of a type has normal representation. so lem is not computation</p></li>
+<li><p>what kind of madness will a guy abstract out something called <span class="math">\(J\)</span> to replace the old-good reflective and transitive? but it is just that all these rules like product etc. is meaningless, the meaning is given by us</p></li>
+<li><p>so why it is called induction? you proof the <strong>base case</strong> then you have it for all? it is like no matter how many path you define, the only base case you have is <span class="math">\(refl\)</span>, but why?</p></li>
+<li><p>so basically form this, you can deduce the functionality for various types, just use the <span class="math">\(refl\)</span>!… this is silly…</p></li>
+<li><strong>lifting property</strong>
+<ul>
+<li>yes… equal <span class="math">\(x\)</span> gives equal type <span class="math">\(A[x]\)</span>, but what this equal means? for example, if we define a type <span class="math">\(A\)</span> indexed by an interval, then what does two <strong>inductive type</strong> equal means? though it means <span class="math">\(tr(p)\)</span>, but what is it?</li>
+<li>he shows that the two type is equal, and also there is a bejection</li>
+</ul></li>
+<li><p>i think by lecture 08 and the exercises i finally have know what it means in identity type…</p></li>
+<li><p>the proof of <span class="math">\(B[a]\)</span> is very related by <span class="math">\(B[a']\)</span>!!! this is what proof-relevant!!!</p></li>
+<li><p>inaccessible cardinal, he says that <span class="math">\(\omega\)</span> is an inaccessible cardinal… what a brilliant idea!!!</p></li>
+<li><p>h-level: things have large size tends to have large dimension</p></li>
+<li><p><span class="math">\(\Pi-F\)</span> is just <span class="math">\(U-I-\Pi\)</span></p></li>
+<li>universal polymorphism: i should implement it!!!
+<ul>
+<li>it is dam difficult to write down the code the universe has no solution…</li>
+</ul></li>
+<li>axiom of extensionality
+<ul>
+<li>under context <span class="math">\(x\)</span> <span class="math">\(y\)</span>, you can proof <span class="math">\(x +y = y + x\)</span> and you by transport <span class="math">\(\lambda x. \lambda    y.    x + y = \lambda x. \lambda y.y+x\)</span>, but they are not definitional equal, you can always normalize by applying the function, but how can you normalize a lambda? so we add that if <span class="math">\(Id_A(x, y)\)</span> then <span class="math">\(x\equiv y\)</span></li>
+<li>so when you want to know if <span class="math">\(x \equvi y\)</span>, then you have terrible things happening… haha!!! so it is a totally bad idea!!!</li>
+<li>actually, with out the extensionality, there is no contradiction in my option…</li>
+</ul></li>
+<li><p>in mathematics, function is one-side-injection relations, they do not tell at all how the elements is get. but in hott, it is different, set theory use extensionality, but in tt, it is not the case</p></li>
+<li><p>if we have extensionality, then because <span class="math">\(x +y\equiv y +x\)</span> then <span class="math">\(\lambda x. \lambda y .x + y \equiv \lambda x. \lambda y. y + x\)</span> then we have the <span class="math">\(refl\)</span></p></li>
+<li>he has some remarks about ITT and ETT
+<ol style="list-style-type: decimal">
+<li>something happened in HoTT is bad</li>
+<li>ITT type checking is intractable… why?</li>
+</ol></li>
+<li><p>so my version is not ETT… it is incomplete ITT…</p></li>
+<li><p>so in the past, they use ITT just for the decidable type checking, without even thinking they can add more path…</p></li>
+<li><p>why not category - groupoid - set, we can pick anyone… actually??</p></li>
+<li><p>in ETT, we have <strong>strict sets</strong> they are just eq, but in ITT we proof that the <span class="math">\(Id\)</span> is equal, but not judgementally, which cannot be done</p></li>
+<li><p>in the path thing, we can talk about how a proof can be conveyed to a proof in other place!!</p></li>
+<li><p>i think because we have new identity, we have trouble with <span class="math">\(J\)</span></p></li>
+<li><p>in ITT, everything is cool, but he do not want to go into meta-theory</p></li>
+<li><p>for Harper, if it has no computational meaning, it is basically useless</p></li>
+<li><p>yes… the inductive rule of identity, it worried me greatly…</p></li>
+<li><p>it is the lie holds only by bigger lies…</p></li>
+<li><p>so in hott, functors is more basic than functions!</p></li>
+<li><p>homotopy is assembly… and hott is advanced pl…</p></li>
+<li><p>compile and encoding nat in sets</p></li>
+<li>so it is not safe to say <span class="math">\(=_\mathcal{U}\)</span>, but we say… and make them higher!
+<ul>
+<li>in ITT they are different, in equivalence, we use homtopoy, not function of types</li>
+</ul></li>
+<li><p>function extensionality: in the ITT setting, we just do not know, in HoTT, we said there are one path, but we cannot define now. and in ETT, we said they are just equal</p></li>
+<li><p>negative of type has easy path structure, but positive type has not….</p></li>
+<li><p>i think i begin to have a metal model on what’s going on in this kind of things…</p></li>
+<li><p>yes… small type matters in theory</p></li>
+<li><p>what is universe? if we can identify universe as a small thing, we might make true progress</p></li>
+<li><p>i still cannot understand the book i think</p></li>
+</ul>
 <h2 id="resource">resource</h2>
-<p>the type theory here is <em>homotopy type theory</em>, see the book <span id="cross-Homotopy-Type-Theory" class="crosslink">Homotopy Type Theory</span></p>
-<p>CMU course: <span id="cross-2013-fall-15-819" class="crosslink">2013-fall-15-819</span></p>
+<p><span id="cross-res-hott" class="crosslink">res-hott</span> Homotopy Type Theory</p>
+<p><span id="cross-res-cmu-course" class="crosslink">res-cmu-course</span> <a href="http://www.cs.cmu.edu/~rwh/courses/hott">http://www.cs.cmu.edu/~rwh/courses/hott</a></p>
+<p><span id="cross-res-ias" class="crosslink">res-ias</span> <a href="http://uf-ias-2012.wikispaces.com/Higher+Inductive+Types">http://uf-ias-2012.wikispaces.com/Higher+Inductive+Types</a></p>
+<h1 id="category">category</h1>
+<h2 id="idea-1">idea</h2>
+<p>it is a very good language we use to study the structure</p>
+<p>there are things called higher categories, but i think i cannot study them now…</p>
+<h2 id="definition-1">definition</h2>
+<ul>
+<li><span id="cross-category" class="crosslink">category</span>
+<ul>
+<li><span id="cross-object" class="crosslink">object</span></li>
+<li><span id="cross-morphism" class="crosslink">morphism</span>
+<ul>
+<li><span id="cross-identity-morphism" class="crosslink">identity morphism</span></li>
+<li><span id="cross-isomorphism" class="crosslink">isomorphism</span></li>
+<li><span id="cross-domain" class="crosslink">domain</span></li>
+<li><span id="cross-codomain" class="crosslink">codomain</span></li>
+<li><span id="cross-monomorphism" class="crosslink">monomorphism</span>
+<ul>
+<li><span class="math">\(f g = f h\)</span> implies <span class="math">\(g = h\)</span></li>
+<li>if <span class="math">\(f: A\to B\)</span> has a left inverse <span class="math">\(g: B\to A\)</span>, <span class="math">\(g f = id_A\)</span>, then <span class="math">\(f\)</span> is monomorphism, and <span class="math">\(g\)</span> is <span id="cross-epimorphism" class="crosslink">epimorphism</span></li>
+<li>it shows that the idea of left/right inverse is useful sometimes</li>
+</ul></li>
+<li><span id="cross-epimorphism" class="crosslink">epimorphism</span></li>
+</ul></li>
+<li><a href="#cross-composition-law">composition law</a> of morphism
+<ul>
+<li><a href="#cross-associative">associative</a></li>
+<li>identity, it is not <a href="#cross-identity-type">identity type</a>, it should be <a href="#cross-refl">refl</a>, isomorphism is <a href="#cross-identity-type">identity type</a></li>
+</ul></li>
+</ul></li>
+<li><span id="cross-functor" class="crosslink">functor</span>, you can understand as functions of type theory
+<ul>
+<li><span id="cross-adjoint-functor" class="crosslink">adjoint functor</span>
+<ul>
+<li>dual</li>
+<li>in Wikipedia, it says that it means optimization</li>
+<li><span class="math">\(\mathcal{Ab}(F(S), A) \approxeq \mathcal{S}(S, U(A))\)</span> between the functor take <span id="cross-set" class="crosslink">set</span> to <span id="cross-freely-generated-abelian-group" class="crosslink">freely generated abelian group</span> and the functor that from the group to the set. it means the the morphisms in one category can be fully described by morphisms in another a map from <span class="math">\(S\)</span> to <span class="math">\(U(A)\)</span> fully describe the homomorphisms from <span class="math">\(F(S)\)</span> to <span class="math">\(A\)</span></li>
+</ul></li>
+</ul></li>
+<li><span id="cross-natural-transform" class="crosslink">natural transform</span>
+<ul>
+<li><span id="cross-morphism" class="crosslink">morphism</span> of <span id="cross-functor" class="crosslink">functor</span></li>
+<li>consider the category <span class="math">\(\mathcal{Cat}\)</span> the objects is categories, and the morphisms is functors, and consider for a object <span class="math">\(A\)</span> and <span class="math">\(B\)</span> which themselves are category, the functors <span class="math">\(A\to B\)</span> can have higher structures, what is it?</li>
+<li>for <span id="cross-functor" class="crosslink">functor</span> <span class="math">\(F, G: \mathcal{C}\to \mathcal{D}\)</span>, we have a for each <span class="math">\(A\in \mathcal{C}\)</span>, called <span id="cross-component" class="crosslink">component</span> of <span class="math">\(\alpha\)</span> at <span class="math">\(x\)</span>, it has a <span id="cross-morphism" class="crosslink">morphism</span> <span class="math">\(\alpha_A:F(A)\to G(A)\)</span> such that <span class="math">\[...\]</span></li>
+</ul></li>
+<li><span id="cross-natural-isomorphism" class="crosslink">natural isomorphism</span> is <span id="cross-isomorphism" class="crosslink">isomorphism</span> of <span id="cross-functor" class="crosslink">functor</span>
+<ul>
+<li>if <span class="math">\(\alpha_A\)</span> is <span id="cross-isomorphism" class="crosslink">isomorphism</span>s, then we have <span id="cross-natural-isomorphism" class="crosslink">natural isomorphism</span></li>
+</ul></li>
+</ul>
+<h2 id="example">example</h2>
+<ul>
+<li><p><span class="math">\(Id_\mathcal{G}\)</span> the ideal functor of <span id="cross-group" class="crosslink">group</span>, and <span class="math">\(^op\)</span> the opposite functor has a natural isomorphism</p></li>
+<li><span id="cross-category-equivalence" class="crosslink">category equivalence</span>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Equivalence_of_categories">Wikipedia</a></li>
+<li>an (which means they are not equivalence, they are equivalence in certain ways) equivalence of category is two <span id="cross-functor" class="crosslink">functor</span> <span class="math">\(F,G\)</span> such that there are two <span id="cross-natural-isomorphism" class="crosslink">natural isomorphism</span>s <span class="math">\(F G\to Id\)</span> and <span class="math">\(G F \to Id\)</span></li>
+</ul></li>
+<li><p><span id="cross-category-connected" class="crosslink">category connected</span></p></li>
+<li><span id="cross-diagram" class="crosslink">diagram</span>
+<ul>
+<li>a <span class="math">\(\mathcal{D}\)</span>-shaped diagram in <span class="math">\(\mathcal{C}\)</span> is a functor <span class="math">\(F: \mathcal{D}\to \mathcal{C}\)</span></li>
+<li><span class="math">\(\mathcal{D}[\mathcal{C}]\)</span> is the category of diagrams</li>
+<li><span class="math">\(\hat{C}\)</span> is the diagram sends to constant <span class="math">\(C\)</span> and <span class="math">\(id_C\)</span></li>
+</ul></li>
+<li>limits
+<ul>
+<li><span id="cross-limit" class="crosslink">limit</span></li>
+<li><span id="cross-colimit" class="crosslink">colimit</span></li>
+<li><span id="cross-product" class="crosslink">product</span></li>
+<li><span id="cross-coproduct" class="crosslink">coproduct</span></li>
+<li><span id="cross-initial" class="crosslink">initial</span></li>
+<li><span id="cross-terminal" class="crosslink">terminal</span></li>
+<li><span id="cross-pullback" class="crosslink">pullback</span>
+<ul>
+<li>as a <span id="cross-universal-property" class="crosslink">universal property</span>, unique up to iso</li>
+<li>if you have <span id="cross-equalizer" class="crosslink">equalizer</span> and <span id="cross-product" class="crosslink">product</span> you can construct the pullback</li>
+<li>May, p21, what’s this pullback?</li>
+</ul></li>
+<li><span id="cross-equalizer" class="crosslink">equalizer</span></li>
+<li><span id="cross-coequalizer" class="crosslink">coequalizer</span></li>
+<li><span id="cross-complete" class="crosslink">complete</span>
+<ul>
+<li>have all <span id="cross-limit" class="crosslink">limit</span>s</li>
+<li>product <span id="cross-product" class="crosslink">product</span> and <span id="cross-equalizer" class="crosslink">equalizer</span> is sufficient</li>
+</ul></li>
+<li><span id="cross-cocomplete" class="crosslink">cocomplete</span>
+<ul>
+<li>have all <span id="cross-colimit" class="crosslink">colimit</span>s</li>
+<li><span id="cross-coproduct" class="crosslink">coproduct</span> and <span id="cross-coequalizer" class="crosslink">coequalizer</span> is sufficient</li>
+</ul></li>
+</ul></li>
+<li>constructs on category
+<ul>
+<li><span id="cross-product-category" class="crosslink">product category</span></li>
+<li><span id="cross-dual-category" class="crosslink">dual category</span></li>
+<li><span id="cross-skeleton-category" class="crosslink">skeleton category</span>
+<ul>
+<li><a href="#cross-category-equivalence">category equivalence</a> <code>fix me: ce, and this</code>
+<ul>
+<li>injection <span id="cross-functor" class="crosslink">functor</span>: <span class="math">\(J: sk\mathcal{l}\to \mathcal{l}\)</span></li>
+<li>inverse functor: you know~</li>
+</ul></li>
+</ul></li>
+<li><span id="cross-arrow-category" class="crosslink">arrow category</span></li>
+<li><span id="cross-slice-category" class="crosslink">slice category</span></li>
+<li><span id="cross-coslice-category" class="crosslink">coslice category</span>
+<ul>
+<li><span class="math">\(x\backslash \mathcal{C}\)</span> is the category <span class="math">\(f: x\to y\)</span> as <span id="cross-object" class="crosslink">object</span>s, and <span class="math">\(\lambda:f\to g\)</span> such that <span class="math">\(\lambda \circ f = g\)</span> as <span id="cross-morphism" class="crosslink">morphism</span>s</li>
+<li>when the category is a groupoid, then <span class="math">\(\lambda = g \circ f^{-1}\)</span> is determined</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="resources">resources</h2>
+<p><span id="cross-youtube-category-video" class="crosslink">youtube category video</span> <a href="http://simonwillerton.staff.shef.ac.uk/TheCatsters">http://simonwillerton.staff.shef.ac.uk/TheCatsters</a></p>
+<h1 id="set">set</h1>
+<h2 id="idea-2">idea</h2>
+<p>types that has no non-trivial <span id="cross-identity" class="crosslink">identity</span>, 0-type</p>
+<ul>
+<li><span class="math">\(\mathcal{Set}\)</span>
+<ul>
+<li>morphism: <span id="cross-function" class="crosslink">function</span></li>
+<li>iso: <span id="cross-bijection" class="crosslink">bijection</span></li>
+<li>mono: <span id="cross-injection" class="crosslink">injection</span></li>
+<li>epi: <span id="cross-surjection" class="crosslink">surjection</span></li>
+<li>product:</li>
+<li>coproduct:</li>
+</ul></li>
+<li><p><span id="cross-subset" class="crosslink">subset</span></p></li>
+<li><p><span id="cross-cover" class="crosslink">cover</span></p></li>
+<li><span id="cross-cardinal" class="crosslink">cardinal</span></li>
+<li><p><span id="cross-ordinal" class="crosslink">ordinal</span></p></li>
+</ul>
+<hr />
+<p>old notes on set theory</p>
+<pre><code># notes on set theory
+
+## first-order logic
+
+## set
+
+* axioms
+    * extensionality
+    * pairing
+    * union
+    * power
+    * function
+        * injective
+        * surjective
+        * bijective
+    * replacement
+    * infinity &amp; empty
+* set seq limit
+    * `lim inf A_i = \/_i /\_{j &gt;=i} A_j`, in all but finite
+    * `lim sup A_i = /\_i \/_{j &gt;=i} A_j`, in infinite sets
+    * `lim A_i`
+## ordinal numbers
+
+*we count set naturally, and compare the size*
+
+* partial ordering
+    * `p !&lt; p`
+    * `p &lt; q &amp;&amp; q &lt; r =&gt; p &lt; r`
+    * `(P, &lt;)` is a pos, `X` a subset
+        * maximal of `X`: `forall x a !&lt; x`
+        * minimal..: `forall x x !&lt; a`
+        * greatest..: `forall x x&lt;= a` =&gt; max
+        * least..: `forall x a&lt;= x` =&gt; min **do it!**
+        * upper bound: `forall x, x &lt;= a`
+        * lower bound: `forall x, a &lt;= x`
+        * sup: least upper bound
+        * inf: greatest lower bound
+    * order-perserving, isomorphism, automorphism (in order)
+* linear ordering
+    * `forall p,q: p &lt; q || p == q || q &lt; p`
+    * increasing, des, strict..?
+* well ordering: linear ordering that every non-empty subset has least
+    * initial segment
+* theorems
+    * increasing function of wo `f(x) &gt;= x`
+    * only automorphism of wo is `i_P`
+    * if two wo isomorphic, it is unique
+    * for two wo, either they are iso, or one is other's initial segment
+* ordinal numbers
+    * 1, 2, 3, 4, .... omega
+
+**fix me**
+
+
+## cardinal numbers
+
+* what it means by: `|X| = |Y|` and `|X| &lt; |Y|`
+* `|X| &lt; |P(X)|`
+* `|A| &lt;= |B| &amp;&amp; |B| &lt;= |A| =&gt; |A| = |B|`
+* cardinal arith
+* `|P(A)| = 2^|A|`
+* cardinal number: `forall b &lt; a: |a| != |b|`
+* wo `W`: `|W|` = least ordinal `a`: `|W| = |a|`
+* alephs: infinite cardinals = limit ordinals
+    * `aleph_0 = omega`
+    * `aleph_alpha + aleph_beta = aleph_alpha * aleph_beta = max(aleph_alpha, aleph_beta)`
+    * **fix me**
+
+## real numbers
+
+* `|R| = 2^{aleph_0}`
+* continuum hypothesis: `2^{aleph_0} = aleph_1}`
+* **fix me**
+
+## ac
+
+* ac: for a family of set, exists choice function
+    * every set can be well-ordered
+    * Zorn's lemma: every linear subset has upper bound =&gt; hax maximal element
+
+</code></pre>
+<h1 id="topological-space">topological space</h1>
+<h2 id="idea-3">idea</h2>
+<p>it describe what we means by a space, which has a notation of <strong>nearness</strong> of points, which means the point have some <strong>extension</strong>, so infinite extension will destroy it</p>
+<h2 id="definition-2">definition</h2>
+<ul>
+<li><span><span id="cross-topology"></span><span id="cross-topological-space" class="crosslink">topological space </span></span>
+<ul>
+<li>set, <span class="math">\(A\)</span></li>
+<li>open sets <span class="math">\(\mathcal{T}\)</span></li>
+<li><span class="math">\(\{A, \emptyset\} \subset \mathcal{T}\)</span></li>
+<li><span class="math">\(\mathcal{T}\)</span> closed under finite intersection and any union</li>
+</ul></li>
+<li><span class="math">\(\mathcal{U}\)</span>
+<ul>
+<li>morphism: <span id="cross-continuous-function" class="crosslink">continuous function</span></li>
+<li><span id="cross-path" class="crosslink">path</span>
+<ul>
+<li><span id="cross-loop" class="crosslink">loop</span></li>
+</ul></li>
+<li>mono and epi is reduced from set</li>
+<li>isomorphism: <span id="cross-homeomorphism" class="crosslink">homeomorphism</span> is not reduced from set!</li>
+<li>product: product set with weak topology for projection</li>
+<li>coproduct:</li>
+</ul></li>
+<li><span id="cross-pointed-space" class="crosslink">pointed space</span>
+<ul>
+<li><span id="cross-morphism" class="crosslink">morphism</span>: <span id="cross-continuous" class="crosslink">continuous</span> map closed by basepoint</li>
+</ul></li>
+<li>path
+<ul>
+<li><span id="cross-continuous-function" class="crosslink">continuous function</span> from <span id="cross-interval" class="crosslink">interval</span> to <span id="cross-space" class="crosslink">space</span></li>
+<li><span class="math">\(c_x\)</span> constant loop</li>
+<li><span class="math">\(f\cdot g\)</span> the path that…</li>
+<li><span class="math">\(f^{-1}\)</span> the path that…</li>
+<li>it is not <span id="cross-groupid" class="crosslink">groupid</span>, because the inverse is not <span id="cross-groupid-inverse" class="crosslink">groupid inverse</span>, but that’s true in <span id="cross-homotopy-space" class="crosslink">homotopy space</span></li>
+</ul></li>
+</ul>
+<h3 id="connectedness">connectedness</h3>
+<ul>
+<li><span id="cross-connected-space" class="crosslink">connected space</span></li>
+<li><span id="cross-path-connected-space" class="crosslink">path connected space</span></li>
+<li><span id="cross-arc-connected-space" class="crosslink">arc connected space</span></li>
+<li><span id="cross-locally-path-connected" class="crosslink">locally path connected</span>
+<ul>
+<li>locally path connected + <span id="cross-connected" class="crosslink">connected</span> <span class="math">\(\Rightarrow\)</span> <span id="cross-path-connected" class="crosslink">path connected</span></li>
+<li>a example of path connected but not locally path connected <a href="http://math.stackexchange.com/questions/135463/path-connectedness-and-locally-path-connected">http://math.stackexchange.com/questions/135463/path-connectedness-and-locally-path-connected</a></li>
+</ul></li>
+</ul>
+<h2 id="resources-1">resources</h2>
+<h1 id="homotopy-space">homotopy space</h1>
+<h2 id="example-1">example</h2>
+<ul>
+<li>real projective space
+<ul>
+<li>the real projective space <span class="math">\(\mathbb{R}P^n\)</span> is obtained by gluing antipodal points of <span class="math">\(S^n\)</span></li>
+</ul></li>
+</ul>
+<h2 id="idea-4">idea</h2>
+<ul>
+<li>the subject of algebraic topology is to give <span id="cross-algebra" class="crosslink">algebra</span> structure on a <span id="cross-space" class="crosslink">space</span></li>
+</ul>
+<h2 id="homotopy">homotopy</h2>
+<h3 id="idea-5">idea</h3>
+<p>homotopy in <span id="cross-category" class="crosslink">category</span>?</p>
+<p>two <span id="cross-continuous-function" class="crosslink">continuous function</span> between <span id="cross-space" class="crosslink">space</span> <span class="math">\(f, g: X\to Y\)</span> is homotopy if they can be <strong>continuously deformed</strong></p>
+<p>see <span id="cross-homotopy-space" class="crosslink">homotopy space</span></p>
+<h3 id="definition-3">definition</h3>
+<p><span id="cross-continuous" class="crosslink">continuous</span> function from <span class="math">\(h: X\times I\to Y\)</span>, with <span class="math">\(h(x, 0) = f(x)\)</span>, <span class="math">\(h(x, 1) = g(x)\)</span></p>
+<h3 id="question">question</h3>
+<ul>
+<li>why <span id="cross-real-line" class="crosslink">real line</span> is used here? it means the space is inherently real?</li>
+<li>can we change to other space?</li>
+</ul>
+<h2 id="homotopy-space-1">homotopy space</h2>
+<ul>
+<li>there is a <span id="cross-functor" class="crosslink">functor</span> from <span id="cross-space" class="crosslink">space</span> to the homotopy spaces <span class="math">\(h\mathcal{U}\)</span></li>
+<li>object: same, just <span id="cross-space" class="crosslink">space</span></li>
+<li><span id="cross-morphism" class="crosslink">morphism</span>: <span id="cross-continuous-function" class="crosslink">continuous function</span> to the <span id="cross-homotopy" class="crosslink">homotopy</span> class</li>
+<li><p>the <span id="cross-isomorphism" class="crosslink">isomorphism</span>s is <span class="math">\(f \cdot g \simeq id\)</span> things, which is called <span id="cross-homotopy-equivalence" class="crosslink">homotopy equivalence</span> in <span class="math">\(\mathcal{U}\)</span></p></li>
+<li><p><span id="cross-fundamental-groupoid" class="crosslink">fundamental groupoid</span></p></li>
+<li><span id="cross-pointed-homotopy-space" class="crosslink">pointed homotopy space</span></li>
+<li><p><span id="cross-fundamental-group" class="crosslink">fundamental group</span></p></li>
+</ul>
+<h2 id="pointed-homotopy-space">pointed homotopy space</h2>
+<h3 id="idea-6">idea</h3>
+<p>just like <span id="cross-homotopy-space" class="crosslink">homotopy space</span>, <span class="math">\(h\mathcal{T}\)</span></p>
+<h3 id="functor">functor</h3>
+<ul>
+<li><span id="cross-object" class="crosslink">object</span>: same, just <span id="cross-pointed-space" class="crosslink">pointed space</span></li>
+<li><span id="cross-morphism" class="crosslink">morphism</span>: point-closed <span id="cross-continuous-function" class="crosslink">continuous function</span> to homotopy classes under homotopy from <span class="math">\((X,x)\)</span> to <span class="math">\((Y,y)\)</span>, the homotopy keeps basepoint fixed all the time, isomorphism is also called based homotopy equivalence</li>
+<li>the fundamental group functor factor though pointed homotopy space, because for a 2 based homotopy equivalence map, they maps to same group</li>
+<li><p>an based homotopy equivalence induce an isomorphism in fundamental group</p></li>
+<li><p>is there exist two continuous function that can only be homotopy in <span class="math">\(h\mathcal{U}\)</span> but not <span class="math">\(h\mathcal{T}\)</span>, i.e. only exist homotopy that moves basepoint in the middle of the transform <code>fix me</code></p></li>
+</ul>
+<h2 id="homotopy-invariance">homotopy invariance</h2>
+<ul>
+<li><span class="math">\(h: p\simeq q\)</span> then we have paths <span class="math">\(a(t): p(x)\to q(x)\)</span> in <span class="math">\(Y\)</span> by <span class="math">\(a(t) = h(x, t)\)</span> which is the homotopy reduced to <span class="math">\(Y\)</span> by projection on base point <span class="math">\(x\)</span></li>
+<li><p>then we have <span class="math">\[\gamma[a]\circ p_* = q_*: \pi_1(X, x)\dashrightarrow \pi_1(Y, p(x)) \to \pi_1(Y, q(x))\]</span></p></li>
+<li><p>proof by proofing that a certain path is zero, which we can construct as a border of a map from <span class="math">\(I\times I\)</span> which is contractible, so we proof it is homotopy to zero</p></li>
+<li><p>this proofs, if you map by homotopy, then the group is isomorphism by some path isomorphism</p></li>
+<li>relation to <span id="cross-fundamental-group" class="crosslink">fundamental group</span></li>
+<li><p>because <span class="math">\(\mathcal{U}\to h\mathcal{U}\)</span> has no base point, we cannot get the fundamental group, but we have <span class="math">\(f: X\to Y\)</span> is homotopy equivalence, then <span class="math">\(f_*\)</span> is isomorphism for all <span class="math">\(x\)</span>, the proof uses the homotopy function induce isomorphism in fundamental group, blabala…</p></li>
+<li>a space is contractible if there is an isomorphism in homotopy space to zero</li>
+<li>then the fundamental group is zero, because there fundamental group is isomorphic</li>
+<li><p>but this is not necessory, for example, there are no isomorphism form <span class="math">\(S^2\)</span> to <span class="math">\(D^0\)</span> but we the fundamental group is still zero, this is because higher homotopy strucutrue</p></li>
+</ul>
+<h2 id="fundamental-groupoid">fundamental groupoid</h2>
+<h3 id="idea-7">idea</h3>
+<p>functor from space <span class="math">\(\mathcal{U}\)</span> to <span id="cross-groupoid" class="crosslink">groupoid</span> <span class="math">\(\mathcal{GP}\)</span></p>
+<ul>
+<li><span class="math">\([f]\)</span> the <span id="cross-homotopy" class="crosslink">homotopy</span> class of <span id="cross-path" class="crosslink">path</span> <span class="math">\(f\)</span> in the <strong>paths</strong> from <span class="math">\(x\)</span> to <span class="math">\(y\)</span>, it is not just <span id="cross-homotopy" class="crosslink">homotopy</span> of the path considered as <span class="math">\(I \to X\)</span>, in a type theory view, this might be easy, for we can consider it be the type <span class="math">\(Path(X, x, y)\)</span></li>
+<li><span class="math">\(f: x \to y\)</span>, <span class="math">\(g: y\to z\)</span></li>
+<li><span class="math">\([g][f] = [g\cdot f]\)</span>, notice the order</li>
+<li><span class="math">\([f]^{-1} = [f^{-1}]\)</span></li>
+<li>it is a <span id="cross-groupiod" class="crosslink">groupiod</span>
+<ul>
+<li><span class="math">\([f]^{-1}[f] = [f^{-1}f] = [c_x]\)</span></li>
+</ul></li>
+</ul>
+<p>by <span id="cross-van-Kampen" class="crosslink">van Kampen</span>, fundamental groupoid preserve certain <span id="cross-colimit" class="crosslink">colimit</span>s</p>
+<h3 id="relation">relation</h3>
+<p>for a <span id="cross-path-connected-space" class="crosslink">path connected space</span>, the fundamental groupoid is <span id="cross-groupoid-connected" class="crosslink">groupoid connected</span>, which is a special case of <span id="cross-category-connected" class="crosslink">category connected</span>, so it is <span id="cross-category-equivalence" class="crosslink">category equivalence</span> to the <span id="cross-skeleton-category" class="crosslink">skeleton category</span> of fundamental groupoid, which is <span id="cross-fundamental-group" class="crosslink">fundamental group</span></p>
+<h2 id="van-kampen-theorem">van Kampen theorem</h2>
+<h3 id="idea-8">idea</h3>
+<p>that the fundamental groupoid functor preserves certain colimits</p>
+<h3 id="groupoid-version">groupoid version</h3>
+<ul>
+<li><span class="math">\(\mathcal{O}\)</span> be a <span id="cross-cover" class="crosslink">cover</span> of <span id="cross-space" class="crosslink">space</span> <span class="math">\(X\)</span> by <span id="cross-path-connected" class="crosslink">path connected</span> <span id="cross-open" class="crosslink">open</span> sets, closed under finite <span id="cross-intersection" class="crosslink">intersection</span></li>
+<li>as a category morphism are <span id="cross-inclusion" class="crosslink">inclusion</span>s of subsets, gives a <span id="cross-diagram" class="crosslink">diagram</span> <span class="math">\[\Pi | \mathcal{O}: \mathcal{O}\to\mathcal{GP}\]</span></li>
+<li>the <span id="cross-groupoid" class="crosslink">groupoid</span> <span class="math">\(\Pi(X)\)</span> is the <span id="cross-colimit" class="crosslink">colimit</span> of the diagram <span class="math">\[\Pi(X)\cong colim_{U\in \mathcal{O}}\Pi(U)\]</span></li>
+</ul>
+<p>the proof is very natural</p>
+<h3 id="group-version">group version</h3>
+<p>statement same as above</p>
+<ul>
+<li>first by skeleton category, we proof for finite case, it is because we need a base to inductively define the reverse <span class="math">\(J\)</span> for skeleton category</li>
+<li>then it is proofed for infinite verson <code>fix me</code></li>
+</ul>
+<h3 id="example-2">example</h3>
+<p>p20 proposition and exercises bellow, i do not know how to compute the push outs… <code>fix me: not understand the pushout now</code></p>
+<h2 id="fundamental-group">fundamental group</h2>
+<ul>
+<li>table of contents {: toc}</li>
+</ul>
+<h3 id="idea-9">idea</h3>
+<ul>
+<li><p><span id="cross-functor" class="crosslink">functor</span> from <span id="cross-pointed-space" class="crosslink">pointed space</span> <span class="math">\(\mathcal{T}\)</span> to <span id="cross-group" class="crosslink">group</span> <span class="math">\(\mathcal{G}\)</span></p></li>
+<li>functor</li>
+<li>object: point space to group</li>
+<li>morphism: <span class="math">\(p: X\to Y\)</span> to group <span class="math">\(homomorphism\)</span>, <span class="math">\(p_*: \pi_1(X, x)\to \pi_1(Y, y)\)</span> by <span class="math">\(p_*[f] = [p\circ f]\)</span></li>
+<li>certain colimit is preserved under fundamental group <span id="cross-van-Kampen" class="crosslink">van Kampen</span></li>
+<li><p><span id="cross-product" class="crosslink">product</span> is preserved, it is proofed by <strong>universal property</strong> but <code>fix me</code></p></li>
+<li><p>we see that <span class="math">\(\pi_1(X,x)\)</span> the homotopy <span id="cross-loop" class="crosslink">loop</span>s on <span class="math">\(x\)</span> is a <span id="cross-group" class="crosslink">group</span></p></li>
+</ul>
+<h3 id="dependency-on-base-point">dependency on base point</h3>
+<ul>
+<li><span class="math">\(a\)</span> a path, <span class="math">\(\gamma[a]\)</span> the homomorphism to move point</li>
+<li><span class="math">\(\gamma[a][f] = [a\cdot f \cdot a^{-1}]\)</span></li>
+<li>it only depends on the <span id="cross-homotopy" class="crosslink">homotopy</span> class of <span class="math">\(a\)</span></li>
+<li>it is <span id="cross-isomorphism" class="crosslink">isomorphism</span> with inverse <span class="math">\(\gamma[a^{-1}]\)</span></li>
+<li>if the group is <span id="cross-abelian" class="crosslink">abelian</span> we have <span class="math">\(\gamma[b][f] = \gamma[a][f]\)</span>, you should view the structure in the groupoid, and switch basepoint</li>
+<li>so there are <span class="math">\(n\)</span> kinds of path induced isomorphism between <span class="math">\(\pi_1(X,x)\)</span> and <span class="math">\(\pi_1(X, y)\)</span> where <span class="math">\(n\)</span> is the number of homotopy class of the path between the two point, so one homotopy class means one isomorphism is path induced, and then we can use this way to identity two group</li>
+<li><span class="math">\(S^1\times S^1\)</span> is abelian, the path induced homomorphism</li>
+<li>this is not the case when <span class="math">\(x=y\)</span>, because it might cancel by <span class="math">\(f\)</span>, for example the isomorphism of <span class="math">\(\mathbb{Z}\)</span> is never induced by path. so there should be two non-homotopy maps from <span class="math">\(S^1\)</span> to <span class="math">\(S^1\)</span></li>
+</ul>
+<h3 id="example-3">example</h3>
+<p>i think there are many homotopy class on <span class="math">\(S^1 \times S^1\to S^1\times S^1\)</span>, examples are projection, id, and swap</p>
+<h2 id="calculation">calculation</h2>
+<ul>
+<li><p><span class="math">\(\pi_1(\mathbb{R}) = 0\)</span></p></li>
+<li><span class="math">\(\pi_1(S^1) = \mathbb{Z}\)</span></li>
+<li>define a homomorphism <span class="math">\([f]:I\to \pi(S^1,1)\)</span></li>
+<li><p><code>fix me</code></p></li>
+</ul>
+<h3 id="exercises">exercises</h3>
+<p>from <em><span id="cross-A-Concise-Course-in-Algebraic-Topology" class="crosslink">A Concise Course in Algebraic Topology</span></em></p>
+<ol style="list-style-type: decimal">
+<li>The Brouwer fixed point theorem</li>
+<li>The fundamental theorem of algebra</li>
+<li>exercises <code>fix me</code>, i do not know what’s the <span class="math">\(deg\)</span> and what’s topological group</li>
+<li>for <span id="cross-real-projective-space" class="crosslink">real projective space</span> <code>fix me</code></li>
+</ol>
+<h3 id="relations">relations</h3>
+<p><span id="cross-homotopy-space" class="crosslink">homotopy space</span> and <span id="cross-pointed-homotopy-space" class="crosslink">pointed homotopy space</span></p>
+<ul>
+<li>factor though <span class="math">\(h\mathcal{T}\to \mathcal{G}\)</span> <code>fix me</code></li>
+<li>this is obvious, if two continuous map is same in <span class="math">\(h\mathcal{T}\)</span>, then they have a <span id="cross-homotopy" class="crosslink">homotopy</span> fix basepoint, which means <span class="math">\(a(t)\)</span> above is constant, which means they maps to same fundamental group</li>
+<li>if <span class="math">\(f:X \to Y\)</span> is iso in <span id="cross-homotopy-space" class="crosslink">homotopy space</span> then <span class="math">\(f_*: \pi_1(X, x) \to \pi_1(Y, f(x))\)</span> is <span id="cross-isomorphism" class="crosslink">isomorphism</span> for all <span class="math">\(x\)</span>, it is not a functor</li>
+<li><p>for <span id="cross-contractible" class="crosslink">contractible</span> space, the fundamental group is 0</p></li>
+<li><p><span id="cross-simply-connected" class="crosslink">simply connected</span> fundamental group is zero and <span id="cross-path-connected" class="crosslink">path connected</span></p></li>
+</ul>
+<h2 id="covering-space">covering space</h2>
+<h3 id="idea-10">idea</h3>
+<ul>
+<li><span class="math">\(p: E\to B\)</span></li>
+<li><span id="cross-surjective" class="crosslink">surjective</span></li>
+<li>each <span class="math">\(b\in B\)</span>, has <span id="cross-open" class="crosslink">open</span> <span id="cross-neighborhood" class="crosslink">neighborhood</span> <span class="math">\(V\)</span>, such that each <span id="cross-disjoint-component" class="crosslink">disjoint component</span> of <span class="math">\(p^{-1}(V)\)</span> is open and mapped <span id="cross-homeomorphically" class="crosslink">homeomorphically</span> onto V by <span class="math">\(p\)</span>
+<ul>
+<li>so it should not “go back” in the middle?</li>
+</ul></li>
+<li><span id="cross-fundamental-neighborhood" class="crosslink">fundamental neighborhood</span>, <span id="cross-path-connected" class="crosslink">path connected</span> <span id="cross-open" class="crosslink">open</span></li>
+<li><span id="cross-totally-space" class="crosslink">totally space</span></li>
+<li><span id="cross-base-space" class="crosslink">base space</span></li>
+<li><span id="cross-fiber" class="crosslink">fiber</span> of covering <span class="math">\(p\)</span></li>
+</ul>
+<h3 id="unique-path-lifting">unique path lifting</h3>
+<ul>
+<li><span class="math">\(p: E\to B\)</span> and <span class="math">\(b\in B\)</span>, <span class="math">\(e,e'\in F_b\)</span></li>
+<li>a path <span class="math">\(f: I\to B\)</span> lefts uniquely for every <span class="math">\(e\)</span> such that <span class="math">\(g(0) = e\)</span> and <span class="math">\(p\circ g = f\)</span>. the proof is actually easy</li>
+<li><p>equivalent path lifts to equivalent path, and hence <span class="math">\(g(1)=g'(1)\)</span>. proof <span class="math">\(p\circ h: I\times I \to B\)</span>, compact, fundamental cover, finite cover, project back, base, finite cover, grid, grow the border (a old square only can all include the line or include nothing, so you can grow it!), inductively define the homotopy <code>fix me: i should check this proof</code></p></li>
+<li>regular: <span class="math">\(p_*\)</span> project to normal group</li>
+<li>universal: <span id="cross-simply-connected" class="crosslink">simply connected</span> cover</li>
+<li><p>for a universal cover, <span class="math">\(F_b\)</span> are in bijective with <span class="math">\(\pi_1(B, b)\)</span></p></li>
+</ul>
+<h3 id="example-4">example</h3>
+<ul>
+<li>for <span class="math">\(n \geq 3\)</span>, <span class="math">\(\mathbf{R}P^n\)</span> covered by <span class="math">\(S^n\)</span>, then we can see that <span class="math">\(\pi_1(\mathbf{R}P^n) =2\)</span></li>
+</ul>
+<h3 id="cont.">cont.</h3>
+<ul>
+<li><span id="cross-coslice-category" class="crosslink">coslice category</span> of the groupoid</li>
+<li><span class="math">\(St(x)\)</span></li>
+<li>covering of groupoid</li>
+<li><span id="cross-surjective" class="crosslink">surjective</span></li>
+<li>restricts to bijection <span class="math">\(p:St(e)\to St(p(e))\)</span> for each <span class="math">\(e\)</span></li>
+<li>the def of covering groupoid is just the useful properties of covering space. above can be reformulated as induced functor <span class="math">\(\Pi(p):\Pi(E)\to \Pi(B)\)</span> of cover space <span class="math">\(p\)</span> induce a covering groupoid</li>
+<li><span class="math">\(p_*: \pi_1(E, e)\to \pi_1(B,b)\)</span> is <span id="cross-monomorphism" class="crosslink">monomorphism</span> and base changing group is <span id="cross-conjugate" class="crosslink">conjugate</span>, and as one runs though <span class="math">\(e'\)</span>, we runs through conjugate groups in <span class="math">\(\pi_1(B,b)\)</span></li>
+<li>examples: i suspect all finite cover will leave the fundamental group unchanged, but in the infinite circle case, we can see that it is really monomorphism, because <span class="math">\(e\)</span> back, then <span class="math">\(b\)</span> must back, but not reverse</li>
+<li>i cannot found a example that is really non-trivial conjugate, they are all surjective or not moving, i can found an example it is non-trivial subgroup, just when you cannot come back by something. for a non-trivial conjudate, see Hatcher, p58, (10)</li>
+<li>run though conjugate, but still not the whole group sometimes</li>
+<li>translation function <span class="math">\(T(b): \mathcal{B}\to \mathcal{Set}\)</span> (the set of fibers at a point), <span class="math">\(T(f)\)</span> is a morphism in <span class="math">\(\mathcal{Set}\)</span> which depends on <span class="math">\(f\)</span> will have different behaviour</li>
+<li><p>fibers has same <span id="cross-cardinality" class="crosslink">cardinality</span></p></li>
+<li>regular: <span class="math">\(p(\pi(\mathcal{E}, e))\)</span> is normal subgroup of <span class="math">\(\pi(\mathcal{B}, b)\)</span></li>
+<li><p>universal: <span class="math">\(p(\pi(\mathcal{E}, e)) = \{e\}\)</span></p></li>
+</ul>
+<h2 id="resource-1">resource</h2>
+<p><span id="cross-A-Concise-Course-in-Algebraic-Topology" class="crosslink">A Concise Course in Algebraic Topology</span></p>
+<h1 id="algebra">algebra</h1>
+<p>it studies things <strong>algebraic</strong></p>
+<h2 id="definition-4">definition</h2>
+<ul>
+<li><p><span id="cross-abelian" class="crosslink">abelian</span></p></li>
+<li><span id="cross-monoid" class="crosslink">monoid</span></li>
+<li><span id="cross-group" class="crosslink">group</span>
+<ul>
+<li><span id="cross-abelian-group" class="crosslink">abelian group</span> <span class="math">\(\mathcal{Ab}\)</span></li>
+</ul></li>
+<li><span id="cross-groupoid" class="crosslink">groupoid</span>
+<ul>
+<li>groupoid connected
+<ul>
+<li>can be viewed as <span id="cross-category-connected" class="crosslink">category connected</span>, then the groupoid viewed as a <span id="cross-category" class="crosslink">category</span> will have <span id="cross-skeleton-category" class="crosslink">skeleton category</span> one element with full <span id="cross-isomorphism" class="crosslink">isomorphism</span></li>
+</ul></li>
+</ul></li>
+<li><span id="cross-ring" class="crosslink">ring</span></li>
+<li><span id="cross-module" class="crosslink">module</span></li>
+<li><p><span id="cross-vector-space" class="crosslink">vector space</span></p></li>
+</ul>
+<h3 id="group-action">group action</h3>
+<ul>
+<li>isotropy group
+<ul>
+<li>for <span class="math">\(s\in S\)</span> the subgroup <span class="math">\(G_s = \{g|gs=s\}\)</span></li>
+</ul></li>
+<li>group action <span class="math">\(G\times S\to S\)</span>, such that <span class="math">\(e s = s\)</span> and <span class="math">\(g^' g s = (g g^')s\)</span> for all <span class="math">\(s\)</span></li>
+<li><span id="cross-isotropy-group" class="crosslink">isotropy group</span></li>
+<li><span id="cross-free-action" class="crosslink">free action</span> if <span class="math">\(G_s\)</span> is all trivial</li>
+<li><span id="cross-orbit" class="crosslink">orbit</span> <span class="math">\(G s\)</span></li>
+<li><span id="cross-transitive-action" class="crosslink">transitive action</span> <span class="math">\(\forall s, s^'\exists g: g s = s^'\)</span>, or there is single orbit
+<ul>
+<li><span id="cross-subgroup" class="crosslink">subgroup</span> <span class="math">\(H\)</span>, then <span id="cross-coset" class="crosslink">coset</span> <span class="math">\(gH\)</span> is a transitive <span class="math">\(G\)</span>-set</li>
+<li>when <span class="math">\(G\)</span> works transitively, there is an <span id="cross-isomorphism" class="crosslink">isomorphism</span> of <span class="math">\(G\)</span>-set between <span class="math">\(S\)</span> and <span class="math">\(G/G_s\)</span> for any <span class="math">\(s\)</span> by <span class="math">\(g s\leftrightarrow g G_s\)</span></li>
+</ul></li>
+<li>category <span class="math">\(\mathcal{O}(G)\)</span> of canonical orbits
+<ul>
+<li>object: <span class="math">\(G\)</span>-sets <span class="math">\(G/H\)</span></li>
+<li>morphism: <span class="math">\(G\)</span>-map: function <span class="math">\(f\)</span> such that <span class="math">\(f(g s) = g f(s)\)</span></li>
+<li>if <span class="math">\(G\)</span> is transitively on <span class="math">\(S\)</span>, choose <span class="math">\(s\in S\)</span>, and <span class="math">\(H= G_s\)</span>, <span id="cross-Weyl-group" class="crosslink">Weyl group</span> <span class="math">\(W_H\)</span> is <span id="cross-isomorphism" class="crosslink">isomorphism</span> to group <span class="math">\(Aut_G(S)\)</span> of automorphism of <span class="math">\(S\)</span></li>
+<li>a <span class="math">\(G\)</span>-map <span class="math">\(\alpha:G/H\to G/K\)</span> has form <span class="math">\(\alpha(g H)= g \gamma K\)</span> and <span class="math">\(\gamma\in G\)</span> that <span class="math">\(\gamma^{-1}h \gamma\in K\)</span> for all <span class="math">\(h\in H\)</span> <code>fix me</code></li>
+<li>the category <span class="math">\(\mathcal{O}(G)\)</span> is isomorphism to <span class="math">\(\mathcal{G}\)</span> with objects subgroups of <span class="math">\(G\)</span> and morphisms distinct subconjugacy relations <span class="math">\(\gamma^{-1}H\gamma\subset G\)</span> for <span class="math">\(\gamma\in G\)</span></li>
+</ul></li>
+</ul>
+<h2 id="resources-2">resources</h2>
+<h1 id="statistics">statistics</h1>
+<p>from the book <em>All of Statistics</em></p>
+<p><em>isn’t all problem of statistics can be solved by big data?</em></p>
+<h2 id="probability">probability</h2>
+<h3 id="formal-definition-in-measure-theory">formal definition in measure theory</h3>
+<p><em>i have not read any books about this, but you can get much insight from wikipedia articles</em></p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Random_variable#Measure-theoretic_definition">http://en.wikipedia.org/wiki/Random_variable#Measure-theoretic_definition</a></li>
+<li>probability space - measured space with total measure 1</li>
+<li>random variable - function from <strong>measured space</strong> to <strong>measurable space</strong>, thus the latter measurable space can get an measure from the preimage
+<ul>
+<li>so what is a cdf? it is the measure function, so actually <code>R</code> can have various measures</li>
+<li>so pdf is not in favour, because it is not a good measure, it only coresponds to <strong>differentiable measure</strong></li>
+</ul></li>
+<li>conditional - induced normalized measure for subspace</li>
+<li><strong>fix me</strong> the conditional and join random variables is not well understood in the perspective now…</li>
+</ul>
+<h3 id="probability-1">probability</h3>
+<ul>
+<li>sample space, point: outcome, event, subset: events</li>
+<li>probability
+<ul>
+<li>sigma-algebra, measurable space</li>
+<li>non-neg</li>
+<li>unity</li>
+<li>sigma-additivity</li>
+</ul></li>
+<li>what it means?
+<ul>
+<li>freq</li>
+<li>Bayesian</li>
+<li>in my opinion it do not matters… the model is there, it is just a matter of calculation</li>
+<li>but it do lead to different methods</li>
+</ul></li>
+<li><code>A_n -&gt; A =&gt; P(A_n) -&gt; P(A)</code>: using def, and measure, and properties of limits
+<ul>
+<li>review: this is the proposition 1 in the positive measure section</li>
+</ul></li>
+<li><code>P(A|B) = P(AB) / P(B)</code>
+<ul>
+<li>is this kind of submeasure?</li>
+</ul></li>
+<li>event independent <code>P(AB) = P(A)P(B)</code>
+<ul>
+<li><code>P(A|B) = P(A)</code></li>
+</ul></li>
+<li>Bayes’ theorem <code>P(B) = Sum( P(B|A_i)P(A_i) )</code> is just set ops + simple probobility
+<ul>
+<li><code>P(A_i|B) = P(B|A_i)P(A_i) / P(B)</code></li>
+<li><code>P(A_i)</code> the prior probability of <code>A</code></li>
+<li><code>P(A_i|B)</code> the posterior probability of <code>A</code></li>
+</ul></li>
+</ul>
+<h3 id="random-variables">random variables</h3>
+<p><em>they are functions on a measure space to R, and you get a measure on R</em></p>
+<p><em>the so called multivarance is just linear algebra + rv</em></p>
+<p><em>if you do not consider the distribution, then what random <strong>variable</strong> means is that it is normal variables, but you can add them, try to picture youself <code>X-bar/n</code></em></p>
+<p><em>join dis is defined by <strong>P</strong>, consider youself the join dis of <code>X</code> and <code>1-X</code>? you cannot picture this! but it do has a cpf! it start at the diag from 0 to 1, but is is not differentable! (what is 2 differentable?)</em></p>
+<ul>
+<li>random variable <code>X</code>: space to <code>R</code></li>
+<li><code>P(X in A) = P(X^-1(A))</code></li>
+<li><code>P(X = x) = P(X^-1(x))</code></li>
+<li>cumulative distribution function <code>F_X(x): R -&gt; [0, 1] = P(X &lt;= x)</code>
+<ul>
+<li>theorem 2.7: CDF determines the probability structure
+<ul>
+<li>review: the induced measure is same! not the rv! for exmaple. <code>f_1 = x</code> and <code>f_2 = -x</code> for a normal</li>
+<li>so we must remember that, the function that induced the random variable is always essential</li>
+</ul></li>
+<li>theorem 2.8: <code>R -&gt; [0,1]</code> is cdf &lt;=&gt;
+<ul>
+<li>non-decreasing</li>
+<li><code>F(-inf) = 0</code> and <code>F(inf) = 1</code></li>
+<li><code>F(x) = lim_{y -&gt; x, y &gt; x} F(y)</code>
+<ul>
+<li>review: this actually concerned with that cdf is defined <code>P(X &lt;= x)</code>, it is a asymetry</li>
+</ul></li>
+</ul></li>
+<li><code>P(X = x) = F(x) - F(x-)</code></li>
+<li><code>P(x &lt; X &lt;= y) = F(y) - F(x)</code></li>
+</ul></li>
+<li>inverse cdf <code>F^-1(q) = inf(x: F(x) &gt; q)</code>
+<ul>
+<li>if <code>F</code> is strictly increasing and continuous, then it is just function inverse</li>
+<li>a simple example: try to picture the inverse of a normal</li>
+</ul></li>
+<li>probability function <code>f_X(x) = P(X = x)</code></li>
+<li>probability density functiion: <code>F_X(x) = integral from -inf to x f_X(t) dt</code>
+<ul>
+<li>if such a function exists, <code>X</code> is called continuous</li>
+<li><code>F</code> is differentiable</li>
+<li><code>P(X = x) = 0</code>, this is necessory, because you can using integral!!!</li>
+<li>pdf can be unbounded</li>
+<li>review: a pdf exists relays on the underline measure space to is differentiable, so it concerns about linearity, so it concerns if it is <code>R</code> or something</li>
+</ul></li>
+<li>join pf and join cpf
+<ul>
+<li>consider multivarance normal, so two join has far more different shapes, it is what it means to have a sample space, but when it is independent, we can see it is uniquely defined</li>
+<li>independent always means factorable</li>
+</ul></li>
+<li>pdf of <code>(X, Y)</code></li>
+<li>marginal probability function <code>f_X(x)</code>, <code>f_Y(y)</code></li>
+<li>marginal cdf <code>F_X</code>, <code>F_Y</code></li>
+<li>marginal density <code>f_X(x) = integral f(x, y) dy</code></li>
+<li><code>X</code>, <code>Y</code> independent: <code>forall A, B: P(X in A, Y in B) = P(X in A)P(Y in B)</code>
+<ul>
+<li>for differentialbe &lt;=&gt; <code>f_X,Y = f_X f_Y</code></li>
+<li><em>independence of random variable means we can factor the sample space, and reguard the two variable only dependent on one subspace!</em></li>
+</ul></li>
+<li>conditional pf: <code>f_{X|Y}(x|y) = P(X = x| Y = y)</code> if <code>P(Y = y) &gt; 0</code></li>
+<li>conditinal pdf: <code>f_{X|Y}(x|y) = f_{X|Y}(x|y) / f_Y(y)</code>
+<ul>
+<li><code>P(X in A| Y = y) = integral_A f</code></li>
+</ul></li>
+<li>tranform random variable, or variables =&gt; variable
+<ul>
+<li>actually it is always about calculation of a pdf or cdf</li>
+</ul></li>
+<li>iid sample</li>
+</ul>
+<h3 id="functional">functional</h3>
+<p><em>functionals from the function space to <code>R</code></em></p>
+<ul>
+<li>median <code>F^-1(1/2)</code></li>
+<li><code>E(X) = integral x dF(x) = EX = mu_X</code>
+<ul>
+<li><em>if you have two variable, you need two integral. thinking the num of rv as the dimension!!! picture youself a multivariance nomral</em></li>
+<li>well defined: <code>integral |x| dF(x) &lt; inf</code></li>
+<li><code>E(r(X)) = integral r(x) dF(x)</code></li>
+<li><code>E(Sum(a_i X_i)) = Sum(a_i E(X_i))</code>
+<ul>
+<li>dirrectly proofed from lineary of integral, but I need better real analysis</li>
+</ul></li>
+<li><code>X_i</code> independent =&gt; <code>E(Prod(X_i)) = Prod(X_i)</code>
+<ul>
+<li>think of integral when id, the integral will be independent</li>
+</ul></li>
+<li><code>E(a'X) = a'mu</code>, <code>E(AX) = A mu</code></li>
+</ul></li>
+<li>k-th moment <code>E(X^k)</code>
+<ul>
+<li>well defined for k</li>
+<li>k-th moment exists =&gt; j &lt; k exists</li>
+</ul></li>
+<li>variance <code>sigma^2 = E(X-mu)^2 = V(X)</code>
+<ul>
+<li><em>think of a dis, and the mu is a y = mu thing, it will be a lot easy!</em></li>
+<li>standard deviation <code>sd(X) = sqrt(V(X)) = sigma</code></li>
+<li><code>V(X) = E(X^2) - mu^2</code></li>
+<li><code>V(aX+b) = a^2V(X)</code>, obvious when you thinking the line</li>
+<li><code>X_i</code> independent =&gt; <code>V(Sum(a_i X_i)) = Sum(a_i^2     V(X_i))</code>, use the same method in expectation</li>
+</ul></li>
+<li>skewness <code>k = E(X - mu)^3/sigma^3</code></li>
+<li>covariance <code>Cov(X, Y) = E((X - mu_X)(Y - mu_Y))</code>
+<ul>
+<li>corelation <code>rho = Cov(X, Y) / sigma_X sigma_Y</code></li>
+<li><code>Cov(X, Y) = E(XY) - E(X)E(Y)</code>
+<ul>
+<li><em>use the two var thing!!!</em></li>
+</ul></li>
+<li><code>-1 &lt; rho &lt; 1</code>, expand the integral</li>
+<li>when <code>X</code> and <code>Y</code> is linear or independent</li>
+<li><code>V(X + Y) = V(X) + V(Y) + 2Cov(X, Y)</code>
+<ul>
+<li><code>V(Sum(a_i X_i)) = Sum(a_i^2 V(X_1)) + 2 SumSum a_i a_j Cov(X_i, X_j)</code></li>
+</ul></li>
+<li>variance-covariance matrix <code>Pi</code></li>
+<li><code>V(a'X) = a' Pi a</code>, <code>V(AX) = A Pi A'</code></li>
+</ul></li>
+<li>conditional exception <code>E(X|Y = y) = integral x f dx</code>, <code>E(r(X,Y)| Y = y) = integral r(x, y) f dx</code> is a random variable of <code>y</code>
+<ul>
+<li>law of total exception: <code>E(E(r(X,Y)| X)) = E(r(X,Y))</code></li>
+<li><em>this is a funcional that F(R^2) -&gt; F(R)</em></li>
+</ul></li>
+<li>conditional variance <code>V(Y|X = x) = integral (y - mu(x))^2 f(y|x) dy</code>
+<ul>
+<li>law of total: <code>V(Y) = EV(Y|X) + VE(Y|X)</code>
+<ul>
+<li><em>proof?</em></li>
+</ul></li>
+</ul></li>
+<li>moment generating functions, Laplace transform <code>chi_X(t) : R -&gt; R = E(e^(tX))</code>
+<ul>
+<li><strong>fix me</strong></li>
+</ul></li>
+<li><code>X_i</code> idd
+<ul>
+<li>sample mean <code>X_n-bar = Sum(X_n) / n</code></li>
+<li>sample variance <code>S_n^2 = Sum((X_i - X_n-bar)^2) / (n - 1)</code></li>
+<li><code>E(X_n-bar) = mu</code></li>
+<li><code>V(X_n-bar) = sigma^2 / n</code></li>
+<li><code>E(S^2) = sigma^2</code>
+<ul>
+<li>it means it is unbiased</li>
+<li><em>really cmompute this thing! it is easy!</em></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="useful-examples-of-rv">useful examples of rv</h3>
+<ul>
+<li>multivarance normal <strong>fix me</strong></li>
+</ul>
+<h3 id="inequalities">inequalities</h3>
+<ul>
+<li>Markov’s: <code>X</code>, <code>t</code> &gt; 0 =&gt; <code>P(X &gt; t) &lt;= E(X) / t</code></li>
+<li>Chebyshev’s <code>P(|X-mu| &gt;= t) &lt;= sigma^2 / t^2</code> and <code>P(|(X-mu)/sigma| &gt;= k) &lt;= 1/k^2</code></li>
+<li>Hoeffding’s <strong>fix me</strong></li>
+<li>Mill’s</li>
+<li>Cauchy-Schwartz <code>E|XY| &lt;= sqrt(E(X^2)E(Y^2))</code></li>
+<li>Jensen’s <code>g</code> convex =&gt; <code>Eg(X) &gt;= g(EX)</code></li>
+</ul>
+<h3 id="convergence-of-rv">convergence of rv</h3>
+<p><em>they are just normal convergence in functional analysis</em></p>
+<p><a href="http://en.wikipedia.org/wiki/Convergence_of_random_variables">http://en.wikipedia.org/wiki/Convergence_of_random_variables</a></p>
+<ul>
+<li>p: converges in <strong>probability</strong> <code>forall e, P(|X_n - X| &gt; e) -&gt; 0 as n -&gt; 0</code>
+<ul>
+<li>add, mul, map</li>
+</ul></li>
+<li>d: converges in <strong>distribution</strong> <code>lim F_n(t) -&gt; F(t)</code>, pointwize
+<ul>
+<li>const add, const mul, map</li>
+</ul></li>
+<li>qm: converges in <strong>quadratic mean</strong> <code>E(X_n - X)^2 -&gt; 0</code>
+<ul>
+<li>add</li>
+</ul></li>
+<li>qm =&gt; p =&gt; d
+<ul>
+<li>special case: point mass d &lt;=&gt; p</li>
+</ul></li>
+<li>weak law of large numbers: <code>X_n-bar -P-&gt; mu</code></li>
+<li>clt: <code>Z_n = (X_n-bar - mu)/sqrt(V(X_n-bar)) = sqrt(n)(X_n-bar - mu)/sigma -d-&gt; N(0, 1)</code>
+<ul>
+<li>variance -&gt; sample variance is ok</li>
+<li>multivariate version <code>sqrt(n)(X-bar - mu) -d-&gt; N(0, Pi)</code></li>
+<li>delta method: <code>sqrt(n)(Y_n - mu) / sigma -d-&gt; N(0, 1)</code> &amp;&amp; <code>g</code> differentiable and <code>g'(mu) != 0</code> =&gt; <code>g(Y_n) -d-&gt; N(g(mu)</code>, <code>g'(mu)^2 * sigma^2 / n)</code>
+<ul>
+<li>multivariate delta method <strong>fix me</strong></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="stochastic-process">stochastic process</h2>
+<ul>
+<li>stochastic process, state space, index set</li>
+<li>Markov chain <code>f(x_1,...,x_n) = f(x_1)f(x_2|x_1)...</code>
+<ul>
+<li>qestions
+<ul>
+<li>when settle down</li>
+<li>parameter estimate</li>
+<li>how to construct to converge</li>
+</ul></li>
+</ul></li>
+<li>homogeneous
+<ul>
+<li>transition probabilities, transition matrix</li>
+<li><code>p_ij(n)</code> n-step transition probabilities
+<ul>
+<li><code>p_ij(m + n) = Sum( p_ik(m) + p_kj(n) )</code></li>
+</ul></li>
+<li>simulation, <code>mu_0</code> initial distribution
+<ul>
+<li><code>mu_n = m_0 P^n</code></li>
+</ul></li>
+<li>reaches, communicate (is a equvilent)</li>
+<li>irreducible, closed states, absorbing state</li>
+<li>recurrent = persistent, transient
+<ul>
+<li>recurrent &lt;=&gt; <code>Sum (p_ii (n)) = Inf</code></li>
+<li>communicate preserve recurrent and transient</li>
+<li>finite Markov chain must has one recurrent state, if it is irreducible, all state is recurrent (simple)</li>
+</ul></li>
+<li>decomposition theorem: state space <code>X = X_T \/ X_i</code>, <code>X_T</code> is trans, <code>X_i</code> is irreducible recurrent (just use partition)</li>
+<li>recurrent time (a rv): <code>T_ij = min{n | X_n = j}</code>
+<ul>
+<li>mean recurrent time <code>m_i = E(T_ii) = Sum(n f_ii(n))</code></li>
+</ul></li>
+<li>null, positive recurrent state
+<ul>
+<li>null -&gt; <code>p_ii(n) -&gt; 0</code></li>
+<li>finite state -&gt; all positive</li>
+</ul></li>
+<li>period <code>d = gcd{n|p_ii(n) &gt; 0}</code>
+<ul>
+<li>periodic: <code>d &gt; 1</code></li>
+<li>aperiodic: <code>d = 1</code></li>
+</ul></li>
+<li>ergodic = recurrent &amp; positive &amp; aperiodic (state | chain)
+<ul>
+<li>e.g. <em>23.28 Example</em></li>
+</ul></li>
+<li>stationary = invariant
+<ul>
+<li>stationary not necessory to converge!!!</li>
+</ul></li>
+<li>limitint distribution <code>P^n -&gt; [pi; pi; pi; ...]</code>, here <code>pi</code> is a vector!!!</li>
+<li>irreducible, ergogic Markov chain has unique stationary distribution <code>pi</code>, limiting distribution is also <code>pi</code>, <code>g</code> bounded =&gt; <code>lim_N Sum(g(X_n))/N -&gt; E_pi(g) = Sum(g(j) pi)</code></li>
+<li>detailed balance <code>pi_i p_ij = p_ji pi_j</code>
+<ul>
+<li>detailed balance =&gt; stationary distribution</li>
+</ul></li>
+<li><strong>fix me</strong> 23.31</li>
+</ul></li>
+<li>Possion processes <strong>fix me</strong></li>
+</ul>
+<h2 id="statistical-inference">statistical inference</h2>
+<p><em>statistical inference is not solving equtions, because you have noise, you cannot get exact input/output, and so nomrally your knowns is not the degree of freedom of the system!!! and you do not solve exactly!!! they are not same problem at all!!!</em></p>
+<h3 id="statistical-inference-1">statistical inference</h3>
+<p><em>theory of inference</em></p>
+<ul>
+<li>kinds of inference model: given <code>X_i</code> the sample rv
+<ul>
+<li>non-parametric model
+<ul>
+<li><code>F</code></li>
+<li><code>E(X)</code> - this is of course simpler, because we applied a very concentrating function</li>
+<li>…</li>
+</ul></li>
+<li>parametric model
+<ul>
+<li><code>paramemters</code> - same as <code>F</code>, because we have a smaller search space for <code>F</code> for we have <strong>constrains</strong>, so we have a function to map parameters to <code>F</code>s</li>
+<li>sometimes we estimate functional of estimators…, mostly <code>E</code> and <code>V</code></li>
+</ul></li>
+</ul></li>
+<li>statistical model, parametric model, parameter space, nuisance parameters</li>
+<li>predictor = regressor = feature = independent variable, outcome = response = dependent v</li>
+<li>parameter regression model, nonparametric regression model (infinite-dim regression), prediction, classification, regression = curve estimation</li>
+<li>freq inference, Bayesian inference</li>
+<li>point estimation <code>theta_n-head = g(X_1,...,X_n)</code> for some <code>g</code> is a random variable
+<ul>
+<li><code>bias(theta_n-head) = E_theta(theta_n-head) - theta</code>, unbiased
+<ul>
+<li>this is a scalar, it is a statistical functional applied to a rv, so a saclar!!!</li>
+</ul></li>
+<li>consistent <code>-p-&gt;</code></li>
+<li>sample distribution</li>
+<li>standard error <code>se = sqrt(V(theta_n-head))</code> is applied value! again a salar!</li>
+<li>ese <code>se-head</code></li>
+<li>6.8 - see a worked out example for Bernoulli!
+<ul>
+<li>when calculating <code>V(p^n)</code>, use <code>X^2</code> and independence expansion!</li>
+</ul></li>
+<li><code>MSE = E(theta^_n - theta)^2 = bias^2 + V_theta</code>
+<ul>
+<li>this is not the variance of <code>theta^_n</code>! this is only true when you are unbias!!!</li>
+</ul></li>
+<li>e.g
+<ul>
+<li>parameter</li>
+<li>cdf</li>
+<li>pdf</li>
+</ul></li>
+<li><code>bias -&gt; 0 &amp;&amp; se -&gt; 0 =&gt; MSE -&gt; 0 =&gt; -pm-&gt; =&gt; -p-&gt;</code></li>
+<li>asymptotically normal <code>(theta_n-head - theta) / se -&gt; N(0, 1)</code></li>
+</ul></li>
+<li><code>1-a</code> confidence interval <code>P(theta in C_n) &gt;= 1-a</code>, <code>C_n</code> is<code>(a(X_1,...,X_n), b(...))</code> is a <strong>random variable</strong>!!
+<ul>
+<li>confidence set: when multivariance</li>
+<li>normal-based confidence interval <em>p94</em>
+<ul>
+<li>comparing 6.17 and 6.15, notice that normal-based only has large approximately correct coverage</li>
+</ul></li>
+</ul></li>
+<li>hypothesis testing</li>
+</ul>
+<h3 id="nonparameter-mentods-for-cdf-and-functionals">nonparameter mentods for cdf and functionals</h3>
+<p><em>I think we have enough error terms to do this! namely the convergence and bias!</em></p>
+<ul>
+<li>empirical distribution function <code>F_n-head(x)</code> it is <code>R -&gt; F(R)</code>, given a <code>x</code> it has a estimation of the value at this <code>x</code>
+<ul>
+<li>at <code>x</code>
+<ul>
+<li><code>E(F-head) = F(x)</code>, is unbiased</li>
+<li><code>MSE = V(F-head) = F(x)(1-F(x)) / n</code></li>
+<li><code>F_n-head(x) -P-&gt; F(x)</code>, it is consistant</li>
+</ul></li>
+<li><code>sup_x |F_n-head(x) - F(x)| -P-&gt; 0</code>
+<ul>
+<li><code>F^_n</code> give the function space a measure, and sup translate this measure again into scalar, and it is porobility limit to 0
+<ul>
+<li>DKW inequality <strong>fix me</strong></li>
+</ul></li>
+<li>confidence interval based on DKW</li>
+</ul></li>
+</ul></li>
+<li>plug-in estimator of statistical functional <code>T(F)</code>: <code>theta_n-head = T(F_n-head)</code>, a functional is takes a rv to value, then you plugin to get a rv again!!!
+<ul>
+<li>lienar functional <code>T(F) = integral r(x) d F(x)</code>, <code>T</code> is linear in arguments!</li>
+<li>plug-in estimator for linear funtional <code>T(F_n-head) = Sum(r(X_i)) / n</code> is a rv!</li>
+<li>and we want <code>se</code> for this rv…</li>
+<li>in many cases… <code>T(F_n-head) ~ N(T(F), se-head^2)</code>, means that we have a good enough estimator! and how to understand right??? you should divide to the left youself!!!</li>
+<li>then <code>1-a</code> ci is <code>T(F_n-head) +- z_{a/2} se-head</code></li>
+<li>e.g. it is just crazy… everything is rv!
+<ul>
+<li>mean - estimator, se-estimator, confidence interval</li>
+<li>variance - plugin, sample variance <code>S^2_n</code></li>
+<li>skewness</li>
+<li>correlation - sample corelation</li>
+<li><em>7.15</em></li>
+</ul></li>
+<li>in paramter model, we has formula for errors, but in nonparamter model, we mostly use bootstrap method</li>
+</ul></li>
+</ul>
+<h3 id="bootstrap-method">bootstrap method</h3>
+<p><em>in essence, bootstrap is just like plugin methods</em></p>
+<ul>
+<li>step
+<ol style="list-style-type: decimal">
+<li>estimate <code>V_F(T_n)</code> by <code>V_F^(T_n)</code>: if we can stop here, it is just plugin method</li>
+<li>approximate <code>V_F^(T_n)</code> by simulation</li>
+</ol></li>
+<li>illu
+<ul>
+<li>real world <code>F</code> =&gt; <code>X_i</code> =&gt; <code>T_n</code></li>
+<li>bootstrap world <code>F^_n</code> =&gt; <code>X*_i</code> =&gt; <code>T*_n</code></li>
+</ul></li>
+</ul>
+<p><strong>fix me</strong></p>
+<h3 id="parametric-inference">parametric inference</h3>
+<p><em>if the world is a determined world, there is no noise at all, noise exists, is because our model is problamic or there is other things, but we think them as random</em></p>
+<ul>
+<li>the method of moments, assume <code>theta = (theta_1,..., theta_k)</code>
+<ul>
+<li>moment <code>a_j = a_j(theta) = integral x^j d F_theta(x)</code>, note that it is an function of theta, because we are having unknown theta</li>
+<li>sample moment <code>a_j-head = Sum(X_i^j) / n</code></li>
+<li>method: <code>forall j in 1 -&gt; k: a_(theta_n-head) = a_j-head</code>, it has <code>k</code> unknown of rvs, and we can solve for to get the estimator</li>
+<li>properties
+<ul>
+<li>exits with probability tending 1</li>
+<li>consistent</li>
+<li>asympototically normal</li>
+</ul></li>
+<li><strong>fix me</strong> not well understood</li>
+</ul></li>
+<li>maximum likelihood method
+<ul>
+<li><em>most of the things bellow is from information theory!!!! so read them when have time!!!</em></li>
+<li>likelihood function <code>L_n(theta) = Prod(f(X_i; theta))</code>, log-likelihood funtion <code>l_n(theta) = log(L_n(theta))</code>. give a param, get a rv</li>
+<li>method: the thet a maximaze it! using derivative! you get an estimator!</li>
+<li>multivar: we need global maxima, can use partial to find</li>
+<li>properties (under certain regularity conditions of the model, rf <a href="http://en.wikipedia.org/wiki/Maximum_likelihood">http://en.wikipedia.org/wiki/Maximum_likelihood</a>)
+<ul>
+<li>consistent
+<ul>
+<li>Kullback-Leibler distance, information gain</li>
+<li>first proof <code>M_n</code> converge to <code>-D(theta*, theta)</code>, if convergence is uniform over <code>theta</code>, then we can proof <code>theta^_n -p-&gt; theta*</code></li>
+</ul></li>
+<li>equivariant <code>g(theta)</code></li>
+<li>asymptotically normal
+<ul>
+<li>score function <code>s(X;theta) = &amp; log f(X; theta) / &amp; theta</code></li>
+<li>Fisher information <code>I_n(theta) = Sum( V_theta(s(X_i; theta)) )</code></li>
+<li><code>I_n(theata) = nI(theta)</code></li>
+<li><code>I(theta) = E_theta(-s')</code></li>
+<li><code>se = sqrt(1/I_n(theta))</code></li>
+<li><code>se^</code></li>
+<li><code>(theta^_n - theta) /  se^ -d-&gt; N(0, 1)</code></li>
+<li>asymptotic confidence interval</li>
+</ul></li>
+<li>asymptotically optimal: for large example, has smallest variance
+<ul>
+<li>see exercise 2</li>
+</ul></li>
+<li>delta method
+<ul>
+<li>the distribution is also equivariant, so interval</li>
+</ul></li>
+<li>approximately the Bayes estimator</li>
+</ul></li>
+<li>multiparameter method <strong>fix me</strong></li>
+<li>parametric bootstrap method</li>
+<li>numerical methods
+<ul>
+<li>Newton-Raphson</li>
+<li>EM algorithm
+<ul>
+<li>hidden variable</li>
+<li>maxiture of two normals</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="hypothesis-testing">hypothesis testing</h3>
+<ul>
+<li>we patition the parameter space into <code>Theata_0</code> and <code>Theata_1</code></li>
+<li><code>H_0: theta in Theta_0</code> null hypothesis, and alternative hypothesis</li>
+<li>rejection region <code>R</code>, <code>X</code> be a rv and <code>R &lt; Dom(X)</code>, we calculate a rv, and see if we reject the null hypothesis
+<ul>
+<li>it is normally form <code>R = {x: T(x) &gt; c}</code></li>
+<li>test statistic, critical value</li>
+</ul></li>
+<li>type 1, 2 error</li>
+<li>power function, size, level</li>
+<li>simple hypothesis, composite hypothesis, two-sided test, one-sided test</li>
+<li>Wald test <strong>see book</strong></li>
+<li>p-value = <code>inf {a: T(X^n) in R_a}</code>, smallest level we can reject <code>H_0</code>
+<ul>
+<li>large p-value can occur in two reason: true or test has low power!</li>
+</ul></li>
+<li><strong>fix me</strong></li>
+</ul>
+<h3 id="bayesian-inference">Bayesian inference</h3>
+<ul>
+<li>Bayes theorem <code>f(theta|x) =   f(x|theta)f(theta) / integral f(x|theta) f(theta) d theta</code></li>
+<li><code>f(theta|x^n) = L_n(theta)f(theta) / c_n</code></li>
+<li>conjugate with model</li>
+<li><strong>fix me</strong></li>
+<li>what prior to use?
+<ul>
+<li>..</li>
+</ul></li>
+<li><strong>fix me</strong></li>
+</ul>
+<h3 id="dicision-theory">dicision theory</h3>
+<p><em>how to? is it not just calculate the estimated error?</em></p>
+<ul>
+<li>how to choose estimator: decision theory</li>
+<li>decision rule = estimator, action = values of estimator</li>
+<li>loss function</li>
+<li>risk <code>R(theta, theta-head)</code>
+<ul>
+<li>e.g. when you are using squared error… the risk is just mse!!!</li>
+<li>maximum risk <code>R-bar(theta-head)</code></li>
+<li>Bayes risk <code>r(f, theta-head)</code></li>
+</ul></li>
+<li>Bayes rule, minimax ruleok</li>
+<li><strong>fix me</strong></li>
+</ul>
+<h2 id="models-and-methods">models and methods</h2>
+<h3 id="linear-and-logistic-regression">linear and logistic regression</h3>
+<ul>
+<li>regression fuction <code>r(x) = b_0 + b_1 x</code></li>
+<li>assuming <code>V(e_i|X = x) = sigma^2</code> do not depend on <code>x</code></li>
+<li><code>Y_i = b_0 + b_1 X_i + e_i</code>, <code>E(e_i|X_i) = 0</code>
+<ul>
+<li><code>sigma</code> is also a paramter of the model!</li>
+<li>fitted line <code>r-head(x) = b_0-head + b_1-head x</code></li>
+<li>fitted values <code>Y_i-head = r-head(X_i)</code></li>
+<li>residuals <code>e_i-head = Y_i - Y_i-head</code></li>
+<li>residual sums of squares <code>RSS = Sum ( e_i-head ^2 )</code></li>
+<li>least square estimates: minimize rss, calculate them using dervi!
+<ul>
+<li><code>b_1-head = Sum( (X_i - X_n-bar)(Y_i - Y_n-bar) ) / Sum( (X_n - X_n-bar)^2 )</code></li>
+<li><code>b_0-head = Y_n-head - b_1-head X_n-bar</code></li>
+<li><code>sigma^2-head = RSS / (n - 2)</code></li>
+<li><code>E(b-head|X^n) = (b_0; b_1)</code> this is a constant function of <code>X^n</code></li>
+<li><code>V(b-head|X^n) =</code> see the book, this means if you pick <code>x</code>s too close, you will have a very bad estimate</li>
+<li><code>se-head(b_0|X^n)</code> and <code>se-head(b_1|X^n)</code></li>
+<li>consistant</li>
+<li>asymptotic normality</li>
+<li>approximate <code>1-a</code> interval is <strong>see book</strong></li>
+<li>Wald test</li>
+</ul></li>
+<li>under normal assumption, lse is mle</li>
+<li>prediction interval <strong>fix me</strong></li>
+<li>multiple regression
+<ul>
+<li><em>the model assumed when we know we are sampling from independent <code>x</code>s!!!!</em></li>
+</ul></li>
+<li>model selection, overfitting, underfitting
+<ul>
+<li>prediction risk, training error</li>
+<li><code>C_p</code> statistic</li>
+<li><strong>fix me</strong></li>
+</ul></li>
+</ul></li>
+<li>logistic regression</li>
+</ul>
+<h3 id="multivariate-models">multivariate models</h3>
+<h3 id="inference-about-independence">inference about independence</h3>
+<h3 id="causal-inference">causal inference</h3>
+<h3 id="directed-graphs">directed graphs</h3>
+<h3 id="undirected-graphs">undirected graphs</h3>
+<h3 id="log-linear">log-linear</h3>
+<h3 id="nonparametric-curve-estimation">nonparametric curve estimation</h3>
+<h3 id="smoothing-using-orthogonal-functions">smoothing using orthogonal functions</h3>
+<h3 id="classification">classification</h3>
+<ul>
+<li>classification = pattern recognition
+<ul>
+<li>the estimation process is learning!</li>
+</ul></li>
+<li>input <code>X_i = (X_i1,..., X_id) in R^d</code> is a n number of d-dim input, find <code>h(R^d) -&gt;</code></li>
+<li>true error rate <code>L(h) = P(h(X) != Y)</code></li>
+<li>eer <code>L_n-head(h) = Sum(I(h(X_i) != Y_i)) / n</code></li>
+<li>regression function <code>r(x) = P(Y = 1| X = x)</code>
+<ul>
+<li><em>it is a probability, because there might be other DOF in the model!!!</em></li>
+</ul></li>
+<li>Bayes classification rule <code>h* = 1 if r(x) &gt; 1/2</code></li>
+<li>multi version <code>h(x) = argmax_k P(Y = k|X = x)</code>
+<ul>
+<li><code>P(Y = k|X = x) = f_k(x)pi_k / Sum( f_i(x)pi_i )</code></li>
+<li><code>pi_i = P(Y = i)</code>, <code>f_i(x) = f(x|Y = i)</code></li>
+</ul></li>
+<li>ways?
+<ul>
+<li>empirical risk mini</li>
+<li>regression</li>
+<li>density estimation</li>
+</ul></li>
+<li>Gaussian classifiers
+<ul>
+<li>assume both are multivariate Gaussian <strong>see book</strong></li>
+<li><code>h*(x) = argmax_k( -1/2*log|Pi_k| - 1/2*(x-mu_k)'Pi_k^-1(x-mu_k) + log pi_k )</code></li>
+<li>sample esimates</li>
+<li>qda</li>
+<li>simplification when <code>Pi_1 = Pi_0</code> <strong>fix me</strong>, lda</li>
+<li>Fisher lienar discrimination</li>
+</ul></li>
+<li>linear regression: model the <code>r(x)</code> using a linear function!!!
+<ul>
+<li>relationship logi stic and lda
+<ul>
+<li>parameters estimation!
+<ul>
+<li>lr: discriminative learning</li>
+<li>lda: generative learning</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>density estimation and naive Bayes</li>
+</ul>
+<h3 id="simulation-methods">simulation methods</h3>
+<ul>
+<li>Monte Carlo integration</li>
+<li>Metropolis-Hastings algorithm</li>
+<li>Gibbs sampling</li>
+</ul>
 <h1 id="random-puzzles">random puzzles</h1>
 <ul>
-<li><a href="https://www.quantnet.com/threads/jane-street-interview-question-needing-help.7591/">the noodles probability</a>
-<ul>
-<li>consider the first pick</li>
-</ul></li>
-<li><a href="https://www.quantnet.com/threads/jane-street-interview-question-needing-help.7591/">100 dice problem!</a>
-<ul>
-<li>consider the position <span class="math">\((n, m)\)</span></li>
-<li>from the above two, we can see that you should know where to start considering the problem</li>
-</ul></li>
-<li>the <span class="math">\(n\)</span> man remember card problem
-<ul>
-<li>it is not clear at all when considering this point, but you should consider the optimal solution when go on</li>
-</ul></li>
-<li>the gate program: can you make a circuit calculate the not of 3 variables using only 2 <code>not</code> gate and arbitrary <code>and</code> and <code>or</code> gates?
-<ul>
-<li>boolean function reduction! then you have a function that has no <code>not</code> in it!</li>
-</ul></li>
-<li>the two kid cake problem
-<ul>
-<li>it is a optimization problem! <code>minimize[ max(max(1-x,x), min(1-x,x)+1/2) ]</code></li>
-<li>but in a more general form <code>min(1 - max( max(1-x1,x1) + min(1-x2, x2), min(1-x1,x1) + max(1-x2, x2) ) )</code></li>
-<li>if 3 cake, the same problem!!! <code>minimize[ max_first, max_second, max_last ]</code></li>
-<li>for the general case, we need
-<ul>
-<li>first, we need to know it has a <strong>eq point</strong></li>
-<li>then we find it like above!</li>
-</ul></li>
-</ul></li>
-<li>proof that you have <span class="math">\(n+1\)</span> integers bellow <span class="math">\(2n\)</span>, always two relatively prime
-<ul>
-<li>this takes Erdios 10 minutes</li>
-</ul></li>
+<li><a href="https://www.quantnet.com/threads/jane-street-interview-question-needing-help.7591/">the noodles probability</a> * consider the first pick</li>
+<li><a href="https://www.quantnet.com/threads/jane-street-interview-question-needing-help.7591/">100 dice problem!</a> * consider the position <span class="math">\((n, m)\)</span> * from the above two, we can see that you should know where to start considering the problem</li>
+<li>the <span class="math">\(n\)</span> man remember card problem * it is not clear at all when considering this point, but you should consider the optimal solution when go on</li>
+<li>the gate program: can you make a circuit calculate the not of 3 variables using only 2 <code>not</code> gate and arbitrary <code>and</code> and <code>or</code> gates? * boolean function reduction! then you have a function that has no <code>not</code> in it!</li>
+<li>the two kid cake problem * it is a optimization problem! <code>minimize[ max(max(1-x,x), min(1-x,x)+1/2) ]</code> * but in a more general form <code>min(1 - max( max(1-x1,x1) + min(1-x2, x2), min(1-x1,x1) + max(1-x2, x2) ) )</code> * if 3 cake, the same problem!!! <code>minimize[ max_first, max_second, max_last ]</code> * for the general case, we need * first, we need to know it has a <strong>eq point</strong> * then we find it like above!</li>
+<li>proof that you have <span class="math">\(n+1\)</span> integers bellow <span class="math">\(2n\)</span>, always two relatively prime * this takes Erdios 10 minutes</li>
 </ul>
     </div>
     <div class="col-md-2">
