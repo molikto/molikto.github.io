@@ -657,6 +657,492 @@ $("#content").parent().css("max-width", "1300px")
 <h2 id="resource-1">resource</h2>
 <p><span id="cross-A-Concise-Course-in-Algebraic-Topology" class="crosslink">A Concise Course in Algebraic Topology</span></p>
 <h1 id="algebra">algebra</h1>
+<h2 id="notes-on-algebra">notes on algebra</h2>
+<p>from the book <em>Algebra</em> by Serge Lang</p>
+<h2 id="chapter-01">chapter 01</h2>
+<h3 id="p003">p003</h3>
+<pre><code>monoid = forall S (
+    S,
+    *: S * S -&gt; S,
+    e: S &amp;&amp; forall a: S, a * e = e * a,
+    associ: forall a b c: S, a * b * c = a * (b * c)
+    )</code></pre>
+<p>there are law of composition which is not associative</p>
+<ul>
+<li><code>-</code> in <code>integer</code></li>
+</ul>
+<p>there are law of composition which has no unit</p>
+<ul>
+<li><code>max</code> in <code>integer</code></li>
+</ul>
+<h3 id="p004">p004</h3>
+<p>to define this product, we need <code>[0, n]</code> or lists?</p>
+<pre><code>inductive nat = z | succ nat
+
+inductive list = forall A (none | cons A (list A))</code></pre>
+<p>and we might need a bunch of theorem about <code>nat</code>s and <code>list</code>s</p>
+<p>but this is actually just <code>foldLeft</code>?? which is defined for <code>list</code> or linear initals?</p>
+<pre><code>forall a, b: list monoid S: a.foldLeft(e, *) * b.foldLeft(e, *) = (a ++ b).foldLeft(e, *)
+
+proof by induction</code></pre>
+<p>as we understanding that elements of <code>monoid</code> is element of <code>S</code></p>
+<pre><code>commutativeMonoid extends monoid (
+  commu: forall a, b: S, a * b = b * a
+)
+</code></pre>
+<h3 id="p005">p005</h3>
+<p>how do we define surjection and bijection and subset now???</p>
+<p><strong>fix me</strong></p>
+<h3 id="p006">p006</h3>
+<pre><code>forall a: monoid, n: nat: a^n = (0 until n).foldLeft(*)</code></pre>
+<p>yes… there we are using <code>nat</code> again</p>
+<p>is submonoid</p>
+<ul>
+<li>subtype? I think so, so just ommit tihs part</li>
+<li>just a subobject in category theory?</li>
+</ul>
+<p><strong>fix me</strong></p>
+<h3 id="p007">p007</h3>
+<pre><code>group extends monoid (
+  inverse: S -&gt; S &amp;&amp; forall a b: S: a^-1 * a = e
+)
+
+forall a: group, n: integer: a^n = if (n.positive) (0 until n).foldLeft(*, a) else (0 until -n).foldLeft(*, a^-1)</code></pre>
+<pre><code>forall a: group, n, m: integer: a^n * a^m = a^(n + m)
+
+proof by induction
+</code></pre>
+<h3 id="p008">p008</h3>
+<h3 id="p009">p009</h3>
+<pre><code>productGroup a b: group extends group (
+  S = (a, b),
+  (x_a, x_b) * (y_a, y_b) = (x_a * y_a, x_b * y_b),
+  e = (e_a, e_b)
+)</code></pre>
+<p>subgroup, generators, example</p>
+<p><strong>fix me</strong></p>
+<h3 id="p010">p010</h3>
+<pre><code>homomor A, B &lt;: group = f: A -&gt; B &amp;&amp; forall a, b: A f(a) *_B f(b) = f(a *_A b)
+
+
+isomor A, B &lt;: group = homo A B &amp;&amp; exists g: homo B A: fg = id_B &amp;&amp; gf = id_A
+
+automor A = isomor A B
+
+endomor A = homomor A A</code></pre>
+<pre><code>f: homor A B -&gt; f(a^-1) = f(a)^-1 &amp;&amp; f(e_A) = e_B
+</code></pre>
+<h3 id="p011---13">p011 - 13</h3>
+<p>intution about normal group etc.</p>
+<ul>
+<li>it is force something to be equal</li>
+<li>or force some elements to be e</li>
+<li>if it is arbitry element? it is quotient group…?</li>
+<li>if it is a group, then the all forced is just you list, but why it cannot be a group again??</li>
+<li>first, you get a nice theorem of the orders of the group, this is because you are not lacking element in the forcing<br /></li>
+<li>because - think of this, what if two element of <code>aH</code> product? they are not identifed in <code>aH</code> again!!!</li>
+<li>we are looking for some closed structure</li>
+<li>if it is a normal subgroup, we get group again</li>
+<li>….???</li>
+</ul>
+<h3 id="p014">p014</h3>
+<ul>
+<li>normal group closed under intersection</li>
+<li>normalizer of a subset</li>
+<li>centralizer of a group</li>
+</ul>
+<h3 id="p015-16">p015, 16</h3>
+<p>trival results</p>
+<h3 id="p017">p017</h3>
+<pre><code> H      HK
+--- ~=~ --
+H^K     K</code></pre>
+<p>this means you have normalizer, you can add/subtract the irelevant dims to the problem</p>
+<p>f-bar - induced normal group</p>
+<h3 id="p018---20">p018 - 20</h3>
+<p>towers － the refined structure of a group</p>
+<p>normal/abelian/cyclic tower</p>
+<p>solvable - has an abelian tower</p>
+<p>finite + solvable = has an cyclic refinement</p>
+<p>G solvable &lt;-&gt; G/H and H is solvable</p>
+<p>commutator <code>xyx^-1y^-1</code> -&gt; it is normal and all homomor into comutative group factor through it</p>
+<p>simple - nor-trival and no normal groups other than <code>{e}</code> and itself</p>
+<h3 id="p021">p021</h3>
+<pre><code>U, V: subgroup of g
+u, v: normal subgroup of U, V
+
+u(U^V)     (U^V)v       (U^V)
+------ ~=~ ------ ~=~ ----------
+u(U^v)     (u^V)v     (u^V)(U^v)</code></pre>
+<h3 id="p022">p022</h3>
+<p>seems no one interested in it…</p>
+<p><em>Schreier</em> two normal tower ending with trival group have equivalent refinements</p>
+<p><em>Jordan-Holder</em> …</p>
+<p><strong>fix me</strong></p>
+<h3 id="p023---25">p023 - 25</h3>
+<p>so what’s the usefulness of mathematical structures? I do not know….</p>
+<p>cyclic, generator, exponent of <code>a</code> or <code>G</code></p>
+<p>cyclic groups: infinite period and period <code>n</code></p>
+<p>propisition about finite group, prime numbers</p>
+<ul>
+<li>soemthing about free generated group?? don’t know…</li>
+</ul>
+<h3 id="p026---29">p026 - 29</h3>
+<p>here we represent groups by permutations</p>
+<pre><code>pi: G -&gt; Perm(S)</code></pre>
+<pre><code>c_x(y) = xyx^-1</code></pre>
+<p>conjugation operation, the kernel is center, subset conjugate - just moved a bit</p>
+<p>isotropy - <code>G_s</code></p>
+<p>isotropy group of <code>s</code> and <code>s'</code> is conjugate - this is just…</p>
+<p>fixed point s: <code>G = G_s</code></p>
+<p>orbit: <code>Gs</code></p>
+<p>proposition 5.1 and 5.2 - they seems trivial</p>
+<p>transitive - you can reach anywhere!</p>
+<p>orbit decomposition formula:</p>
+<pre><code>card(S) = Sum(Gs) disjoint = Sum((G: G_s_i)) &amp;&amp; Gs_i disjoint</code></pre>
+<p>class formula:</p>
+<pre><code>(G:1) = Sum((G: G_x))</code></pre>
+<p>you should relise what the right really means</p>
+<h3 id="p030---33">p030 - 33</h3>
+<p>omitted</p>
+<h3 id="p034---36">p034 - 36</h3>
+<p>p-group: order is power of <code>p^n</code></p>
+<p>p-Sylow group <code>H</code> of <code>G</code>: max <code>p^n</code> order p-subgroup</p>
+<p>lemma: finite abelian group has (p | order of group) subgroup</p>
+<p><em>now I know why you are talking about cyclic groups etc. the group structure is mainly complicated, and composite of simple ones like cyclic, abelian….</em></p>
+<p>let’s proof by give an algorithm, because this is how it really works.</p>
+<ul>
+<li>first we pick an element <code>g</code> and form the cyclic group</li>
+<li>if it is of order <code>q * p</code>, we set <code>h = g^q</code> and it is a cyclic group of order <code>p</code>, we are done</li>
+<li>if not. we use this algorithm for <code>G/{g^a}</code>, we can show we can somehow trace over the process and get an element of order <code>p</code> in <code>G</code></li>
+<li>and because <code>p|(G:1)</code>, we can see that we must get one!</li>
+<li>and of course, it is finite, so our algorithm terminate</li>
+</ul>
+<p>something in a group:</p>
+<ul>
+<li>might not be a cyclic group of order <code>p</code></li>
+<li>if it is a group of order <code>p</code>, it might not normal (?)</li>
+</ul>
+<p>Sylow theorem 1: p-Sylow group always exists</p>
+<p><em>again, we need recursion!!!</em></p>
+<ul>
+<li>we should make the problem smaller</li>
+<li>frist, <code>c = center(G)</code></li>
+<li>if <code>c</code> is trivial, then because class formula, we has a subgroup contains all <code>p</code>, proofed</li>
+<li>if <code>c</code> is not trivial, no matter what stucture <code>c</code> have, we can always made into subgroups, and <code>G/c</code> is a smaller subgroup, proofed</li>
+<li>we should not divide by “all subgroup diviable by <code>p</code>”, it is no inuation here</li>
+</ul>
+<p>lemma: for p-group <code>H</code> on finite set <code>S</code>, <code>number of fix points == #(S) mod p</code></p>
+<p>Sylow theorem 2:</p>
+<ul>
+<li>p-supgroup is subgroup of p-Sylow group</li>
+<li>all p-Sylow group are conjugate</li>
+<li>number of p-Sylow group == 1 mod p</li>
+</ul>
+<p>Sylow theorem 3: finite p-group is solvable, and has non-trival center</p>
+<p>lemma: smallest prime group is normal</p>
+<p>proposition: group of order <code>pq</code> is solvable</p>
+<p><strong>fix me</strong></p>
+<h3 id="p037---41">p037 - 41</h3>
+<p>direct sum: product with only finite non-zero dim</p>
+<p><code>lambda_i</code> injection</p>
+<hr />
+<p><strong>by far, algebra is self contained. the things like <code>nat</code>, etc. is just basic like product type, and there really are nothing not grounded into the foundation!!! it is so good!!!</strong></p>
+<hr />
+<p>proposition, universal property of direct sum: <code>f_i</code> into abelian <code>B</code> to induce a <code>f</code> from <code>(+)A_i</code> to <code>B</code></p>
+<pre><code>basis abelian = generator &amp;&amp; unique
+
+(free = exists basis) abelian ~=~ (+)Z_i
+</code></pre>
+<p>the fucking diagram</p>
+<p>free abelian group generated by <code>S</code></p>
+<p>grothendieck group - the universal group from commutative monoid to group</p>
+<p><strong>fix me</strong></p>
+<p>lemma 7.2: projection to free group has finer structure</p>
+<p>theorem 7.3: subgroup of free abelian group is free-abelian. base has same cardinal. and it is called rank</p>
+<p><strong>notice that finite abelian is finite generated, so our theorem has…</strong></p>
+<h3 id="p042---46">p042 - 46</h3>
+<p>we only consider abelian group</p>
+<p>torsion, torsion subgroup, torsion group, <code>A(p)</code></p>
+<p>theorem 8.1 torsion abelian group is <code>(+)_p A(p)</code></p>
+<p>finite p-group <code>A</code> of type <code>(p^r_1, p^r_2, ...)</code></p>
+<p>theorem: finite abelian group has type</p>
+<p>proof:</p>
+<ul>
+<li>find a element and get the cyclic group!</li>
+</ul>
+<p><strong>fix me</strong></p>
+<p>theorem 8.4: finite generated torsion-free group is free</p>
+<p>theorem 8.5: finite generated abelian group is direct sum of torsion-subgroup and torsion-free subgroup</p>
+<p>rank of finite generated group (the rank of free part)</p>
+<h3 id="p047---49">p047 - 49</h3>
+<p>the dual group</p>
+<ul>
+<li>for abelian group of exponent <code>m</code></li>
+<li><code>A^ = Hom(A, Z_m)</code> is the dual</li>
+</ul>
+<p>same exponent <code>m</code> group <code>A</code> and <code>B</code>’s homomor <code>f</code> will induce <code>f^: B^ -&gt; A^</code></p>
+<p>theorem: finite abelian group direct sums’s structure is isomorphic to the dual one, and <code>A</code> is isomorphic to <code>A^</code></p>
+<p>to proof the second part, make <code>A</code> cyclic, and observe that a cyclic group homo is just…</p>
+<p>bilinear map <strong>fix me</strong></p>
+<h3 id="p050---52">p050 - 52</h3>
+<p>inverse limit</p>
+<p>completion</p>
+<p><strong>fix me</strong></p>
+<h3 id="p53---65">p53 - 65</h3>
+<p>category</p>
+<p>morphisms</p>
+<p>isomorphism</p>
+<p>automorphism</p>
+<p>endomorphism</p>
+<p>universally attracting: every and unique</p>
+<p>universeally repelling: every and unique</p>
+<p>product: direct sum</p>
+<p>coproduct:</p>
+<p><strong>fix me</strong></p>
+<h3 id="p066---74">p066 - 74</h3>
+<p>free group generated by <code>S</code></p>
+<p>theorem: free group exists</p>
+<p>theorem: coproduct exists</p>
+<p><strong>fix me</strong></p>
+<h2 id="chapter-01-exercises">chapter 01 EXERCISES</h2>
+<ol style="list-style-type: decimal">
+<li><p>show that every grouop of order &lt;= 5 is abelian</p>
+<p>p-group is solvable and has non-trival center</p></li>
+<li><p>trivial</p></li>
+<li><p>trivial</p></li>
+<li><p>trivial</p></li>
+<li><p>proof a iso?</p></li>
+<li><p>trivial</p></li>
+<li><p>turn <code>a</code> into <code>b</code> in <code>aba^-1=b</code></p></li>
+<li><p><strong>fix me</strong></p></li>
+<li><p>if group has finite index subgroup, then there is finite index normal subgroup &amp;&amp; finite index intersection is finite index</p>
+<p><strong>fix me</strong></p></li>
+<li><p>right coset number is equal to left coset</p>
+<p>inverse!!!</p></li>
+<li><p><strong>fix me</strong></p></li>
+</ol>
+<p><strong>fix me</strong></p>
+<h2 id="chapter-02">chapter 02</h2>
+<h3 id="p083---92">p083 - 92</h3>
+<p>ring - abelian group of plus and monoid multiplication and <code>(x + y)z = xz + yz</code></p>
+<ul>
+<li>think distributivity kind of weeken linearization*</li>
+</ul>
+<p><code>U</code> the set of elements who has right and left inverse is a group, group of units in <code>A</code></p>
+<p>division ring</p>
+<ul>
+<li>it must be two sided, think them as functions, and think of shift operator</li>
+</ul>
+<p>commutative ring</p>
+<p>commutative &amp;&amp; division ring = field</p>
+<p>subring = subgroup of additive group &amp;&amp; submonid of multi</p>
+<ul>
+<li>it seems that finding subring is harder than finding sub group, one should use distributive law to find them</li>
+<li>center is subring</li>
+<li>example</li>
+<li><code>Z</code></li>
+<li>addtive group endormors is a ring of add and compo</li>
+<li><code>Map(S,A)</code> into ring <code>A</code></li>
+<li>matrix</li>
+<li>polynomials</li>
+<li>convolution product of a group ring</li>
+<li><code>(f*g)(z) = Sum(f(x)g(y) | xy = z)</code></li>
+</ul>
+<p>left ideal: subgroup of additive group &amp;&amp; <code>Aa = a</code></p>
+<p>right ideal</p>
+<p>ideal</p>
+<ul>
+<li><code>Aa</code> is left ideal. called principal</li>
+<li>also <code>A(a, b, c)</code> etc. generator of the left ideal</li>
+</ul>
+<p>intersection of ideal is ideal. also for left ideal</p>
+<ul>
+<li>commutative ring left ideal = ideal</li>
+</ul>
+<p>principal ring = commutative &amp;&amp; every ideal is principal</p>
+<ul>
+<li>the ring that every ideal is single generated?</li>
+</ul>
+<p>ideals</p>
+<ul>
+<li>is a multiplicative monoid, the unit is <code>A</code> is unit ideal, <code>(1)</code>, also for left ideals</li>
+<li>is addtive monoid</li>
+<li>but is not a ring!</li>
+<li>left ideal <code>a</code> =&gt; <code>aA</code> is ideal</li>
+<li>for two ideal, <code>ab &lt; a^b</code></li>
+</ul>
+<p>ring-homormor, kernel = additive kernel</p>
+<ul>
+<li>the kernel is ideal - it is maped to zero the repeller!!</li>
+</ul>
+<p>and we have factor ring and canonical map, and it is universal</p>
+<p>prime ideal</p>
+<ul>
+<li><code>ab</code> in <code>P</code> then <code>a</code> or <code>b</code> in <code>P</code></li>
+<li><code>P != R</code></li>
+</ul>
+<p>a useful sport: map from <code>Z</code> to <code>A</code> by <code>ne</code></p>
+<ul>
+<li>the kernel is an ideal of <code>Z</code>: <code>(n)</code></li>
+<li>we have a injective homomor <code>Z/nZ -&gt; A</code></li>
+<li>if <code>n</code> prime, <code>n</code> match</li>
+<li>case <code>0</code>: <code>A</code> characteristic <code>0</code>, it has subring <code>Z</code></li>
+<li>case <code>n</code> prime: <code>A</code> characteristic <code>p</code>, contains substring <code>Z/pZ = F_p</code></li>
+<li>if in field <code>K</code>, it contains <code>Q</code> or <code>F_p</code>. they are called prime field in <code>K</code></li>
+<li>by prime ring in <code>K</code> we means <code>Z</code> or <code>F_p</code></li>
+</ul>
+<p>let <code>A</code> a subring of <code>B</code> and <code>S</code> a subset of <code>B</code> that commuting with <code>A</code> then we have <code>A[S] = {a s s s s}</code>. if <code>B = A[S]</code> we say that <code>B</code> is generated by <code>S</code> over <code>A</code>. if <code>S</code> is finite, then finite generated.</p>
+<ul>
+<li>one might say that <code>A[S]</code> consists all not-necessory commutative polynomials in elements of <code>S</code> with coeffients in <code>A</code></li>
+<li>elements of <code>S</code> may not commute!!</li>
+<li>example: matrices, when <code>A</code> is <code>nI</code></li>
+<li>homomorphism is determined by its effect on generators</li>
+</ul>
+<p>residue class ring, residue class modulo <code>a</code>, <code>x === y (mod a)</code></p>
+<p>induced homomor by ideal in <code>A'</code>, product exists in <code>Ring</code></p>
+<p>zero divisors: <code>x != 0 &amp;&amp; y != 0 &amp;&amp; xy == 0</code></p>
+<p>entire: <code>1 != 0</code> &amp;&amp; commutative &amp;&amp; no zero divisors</p>
+<p>theorem: for entire ring, <code>a</code>, <code>b</code> generate same ideal if there is a unit such that <code>b = au</code></p>
+<ul>
+<li>the bijective proof is injective for normal ring</li>
+</ul>
+<h3 id="p093-97">p093 － 97</h3>
+<p><em>only discuss commutative ring!!!</em></p>
+<ul>
+<li>prime = <code>p</code> &amp;&amp; <code>A/p</code> entire =~= <code>xy in p =&gt; x in p || y in p</code></li>
+<li>maximal ideal: no bigger</li>
+<li>maximal =&gt; prime</li>
+<li>every ideal is contained in some maximal</li>
+<li>field has only 2 ideal</li>
+<li><code>m</code> maximal &lt;=&gt; <code>A/m</code> field</li>
+<li>homomor <code>f</code>, prime, maximal</li>
+<li>example</li>
+<li><code>Z</code>: <code>x^(p-1) == 1(mod p)</code> － using</li>
+<li>Chinese remainder theorem: <code>a_n</code> be ideals <code>a_i + a_j = A</code>, then for <code>x_n</code> exists <code>x</code>: <code>x == x_i (mod a_i)</code></li>
+<li>read the proof</li>
+<li><code>a_1^(v_1) + ... = A</code> problem <strong>fix me</strong></li>
+<li><code>A/^(a_i) ~=~ *(A/a_i)</code></li>
+<li><strong>fix me</strong></li>
+</ul>
+<h3 id="p098---107">p098 - 107</h3>
+<ul>
+<li>polynomial over a ring <code>A</code></li>
+<li>polynomial function ring homomor <code>ev_b: A[X] -&gt; B</code></li>
+<li><code>x</code> is transcendental over <code>A</code></li>
+<li><code>f -&gt; gf</code> the reduction map</li>
+<li>reduction of <code>f</code> modulo <code>p</code></li>
+<li>degree, linear, leading coefficient, constant</li>
+<li>assume <code>A</code> commutative</li>
+<li><code>deg(fg) = deg f + deg g</code> if <code>a_n</code> and <code>b_m</code> is not zero
+<ul>
+<li><code>A</code> entire =&gt; <code>A[X]</code> entire</li>
+</ul></li>
+<li>polynomials in n variables
+<ul>
+<li>algebraically independent</li>
+<li>degree</li>
+<li>homogeneous</li>
+<li><code>deg(fg) = deg(f) + deg(g)</code></li>
+</ul></li>
+<li><code>A</code> a commutative ring, <code>G</code> a monoid. group ring or moniod ring - polynomials is special case!</li>
+<li>get all <code>G -&gt; A</code> which is almost zero</li>
+<li>we get a ring</li>
+<li>and eval reduce in the ring <strong>fix me?</strong></li>
+</ul>
+<h3 id="p108---110">p108 - 110</h3>
+<ul>
+<li>multiplicative subset: has 1 and closed by *</li>
+<li>quotient ring, ring of fraction of <code>A</code> by <code>S</code></li>
+<li><code>(a, s) ~ (a', s')  := exists s_1 (s'a-sa') = 0</code></li>
+<li>is equiv</li>
+<li><code>a/s</code> and <code>S^-1/A</code></li>
+<li><code>a/s * a'/s' = aa'/ss'</code></li>
+<li><code>a/s + a'/s' = (s'a + sa') / ss'</code></li>
+<li>it is a ring</li>
+<li><code>A -&gt; S^-1A</code>
+<ul>
+<li>f(s) is invertable</li>
+<li>and the homomor is universal</li>
+</ul></li>
+<li>if <code>A</code> is entire =&gt; it is injective</li>
+<li>examples</li>
+<li>quotient field</li>
+<li>rational function</li>
+<li>defined at b</li>
+<li>local ring: commutative and unique maximal ideal</li>
+<li><strong>fix me</strong></li>
+</ul>
+<h3 id="p111---114">p111 - 114</h3>
+<ul>
+<li>factorial (unique factorization ring)</li>
+<li>divides</li>
+<li>gcd</li>
+<li>order</li>
+<li>prime</li>
+<li>lcm</li>
+<li><strong>fix me</strong></li>
+</ul>
+<h2 id="chapter-02-exercises">chapter 02 EXERCISES</h2>
+<p><strong>fix me</strong></p>
+<h2 id="chapter-03">chapter 03</h2>
+<h3 id="p117">p117</h3>
+<p><em>thinking in vs!</em></p>
+<p><em>and by module, it is itself a abelian group first!</em></p>
+<ul>
+<li><code>M</code> is left module over <code>A</code></li>
+<li>abelian group</li>
+<li>ops of <code>A</code> on <code>M</code></li>
+<li>distributive</li>
+<li>examples</li>
+<li><code>A</code> is module over itself</li>
+<li>commutative group is Z-module</li>
+<li>left ideal of <code>A</code> is module over <code>A</code></li>
+<li>submodule <code>N</code>: <code>AN &lt; N</code></li>
+<li>module over field = vector space</li>
+<li>the ring is the field, scalar</li>
+<li>linear map over vs is a module</li>
+<li>because linear, the <code>a(x+y) = ax + ay</code> is possible</li>
+<li><code>A</code> entire, torsion submodule <code>M_tor</code>: <code>ax = 0 &amp;&amp; a != 0</code></li>
+<li>factor module</li>
+<li>hodule-homomor <code>f: M -&gt; M'</code></li>
+<li>over the same ring <code>A</code></li>
+<li>additive group homomorphism</li>
+<li><code>f(ax) = af(x)</code></li>
+<li>also <code>A</code>-homomor or <code>A</code>-linear map</li>
+<li>zero homomor</li>
+<li>kernel and image is submodule</li>
+<li>cokernel <code>M'/Im f</code></li>
+<li>the group canonical homos applies equally in module</li>
+<li>exact <code>Im f = Ker g</code>: <code>M' -f-&gt; M -g-&gt; M''</code></li>
+<li>monomorphism, embedding: <code>0 -&gt; N -u-&gt; M</code></li>
+<li>epimorphism: <code>N -u-&gt; M -&gt; 0</code></li>
+<li>there are algebras…</li>
+<li>no unit</li>
+<li>no assco but distributive</li>
+<li>bilinear map</li>
+<li>A-algebra, module + bilinear map <code>g: E * E -&gt; E</code></li>
+<li><strong>fix me</strong></li>
+</ul>
+<h3 id="p122--">p122 -</h3>
+<ul>
+<li><code>A</code> a ring, and <code>X</code>, <code>X'</code> be <code>A</code>-modules, <code>Hom_A(X', X)</code> is abelian group</li>
+<li>if <code>A</code> is commutative, then <code>Hom_A</code> is <code>A</code>-module, the group action is <code>a(f) -&gt; af</code></li>
+<li><code>Hom_A</code> is also a functor, contravariant in first variable. covariant in second</li>
+</ul>
+<p><strong>fix me!!!</strong> I fear the category things!</p>
+<h2 id="chapter-04-polynomials">chapter 04 polynomials</h2>
+<h3 id="p174--">p174 -</h3>
+<ul>
+<li>Euclidean algorithm: <code>f = gq + r</code> if leading coefficient of <code>g</code> is unit</li>
+<li>zero of a polynomial</li>
+<li><code>k</code> be a field =&gt; <code>k[X]</code> is principal &amp;&amp; factorial</li>
+<li>irrducible <code>f in k[X]</code>: degree &gt;= 1 and not a product <code>f = gh &amp;&amp; g, h !in k</code></li>
+<li>monic</li>
+<li>at most n roots, and <code>X - a</code> divides <code>f</code></li>
+</ul>
+<p><strong>fix me!!!</strong></p>
+<h2 id="chapter-05-algebraic-extensions">chapter 05 algebraic extensions</h2>
 <p>it studies things <strong>algebraic</strong></p>
 <h2 id="definition-4">definition</h2>
 <ul>
@@ -702,6 +1188,589 @@ $("#content").parent().css("max-width", "1300px")
 </ul></li>
 </ul>
 <h2 id="resources-2">resources</h2>
+<h1 id="real-and-functional-analysis">real and functional analysis</h1>
+<p>from the book <em>Real and Functional Analysis</em> by Serge Lang</p>
+<p>prerequests include first chapters of <em>Set Theory</em> by Jech, but sense we take a type theoritic foundation and this foundation is not done yet, we ignore them…</p>
+<ul>
+<li>might be useful: <a href="http://www.math.wustl.edu/~victor/classes/ma5051/">http://www.math.wustl.edu/~victor/classes/ma5051/</a></li>
+</ul>
+<h2 id="chapter-01-sets">chapter 01 sets</h2>
+<p>they are trivial</p>
+<ul>
+<li>demumerable -&gt; <code>|A| = omega</code></li>
+<li>countable -&gt; <code>|A| &lt;= omega</code></li>
+<li>Zorn’s lemma</li>
+</ul>
+<h2 id="chapter-02-topological-spaces">chapter 02 topological spaces</h2>
+<p><em>what’s the point in studying point set topology theory? because there are so many topological truth!!! you can view something as a ts in a weak sense and get results!</em></p>
+<p><em>yes. hott is a better foundation for homotopy theory, but… what ever… just learn them</em></p>
+<ul>
+<li>there will always be a weaker notation for topological facts in seq</li>
+<li><em>just like computer engineering, some theorem is just mere facts.</em>
+<ul>
+<li>they are not intelegently chanllenged</li>
+<li>but it takes time to remember them
+<ul>
+<li>but actually you do not need them that important</li>
+</ul></li>
+<li>you should build a system to memeorize them
+<ul>
+<li>by intuition</li>
+</ul></li>
+<li>they are kind of hard work, just!</li>
+</ul></li>
+<li>topics
+<ul>
+<li>general topology space</li>
+<li>Hausdorff space</li>
+<li>matric space</li>
+<li>normal space</li>
+<li>normed space</li>
+</ul></li>
+</ul>
+<hr />
+<ul>
+<li>topology</li>
+<li>open sets (finite intersection and arbitrary union)</li>
+<li>metric
+<ul>
+<li>define <code>d(a, b)</code> into <code>R</code></li>
+<li>positive and <code>d(a, b) == 0 &lt;-&gt; a = b</code></li>
+<li><code>d(a, b) = d(b, a)</code></li>
+<li><code>d(x, y) &lt;= d(x, z) + d(z, y)</code></li>
+<li>a norm induce a matric</li>
+<li>open, closed ball, sphere</li>
+<li>Cauchy seq</li>
+<li>seq converge</li>
+<li>complete - Cauchy seq converge</li>
+<li>matric space can always embeded into nvs
+<ul>
+<li>how about a discrete matric??</li>
+</ul></li>
+</ul></li>
+<li>normed vector space (over <code>R</code> or <code>C</code>)
+<ul>
+<li>define a function to <code>R</code></li>
+<li><code>|x| &gt;= 0</code> and only <code>= 0</code> if <code>x = 0</code></li>
+<li><code>|cx| = |c||x|</code></li>
+<li><code>|x+y| &lt;|x| + |y|</code></li>
+<li>eg.
+<ul>
+<li>sup norm
+<ul>
+<li>uniformly cauchy / convergent</li>
+</ul></li>
+<li>L^1-norm
+<ul>
+<li>L^1-Cauchy / convergent</li>
+</ul></li>
+</ul></li>
+<li>norm equvi - give same topo - <code>C_1|x|_1 &lt;= |x|_2 &lt;= C_2|x|_1</code></li>
+</ul></li>
+<li>topology equvi</li>
+<li>closed set</li>
+<li><code>x</code> adherent to subset <code>S</code>, every neibor overlay <code>S</code></li>
+<li>boundary = adherent to <code>S</code> and <code>-S</code></li>
+<li>interior point</li>
+<li>theorem: closed = include boundary</li>
+<li>closure: S + boundary, <code>S-bar-bar = S-bar</code></li>
+<li>theorem: <code>S-bar \/ T-bar = (S \/ T)-bar</code>, <code>(S^T)-bar &lt; S-bar ^ T-bar</code> <em>there are two kind of method to gain something, and they are comutative, but when talking about lose and gain, they are not!</em></li>
+<li><code>S &lt; X</code> dense in <code>X</code> := <code>S-bar = X</code></li>
+<li>induced topology on subset, subspace</li>
+<li>base - every open set is a union of <em><code>B</code></em></li>
+<li>if
+<ul>
+<li>every point in <code>B</code></li>
+<li>closed by <code>&lt;</code> for <code>^</code></li>
+<li>then it is a base and define a topology</li>
+</ul></li>
+<li>refinement, coarser</li>
+<li>weak topology generated by <code>F</code> - topology generated by <code>f^-1(W)</code> as base</li>
+<li>separable - has countable base - <em>compressing properties</em></li>
+<li>neighborhood</li>
+<li>continuous, and continuous at point <code>x</code>
+<ul>
+<li>in matric space, it is <code>(epsilon, delta)</code> definition</li>
+</ul></li>
+<li>continuous is preserved by <code>*</code></li>
+<li>homeomorphism - topological isomorphism != continuous bijective map</li>
+<li>product topology - the weak topology induced by projection</li>
+<li>open map: open -&gt; open, closed map: closed -&gt; closed
+<ul>
+<li>a continuous can be neither</li>
+<li><em>because we are really cared about the value</em></li>
+</ul></li>
+<li>connected - !disjoint union of open set</li>
+<li>continuous map perseve connecteness</li>
+<li>prop 2.3: family of subspace connected &lt;-&gt; has common point. connected component of a point <code>a</code></li>
+<li>prop: <code>S</code> connected then <code>S&lt; T&lt; S-bar</code> is connected. <em>you are adding boundary points!!!</em></li>
+<li><em>these propersition is just like… toys.</em></li>
+<li>path connected - has piecewise continuous path for all points - or has continuous from <code>[0, 1]</code>,
+<ul>
+<li>any interval of <code>R</code> is connected</li>
+<li>path connected -&gt; connected</li>
+<li>reverse? - consider the comb! or…</li>
+</ul></li>
+<li>arc connected - by a hemeomorphism
+<ul>
+<li>example of path but not arc - <code>0</code> and <code>0'</code> in <code>R^+</code>, <em>wikipedia</em></li>
+<li>Hausdorff space equal</li>
+</ul></li>
+<li>product preserve connectedness
+<ul>
+<li>actually I can proof by using the product base, and for infinite space, it is easier…</li>
+</ul></li>
+<li>covering of <code>X</code> in set!!!, open covering, closed covering</li>
+<li>compact = any open covering has finite subcovering = any family of closed set have finite intersection property =&gt; infinite intersection is also non-empty
+<ul>
+<li><em>what means? travel by open cover?</em></li>
+</ul></li>
+<li>reletively compact = closure is compact</li>
+<li>couninuous perserve compactness</li>
+<li><strong>closed subspace of compact is compact</strong></li>
+<li>Hausdorff = unequal points has two disjoint open nei
+<ul>
+<li>metric space is normal Hausdorff</li>
+</ul></li>
+<li><strong>compact subspace of Hausdorff space is closed</strong></li>
+<li>normal = disjoint closed set has open disjoint nei</li>
+<li>compact disjoint subset of Hausdorff space has disjoint nei =&gt; (compact Hausdorff =&gt; normal)</li>
+<li>subspace of Hausdorff space is Hausdorff
+<ul>
+<li>not true for normal</li>
+</ul></li>
+<li>sequentially compact = every sequence has a point of accumulation (every nei has infinite <code>x</code>)
+<ul>
+<li><em>you are not going too far away!!!</em></li>
+<li><em>so actually compact is a stronger condition!</em></li>
+<li><em>this def is not same as the wikipedia one!!!</em></li>
+<li>compact =&gt; seq compact</li>
+<li>countable base &lt;=&gt; compact = seq compact
+<ul>
+<li>proof: open cover =&gt; countable cover =&gt; unique point cover =&gt; must finite =&gt; if not =&gt; acc point!</li>
+</ul></li>
+<li>in a metric space
+<ul>
+<li>compact == seq compact == complete &amp;&amp; forall <code>r</code> exists finite open ball of <code>r</code> cover (totally bounded)
+<ul>
+<li>proof: matric =&gt; seq compact == compact =&gt; complete &amp;&amp; totally bounded || <strong>the proof is intricate!, it should really be a memorized technical lemma!!</strong></li>
+<li>subset of complete metric space (totally bounded =&gt; reletively compact)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>in <code>R</code>
+<ul>
+<li>above theorems =&gt; norm space =&gt; seq version =&gt; ordering properties</li>
+<li><code>f</code> <strong>continuous</strong> on compact set has max</li>
+</ul></li>
+<li><code>f: A -&gt; F</code> compact subset of matric space -&gt; matric space=&gt; continuous = uniform continuous. proof using <code>r</code> has min, because it is compact -&gt; R, so compact</li>
+<li><strong>Tychonoff’s</strong> product preserve compact</li>
+<li>in finite dim vector space
+<ul>
+<li><strong>compact = closed and bounded</strong> (instead of totally bounded)</li>
+<li>all norm is equivalent</li>
+<li>normed vector space locally compact iff finite dim</li>
+</ul></li>
+<li>locally compact (the proof is locally compact =&gt; finite dim!!!!)
+<ul>
+<li>one point compactification</li>
+<li><code>R^n -&gt; R^(n+1)-sphere</code></li>
+</ul></li>
+<li>separation by continuous functions</li>
+<li><code>X</code> normal space
+<ul>
+<li><code>A</code> closed, <code>U</code> open =&gt; <code>A &lt; U_1 &lt; U_1-bar &lt; U</code></li>
+<li>Urysohn’s lemma: <code>A</code>, <code>B</code> be closed disjoint subset, then separatable by continuous functions in <code>[0, 1]</code> with, <code>f(A) = 0</code> and <code>f(B) = 1</code></li>
+<li>the locally compact Hausdorff case</li>
+<li>Tietze extension theorem</li>
+</ul></li>
+</ul>
+<h2 id="chapter-02-exercises-1">chapter 02 EXERCISES</h2>
+<ol style="list-style-type: decimal">
+<li><ol style="list-style-type: decimal">
+<li>using the comapact to proof closed =&gt; continuous</li>
+<li>extension by limit?</li>
+</ol></li>
+<li><ol style="list-style-type: decimal">
+<li>trivial</li>
+<li>trivial</li>
+<li>trivial</li>
+<li>trivial</li>
+</ol></li>
+<li><ol style="list-style-type: decimal">
+<li>seems very complicated….</li>
+<li>.</li>
+</ol></li>
+<li><ol style="list-style-type: decimal">
+<li>.</li>
+<li>.</li>
+</ol></li>
+<li>metrizable, compatible
+<ol style="list-style-type: decimal">
+<li>trivial</li>
+<li>trivial</li>
+<li>trivial</li>
+</ol></li>
+<li>trivial</li>
+<li><ol style="list-style-type: decimal">
+<li>trivial</li>
+<li><a href="http://en.wikipedia.org/wiki/Metrization_theorem">http://en.wikipedia.org/wiki/Metrization_theorem</a></li>
+</ol></li>
+<li>.</li>
+<li>.</li>
+<li>trivial</li>
+<li>trivial</li>
+<li>path connected in normed vector space is open!!! this is the point!!!</li>
+<li>.</li>
+<li><ol style="list-style-type: decimal">
+<li>.</li>
+<li>.</li>
+<li>.</li>
+<li>using the normed vector space, path connected = connected</li>
+</ol></li>
+<li>trivial</li>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+<li></li>
+</ol>
+<h2 id="chatper-03-continuous-functions-on-compact-spaces">chatper 03 continuous functions on compact spaces</h2>
+<p><em>real valued functions?</em></p>
+<ul>
+<li>Banach space = complete normed vector space</li>
+<li>algebra on <code>X</code> <strong>to <code>R</code> or <code>C</code></strong>: difference of <code>xf in A</code></li>
+<li>example of algebra: <code>C(X)</code>, polynomials</li>
+<li>separates points</li>
+<li>Stone-Weierstrass theorem: on compact set <code>S</code> an algebra <code>A</code>
+<ul>
+<li>separate points + contains constant &lt;=&gt; uniform closure is <code>C(S)</code></li>
+<li>complex version, <code>A</code> additionally self conjugate, same result</li>
+<li>proof: first under the max, min, we can approx using compact, second, we can approx abs using poly. in complex version, we have conjugate to proof the real valued ones separate points, then we use real valued to approx complex valued</li>
+</ul></li>
+<li>ideal of an algebra</li>
+<li><code>Z_f</code> zeros of a continuous function is closed</li>
+<li><code>Z(J) = ^(Z_f)</code></li>
+<li>theorem 2.1: <code>X</code> an compact space, <code>R</code> ring of continuous function on <code>X</code>, with sup norm. <code>J</code> a closed ideal. <code>f in R &amp;&amp; f(x) = 0 forall x in Z(J)</code> =&gt; <code>f in J</code>
+<ul>
+<li>it created a semi-constant in <code>J</code></li>
+<li><em>understand what the theorem says, if you have a closed ideal, then almost all function that zeros in the zero of the ideal will in the ideal!!!</em></li>
+</ul></li>
+<li><code>X</code> metric space, <code>F</code> a Banach space, <code>O</code> subset of <code>C(X,F)</code> (equicontinuous at <code>x_0</code> = <code>forall e, exists t (d(x, x_0) &lt; t =&gt; forall f in O: |f(x)-f(x_0)| &lt; e)</code>)</li>
+<li><strong>Ascoli’s</strong>: with above &amp;&amp; <code>X</code> compact, <code>O</code> using sup norm (<code>O</code> is relatively compact in <code>C(X,F)</code> &lt;=&gt; <code>O</code> is equicontinuous &amp;&amp; <code>forall x in X, O(x)={f(x)} relatively_compact</code>)
+<ul>
+<li>if <code>F</code> is <code>R</code> or <code>C</code>, we use bounded</li>
+<li>corollary 3.3 <strong>fix me</strong></li>
+<li><em>it is that you can use open ball if they are about as one function: same rate and not too far away in values</em></li>
+</ul></li>
+<li>example of incomplete normed vector space?
+<ul>
+<li><a href="http://math.stackexchange.com/questions/209665/series-in-incomplete-normed-space">http://math.stackexchange.com/questions/209665/series-in-incomplete-normed-space</a></li>
+</ul></li>
+</ul>
+<h2 id="chapter-03-exercises">chapter 03 EXERCISES</h2>
+<ol start="0" style="list-style-type: decimal">
+<li>construct the function =&gt; proof it is the limit =&gt; proof it is continuous</li>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+<li>.</li>
+<li>using the ws theorem</li>
+</ol>
+<h2 id="chapter-04-banach-spaces">chapter 04 Banach spaces</h2>
+<ul>
+<li><code>{a_n} &gt;= 0</code> such that <code>Sum(a_n)</code> converges (in <strong>Banach</strong> space <code>|x_n| &lt;= a_n</code> for all <code>n</code>, then <code>Sum(x_n)</code> converges)</li>
+<li>normed vector space: linear map <code>l: E -&gt; F</code> continuous &lt;=&gt; <code>exists C &gt; 0, |l(x) &lt;= C|x| forall x in E</code>
+<ul>
+<li>example of non-continuous linear map: <a href="http://en.wikipedia.org/wiki/Linear_map#Continuity">http://en.wikipedia.org/wiki/Linear_map#Continuity</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Discontinuous_linear_map">http://en.wikipedia.org/wiki/Discontinuous_linear_map</a></li>
+<li>=&gt; is… obv, &lt;= is same</li>
+<li><code>C</code> is bound of <code>l</code>, <code>l</code> is bounded</li>
+<li>lub of all <code>|l(x)|</code> on <code>S_1</code> = norm of <code>l</code></li>
+<li><code>l -&gt; |l|</code> is norm on <code>L(E, F)</code> (<strong>continuous</strong> linear map)</li>
+<li><code>|u*v| &lt;= |u||v|</code> for <code>L</code> map composition</li>
+</ul></li>
+<li><code>F</code> complete =&gt; <code>L(E, F)</code> complete</li>
+<li>operator: <code>E -&gt; E</code> &amp;&amp; clm</li>
+<li>invertible = toplinear isomorphisms, <code>Lis(E, F)</code></li>
+<li>automorphism <code>Laut(E)</code></li>
+<li>Banach isomorphism, isometry: <code>|u(x)| = |x|</code></li>
+<li>bilinear: for normed vector space <code>E</code>, <code>F</code>, <code>G</code>, <code>l: E * F -&gt; G</code> is linear for two components
+<ul>
+<li>bilinear continuous &lt;=&gt; <code>|l(x, y)|&lt;C|x||y|</code></li>
+<li>norm of bilinear, <code>L(E, F; G)</code></li>
+<li>and <code>G</code> complete =&gt; <code>L(E, F; G)</code> complete</li>
+<li>examples: matrix mul, dot product, cross product</li>
+</ul></li>
+<li>iso between <code>L(E, L(F, G))</code> and <code>L(E, F; G)</code></li>
+<li>multilinear map, continuous, iso</li>
+<li>dual space <code>L(E, R) = E'</code>, functionals on <code>E</code>, it is complete!!! because we are using <code>R</code>!!!</li>
+<li><strong>Hahn-Banach</strong>: subspace <code>F</code> of real normed vs <code>E</code>, <code>l: F-&gt;R</code> a functional, then has same bound extension on <code>E</code>
+<ul>
+<li><em>extension of bounded linear functionals</em></li>
+<li>in nvs <code>E</code>, <code>v != 0</code> =&gt; <code>l(v) != 0</code> exists</li>
+<li>in <code>C</code> case</li>
+</ul></li>
+<li>prop 1.3: def <code>f_x: E' -&gt; R or C</code> such that <code>f_x(l) = l(x)</code>, then <code>x-&gt;f_x</code> is injective linear map, norm perserving
+<ul>
+<li>how to proof <code>|x| &lt; |f_x|</code>? just by reasoning and using HB! and, also, think by a example: the <code>R^2</code></li>
+</ul></li>
+<li>weak topology on <code>E'</code> is determined by <code>{f_x}</code></li>
+<li><strong>Alaoglu’s</strong>: <code>E</code> a Banach space, then <code>E'_1</code> is compact for the weak topology
+<ul>
+<li><strong>fix me</strong> not understand the proof!</li>
+</ul></li>
+<li>algebra: vs <code>A</code> &amp;&amp; multiplication: bilinear</li>
+<li>normed algebra: associ algebra &amp;&amp; space normed &amp;&amp; <code>|uv| &lt;= |u||v|</code></li>
+<li>Banach algebra: normed algebra + complete
+<ul>
+<li>example: convolution product</li>
+<li>cross product in <code>R^3</code> not asso</li>
+<li>bounded functions!</li>
+</ul></li>
+<li>invertible, inverse, unit</li>
+<li><code>A</code> Banach algebra with unit <code>e</code>, invertible elems is open in <code>A</code>, and if <code>|v| &lt; 1</code> then <code>e+v</code> is invertible
+<ul>
+<li><code>u -&gt; u^-1</code> is continuous</li>
+<li>toplinear is open in <code>L</code></li>
+</ul></li>
+<li><code>E</code> nvs, <code>F</code> subspace, <code>G</code> Banach space, continuous linear map <code>l: F -&gt; G</code> has unique linear extension <code>l-bar: F-bar -&gt; G</code> that has same norm</li>
+<li>completion of normed vs <code>E</code>: unique exists
+<ul>
+<li>by <code>E''</code></li>
+<li>proof
+<ul>
+<li>Cauchy seqs <code>S</code></li>
+<li>null seqs as subspace</li>
+<li>eqvui Cauchy <code>a = b + e</code>, e is null</li>
+<li><code>E-bar</code> of equvi class of <code>S</code></li>
+<li>norm on <code>E-bar</code></li>
+<li>…</li>
+</ul></li>
+<li>analysis of above one
+<ul>
+<li>there are totally different elements of same norm!!!</li>
+<li>but in our definition, our norm comes from null seq</li>
+<li>by this, we can restrict our norm to really say something about nearness…</li>
+</ul></li>
+<li>in the seminormed form
+<ul>
+<li>convergence is not unique!</li>
+</ul></li>
+</ul></li>
+<li>operators
+<ul>
+<li><code>S</code>-invariant subspace</li>
+<li><code>B</code> commute with <code>S</code> =&gt; kernel and image is <code>S</code>-inv</li>
+<li><code>p -&gt; p(A)</code> is ring homo, for multi params and inv space</li>
+<li>direct sum</li>
+<li>if <code>A</code> is an operator on <code>E</code>, we are interested to express <code>E</code> as direct sum of <code>A</code>-inv subspaces!</li>
+</ul></li>
+<li><code>E</code> a vs, <code>E*</code> a vs of linear maps and separate <code>E</code>
+<ul>
+<li>convex <code>S</code></li>
+<li>linear map maps/invs convex to convex</li>
+<li>hyperplane</li>
+<li>closed half plane</li>
+<li>there exists separating hyperplane for convex set and an point not in it</li>
+<li>extreme point</li>
+<li>1.3 and 1.4</li>
+<li><strong>Krein-Milman</strong> context set is unique determined by extremem points</li>
+<li><strong>fix me</strong></li>
+</ul></li>
+</ul>
+<h2 id="chapter-04-exercises">chapter 04 EXERCISES</h2>
+<ol style="list-style-type: decimal">
+<li>..</li>
+<li>..</li>
+<li>..</li>
+</ol>
+<h2 id="chapter-05-hilbert-space">chapter 05 Hilbert space</h2>
+<p><em>we use vs over <code>C</code>, and assume our product is positive</em></p>
+<ul>
+<li>antilinear, semi-lienar: <code>l(ax)=a-bar l(x)</code></li>
+<li>sesquilinear form, scala product: <code>E*E -&gt; C &lt;x, y&gt;</code> &amp;&amp; linear in <code>x</code> and simi-linear in <code>y</code></li>
+<li>hermitian: scala product &amp;&amp; <code>&lt;x,y&gt; = &lt;y,x&gt;-bar</code></li>
+<li>positive: hermitian &amp;&amp; <code>&lt;x,x&gt; &gt;= 0</code></li>
+<li>positive definite: positive &amp;&amp; <code>&lt;x,x&gt; == 0 &lt;=&gt; x == 0</code></li>
+<li>orthogonal: <code>&lt;u,w&gt; = 0</code></li>
+<li>null space <code>E_0</code> for hermitian
+<ul>
+<li><code>&lt;w,w&gt; == 0 =&gt; w in E_0</code></li>
+</ul></li>
+<li>L^2-norm
+<ul>
+<li>actually is semi-norm</li>
+</ul></li>
+<li>Schwarz inquality: <code>|&lt;u, w&gt;| &lt; |v||w|</code></li>
+<li>unit vector</li>
+<li>has unique <code>c</code>: <code>&lt;v - cw, w&gt; = 0</code> if <code>|w| != 0</code>
+<ul>
+<li><code>c</code> is Fourier coefficient of <code>v</code> with respect to <code>w</code></li>
+<li><code>v</code> perpendicular to <code>v_i</code> when they are mutually perpendicular</li>
+<li><code>|w + u| ^2 = |u|^2 + |w|^2</code> when prependicular</li>
+<li><code>|w + u| ^2 + |w - u|^2 = 2|w|^2 + 2|u|^2</code></li>
+</ul></li>
+<li>total family: union of finite generated space is dense in <code>E</code></li>
+<li>orthogonal</li>
+<li>orthonormal</li>
+<li>Hilbert basis: total &amp;&amp; orthnormal family</li>
+<li><code>v_i</code> orthognoal, then <code>|x - Sum(c_k v_k)| &lt;= |x - Sum(a_k v_k)|</code></li>
+<li>per-Hilbert space: vs &amp;&amp; positive definite hermintian form</li>
+<li>Hilbert space: per-Hilbert &amp;&amp; complete under L^2-norm</li>
+<li>lemma 1.5: closed subspace of Hilbert space, a point out’s min dis corrpond point in it
+<ul>
+<li>theorem 1.6 closed subspace has perpenducular point!</li>
+<li>exists Hilbert basis</li>
+<li><code>E = F + F_|</code></li>
+<li>orthogonal projection</li>
+<li>1.9: you get a point in generated space of denum <code>F</code> by projections…</li>
+<li>orthogonal decomposition</li>
+<li>decomposition as in 1.9 and Bessel inqeulity</li>
+</ul></li>
+<li><code>l_y = &lt;x,y&gt;</code> is functional, <code>y -&gt; l_y</code> is norm-preserving, antilinear isomorphism
+<ul>
+<li><code>End(E)</code> operators = continuous linear map</li>
+<li><code>Herm(E)</code> all continuous hermitian forms</li>
+<li><code>Sesqu(E)</code>, continuous sesqu form, <code>Herm</code> is closed in it</li>
+<li><code>A -&gt; pi_A</code> is norm perserving isomorphism between <code>End(E)</code> and <code>Sesqu(E)</code></li>
+<li>adjoint, transpose <code>&lt;Ax, y&gt; = &lt;x, A*, y&gt;</code></li>
+<li>2.3: about the adjoint</li>
+<li>sesquilinear form <code>pi</code> then <code>q(x) = pi(x, x)</code> is quadratic form</li>
+<li>2.4, complext Hilbert space, <code>&lt;Ax, x&gt; = 0 =&gt; A = O</code>
+<ul>
+<li>fails in real: rotation</li>
+</ul></li>
+<li><code>A = A*</code> hermitain, self-adjoint</li>
+</ul></li>
+</ul>
+<h2 id="chapter-05-exercises">chapter 05 EXERCISES</h2>
+<h2 id="chapter-06-the-general-integral">chapter 06 the general integral</h2>
+<ul>
+<li>sigma-algebra, generated sigma-algebra
+<ul>
+<li>denumerable union &amp; intersection</li>
+<li>Borel measureable: generated by open sets</li>
+</ul></li>
+<li>measurable space, measurable sets</li>
+<li>M1,2: measurable function to m-s and t
+<ul>
+<li>we now assume all of them is using Borel measure</li>
+<li>M5: f is measurable to nvs, then <code>|f|</code></li>
+</ul></li>
+<li>M3: <code>f = (g, h)</code> (<code>f</code> measurable =&gt; <code>g</code>, <code>h</code> measurable) &amp;&amp; (<code>g</code>, <code>h</code> measuralbe &amp;&amp; <code>Y * Z</code>’s open set is union of <code>{O_Y * O_Z}</code>
+<ul>
+<li>because of M1: satisfied by separatable Banach space</li>
+<li>M4: complex function &lt;=&gt; real parts</li>
+<li>M6: <code>fg</code> into complex is measurable: using M3 and M1</li>
+</ul></li>
+<li>M7: <code>f</code> is <code>X</code> into <strong>metric</strong> space, and <code>f_n</code> pointwize convergence to <code>f</code> is measureable, then <code>f</code> is
+<ul>
+<li>the proof is madness…</li>
+</ul></li>
+<li>simple map: disjoint finite union of <code>a</code> * ids on measurable sets</li>
+<li>M8: finite dimensional &lt;=&gt; pointwize limit of simple maps
+<ul>
+<li>it constructed it! and very claver, just like dignoziation!</li>
+<li>M9: real+, incresing simple maps</li>
+</ul></li>
+<li>positive measure, <code>u: M -&gt; [0, inf]</code>, countably addtive
+<ul>
+<li>Dirac measure</li>
+<li>counting measure</li>
+<li>monotonicity, and union/intersection</li>
+<li>1.1, 1,3, 1.2: closed for limit &lt;=&gt; measure
+<ul>
+<li>countable intersection limit only for <strong>finite</strong>!</li>
+</ul></li>
+</ul></li>
+<li>measured space <code>(X, M, u)</code></li>
+<li>almost everywhere, except measure 0</li>
+<li>step map: simple &amp;&amp; eauals 0 on infinte measure sets! <code>St(u)</code> of all step maps
+<ul>
+<li>closed</li>
+</ul></li>
+<li><code>u</code>-measuralbe: pointwise limit of step maps almost everywhere
+<ul>
+<li>it is the measure designed for <strong>integral</strong></li>
+<li><code>sigma</code>-finite: countable union of finite measure sets</li>
+</ul></li>
+<li>M10:
+<ul>
+<li><code>fg</code> with respect to a continuous bilinear map into Banach space
+<ul>
+<li>complex product</li>
+</ul></li>
+<li><code>|f|</code></li>
+<li><code>1/f</code> for <code>R</code> or <code>C</code></li>
+</ul></li>
+<li>M11: <code>sigma</code>-measurable &lt;=&gt; exists <code>u(Z) = 0</code> that <code>f|(X-Z)</code> measurable, <code>f</code> vanishs outside a <code>sigma</code>-finite set, and <code>f(X-Z)</code> contains a countable dense set
+<ul>
+<li>if <code>u</code> is <code>sigma</code>-finite and <code>f</code> into <code>C</code> then only requires <code>f|(X-Z)</code> measurable!</li>
+</ul></li>
+<li>M12: limit of <code>sigma</code>-measurable is <code>sigma</code>-measureable</li>
+<li>so <code>sigma</code>-measurable is preserved under standard ops, without composition</li>
+</ul>
+<hr />
+<ul>
+<li><code>f: X -&gt; E</code>, <code>E</code> is a Banach space
+<ul>
+<li><em>if <code>E</code> is not real or complex valued, then our integral is taking values in Banach space!!!</em></li>
+</ul></li>
+<li>integral of step functions <code>/_X f du = Sum(mu(A_i)f(A_i))</code>
+<ul>
+<li><code>/_A f du = /_X f_A du</code></li>
+<li>L^1-seminorm <code>||f||_1 = \_X |f| du</code></li>
+<li><code>|\_X f du| &lt;= ||f||_1 &lt;= ||f||_sup u(A)</code></li>
+</ul></li>
+<li><code>L^1</code>-completion <code>St(u) -&gt; L^1(u)</code>
+<ul>
+<li>this is the equvilence class of Cauchy seq of step functions that convergence under L^1 norm</li>
+<li>why we cannot use this definition using null-seq to proof? i think for me, it just means… forget this shit…</li>
+<li>there is seq that not Cauchy and diververgence <strong>but</strong> pointwise convergence</li>
+</ul></li>
+<li>space of L^1-Cauchy seq of step function convering almost everywhere to <code>f</code>: <code>L$^1(u)</code>, is a vs</li>
+<li>fundamental lemma of integration: a Cauchy seq of step maps <code>{f_n}</code> has a <strong>subseq</strong> convergence pointwise almost everywhere, and convergence absolutely and uniformly outside any <code>u(Z) &lt; epsilon</code>
+<ul>
+<li>why subseq? because we are talking about L^1 Cauchy, but not L^1 convergence. <strong>so is this stronger or weaker?</strong> see bellow</li>
+<li>lemma 3.2: <code>g_n</code> and <code>h_n</code> Cauchy seq of step maps, convergence almost everywhere to same map, then <code>lim \_X g_n = lim \_X h_n</code> and <code>{g_n - h_n}</code> is null seq</li>
+<li>integrable maps : <code>L$^1</code></li>
+<li>lemma 3.3 <code>||f||_1</code>d</li>
+<li>lemma 3.4 <code>L$</code> is complete</li>
+<li><strong>fix me</strong> wtf about this section?</li>
+</ul></li>
+<li>properties
+<ul>
+<li>theorem 4.2 <strong>fix me</strong></li>
+</ul></li>
+<li>lemma 5.1 <code>f in L$^1</code> measurable =&gt; <code>S_c</code> has finite measure, and <code>f</code> vanishes outside a <code>sigma</code>-finite set</li>
+<li>theorem 5.2: as 3.1</li>
+<li>corollary 5.3 an element <code>f in L$^1</code> has seminorm <code>||f||_1 = 0</code> iff <code>f</code> equal to 0 almost everywhere
+<ul>
+<li>equivalent in <code>L$^1</code>, the kernel of <code>L$^1 -&gt; L^1</code></li>
+</ul></li>
+<li>corollary 5.4</li>
+<li>theorem 5.5 monotone convergence theorem!</li>
+<li>corollary 5.6</li>
+<li>corollary 5.7 Fatou’s <code>lim inf f_n</code></li>
+<li>theorem 5.8 dominated convergence theorem</li>
+<li>corollary 5.9</li>
+<li>corollary 5.10</li>
+<li>corollary 5.11</li>
+<li><strong>fix me</strong></li>
+</ul>
+<h2 id="chapter-06-exercises">chapter 06 EXERCISES</h2>
+<p><strong>fix me</strong></p>
+<h2 id="chapter-07-duality-and-representation-theorems">chapter 07 duality and representation theorems</h2>
+<h2 id="chapter-07-exercises">chapter 07 EXERCISES</h2>
+<h2 id="chapter-08-some-application-of-intergration">chapter 08 some application of intergration</h2>
+<h2 id="chapter-08-exercises">chapter 08 EXERCISES</h2>
 <h1 id="statistics">statistics</h1>
 <p>from the book <em>All of Statistics</em></p>
 <p><em>isn’t all problem of statistics can be solved by big data?</em></p>
@@ -1333,6 +2402,84 @@ $("#content").parent().css("max-width", "1300px")
 <li>Gibbs sampling</li>
 </ul>
 <h2 id="resources-3">resources</h2>
+<h1 id="information-theory">information theory</h1>
+<p>from the book <em>Elements of Information Theory</em></p>
+<h2 id="preview">preview</h2>
+<ul>
+<li>entropy of rv <code>H(X) = -Sum(p(x) lg p(x))</code></li>
+<li>mutual information <code>I(X;Y) = H(X) - H(X|Y) = Sum(p(x, y) lg(p(x, y)/p(x)p(y)))</code></li>
+<li>communication channel, probability transition matrix <code>p(y|x)</code>
+<ul>
+<li>capacity <code>C = max_{p(x)} I(X;Y)</code></li>
+<li>e.g. noisy four-symbol channel</li>
+</ul></li>
+<li>relative entropy <code>D(p||q)  = Sum(p(x) lg (p(x)/q(x)))</code></li>
+</ul>
+<h2 id="basics">basics</h2>
+<ul>
+<li>conditional entropy</li>
+<li>chain rule</li>
+</ul>
+<h1 id="mathematical-optimization">mathematical optimization</h1>
+<p>from <em>Convex Optimization</em> slides by Stephen Boyd, Wikipedia, etc.</p>
+<h2 id="refs">refs</h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Mathematical_optimization">http://en.wikipedia.org/wiki/Mathematical_optimization</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hessian_matrix">http://en.wikipedia.org/wiki/Hessian_matrix</a></li>
+<li>maximum likelihood for point esitimation… the <span class="math">\(f\)</span> in it is the pdf… so it is resonable to assume the maximum… but in nn, we do not have this shit… and in linear regression, we have <strong>conditional likelihood</strong></li>
+</ul>
+<h2 id="ideas">ideas</h2>
+<ul>
+<li>what about mix them?</li>
+<li>what about start multi place, and discard on the way?</li>
+</ul>
+<h2 id="defs">defs</h2>
+<ul>
+<li>mathematical optimization problems: <span class="math">\(max\)</span>
+<ul>
+<li>maybe we should say that “computational” but not “symbolic”</li>
+</ul></li>
+<li>objective function = cost function = loss function</li>
+<li>order of approximation: order of magnitude of the error is <span class="math">\(O\left(x^{n+1}\right)\)</span>
+<ul>
+<li>in suitable case, expand by Taylor is ok</li>
+</ul></li>
+</ul>
+<h2 id="methods">methods</h2>
+<h3 id="nonlinear-programming">nonlinear programming</h3>
+<p><span class="math">\[y = f(x + \Delta x) \approx f(x) + J(x)\Delta x + \frac{1}{2} \Delta x ^T H(x) \Delta x\]</span></p>
+<!--- should go to calculus one day --->
+
+<p>differ by how to eval Hessian, gradients</p>
+<ul>
+<li>Newton’s method: eval the Hessian, ie, find zero in the driv</li>
+<li>methods evaluate gradients or approximate gradients
+<ul>
+<li>quzsi-Newton
+<ul>
+<li>L-BFGS</li>
+</ul></li>
+<li>gradient descent</li>
+<li>conjugate gradients</li>
+<li>variable metric methods</li>
+</ul></li>
+</ul>
+<h2 id="resources-4">resources</h2>
+<h1 id="problem-solving">problem solving</h1>
+<h2 id="pages">pages</h2>
+<ul>
+<li><a href="http://terrytao.wordpress.com/career-advice/solving-mathematical-problems/">http://terrytao.wordpress.com/career-advice/solving-mathematical-problems/</a></li>
+<li><a href="http://terrytao.wordpress.com/career-advice/there%E2%80%99s-more-to-mathematics-than-grades-and-exams-and-methods/">http://terrytao.wordpress.com/career-advice/there%E2%80%99s-more-to-mathematics-than-grades-and-exams-and-methods/</a></li>
+<li><a href="http://terrytao.wordpress.com/2010/10/21/245a-problem-solving-strategies/">http://terrytao.wordpress.com/2010/10/21/245a-problem-solving-strategies/</a></li>
+<li><a href="https://plus.google.com/u/0/114134834346472219368/posts/Xdm8eiPLWZp">https://plus.google.com/u/0/114134834346472219368/posts/Xdm8eiPLWZp</a>
+<ul>
+<li><em>The point is that even if the technique is doomed to fail, the precise point in the argument at which it fails can be very instructive, as it can delineate what portion of the problem can be handled</em></li>
+</ul></li>
+<li><a href="http://terrytao.wordpress.com/career-advice/ask-yourself-dumb-questions-%E2%80%93-and-answer-them/">http://terrytao.wordpress.com/career-advice/ask-yourself-dumb-questions-%E2%80%93-and-answer-them/</a>
+<ul>
+<li><em>Don’t just read it; fight it! Ask your own questions, look for your own examples, discover your own proofs. Is the hypothesis necessary? Is the converse true? What happens in the classical special case? What about the degenerate cases? Where does the proof use the hypothesis?</em></li>
+</ul></li>
+</ul>
 <h1 id="random-puzzles">random puzzles</h1>
 <ul>
 <li><a href="https://www.quantnet.com/threads/jane-street-interview-question-needing-help.7591/">the noodles probability</a> * consider the first pick</li>
