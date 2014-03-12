@@ -5,122 +5,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>mathematics</title>
         <link rel="stylesheet" type="text/css" href="./css/snailya.css" />
-        <style>
-
-.bs-docs-sidebar.affix {
-    position: static;
-}
-
-@media (min-width:768px) {
-    .bs-docs-sidebar {
-        padding-left: 20px;
-    }
-}
-
-.bs-docs-sidenav {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.bs-docs-sidebar .nav>li>a {
-    display: block;
-    font-size: 13px;
-    font-weight: 500;
-    color: #999;
-    padding: 4px 20px;
-}
-
-.bs-docs-sidebar .nav>li>a:hover,.bs-docs-sidebar .nav>li>a:focus {
-    padding-left: 19px;
-    color: #563d7c;
-    text-decoration: none;
-    background-color: transparent;
-    border-left: 1px solid #563d7c;
-}
-
-.bs-docs-sidebar .nav>.active>a,.bs-docs-sidebar .nav>.active:hover>a,.bs-docs-sidebar .nav>.active:focus>a {
-    padding-left: 18px;
-    font-weight: 700;
-    color: #563d7c;
-    background-color: transparent;
-    border-left: 2px solid #563d7c;
-}
-
-.bs-docs-sidebar .nav .nav {
-    display: none;
-    padding-bottom: 10px;
-}
-
-.bs-docs-sidebar .nav .nav>li>a {
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 30px;
-    font-size: 12px;
-    font-weight: 400;
-}
-
-
-
-.bs-docs-sidebar .nav .nav>li>a:hover,.bs-docs-sidebar .nav .nav>li>a:focus {
-    padding-left: 29px;
-}
-
-.bs-docs-sidebar .nav .nav>.active>a,.bs-docs-sidebar .nav .nav>.active:hover>a,.bs-docs-sidebar .nav .nav>.active:focus>a {
-    font-weight: 500;
-    padding-left: 28px;
-}
-
-
-.bs-docs-sidebar .nav .nav .nav >li>a {
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 40px;
-    font-size: 12px;
-    font-weight: 400;
-}
-
-
-.bs-docs-sidebar .nav .nav .nav>li>a:hover,.bs-docs-sidebar .nav .nav .nav>li>a:focus {
-    padding-left: 39px;
-}
-
-.bs-docs-sidebar .nav .nav .nav>.active>a,.bs-docs-sidebar .nav .nav .nav>.active:hover>a,.bs-docs-sidebar .nav .nav .nav>.active:focus>a {
-    font-weight: 500;
-    padding-left: 38px;
-}
-
-
-@media (min-width:992px) {
-    .bs-docs-sidebar .nav>.active>ul {
-        display: block;
-    }
-
-    .bs-docs-sidebar.affix,.bs-docs-sidebar.affix-bottom {
-        width: 213px;
-    }
-
-    .bs-docs-sidebar.affix {
-        position: fixed;
-        top: 20px;
-    }
-
-    .bs-docs-sidebar.affix-bottom {
-        position: absolute;
-    }
-
-    .bs-docs-sidebar.affix-bottom .bs-docs-sidenav,.bs-docs-sidebar.affix .bs-docs-sidenav {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-
-@media (min-width:1200px) {
-    .bs-docs-sidebar.affix-bottom,.bs-docs-sidebar.affix {
-        width: 263px;
-    }
-}
-
-        </style>
     </head>
     <body>
     <script src="./js/jquery.min.js"></script>
@@ -138,8 +22,19 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="./posts.html">posts</a></li>
+            <li><a href="./scope.html">scope</a></li>
             <li><a href="./mathematics.html">mathematics</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">random notes <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                
+                    <li><a href="./random-notes/pl-ideas.html">pl-ideas</a></li>
+                
+                    <li><a href="./random-notes/yhbkj.html">yhbkj</a></li>
+                
+                </ul>
+            </li>
+            <li><a href="./posts.html">posts</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
           </ul>
@@ -231,6 +126,41 @@ $("#content").parent().css("max-width", "1300px")
 <h2 id="resource">resource</h2>
 <p>the type theory here is <em>homotopy type theory</em>, see the book <span id="cross-Homotopy-Type-Theory" class="definition">Homotopy Type Theory</span></p>
 <p>CMU course: <span id="cross-2013-fall-15-819" class="definition">2013-fall-15-819</span></p>
+<h1 id="random-puzzles">random puzzles</h1>
+<ul>
+<li><a href="https://www.quantnet.com/threads/jane-street-interview-question-needing-help.7591/">the noodles probability</a>
+<ul>
+<li>consider the first pick</li>
+</ul></li>
+<li><a href="https://www.quantnet.com/threads/jane-street-interview-question-needing-help.7591/">100 dice problem!</a>
+<ul>
+<li>consider the position <span class="math">\((n, m)\)</span></li>
+<li>from the above two, we can see that you should know where to start considering the problem</li>
+</ul></li>
+<li>the <span class="math">\(n\)</span> man remember card problem
+<ul>
+<li>it is not clear at all when considering this point, but you should consider the optimal solution when go on</li>
+</ul></li>
+<li>the gate program: can you make a circuit calculate the not of 3 variables using only 2 <code>not</code> gate and arbitrary <code>and</code> and <code>or</code> gates?
+<ul>
+<li>boolean function reduction! then you have a function that has no <code>not</code> in it!</li>
+</ul></li>
+<li>the two kid cake problem
+<ul>
+<li>it is a optimization problem! <code>minimize[ max(max(1-x,x), min(1-x,x)+1/2) ]</code></li>
+<li>but in a more general form <code>min(1 - max( max(1-x1,x1) + min(1-x2, x2), min(1-x1,x1) + max(1-x2, x2) ) )</code></li>
+<li>if 3 cake, the same problem!!! <code>minimize[ max_first, max_second, max_last ]</code></li>
+<li>for the general case, we need
+<ul>
+<li>first, we need to know it has a <strong>eq point</strong></li>
+<li>then we find it like above!</li>
+</ul></li>
+</ul></li>
+<li>proof that you have <span class="math">\(n+1\)</span> integers bellow <span class="math">\(2n\)</span>, always two relatively prime
+<ul>
+<li>this takes Erdios 10 minutes</li>
+</ul></li>
+</ul>
     </div>
     <div class="col-md-2">
     </div>
@@ -239,7 +169,7 @@ $("#content").parent().css("max-width", "1300px")
 </div>
 <script src="./js/jquery.toc.js"></script>
 <script src="./js/toc.js"></script>
-<!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </div>
   </div>
 
