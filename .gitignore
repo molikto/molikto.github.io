@@ -1,2 +1,8 @@
+_cache
+_site
 .DS_Store
-
+site
+site.hi
+site.o
+diary/
+diary.html
