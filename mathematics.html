@@ -46,6 +46,9 @@
     </div>
   <div class="body small-container" id="content">
     
+
+
+
 <script>
 $("#content").css("max-width", "1100px")
 </script>
@@ -260,6 +263,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><a href="#cross-category">category</a> of <a href="#cross-category">category</a>, <span class="math">\({\mathcal{Cat}}\)</span> (or all small categories)
 <ul>
+<li>it is an <a href="#cross-2-category">2-category</a></li>
 <li><a href="#cross-object">object</a>. <a href="#cross-category">category</a></li>
 <li><a href="#cross-morphism">morphism</a>. <span id="cross-functor" class="crosslink">functor</span>, preserve <a href="#cross-identity-morphism">identity morphism</a> and <a href="#cross-law-of-composition">law of composition</a>: <span class="math">\(F({\text{id}}_x) = {\text{id}}_{F(x)}\)</span>, <span class="math">\(F(g\circ f) = F(g) \circ F(f)\)</span>
 <ul>
@@ -427,8 +431,12 @@ $("#content").css("max-width", "1100px")
 <li>excellent! this will be great for review, but i do not know if one can read this first</li>
 <li>most notes here is adapted from these notes</li>
 </ul></li>
+<li><span id="cross-ref-category-for" class="crosslink">ref-category-for</span> <em>Category Theory for Working Mathematician</em></li>
 </ul>
 <h2 id="higher-category">higher category</h2>
+<ul>
+<li><span id="cross-2-category" class="crosslink">2-category</span></li>
+</ul>
 <h1 id="set">set</h1>
 <h2 id="idea-2">idea</h2>
 <p>types that has no non-trivial <a href="#cross-identity">identity</a>, 0-type</p>
@@ -505,7 +513,7 @@ $("#content").css("max-width", "1100px")
 
 ## cardinal
 
-* [[cardinal]]
+* [[cardinal | cardinality]]
 
 * what it means by: $|X| = |Y|$ and $|X| &lt; |Y|$
 * $|X| &lt; |P(X)|$
@@ -565,7 +573,7 @@ $("#content").css("max-width", "1100px")
 <li>it is not <a href="#cross-groupid">groupid</a>, because the inverse is not <a href="#cross-groupid-inverse">groupid inverse</a>, but that’s true in <a href="#cross-homotopy-space">homotopy space</a></li>
 </ul></li>
 <li><a href="#cross-monomorphism">monomorphism</a> and <a href="#cross-epimorphism">epimorphism</a> is reduced from <a href="#cross-set">set</a></li>
-<li><a href="#cross-isomorphism">isomorphism</a>. <span id="cross-homeomorphism" class="crosslink">homeomorphism</span> is not reduced from set!</li>
+<li><a href="#cross-isomorphism">isomorphism</a>. <span><span id="cross-homeomorphically"></span><span id="cross-homeomorphism" class="crosslink">homeomorphism </span></span> is not reduced from set!</li>
 <li><a href="#cross-product">product</a>. <a href="#cross-set-product">set product</a> with <a href="#cross-weak-topology">weak topology</a> for projection</li>
 <li><a href="#cross-coproduct">coproduct</a>.</li>
 </ul></li>
@@ -655,16 +663,18 @@ $("#content").css("max-width", "1100px")
 <li>then it is proofed for infinite version <code>fix me</code></li>
 </ul></li>
 <li><a href="#cross-product">product</a> is preserved, it is proofed by <strong>universal property</strong> but <code>fix me</code></li>
-<li>the <a href="#cross-isomorphism">isomorphism</a>s for different <a href="#cross-basepoint">basepoint</a> . <a href="#cross-space">space</a>s. in summary, <a href="#cross-basepoint">basepoint</a> changing results in <a href="#cross-isomorphism">isomorphism</a>, so of them will have unique isomorphism, and when the <a href="#cross-group">group</a> is <a href="#cross-abelian">abelian</a>, it is unique
+<li>the <a href="#cross-isomorphism">isomorphism</a>s for different <a href="#cross-basepoint">basepoint</a> . <a href="#cross-space">space</a>s. in summary, <a href="#cross-basepoint">basepoint</a> changing results in <a href="#cross-isomorphism">isomorphism</a>, some of them will have unique isomorphism, and when the <a href="#cross-group">group</a> is <a href="#cross-abelian">abelian</a>, it is unique. but this is not isomorphism in <a href="#cross-pointed-space">pointed space</a>, it is reduced to <a href="#cross-morphism">morphism</a> in <a href="#cross-space">space</a>, then project to <a href="#cross-group">group</a>
 <ul>
 <li><span class="math">\(a\)</span> a path, <span class="math">\(\gamma[a]\)</span> the <a href="#cross-homomorphism">homomorphism</a> to move point</li>
 <li><span class="math">\(\gamma[a][f] = [a\cdot f \cdot a^{-1}]\)</span></li>
 <li>it only depends on the <a href="#cross-homotopy">homotopy</a> class of <span class="math">\(a\)</span></li>
 <li>it is <a href="#cross-isomorphism">isomorphism</a> with inverse <span class="math">\(\gamma[a^{-1}]\)</span></li>
 <li>if the group is <a href="#cross-abelian">abelian</a> we have <span class="math">\(\gamma[b][f] = \gamma[a][f]\)</span>, you should view the structure in the groupoid, and switch basepoint</li>
-<li>so there are <span class="math">\(n\)</span> kinds of path induced isomorphism between <span class="math">\(\pi_1(X,x)\)</span> and <span class="math">\(\pi_1(X, y)\)</span> where <span class="math">\(n\)</span> is the number of homotopy class of the path between the two point, so one homotopy class means one isomorphism is path induced, and then we can use this way to identity two group *i think there are many homotopy class on <span class="math">\(S^1 \times S^1\to S^1\times S^1\)</span>, examples are projection, id, and swap, but some are not path induced</li>
+<li>so there are <span class="math">\(n\)</span> kinds of path induced isomorphism between <span class="math">\(\pi_1(X,x)\)</span> and <span class="math">\(\pi_1(X, y)\)</span> where <span class="math">\(n\)</span> is the number of homotopy class of the path between the two point, so one homotopy class means one isomorphism is path induced, and then we can use this way to identity two group</li>
 </ul></li>
-<li><a href="#cross-isomorphism">isomorphism</a> by <a href="#cross-isomorphism">isomorphism</a> in <a href="#cross-homotopy-space">homotopy space</a>. if <span class="math">\(f:X \to Y\)</span> is iso in <a href="#cross-homotopy-space">homotopy space</a> then <span class="math">\(f_*: \pi_1(X, x) \to \pi_1(Y, f(x))\)</span> is <span id="cross-isomorphism" class="crosslink">isomorphism</span> for all <span class="math">\(x\)</span>, it is not a functor</li>
+<li>i think there are many homotopy class on <span class="math">\(S^1 \times S^1\to S^1\times S^1\)</span>, examples are projection, id, and swap, but some are not path induced</li>
+<li><a href="#cross-isomorphism">isomorphism</a> by <a href="#cross-morphism">morphism</a> in <a href="#cross-homotopy-space">homotopy space</a>. an <a href="#cross-isomorphism">isomorphism</a> in <a href="#cross-homotopy-space">homotopy space</a> is a class of <a href="#cross-morphism">morphism</a>s in <a href="#cross-pointed-space">pointed space</a>, and by this class of <a href="#cross-morphism">morphism</a>, you get <a href="#cross-isomorphism">isomorphism</a> in group</li>
+<li><a href="#cross-isomorphism">isomorphism</a> by <a href="#cross-isomorphism">isomorphism</a> in <a href="#cross-homotopy-space">homotopy space</a>. again, they are not <a href="#cross-isomorphism">isomorphism</a> in <a href="#cross-pointed-space">pointed space</a>, but reduced. <a href="#cross-isomorphism">isomorphism</a> in <a href="#cross-homotopy-space">homotopy space</a> is class of (because of the homotopy) class of (because adding basepoint) <a href="#cross-morphism">morphism</a> in <a href="#cross-pointed-space">pointed space</a>, each of them is isomorphism. if <span class="math">\(f:X \to Y\)</span> is iso in <a href="#cross-homotopy-space">homotopy space</a> then <span class="math">\(f_*: \pi_1(X, x) \to \pi_1(Y, f(x))\)</span> is <span id="cross-isomorphism" class="crosslink">isomorphism</span> for all <span class="math">\(x\)</span></li>
 <li><a href="#cross-simply-connected">simply connected</a> fundamental group is zero and <a href="#cross-path-connected">path connected</a>
 <ul>
 <li>it has little thing to do with <a href="#cross-contractible">contractible</a></li>
@@ -679,6 +689,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><code>fix me</code></li>
 </ul></li>
+<li>p20 proposition and exercises bellow, i do not know how to compute the push outs… <code>fix me: not understand the pushout now</code></li>
 </ul>
 <p>from <em><a href="#cross-ref-at-concise">ref-at-concise</a></em></p>
 <ol style="list-style-type: decimal">
@@ -687,67 +698,62 @@ $("#content").css("max-width", "1100px")
 <li>exercises <code>fix me</code>, i do not know what’s the <span class="math">\(deg\)</span> and what’s topological group</li>
 <li>for <span id="cross-real-projective-space" class="crosslink">real projective space</span> <code>fix me</code></li>
 </ol>
-<h2 id="homotopy-invariance">homotopy invariance</h2>
-<ul>
-<li><span class="math">\(h: p\simeq q\)</span> then we have paths <span class="math">\(a(t): p(x)\to q(x)\)</span> in <span class="math">\(Y\)</span> by <span class="math">\(a(t) = h(x, t)\)</span> which is the homotopy reduced to <span class="math">\(Y\)</span> by projection on base point <span class="math">\(x\)</span></li>
-<li><p>then we have <span class="math">\[\gamma[a]\circ p_* = q_*: \pi_1(X, x)\dashrightarrow \pi_1(Y, p(x)) \to \pi_1(Y, q(x))\]</span></p></li>
-<li><p>proof by proofing that a certain path is zero, which we can construct as a border of a map from <span class="math">\(I\times I\)</span> which is contractible, so we proof it is homotopy to zero</p></li>
-<li><p>this proofs, if you map by homotopy, then the group is isomorphism by some path isomorphism</p></li>
-<li>relation to <span id="cross-fundamental-group" class="crosslink">fundamental group</span></li>
-<li><p>because <span class="math">\(\mathcal{U}\to h\mathcal{U}\)</span> has no base point, we cannot get the fundamental group, but we have <span class="math">\(f: X\to Y\)</span> is homotopy equivalence, then <span class="math">\(f_*\)</span> is isomorphism for all <span class="math">\(x\)</span>, the proof uses the homotopy function induce isomorphism in fundamental group, blabala…</p></li>
-<li>a space is contractible if there is an isomorphism in homotopy space to zero</li>
-<li>then the fundamental group is zero, because there fundamental group is isomorphic</li>
-<li><p>but this is not necessory, for example, there are no isomorphism form <span class="math">\(S^2\)</span> to <span class="math">\(D^0\)</span> but we the fundamental group is still zero, this is because higher homotopy strucutrue</p></li>
-</ul>
-<h3 id="example">example</h3>
-<p>p20 proposition and exercises bellow, i do not know how to compute the push outs… <code>fix me: not understand the pushout now</code></p>
 <h2 id="covering-space">covering space</h2>
-<h3 id="idea-5">idea</h3>
 <ul>
-<li><span class="math">\(p: E\to B\)</span></li>
-<li><span id="cross-surjective" class="crosslink">surjective</span></li>
-<li>each <span class="math">\(b\in B\)</span>, has <span id="cross-open" class="crosslink">open</span> <span id="cross-neighborhood" class="crosslink">neighborhood</span> <span class="math">\(V\)</span>, such that each <span id="cross-disjoint-component" class="crosslink">disjoint component</span> of <span class="math">\(p^{-1}(V)\)</span> is open and mapped <span id="cross-homeomorphically" class="crosslink">homeomorphically</span> onto V by <span class="math">\(p\)</span>
+<li><span><span id="cross-covering"></span><span id="cross-covering-space" class="crosslink">covering space </span></span> <span class="math">\(p: E\to B\)</span>
+<ul>
+<li><a href="#cross-surjective">surjective</a></li>
+<li>each <span class="math">\(b\in B\)</span>, has <a href="#cross-open">open</a> . <a href="#cross-neighborhood">neighborhood</a> <span class="math">\(V\)</span>, such that each <a href="#cross-disjoint-component">disjoint component</a> of <span class="math">\(p^{-1}(V)\)</span> is open and mapped <a href="#cross-homeomorphically">homeomorphically</a> onto V by <span class="math">\(p\)</span>
 <ul>
 <li>so it should not “go back” in the middle?</li>
+<li><span id="cross-fundamental-neighborhood" class="crosslink">fundamental neighborhood</span>. <a href="#cross-path-connected">path connected</a> . <a href="#cross-open">open</a></li>
 </ul></li>
-<li><span id="cross-fundamental-neighborhood" class="crosslink">fundamental neighborhood</span>, <span id="cross-path-connected" class="crosslink">path connected</span> <span id="cross-open" class="crosslink">open</span></li>
 <li><span id="cross-totally-space" class="crosslink">totally space</span></li>
 <li><span id="cross-base-space" class="crosslink">base space</span></li>
 <li><span id="cross-fiber" class="crosslink">fiber</span> of covering <span class="math">\(p\)</span></li>
+</ul></li>
 </ul>
 <h3 id="unique-path-lifting">unique path lifting</h3>
 <ul>
-<li><span class="math">\(p: E\to B\)</span> and <span class="math">\(b\in B\)</span>, <span class="math">\(e,e'\in F_b\)</span></li>
+<li><span class="math">\(p: E\to B\)</span> and <span class="math">\(b\in B\)</span>, <span class="math">\(e,e'\in F_b\)</span>
+<ul>
 <li>a path <span class="math">\(f: I\to B\)</span> lefts uniquely for every <span class="math">\(e\)</span> such that <span class="math">\(g(0) = e\)</span> and <span class="math">\(p\circ g = f\)</span>. the proof is actually easy</li>
-<li><p>equivalent path lifts to equivalent path, and hence <span class="math">\(g(1)=g'(1)\)</span>. proof <span class="math">\(p\circ h: I\times I \to B\)</span>, compact, fundamental cover, finite cover, project back, base, finite cover, grid, grow the border (a old square only can all include the line or include nothing, so you can grow it!), inductively define the homotopy <code>fix me: i should check this proof</code></p></li>
-<li>regular: <span class="math">\(p_*\)</span> project to normal group</li>
-<li>universal: <span id="cross-simply-connected" class="crosslink">simply connected</span> cover</li>
-<li><p>for a universal cover, <span class="math">\(F_b\)</span> are in bijective with <span class="math">\(\pi_1(B, b)\)</span></p></li>
-</ul>
-<h3 id="example-1">example</h3>
+<li>equivalent path lifts to equivalent path, and hence <span class="math">\(g(1)=g'(1)\)</span>. proof <span class="math">\(p\circ h: I\times I \to B\)</span>, compact, fundamental cover, finite cover, project back, base, finite cover, grid, grow the border (a old square only can all include the line or include nothing, so you can grow it!), inductively define the homotopy <code>fix me: i should check this proof</code></li>
+<li><span id="cross-regular-covering" class="crosslink">regular covering</span>. <span class="math">\(p_*\)</span> project to normal group</li>
+<li><span id="cross-universal-covering" class="crosslink">universal covering</span>. <a href="#cross-simply-connected">simply connected</a> cover
 <ul>
+<li>for a universal cover, <span class="math">\(F_b\)</span> are in bijective with <span class="math">\(\pi_1(B, b)\)</span></li>
 <li>for <span class="math">\(n \geq 3\)</span>, <span class="math">\(\mathbf{R}P^n\)</span> covered by <span class="math">\(S^n\)</span>, then we can see that <span class="math">\(\pi_1(\mathbf{R}P^n) =2\)</span></li>
+</ul></li>
+</ul></li>
 </ul>
-<h3 id="cont.">cont.</h3>
+<h3 id="covering-groupoid">covering groupoid</h3>
 <ul>
-<li><span id="cross-coslice-category" class="crosslink">coslice category</span> of the groupoid</li>
-<li><span class="math">\(St(x)\)</span></li>
-<li>covering of groupoid</li>
-<li><span id="cross-surjective" class="crosslink">surjective</span></li>
+<li><a href="#cross-coslice-category">coslice category</a> of the <a href="#cross-groupoid">groupoid</a></li>
+<li><span id="cross-star" class="crosslink">star</span> of <span class="math">\(x\)</span>, <span class="math">\(St(x)\)</span></li>
+<li><span id="cross-covering-of-groupoid" class="crosslink">covering of groupoid</span>
+<ul>
+<li><a href="#cross-surjective">surjective</a></li>
 <li>restricts to bijection <span class="math">\(p:St(e)\to St(p(e))\)</span> for each <span class="math">\(e\)</span></li>
 <li>the def of covering groupoid is just the useful properties of covering space. above can be reformulated as induced functor <span class="math">\(\Pi(p):\Pi(E)\to \Pi(B)\)</span> of cover space <span class="math">\(p\)</span> induce a covering groupoid</li>
-<li><span class="math">\(p_*: \pi_1(E, e)\to \pi_1(B,b)\)</span> is <span id="cross-monomorphism" class="crosslink">monomorphism</span> and base changing group is <span id="cross-conjugate" class="crosslink">conjugate</span>, and as one runs though <span class="math">\(e'\)</span>, we runs through conjugate groups in <span class="math">\(\pi_1(B,b)\)</span></li>
-<li>examples: i suspect all finite cover will leave the fundamental group unchanged, but in the infinite circle case, we can see that it is really monomorphism, because <span class="math">\(e\)</span> back, then <span class="math">\(b\)</span> must back, but not reverse</li>
-<li>i cannot found a example that is really non-trivial conjugate, they are all surjective or not moving, i can found an example it is non-trivial subgroup, just when you cannot come back by something. for a non-trivial conjudate, see Hatcher, p58, (10)</li>
-<li>run though conjugate, but still not the whole group sometimes</li>
-<li>translation function <span class="math">\(T(b): \mathcal{B}\to \mathcal{Set}\)</span> (the set of fibers at a point), <span class="math">\(T(f)\)</span> is a morphism in <span class="math">\(\mathcal{Set}\)</span> which depends on <span class="math">\(f\)</span> will have different behaviour</li>
-<li><p>fibers has same <span id="cross-cardinality" class="crosslink">cardinality</span></p></li>
-<li>regular: <span class="math">\(p(\pi(\mathcal{E}, e))\)</span> is normal subgroup of <span class="math">\(\pi(\mathcal{B}, b)\)</span></li>
-<li><p>universal: <span class="math">\(p(\pi(\mathcal{E}, e)) = \{e\}\)</span></p></li>
-</ul>
-<h2 id="example-2">example</h2>
+</ul></li>
+<li><span class="math">\(p_*: \pi_1(E, e)\to \pi_1(B,b)\)</span> is <a href="#cross-monomorphism">monomorphism</a> and base changing group is <a href="#cross-conjugate">conjugate</a>, and as one runs though <span class="math">\(e'\)</span>, we runs through conjugate groups in <span class="math">\(\pi_1(B,b)\)</span>
 <ul>
-<li>real projective space
+<li>examples: i suspect all finite cover will leave the fundamental group unchanged, but in the infinite circle case, we can see that it is really monomorphism, because <span class="math">\(e\)</span> back, then <span class="math">\(b\)</span> must back, but not reverse</li>
+<li>i cannot found a example that is really non-trivial conjugate, they are all surjective or not moving, i can found an example it is non-trivial subgroup, just when you cannot come back by something. for a non-trivial conjudate, see <a href="#cross-ref-at-hatcher">ref-at-hatcher</a></li>
+<li>run though conjugate, but still not the whole group sometimes</li>
+<li><span id="cross-regular-covering-groupoid" class="crosslink">regular covering groupoid</span>. <span class="math">\(p(\pi(\mathcal{E}, e))\)</span> is normal subgroup of <span class="math">\(\pi(\mathcal{B}, b)\)</span></li>
+<li><span id="cross-universal-covering-groupoid" class="crosslink">universal covering groupoid</span>. <span class="math">\(p(\pi(\mathcal{E}, e)) = \{e\}\)</span></li>
+</ul></li>
+<li>translation function <span class="math">\(T(b): \mathcal{B}\to \mathcal{Set}\)</span> (the set of fibers at a point), <span class="math">\(T(f)\)</span> is a morphism in <span class="math">\(\mathcal{Set}\)</span> which depends on <span class="math">\(f\)</span> will have different behaviour
+<ul>
+<li>fibers has same <a href="#cross-cardinality">cardinality</a></li>
+</ul></li>
+</ul>
+<h3 id="example">example</h3>
+<h2 id="example-1">example</h2>
+<ul>
+<li><span id="cross-real-projective-space" class="crosslink">real projective space</span>
 <ul>
 <li>the real projective space <span class="math">\(\mathbb{R}P^n\)</span> is obtained by gluing antipodal points of <span class="math">\(S^n\)</span></li>
 </ul></li>
@@ -755,6 +761,7 @@ $("#content").css("max-width", "1100px")
 <h2 id="references-3">references</h2>
 <ul>
 <li><span id="cross-ref-at-concise" class="crosslink">ref-at-concise</span> <em>A Concise Course in Algebraic Topology</em></li>
+<li><span id="cross-ref-at-hatcher" class="crosslink">ref-at-hatcher</span> <em>Algebraic Topology</em>, Hatcher</li>
 </ul>
 <h1 id="algebra">algebra</h1>
 <h2 id="notes-on-algebra">notes on algebra</h2>
@@ -2617,10 +2624,11 @@ u(U^v)     (u^V)v     (u^V)(U^v)</code></pre>
 </ul>
     </div>
 </div>
-
+ 
 </div>
 <script src="./js/jquery.toc.js"></script>
 <script src="./js/toc.js"></script>
+
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </div>
 
