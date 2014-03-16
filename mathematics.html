@@ -278,7 +278,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul></li>
 <li><a href="#cross-law-of-composition">law of composition</a>. <a href="#cross-function-composition">function composition</a></li>
-<li><span id="cross-equivalence-of-category" class="crosslink">equivalence of category</span>. <a href="http://en.wikipedia.org/wiki/Equivalence_of_categories">Wikipedia</a>. it is two map in <span class="math">\({\mathcal{Cat}}\)</span> such that …
+<li><span><span id="cross-category-equivalence"></span><span id="cross-equivalence-of-category" class="crosslink">equivalence of category </span></span>. <a href="http://en.wikipedia.org/wiki/Equivalence_of_categories">Wikipedia</a>. it is two map in <span class="math">\({\mathcal{Cat}}\)</span> such that …
 <ul>
 <li>think you self what an <a href="#cross-isomorphism">isomorphism</a> of category is, it is like <span class="math">\(GF={\text{Id}}_{\mathcal{C}}\)</span>, <span class="math">\(FG={\text{Id}}_{\mathcal{D}}\)</span>, then equivalence of category weaken this condition by replace <span class="math">\(=\)</span> with <a href="#cross-natural-isomorphism">natural isomorphism</a></li>
 <li>like <a href="#cross-isomorphism">isomorphism</a>, you should always focus on <strong>which arrows</strong> you are dealing with, not merely they are equivalence</li>
@@ -399,7 +399,7 @@ $("#content").css("max-width", "1100px")
 <p><img src="./images/adjoint.jpg" style="width:450px" /></p>
 <p><img src="./images/adjoint2.jpg" style="width:450px" /></p>
 <ul>
-<li><span><span id="cross-category-adjoint"></span><span id="cross-adjoint-functor"></span><span id="cross-adjointion-of-category" class="crosslink">adjointion of category </span></span>.
+<li><span><span id="cross-category-adjoint"></span><span id="cross-adjoint-functor"></span><span id="cross-adjuction-of-category" class="crosslink">adjuction of category </span></span>. <span class="math">\(F\dashv U\)</span>, <span class="math">\(U\)</span> is <a href="#cross-right-adjoint">right adjoint</a>, <span class="math">\(F\)</span> is <a href="#cross-left-adjoint">left adjoint</a>
 <ul>
 <li><em>def a from <a href="#cross-ref-category-notes">ref-category-notes</a></em> for <span class="math">\({\mathcal{C}}\)</span> and <span class="math">\({\mathcal{D}}\)</span>, <span class="math">\(F:{\mathcal{C}}\to{\mathcal{D}}\)</span>, <span class="math">\(U:{\mathcal{D}}\to{\mathcal{C}}\)</span>, a bijection <span class="math">\(\varphi_{C, D}: {\mathcal{D}}(FC, D) \cong{\mathcal{C}}(C, UD)\)</span> such that <span class="math">\(\varphi(k\circ g) = Uk\circ \varphi(g)\)</span> and …</li>
 <li>in Wikipedia, it says that it means optimization</li>
@@ -411,9 +411,13 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(\mathcal{Ab}(F(S), A) \cong\mathcal{S}(S, U(A))\)</span> between the functor take <a href="#cross-set">set</a> to <a href="#cross-freely-generated-abelian-group">freely generated abelian group</a> and the functor that from the group to the set. it means the the morphisms in one category can be fully described by morphisms in another a map from <span class="math">\(S\)</span> to <span class="math">\(U(A)\)</span> fully describe the homomorphisms from <span class="math">\(F(S)\)</span> to <span class="math">\(A\)</span></li>
 <li>it further generalize <a href="#cross-equivalence-of-category">equivalence of category</a> by replace <a href="#cross-natural-isomorphism">natural isomorphism</a> by certain <a href="#cross-natural-transformation">natural transformation</a></li>
 <li>from <a href="http://ncatlab.org/nlab/show/2-category">nLab</a> we know that we should have a better understanding with <a href="#cross-higher-order-category">higher order category</a> <code>fix me: when you know higher order category</code>, so i should think moving this section again</li>
-<li><code>fix me: lecture X in notes</code></li>
+<li>adjunction induce two <a href="#cross-natural-transformation">natural transformation</a> . <span id="cross-unit-of-adjunction" class="crosslink">unit of adjunction</span> <span class="math">\(eta: {\text{Id}}_{\mathcal{C}}\Rightarrow UF\)</span> and <span id="cross-counit-of-adjunction" class="crosslink">counit of adjunction</span> <span class="math">\(\epsilon : FU\Rightarrow {\text{Id}}_{\mathcal{D}}\)</span>, such that <span id="cross-triangular-identities" class="crosslink">triangular identities</span> holds</li>
+<li>and <span class="math">\(\varphi\)</span> is determined by <span class="math">\(\eta\)</span> and <span class="math">\(\epsilon\)</span></li>
+<li>adjoint functor determine each other up to isomorphism</li>
 </ul></li>
 </ul>
+<p><img src="./images/adjoint3.jpg" style="width:450px" /></p>
+<p><img src="./images/adjoint4.jpg" style="width:450px" /></p>
 <h3 id="monads">monads</h3>
 <p><code>fix me: finish the lecture</code></p>
 <h3 id="references-1">references</h3>
@@ -443,7 +447,9 @@ $("#content").css("max-width", "1100px")
 <p>as an foundation of mathematics, there are so many ideas expressed using these…</p>
 <h2 id="basic-set-theory">basic set theory</h2>
 <ul>
-<li>axioms
+<li><span id="cross-set" class="crosslink">set</span>, <span class="math">\({\mathcal{Set}}\)</span>
+<ul>
+<li><a href="#cross-object">object</a>. axioms:
 <ul>
 <li><span id="cross-extensionality-axiom" class="crosslink">extensionality axiom</span></li>
 <li><span id="cross-pairing-axiom" class="crosslink">pairing axiom</span></li>
@@ -454,445 +460,407 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li><span id="cross-replacement-axiom" class="crosslink">replacement axiom</span></li>
 <li><span id="cross-infinity-axiom" class="crosslink">infinity axiom</span></li>
+<li><span id="cross-regularity-axiom" class="crosslink">regularity axiom</span>. has <span class="math">\(\in\)</span>-minimum element</li>
 </ul></li>
-<li><p><span id="cross-subset" class="crosslink">subset</span></p></li>
-<li><p><span id="cross-cover" class="crosslink">cover</span></p></li>
+<li><a href="#cross-morphism">morphism</a>. <a href="#cross-function">function</a>
+<ul>
+<li><a href="#cross-isomorphism">isomorphism</a>. <span id="cross-bijection" class="crosslink">bijection</span></li>
+<li><a href="#cross-monomorphism">monomorphism</a>. <span id="cross-injection" class="crosslink">injection</span></li>
+<li><a href="#cross-epimorphism">epimorphism</a>. <span id="cross-surjection" class="crosslink">surjection</span></li>
+<li><a href="#cross-product">product</a>. <span id="cross-Cartesian-product" class="crosslink">Cartesian product</span></li>
+<li><a href="#cross-coproduct">coproduct</a>. <span id="cross-disjoint-union" class="crosslink">disjoint union</span></li>
+<li><span><span id="cross-inclusion"></span><span id="cross-inclusion-function"></span><span id="cross-subset" class="crosslink">subset </span></span></li>
+<li><span id="cross-image" class="crosslink">image</span></li>
 <li><span id="cross-set-limit" class="crosslink">set limit</span>
 <ul>
 <li><span class="math">\({\text{lim }}{\text{inf }}A_i = \bigcup_i \bigcap_{j &gt;=i} A_j\)</span>, in all but finite</li>
 <li><span class="math">\({\text{lim }}{\text{sup }}A_i = \bigcap_i \bigcup_{j &gt;=i} A_j\)</span>, in infinite sets</li>
 <li><span class="math">\({\text{lim }}A_i\)</span></li>
 </ul></li>
-</ul>
-<h2 id="categorical-view">categorical view</h2>
+<li><span><span id="cross-loc"></span><span id="cross-law-of-composition" class="crosslink">law of composition </span></span>. we define here. because usually they are used in classical sense, it is just map <span class="math">\(S_1\times S_2\to S_3\)</span>
 <ul>
-<li><span id="cross-set" class="crosslink">set</span>, <span class="math">\(\mathcal{Set}\)</span>
+<li><span id="cross-associative" class="crosslink">associative</span> <span class="math">\(abc = a(bc)\)</span>
 <ul>
-<li>morphism: <a href="#cross-function">function</a></li>
-<li><a href="#cross-isomorphism">isomorphism</a>. <span id="cross-bijection" class="crosslink">bijection</span></li>
-<li><a href="#cross-monomorphism">monomorphism</a>. <span id="cross-injection" class="crosslink">injection</span></li>
-<li><a href="#cross-epimorphism">epimorphism</a>. <span id="cross-surjection" class="crosslink">surjection</span></li>
-<li><a href="#cross-product">product</a></li>
-<li><a href="#cross-coproduct">coproduct</a></li>
+<li>you can insert any parentheses</li>
 </ul></li>
-</ul>
-<h2 id="random-1">random</h2>
-<pre><code>## ordering
-
-* [[partial ordering]]
-    * $p !&lt; p$
-    * $p &lt; q \and q &lt; r =&gt; p &lt; r$
-    * `(P, &lt;)` is a pos, `X` a subset
-        * maximal of `X`: `forall x a !&lt; x`
-        * minimal..: `forall x x !&lt; a`
-        * greatest..: `forall x x&lt;= a` =&gt; max
-        * least..: `forall x a&lt;= x` =&gt; min **do it!**
-        * upper bound: `forall x, x &lt;= a`
-        * lower bound: `forall x, a &lt;= x`
-        * sup: least upper bound
-        * inf: greatest lower bound
-    * order-perserving, isomorphism, automorphism (in order)
-* linear ordering
-    * `forall p,q: p &lt; q || p == q || q &lt; p`
-    * increasing, des, strict..?
-* well ordering: linear ordering that every non-empty subset has least
-    * initial segment
-* theorems
-    * increasing function of wo `f(x) &gt;= x`
-    * only automorphism of wo is `i_P`
-    * if two wo isomorphic, it is unique
-    * for two wo, either they are iso, or one is other's initial segment
-* ordinal numbers
-    * 1, 2, 3, 4, .... omega
-
-
-
-## ordinal
-
-* [[ordinal]]
-
-## cardinal
-
-* [[cardinal | cardinality]]
-
-* what it means by: $|X| = |Y|$ and $|X| &lt; |Y|$
-* $|X| &lt; |P(X)|$
-* $|A| &lt;= |B| \and |B| &lt;= |A| =&gt; |A| = |B|$
-* cardinal arith
-* `|P(A)| = 2^|A|`
-* cardinal number: `forall b &lt; a: |a| != |b|`
-* wo `W`: `|W|` = least ordinal `a`: `|W| = |a|`
-* alephs: infinite cardinals = limit ordinals
-    * `aleph_0 = omega`
-    * `aleph_alpha + aleph_beta = aleph_alpha * aleph_beta = max(aleph_alpha, aleph_beta)`
-    * **fix me**
-
-## real numbers
-
-* `|R| = 2^{aleph_0}`
-    * continuum hypothesis: `2^{aleph_0} = aleph_1}`
-    * **fix me**
-
-
-* ac: for a family of set, exists choice function
-    * every set can be well-ordered
-    * Zorn's lemma: every linear subset has upper bound =&gt; hax maximal element
-
-
-</code></pre>
-<h2 id="others">others</h2>
-<ul>
+<li><span id="cross-commutative" class="crosslink">commutative</span> <span class="math">\(ab = ba\)</span> it seems then we must have <span class="math">\(S_1 = S_2 = S_3\)</span>?</li>
+<li>example of non-associative loc: <span class="math">\(-\)</span> for integer</li>
+</ul></li>
+</ul></li>
+<li><span id="cross-cover" class="crosslink">cover</span></li>
+</ul></li>
 <li><span id="cross-pointed-set" class="crosslink">pointed set</span> <span class="math">\(\mathcal{Set}_*\)</span></li>
 </ul>
-<h1 id="topological-space">topological space</h1>
-<h2 id="idea-3">idea</h2>
-<p>it describe what we means by a space, which has a notation of <strong>nearness</strong> of points, which means the point have some <strong>extension</strong>, so infinite extension will destroy it</p>
-<h2 id="topological-space-1">topological space</h2>
+<h3 id="ordering">ordering</h3>
 <ul>
-<li><span><span id="cross-space"></span><span id="cross-topological-space" class="crosslink">topological space</span></span>
+<li><span><span id="cross-partial-ordering"></span><span id="cross-pos"></span><span id="cross-partially-ordered-set" class="crosslink">partially ordered set </span></span>
 <ul>
-<li><a href="#cross-set">set</a>, <span class="math">\(A\)</span></li>
-<li><span><span id="cross-topology"></span><span id="cross-open-set" class="crosslink">open set</span></span>s <span class="math">\(\mathcal{T}\)</span>
+<li><a href="#cross-object">object</a>.
 <ul>
-<li><span id="cross-weak-topology" class="crosslink">weak topology</span></li>
-</ul></li>
-<li><span class="math">\(\{A, \emptyset\} \subset \mathcal{T}\)</span></li>
-<li><span class="math">\(\mathcal{T}\)</span> closed under finite <a href="#cross-intersection">intersection</a> and any <a href="#cross-union">union</a></li>
-</ul></li>
-<li>category <span class="math">\(\mathcal{U}\)</span>
+<li><span class="math">\(p \nless p\)</span></li>
+<li><span class="math">\(p &lt; q \land q &lt; r \Rightarrow p &lt; r\)</span></li>
+<li><span class="math">\((P, &lt;)\)</span> is a pos, <span class="math">\(X\)</span> a subset
 <ul>
-<li><a href="#cross-morphism">morphism</a>. <span><span id="cross-continuous"></span><span id="cross-continuous-function" class="crosslink">continuous function</span></span></li>
-<li><span id="cross-path" class="crosslink">path</span>. from <a href="#cross-interval">interval</a>
-<ul>
-<li><span id="cross-loop" class="crosslink">loop</span>.
-<ul>
-<li><span class="math">\(c_x\)</span> constant loop</li>
-</ul></li>
-<li><span class="math">\(f\cdot g\)</span> the path that…</li>
-<li><span class="math">\(f^{-1}\)</span> the path that…</li>
-<li>it is not <a href="#cross-groupid">groupid</a>, because the inverse is not <a href="#cross-groupid-inverse">groupid inverse</a>, but that’s true in <a href="#cross-homotopy-space">homotopy space</a></li>
-</ul></li>
-<li><a href="#cross-monomorphism">monomorphism</a> and <a href="#cross-epimorphism">epimorphism</a> is reduced from <a href="#cross-set">set</a></li>
-<li><a href="#cross-isomorphism">isomorphism</a>. <span><span id="cross-homeomorphically"></span><span id="cross-homeomorphism" class="crosslink">homeomorphism </span></span> is not reduced from set!</li>
-<li><a href="#cross-product">product</a>. <a href="#cross-set-product">set product</a> with <a href="#cross-weak-topology">weak topology</a> for projection</li>
-<li><a href="#cross-coproduct">coproduct</a>.</li>
-</ul></li>
-<li><span id="cross-pointed-space" class="crosslink">pointed space</span>
-<ul>
-<li><a href="#cross-object">object</a>. <a href="#cross-topological-space">topological space</a> like <a href="#cross-pointed-set">pointed set</a></li>
-<li><a href="#cross-morphism">morphism</a>. <a href="#cross-continuous">continuous</a> map closed by <a href="#cross-basepoint">basepoint</a></li>
-</ul></li>
-</ul>
-<h2 id="connectedness">connectedness</h2>
-<ul>
-<li><span id="cross-connected-space" class="crosslink">connected space</span></li>
-<li><span id="cross-path-connected-space" class="crosslink">path connected space</span></li>
-<li><span id="cross-arc-connected-space" class="crosslink">arc connected space</span></li>
-<li><span id="cross-locally-path-connected" class="crosslink">locally path connected</span>
-<ul>
-<li>locally path connected + <a href="#cross-connected">connected</a> <span class="math">\(\Rightarrow\)</span> <a href="#cross-path-connected">path connected</a></li>
-<li>a <a href="http://math.stackexchange.com/questions/135463/path-connectedness-and-locally-path-connected">example</a> of path connected but not locally path connected</li>
-</ul></li>
-</ul>
-<h2 id="references-2">references</h2>
-<ul>
-<li><span id="cross-ref-topology-exercise" class="crosslink">ref-topology-exercise</span> <em>General Topology Exercise Textbook</em></li>
-</ul>
-<h1 id="homotopy-space">homotopy space</h1>
-<h2 id="idea-4">idea</h2>
-<ul>
-<li>the subject of algebraic topology is to give <a href="#cross-algebra">algebra</a> structure on a <a href="#cross-space">space</a></li>
-</ul>
-<h2 id="homotopy-space-1">homotopy space</h2>
-<ul>
-<li><p><span id="cross-homotopy" class="crosslink">homotopy</span>. <span class="math">\(h: X\times I\to Y\)</span> such that <span class="math">\(h(x, 0) = f(x)\)</span>, <span class="math">\(h(x, 1) = g(x)\)</span></p></li>
-<li>there is a <a href="#cross-functor">functor</a> from <a href="#cross-space">space</a> to the <span id="cross-homotopy-space" class="crosslink">homotopy space</span> <span class="math">\(h\mathcal{U}\)</span>
-<ul>
-<li><a href="#cross-object">object</a>. same</li>
-<li><a href="#cross-morphism">morphism</a>. <a href="#cross-continuous-function">continuous function</a> to the <span id="cross-homotopy" class="crosslink">homotopy</span> class</li>
-<li><a href="#cross-isomorphism">isomorphism</a>s is <span class="math">\(f \cdot g \simeq {\text{id}}\)</span> things, which is called <a href="#cross-homotopy-equivalence">homotopy equivalence</a> in <span class="math">\(\mathcal{U}\)</span>
-<ul>
-<li><span id="cross-contractible" class="crosslink">contractible</span>. isomorphism to 0</li>
+<li><span id="cross-maximal" class="crosslink">maximal</span>. <span class="math">\(a\in X\land \forall x :a  \nless x\)</span></li>
+<li><span id="cross-minimal" class="crosslink">minimal</span>. <span class="math">\(a\in X\land\forall x: x \nless a\)</span></li>
+<li><span id="cross-greatest-element" class="crosslink">greatest element</span>. <span class="math">\(a\in X\land\forall x: x\leq a\)</span>, is <a href="#cross-maximal">maximal</a></li>
+<li><span id="cross-least-element" class="crosslink">least element</span>. <span class="math">\(a\in X \land \forall x a\leq x\)</span>, is <a href="#cross-minimal">minimal</a></li>
+<li><span id="cross-upper-bound" class="crosslink">upper bound</span>. <span class="math">\(\forall x: x \leq a\)</span></li>
+<li><span id="cross-lower-bound" class="crosslink">lower bound</span>. <span class="math">\(\forall x: a \leq x\)</span></li>
+<li><span><span id="cross-least-upper-bound"></span><span id="cross-sup" class="crosslink">sup </span></span></li>
+<li><span><span id="cross-greatest-lower-bound"></span><span id="cross-inf" class="crosslink">inf </span></span></li>
 </ul></li>
 </ul></li>
-<li>a functor from <a href="#cross-pointed-space">pointed space</a> to <span id="cross-pointed-homotopy-space" class="crosslink">pointed homotopy space</span>, <span class="math">\(h\mathcal{T}\)</span>
+<li><a href="#cross-morphism">morphism</a>. <span id="cross-order-preserving" class="crosslink">order-preserving</span> . <a href="#cross-function">function</a>s
 <ul>
-<li><a href="#cross-object">object</a>. same</li>
-<li><a href="#cross-morphism">morphism</a>. it is just like viewed as a <a href="#cross-product-space">product space</a> in <a href="#cross-homotopy-space">homotopy space</a>, which keeps <a href="#cross-basepoint">basepoint</a> always fixed</li>
-<li>the <a href="#cross-fundamental-group">fundamental group</a> . <a href="#cross-functor">functor</a> factor though pointed homotopy space
-<ul>
-<li>an based homotopy equivalence induce an isomorphism in fundamental group, which is just trivial</li>
-</ul></li>
-<li>is there exist two continuous function that can only be homotopy in <span class="math">\(h\mathcal{U}\)</span> but not <span class="math">\(h\mathcal{T}\)</span>, i.e. only exist homotopy that moves basepoint in the middle of the transform <code>fix me</code></li>
-</ul></li>
-</ul>
-<h2 id="fundamental-groupoid">fundamental groupoid</h2>
-<ul>
-<li><span id="cross-fundamental-groupoid" class="crosslink">fundamental groupoid</span>. <a href="#cross-functor">functor</a> from space <span class="math">\(\mathcal{U}\)</span> to <a href="#cross-groupoid">groupoid</a> <span class="math">\(\mathcal{GP}\)</span>
-<ul>
-<li><a href="#cross-object">object</a>. <a href="#cross-groupoid">groupoid</a> by taking <span class="math">\([f]\)</span> the <a href="#cross-homotopy">homotopy</a> class of <a href="#cross-path">path</a> <span class="math">\(f\)</span> in the <strong>paths</strong> from <span class="math">\(x\)</span> to <span class="math">\(y\)</span>, it is not just <a href="#cross-homotopy">homotopy</a> of the path considered as <span class="math">\(I \to X\)</span>, in a type theory view, this might be easy, for we can consider it be the type <code>Path(X, x, y)</code>
-<ul>
-<li><span class="math">\(f: x \to y\)</span>, <span class="math">\(g: y\to z\)</span></li>
-<li><span class="math">\([g][f] = [g\cdot f]\)</span>, notice the order</li>
-<li><span class="math">\([f]^{-1} = [f^{-1}]\)</span></li>
-<li>it is a <a href="#cross-groupiod">groupiod</a>
-<ul>
-<li><span class="math">\([f]^{-1}[f] = [f^{-1}f] = [c_x]\)</span></li>
+<li><a href="#cross-isomorphism">isomorphism</a></li>
+<li><a href="#cross-automorphism">automorphism</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#cross-morphism">morphism</a>. induced?</li>
-<li><p><span id="cross-van-Kampen-for-groupoid" class="crosslink">van Kampen for groupoid</span>, fundamental groupoid <a href="#cross-preserve-colimit">preserve colimit</a> certain</p>
+<li><span id="cross-linear-ordering" class="crosslink">linear ordering</span> is subcategory of <a href="#cross-pos">pos</a>
 <ul>
-<li><span class="math">\(\mathcal{O}\)</span> be a <a href="#cross-cover">cover</a> of <a href="#cross-space">space</a> <span class="math">\(X\)</span> by <a href="#cross-path-connected">path connected</a> . <a href="#cross-open-set">open set</a>s, closed under finite <a href="#cross-intersection">intersection</a></li>
-<li>as a category morphism are <a href="#cross-inclusion">inclusion</a>s of subsets, gives a <a href="#cross-diagram">diagram</a> <span class="math">\[\Pi | \mathcal{O}: \mathcal{O}\to\mathcal{GP}\]</span></li>
-<li>the <a href="#cross-groupoid">groupoid</a> <span class="math">\(\Pi(X)\)</span> is the <a href="#cross-colimit">colimit</a> of the diagram <span class="math">\[\Pi(X)\cong colim_{U\in \mathcal{O}}\Pi(U)\]</span></li>
-<li>the proof is very natural</li>
+<li><a href="#cross-object">object</a>
+<ul>
+<li><span class="math">\(\forall p,q: p &lt; q \lor p == q \lor q &lt; p\)</span></li>
 </ul></li>
-<li><p>for a <a href="#cross-path-connected-space">path connected space</a>, the fundamental groupoid is <span id="cross-groupoid-connected" class="crosslink">groupoid connected</span>, which is a special case of <a href="#cross-category-connected">category connected</a>, so it is <a href="#cross-category-equivalence">category equivalence</a> to the <a href="#cross-skeleton-category">skeleton category</a> of fundamental groupoid, which is <a href="#cross-fundamental-group">fundamental group</a></p></li>
+<li><a href="#cross-morphism">morphism</a>
+<ul>
+<li><span id="cross-increasing-function" class="crosslink">increasing function</span> which is just <a href="#cross-order-preserving">order-preserving</a> function</li>
+<li><span id="cross-decreasing-function" class="crosslink">decreasing function</span></li>
+<li><span id="cross-strict-increasing-function" class="crosslink">strict increasing function</span></li>
+<li><span id="cross-strict-decreasing-function" class="crosslink">strict decreasing function</span></li>
 </ul></li>
-</ul>
-<h2 id="fundamental-group">fundamental group</h2>
-<ul>
-<li><a href="#cross-functor">functor</a> from <a href="#cross-pointed-space">pointed space</a> <span class="math">\(\mathcal{T}\)</span> to <a href="#cross-group">group</a> <span class="math">\(\mathcal{G}\)</span>
-<ul>
-<li><a href="#cross-object">object</a>. contstruct as <a href="#cross-fundamental-groupoid">fundamental groupoid</a>, but only keep <a href="#cross-loop">loop</a>s</li>
-<li><a href="#cross-morphism">morphism</a>. <span class="math">\(p: X\to Y\)</span> to group <a href="#cross-homomorphism">homomorphism</a>, <span class="math">\(p_*: \pi_1(X, x)\to \pi_1(Y, y)\)</span> by <span class="math">\(p_*[f] = [p\circ f]\)</span>, it is well defined for the <a href="#cross-law-of-composition">law of composition</a></li>
-<li><span><span id="cross-van-Kampen"></span><span id="cross-van-Kampen-for-fundamental-group" class="crosslink">van Kampen for fundamental group</span></span>
-<ul>
-<li>first by <a href="#cross-skeleton-category">skeleton category</a>, we proof for finite case, it is because we need a base to inductively define the reverse <span class="math">\(J\)</span> for skeleton category</li>
-<li>then it is proofed for infinite version <code>fix me</code></li>
 </ul></li>
-<li><a href="#cross-product">product</a> is preserved, it is proofed by <strong>universal property</strong> but <code>fix me</code></li>
-<li>the <a href="#cross-isomorphism">isomorphism</a>s for different <a href="#cross-basepoint">basepoint</a> . <a href="#cross-space">space</a>s. in summary, <a href="#cross-basepoint">basepoint</a> changing results in <a href="#cross-isomorphism">isomorphism</a>, some of them will have unique isomorphism, and when the <a href="#cross-group">group</a> is <a href="#cross-abelian">abelian</a>, it is unique. but this is not isomorphism in <a href="#cross-pointed-space">pointed space</a>, it is reduced to <a href="#cross-morphism">morphism</a> in <a href="#cross-space">space</a>, then project to <a href="#cross-group">group</a>
+<li><span><span id="cross-well-ordered"></span><span id="cross-well-ordering" class="crosslink">well ordering </span></span> is subcategory of <a href="#cross-linear-ordering">linear ordering</a>
 <ul>
-<li><span class="math">\(a\)</span> a path, <span class="math">\(\gamma[a]\)</span> the <a href="#cross-homomorphism">homomorphism</a> to move point</li>
-<li><span class="math">\(\gamma[a][f] = [a\cdot f \cdot a^{-1}]\)</span></li>
-<li>it only depends on the <a href="#cross-homotopy">homotopy</a> class of <span class="math">\(a\)</span></li>
-<li>it is <a href="#cross-isomorphism">isomorphism</a> with inverse <span class="math">\(\gamma[a^{-1}]\)</span></li>
-<li>if the group is <a href="#cross-abelian">abelian</a> we have <span class="math">\(\gamma[b][f] = \gamma[a][f]\)</span>, you should view the structure in the groupoid, and switch basepoint</li>
-<li>so there are <span class="math">\(n\)</span> kinds of path induced isomorphism between <span class="math">\(\pi_1(X,x)\)</span> and <span class="math">\(\pi_1(X, y)\)</span> where <span class="math">\(n\)</span> is the number of homotopy class of the path between the two point, so one homotopy class means one isomorphism is path induced, and then we can use this way to identity two group</li>
+<li><a href="#cross-object">object</a>. linear ordering that every non-empty subset has least
+<ul>
+<li><span id="cross-initial-segment" class="crosslink">initial segment</span></li>
 </ul></li>
-<li>i think there are many homotopy class on <span class="math">\(S^1 \times S^1\to S^1\times S^1\)</span>, examples are projection, id, and swap, but some are not path induced</li>
-<li><a href="#cross-isomorphism">isomorphism</a> by <a href="#cross-morphism">morphism</a> in <a href="#cross-homotopy-space">homotopy space</a>. an <a href="#cross-isomorphism">isomorphism</a> in <a href="#cross-homotopy-space">homotopy space</a> is a class of <a href="#cross-morphism">morphism</a>s in <a href="#cross-pointed-space">pointed space</a>, and by this class of <a href="#cross-morphism">morphism</a>, you get <a href="#cross-isomorphism">isomorphism</a> in group</li>
-<li><a href="#cross-isomorphism">isomorphism</a> by <a href="#cross-isomorphism">isomorphism</a> in <a href="#cross-homotopy-space">homotopy space</a>. again, they are not <a href="#cross-isomorphism">isomorphism</a> in <a href="#cross-pointed-space">pointed space</a>, but reduced. <a href="#cross-isomorphism">isomorphism</a> in <a href="#cross-homotopy-space">homotopy space</a> is class of (because of the homotopy) class of (because adding basepoint) <a href="#cross-morphism">morphism</a> in <a href="#cross-pointed-space">pointed space</a>, each of them is isomorphism. if <span class="math">\(f:X \to Y\)</span> is iso in <a href="#cross-homotopy-space">homotopy space</a> then <span class="math">\(f_*: \pi_1(X, x) \to \pi_1(Y, f(x))\)</span> is <span id="cross-isomorphism" class="crosslink">isomorphism</span> for all <span class="math">\(x\)</span></li>
-<li><a href="#cross-simply-connected">simply connected</a> fundamental group is zero and <a href="#cross-path-connected">path connected</a>
+<li><a href="#cross-morphism">morphism</a>
 <ul>
-<li>it has little thing to do with <a href="#cross-contractible">contractible</a></li>
+<li>increasing function of well-ordering <span class="math">\(f(x) \ge x\)</span></li>
+<li><a href="#cross-isomorphism">isomorphism</a>. <span class="math">\(W_1\)</span> and <span class="math">\(W_2\)</span> only has unique isomorphism
+<ul>
+<li>no well ordered set is isomorphic to it’s <a href="#cross-initial-segment">initial segment</a></li>
+</ul></li>
+<li><a href="#cross-automorphism">automorphism</a>. the only automorphism is <span class="math">\(id\)</span></li>
+<li>for <span class="math">\(W_1\)</span> and <span class="math">\(W_2\)</span> or they are <a href="#cross-isomorphic">isomorphic</a>, or one is <a href="#cross-isomorphic">isomorphic</a> to other’s <a href="#cross-initial-segment">initial segment</a></li>
 </ul></li>
 </ul></li>
 </ul>
-<h3 id="examples-and-exercises">examples and exercises</h3>
+<h3 id="ordinal">ordinal</h3>
 <ul>
-<li>for <a href="#cross-contractible">contractible</a> space, the fundamental group is 0</li>
-<li><span class="math">\(\pi_1(\mathbb{R}) = 0\)</span></li>
-<li><span class="math">\(\pi_1(S^1) = \mathbb{Z}\)</span>
+<li><span><span id="cross-ordinal"></span><span id="cross-ordinal-number" class="crosslink">ordinal number </span></span> <span class="math">\(\mathcal{Ord}\)</span>
 <ul>
-<li><code>fix me</code></li>
+<li><span id="cross-transitive-set" class="crosslink">transitive set</span>. <span class="math">\(T\)</span> such that <span class="math">\(x\in T\Rightarrow x\subset T\)</span></li>
+<li><a href="#cross-ordinal-number">ordinal number</a>. <a href="#cross-transitive-set">transitive set</a> and <a href="#cross-well-ordered">well ordered</a> by <span class="math">\(\in\)</span></li>
+<li><span class="math">\(\emptyset\)</span> is ordinal</li>
+<li>if <span class="math">\(\alpha\)</span> is ordinal, <span class="math">\(\beta\in \alpha\)</span> then <span class="math">\(\beta\)</span> is ordinal
+<ul>
+<li>proof by chaining…</li>
 </ul></li>
-<li>p20 proposition and exercises bellow, i do not know how to compute the push outs… <code>fix me: not understand the pushout now</code></li>
-</ul>
-<p>from <em><a href="#cross-ref-at-concise">ref-at-concise</a></em></p>
-<ol style="list-style-type: decimal">
-<li>The Brouwer fixed point theorem</li>
-<li>The fundamental theorem of algebra</li>
-<li>exercises <code>fix me</code>, i do not know what’s the <span class="math">\(deg\)</span> and what’s topological group</li>
-<li>for <span id="cross-real-projective-space" class="crosslink">real projective space</span> <code>fix me</code></li>
-</ol>
-<h2 id="covering-space">covering space</h2>
+<li><span class="math">\(\alpha \subset \beta\Rightarrow\alpha\in\beta\)</span></li>
+<li>either <span class="math">\(\alpha \subset \beta\)</span> or $ $</li>
+<li>define the order by <span class="math">\(\lt = \in\)</span>
 <ul>
-<li><span><span id="cross-covering"></span><span id="cross-covering-space" class="crosslink">covering space </span></span> <span class="math">\(p: E\to B\)</span>
-<ul>
-<li><a href="#cross-surjective">surjective</a></li>
-<li>each <span class="math">\(b\in B\)</span>, has <a href="#cross-open">open</a> . <a href="#cross-neighborhood">neighborhood</a> <span class="math">\(V\)</span>, such that each <a href="#cross-disjoint-component">disjoint component</a> of <span class="math">\(p^{-1}(V)\)</span> is open and mapped <a href="#cross-homeomorphically">homeomorphically</a> onto V by <span class="math">\(p\)</span>
-<ul>
-<li>so it should not “go back” in the middle?</li>
-<li><span id="cross-fundamental-neighborhood" class="crosslink">fundamental neighborhood</span>. <a href="#cross-path-connected">path connected</a> . <a href="#cross-open">open</a></li>
+<li>is <a href="#cross-linear-ordering">linear ordering</a></li>
 </ul></li>
-<li><span id="cross-totally-space" class="crosslink">totally space</span></li>
-<li><span id="cross-base-space" class="crosslink">base space</span></li>
-<li><span id="cross-fiber" class="crosslink">fiber</span> of covering <span class="math">\(p\)</span></li>
-</ul></li>
-</ul>
-<h3 id="unique-path-lifting">unique path lifting</h3>
+<li>… a lot thing</li>
+<li><span id="cross-successor-ordinal" class="crosslink">successor ordinal</span> and <span id="cross-limit-ordinal" class="crosslink">limit ordinal</span></li>
+<li><span id="cross-natural-numbers" class="crosslink">natural numbers</span> <span class="math">\(\omega\)</span> or <span class="math">\(\mathbb{N}\)</span>
 <ul>
-<li><span class="math">\(p: E\to B\)</span> and <span class="math">\(b\in B\)</span>, <span class="math">\(e,e'\in F_b\)</span>
-<ul>
-<li>a path <span class="math">\(f: I\to B\)</span> lefts uniquely for every <span class="math">\(e\)</span> such that <span class="math">\(g(0) = e\)</span> and <span class="math">\(p\circ g = f\)</span>. the proof is actually easy</li>
-<li>equivalent path lifts to equivalent path, and hence <span class="math">\(g(1)=g'(1)\)</span>. proof <span class="math">\(p\circ h: I\times I \to B\)</span>, compact, fundamental cover, finite cover, project back, base, finite cover, grid, grow the border (a old square only can all include the line or include nothing, so you can grow it!), inductively define the homotopy <code>fix me: i should check this proof</code></li>
-<li><span id="cross-regular-covering" class="crosslink">regular covering</span>. <span class="math">\(p_*\)</span> project to normal group</li>
-<li><span id="cross-universal-covering" class="crosslink">universal covering</span>. <a href="#cross-simply-connected">simply connected</a> cover
-<ul>
-<li>for a universal cover, <span class="math">\(F_b\)</span> are in bijective with <span class="math">\(\pi_1(B, b)\)</span></li>
-<li>for <span class="math">\(n \geq 3\)</span>, <span class="math">\(\mathbf{R}P^n\)</span> covered by <span class="math">\(S^n\)</span>, then we can see that <span class="math">\(\pi_1(\mathbf{R}P^n) =2\)</span></li>
+<li><span id="cross-finite" class="crosslink">finite</span> and <span id="cross-infinite" class="crosslink">infinite</span></li>
 </ul></li>
 </ul></li>
 </ul>
-<h3 id="covering-groupoid">covering groupoid</h3>
+<h3 id="cardinal">cardinal</h3>
 <ul>
-<li><a href="#cross-coslice-category">coslice category</a> of the <a href="#cross-groupoid">groupoid</a></li>
-<li><span id="cross-star" class="crosslink">star</span> of <span class="math">\(x\)</span>, <span class="math">\(St(x)\)</span></li>
-<li><span id="cross-covering-of-groupoid" class="crosslink">covering of groupoid</span>
+<li><span><span id="cross-cardinality"></span><span id="cross-cardinal" class="crosslink">cardinal </span></span>
 <ul>
-<li><a href="#cross-surjective">surjective</a></li>
-<li>restricts to bijection <span class="math">\(p:St(e)\to St(p(e))\)</span> for each <span class="math">\(e\)</span></li>
-<li>the def of covering groupoid is just the useful properties of covering space. above can be reformulated as induced functor <span class="math">\(\Pi(p):\Pi(E)\to \Pi(B)\)</span> of cover space <span class="math">\(p\)</span> induce a covering groupoid</li>
+<li>what it means by: <span class="math">\(|X| = |Y|\)</span> and <span class="math">\(|X| &lt; |Y|\)</span></li>
+<li><span class="math">\(|X| &lt; |P(X)|\)</span></li>
+<li><span class="math">\(|A| \leq |B| \land |B| \leq |A| \Rightarrow |A| = |B|\)</span></li>
+<li>cardinal arith
+<ul>
+<li><span class="math">\(a + b = |A\cup B|\)</span> disjoint</li>
+<li><span class="math">\(a \cdot b = |A\times B|\)</span></li>
+<li><span class="math">\(a^b = |A^B|\)</span>
+<ul>
+<li><span class="math">\(|P(A)| = 2^{|A|}\)</span></li>
 </ul></li>
-<li><span class="math">\(p_*: \pi_1(E, e)\to \pi_1(B,b)\)</span> is <a href="#cross-monomorphism">monomorphism</a> and base changing group is <a href="#cross-conjugate">conjugate</a>, and as one runs though <span class="math">\(e'\)</span>, we runs through conjugate groups in <span class="math">\(\pi_1(B,b)\)</span>
-<ul>
-<li>examples: i suspect all finite cover will leave the fundamental group unchanged, but in the infinite circle case, we can see that it is really monomorphism, because <span class="math">\(e\)</span> back, then <span class="math">\(b\)</span> must back, but not reverse</li>
-<li>i cannot found a example that is really non-trivial conjugate, they are all surjective or not moving, i can found an example it is non-trivial subgroup, just when you cannot come back by something. for a non-trivial conjudate, see <a href="#cross-ref-at-hatcher">ref-at-hatcher</a></li>
-<li>run though conjugate, but still not the whole group sometimes</li>
-<li><span id="cross-regular-covering-groupoid" class="crosslink">regular covering groupoid</span>. <span class="math">\(p(\pi(\mathcal{E}, e))\)</span> is normal subgroup of <span class="math">\(\pi(\mathcal{B}, b)\)</span></li>
-<li><span id="cross-universal-covering-groupoid" class="crosslink">universal covering groupoid</span>. <span class="math">\(p(\pi(\mathcal{E}, e)) = \{e\}\)</span></li>
 </ul></li>
-<li>translation function <span class="math">\(T(b): \mathcal{B}\to \mathcal{Set}\)</span> (the set of fibers at a point), <span class="math">\(T(f)\)</span> is a morphism in <span class="math">\(\mathcal{Set}\)</span> which depends on <span class="math">\(f\)</span> will have different behaviour
+<li><a href="#cross-cardinal-number">cardinal number</a>. an <a href="#cross-ordinal">ordinal</a> such that <span class="math">\(\forall b &lt; a: |a| \neq |b|\)</span>
 <ul>
-<li>fibers has same <a href="#cross-cardinality">cardinality</a></li>
+<li><span id="cross-finite-cardinal" class="crosslink">finite cardinal</span></li>
+<li>all <span><span id="cross-infinite-cardinal"></span><span id="cross-aleph" class="crosslink">aleph </span></span> is <a href="#cross-limit-ordinal">limit ordinal</a></li>
 </ul></li>
-</ul>
-<h3 id="example">example</h3>
-<h2 id="example-1">example</h2>
-<ul>
-<li><span id="cross-real-projective-space" class="crosslink">real projective space</span>
-<ul>
-<li>the real projective space <span class="math">\(\mathbb{R}P^n\)</span> is obtained by gluing antipodal points of <span class="math">\(S^n\)</span></li>
 </ul></li>
 </ul>
-<h2 id="references-3">references</h2>
+<h3 id="real-numbers">real numbers</h3>
 <ul>
-<li><span id="cross-ref-at-concise" class="crosslink">ref-at-concise</span> <em>A Concise Course in Algebraic Topology</em></li>
-<li><span id="cross-ref-at-hatcher" class="crosslink">ref-at-hatcher</span> <em>Algebraic Topology</em>, Hatcher</li>
+<li><span class="math">\(|\mathbb{R}| = 2^{\aleph_0}\)</span>
+<ul>
+<li><span id="cross-continuum-hypothesis" class="crosslink">continuum hypothesis</span>. <span class="math">\(2^{\aleph_0} = \aleph_1\)</span></li>
+</ul></li>
+<li><span id="cross-axiom-of-choice" class="crosslink">axiom of choice</span>. for a family of set, exists choice function
+<ul>
+<li>every set can be well-ordered</li>
+<li><span id="cross-Zorn's-lemma" class="crosslink">Zorn's lemma</span>. every linear subset has upper bound then has maximal element</li>
+</ul></li>
+</ul>
+<h2 id="reference">reference</h2>
+<ul>
+<li><span id="cross-ref-set-jech" class="crosslink">ref-set-jech</span> <em>Set Theory</em>, Thomas Jech</li>
 </ul>
 <h1 id="algebra">algebra</h1>
-<h2 id="notes-on-algebra">notes on algebra</h2>
-<p>from the book <em>Algebra</em> by Serge Lang</p>
-<h2 id="chapter-01">chapter 01</h2>
-<h3 id="p003">p003</h3>
-<pre><code>monoid = forall S (
-    S,
-    *: S * S -&gt; S,
-    e: S &amp;&amp; forall a: S, a * e = e * a,
-    associ: forall a b c: S, a * b * c = a * (b * c)
-    )</code></pre>
-<p>there are law of composition which is not associative</p>
+<h2 id="basic-objects-of-algebra">basic objects of algebra</h2>
+<h3 id="monoid">monoid</h3>
 <ul>
-<li><code>-</code> in <code>integer</code></li>
+<li><span id="cross-monoid" class="crosslink">monoid</span> <span class="math">\({\mathcal{Mon}}\)</span>
+<ul>
+<li><a href="#cross-object">object</a>
+<ul>
+<li><span class="math">\((S\in{\mathcal{Set}}, *:S\times S\to S, e\in S)\)</span>
+<ul>
+<li><span><span id="cross-unit"></span><span id="cross-unit-element" class="crosslink">unit element </span></span> <span class="math">\(\forall a\in S: ae = ea\)</span>
+<ul>
+<li>unique</li>
+</ul></li>
+<li><a href="#cross-law-of-composition">law of composition</a>. <span class="math">\(abc = a(bc)\)</span>, <a href="#cross-associative">associative</a>
+<ul>
+<li>product of zero element</li>
+</ul></li>
+<li>power <span class="math">\(a^n\)</span></li>
+</ul></li>
+</ul></li>
+<li><a href="#cross-morphism">morphism</a>. <span id="cross-monoid-homomorphism" class="crosslink">monoid homomorphism</span></li>
+<li><span id="cross-submonoid" class="crosslink">submonoid</span></li>
+</ul></li>
 </ul>
-<p>there are law of composition which has no unit</p>
 <ul>
-<li><code>max</code> in <code>integer</code></li>
+<li><span id="cross-groupoid" class="crosslink">groupoid</span>
+<ul>
+<li><span id="cross-groupoid-connected" class="crosslink">groupoid connected</span>
+<ul>
+<li>can be viewed as <a href="#cross-category-connected">category connected</a>, then the groupoid viewed as a <a href="#cross-category">category</a> will have <a href="#cross-skeleton-category">skeleton category</a> one element with full <a href="#cross-isomorphism">isomorphism</a></li>
+</ul></li>
+</ul></li>
 </ul>
-<h3 id="p004">p004</h3>
-<p>to define this product, we need <code>[0, n]</code> or lists?</p>
-<pre><code>inductive nat = z | succ nat
-
-inductive list = forall A (none | cons A (list A))</code></pre>
-<p>and we might need a bunch of theorem about <code>nat</code>s and <code>list</code>s</p>
-<p>but this is actually just <code>foldLeft</code>?? which is defined for <code>list</code> or linear initals?</p>
-<pre><code>forall a, b: list monoid S: a.foldLeft(e, *) * b.foldLeft(e, *) = (a ++ b).foldLeft(e, *)
-
-proof by induction</code></pre>
-<p>as we understanding that elements of <code>monoid</code> is element of <code>S</code></p>
-<pre><code>commutativeMonoid extends monoid (
-  commu: forall a, b: S, a * b = b * a
-)
-</code></pre>
-<h3 id="p005">p005</h3>
-<p>how do we define surjection and bijection and subset now???</p>
-<p><strong>fix me</strong></p>
-<h3 id="p006">p006</h3>
-<pre><code>forall a: monoid, n: nat: a^n = (0 until n).foldLeft(*)</code></pre>
-<p>yes… there we are using <code>nat</code> again</p>
-<p>is submonoid</p>
+<h3 id="group">group</h3>
 <ul>
-<li>subtype? I think so, so just ommit tihs part</li>
-<li>just a subobject in category theory?</li>
+<li><span id="cross-group" class="crosslink">group</span> <span class="math">\({\mathcal{Grp}}\)</span> subcategory of <span class="math">\({\mathcal{Mon}}\)</span>
+<ul>
+<li><a href="#cross-object">object</a>
+<ul>
+<li><span id="cross-inverse" class="crosslink">inverse</span>. <span class="math">\(xy = yx = e\)</span>
+<ul>
+<li>unique</li>
+</ul></li>
+<li><span class="math">\(n,m \in \mathbb{Z}\)</span>, <span class="math">\(a^n a^m = a^{n+m}\)</span></li>
+<li><span id="cross-order-of-group-element" class="crosslink">order of group element</span>
+<ul>
+<li>this is kind of like group in algebraic topology, they have something to do with morphisms</li>
+</ul></li>
+</ul></li>
+<li><a href="#cross-morphism">morphism</a>. <span id="cross-group-homomorphism" class="crosslink">group homomorphism</span>
+<ul>
+<li><span id="cross-kernel" class="crosslink">kernel</span> <span class="math">\({\text{Ker }}f\)</span> is a subgroup
+<ul>
+<li>kernel is normal. and <a href="#cross-normal">normal</a> is kernel</li>
+</ul></li>
+<li><a href="#cross-image">image</a> <span class="math">\({\text{Im }}f\)</span> is a subgroup</li>
+<li><a href="#cross-monomorphism">monomorphism</a>
+<ul>
+<li><span class="math">\(\Leftrightarrow\)</span> <a href="#cross-kernel">kernel</a> is trivial</li>
+<li>as a set function is <a href="#cross-injective">injective</a></li>
+</ul></li>
+<li><a href="#cross-epiomorphism">epiomorphism</a>
+<ul>
+<li><a href="#cross-surjective">surjective</a></li>
+<li></li>
+</ul></li>
+<li><a href="#cross-isomorphism">isomorphism</a>. is <a href="#cross-bijective">bijective</a> . <a href="#cross-morphism">morphism</a></li>
+<li><span class="math">\(H\cap K = \{e\}\land HK = G\land hk = kh\)</span> then <span class="math">\(G \cong K\times H\)</span>
+<ul>
+<li>example: <span class="math">\(C_6 = C_2 \times C_3\)</span></li>
+</ul></li>
+<li>morphism and <a href="#cross-order-of-group-element">order of group element</a></li>
+</ul></li>
+<li><span id="cross-subgroup" class="crosslink">subgroup</span>. <a href="#cross-inclusion">inclusion</a> is <a href="#cross-homomorphism">homomorphism</a>
+<ul>
+<li>or closed</li>
+</ul></li>
+<li><span id="cross-coset" class="crosslink">coset</span>, <span id="cross-left-coset" class="crosslink">left coset</span>, <span id="cross-right-coset" class="crosslink">right coset</span>. <a href="#cross-equivalence-relation">equivalence relation</a> gives cosets on group
+<ul>
+<li><span class="math">\((G:H)\)</span> <span id="cross-index-of-subgroup" class="crosslink">index of subgroup</span> the <a href="#cross-cardinal">cardinal</a> of <a href="#cross-coset">coset</a>s</li>
+<li>proof that above is well defined</li>
+<li><span class="math">\((G:H)(H:1) = (G:1)\)</span>
+<ul>
+<li>example: group of prime order is cyclic. we should always see what subgroup a group have to determine their structure</li>
+</ul></li>
+</ul></li>
+<li><span id="cross-normal-subgroup" class="crosslink">normal subgroup</span> <span class="math">\(gN = Ng\)</span>
+<ul>
+<li>closed under <a href="#cross-intersection">intersection</a></li>
+<li><span id="cross-normalizer" class="crosslink">normalizer</span> <span class="math">\(N_H\)</span></li>
+<li><span id="cross-Weyl-group" class="crosslink">Weyl group</span> <span class="math">\(W_H = N_H / H\)</span></li>
+</ul></li>
+<li><span id="cross-centralizer" class="crosslink">centralizer</span> of <span class="math">\(S\)</span> <span class="math">\(Z_S\)</span>. <span class="math">\(zsz^{-1} = s\)</span>
+<ul>
+<li>of <span class="math">\(G\)</span>, <span id="cross-center-of-group" class="crosslink">center of group</span></li>
+</ul></li>
+<li><span id="cross-quotient-group" class="crosslink">quotient group</span> <span class="math">\(G/H\)</span>. and if <span class="math">\(H\)</span> is normal, the result is also a group</li>
+<li><span id="cross-exact-sequence-of-group" class="crosslink">exact sequence of group</span> shape like this: <code>&gt;&gt;&gt;&gt;&gt;&gt;</code></li>
+<li><span><span id="cross-generator"></span><span id="cross-generate" class="crosslink">generate </span></span> <span class="math">\(G = \langle S \rangle\)</span> seems to be the inner structure of a group
+<ul>
+<li><span id="cross-finitely-generated" class="crosslink">finitely generated</span></li>
+<li><span id="cross-transposition" class="crosslink">transposition</span> generate <a href="#cross-symmetric-group">symmetric group</a> <span class="math">\(S_n\)</span></li>
+</ul></li>
+<li><span id="cross-free-group" class="crosslink">free group</span> <span class="math">\(F(A)\)</span>. the words thing. on set <span class="math">\(A\)</span>. the <a href="#cross-universal-arrow">universal arrow</a>!</li>
+<li><a href="#cross-product">product</a></li>
+<li><a href="#cross-coproduct">coproduct</a>. the <span id="cross-free-product" class="crosslink">free product</span> <span class="math">\(G*H\)</span></li>
+<li><a href="#cross-initial">initial</a> and <a href="#cross-finial">finial</a>. the <span id="cross-trivial-group" class="crosslink">trivial group</span></li>
+<li><span id="cross-order-of-group" class="crosslink">order of group</span></li>
+<li><span id="cross-commutator" class="crosslink">commutator</span> <span class="math">\(xyx^-1y^-1\)</span> it is normal and all homomorphism into commutative group factor through it</li>
+<li><span id="cross-simple-group" class="crosslink">simple group</span>. nor-trivial and no normal groups other than <span class="math">\({e}\)</span> and itself</li>
+<li><span id="cross-presentation-of-group" class="crosslink">presentation of group</span>
+<ul>
+<li><span id="cross-finitely-presented" class="crosslink">finitely presented</span>
+<ul>
+<li>world problem is undecidable…</li>
+</ul></li>
+</ul></li>
+<li>examples
+<ul>
+<li><span id="cross-symmetric-group" class="crosslink">symmetric group</span> <span class="math">\(S_n\)</span>
+<ul>
+<li><span class="math">\((S_n:1) = n!\)</span></li>
+</ul></li>
+<li><span id="cross-cyclic-group" class="crosslink">cyclic group</span> <span class="math">\(C_n\)</span>. <a href="#cross-isomorphism">isomorphism</a> to <span class="math">\({\mathbb{Z}}\)</span> or <span class="math">\({\mathbb{Z}}/n{\mathbb{Z}}\)</span>, the <strong>additive group</strong>!!!
+<ul>
+<li>if <span class="math">\(p\)</span> is prime, then <span class="math">\(({\mathbb{Z}}/p{\mathbb{Z}}, \cdot)\)</span> is cyclic</li>
+</ul></li>
+<li><span id="cross-dihedral-group" class="crosslink">dihedral group</span> of <span class="math">\(n\)</span> side polygon <span class="math">\(D_{2n}\)</span>
+<ul>
+<li><span class="math">\(D_6 = S_3\)</span>, but normality it is not, because geometry restrictions</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><span id="cross-decomposition-of-group-morphism" class="crosslink">decomposition of group morphism</span>
+<ul>
+<li><img src="images/group-d1.png" style="width:400px" /></li>
+<li><span class="math">\(\frac{G_1\times G_2}{H_1\times H_2}\cong\frac{G_1}{H_1}\times\frac{G_2}{H_2}\)</span></li>
+<li><span class="math">\(\frac{G/H}{N/H}\cong\frac{G}{H}\)</span>, <span class="math">\(N\)</span> and <span class="math">\(H\)</span> normal</li>
+<li><span class="math">\(\frac{H}{H\cap K}\cong \frac{HK}{K}\)</span>, <span class="math">\(H\subset N_K\)</span>, so <span class="math">\(HK = KH\)</span> is subgroup, and <span class="math">\(H\cap K\)</span> is normal in <span class="math">\(G\)</span>
+<ul>
+<li>this means you have normalizer, you can add/subtract the irelevant dims to the problem</li>
+</ul></li>
+<li><span id="cross-butterfly-lemma" class="crosslink">butterfly lemma</span>
+<ul>
+<li><span class="math">\(U\)</span>, <span class="math">\(V\)</span> subgroup of <span class="math">\(G\)</span></li>
+<li><span class="math">\(u\)</span>, <span class="math">\(v\)</span> normal subgroup of <span class="math">\(U\)</span>, <span class="math">\(V\)</span></li>
+<li><span class="math">\(\frac{u(U\cap V)}{u(U\cap v)}\cong\frac{(U\cap V)v}{(u\cap V)v}\cong\frac{U\cap V}{(u\cap V)(U\cap v)}\)</span></li>
+</ul></li>
+</ul></li>
+<li><span id="cross-group-towers" class="crosslink">group towers</span>
+<ul>
+<li><span id="cross-normal-tower" class="crosslink">normal tower</span>, <span id="cross-abelian-tower" class="crosslink">abelian tower</span>, <span id="cross-cyclic-tower" class="crosslink">cyclic tower</span></li>
+<li><span id="cross-solvable-tower" class="crosslink">solvable tower</span>. has an abelian tower</li>
+<li>finite + solvable = has an cyclic refinement</li>
+<li><span class="math">\(G\)</span> solvable <span class="math">\(\Leftrightarrow\)</span> <span class="math">\(G/H\)</span> and <span class="math">\(H\)</span> is solvable</li>
+<li><span id="cross-Schreier-theorem" class="crosslink">Schreier theorem</span> two normal tower ending with trivial group have equivalent refinements</li>
+<li><span id="cross-Jordan-Holder" class="crosslink">Jordan-Holder</span> <code>fix me</code></li>
+</ul></li>
 </ul>
-<p><strong>fix me</strong></p>
-<h3 id="p007">p007</h3>
-<pre><code>group extends monoid (
-  inverse: S -&gt; S &amp;&amp; forall a b: S: a^-1 * a = e
-)
-
-forall a: group, n: integer: a^n = if (n.positive) (0 until n).foldLeft(*, a) else (0 until -n).foldLeft(*, a^-1)</code></pre>
-<pre><code>forall a: group, n, m: integer: a^n * a^m = a^(n + m)
-
-proof by induction
-</code></pre>
-<h3 id="p008">p008</h3>
-<h3 id="p009">p009</h3>
-<pre><code>productGroup a b: group extends group (
-  S = (a, b),
-  (x_a, x_b) * (y_a, y_b) = (x_a * y_a, x_b * y_b),
-  e = (e_a, e_b)
-)</code></pre>
-<p>subgroup, generators, example</p>
-<p><strong>fix me</strong></p>
-<h3 id="p010">p010</h3>
-<pre><code>homomor A, B &lt;: group = f: A -&gt; B &amp;&amp; forall a, b: A f(a) *_B f(b) = f(a *_A b)
-
-
-isomor A, B &lt;: group = homo A B &amp;&amp; exists g: homo B A: fg = id_B &amp;&amp; gf = id_A
-
-automor A = isomor A B
-
-endomor A = homomor A A</code></pre>
-<pre><code>f: homor A B -&gt; f(a^-1) = f(a)^-1 &amp;&amp; f(e_A) = e_B
-</code></pre>
-<h3 id="p011---13">p011 - 13</h3>
-<p>intution about normal group etc.</p>
 <ul>
-<li>it is force something to be equal</li>
-<li>or force some elements to be e</li>
-<li>if it is arbitry element? it is quotient group…?</li>
-<li>if it is a group, then the all forced is just you list, but why it cannot be a group again??</li>
-<li>first, you get a nice theorem of the orders of the group, this is because you are not lacking element in the forcing<br /></li>
-<li>because - think of this, what if two element of <code>aH</code> product? they are not identifed in <code>aH</code> again!!!</li>
-<li>we are looking for some closed structure</li>
-<li>if it is a normal subgroup, we get group again</li>
-<li>….???</li>
+<li><span id="cross-abelian-group" class="crosslink">abelian group</span> <span class="math">\({\mathcal{Ab}}\)</span>
+<ul>
+<li><a href="#cross-object">object</a>. <a href="#cross-commutative">commutative</a> . <a href="#cross-group">group</a></li>
+<li><a href="#cross-morphism">morphism</a>
+<ul>
+<li>example: <span class="math">\(n\)</span> power map exists, because <a href="#cross-commutative">commutative</a></li>
+<li><a href="#cross-homomorphism">homomorphism</a> in <span class="math">\({\mathcal{Ab}}\)</span> is again a <a href="#cross-abelian-group">abelian group</a></li>
+</ul></li>
+<li><a href="#cross-product">product</a> = <a href="#cross-coproduct">coproduct</a>. <span class="math">\(G\oplus H\)</span></li>
+<li><span id="cross-free-abelian-group" class="crosslink">free abelian group</span> <span class="math">\(F^{ab}(A)\)</span>. <span class="math">\({\mathbb{Z}}^{\oplus n}\)</span></li>
+</ul></li>
 </ul>
-<h3 id="p014">p014</h3>
+<h3 id="group-action">group action</h3>
 <ul>
-<li>normal group closed under intersection</li>
-<li>normalizer of a subset</li>
-<li>centralizer of a group</li>
-</ul>
-<h3 id="p015-16">p015, 16</h3>
-<p>trival results</p>
-<h3 id="p017">p017</h3>
-<pre><code> H      HK
---- ~=~ --
-H^K     K</code></pre>
-<p>this means you have normalizer, you can add/subtract the irelevant dims to the problem</p>
-<p>f-bar - induced normal group</p>
-<h3 id="p018---20">p018 - 20</h3>
-<p>towers － the refined structure of a group</p>
-<p>normal/abelian/cyclic tower</p>
-<p>solvable - has an abelian tower</p>
-<p>finite + solvable = has an cyclic refinement</p>
-<p>G solvable &lt;-&gt; G/H and H is solvable</p>
-<p>commutator <code>xyx^-1y^-1</code> -&gt; it is normal and all homomor into comutative group factor through it</p>
-<p>simple - nor-trival and no normal groups other than <code>{e}</code> and itself</p>
-<h3 id="p021">p021</h3>
-<pre><code>U, V: subgroup of g
-u, v: normal subgroup of U, V
-
-u(U^V)     (U^V)v       (U^V)
------- ~=~ ------ ~=~ ----------
-u(U^v)     (u^V)v     (u^V)(U^v)</code></pre>
-<h3 id="p022">p022</h3>
-<p>seems no one interested in it…</p>
-<p><em>Schreier</em> two normal tower ending with trival group have equivalent refinements</p>
-<p><em>Jordan-Holder</em> …</p>
-<p><strong>fix me</strong></p>
-<h3 id="p023---25">p023 - 25</h3>
-<p>so what’s the usefulness of mathematical structures? I do not know….</p>
-<p>cyclic, generator, exponent of <code>a</code> or <code>G</code></p>
-<p>cyclic groups: infinite period and period <code>n</code></p>
-<p>propisition about finite group, prime numbers</p>
+<li>a left <span id="cross-action" class="crosslink">action</span> of <a href="#cross-group">group</a> <span class="math">\(G\)</span> on <span class="math">\(A\)</span> in category <span class="math">\({\mathcal{C}}\)</span>, is a function <span class="math">\(\sigma:G \to {\text{Aut}}_{\mathcal{C}}(A)\)</span>
 <ul>
-<li>soemthing about free generated group?? don’t know…</li>
+<li>alternative on <span class="math">\(S\in {\mathcal{Set}}\)</span>
+<ul>
+<li><span class="math">\(es = s\)</span></li>
+<li><span class="math">\(gfs = (gf) s\)</span></li>
+<li>this is auto <a href="#cross-automorphism">automorphism</a>! group has <a href="#cross-inverse">inverse</a>!</li>
+</ul></li>
+<li><span><span id="cross-effective-action"></span><span id="cross-faithful-action" class="crosslink">faithful action </span></span> <span class="math">\(\sigma\)</span> is injective
+<ul>
+<li><span class="math">\(gs = s\Rightarrow g = e\)</span></li>
+</ul></li>
+<li><span id="cross-isotropy" class="crosslink">isotropy</span> of point <span class="math">\(s\)</span>, <span class="math">\(G_s\)</span>. <span class="math">\(\{g|gs = s\}\)</span>
+<ul>
+<li>so <a href="#cross-free-action">free action</a>’s <a href="#cross-isotropy">isotropy</a> is always <span class="math">\(\{e\}\)</span></li>
+</ul></li>
+<li><span id="cross-orbit" class="crosslink">orbit</span> of <span class="math">\(s\)</span>, <span class="math">\(Gs\)</span></li>
+<li><span><span id="cross-transitive"></span><span id="cross-transitively"></span><span id="cross-transitive-action" class="crosslink">transitive action </span></span>, <span class="math">\(\forall s, s', \exists g: gs = s'\)</span> or group is single <a href="#cross-orbit">orbit</a></li>
+<li>if <span class="math">\(H\)</span> is subgroup, then <span class="math">\(G/H\)</span> is <a href="#cross-transitive">transitive</a> <span class="math">\(G\)</span>-set (by <span class="math">\(G\)</span>-set we means an action)</li>
+<li>we can view the group as an single element <a href="#cross-category">category</a>, then <a href="#cross-group-action">group action</a> is a <a href="#cross-functor">functor</a>. the functor maps into <span class="math">\(\mathcal{Set}\)</span>, and it only maps into single element….</li>
+</ul></li>
+<li><a href="#cross-category">category</a> of <span class="math">\(G\)</span> sets
+<ul>
+<li><a href="#cross-object">object</a>. <span class="math">\(S\)</span></li>
+<li><a href="#cross-morphism">morphism</a>. <a href="#cross-function">function</a> <span class="math">\(f\)</span> such that <span class="math">\(f(gx) = g(f(x))\)</span>
+<ul>
+<li><a href="#cross-automorphism">automorphism</a> of <span class="math">\(G\)</span>-set. <span class="math">\(G\)</span> act <a href="#cross-transitively">transitively</a> on <span class="math">\(S\)</span>, <span class="math">\(s\in S\)</span>, <span class="math">\(W_{G_s}\)</span> is <a href="#cross-isomorphic">isomorphic</a> to <span class="math">\({\text{Aut}}_G(S)\)</span> of <a href="#cross-automorphism">automorphism</a> of <span class="math">\(G\)</span>-set <span class="math">\(S\)</span></li>
+</ul></li>
+</ul></li>
+<li><a href="#cross-category">category</a> <span class="math">\(\mathcal{O}(G)\)</span> of canonical orbits
+<ul>
+<li><a href="#cross-object">object</a>. <span class="math">\(G/H\)</span></li>
+<li><a href="#cross-morphism">morphism</a>. <span class="math">\(G\)</span>-maps of them
+<ul>
+<li><span class="math">\(\alpha: G/H\to G/K\)</span> has form <span class="math">\(\alpha(gH) = g\gamma K\)</span> where <span class="math">\(\gamma\in G\)</span> satisfies <span class="math">\(\gamma^{-1}h\gamma \in K\)</span> for all <span class="math">\(h\in H\)</span></li>
+</ul></li>
+</ul></li>
+<li><span id="cross-groupoid-action" class="crosslink">groupoid action</span> <span class="math">\(T:\mathcal{B} \to \mathcal{Set}\)</span>. it is kind of taking the results of path in base space into results of end point in covering space
+<ul>
+<li>for each <span class="math">\(b\)</span> in <span class="math">\(\mathcal{B}\)</span>, <span class="math">\(T\)</span> restricts to an <a href="#cross-group-action">group action</a> on <span class="math">\(T(b)\)</span></li>
+<li><span id="cross-transitive-groupoid-action" class="crosslink">transitive groupoid action</span>. if for each <span class="math">\(b\)</span>, it is an <a href="#cross-transitive-action">transitive action</a>
+<ul>
+<li>for <a href="#cross-groupoid-connected">groupoid connected</a> groupoid, if this is true for one, then true for all. because groupoid is an category with only <a href="#cross-isomorphism">isomorphism</a></li>
+</ul></li>
+<li>in <a href="#cross-covering-groupoid">covering groupoid</a>s
+<ul>
+<li>the <a href="#cross-isotropy">isotropy</a> group of <span class="math">\(e\)</span> is <span class="math">\(p(\pi(\mathcal{E}, e))\)</span></li>
+<li>it is <a href="#cross-transitive-groupoid-action">transitive groupoid action</a></li>
+<li>so <span class="math">\(F_b \cong \pi(\mathcal{B}, b)/ p(\mathcal{E}, e)\)</span>. this means bijection? we do not know it is <a href="#cross-normal">normal</a> now</li>
+<li>if the covering is <a href="#cross-universal-covering-groupoid">universal covering groupoid</a>, then <span class="math">\(F_b\cong \pi(\mathcal{B}, b)\)</span></li>
+</ul></li>
+</ul></li>
+<li>isotropy group
+<ul>
+<li>for <span class="math">\(s\in S\)</span> the subgroup <span class="math">\(G_s = \{g|gs=s\}\)</span></li>
+</ul></li>
+<li>group action <span class="math">\(G\times S\to S\)</span>, such that <span class="math">\(e s = s\)</span> and <span class="math">\(g^' g s = (g g^')s\)</span> for all <span class="math">\(s\)</span></li>
+<li><span id="cross-isotropy-group" class="crosslink">isotropy group</span></li>
+<li><span id="cross-free-action" class="crosslink">free action</span> if <span class="math">\(G_s\)</span> is all trivial</li>
+<li><span id="cross-orbit" class="crosslink">orbit</span> <span class="math">\(G s\)</span></li>
+<li><span id="cross-transitive-action" class="crosslink">transitive action</span> <span class="math">\(\forall s, s^'\exists g: g s = s^'\)</span>, or there is single orbit
+<ul>
+<li><span id="cross-subgroup" class="crosslink">subgroup</span> <span class="math">\(H\)</span>, then <span id="cross-coset" class="crosslink">coset</span> <span class="math">\(gH\)</span> is a transitive <span class="math">\(G\)</span>-set</li>
+<li>when <span class="math">\(G\)</span> works transitively, there is an <span id="cross-isomorphism" class="crosslink">isomorphism</span> of <span class="math">\(G\)</span>-set between <span class="math">\(S\)</span> and <span class="math">\(G/G_s\)</span> for any <span class="math">\(s\)</span> by <span class="math">\(g s\leftrightarrow g G_s\)</span></li>
+</ul></li>
+<li>category <span class="math">\(\mathcal{O}(G)\)</span> of canonical orbits
+<ul>
+<li>object: <span class="math">\(G\)</span>-sets <span class="math">\(G/H\)</span></li>
+<li>morphism: <span class="math">\(G\)</span>-map: function <span class="math">\(f\)</span> such that <span class="math">\(f(g s) = g f(s)\)</span></li>
+<li>if <span class="math">\(G\)</span> is transitively on <span class="math">\(S\)</span>, choose <span class="math">\(s\in S\)</span>, and <span class="math">\(H= G_s\)</span>, <span id="cross-Weyl-group" class="crosslink">Weyl group</span> <span class="math">\(W_H\)</span> is <span id="cross-isomorphism" class="crosslink">isomorphism</span> to group <span class="math">\(Aut_G(S)\)</span> of automorphism of <span class="math">\(S\)</span></li>
+<li>a <span class="math">\(G\)</span>-map <span class="math">\(\alpha:G/H\to G/K\)</span> has form <span class="math">\(\alpha(g H)= g \gamma K\)</span> and <span class="math">\(\gamma\in G\)</span> that <span class="math">\(\gamma^{-1}h \gamma\in K\)</span> for all <span class="math">\(h\in H\)</span> <code>fix me</code></li>
+<li>the category <span class="math">\(\mathcal{O}(G)\)</span> is isomorphism to <span class="math">\(\mathcal{G}\)</span> with objects subgroups of <span class="math">\(G\)</span> and morphisms distinct subconjugacy relations <span class="math">\(\gamma^{-1}H\gamma\subset G\)</span> for <span class="math">\(\gamma\in G\)</span></li>
+</ul></li>
 </ul>
 <h3 id="p026---29">p026 - 29</h3>
 <p>here we represent groups by permutations</p>
@@ -1259,42 +1227,269 @@ u(U^v)     (u^V)v     (u^V)(U^v)</code></pre>
 <ul>
 <li><span id="cross-abelian-group" class="crosslink">abelian group</span> <span class="math">\(\mathcal{Ab}\)</span></li>
 </ul></li>
-<li><span id="cross-groupoid" class="crosslink">groupoid</span>
-<ul>
-<li>groupoid connected
-<ul>
-<li>can be viewed as <span id="cross-category-connected" class="crosslink">category connected</span>, then the groupoid viewed as a <span id="cross-category" class="crosslink">category</span> will have <span id="cross-skeleton-category" class="crosslink">skeleton category</span> one element with full <span id="cross-isomorphism" class="crosslink">isomorphism</span></li>
-</ul></li>
-</ul></li>
-<li><span id="cross-ring" class="crosslink">ring</span></li>
-<li><span id="cross-module" class="crosslink">module</span></li>
-<li><p><span id="cross-vector-space" class="crosslink">vector space</span></p></li>
 </ul>
-<h3 id="group-action">group action</h3>
+<h2 id="references-2">references</h2>
 <ul>
-<li>isotropy group
+<li><span id="cross-ref-algebra-lang" class="crosslink">ref-algebra-lang</span> <em>Algebra</em>, Serge Lang</li>
+<li><span id="cross-ref-algebra-0" class="crosslink">ref-algebra-0</span> <em>Algebra, Chapter 0</em>, Paolo Aluffi</li>
+</ul>
+<h1 id="topological-space">topological space</h1>
+<h2 id="idea-3">idea</h2>
+<p>it describe what we means by a space, which has a notation of <strong>nearness</strong> of points, which means the point have some <strong>extension</strong>, so infinite extension will destroy it</p>
+<h2 id="topological-space-1">topological space</h2>
 <ul>
-<li>for <span class="math">\(s\in S\)</span> the subgroup <span class="math">\(G_s = \{g|gs=s\}\)</span></li>
+<li><span><span id="cross-space"></span><span id="cross-topological-space" class="crosslink">topological space</span></span>
+<ul>
+<li><a href="#cross-set">set</a>, <span class="math">\(A\)</span></li>
+<li><span><span id="cross-topology"></span><span id="cross-open-set" class="crosslink">open set</span></span>s <span class="math">\(\mathcal{T}\)</span>
+<ul>
+<li><span id="cross-weak-topology" class="crosslink">weak topology</span></li>
 </ul></li>
-<li>group action <span class="math">\(G\times S\to S\)</span>, such that <span class="math">\(e s = s\)</span> and <span class="math">\(g^' g s = (g g^')s\)</span> for all <span class="math">\(s\)</span></li>
-<li><span id="cross-isotropy-group" class="crosslink">isotropy group</span></li>
-<li><span id="cross-free-action" class="crosslink">free action</span> if <span class="math">\(G_s\)</span> is all trivial</li>
-<li><span id="cross-orbit" class="crosslink">orbit</span> <span class="math">\(G s\)</span></li>
-<li><span id="cross-transitive-action" class="crosslink">transitive action</span> <span class="math">\(\forall s, s^'\exists g: g s = s^'\)</span>, or there is single orbit
-<ul>
-<li><span id="cross-subgroup" class="crosslink">subgroup</span> <span class="math">\(H\)</span>, then <span id="cross-coset" class="crosslink">coset</span> <span class="math">\(gH\)</span> is a transitive <span class="math">\(G\)</span>-set</li>
-<li>when <span class="math">\(G\)</span> works transitively, there is an <span id="cross-isomorphism" class="crosslink">isomorphism</span> of <span class="math">\(G\)</span>-set between <span class="math">\(S\)</span> and <span class="math">\(G/G_s\)</span> for any <span class="math">\(s\)</span> by <span class="math">\(g s\leftrightarrow g G_s\)</span></li>
+<li><span class="math">\(\{A, \emptyset\} \subset \mathcal{T}\)</span></li>
+<li><span class="math">\(\mathcal{T}\)</span> closed under finite <a href="#cross-intersection">intersection</a> and any <a href="#cross-union">union</a></li>
 </ul></li>
-<li>category <span class="math">\(\mathcal{O}(G)\)</span> of canonical orbits
+<li>category <span class="math">\(\mathcal{U}\)</span>
 <ul>
-<li>object: <span class="math">\(G\)</span>-sets <span class="math">\(G/H\)</span></li>
-<li>morphism: <span class="math">\(G\)</span>-map: function <span class="math">\(f\)</span> such that <span class="math">\(f(g s) = g f(s)\)</span></li>
-<li>if <span class="math">\(G\)</span> is transitively on <span class="math">\(S\)</span>, choose <span class="math">\(s\in S\)</span>, and <span class="math">\(H= G_s\)</span>, <span id="cross-Weyl-group" class="crosslink">Weyl group</span> <span class="math">\(W_H\)</span> is <span id="cross-isomorphism" class="crosslink">isomorphism</span> to group <span class="math">\(Aut_G(S)\)</span> of automorphism of <span class="math">\(S\)</span></li>
-<li>a <span class="math">\(G\)</span>-map <span class="math">\(\alpha:G/H\to G/K\)</span> has form <span class="math">\(\alpha(g H)= g \gamma K\)</span> and <span class="math">\(\gamma\in G\)</span> that <span class="math">\(\gamma^{-1}h \gamma\in K\)</span> for all <span class="math">\(h\in H\)</span> <code>fix me</code></li>
-<li>the category <span class="math">\(\mathcal{O}(G)\)</span> is isomorphism to <span class="math">\(\mathcal{G}\)</span> with objects subgroups of <span class="math">\(G\)</span> and morphisms distinct subconjugacy relations <span class="math">\(\gamma^{-1}H\gamma\subset G\)</span> for <span class="math">\(\gamma\in G\)</span></li>
+<li><a href="#cross-morphism">morphism</a>. <span><span id="cross-continuous"></span><span id="cross-continuous-function" class="crosslink">continuous function</span></span></li>
+<li><span id="cross-path" class="crosslink">path</span>. from <a href="#cross-interval">interval</a>
+<ul>
+<li><span id="cross-loop" class="crosslink">loop</span>.
+<ul>
+<li><span class="math">\(c_x\)</span> constant loop</li>
+</ul></li>
+<li><span class="math">\(f\cdot g\)</span> the path that…</li>
+<li><span class="math">\(f^{-1}\)</span> the path that…</li>
+<li>it is not <a href="#cross-groupid">groupid</a>, because the inverse is not <a href="#cross-groupid-inverse">groupid inverse</a>, but that’s true in <a href="#cross-homotopy-space">homotopy space</a></li>
+</ul></li>
+<li><a href="#cross-monomorphism">monomorphism</a> and <a href="#cross-epimorphism">epimorphism</a> is reduced from <a href="#cross-set">set</a></li>
+<li><a href="#cross-isomorphism">isomorphism</a>. <span><span id="cross-homeomorphically"></span><span id="cross-homeomorphism" class="crosslink">homeomorphism </span></span> is not reduced from set!</li>
+<li><a href="#cross-product">product</a>. <a href="#cross-set-product">set product</a> with <a href="#cross-weak-topology">weak topology</a> for projection</li>
+<li><a href="#cross-coproduct">coproduct</a>.</li>
+</ul></li>
+<li><span id="cross-pointed-space" class="crosslink">pointed space</span>
+<ul>
+<li><a href="#cross-object">object</a>. <a href="#cross-topological-space">topological space</a> like <a href="#cross-pointed-set">pointed set</a></li>
+<li><a href="#cross-morphism">morphism</a>. <a href="#cross-continuous">continuous</a> map closed by <a href="#cross-basepoint">basepoint</a></li>
+</ul></li>
+</ul>
+<h2 id="connectedness">connectedness</h2>
+<ul>
+<li><span id="cross-connected-space" class="crosslink">connected space</span></li>
+<li><span id="cross-path-connected-space" class="crosslink">path connected space</span></li>
+<li><span id="cross-arc-connected-space" class="crosslink">arc connected space</span></li>
+<li><span id="cross-locally-path-connected" class="crosslink">locally path connected</span>
+<ul>
+<li>locally path connected + <a href="#cross-connected">connected</a> <span class="math">\(\Rightarrow\)</span> <a href="#cross-path-connected">path connected</a></li>
+<li>a <a href="http://math.stackexchange.com/questions/135463/path-connectedness-and-locally-path-connected">example</a> of path connected but not locally path connected</li>
+</ul></li>
+</ul>
+<h2 id="references-3">references</h2>
+<ul>
+<li><span id="cross-ref-topology-exercise" class="crosslink">ref-topology-exercise</span> <em>General Topology Exercise Textbook</em></li>
+</ul>
+<h1 id="homotopy-space">homotopy space</h1>
+<h2 id="idea-4">idea</h2>
+<ul>
+<li>the subject of algebraic topology is to give <a href="#cross-algebra">algebra</a> structure on a <a href="#cross-space">space</a></li>
+</ul>
+<h2 id="homotopy-space-1">homotopy space</h2>
+<p><em>it is only about maps between them now, i think eventually we will have space = groupoid or soemthing</em> <code>fix me: when you understand</code></p>
+<ul>
+<li><span id="cross-homotopy" class="crosslink">homotopy</span>. <span class="math">\(h: X\times I\to Y\)</span> such that <span class="math">\(h(x, 0) = f(x)\)</span>, <span class="math">\(h(x, 1) = g(x)\)</span>
+<ul>
+<li>why there is the <a href="#cross-interval">interval</a>? because deformation of space must in time?? what is time???</li>
+<li>then it means that homotopy in discrete space is always uninteresting</li>
+</ul></li>
+<li>there is a <a href="#cross-functor">functor</a> from <a href="#cross-space">space</a> to the <span id="cross-homotopy-space" class="crosslink">homotopy space</span> <span class="math">\(h\mathcal{U}\)</span>
+<ul>
+<li><a href="#cross-object">object</a>. same</li>
+<li><a href="#cross-morphism">morphism</a>. <a href="#cross-continuous-function">continuous function</a> to the <span id="cross-homotopy" class="crosslink">homotopy</span> class</li>
+<li><a href="#cross-isomorphism">isomorphism</a>s is <span class="math">\(f \cdot g \simeq {\text{id}}\)</span> things, which is called <a href="#cross-homotopy-equivalence">homotopy equivalence</a> in <span class="math">\(\mathcal{U}\)</span>
+<ul>
+<li><span id="cross-contractible" class="crosslink">contractible</span>. isomorphism to 0</li>
+</ul></li>
+<li><em>makes the functions between them a lot more simple, and introduced so many <a href="#cross-isomorphism">isomorphism</a>s</em></li>
+</ul></li>
+<li>a functor from <a href="#cross-pointed-space">pointed space</a> to <span id="cross-pointed-homotopy-space" class="crosslink">pointed homotopy space</span>, <span class="math">\(h\mathcal{T}\)</span>
+<ul>
+<li><a href="#cross-object">object</a>. same</li>
+<li><a href="#cross-morphism">morphism</a>. it is just like viewed as a <a href="#cross-product-space">product space</a> in <a href="#cross-homotopy-space">homotopy space</a>, which keeps <a href="#cross-basepoint">basepoint</a> always fixed</li>
+<li>the <a href="#cross-fundamental-group">fundamental group</a> . <a href="#cross-functor">functor</a> factor though pointed homotopy space
+<ul>
+<li>an based homotopy equivalence induce an isomorphism in fundamental group, which is just trivial</li>
+</ul></li>
+<li>is there exist two continuous function that can only be homotopy in <span class="math">\(h\mathcal{U}\)</span> but not <span class="math">\(h\mathcal{T}\)</span>, i.e. only exist homotopy that moves basepoint in the middle of the transform <code>fix me</code></li>
+</ul></li>
+</ul>
+<h2 id="fundamental-groupoid">fundamental groupoid</h2>
+<ul>
+<li><span id="cross-fundamental-groupoid" class="crosslink">fundamental groupoid</span>. <a href="#cross-functor">functor</a> from space <span class="math">\(\mathcal{U}\)</span> to <a href="#cross-groupoid">groupoid</a> <span class="math">\(\mathcal{GP}\)</span>
+<ul>
+<li><a href="#cross-object">object</a>. <a href="#cross-groupoid">groupoid</a> by taking <span class="math">\([f]\)</span> the <a href="#cross-homotopy">homotopy</a> class of <a href="#cross-path">path</a> <span class="math">\(f\)</span> in the <strong>paths</strong> from <span class="math">\(x\)</span> to <span class="math">\(y\)</span>, it is not just <a href="#cross-homotopy">homotopy</a> of the path considered as <span class="math">\(I \to X\)</span>, in a type theory view, this might be easy, for we can consider it be the type <code>Path(X, x, y)</code>
+<ul>
+<li><span class="math">\(f: x \to y\)</span>, <span class="math">\(g: y\to z\)</span></li>
+<li><span class="math">\([g][f] = [g\cdot f]\)</span>, notice the order</li>
+<li><span class="math">\([f]^{-1} = [f^{-1}]\)</span></li>
+<li>it is a <a href="#cross-groupiod">groupiod</a>
+<ul>
+<li><span class="math">\([f]^{-1}[f] = [f^{-1}f] = [c_x]\)</span></li>
+</ul></li>
+</ul></li>
+<li><a href="#cross-morphism">morphism</a>. induced?</li>
+<li>structure
+<ul>
+<li>a path in it makes two local <a href="#cross-group">group</a> . <a href="#cross-conjugate">conjugate</a>
+<ul>
+<li><span class="math">\(S^1\)</span>, by two path, <a href="#cross-morphism">morphism</a> <span class="math">\({\text{id}}\)</span></li>
+<li><span class="math">\(S^1\vee S^1\)</span>, by two path, <a href="#cross-morphism">morphism</a> is <code>a =&gt; a &amp;&amp; b =&gt; a^-1ba</code></li>
+<li>if the group is <a href="#cross-abelian">abelian</a> then we have an <a href="#cross-unique">unique</a> . <a href="#cross-isomorphism">isomorphism</a> between the two local group, this do not means there are only one element in the <a href="#cross-groupoid">groupoid</a></li>
+<li>this is restatement in <a href="#cross-fundamental-group">fundamental group</a></li>
+</ul></li>
+<li>for a <a href="#cross-path-connected-space">path connected space</a>, the fundamental groupoid is <span id="cross-groupoid-connected" class="crosslink">groupoid connected</span>, which is a special case of <a href="#cross-category-connected">category connected</a>, so it is <a href="#cross-category-equivalence">category equivalence</a> to the <a href="#cross-skeleton-category">skeleton category</a> of fundamental groupoid, which is <a href="#cross-fundamental-group">fundamental group</a></li>
+</ul></li>
+<li><p><span id="cross-van-Kampen-for-groupoid" class="crosslink">van Kampen for groupoid</span>, fundamental groupoid <a href="#cross-preserve-colimit">preserve colimit</a> certain</p>
+<ul>
+<li><span class="math">\(\mathcal{O}\)</span> be a <a href="#cross-cover">cover</a> of <a href="#cross-space">space</a> <span class="math">\(X\)</span> by <a href="#cross-path-connected">path connected</a> . <a href="#cross-open-set">open set</a>s, closed under finite <a href="#cross-intersection">intersection</a></li>
+<li>as a category morphism are <a href="#cross-inclusion">inclusion</a>s of subsets, gives a <a href="#cross-diagram">diagram</a> <span class="math">\[\Pi | \mathcal{O}: \mathcal{O}\to\mathcal{GP}\]</span></li>
+<li>the <a href="#cross-groupoid">groupoid</a> <span class="math">\(\Pi(X)\)</span> is the <a href="#cross-colimit">colimit</a> of the diagram <span class="math">\[\Pi(X)\cong colim_{U\in \mathcal{O}}\Pi(U)\]</span></li>
+<li>the proof is very natural</li>
+</ul></li>
+<li>it do not factor though <a href="#cross-homotopy-space">homotopy space</a>, this is simple, think <a href="#cross-contractible">contractible</a> space. so <a href="#cross-fundamental-groupoid">fundamental groupoid</a> is redundant with internal structures, and <a href="#cross-fundamental-group">fundamental group</a> is redundant with external <a href="#cross-isomorphism">isomorphism</a>s. they are kind of two viewport</li>
+<li><p>an example of two different <a href="#cross-space">space</a> maps two same groupoid: two point space with discrete <a href="#cross-topology">topology</a> and one-point-only <a href="#cross-topology">topology</a></p></li>
+</ul></li>
+</ul>
+<h2 id="fundamental-group">fundamental group</h2>
+<ul>
+<li><a href="#cross-functor">functor</a> from <a href="#cross-pointed-space">pointed space</a> <span class="math">\(\mathcal{T}\)</span> to <a href="#cross-group">group</a> <span class="math">\(\mathcal{G}\)</span>
+<ul>
+<li><a href="#cross-object">object</a>. contstruct as <a href="#cross-fundamental-groupoid">fundamental groupoid</a>, but only keep <a href="#cross-loop">loop</a>s</li>
+<li><a href="#cross-morphism">morphism</a>. <span class="math">\(p: X\to Y\)</span> to group <a href="#cross-homomorphism">homomorphism</a>, <span class="math">\(p_*: \pi_1(X, x)\to \pi_1(Y, y)\)</span> by <span class="math">\(p_*[f] = [p\circ f]\)</span>, it is well defined for the <a href="#cross-law-of-composition">law of composition</a></li>
+<li><span><span id="cross-van-Kampen"></span><span id="cross-van-Kampen-for-fundamental-group" class="crosslink">van Kampen for fundamental group</span></span>
+<ul>
+<li>first by <a href="#cross-skeleton-category">skeleton category</a>, we proof for finite case, it is because we need a base to inductively define the reverse <span class="math">\(J\)</span> for skeleton category</li>
+<li>then it is proofed for infinite version <code>fix me</code></li>
+</ul></li>
+<li><a href="#cross-product">product</a> is preserved, it is proofed by <strong>universal property</strong> but <code>fix me</code></li>
+<li>i think there are many homotopy class on <span class="math">\(S^1 \times S^1\to S^1\times S^1\)</span>, examples are projection, id, and swap, but some are not path induced</li>
+<li>the <a href="#cross-isomorphism">isomorphism</a>s for different <a href="#cross-basepoint">basepoint</a> . <a href="#cross-space">space</a>s. in summary, <a href="#cross-basepoint">basepoint</a> changing results in <a href="#cross-isomorphism">isomorphism</a>, some of them will have unique isomorphism, and when the <a href="#cross-group">group</a> is <a href="#cross-abelian">abelian</a>, it is unique. but this is not isomorphism in <a href="#cross-pointed-space">pointed space</a>, it is reduced to <a href="#cross-morphism">morphism</a> in <a href="#cross-space">space</a>, then project to <a href="#cross-group">group</a>
+<ul>
+<li><span class="math">\(a\)</span> a path, <span class="math">\(\gamma[a]\)</span> the <a href="#cross-homomorphism">homomorphism</a> to move point</li>
+<li><span class="math">\(\gamma[a][f] = [a\cdot f \cdot a^{-1}]\)</span></li>
+<li>it only depends on the <a href="#cross-homotopy">homotopy</a> class of <span class="math">\(a\)</span></li>
+<li>it is <a href="#cross-isomorphism">isomorphism</a> with inverse <span class="math">\(\gamma[a^{-1}]\)</span></li>
+<li>if the group is <a href="#cross-abelian">abelian</a> we have <span class="math">\(\gamma[b][f] = \gamma[a][f]\)</span>, you should view the structure in the groupoid, and switch basepoint</li>
+<li>so there are <span class="math">\(n\)</span> kinds of path induced isomorphism between <span class="math">\(\pi_1(X,x)\)</span> and <span class="math">\(\pi_1(X, y)\)</span> where <span class="math">\(n\)</span> is the number of homotopy class of the path between the two point, so one homotopy class means one isomorphism is path induced, and then we can use this way to identity two group</li>
+</ul></li>
+<li><a href="#cross-isomorphism">isomorphism</a> by <a href="#cross-morphism">morphism</a> in <a href="#cross-homotopy-space">homotopy space</a>. an <a href="#cross-isomorphism">isomorphism</a> in <a href="#cross-homotopy-space">homotopy space</a> is a class of <a href="#cross-morphism">morphism</a>s in <a href="#cross-pointed-space">pointed space</a>, and by this class of <a href="#cross-morphism">morphism</a>, you get <a href="#cross-isomorphism">isomorphism</a> in group</li>
+<li><a href="#cross-isomorphism">isomorphism</a> by <a href="#cross-isomorphism">isomorphism</a> in <a href="#cross-homotopy-space">homotopy space</a>. again, they are not <a href="#cross-isomorphism">isomorphism</a> in <a href="#cross-pointed-space">pointed space</a>, but reduced. <a href="#cross-isomorphism">isomorphism</a> in <a href="#cross-homotopy-space">homotopy space</a> is class of (because of the homotopy) class of (because adding basepoint) <a href="#cross-morphism">morphism</a> in <a href="#cross-pointed-space">pointed space</a>, each of them is isomorphism. if <span class="math">\(f:X \to Y\)</span> is iso in <a href="#cross-homotopy-space">homotopy space</a> then <span class="math">\(f_*: \pi_1(X, x) \to \pi_1(Y, f(x))\)</span> is <span id="cross-isomorphism" class="crosslink">isomorphism</span> for all <span class="math">\(x\)</span></li>
+<li><a href="#cross-simply-connected">simply connected</a> fundamental group is zero and <a href="#cross-path-connected">path connected</a>
+<ul>
+<li>it has little thing to do with <a href="#cross-contractible">contractible</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="examples-and-exercises">examples and exercises</h3>
+<ul>
+<li>for <a href="#cross-contractible">contractible</a> space, the fundamental group is 0</li>
+<li><span class="math">\(\pi_1(\mathbb{R}) = 0\)</span></li>
+<li><span class="math">\(\pi_1(S^1) = \mathbb{Z}\)</span></li>
+<li>p20 proposition and exercises bellow, i do not know how to compute the push outs… <code>fix me: not understand the pushout now</code></li>
+</ul>
+<p>from <em><a href="#cross-ref-at-concise">ref-at-concise</a></em></p>
+<ol style="list-style-type: decimal">
+<li>The Brouwer fixed point theorem</li>
+<li>The fundamental theorem of algebra</li>
+<li>exercises <code>fix me</code>, i do not know what’s the <span class="math">\(deg\)</span> and what’s topological group</li>
+<li>for <a href="#cross-real-projective-space">real projective space</a> <code>fix me</code></li>
+</ol>
+<h2 id="covering-space">covering space</h2>
+<p>we assume all space considered is <a href="#cross-locally-path-connected">locally path connected</a> and <a href="#cross-connected">connected</a></p>
+<ul>
+<li><span><span id="cross-covering"></span><span id="cross-covering-space" class="crosslink">covering space </span></span> <span class="math">\(p: E\to B\)</span>
+<ul>
+<li><a href="#cross-surjective">surjective</a></li>
+<li>each <span class="math">\(b\in B\)</span>, has <a href="#cross-open">open</a> . <a href="#cross-neighborhood">neighborhood</a> <span class="math">\(V\)</span>, such that each <a href="#cross-disjoint-component">disjoint component</a> of <span class="math">\(p^{-1}(V)\)</span> is open and mapped <a href="#cross-homeomorphically">homeomorphically</a> onto V by <span class="math">\(p\)</span>
+<ul>
+<li>so it should not “go back” in the middle?</li>
+<li><span id="cross-fundamental-neighborhood" class="crosslink">fundamental neighborhood</span>. <a href="#cross-path-connected">path connected</a> . <a href="#cross-open">open</a></li>
+</ul></li>
+<li><span id="cross-totally-space" class="crosslink">totally space</span></li>
+<li><span id="cross-base-space" class="crosslink">base space</span></li>
+<li><span id="cross-fiber" class="crosslink">fiber</span> of covering <span class="math">\(p\)</span></li>
+</ul></li>
+</ul>
+<h3 id="unique-path-lifting">unique path lifting</h3>
+<ul>
+<li><span class="math">\(p: E\to B\)</span> and <span class="math">\(b\in B\)</span>, <span class="math">\(e,e'\in F_b\)</span>
+<ul>
+<li>a path <span class="math">\(f: I\to B\)</span> lefts uniquely for every <span class="math">\(e\)</span> such that <span class="math">\(g(0) = e\)</span> and <span class="math">\(p\circ g = f\)</span>. the proof is actually easy</li>
+<li>equivalent path lifts to equivalent path, and hence <span class="math">\(g(1)=g'(1)\)</span>. proof <span class="math">\(p\circ h: I\times I \to B\)</span>, compact, fundamental cover, finite cover, project back, base, finite cover, grid, grow the border (a old square only can all include the line or include nothing, so you can grow it!), inductively define the homotopy</li>
+<li><span id="cross-regular-covering" class="crosslink">regular covering</span>. <span class="math">\(p_*\)</span> project to normal group</li>
+<li><span id="cross-universal-covering" class="crosslink">universal covering</span>. <a href="#cross-simply-connected">simply connected</a> cover
+<ul>
+<li>for a universal cover, <span class="math">\(F_b\)</span> are in bijective with <span class="math">\(\pi_1(B, b)\)</span></li>
+<li>for <span class="math">\(n \geq 3\)</span>, <span class="math">\(\mathbf{R}P^n\)</span> covered by <span class="math">\(S^n\)</span>, then we can see that <span class="math">\(\pi_1(\mathbf{R}P^n) =2\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="covering-groupoid">covering groupoid</h3>
+<ul>
+<li><a href="#cross-coslice-category">coslice category</a> of the <a href="#cross-groupoid">groupoid</a></li>
+<li><span id="cross-star" class="crosslink">star</span> of <span class="math">\(x\)</span>, <span class="math">\(St(x)\)</span></li>
+<li><span id="cross-covering-of-groupoid" class="crosslink">covering of groupoid</span>
+<ul>
+<li><a href="#cross-surjective">surjective</a></li>
+<li>restricts to bijection <span class="math">\(p:St(e)\to St(p(e))\)</span> for each <span class="math">\(e\)</span></li>
+<li>the def of covering groupoid is just the useful properties of covering space. above can be reformulated as induced functor <span class="math">\(\Pi(p):\Pi(E)\to \Pi(B)\)</span> of cover space <span class="math">\(p\)</span> induce a covering groupoid</li>
+</ul></li>
+<li><span class="math">\(p_*: \pi_1(E, e)\to \pi_1(B,b)\)</span> is <a href="#cross-monomorphism">monomorphism</a> and base changing group is <a href="#cross-conjugate">conjugate</a>, and as one runs though <span class="math">\(e'\)</span>, we runs through conjugate groups in <span class="math">\(\pi_1(B,b)\)</span>
+<ul>
+<li>examples: i suspect all finite cover will leave the fundamental group unchanged, but in the infinite circle case, we can see that it is really monomorphism, because <span class="math">\(e\)</span> back, then <span class="math">\(b\)</span> must back, but not reverse</li>
+<li>i cannot found a example that is really non-trivial conjugate, they are all surjective or not moving, i can found an example it is non-trivial subgroup, just when you cannot come back by something. for a non-trivial conjudate, see <a href="#cross-ref-at-hatcher">ref-at-hatcher</a></li>
+<li>run though conjugate, but still not the whole group sometimes</li>
+<li><span id="cross-regular-covering-groupoid" class="crosslink">regular covering groupoid</span>. <span class="math">\(p(\pi(\mathcal{E}, e))\)</span> is normal subgroup of <span class="math">\(\pi(\mathcal{B}, b)\)</span></li>
+<li><span id="cross-universal-covering-groupoid" class="crosslink">universal covering groupoid</span>. <span class="math">\(p(\pi(\mathcal{E}, e)) = \{e\}\)</span></li>
+</ul></li>
+<li>translation function <span class="math">\(T(b): \mathcal{B}\to \mathcal{Set}\)</span> (the set of fibers at a point), <span class="math">\(T(f)\)</span> is a morphism in <span class="math">\(\mathcal{Set}\)</span> which depends on <span class="math">\(f\)</span> will have different behaviour
+<ul>
+<li>fibers has same <a href="#cross-cardinality">cardinality</a></li>
+</ul></li>
+</ul>
+<h3 id="classification-of-covering-of-groupoids">classification of covering of groupoids</h3>
+<ul>
+<li><a href="#cross-category">category</a> of <a href="#cross-groupoid-covering">groupoid covering</a> of <span class="math">\(\mathcal{B}\)</span>, <span class="math">\({\text{Cov}}(\mathcal{B})\)</span>
+<ul>
+<li><a href="#cross-object">object</a>. <a href="#cross-groupoid-covering">groupoid covering</a>s</li>
+<li><a href="#cross-morphism">morphism</a>. <span class="math">\(g:\mathcal{E}\to\mathcal{E'}\)</span> is a <span id="cross-map-of-covering" class="crosslink">map of covering</span> if only <span class="math">\(p = p'\circ g\)</span>
+<ul>
+<li>they are also covering! proof for <a href="#cross-surjection">surjection</a>, and <a href="#cross-bijection">bijection</a></li>
+<li>when exist?
+<ul>
+<li>a functor <span class="math">\(f: \mathcal{X}\to \mathcal{B}\)</span> reduce functor <span class="math">\(g: \mathcal{X}\to\mathcal{E}\)</span> and compute only if <span class="math">\(f(\mathcal{X}, x_0)\subset p(\mathcal{E}, e_0)\)</span></li>
+<li>when two covering same as above, then there exists an unique covering. and …</li>
+</ul></li>
+<li><a href="#cross-universal-covering-groupoid">universal covering groupoid</a> is unique up to isomorphism and covering all other covers</li>
+<li>they are bijective to <span class="math">\(G\)</span>-maps <span class="math">\(F_b\to F_b'\)</span></li>
+<li><span class="math">\({\text{Aut}}(\mathcal{E})\)</span> is isomorphic to group of isomorphism of <span class="math">\(F_b\)</span> and so <span class="math">\(W_{p(\pi(\mathcal{E}, e))}\)</span>. if <span class="math">\(p\)</span> is regular, then …, if universal. then <span class="math">\(G\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="construction-of-covering-groupoids">construction of covering groupoids</h3>
+<p><code>fix me: i do not want to read!!! a covering theorem, such a long way!!</code></p>
+<h3 id="classification-of-covering-of-space">classification of covering of space</h3>
+<p><code>fix me: totally sick</code></p>
+<h2 id="example">example</h2>
+<ul>
+<li><span id="cross-real-projective-space" class="crosslink">real projective space</span>
+<ul>
+<li>the real projective space <span class="math">\(\mathbb{R}P^n\)</span> is obtained by gluing antipodal points of <span class="math">\(S^n\)</span></li>
 </ul></li>
 </ul>
 <h2 id="references-4">references</h2>
+<ul>
+<li><span id="cross-ref-at-concise" class="crosslink">ref-at-concise</span> <em>A Concise Course in Algebraic Topology</em></li>
+<li><span id="cross-ref-at-hatcher" class="crosslink">ref-at-hatcher</span> <em>Algebraic Topology</em>, Hatcher</li>
+</ul>
 <h1 id="real-and-functional-analysis">real and functional analysis</h1>
 <p>from the book <em>Real and Functional Analysis</em> by Serge Lang</p>
 <p>prerequests include first chapters of <em>Set Theory</em> by Jech, but sense we take a type theoritic foundation and this foundation is not done yet, we ignore them…</p>
@@ -2629,7 +2824,15 @@ u(U^v)     (u^V)v     (u^V)(U^v)</code></pre>
 <script src="./js/jquery.toc.js"></script>
 <script src="./js/toc.js"></script>
 
+
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script>
+MathJax.Hub.Queue(function () {
+    $(document.body).scrollspy('refresh')
+});
+</script>
+
   </div>
 
     <div class="footer">

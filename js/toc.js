@@ -38,6 +38,8 @@
     $window.on('load', function () {
       $body.scrollspy('refresh')
     });
+
+
  
     $('.bs-docs-container [href=#]').click(function (e) {
       e.preventDefault()
