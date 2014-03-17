@@ -22,22 +22,25 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="./scope.html">scope</a></li>
             <li><a href="./mathematics.html">mathematics</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">random notes <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                 
+                    <li><a href="./random-notes/abstract-algebra-chapter-0-solution.html">abstract-algebra-chapter-0-solution</a></li>
+                
                     <li><a href="./random-notes/pl-ideas.html">pl-ideas</a></li>
+                
+                    <li><a href="./random-notes/scope.html">scope</a></li>
                 
                     <li><a href="./random-notes/yhbkj.html">yhbkj</a></li>
                 
                 </ul>
             </li>
             <li><a href="./posts.html">posts</a></li>
-            <li><a href="https://github.com/molikto">github</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/molikto">github</a></li>
             <li><a href="http://www.douban.com/people/66654255/">douban</a></li>
             <li><a href="./calendar.html">calendar</a></li>
           </ul>
@@ -91,13 +94,13 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-derivation" class="crosslink">derivation</span></li>
 <li><span id="cross-type" class="crosslink">type</span>s
 <ul>
-<li><span id="cross-universe" class="crosslink">universe</span> <span class="math">\(\mathscr{U}\)</span></li>
+<li><span id="cross-universe" class="crosslink">universe</span> <span class="math">\(\mathcal{U}\)</span></li>
 <li><span id="cross-function" class="crosslink">function</span></li>
 <li><span id="cross-identity-type" class="crosslink">identity type</span>, <span id="cross-reflection" class="crosslink">reflection</span> <span class="math">\({\text{refl}}\)</span>
 <ul>
 <li><code>open problem</code> how to <span class="math">\(J\)</span> compute with <a href="#cross-univalence-axiom">univalence axiom</a>?</li>
 </ul></li>
-<li><span><span id="cross-higher-inductive-type"></span><span id="cross-hit"></span><span id="cross-inductive-type" class="crosslink">inductive type </span></span>
+<li><span><span id="cross-hit"></span><span id="cross-higher-inductive-type" class="crosslink">higher inductive type </span></span>
 <ul>
 <li><span><span id="cross-W-type"></span><span id="cross-inductive-type" class="crosslink">inductive type</span></span></li>
 <li><code>open problem</code> formalize <a href="#cross-hit">hit</a> it like <a href="#cross-W-type">W-type</a></li>
@@ -160,7 +163,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>we will introduce new form of <span class="math">\(Id\)</span> but the shittly rule will continue to be valid… how?</li>
 </ul></li>
-<li><p>what i am thinking is that, the computation rule of identity is just that applying <span class="math">\(trans(p_1, p_2)\)</span> will not compute because the inductor <span class="math">\(J\)</span> only compute when <span class="math">\(J(a, a, refl_a)\)</span> so we can see that <span class="math">\(refl_x = relf_x^{-1}\)</span> by definition, or say, by computing the inductive, but we are not going to compute for different <span class="math">\(p_1 \neq \p_2\)</span> it is just like <span class="math">\(succ(x)\)</span> will not compute, but can we get something out? like in <span class="math">\(\Pi\)</span>?</p></li>
+<li><p>what i am thinking is that, the computation rule of identity is just that applying <span class="math">\(trans(p_1, p_2)\)</span> will not compute because the inductor <span class="math">\(J\)</span> only compute when <span class="math">\(J(a, a, refl_a)\)</span> so we can see that <span class="math">\(refl_x = relf_x^{-1}\)</span> by definition, or say, by computing the inductive, but we are not going to compute for different <span class="math">\(p_1 \neq p_2\)</span> it is just like <span class="math">\(succ(x)\)</span> will not compute, but can we get something out? like in <span class="math">\(\Pi\)</span>?</p></li>
 <li><p>fibers</p></li>
 <li><p>by computation, we means that all elements of a type has normal representation. so lem is not computation</p></li>
 <li><p>what kind of madness will a guy abstract out something called <span class="math">\(J\)</span> to replace the old-good reflective and transitive? but it is just that all these rules like product etc. is meaningless, the meaning is given by us</p></li>
@@ -183,7 +186,7 @@ $("#content").css("max-width", "1100px")
 <li>axiom of extensionality
 <ul>
 <li>under context <span class="math">\(x\)</span> <span class="math">\(y\)</span>, you can proof <span class="math">\(x +y = y + x\)</span> and you by transport <span class="math">\(\lambda x. \lambda    y.    x + y = \lambda x. \lambda y.y+x\)</span>, but they are not definitional equal, you can always normalize by applying the function, but how can you normalize a lambda? so we add that if <span class="math">\(Id_A(x, y)\)</span> then <span class="math">\(x\equiv y\)</span></li>
-<li>so when you want to know if <span class="math">\(x \equvi y\)</span>, then you have terrible things happening… haha!!! so it is a totally bad idea!!!</li>
+<li>so when you want to know if <span class="math">\(x \equiv y\)</span>, then you have terrible things happening… haha!!! so it is a totally bad idea!!!</li>
 <li>actually, with out the extensionality, there is no contradiction in my option…</li>
 </ul></li>
 <li><p>in mathematics, function is one-side-injection relations, they do not tell at all how the elements is get. but in hott, it is different, set theory use extensionality, but in tt, it is not the case</p></li>
@@ -371,7 +374,10 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span id="cross-terminal" class="crosslink">terminal</span>. empty diagram</li>
 <li><span id="cross-product" class="crosslink">product</span>. two point diagram</li>
-<li><span id="cross-pullback" class="crosslink">pullback</span>. three point and two morphism diagram</li>
+<li><span id="cross-pullback" class="crosslink">pullback</span>. three point and two morphism diagram
+<ul>
+<li>has <a href="#cross-equalizer">equalizer</a> and <a href="#cross-product">product</a> then has pullback</li>
+</ul></li>
 <li><span id="cross-equalizer" class="crosslink">equalizer</span>. two point and two morphism diagram</li>
 <li><span id="cross-complete" class="crosslink">complete</span>
 <ul>
@@ -473,9 +479,9 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-image" class="crosslink">image</span></li>
 <li><span id="cross-set-limit" class="crosslink">set limit</span>
 <ul>
-<li><span class="math">\({\text{lim }}{\text{inf }}A_i = \bigcup_i \bigcap_{j &gt;=i} A_j\)</span>, in all but finite</li>
-<li><span class="math">\({\text{lim }}{\text{sup }}A_i = \bigcap_i \bigcup_{j &gt;=i} A_j\)</span>, in infinite sets</li>
-<li><span class="math">\({\text{lim }}A_i\)</span></li>
+<li><span class="math">\(\lim\inf A_i = \bigcup_i \bigcap_{j &gt;=i} A_j\)</span>, in all but finite</li>
+<li><span class="math">\(\lim\sup A_i = \bigcap_i \bigcup_{j &gt;=i} A_j\)</span>, in infinite sets</li>
+<li><span class="math">\(\lim A_i\)</span></li>
 </ul></li>
 <li><span><span id="cross-loc"></span><span id="cross-law-of-composition" class="crosslink">law of composition </span></span>. we define here. because usually they are used in classical sense, it is just map <span class="math">\(S_1\times S_2\to S_3\)</span>
 <ul>
@@ -521,7 +527,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><a href="#cross-object">object</a>
 <ul>
-<li><span class="math">\(\forall p,q: p &lt; q \lor p == q \lor q &lt; p\)</span></li>
+<li><span class="math">\(\forall p,q: p &lt; q \lor p = q \lor q &lt; p\)</span></li>
 </ul></li>
 <li><a href="#cross-morphism">morphism</a>
 <ul>
@@ -561,7 +567,7 @@ $("#content").css("max-width", "1100px")
 <li>proof by chaining…</li>
 </ul></li>
 <li><span class="math">\(\alpha \subset \beta\Rightarrow\alpha\in\beta\)</span></li>
-<li>either <span class="math">\(\alpha \subset \beta\)</span> or $ $</li>
+<li>either <span class="math">\(\alpha \subset \beta\)</span> or <span class="math">\(\beta\subset\alpha\)</span></li>
 <li>define the order by <span class="math">\(\lt = \in\)</span>
 <ul>
 <li>is <a href="#cross-linear-ordering">linear ordering</a></li>
@@ -661,6 +667,8 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-order-of-group-element" class="crosslink">order of group element</span>
 <ul>
 <li>this is kind of like group in algebraic topology, they have something to do with morphisms</li>
+<li>formula for <span class="math">\(|g^m|\)</span></li>
+<li>in <a href="#cross-abelian-group">abelian group</a> the max order divide each other</li>
 </ul></li>
 </ul></li>
 <li><a href="#cross-morphism">morphism</a>. <span id="cross-group-homomorphism" class="crosslink">group homomorphism</span>
@@ -705,6 +713,8 @@ $("#content").css("max-width", "1100px")
 <li>closed under <a href="#cross-intersection">intersection</a></li>
 <li><span id="cross-normalizer" class="crosslink">normalizer</span> <span class="math">\(N_H\)</span></li>
 <li><span id="cross-Weyl-group" class="crosslink">Weyl group</span> <span class="math">\(W_H = N_H / H\)</span></li>
+<li>smallest index subgroup in finite group is normal</li>
+<li>how to consider this? if you consider what things can be a morphism in group, then you will notice that only when we make the group structure fuzz… kind of. then you want to make certain subgroup into a point, because subgroups has the good property of having boundary of coset. but <span class="math">\(aHbH = abH\)</span> will require that <span class="math">\(aH = Ha\)</span> for it</li>
 </ul></li>
 <li><span id="cross-centralizer" class="crosslink">centralizer</span> of <span class="math">\(S\)</span> <span class="math">\(Z_S\)</span>. <span class="math">\(zsz^{-1} = s\)</span>
 <ul>
@@ -719,9 +729,10 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li><span id="cross-free-group" class="crosslink">free group</span> <span class="math">\(F(A)\)</span>. the words thing. on set <span class="math">\(A\)</span>. the <a href="#cross-universal-arrow">universal arrow</a>!</li>
 <li><a href="#cross-product">product</a></li>
+<li><span id="cross-conjugate" class="crosslink">conjugate</span> subgroup <span class="math">\(B = xAx^{-1}\)</span></li>
 <li><a href="#cross-coproduct">coproduct</a>. the <span id="cross-free-product" class="crosslink">free product</span> <span class="math">\(G*H\)</span></li>
 <li><a href="#cross-initial">initial</a> and <a href="#cross-finial">finial</a>. the <span id="cross-trivial-group" class="crosslink">trivial group</span></li>
-<li><span id="cross-order-of-group" class="crosslink">order of group</span></li>
+<li><span id="cross-order-of-group" class="crosslink">order of group</span>. the definition is somewhat… it is the number of elements</li>
 <li><span id="cross-commutator" class="crosslink">commutator</span> <span class="math">\(xyx^-1y^-1\)</span> it is normal and all homomorphism into commutative group factor through it</li>
 <li><span id="cross-simple-group" class="crosslink">simple group</span>. nor-trivial and no normal groups other than <span class="math">\({e}\)</span> and itself</li>
 <li><span id="cross-presentation-of-group" class="crosslink">presentation of group</span>
@@ -740,6 +751,8 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-cyclic-group" class="crosslink">cyclic group</span> <span class="math">\(C_n\)</span>. <a href="#cross-isomorphism">isomorphism</a> to <span class="math">\({\mathbb{Z}}\)</span> or <span class="math">\({\mathbb{Z}}/n{\mathbb{Z}}\)</span>, the <strong>additive group</strong>!!!
 <ul>
 <li>if <span class="math">\(p\)</span> is prime, then <span class="math">\(({\mathbb{Z}}/p{\mathbb{Z}}, \cdot)\)</span> is cyclic</li>
+<li>also <span class="math">\(({\mathbb{Z}}/p{\mathbb{Z}})^*\)</span> is cyclic</li>
+<li>and if <span class="math">\(\text{gcd}(m, n) = 1\)</span> <span class="math">\(C_{mn} = C_m \times C_n\)</span></li>
 </ul></li>
 <li><span id="cross-dihedral-group" class="crosslink">dihedral group</span> of <span class="math">\(n\)</span> side polygon <span class="math">\(D_{2n}\)</span>
 <ul>
@@ -800,14 +813,23 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span class="math">\(gs = s\Rightarrow g = e\)</span></li>
 </ul></li>
-<li><span id="cross-isotropy" class="crosslink">isotropy</span> of point <span class="math">\(s\)</span>, <span class="math">\(G_s\)</span>. <span class="math">\(\{g|gs = s\}\)</span>
+<li><span><span id="cross-stabilizer"></span><span id="cross-isotropy" class="crosslink">isotropy </span></span> of point <span class="math">\(s\)</span>, <span class="math">\(G_s\)</span>. <span class="math">\(\{g|gs = s\}\)</span>
 <ul>
 <li>so <a href="#cross-free-action">free action</a>’s <a href="#cross-isotropy">isotropy</a> is always <span class="math">\(\{e\}\)</span></li>
 </ul></li>
 <li><span id="cross-orbit" class="crosslink">orbit</span> of <span class="math">\(s\)</span>, <span class="math">\(Gs\)</span></li>
-<li><span><span id="cross-transitive"></span><span id="cross-transitively"></span><span id="cross-transitive-action" class="crosslink">transitive action </span></span>, <span class="math">\(\forall s, s', \exists g: gs = s'\)</span> or group is single <a href="#cross-orbit">orbit</a></li>
+<li><span><span id="cross-transitive"></span><span id="cross-transitively"></span><span id="cross-transitive-action" class="crosslink">transitive action </span></span>, <span class="math">\(\forall s, s', \exists g: gs = s'\)</span> or group is single <a href="#cross-orbit">orbit</a>
+<ul>
+<li>when <span class="math">\(G\)</span> works transitively, there is an <a href="#cross-isomorphism">isomorphism</a> of <span class="math">\(G\)</span>-set between <span class="math">\(S\)</span> and <span class="math">\(G/G_s\)</span> for any <span class="math">\(s\)</span> by <span class="math">\(g s\leftrightarrow g G_s\)</span>.</li>
 <li>if <span class="math">\(H\)</span> is subgroup, then <span class="math">\(G/H\)</span> is <a href="#cross-transitive">transitive</a> <span class="math">\(G\)</span>-set (by <span class="math">\(G\)</span>-set we means an action)</li>
-<li>we can view the group as an single element <a href="#cross-category">category</a>, then <a href="#cross-group-action">group action</a> is a <a href="#cross-functor">functor</a>. the functor maps into <span class="math">\(\mathcal{Set}\)</span>, and it only maps into single element….</li>
+</ul></li>
+<li>we can view the group as an single element <a href="#cross-category">category</a>, then <a href="#cross-group-action">group action</a> is a <a href="#cross-functor">functor</a>. the functor maps into <span class="math">\(\mathcal{Set}\)</span>, and it only maps into single element…</li>
+</ul></li>
+<li><span class="math">\(|Gs| = (G:G_s)\)</span>
+<ul>
+<li>number of <a href="#cross-conjugate">conjugate</a> group of <span class="math">\(H\)</span> is equal to <span class="math">\(G:N_H\)</span></li>
+<li><span id="cross-orbit-decomposition-formula" class="crosslink">orbit decomposition formula</span> <span class="math">\(S = \bigcup Gs_i\)</span> then <span class="math">\(|S| = \sum_{i\in I} (G:G_{s_i})\)</span></li>
+<li><span id="cross-class-formula" class="crosslink">class formula</span> …</li>
 </ul></li>
 <li><a href="#cross-category">category</a> of <span class="math">\(G\)</span> sets
 <ul>
@@ -816,6 +838,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><a href="#cross-automorphism">automorphism</a> of <span class="math">\(G\)</span>-set. <span class="math">\(G\)</span> act <a href="#cross-transitively">transitively</a> on <span class="math">\(S\)</span>, <span class="math">\(s\in S\)</span>, <span class="math">\(W_{G_s}\)</span> is <a href="#cross-isomorphic">isomorphic</a> to <span class="math">\({\text{Aut}}_G(S)\)</span> of <a href="#cross-automorphism">automorphism</a> of <span class="math">\(G\)</span>-set <span class="math">\(S\)</span></li>
 </ul></li>
+<li>the category <span class="math">\(\mathcal{O}(G)\)</span> is isomorphism to <span class="math">\(\mathcal{G}\)</span> with objects subgroups of <span class="math">\(G\)</span> and morphisms distinct subconjugacy relations <span class="math">\(\gamma^{-1}H\gamma\subset G\)</span> for <span class="math">\(\gamma\in G\)</span></li>
 </ul></li>
 <li><a href="#cross-category">category</a> <span class="math">\(\mathcal{O}(G)\)</span> of canonical orbits
 <ul>
@@ -840,46 +863,91 @@ $("#content").css("max-width", "1100px")
 <li>if the covering is <a href="#cross-universal-covering-groupoid">universal covering groupoid</a>, then <span class="math">\(F_b\cong \pi(\mathcal{B}, b)\)</span></li>
 </ul></li>
 </ul></li>
-<li>isotropy group
+</ul>
+<h3 id="ring">ring</h3>
 <ul>
-<li>for <span class="math">\(s\in S\)</span> the subgroup <span class="math">\(G_s = \{g|gs=s\}\)</span></li>
+<li><span id="cross-ring" class="crosslink">ring</span> <span class="math">\({\mathcal{Ring}}\)</span>
+<ul>
+<li><a href="#cross-object">object</a>
+<ul>
+<li><a href="#cross-abelian-group">abelian group</a> on <span class="math">\(+\)</span></li>
+<li><a href="#cross-monoid">monoid</a> <span class="math">\(\cdot\)</span></li>
+<li><span id="cross-distributive" class="crosslink">distributive</span> <span class="math">\((r+s)t = rt + st\)</span></li>
 </ul></li>
-<li>group action <span class="math">\(G\times S\to S\)</span>, such that <span class="math">\(e s = s\)</span> and <span class="math">\(g^' g s = (g g^')s\)</span> for all <span class="math">\(s\)</span></li>
-<li><span id="cross-isotropy-group" class="crosslink">isotropy group</span></li>
-<li><span id="cross-free-action" class="crosslink">free action</span> if <span class="math">\(G_s\)</span> is all trivial</li>
-<li><span id="cross-orbit" class="crosslink">orbit</span> <span class="math">\(G s\)</span></li>
-<li><span id="cross-transitive-action" class="crosslink">transitive action</span> <span class="math">\(\forall s, s^'\exists g: g s = s^'\)</span>, or there is single orbit
+<li>properties
 <ul>
-<li><span id="cross-subgroup" class="crosslink">subgroup</span> <span class="math">\(H\)</span>, then <span id="cross-coset" class="crosslink">coset</span> <span class="math">\(gH\)</span> is a transitive <span class="math">\(G\)</span>-set</li>
-<li>when <span class="math">\(G\)</span> works transitively, there is an <span id="cross-isomorphism" class="crosslink">isomorphism</span> of <span class="math">\(G\)</span>-set between <span class="math">\(S\)</span> and <span class="math">\(G/G_s\)</span> for any <span class="math">\(s\)</span> by <span class="math">\(g s\leftrightarrow g G_s\)</span></li>
+<li><span class="math">\(0r = r0 = 0\)</span></li>
+<li>there are many things without <span class="math">\(1\)</span>, for example <span class="math">\(2{\mathbb{Z}}\)</span></li>
+<li>zero ring</li>
+<li><a href="#cross-commutative">commutative</a> ring</li>
+<li><span id="cross-left-unit-of-ring" class="crosslink">left unit of ring</span>, <span id="cross-right-unit-of-ring" class="crosslink">right unit of ring</span>, <span id="cross-unit-of-ring" class="crosslink">unit of ring</span> <span class="math">\(A^*\)</span>, invertible elements of <span class="math">\(A\)</span>
+<ul>
+<li><a href="#cross-left-unit-of-ring">left unit of ring</a> is not <a href="#cross-right-zero-divisor">right zero divisor</a></li>
+<li><a href="#cross-left-unit-of-ring">left unit of ring</a> is not always unique, but <a href="#cross-unit-of-ring">unit of ring</a> is unique</li>
+<li><span id="cross-shift-operator" class="crosslink">shift operator</span>. bad example~!</li>
 </ul></li>
-<li>category <span class="math">\(\mathcal{O}(G)\)</span> of canonical orbits
+<li><span id="cross-division-ring" class="crosslink">division ring</span> <span class="math">\(1\neq 0\)</span> and ever element invertible</li>
+<li><span id="cross-field" class="crosslink">field</span>. <a href="#cross-commutative">commutative</a> . <a href="#cross-division-ring">division ring</a></li>
+<li><span><span id="cross-zero-divisor"></span><span id="cross-left-zero-divisor" class="crosslink">left zero divisor </span></span> <span class="math">\(a\)</span> such <span class="math">\(ab = 0\)</span>, <span id="cross-right-zero-divisor" class="crosslink">right zero divisor</span>
 <ul>
-<li>object: <span class="math">\(G\)</span>-sets <span class="math">\(G/H\)</span></li>
-<li>morphism: <span class="math">\(G\)</span>-map: function <span class="math">\(f\)</span> such that <span class="math">\(f(g s) = g f(s)\)</span></li>
-<li>if <span class="math">\(G\)</span> is transitively on <span class="math">\(S\)</span>, choose <span class="math">\(s\in S\)</span>, and <span class="math">\(H= G_s\)</span>, <span id="cross-Weyl-group" class="crosslink">Weyl group</span> <span class="math">\(W_H\)</span> is <span id="cross-isomorphism" class="crosslink">isomorphism</span> to group <span class="math">\(Aut_G(S)\)</span> of automorphism of <span class="math">\(S\)</span></li>
-<li>a <span class="math">\(G\)</span>-map <span class="math">\(\alpha:G/H\to G/K\)</span> has form <span class="math">\(\alpha(g H)= g \gamma K\)</span> and <span class="math">\(\gamma\in G\)</span> that <span class="math">\(\gamma^{-1}h \gamma\in K\)</span> for all <span class="math">\(h\in H\)</span> <code>fix me</code></li>
-<li>the category <span class="math">\(\mathcal{O}(G)\)</span> is isomorphism to <span class="math">\(\mathcal{G}\)</span> with objects subgroups of <span class="math">\(G\)</span> and morphisms distinct subconjugacy relations <span class="math">\(\gamma^{-1}H\gamma\subset G\)</span> for <span class="math">\(\gamma\in G\)</span></li>
+<li><span class="math">\([2][3] = [0]\)</span></li>
+<li><span class="math">\(\Leftrightarrow\)</span> multiplication is <a href="#cross-injective">injective</a></li>
+</ul></li>
+<li><span><span id="cross-entire-ring"></span><span id="cross-integral-domain" class="crosslink">integral domain </span></span> nonzero <a href="#cross-commutative">commutative</a> ring without <a href="#cross-zero-divisor">zero divisor</a></li>
+<li>finite <a href="#cross-commutative">commutative</a> ring <a href="#cross-integral-domain">integral domain</a> = <a href="#cross-field">field</a>. i.e. finite <a href="#cross-integral-domain">integral domain</a> every element is an <a href="#cross-unit-of-ring">unit of ring</a></li>
+<li><span id="cross-nilpotent" class="crosslink">nilpotent</span> <span class="math">\(a^n = 0\)</span></li>
+</ul></li>
+<li><a href="#cross-morphism">morphism</a>. <span class="math">\(f(a + b) = f(a) + f(b)\)</span>, <span class="math">\(f(ab) = f(a)f(b)\)</span>, <span class="math">\(f(1) = 1\)</span>
+<ul>
+<li><a href="#cross-monomorphism">monomorphism</a>
+<ul>
+<li><span class="math">\(\Leftrightarrow\)</span> <span class="math">\({\text{Ker }}f = \{0\}\)</span></li>
+<li><a href="#cross-injective">injective</a></li>
+</ul></li>
+<li><a href="#cross-epimorphism">epimorphism</a> is not necessary <a href="#cross-surjective">surjective</a>
+<ul>
+<li>so <a href="#cross-monomorphism">monomorphism</a> and <a href="#cross-epimorphism">epimorphism</a> is not necessary <a href="#cross-isomorphism">isomorphism</a></li>
+</ul></li>
+<li><span class="math">\(\lambda: R\to {\text{End}}_{{\mathcal{Ab}}}(R)\)</span>, is injective ring homomorphism</li>
+</ul></li>
+<li><a href="#cross-initial">initial</a>. <span class="math">\({\mathbb{Z}}\)</span>
+<ul>
+<li><span id="cross-characteristic-of-ring" class="crosslink">characteristic of ring</span></li>
+</ul></li>
+<li><a href="#cross-subring">subring</a></li>
+<li><a href="#cross-product">product</a></li>
+<li><a href="#cross-coproduct">coproduct</a></li>
+<li><span id="cross-left-ideal" class="crosslink">left ideal</span>, <span id="cross-right-ideal" class="crosslink">right ideal</span>, <span id="cross-ideal" class="crosslink">ideal</span>
+<ul>
+<li><em>ideal is submodule of the ring</em></li>
+<li><span id="cross-principal-ideal" class="crosslink">principal ideal</span></li>
+<li><span id="cross-generators-for-ideal" class="crosslink">generators for ideal</span>
+<ul>
+<li><span class="math">\(IJ\)</span> generated by products of them!!!</li>
+<li><span class="math">\((4)\cap (3) = (12) = (4)\cdot (3)\)</span></li>
+<li><span class="math">\((4)\cap (6) = (12) \neq (24) = (4) \cdot (6)\)</span></li>
+</ul></li>
+<li><a href="#cross-intersection">intersection</a> closed</li>
+</ul></li>
+<li><span id="cross-quotient-ring" class="crosslink">quotient ring</span></li>
+<li><img src="images/ring-decom.png" style="width:400px" /></li>
+<li><span class="math">\(\frac{R/I}{J/I} = \frac{R}{J}\)</span></li>
+<li><a href="#cross-commutative">commutative</a> ring is <span id="cross-Noetherian" class="crosslink">Noetherian</span> if every ideal is finitely generated</li>
+<li><span><span id="cross-pid"></span><span id="cross-principal-integral-domain" class="crosslink">principal integral domain </span></span>. <a href="#cross-integral-domain">integral domain</a> and every ideal is <a href="#cross-principal-ideal">principal ideal</a>
+<ul>
+<li>is <a href="#cross-Noetherian">Noetherian</a></li>
+<li><span class="math">\({\mathbb{Z}}\)</span> is <a href="#cross-pid">pid</a></li>
+</ul></li>
+<li>for <a href="#cross-commutative">commutative</a> ring
+<ul>
+<li><span id="cross-prime-ideal" class="crosslink">prime ideal</span> <span class="math">\(R/I\)</span> is <a href="#cross-integral-domain">integral domain</a></li>
+<li><span id="cross-maximal-ideal" class="crosslink">maximal ideal</span> <span class="math">\(R/I\)</span> <span class="math">\(I \neq R\)</span> and not contained in any ideal
+<ul>
+<li><span class="math">\(R/I\)</span> is a <a href="#cross-field">field</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
-<h3 id="p026---29">p026 - 29</h3>
-<p>here we represent groups by permutations</p>
-<pre><code>pi: G -&gt; Perm(S)</code></pre>
-<pre><code>c_x(y) = xyx^-1</code></pre>
-<p>conjugation operation, the kernel is center, subset conjugate - just moved a bit</p>
-<p>isotropy - <code>G_s</code></p>
-<p>isotropy group of <code>s</code> and <code>s'</code> is conjugate - this is just…</p>
-<p>fixed point s: <code>G = G_s</code></p>
-<p>orbit: <code>Gs</code></p>
-<p>proposition 5.1 and 5.2 - they seems trivial</p>
-<p>transitive - you can reach anywhere!</p>
-<p>orbit decomposition formula:</p>
-<pre><code>card(S) = Sum(Gs) disjoint = Sum((G: G_s_i)) &amp;&amp; Gs_i disjoint</code></pre>
-<p>class formula:</p>
-<pre><code>(G:1) = Sum((G: G_x))</code></pre>
-<p>you should relise what the right really means</p>
-<h3 id="p030---33">p030 - 33</h3>
-<p>omitted</p>
 <h3 id="p034---36">p034 - 36</h3>
 <p>p-group: order is power of <code>p^n</code></p>
 <p>p-Sylow group <code>H</code> of <code>G</code>: max <code>p^n</code> order p-subgroup</p>
@@ -1218,20 +1286,13 @@ $("#content").css("max-width", "1100px")
 </ul>
 <p><strong>fix me!!!</strong></p>
 <h2 id="chapter-05-algebraic-extensions">chapter 05 algebraic extensions</h2>
-<p>it studies things <strong>algebraic</strong></p>
-<h2 id="definition">definition</h2>
-<ul>
-<li><p><span id="cross-abelian" class="crosslink">abelian</span></p></li>
-<li><span id="cross-monoid" class="crosslink">monoid</span></li>
-<li><span id="cross-group" class="crosslink">group</span>
-<ul>
-<li><span id="cross-abelian-group" class="crosslink">abelian group</span> <span class="math">\(\mathcal{Ab}\)</span></li>
-</ul></li>
-</ul>
 <h2 id="references-2">references</h2>
 <ul>
 <li><span id="cross-ref-algebra-lang" class="crosslink">ref-algebra-lang</span> <em>Algebra</em>, Serge Lang</li>
-<li><span id="cross-ref-algebra-0" class="crosslink">ref-algebra-0</span> <em>Algebra, Chapter 0</em>, Paolo Aluffi</li>
+<li><span id="cross-ref-algebra-0" class="crosslink">ref-algebra-0</span> <em>Abstract Algebra: Chapter 0</em>, Paolo Aluffi
+<ul>
+<li>it use more category</li>
+</ul></li>
 </ul>
 <h1 id="topological-space">topological space</h1>
 <h2 id="idea-3">idea</h2>
@@ -2074,8 +2135,6 @@ $("#content").css("max-width", "1100px")
 <h2 id="chapter-08-some-application-of-intergration">chapter 08 some application of intergration</h2>
 <h2 id="chapter-08-exercises">chapter 08 EXERCISES</h2>
 <h1 id="statistics">statistics</h1>
-<p>from the book <em>All of Statistics</em></p>
-<p><em>isn’t all problem of statistics can be solved by big data?</em></p>
 <h2 id="probability">probability</h2>
 <h3 id="formal-definition-in-measure-theory">formal definition in measure theory</h3>
 <p><em>i have not read any books about this, but you can get much insight from wikipedia articles</em></p>
@@ -2704,6 +2763,9 @@ $("#content").css("max-width", "1100px")
 <li>Gibbs sampling</li>
 </ul>
 <h2 id="references-5">references</h2>
+<ul>
+<li><span id="cross-ref-stat-all" class="crosslink">ref-stat-all</span> <em>All of Statistics</em></li>
+</ul>
 <h1 id="information-theory">information theory</h1>
 <p>from the book <em>Elements of Information Theory</em></p>
 <h2 id="preview">preview</h2>
