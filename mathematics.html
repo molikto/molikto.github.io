@@ -74,6 +74,7 @@ $("#content").css("max-width", "1100px")
 <li>the definition should be abstract, so you can see what’s essential in it, but must with examples, so you can feel what it is about. when proofing things, feel free to rely on your concrete examples, but always check it is rigid by abstract definitions</li>
 <li>it is always helpful to view the picture of mathematics as static, there are no such thing <span class="math">\(x+y\)</span>, it is just an element. for example, finite addition is always well defined, because we can write finitely. but it is not infinite addition. we should rely on a map from <span class="math">\({\mathbb{N}}\)</span> to the group, then show how the addtion is performed and ended</li>
 <li>how to proof? it is sufficient to make sure you can write all rigid sentences. you can omitted the writing, but you should always make sure you can freely think rigidly. <strong>only idea is not enough</strong></li>
+<li>mathematical truth can be discovered just as experimental science, we try examples see the result, make a conjuncture, and proof it</li>
 </ul>
 <h1 id="type">type</h1>
 <h2 id="idea">idea</h2>
@@ -708,7 +709,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span class="math">\(\Leftrightarrow\)</span> <a href="#cross-surjective">surjective</a>
 <ul>
-<li><a href="#cross-surjective">surjective</a> is certainly <a href="#cross-epimorphism">epimorphism</a>, and if we have an <a href="#cross-epimorphism">epimorphism</a>, <code>fix me</code></li>
+<li><a href="#cross-surjective">surjective</a> is certainly <a href="#cross-epimorphism">epimorphism</a>, a proof for reverse if <a href="https://groups.google.com/forum/#!msg/sci.math/DV2iNGdzQ8U/AEMrOtkjQG0J">here</a>, which also works in <span class="math">\(\mathcal{FinGrp}\)</span> <code>fix me: proof it</code></li>
 </ul></li>
 <li>the cokernel is not well defined here, but is well defined for abelian groups</li>
 </ul></li>
@@ -765,6 +766,8 @@ $("#content").css("max-width", "1100px")
 <li>smallest index subgroup in finite group is normal</li>
 <li>how to consider this? if you consider what things can be a morphism in group, then you will notice that only when we make the group structure fuzz… kind of. then you want to make certain subgroup into a point, because subgroups has the good property of having boundary of coset. but <span class="math">\(aHbH = abH\)</span> will require that <span class="math">\(aH = Ha\)</span> for it</li>
 <li>index 2 subgroup is normal, i think this can be shown quickly by cosets</li>
+<li><span id="cross-Dedekind-group" class="crosslink">Dedekind group</span> every subgroup is normal</li>
+<li><span id="cross-Hamiltonian-group" class="crosslink">Hamiltonian group</span>. <a href="#cross-Dedekind-group">Dedekind group</a> but not <a href="#cross-abelian-group">abelian group</a>. example: <a href="#cross-quaternion-group">quaternion group</a></li>
 </ul></li>
 <li><span id="cross-centralizer" class="crosslink">centralizer</span> of <span class="math">\(S\)</span> <span class="math">\(Z_S\)</span>. <span class="math">\(zsz^{-1} = s\)</span>
 <ul>
@@ -802,6 +805,8 @@ $("#content").css("max-width", "1100px")
 <li>we define the finite sequence and restrict to <span class="math">\(\neq 1\)</span> and alternating case, we define the product, the unit element and inverse function, we proof it is associative by induction</li>
 </ul></li>
 </ul></li>
+<li>we can defined by generator and relations <span class="math">\(G = {\langle S, R \rangle}\)</span> where <span class="math">\(R\subset F(S)\)</span>, <span class="math">\(G\)</span> is <span class="math">\(F(S)/N\)</span> where <span class="math">\(N\)</span> is the smallest normal subgroup containing <span class="math">\(R\)</span></li>
+<li><a href="#cross-pushout">pushout</a> exists, also called <span id="cross-free-product-with-amalgamation" class="crosslink">free product with amalgamation</span>, it is by coproduct and take the smallest normal group containing all <span class="math">\(f(a)g(a)^{-1}\)</span></li>
 <li><a href="#cross-initial">initial</a> and <a href="#cross-finial">finial</a>. the <span id="cross-trivial-group" class="crosslink">trivial group</span></li>
 <li><span id="cross-order-of-group" class="crosslink">order of group</span>. the definition is somewhat… it is the number of elements</li>
 <li><span id="cross-commutator" class="crosslink">commutator</span> <span class="math">\(xyx^{-1}y^{-1}\)</span>, <span class="math">\(G^c\)</span>
@@ -826,6 +831,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\((S_n:1) = n!\)</span></li>
 <li><code>fix me? the section in Lang is not read</code></li>
 </ul></li>
+<li><span class="math">\(({\mathbb{Z}}/p{\mathbb{Z}})^*\)</span> is a group. proof is trivial</li>
 <li><span id="cross-cyclic-group" class="crosslink">cyclic group</span> <span class="math">\(C_n\)</span>. <a href="#cross-isomorphism">isomorphism</a> to <span class="math">\({\mathbb{Z}}\)</span> or <span class="math">\({\mathbb{Z}}/n{\mathbb{Z}}\)</span>, the <strong>additive group</strong>!!!
 <ul>
 <li>infinite cyclic group has exactly 2 generator</li>
@@ -837,13 +843,11 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>trivial</li>
 </ul></li>
-<li>if <span class="math">\(p\)</span> is prime, then <span class="math">\(({\mathbb{Z}}/p{\mathbb{Z}}, \cdot)\)</span> is cyclic <code>fix me</code></li>
-<li>also <span class="math">\(({\mathbb{Z}}/p{\mathbb{Z}})^*\)</span> is cyclic <code>fix me</code></li>
+<li>if <span class="math">\(p\)</span> is prime, then <span class="math">\((({\mathbb{Z}}/p{\mathbb{Z}})^*, \cdot)\)</span> is cyclic <code>fix me</code></li>
 <li>and if <span class="math">\(\text{gcd}(m, n) = 1\)</span> <span class="math">\(C_{mn} = C_m \times C_n\)</span>
 <ul>
 <li>to show right is cyclic, we define <span class="math">\(C_{mn}\to C_m\times C_n\)</span>, we show that only that… and we show that it is surjective. we are done??</li>
 </ul></li>
-<li>a non cyclic finite abelian group must contain some <span class="math">\(C_p\times C_p\)</span> <code>fix me</code></li>
 </ul></li>
 <li><span id="cross-dihedral-group" class="crosslink">dihedral group</span> of <span class="math">\(n\)</span> side polygon <span class="math">\(D_{2n}\)</span>
 <ul>
@@ -898,15 +902,21 @@ $("#content").css("max-width", "1100px")
 <li>lemma: <span class="math">\(h(H\cap G) = H\cap hG\)</span>. it is used to show above injective</li>
 </ul></li>
 <li><span id="cross-Schreier-theorem" class="crosslink">Schreier theorem</span> two normal tower ending with trivial group have equivalent refinements <code>fix me</code></li>
-<li><span id="cross-Jordan-H\246lder" class="crosslink">Jordan-H\246lder</span> <code>fix me</code></li>
+<li><span id="cross-Jordan-Holder" class="crosslink">Jordan-Holder</span> <code>fix me</code></li>
 </ul></li>
-<li><span id="cross-finite-group" class="crosslink">finite group</span> methods <code>fix me</code> prove them!
+<li><span id="cross-finite-group" class="crosslink">finite group</span> methods <code>fix me</code>
 <ul>
 <li><span class="math">\(p\)</span>-group. finite group of order <span class="math">\(p^n\)</span> where <span class="math">\(p\)</span> prime</li>
 <li><span class="math">\(p\)</span>-<span id="cross-Sylow-subgroup" class="crosslink">Sylow subgroup</span></li>
-<li>finite abelian group <span class="math">\(G\)</span> has subgroup order <span class="math">\(p\)</span> dividing <span class="math">\(|G|\)</span> <code>fix me: i should come up with a better proof</code></li>
+<li>finite abelian group <span class="math">\(G\)</span> has subgroup order <span class="math">\(p\)</span> dividing <span class="math">\(|G|\)</span>
+<ul>
+<li>easy if you know facts about <a href="#cross-finite-generated-abelian-group">finite generated abelian group</a></li>
+</ul></li>
 <li><span class="math">\(p\)</span>-Sylow group exists</li>
-<li><span class="math">\(H\)</span> a <span class="math">\(p\)</span> group actioning on finite set <span class="math">\(S\)</span>, then number of fix points is <span class="math">\(|S|\)</span> mod <span class="math">\(p\)</span></li>
+<li><span class="math">\(H\)</span> a <span class="math">\(p\)</span> group actioning on finite set <span class="math">\(S\)</span>, then number of fix points is <span class="math">\(|S|\)</span> mod <span class="math">\(p\)</span>
+<ul>
+<li>using the <a href="#cross-orbit-decomposition-formula">orbit decomposition formula</a></li>
+</ul></li>
 <li><span class="math">\(p\)</span> group is contained in some <span class="math">\(p\)</span>-Sylow group</li>
 <li>all <span class="math">\(p\)</span>-Sylow group is <a href="#cross-conjugate">conjugate</a></li>
 <li>number of <span class="math">\(p\)</span>-Sylow group is 1 mod <span class="math">\(p\)</span></li>
@@ -949,23 +959,29 @@ $("#content").css("max-width", "1100px")
 <li>structure of <span id="cross-torsion-element" class="crosslink">torsion element</span> forms a <span id="cross-torsion-group" class="crosslink">torsion group</span>. <span class="math">\(A = \bigoplus _p A(p)\)</span> where <span class="math">\(A(p)\)</span> is the subgroup of elements of order <span class="math">\(p^n\)</span>. not necessary finite
 <ul>
 <li>we proof by showing the map in surjective, injective by showing the kernel is trivial. surjective using the relative prime decomposition</li>
-<li>abelian <span class="math">\(p\)</span>-group.isomorphism to product of cyclic <span class="math">\(p\)</span>-groups
+<li>abelian <span class="math">\(p\)</span>-group isomorphism to product of cyclic <span class="math">\(p\)</span>-groups
 <ul>
 <li><code>fix me</code></li>
+</ul></li>
+<li>an easy exercise. a non cyclic finite abelian group must contain some <span class="math">\(C_p\times C_p\)</span>
+<ul>
+<li>proof by above. suppose not cyclic, if there must be multiple <span class="math">\(A(p)\)</span> and one of them has multiple <span class="math">\(p\)</span>-group, because if it is <span class="math">\(p\)</span>-group and not cyclic, it must has multiple cyclic decomposition, and we can pick a <span class="math">\(C_p\times C_p\)</span> in it. so it must contain multiple <span class="math">\(A(p)\)</span>, if it everyone has one <span class="math">\(p\)</span>-cyclic group, then itself is cyclic. so one of them must contain multiple <span class="math">\(p\)</span>-cyclic group. proofed again</li>
+<li>proof by hand. i do not want to proof again, this is basically the relative prime thing</li>
 </ul></li>
 </ul></li>
 <li><span id="cross-finitely-generated-abelian-group" class="crosslink">finitely generated abelian group</span> <span class="math">\(A = A_{\text{tor}}\oplus B\)</span> where <span class="math">\(B\)</span> is free
 <ul>
-<li>freely generated torsion abelian group is finite
+<li>finitely generated torsion abelian group is finite
 <ul>
 <li>proof is trivial</li>
 </ul></li>
-<li>freely generated torsion-free abelian group is free
+<li>finitely generated torsion-free abelian group is free
 <ul>
 <li><code>fix me</code></li>
 </ul></li>
 <li><code>fix me</code></li>
 <li><span id="cross-rank" class="crosslink">rank</span> of <span class="math">\(A\)</span></li>
+<li>an example of abelian group that do not has this structure is <span class="math">\({\mathbb{Q}}\)</span>, <a href="http://en.wikipedia.org/wiki/Free_abelian_group#Torsion_and_divisibility">here</a>, it is torsion-free but not free. same for <span class="math">\({\mathbb{R}}\)</span> because it has one non-free subgroup</li>
 </ul></li>
 <li><span id="cross-dual-group" class="crosslink">dual group</span>. for <span class="math">\(A\)</span> of exponent <span class="math">\(m\)</span>, <span class="math">\(A^*\)</span>
 <ul>
@@ -1038,22 +1054,27 @@ $("#content").css("max-width", "1100px")
 </ul>
 <h3 id="exercises">exercises</h3>
 <ol style="list-style-type: decimal">
-<li><p>show that every grouop of order &lt;= 5 is abelian</p>
-<p>p-group is solvable and has non-trival center</p></li>
-<li><p>trivial</p></li>
-<li><p>trivial</p></li>
-<li><p>trivial</p></li>
-<li><p>proof a iso?</p></li>
-<li><p>trivial</p></li>
-<li><p>turn <code>a</code> into <code>b</code> in <code>aba^-1=b</code></p></li>
-<li><p><strong>fix me</strong></p></li>
-<li><p>if group has finite index subgroup, then there is finite index normal subgroup &amp;&amp; finite index intersection is finite index</p>
-<p><strong>fix me</strong></p></li>
-<li><p>right coset number is equal to left coset</p>
-<p>inverse!!!</p></li>
-<li><p><strong>fix me</strong></p></li>
+<li>for 1, 2, 3, 5, cyclic. for 4, we can show an non-abelian group must contain at least 5 elements <span class="math">\(\{e, a, b, ab, ba\}\)</span></li>
+<li>because it is abelian, it is cyclic or contains <span class="math">\(C\times C\)</span></li>
+<li>proofed above</li>
+<li>from the isomorphism</li>
+<li><span id="cross-Goursat's-lemma" class="crosslink">Goursat's lemma</span>. we show normal by analysis components. then we show that there is an morphism <span class="math">\(G\to G'/N'\)</span> which is constructed by taking the cosets of <span class="math">\(H\)</span> and map back by the cosets, the map is well defined because left is surjective and because you can check for associative. we can see that the kernel is exactly <span class="math">\(N\)</span>. and we show it is isomorphism by showing it is surjective by using right is surjective. this is a rather wired proof</li>
+<li>trivial</li>
+<li>see the proof in <a href="#cross-ref-algebra-course">ref-algebra-course</a>, the main thing is that every conjugate is an automorphism, but what actually conjugate means is not touched</li>
+<li>it is certainly union of, so we proof for disjoint. we show that if one element in common, then <span class="math">\(HxH' = HyH'\)</span>. the second part and the third part is not proofed. <strong>the goddam misprinting!!!!</strong>. a proof see <a href="#cross-ref-algebra-course">ref-algebra-course</a></li>
+<li>follow the hint. <span class="math">\(N\)</span> is easy to find, and finite is easy to proof. second part is by reduce to normal case, and show that <span class="math">\(N\times N'\)</span> is kernel into some finite group</li>
+<li>proofed above</li>
+<li><code>fix me: do not understand how to construct, if it is like in 12, then what's the point of abelian?</code></li>
+<li><span id="cross-semidirect-product" class="crosslink">semidirect product</span>trivial or lazy… <code>fix me: the properties of semipoduct as limit?</code></li>
+<li><span class="math">\(H\)</span>, <span class="math">\(N\)</span> normal, then <span class="math">\(hn = nh\)</span> and <span class="math">\(H\times N\cong HN\)</span>. the second part is trivial, we proof <span class="math">\(xy = yx\)</span> by first show that every element in <span class="math">\(HN= NH\)</span> has unique decomposition <span class="math">\(xy\)</span> and <span class="math">\(yx\)</span>, then if <span class="math">\(xy = y'x = x'y'\)</span> we have <span class="math">\(x = x'\)</span> and <span class="math">\(y = y'\)</span> so <span class="math">\(xy = yx\)</span></li>
+<li>the first part can be shown by calculate the order of <span class="math">\(NH\)</span> which must be <span class="math">\(|G|\)</span>. the second part is by assuming <span class="math">\(K = g(N)\neq N\)</span> then <span class="math">\(KN\subset G\)</span> then <span class="math">\((G:N) = |G|/|N| &gt; |KN| / |N|\)</span> cannot relative prime to <span class="math">\(|N|\)</span></li>
+<li><code>fix me</code></li>
+<li>assume <span class="math">\(\{a_i\}\)</span> is an coset representative, then <span class="math">\(\bigcup_{x\in G} xHx^{-1} = \bigcup_i \bigcup_{x\in a_iH}xHx^{-1} = \bigcup_i a_iH a_i^{-1}\)</span>, because <span class="math">\(G = \bigcup_i a_i H\)</span>, left is not disjoint union, and right is disjoint union, so…</li>
+<li>for kindergarten?</li>
+<li>same above?</li>
+<li>the number of orbit of <span class="math">\(G\)</span> actioning on <span class="math">\(S\)</span> is the average number of fix points of an element of <span class="math">\(G\)</span></li>
+<li></li>
 </ol>
-<p><strong>fix me</strong></p>
 <h3 id="ring">ring</h3>
 <ul>
 <li><span id="cross-ring" class="crosslink">ring</span> <span class="math">\({\mathcal{Ring}}\)</span>
@@ -1389,7 +1410,11 @@ $("#content").css("max-width", "1100px")
 <h2 id="chapter-05-algebraic-extensions">chapter 05 algebraic extensions</h2>
 <h2 id="references-2">references</h2>
 <ul>
-<li><span id="cross-ref-algebra-lang" class="crosslink">ref-algebra-lang</span> <em>Algebra</em>, Serge Lang</li>
+<li><span id="cross-ref-algebra-lang" class="crosslink">ref-algebra-lang</span> <em>Algebra</em>, Serge Lang
+<ul>
+<li><span id="cross-ref-algebra-comp" class="crosslink">ref-algebra-comp</span> <em>A Companion to Lang’s Algebra</em></li>
+<li><span id="cross-ref-algebra-course" class="crosslink">ref-algebra-course</span>. <a href="http://math.berkeley.edu/~ribet/250/">algebra course at Berkeley</a></li>
+</ul></li>
 <li><span id="cross-ref-algebra-0" class="crosslink">ref-algebra-0</span> <em>Abstract Algebra: Chapter 0</em>, Paolo Aluffi
 <ul>
 <li>it use more category</li>
