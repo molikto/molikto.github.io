@@ -867,15 +867,15 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>we define the map by <span class="math">\(aH\to f(a)\)</span> because for all <span class="math">\(y\in H\)</span>, <span class="math">\(f(xy) = f(x)\)</span> we see it is a well defined map, then we see that it is a morphism, and it is unique</li>
 </ul></li>
-<li><span id="cross-decomposition-1" class="crosslink">decomposition 1</span> <span class="math">\(\frac{G_1\times G_2}{H_1\times H_2}\cong\frac{G_1}{H_1}\times\frac{G_2}{H_2}\)</span>
+<li><span id="cross-decomposition-0" class="crosslink">decomposition 0</span> <span class="math">\(\frac{G_1\times G_2}{H_1\times H_2}\cong\frac{G_1}{H_1}\times\frac{G_2}{H_2}\)</span>
 <ul>
 <li>first we proof that <span class="math">\(H_1\times H_2\)</span> is normal, this is trivial, then we show that if <span class="math">\(g_i H_1\)</span> and <span class="math">\(g_j H_2\)</span> then <span class="math">\((g_i, g_j) H_1\times H_2\)</span>, we define the map and show it is a morphism, then we show the kernel is trivial and it is surjective, so it is an isomorphism</li>
 </ul></li>
-<li><span id="cross-decomposition-2" class="crosslink">decomposition 2</span> <span class="math">\(\frac{G/H}{N/H}\cong\frac{G}{N}\)</span>, <span class="math">\(H\subset N\)</span> normal
+<li><span id="cross-decomposition-1" class="crosslink">decomposition 1</span> <span class="math">\(\frac{G/H}{N/H}\cong\frac{G}{N}\)</span>, <span class="math">\(H\subset N\)</span> normal
 <ul>
 <li>first all <span class="math">\(A/B\)</span> is well defined, then we see that left is well defined. for <span class="math">\(G/H\)</span> and <span class="math">\(G/N\)</span> we define a map <span class="math">\(gH\to gN\)</span>, we see that it is a morphism, then we show that the kernel is <span class="math">\(N/H\)</span></li>
 </ul></li>
-<li><span class="math">\(\frac{H}{H\cap K}\cong \frac{HK}{K}\)</span>, <span class="math">\(H\subset N_K\)</span>, so <span class="math">\(HK = KH\)</span> is subgroup, and <span class="math">\(H\cap K\)</span> is normal in <span class="math">\(H\)</span>
+<li><span id="cross-decomposition-2" class="crosslink">decomposition 2</span> <span class="math">\(\frac{H}{H\cap K}\cong \frac{HK}{K}\)</span>, <span class="math">\(H\subset N_K\)</span>, so <span class="math">\(HK = KH\)</span> is subgroup, and <span class="math">\(H\cap K\)</span> is normal in <span class="math">\(H\)</span>
 <ul>
 <li>proof that <span class="math">\(H\cap K\)</span> is normal in <span class="math">\(H\)</span>, <span class="math">\(hk = k_2 h\)</span> and <span class="math">\(k \in H\)</span> so <span class="math">\(k_2 \in H\)</span> so normal. we define the map <span class="math">\(h\to hK\)</span>, then we show that it is morphism and it’s kernel is <span class="math">\(H\cap K\)</span></li>
 <li>this means you have normalizer, you can add/subtract the irrelevant dims to the problem. notice that <span class="math">\(K\)</span> is not always subgroup of <span class="math">\(H\)</span></li>
@@ -902,9 +902,9 @@ $("#content").css("max-width", "1100px")
 <li>lemma: <span class="math">\(h(H\cap G) = H\cap hG\)</span>. it is used to show above injective</li>
 </ul></li>
 <li><span id="cross-Schreier-theorem" class="crosslink">Schreier theorem</span> two normal tower ending with trivial group have equivalent refinements <code>fix me</code></li>
-<li><span id="cross-Jordan-Holder" class="crosslink">Jordan-Holder</span> <code>fix me</code></li>
+<li><span id="cross-Jordan-H\246lder" class="crosslink">Jordan-H\246lder</span> <code>fix me</code></li>
 </ul></li>
-<li><span id="cross-finite-group" class="crosslink">finite group</span> methods <code>fix me</code>
+<li><span id="cross-finite-group" class="crosslink">finite group</span> methods
 <ul>
 <li><span class="math">\(p\)</span>-group. finite group of order <span class="math">\(p^n\)</span> where <span class="math">\(p\)</span> prime</li>
 <li><span class="math">\(p\)</span>-<span id="cross-Sylow-subgroup" class="crosslink">Sylow subgroup</span></li>
@@ -912,10 +912,13 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>easy if you know facts about <a href="#cross-finite-generated-abelian-group">finite generated abelian group</a></li>
 </ul></li>
-<li><span class="math">\(p\)</span>-Sylow group exists</li>
+<li><span class="math">\(p\)</span>-Sylow group exists
+<ul>
+<li>the proof is standard, i think i cannot come up with a proof of this myself, because i am too dumb… just repeat it myself… if <span class="math">\(G\)</span> has order <span class="math">\(p^n\)</span> we are done, so we assume not. we consider proper subgroup of <span class="math">\(G\)</span>, if there exists a subgroup <span class="math">\(H\)</span> such that <span class="math">\(p^n\)</span> divides <span class="math">\(|H|\)</span> then we are done, because we can induction. suppose not, then we have in <span class="math">\(|G| = \sum (G:G_x) = |Z| + \sum (G:G_x)\)</span> the right must all dividable by <span class="math">\(p\)</span>, so is <span class="math">\(|Z|\)</span>. and we can construct a group of order <span class="math">\(p\)</span> in <span class="math">\(Z\)</span>. and we can factor it to induction again, and project back and show that the group has order <span class="math">\(p^n\)</span></li>
+</ul></li>
 <li><span class="math">\(H\)</span> a <span class="math">\(p\)</span> group actioning on finite set <span class="math">\(S\)</span>, then number of fix points is <span class="math">\(|S|\)</span> mod <span class="math">\(p\)</span>
 <ul>
-<li>using the <a href="#cross-orbit-decomposition-formula">orbit decomposition formula</a></li>
+<li>using the <a href="#cross-orbit-decomposition-formula">orbit decomposition formula</a>, <span class="math">\(|S| = \sum (H: H_{s_i}) = |F| \sum (H:H_{s_1})\)</span> the right part must divide <span class="math">\(p\)</span>, so <span class="math">\(|S|-|F|\)</span> divides <span class="math">\(p\)</span></li>
 </ul></li>
 <li><span class="math">\(p\)</span> group is contained in some <span class="math">\(p\)</span>-Sylow group</li>
 <li>all <span class="math">\(p\)</span>-Sylow group is <a href="#cross-conjugate">conjugate</a></li>
@@ -1014,6 +1017,7 @@ $("#content").css("max-width", "1100px")
 <li>isotropy groups is <a href="#cross-conjugate">conjugate</a> if <span class="math">\(\exists gs = s'\)</span></li>
 <li>so <a href="#cross-faithful-action">faithful action</a>’s <a href="#cross-isotropy">isotropy</a> is always <span class="math">\(\{e\}\)</span></li>
 </ul></li>
+<li><span id="cross-fixed-point-of-group-action" class="crosslink">fixed point of group action</span> <span class="math">\(s\)</span> such that <span class="math">\(G_s = G\)</span></li>
 <li><span id="cross-orbit" class="crosslink">orbit</span> of <span class="math">\(s\)</span>, <span class="math">\(Gs\)</span></li>
 <li><span><span id="cross-transitive"></span><span id="cross-transitively"></span><span id="cross-transitive-action" class="crosslink">transitive action </span></span>, <span class="math">\(\forall s, s', \exists g: gs = s'\)</span> or group is single <a href="#cross-orbit">orbit</a>
 <ul>
@@ -1065,7 +1069,7 @@ $("#content").css("max-width", "1100px")
 <li>follow the hint. <span class="math">\(N\)</span> is easy to find, and finite is easy to proof. second part is by reduce to normal case, and show that <span class="math">\(N\times N'\)</span> is kernel into some finite group</li>
 <li>proofed above</li>
 <li><code>fix me: do not understand how to construct, if it is like in 12, then what's the point of abelian?</code></li>
-<li><span id="cross-semidirect-product" class="crosslink">semidirect product</span>trivial or lazy… <code>fix me: the properties of semipoduct as limit?</code></li>
+<li><span id="cross-semidirect-product" class="crosslink">semidirect product</span> trivial or lazy… <code>fix me: the properties of semipoduct as limit?</code></li>
 <li><span class="math">\(H\)</span>, <span class="math">\(N\)</span> normal, then <span class="math">\(hn = nh\)</span> and <span class="math">\(H\times N\cong HN\)</span>. the second part is trivial, we proof <span class="math">\(xy = yx\)</span> by first show that every element in <span class="math">\(HN= NH\)</span> has unique decomposition <span class="math">\(xy\)</span> and <span class="math">\(yx\)</span>, then if <span class="math">\(xy = y'x = x'y'\)</span> we have <span class="math">\(x = x'\)</span> and <span class="math">\(y = y'\)</span> so <span class="math">\(xy = yx\)</span></li>
 <li>the first part can be shown by calculate the order of <span class="math">\(NH\)</span> which must be <span class="math">\(|G|\)</span>. the second part is by assuming <span class="math">\(K = g(N)\neq N\)</span> then <span class="math">\(KN\subset G\)</span> then <span class="math">\((G:N) = |G|/|N| &gt; |KN| / |N|\)</span> cannot relative prime to <span class="math">\(|N|\)</span></li>
 <li><code>fix me</code></li>
