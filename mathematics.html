@@ -922,13 +922,17 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li><span class="math">\(p\)</span> group is contained in some <span class="math">\(p\)</span>-Sylow group</li>
 <li>all <span class="math">\(p\)</span>-Sylow group is <a href="#cross-conjugate">conjugate</a></li>
-<li>number of <span class="math">\(p\)</span>-Sylow group is 1 mod <span class="math">\(p\)</span></li>
-<li><span class="math">\(p\)</span>-group is solvable and has non-trivial center
+<li>number of <span class="math">\(p\)</span>-Sylow group is 1 mod <span class="math">\(p\)</span>
 <ul>
-<li>it has cyclic tower</li>
+<li>we follow the proof by Lang. first if <span class="math">\(H\)</span> is contained in normalizer of <span class="math">\(P\)</span>, then <span class="math">\(H\subset P\)</span>, this is proofed by seeing the prime indexes, we used the condition <span class="math">\(p\)</span>-Sylow as <strong>maximal</strong> <span class="math">\(p\)</span>. the next part is by taking <span class="math">\(S\)</span> all <strong>conjugate</strong> class of <span class="math">\(P\)</span> in <span class="math">\(G\)</span>, then we have <span class="math">\(|S|\)</span> is not divisible by <span class="math">\(p\)</span>, then we have <span class="math">\(H\)</span> also operate on <span class="math">\(S\)</span> and it cannot have one fixed point, which means it is contained in some <span class="math">\(aPa^{-1}\)</span>. by taking <span class="math">\(H = aPa^{-1}\)</span> we show that it is in <span class="math">\(S\)</span>. and <span class="math">\(H\)</span> has only one fixed point, showing that mod 1.</li>
+<li>the proof is essentially number theoretic, so the particular group structure is caused by finiteness and number theory</li>
 </ul></li>
-<li>smallest prime group is normal</li>
-<li>order <span class="math">\(pq\)</span>, <span class="math">\(p\neq q\)</span> and primes, then solvable</li>
+<li><span class="math">\(p\)</span>-group has non-trivial center, thus solvable, and also has cyclic tower
+<ul>
+<li>it is again a trivial application of class formula</li>
+</ul></li>
+<li>smallest prime index group is normal <code>fix me</code></li>
+<li>order <span class="math">\(pq\)</span>, <span class="math">\(p\neq q\)</span> and primes, then solvable <code>fix me</code></li>
 </ul></li>
 </ul>
 <ul>
@@ -1064,7 +1068,7 @@ $("#content").css("max-width", "1100px")
 <li>from the isomorphism</li>
 <li><span id="cross-Goursat's-lemma" class="crosslink">Goursat's lemma</span>. we show normal by analysis components. then we show that there is an morphism <span class="math">\(G\to G'/N'\)</span> which is constructed by taking the cosets of <span class="math">\(H\)</span> and map back by the cosets, the map is well defined because left is surjective and because you can check for associative. we can see that the kernel is exactly <span class="math">\(N\)</span>. and we show it is isomorphism by showing it is surjective by using right is surjective. this is a rather wired proof</li>
 <li>trivial</li>
-<li>see the proof in <a href="#cross-ref-algebra-course">ref-algebra-course</a>, the main thing is that every conjugate is an automorphism, but what actually conjugate means is not touched</li>
+<li><code>fix me: proof again by myself</code> see the proof in <a href="#cross-ref-algebra-course">ref-algebra-course</a>, the main thing is that every conjugate is an automorphism, but what actually conjugate means is not touched</li>
 <li>it is certainly union of, so we proof for disjoint. we show that if one element in common, then <span class="math">\(HxH' = HyH'\)</span>. the second part and the third part is not proofed. <strong>the goddam misprinting!!!!</strong>. a proof see <a href="#cross-ref-algebra-course">ref-algebra-course</a></li>
 <li>follow the hint. <span class="math">\(N\)</span> is easy to find, and finite is easy to proof. second part is by reduce to normal case, and show that <span class="math">\(N\times N'\)</span> is kernel into some finite group</li>
 <li>proofed above</li>
@@ -1072,13 +1076,14 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-semidirect-product" class="crosslink">semidirect product</span> trivial or lazy… <code>fix me: the properties of semipoduct as limit?</code></li>
 <li><span class="math">\(H\)</span>, <span class="math">\(N\)</span> normal, then <span class="math">\(hn = nh\)</span> and <span class="math">\(H\times N\cong HN\)</span>. the second part is trivial, we proof <span class="math">\(xy = yx\)</span> by first show that every element in <span class="math">\(HN= NH\)</span> has unique decomposition <span class="math">\(xy\)</span> and <span class="math">\(yx\)</span>, then if <span class="math">\(xy = y'x = x'y'\)</span> we have <span class="math">\(x = x'\)</span> and <span class="math">\(y = y'\)</span> so <span class="math">\(xy = yx\)</span></li>
 <li>the first part can be shown by calculate the order of <span class="math">\(NH\)</span> which must be <span class="math">\(|G|\)</span>. the second part is by assuming <span class="math">\(K = g(N)\neq N\)</span> then <span class="math">\(KN\subset G\)</span> then <span class="math">\((G:N) = |G|/|N| &gt; |KN| / |N|\)</span> cannot relative prime to <span class="math">\(|N|\)</span></li>
-<li><code>fix me</code></li>
+<li><code>fix me</code> i didn’t make it out myself, see <a href="#cross-ref-algebra-course">ref-algebra-course</a>. you have <span class="math">\(|\bigcup G_s| \leq \sum |G_s| = |G|\)</span> and the left is not disjoint. the <span id="cross-right-part-about-finite-one-orbit-action" class="crosslink">right part about finite one orbit action</span> should be remembered</li>
 <li>assume <span class="math">\(\{a_i\}\)</span> is an coset representative, then <span class="math">\(\bigcup_{x\in G} xHx^{-1} = \bigcup_i \bigcup_{x\in a_iH}xHx^{-1} = \bigcup_i a_iH a_i^{-1}\)</span>, because <span class="math">\(G = \bigcup_i a_i H\)</span>, left is not disjoint union, and right is disjoint union, so…</li>
 <li>for kindergarten?</li>
 <li>same above?</li>
 <li>the number of orbit of <span class="math">\(G\)</span> actioning on <span class="math">\(S\)</span> is the average number of fix points of an element of <span class="math">\(G\)</span></li>
-<li></li>
+<li><code>fix me: i should proof this by myself</code> the proof is by <span class="math">\(P\)</span> actioning on <span class="math">\(A\)</span>, the number of fix points equal <span class="math">\(p\)</span> mod <span class="math">\(p\)</span> then there should be <span class="math">\(p\)</span></li>
 </ol>
+<p><code>fix me</code></p>
 <h3 id="ring">ring</h3>
 <ul>
 <li><span id="cross-ring" class="crosslink">ring</span> <span class="math">\({\mathcal{Ring}}\)</span>
@@ -1093,27 +1098,47 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span class="math">\(0r = r0 = 0\)</span></li>
 <li>there are many things without <span class="math">\(1\)</span>, for example <span class="math">\(2{\mathbb{Z}}\)</span></li>
-<li>zero ring</li>
+<li><span id="cross-zero-ring" class="crosslink">zero ring</span></li>
 <li><a href="#cross-commutative">commutative</a> ring</li>
-<li><span id="cross-left-unit-of-ring" class="crosslink">left unit of ring</span>, <span id="cross-right-unit-of-ring" class="crosslink">right unit of ring</span>, <span id="cross-unit-of-ring" class="crosslink">unit of ring</span> <span class="math">\(A^*\)</span>, invertible elements of <span class="math">\(A\)</span>
+<li><span id="cross-left-unit-of-ring" class="crosslink">left unit of ring</span>: has right inverse, <span id="cross-right-unit-of-ring" class="crosslink">right unit of ring</span>: has left inverse, <span id="cross-unit-of-ring" class="crosslink">unit of ring</span> <span class="math">\(A^*\)</span>, invertible elements of <span class="math">\(A\)</span>
 <ul>
-<li><a href="#cross-left-unit-of-ring">left unit of ring</a> is not <a href="#cross-right-zero-divisor">right zero divisor</a></li>
+<li><span class="math">\(u\)</span> <a href="#cross-left-unit-of-ring">left unit of ring</a> <span class="math">\(\Leftrightarrow\)</span> left multiplication by <span class="math">\(u\)</span> is surjective
+<ul>
+<li>proofed easily</li>
+</ul></li>
+<li><span class="math">\(u\)</span> <a href="#cross-left-unit-of-ring">left unit of ring</a> <span class="math">\(\Rightarrow\)</span> <strong>right</strong> multiplication is injective, and so is not <a href="#cross-right-zero-divisor">right zero divisor</a></li>
 <li><a href="#cross-left-unit-of-ring">left unit of ring</a> is not always unique, but <a href="#cross-unit-of-ring">unit of ring</a> is unique</li>
 <li><span id="cross-shift-operator" class="crosslink">shift operator</span>. bad example~!</li>
+<li>units is a group</li>
 </ul></li>
 <li><span id="cross-division-ring" class="crosslink">division ring</span> <span class="math">\(1\neq 0\)</span> and ever element invertible</li>
-<li><span id="cross-field" class="crosslink">field</span>. <a href="#cross-commutative">commutative</a> . <a href="#cross-division-ring">division ring</a></li>
-<li><span><span id="cross-zero-divisor"></span><span id="cross-left-zero-divisor" class="crosslink">left zero divisor </span></span> <span class="math">\(a\)</span> such <span class="math">\(ab = 0\)</span>, <span id="cross-right-zero-divisor" class="crosslink">right zero divisor</span>
+<li><span id="cross-field" class="crosslink">field</span>. <a href="#cross-commutative">commutative</a> . <a href="#cross-division-ring">division ring</a>
+<ul>
+<li>has no non-trivial ideal</li>
+</ul></li>
+<li><span><span id="cross-zero-divisor"></span><span id="cross-left-zero-divisor" class="crosslink">left zero divisor </span></span> <span class="math">\(a\)</span> such <span class="math">\(\exists b: ab = 0\)</span>, <span id="cross-right-zero-divisor" class="crosslink">right zero divisor</span>
 <ul>
 <li><span class="math">\([2][3] = [0]\)</span></li>
-<li><span class="math">\(\Leftrightarrow\)</span> multiplication is <a href="#cross-injective">injective</a></li>
+<li>not <a href="#cross-left-zero-divisor">left zero divisor</a> <span class="math">\(\Leftrightarrow\)</span> left multiplication is <a href="#cross-injective">injective</a>
+<ul>
+<li>proofed easily</li>
 </ul></li>
-<li><span><span id="cross-entire-ring"></span><span id="cross-integral-domain" class="crosslink">integral domain </span></span> nonzero <a href="#cross-commutative">commutative</a> ring without <a href="#cross-zero-divisor">zero divisor</a></li>
-<li>finite <a href="#cross-commutative">commutative</a> ring <a href="#cross-integral-domain">integral domain</a> = <a href="#cross-field">field</a>. i.e. finite <a href="#cross-integral-domain">integral domain</a> every element is an <a href="#cross-unit-of-ring">unit of ring</a></li>
+</ul></li>
+<li><span id="cross-principal-ring" class="crosslink">principal ring</span> every ideal is <a href="#cross-principal-ideal">principal ideal</a></li>
+<li><span id="cross-entire-ring" class="crosslink">entire ring</span> nonzero <a href="#cross-commutative">commutative</a> ring without <a href="#cross-zero-divisor">zero divisor</a>
+<ul>
+<li>for an entire ring, <span class="math">\(a\)</span>, <span class="math">\(b\)</span> nonzero elements in <span class="math">\(A\)</span>, then <span class="math">\(a\)</span>, <span class="math">\(b\)</span> generate same ideal iff exists unit <span class="math">\(u\)</span> such that <span class="math">\(b = au\)</span>
+<ul>
+<li>unit for <span class="math">\(Ab = Aua = Aa\)</span>, because if it is not unit, we do not know if the right equation holds</li>
+<li><span class="math">\(Ab = Aa\)</span> then <span class="math">\(a = bc\)</span> and <span class="math">\(b = ad\)</span> then <span class="math">\(a = adc\)</span> and <span class="math">\(dc = 1\)</span>, entire is used here</li>
+</ul></li>
+</ul></li>
+<li>finite <a href="#cross-commutative">commutative</a> ring <a href="#cross-entire-ring">entire ring</a> = <a href="#cross-field">field</a>. i.e. finite <a href="#cross-entire-ring">entire ring</a> every element is an <a href="#cross-unit-of-ring">unit of ring</a></li>
 <li><span id="cross-nilpotent" class="crosslink">nilpotent</span> <span class="math">\(a^n = 0\)</span></li>
 </ul></li>
 <li><a href="#cross-morphism">morphism</a>. <span class="math">\(f(a + b) = f(a) + f(b)\)</span>, <span class="math">\(f(ab) = f(a)f(b)\)</span>, <span class="math">\(f(1) = 1\)</span>
 <ul>
+<li><span class="math">\({\text{Im }}f\)</span> is subring</li>
 <li><a href="#cross-monomorphism">monomorphism</a>
 <ul>
 <li><span class="math">\(\Leftrightarrow\)</span> <span class="math">\({\text{Ker }}f = \{0\}\)</span></li>
@@ -1123,44 +1148,88 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>so <a href="#cross-monomorphism">monomorphism</a> and <a href="#cross-epimorphism">epimorphism</a> is not necessary <a href="#cross-isomorphism">isomorphism</a></li>
 </ul></li>
+<li><a href="#cross-isomorphism">isomorphism</a>
+<ul>
+<li><a href="#cross-bijective">bijective</a> <span class="math">\(\Rightarrow\)</span> isomorphism</li>
+</ul></li>
 <li><span class="math">\(\lambda: R\to {\text{End}}_{{\mathcal{Ab}}}(R)\)</span>, is injective ring homomorphism</li>
 </ul></li>
 <li><a href="#cross-initial">initial</a>. <span class="math">\({\mathbb{Z}}\)</span>
 <ul>
 <li><span id="cross-characteristic-of-ring" class="crosslink">characteristic of ring</span></li>
+<li>for <a href="#cross-field">field</a> <span class="math">\(K\)</span>, the characteristic <span class="math">\(0\)</span> fields contains an image of <span class="math">\({\mathbb{Q}}\)</span> and for characteristic <span class="math">\(p\)</span> contains some isomorphic image of <span class="math">\(F_p\)</span>. smallest subfield contains <span class="math">\(1\)</span> and has no trivial automorphism. and <span id="cross-prime-ring" class="crosslink">prime ring</span> we means <span class="math">\({\mathbb{Z}}\)</span> or <span class="math">\(F_p\)</span> in it</li>
 </ul></li>
-<li><a href="#cross-subring">subring</a></li>
-<li><a href="#cross-product">product</a></li>
+<li><a href="#cross-subring">subring</a>. additive subgroup, contains <span class="math">\(1\)</span>, closed by <span class="math">\(\cdot\)</span>
+<ul>
+<li>example. center of ring, viewed as multiplication group, the center</li>
+</ul></li>
+<li><a href="#cross-product">product</a> exists and is like group product. the inclusion map is not ring homomorphism, though in group this is true</li>
 <li><a href="#cross-coproduct">coproduct</a></li>
-<li><span id="cross-left-ideal" class="crosslink">left ideal</span>, <span id="cross-right-ideal" class="crosslink">right ideal</span>, <span id="cross-ideal" class="crosslink">ideal</span>
+<li><span id="cross-left-ideal" class="crosslink">left ideal</span> additive subgroup and <span class="math">\(A\alpha\subset \alpha\)</span>, <span id="cross-right-ideal" class="crosslink">right ideal</span> <span class="math">\(\alpha A = \alpha\)</span>, <span id="cross-ideal" class="crosslink">ideal</span> <span class="math">\(\alpha  = A\alpha  \alpha A\)</span>
 <ul>
 <li><em>ideal is submodule of the ring</em></li>
-<li><span id="cross-principal-ideal" class="crosslink">principal ideal</span></li>
-<li><span id="cross-generators-for-ideal" class="crosslink">generators for ideal</span>
+<li>ideal is kernel, kernel is ideal
 <ul>
-<li><span class="math">\(IJ\)</span> generated by products of them!!!</li>
+<li>we define <span class="math">\((x + \alpha)(y + \alpha) = (xy + \alpha)\)</span> we show that it is well defined, we show that it is representative independent, and it is associative hand has unit, and distributive. we used <span class="math">\(xa \in\alpha\)</span> in the proof that it is well defined. just like the normal group case… this is wired</li>
+<li>the unit of the cosets is <span class="math">\(1+\alpha\)</span> and the zero is <span class="math">\(\alpha\)</span>, this is because it is an ideal and it is kind of like a zero which takes everything back</li>
+</ul></li>
+<li>for ideals, <span class="math">\(\alpha\beta = \{x_1y_1 + x_2y_2 + \cdots+ x_ny_n\}\)</span> is an ideal
+<ul>
+<li>it forms a groupoid, with unit <span class="math">\(A\)</span></li>
+<li>same for <a href="#cross-left-ideal">left ideal</a>s</li>
+<li>if <span class="math">\(A\)</span> commutative then <span class="math">\(\alpha \beta \subset \alpha\cap\beta\)</span>
+<ul>
 <li><span class="math">\((4)\cap (3) = (12) = (4)\cdot (3)\)</span></li>
 <li><span class="math">\((4)\cap (6) = (12) \neq (24) = (4) \cdot (6)\)</span></li>
+<li>you get <span class="math">\(=\)</span> when <span class="math">\(\alpha + \beta= A\)</span>. proof by that <span class="math">\(a + b = 1\)</span> then <span class="math">\(c\in \alpha\cap \beta\)</span> then <span class="math">\(ca + bc = c(a+ b) = c\)</span></li>
 </ul></li>
-<li><a href="#cross-intersection">intersection</a> closed</li>
+</ul></li>
+<li><span class="math">\(\alpha + \beta\)</span> is left, right two sided ideal</li>
+<li>and we have <span class="math">\(\beta(\alpha_1 + \alpha_2) = \beta\alpha_1 + \beta\alpha_2\)</span></li>
+<li><span id="cross-principal-ideal" class="crosslink">principal ideal</span> <span class="math">\(Aa\)</span>, twosided principal <span class="math">\(AaA\)</span></li>
+<li><span id="cross-generators-for-ideal" class="crosslink">generators for ideal</span> is a <a href="#cross-left-ideal">left ideal</a> <span class="math">\(x_1a_1 + x_2a_2 + \cdots + x_na_n\)</span> with <span class="math">\(x_i\in A\)</span> is generated by <span class="math">\((a_1, a_2,..., a_n)\)</span></li>
+<li><a href="#cross-intersection">intersection</a> closed for left, right, twoside</li>
+<li>an ideal contains <span class="math">\(1\)</span> must be <span class="math">\(A\)</span></li>
 </ul></li>
 <li><span id="cross-quotient-ring" class="crosslink">quotient ring</span></li>
-<li><img src="images/ring-decom.png" style="width:400px" /></li>
+<li><img src="images/ring-decom.png" style="width:400px" />
+<ul>
+<li>and another thing is that the factor thought things, and it is universal</li>
+</ul></li>
 <li><span class="math">\(\frac{R/I}{J/I} = \frac{R}{J}\)</span></li>
+<li><span class="math">\(B = A[S]=\sum as^is^j\cdots s^k\)</span> with <span class="math">\(A\)</span> commutate with <span class="math">\(S\)</span>, <span class="math">\(S\)</span> is a set of <span id="cross-ring-generators" class="crosslink">ring generators</span> of <span class="math">\(B\)</span> over <span class="math">\(A\)</span>. if <span class="math">\(S\)</span> is finite, we say that <span class="math">\(B\)</span> is finitely generated over <span class="math">\(A\)</span></li>
 <li><a href="#cross-commutative">commutative</a> ring is <span id="cross-Noetherian" class="crosslink">Noetherian</span> if every ideal is finitely generated</li>
-<li><span><span id="cross-pid"></span><span id="cross-principal-integral-domain" class="crosslink">principal integral domain </span></span>. <a href="#cross-integral-domain">integral domain</a> and every ideal is <a href="#cross-principal-ideal">principal ideal</a>
+<li><span><span id="cross-pid"></span><span id="cross-principal-entire-ring" class="crosslink">principal entire ring</span></span>. <a href="#cross-entire-ring">entire ring</a> and every ideal is <a href="#cross-principal-ideal">principal ideal</a>
 <ul>
 <li>is <a href="#cross-Noetherian">Noetherian</a></li>
 <li><span class="math">\({\mathbb{Z}}\)</span> is <a href="#cross-pid">pid</a></li>
 </ul></li>
-<li>for <a href="#cross-commutative">commutative</a> ring
+</ul></li>
+</ul>
+<p><em>maximal ideal and prime ideal is defined only in commutative ring now, i do not know if you can generalize it, but i think it is just find now</em></p>
 <ul>
-<li><span id="cross-prime-ideal" class="crosslink">prime ideal</span> <span class="math">\(R/I\)</span> is <a href="#cross-integral-domain">integral domain</a></li>
+<li><a href="#cross-commutative">commutative</a> ring
+<ul>
+<li><span id="cross-prime-ideal" class="crosslink">prime ideal</span> <span class="math">\(R/I\)</span> is <a href="#cross-entire-ring">entire ring</a>
+<ul>
+<li>same as saying that <span class="math">\(xy \in p\)</span> then <span class="math">\(x\in p\)</span> or <span class="math">\(y\in p\)</span></li>
+</ul></li>
 <li><span id="cross-maximal-ideal" class="crosslink">maximal ideal</span> <span class="math">\(I \neq R\)</span> and not contained in any ideal
 <ul>
-<li><span class="math">\(R/I\)</span> is a <a href="#cross-field">field</a></li>
+<li>maximal ideal is <a href="#cross-prime-ideal">prime ideal</a>
+<ul>
+<li>if <span class="math">\(x\notin m\)</span> then we have <span class="math">\(m+Ax\)</span> contains <span class="math">\(m\)</span>, and is an ideal, so <span class="math">\(m+Ax = A\)</span>, so we have <span class="math">\(1 = u+ax\)</span> so we proof that <span class="math">\(y\)</span> is in <span class="math">\(m\)</span>. the thing is always about <span class="math">\(1\)</span> and the structure of the ideal</li>
+</ul></li>
+<li>an nontrivial ideal is contained in some maximal ideal
+<ul>
+<li>we show that the ideals containing <span class="math">\(a\)</span> is a partially ordered, and linear ordering has maximal, then we use <a href="#cross-Zorn's-lemma">Zorn’s lemma</a></li>
+</ul></li>
+<li><span class="math">\(\Leftrightarrow\)</span> <span class="math">\(R/m\)</span> is a <a href="#cross-field">field</a>
+<ul>
+<li>we proof by using again <span class="math">\(m+Ax\)</span> and find the inverse of <span class="math">\(x\)</span>. the reverse is because a field has no good proper ideal in it. if we have <span class="math">\(m\subset n\)</span> then we can factor <span class="math">\(n\)</span> by <span class="math">\(m\)</span>, and it has no ideal in it at all!</li>
 </ul></li>
 </ul></li>
+<li>for <span class="math">\(f: A\to A'\)</span> is an homomorphism of commutative rings, <span class="math">\(p'\)</span> is prime ideal in <span class="math">\(A'\)</span> then <span class="math">\(p = f^{-1}(p')\)</span> is an prime ideal of <span class="math">\(A\)</span></li>
 </ul></li>
 </ul>
 <h3 id="module">module</h3>
