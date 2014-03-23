@@ -75,6 +75,8 @@ $("#content").css("max-width", "1100px")
 <li>it is always helpful to view the picture of mathematics as static, there are no such thing <span class="math">\(x+y\)</span>, it is just an element. for example, finite addition is always well defined, because we can write finitely. but it is not infinite addition. we should rely on a map from <span class="math">\({\mathbb{N}}\)</span> to the group, then show how the addtion is performed and ended</li>
 <li>how to proof? it is sufficient to make sure you can write all rigid sentences. you can omitted the writing, but you should always make sure you can freely think rigidly. <strong>only idea is not enough</strong></li>
 <li>mathematical truth can be discovered just as experimental science, we try examples see the result, make a conjuncture, and proof it</li>
+<li>i want to solve problems <a href="http://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics">http://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics</a></li>
+<li>actually proofing like Coq is good. for example, <em>every ideal is an principle ideal</em> should really be a function <code>ideal(p) -&gt; principle(p)</code> so it reminds us to find a ideal that do not instantly an principle and use this function to convince that it is an principle</li>
 </ul>
 <h1 id="type">type</h1>
 <h2 id="idea">idea</h2>
@@ -805,6 +807,7 @@ $("#content").css("max-width", "1100px")
 <li>we define the finite sequence and restrict to <span class="math">\(\neq 1\)</span> and alternating case, we define the product, the unit element and inverse function, we proof it is associative by induction</li>
 </ul></li>
 </ul></li>
+<li>see <a href="http://en.wikipedia.org/wiki/Category_of_groups">Wikipedia</a> for more about the category of groups</li>
 <li>we can defined by generator and relations <span class="math">\(G = {\langle S, R \rangle}\)</span> where <span class="math">\(R\subset F(S)\)</span>, <span class="math">\(G\)</span> is <span class="math">\(F(S)/N\)</span> where <span class="math">\(N\)</span> is the smallest normal subgroup containing <span class="math">\(R\)</span></li>
 <li><a href="#cross-pushout">pushout</a> exists, also called <span id="cross-free-product-with-amalgamation" class="crosslink">free product with amalgamation</span>, it is by coproduct and take the smallest normal group containing all <span class="math">\(f(a)g(a)^{-1}\)</span></li>
 <li><a href="#cross-initial">initial</a> and <a href="#cross-finial">finial</a>. the <span id="cross-trivial-group" class="crosslink">trivial group</span></li>
@@ -866,6 +869,10 @@ $("#content").css("max-width", "1100px")
 <li><img src="images/group-d1.png" style="width:400px" />
 <ul>
 <li>we define the map by <span class="math">\(aH\to f(a)\)</span> because for all <span class="math">\(y\in H\)</span>, <span class="math">\(f(xy) = f(x)\)</span> we see it is a well defined map, then we see that it is a morphism, and it is unique</li>
+</ul></li>
+<li><span class="math">\(f: G\to G'\)</span> and <span class="math">\(H'\)</span> normal in <span class="math">\(G'\)</span> then <span class="math">\(f^{-1}(H')\)</span> normal in <span class="math">\(G\)</span> and <span class="math">\(\bar{f}:G/H\to G/H'\)</span> is injective, if <span class="math">\(f\)</span> is surjective, it is an isomorphism
+<ul>
+<li>we show it is normal. and show it is associative, and injective, by triviality</li>
 </ul></li>
 <li><span id="cross-decomposition-0" class="crosslink">decomposition 0</span> <span class="math">\(\frac{G_1\times G_2}{H_1\times H_2}\cong\frac{G_1}{H_1}\times\frac{G_2}{H_2}\)</span>
 <ul>
@@ -1099,7 +1106,6 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(0r = r0 = 0\)</span></li>
 <li>there are many things without <span class="math">\(1\)</span>, for example <span class="math">\(2{\mathbb{Z}}\)</span></li>
 <li><span id="cross-zero-ring" class="crosslink">zero ring</span></li>
-<li><a href="#cross-commutative">commutative</a> ring</li>
 <li><span id="cross-left-unit-of-ring" class="crosslink">left unit of ring</span>: has right inverse, <span id="cross-right-unit-of-ring" class="crosslink">right unit of ring</span>: has left inverse, <span id="cross-unit-of-ring" class="crosslink">unit of ring</span> <span class="math">\(A^*\)</span>, invertible elements of <span class="math">\(A\)</span>
 <ul>
 <li><span class="math">\(u\)</span> <a href="#cross-left-unit-of-ring">left unit of ring</a> <span class="math">\(\Leftrightarrow\)</span> left multiplication by <span class="math">\(u\)</span> is surjective
@@ -1110,31 +1116,17 @@ $("#content").css("max-width", "1100px")
 <li><a href="#cross-left-unit-of-ring">left unit of ring</a> is not always unique, but <a href="#cross-unit-of-ring">unit of ring</a> is unique</li>
 <li><span id="cross-shift-operator" class="crosslink">shift operator</span>. bad example~!</li>
 <li>units is a group</li>
-</ul></li>
-<li><span id="cross-division-ring" class="crosslink">division ring</span> <span class="math">\(1\neq 0\)</span> and ever element invertible</li>
-<li><span id="cross-field" class="crosslink">field</span>. <a href="#cross-commutative">commutative</a> . <a href="#cross-division-ring">division ring</a>
-<ul>
-<li>has no non-trivial ideal</li>
+<li>in <span class="math">\({\mathbb{Z}}\)</span> we have <span class="math">\(-1\)</span> and <span class="math">\(1\)</span> is unit!!! not only <span class="math">\(1\)</span>!!!</li>
 </ul></li>
 <li><span><span id="cross-zero-divisor"></span><span id="cross-left-zero-divisor" class="crosslink">left zero divisor </span></span> <span class="math">\(a\)</span> such <span class="math">\(\exists b: ab = 0\)</span>, <span id="cross-right-zero-divisor" class="crosslink">right zero divisor</span>
 <ul>
+<li><span id="cross-nilpotent" class="crosslink">nilpotent</span> <span class="math">\(a^n = 0\)</span> is zero divisor</li>
 <li><span class="math">\([2][3] = [0]\)</span></li>
 <li>not <a href="#cross-left-zero-divisor">left zero divisor</a> <span class="math">\(\Leftrightarrow\)</span> left multiplication is <a href="#cross-injective">injective</a>
 <ul>
 <li>proofed easily</li>
 </ul></li>
 </ul></li>
-<li><span id="cross-principal-ring" class="crosslink">principal ring</span> every ideal is <a href="#cross-principal-ideal">principal ideal</a></li>
-<li><span id="cross-entire-ring" class="crosslink">entire ring</span> nonzero <a href="#cross-commutative">commutative</a> ring without <a href="#cross-zero-divisor">zero divisor</a>
-<ul>
-<li>for an entire ring, <span class="math">\(a\)</span>, <span class="math">\(b\)</span> nonzero elements in <span class="math">\(A\)</span>, then <span class="math">\(a\)</span>, <span class="math">\(b\)</span> generate same ideal iff exists unit <span class="math">\(u\)</span> such that <span class="math">\(b = au\)</span>
-<ul>
-<li>unit for <span class="math">\(Ab = Aua = Aa\)</span>, because if it is not unit, we do not know if the right equation holds</li>
-<li><span class="math">\(Ab = Aa\)</span> then <span class="math">\(a = bc\)</span> and <span class="math">\(b = ad\)</span> then <span class="math">\(a = adc\)</span> and <span class="math">\(dc = 1\)</span>, entire is used here</li>
-</ul></li>
-</ul></li>
-<li>finite <a href="#cross-commutative">commutative</a> ring <a href="#cross-entire-ring">entire ring</a> = <a href="#cross-field">field</a>. i.e. finite <a href="#cross-entire-ring">entire ring</a> every element is an <a href="#cross-unit-of-ring">unit of ring</a></li>
-<li><span id="cross-nilpotent" class="crosslink">nilpotent</span> <span class="math">\(a^n = 0\)</span></li>
 </ul></li>
 <li><a href="#cross-morphism">morphism</a>. <span class="math">\(f(a + b) = f(a) + f(b)\)</span>, <span class="math">\(f(ab) = f(a)f(b)\)</span>, <span class="math">\(f(1) = 1\)</span>
 <ul>
@@ -1159,13 +1151,14 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-characteristic-of-ring" class="crosslink">characteristic of ring</span></li>
 <li>for <a href="#cross-field">field</a> <span class="math">\(K\)</span>, the characteristic <span class="math">\(0\)</span> fields contains an image of <span class="math">\({\mathbb{Q}}\)</span> and for characteristic <span class="math">\(p\)</span> contains some isomorphic image of <span class="math">\(F_p\)</span>. smallest subfield contains <span class="math">\(1\)</span> and has no trivial automorphism. and <span id="cross-prime-ring" class="crosslink">prime ring</span> we means <span class="math">\({\mathbb{Z}}\)</span> or <span class="math">\(F_p\)</span> in it</li>
 </ul></li>
-<li><a href="#cross-subring">subring</a>. additive subgroup, contains <span class="math">\(1\)</span>, closed by <span class="math">\(\cdot\)</span>
+<li><span id="cross-subring" class="crosslink">subring</span>. additive subgroup, contains <span class="math">\(1\)</span>, closed by <span class="math">\(\cdot\)</span>
 <ul>
 <li>example. center of ring, viewed as multiplication group, the center</li>
 </ul></li>
+<li><span class="math">\(B = A[S]=\sum as^is^j\cdots s^k\)</span> with <span class="math">\(A\)</span> commutate with <span class="math">\(S\)</span>, <span class="math">\(S\)</span> is a set of <span id="cross-ring-generators" class="crosslink">ring generators</span> of <span class="math">\(B\)</span> over <span class="math">\(A\)</span>. if <span class="math">\(S\)</span> is finite, we say that <span class="math">\(B\)</span> is finitely generated over <span class="math">\(A\)</span></li>
 <li><a href="#cross-product">product</a> exists and is like group product. the inclusion map is not ring homomorphism, though in group this is true</li>
-<li><a href="#cross-coproduct">coproduct</a></li>
-<li><span id="cross-left-ideal" class="crosslink">left ideal</span> additive subgroup and <span class="math">\(A\alpha\subset \alpha\)</span>, <span id="cross-right-ideal" class="crosslink">right ideal</span> <span class="math">\(\alpha A = \alpha\)</span>, <span id="cross-ideal" class="crosslink">ideal</span> <span class="math">\(\alpha  = A\alpha  \alpha A\)</span>
+<li><a href="#cross-coproduct">coproduct</a> see <a href="http://en.wikipedia.org/wiki/Category_of_rings">Wikipedia</a></li>
+<li><span id="cross-left-ideal" class="crosslink">left ideal</span> additive subgroup and <span class="math">\(A\alpha\subset \alpha\)</span>, <span id="cross-right-ideal" class="crosslink">right ideal</span> <span class="math">\(\alpha A = \alpha\)</span>, <span id="cross-ideal" class="crosslink">ideal</span> <span class="math">\(\alpha  = A\alpha = \alpha A\)</span>
 <ul>
 <li><em>ideal is submodule of the ring</em></li>
 <li>ideal is kernel, kernel is ideal
@@ -1190,27 +1183,28 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-generators-for-ideal" class="crosslink">generators for ideal</span> is a <a href="#cross-left-ideal">left ideal</a> <span class="math">\(x_1a_1 + x_2a_2 + \cdots + x_na_n\)</span> with <span class="math">\(x_i\in A\)</span> is generated by <span class="math">\((a_1, a_2,..., a_n)\)</span></li>
 <li><a href="#cross-intersection">intersection</a> closed for left, right, twoside</li>
 <li>an ideal contains <span class="math">\(1\)</span> must be <span class="math">\(A\)</span></li>
+<li><span class="math">\(p = f^{-1}(p')\)</span> is ideal
+<ul>
+<li>my proof is always lame, see <a href="http://math.stackexchange.com/a/693707/29742">this</a>. i should have more this kind of thinking, when i want to proof that something has some property, i just proof it has the property, <strong>but the better thing is always force it to have the property, because it not only show the result, but also that why it has the property</strong></li>
 </ul></li>
-<li><span id="cross-quotient-ring" class="crosslink">quotient ring</span></li>
+</ul></li>
+<li><span><span id="cross-factor-ring"></span><span id="cross-quotient-ring" class="crosslink">quotient ring </span></span></li>
 <li><img src="images/ring-decom.png" style="width:400px" />
 <ul>
 <li>and another thing is that the factor thought things, and it is universal</li>
 </ul></li>
 <li><span class="math">\(\frac{R/I}{J/I} = \frac{R}{J}\)</span></li>
-<li><span class="math">\(B = A[S]=\sum as^is^j\cdots s^k\)</span> with <span class="math">\(A\)</span> commutate with <span class="math">\(S\)</span>, <span class="math">\(S\)</span> is a set of <span id="cross-ring-generators" class="crosslink">ring generators</span> of <span class="math">\(B\)</span> over <span class="math">\(A\)</span>. if <span class="math">\(S\)</span> is finite, we say that <span class="math">\(B\)</span> is finitely generated over <span class="math">\(A\)</span></li>
-<li><a href="#cross-commutative">commutative</a> ring is <span id="cross-Noetherian" class="crosslink">Noetherian</span> if every ideal is finitely generated</li>
-<li><span><span id="cross-pid"></span><span id="cross-principal-entire-ring" class="crosslink">principal entire ring</span></span>. <a href="#cross-entire-ring">entire ring</a> and every ideal is <a href="#cross-principal-ideal">principal ideal</a>
-<ul>
-<li>is <a href="#cross-Noetherian">Noetherian</a></li>
-<li><span class="math">\({\mathbb{Z}}\)</span> is <a href="#cross-pid">pid</a></li>
-</ul></li>
+<li>we can form <span class="math">\(G/p\to G'/p'\)</span> just like in group <code>fix me: is this true</code></li>
+<li><a href="#cross-commutative">commutative</a> ring</li>
+<li><span id="cross-division-ring" class="crosslink">division ring</span> <span class="math">\(1\neq 0\)</span> and ever element invertible</li>
+<li><span id="cross-principal-ring" class="crosslink">principal ring</span> every ideal is <a href="#cross-principal-ideal">principal ideal</a></li>
 </ul></li>
 </ul>
-<p><em>maximal ideal and prime ideal is defined only in commutative ring now, i do not know if you can generalize it, but i think it is just find now</em></p>
+<p><em>maximal ideal and prime ideal is defined only in commutative ring now, i do not know if you can generalize it, but i think it is just fine now</em></p>
 <ul>
-<li><a href="#cross-commutative">commutative</a> ring
+<li><span id="cross-commutative-ring" class="crosslink">commutative ring</span>. a <a href="#cross-commutative">commutative</a> ring…
 <ul>
-<li><span id="cross-prime-ideal" class="crosslink">prime ideal</span> <span class="math">\(R/I\)</span> is <a href="#cross-entire-ring">entire ring</a>
+<li><span id="cross-prime-ideal" class="crosslink">prime ideal</span> <span class="math">\(R/p\)</span> is <a href="#cross-entire-ring">entire ring</a>
 <ul>
 <li>same as saying that <span class="math">\(xy \in p\)</span> then <span class="math">\(x\in p\)</span> or <span class="math">\(y\in p\)</span></li>
 </ul></li>
@@ -1229,258 +1223,202 @@ $("#content").css("max-width", "1100px")
 <li>we proof by using again <span class="math">\(m+Ax\)</span> and find the inverse of <span class="math">\(x\)</span>. the reverse is because a field has no good proper ideal in it. if we have <span class="math">\(m\subset n\)</span> then we can factor <span class="math">\(n\)</span> by <span class="math">\(m\)</span>, and it has no ideal in it at all!</li>
 </ul></li>
 </ul></li>
-<li>for <span class="math">\(f: A\to A'\)</span> is an homomorphism of commutative rings, <span class="math">\(p'\)</span> is prime ideal in <span class="math">\(A'\)</span> then <span class="math">\(p = f^{-1}(p')\)</span> is an prime ideal of <span class="math">\(A\)</span></li>
+<li>for <span class="math">\(f: A\to A'\)</span> is an homomorphism of commutative rings, <span class="math">\(p'\)</span> then <span class="math">\(A'\)</span> then <span class="math">\(p = f^{-1}(p')\)</span></li>
+<li>for <span class="math">\(f: A\to A'\)</span> surjective, if <span class="math">\(m'\)</span> then <span class="math">\(m\)</span>. proof using field</li>
+<li><span id="cross-Chinese-remainder-theorem" class="crosslink">Chinese remainder theorem</span> given <span class="math">\(\alpha_i\)</span> ideals of <span class="math">\(A\)</span> such that <span class="math">\(\alpha_i+\alpha_j = A\)</span>, and <span class="math">\(x_i\in A\)</span> we have <span class="math">\(x\in A\)</span> and <span class="math">\(x\equiv x_i({\text{mod }}a_i)\)</span>
+<ul>
+<li>we proof by induction, this is kind of induction that reduce length. the key is that <span class="math">\(\alpha_i \prod_{i\geq 2}\alpha_i\subset \alpha_1 + \alpha_2 \cdots\alpha_n= A\)</span>. thne we can reduce to 2 case</li>
+<li>the classical case <code>fix me</code></li>
+<li>application example. <span class="math">\({\mathbb{Z}}/n{\mathbb{Z}}\cong {\text{End}}(C_n)\)</span> ring isomorphism, <span class="math">\(({\mathbb{Z}}/n{\mathbb{Z}})^*\cong {\text{Aut}}(C_n)\)</span> group isomorphism</li>
+</ul></li>
+<li>if <span class="math">\(\sum \alpha_i = A\)</span> then <span class="math">\(\sum \alpha_i^{v_i} = A\)</span>
+<ul>
+<li>we use same kind of induction, we just proof for <span class="math">\(\alpha^v + b\)</span> case, using <span class="math">\(a_1^v = (1-b_1)^v = 1 + b\)</span>, this is easy. one interesting problem is that observe how the elements that add up to 1 changed. sometimes watching the given condition and figure out how to use them it very important</li>
+</ul></li>
+<li><span id="cross-ring-of-fractions" class="crosslink">ring of fractions</span> of ring <span class="math">\(A\)</span> by multiplicative submonoid <span class="math">\(S\)</span>, <span class="math">\(S^{-1}A\)</span>
+<ul>
+<li><span class="math">\((a,s)\sim(a',s')\Leftrightarrow s_1(s'a-sa') = 0\)</span>, by <span class="math">\(a/s\)</span></li>
+<li>we define <span class="math">\((a/s)(a'/s') = aa'/ss'\)</span></li>
+<li><span class="math">\(\frac{a}{s} +\frac{a'}{s'}=\frac{s'a+sa'}{ss'}\)</span></li>
+<li>we proof it is a ring
+<ul>
+<li>additive group
+<ul>
+<li><span class="math">\(+\)</span> is well defined. proof by calculation</li>
+<li>associative. <span class="math">\(\frac{as_bs_c+s_abs_c+s_as_bc}{s_as_bs_c}\)</span></li>
+<li>unit, inverse. trivial</li>
+</ul></li>
+<li>multiplicative monoid. trivial</li>
+<li>distributive. trivial</li>
+</ul></li>
+<li>if <span class="math">\(0\in S\)</span> then <span class="math">\(S^{-1}A = \{0/1\}\)</span></li>
+<li><span class="math">\(\varphi_S: A\to S^{-1}A\)</span> such that <span class="math">\(a\to a/1\)</span>, and every element in <span class="math">\(\varphi_S(S)\)</span> is invertible, by <span class="math">\(1/s\)</span>, and this is universal in such morphisms. proof by for such a <span class="math">\(f:A\to B\)</span> we have <span class="math">\(f(s_1)(f(s')f(a)-f(s)f(a'))=0\)</span> to we have <span class="math">\(f(a)f(s)^{-1}=f(a')f(s')^{-1}\)</span> if we send <span class="math">\(a/s\)</span> to <span class="math">\(f(a)f(s)^{-1}\)</span> it is well defined and it is homomorphism and commutative, and unique</li>
+<li>if <span class="math">\(A\)</span> is entire and <span class="math">\(S\)</span> do not contains <span class="math">\(0\)</span> then <span class="math">\(\varphi_S\)</span> is injective
+<ul>
+<li><span class="math">\(S\)</span> is non-zero elements, then we have <span id="cross-quotient-field" class="crosslink">quotient field</span> of <span class="math">\(A\)</span> and it is an <a href="#cross-field">field</a></li>
+<li><span class="math">\(K(X_1, \dots, X_n)\)</span> the quotient field of <span class="math">\(A[X_1, \dots, X_n]\)</span>, <span id="cross-rational-function" class="crosslink">rational function</span>
+<ul>
+<li><span id="cross-rational-function-defined-at" class="crosslink">rational function defined at</span> <span class="math">\(b\)</span></li>
+</ul></li>
+</ul></li>
+<li><span id="cross-local-ring" class="crosslink">local ring</span> commutative and has unique maximal ideal
+<ul>
+<li>if <span class="math">\(x\notin m\)</span> then <span class="math">\(x\)</span> is unit. proof by <span class="math">\(Ax = A\)</span></li>
+<li><code>fix me: local ring at p</code></li>
+</ul></li>
+<li>we can define <span class="math">\(\psi_S:J(A)\to J(S^{-1}A)\)</span> and it is homomorphism, and preserve intersection and inclusions
+<ul>
+<li><code>fix me: proof it</code></li>
+</ul></li>
+</ul></li>
+<li><span id="cross-Noetherian" class="crosslink">Noetherian</span>. <a href="#cross-commutative">commutative</a> ring and every ideal is finitely generated</li>
+<li><span id="cross-entire-ring" class="crosslink">entire ring</span> nonzero <a href="#cross-commutative">commutative</a> ring without <a href="#cross-zero-divisor">zero divisor</a>
+<ul>
+<li>for an entire ring, <span class="math">\(a\)</span>, <span class="math">\(b\)</span> nonzero elements in <span class="math">\(A\)</span>, then <span class="math">\(a\)</span>, <span class="math">\(b\)</span> generate same ideal iff exists unit <span class="math">\(u\)</span> such that <span class="math">\(b = au\)</span>
+<ul>
+<li>unit for <span class="math">\(Ab = Aua = Aa\)</span>, because if it is not unit, we do not know if the right equation holds</li>
+<li><span class="math">\(Ab = Aa\)</span> then <span class="math">\(a = bc\)</span> and <span class="math">\(b = ad\)</span> then <span class="math">\(a = adc\)</span> and <span class="math">\(dc = 1\)</span>, entire is used here</li>
+</ul></li>
+</ul></li>
+<li>in <a href="#cross-entire-ring">entire ring</a>
+<ul>
+<li><span class="math">\(ab\neq 0\)</span>, <span class="math">\(a\)</span> <span id="cross-divides" class="crosslink">divides</span> <span class="math">\(b\)</span>, or <span class="math">\(a|b\)</span> (left is small!) if <span class="math">\(\exists c\in A: ac = b\)</span></li>
+<li><span><span id="cross-gcd"></span><span id="cross-greatest-common-divisor" class="crosslink">greatest common divisor </span></span> <span class="math">\(d\)</span> of <span class="math">\(a\)</span>, <span class="math">\(b\)</span> if it divides <span class="math">\(a\)</span> and <span class="math">\(b\)</span> and every one how divides them also divides <span class="math">\(d\)</span>
+<ul>
+<li><span id="cross-lemma-p-for-entire-ring" class="crosslink">lemma p for entire ring</span> <span class="math">\(p\)</span> irreducible and <span class="math">\(p|ab\)</span> then <span class="math">\(p|a\)</span> or <span class="math">\(p|b\)</span>. proof, suppose <span class="math">\(p\)</span> do not divides <span class="math">\(a\)</span> then we have <span class="math">\(1 = xp+ya\)</span>, so we have <span class="math">\(p|bxp + yab = p|b\)</span></li>
+</ul></li>
+<li><span><span id="cross-lcm"></span><span id="cross-least-common-multiple" class="crosslink">least common multiple </span></span></li>
+<li><span id="cross-relatively-prime" class="crosslink">relatively prime</span></li>
+<li><span id="cross-irreducible-element" class="crosslink">irreducible element</span> not unit but when <span class="math">\(a = bc\)</span> then <span class="math">\(b\)</span> or <span class="math">\(c\)</span> is unit
+<ul>
+<li><span class="math">\((a)\)</span> is <a href="#cross-prime-ideal">prime ideal</a> <span class="math">\(\Rightarrow\)</span> <span class="math">\(a\)</span> is irreducible</li>
+<li><span id="cross-unique-factorization-into-irreducible-elements" class="crosslink">unique factorization into irreducible elements</span> <span class="math">\(a = u\prod p_i\)</span></li>
+<li><span class="math">\(p\)</span> irreducible and <span class="math">\(u\)</span> unit then <span class="math">\(up\)</span> irreducible. proof by proofing…</li>
+<li>example: prime number in <span class="math">\({\mathbb{Z}}\)</span></li>
+</ul></li>
+<li>we have defined <span><span id="cross-unique-factorization-ring"></span><span id="cross-factorial-ring" class="crosslink">factorial ring </span></span> if it is <a href="#cross-entire-ring">entire ring</a> and has <a href="#cross-unique-factorization-into-irreducible-elements">unique factorization into irreducible elements</a> for every nonzero element
+<ul>
+<li><span id="cross-order-of-elements-in-factorial-ring" class="crosslink">order of elements in factorial ring</span> order <span class="math">\(a\)</span> at <span class="math">\(p\)</span></li>
+</ul></li>
+</ul></li>
+<li><span><span id="cross-pid"></span><span id="cross-principal-entire-ring" class="crosslink">principal entire ring </span></span>. <a href="#cross-entire-ring">entire ring</a> and every ideal is <a href="#cross-principal-ideal">principal ideal</a>
+<ul>
+<li><span class="math">\((a, b) = (c)\)</span> then <span class="math">\(c\)</span> is <a href="#cross-gcd">gcd</a> of <span class="math">\(a\)</span> and <span class="math">\(b\)</span>. proof by definition</li>
+<li>is <a href="#cross-Noetherian">Noetherian</a>. trivial</li>
+<li>it is <a href="#cross-factorial-ring">factorial ring</a>
+<ul>
+<li>i think this is an rather interesting proof, i wish i could proof it myself… consider an chain of non-unique factorization principal ideals, the union is an ideal, so it is principal <strong>proof enabler!!!</strong>, so we have it must stop somewhere. so using <a href="#cross-Zorn's-lemma">Zorn’s lemma</a> we so have <span class="math">\((a)\)</span> containing all of them. <span class="math">\(a\)</span> must not be irreducible, so we have <span class="math">\(a = bc\)</span> with <span class="math">\(b\)</span>, <span class="math">\(c\)</span> not unit. but a factorization of <span class="math">\(b\)</span> and <span class="math">\(c\)</span> is a factorization of <span class="math">\(a\)</span>, so we are dammed. the uniqueness is followed by assuming we have to factorization and we reduce by using <a href="#cross-lemma-p-for-entire-ring">lemma p for entire ring</a>, we find <span class="math">\(p = uq\)</span>, and reduce</li>
+<li><code>fix me: is there a constructive proof?</code> <a href="http://mathoverflow.net/questions/24556/factorial-rings-and-the-axiom-of-choice">http://mathoverflow.net/questions/24556/factorial-rings-and-the-axiom-of-choice</a></li>
+</ul></li>
+<li>example: <span class="math">\({\mathbb{Z}}\)</span></li>
+</ul></li>
+<li><span id="cross-field" class="crosslink">field</span>. <a href="#cross-commutative">commutative</a> . <a href="#cross-division-ring">division ring</a>
+<ul>
+<li>has no non-trivial ideal</li>
+</ul></li>
 </ul></li>
 </ul>
+<p><img src="./images/entires.png" style="width:450px" /></p>
+<h3 id="exercises-1">exercises</h3>
+<ol style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><code>fix me</code></p>
 <h3 id="module">module</h3>
+<p><em>please have a picture of abelian cosets!!!</em></p>
 <ul>
-<li><span id="cross-module" class="crosslink">module</span> <span class="math">\(R-\mathcal{Mod}\)</span>
+<li><span id="cross-module" class="crosslink">module</span> <span class="math">\(R\)</span>-<span class="math">\(\mathcal{Mod}\)</span>
 <ul>
-<li>remark
+<li><a href="#cross-object">object</a>. (left) <span class="math">\(A\)</span>-module <span class="math">\(M\)</span>
 <ul>
-<li>module makes <span class="math">\(R\)</span>, <span class="math">\(I\)</span>, <span class="math">\(R\I\)</span> all modules</li>
-<li>it is an example of good category</li>
-<li>abelian group is a special case</li>
+<li><span class="math">\(M\)</span> an <a href="#cross-abelian-group">abelian group</a></li>
+<li><span class="math">\(A\)</span> a ring and operate on <span class="math">\(M\)</span> (as multiplicative monoid) <code>fix me: that's wired, i think is is automorphism? but it is only homomorphism?</code></li>
+<li><span class="math">\(\forall a, b\in A, x, y\in M: (a+b)x = ax + bx \land a(x+y) = ax + ay\)</span></li>
+<li>we have
+<ul>
+<li><span class="math">\(abx = a(bx)\)</span></li>
+<li><span class="math">\(0x = 0\)</span></li>
+<li><span class="math">\(a0 = 0\)</span></li>
+<li><span class="math">\(1x = x\)</span></li>
+<li><span class="math">\(a(-x) = -ax\)</span></li>
 </ul></li>
-<li><a href="#cross-object">object</a>
-<ul>
-<li><a href="#cross-abelian-group">abelian group</a> and <a href="#cross-ring">ring</a></li>
-<li><span class="math">\(r(m + n) = rm + rn\)</span></li>
-<li><span class="math">\((r + s) m = rm + sm\)</span></li>
-<li>(rs)m = r(sm)$</li>
-<li><span class="math">\(1m = m\)</span></li>
 </ul></li>
-<li><a href="#cross-morphism">morphism</a>
+<li>example
 <ul>
-<li><span class="math">\(f(m + n) = f(m) + f(n)\)</span></li>
-<li><span class="math">\(f(rm) = rf(m)\)</span></li>
+<li><span class="math">\(R\)</span> is module over itself</li>
+<li>all <a href="#cross-abelian-group">abelian group</a> is module over <span class="math">\({\mathbb{Z}}\)</span></li>
+<li><a href="#cross-left-ideal">left ideal</a> of <span class="math">\(A\)</span> is module over <span class="math">\(A\)</span></li>
+<li><a href="#cross-factor-ring">factor ring</a> is an module over <span class="math">\(A\)</span></li>
+<li>so module is just <strong>ring operation that additionally has the latter equation</strong>?</li>
+<li>let <span class="math">\(R\)</span> be the ring of linear map over <a href="#cross-vector-space">vector space</a> <span class="math">\(V\)</span>, then <span class="math">\(V\)</span> is a module over <span class="math">\(R\)</span> <strong>remember this, seems useful</strong></li>
 </ul></li>
+<li><a href="#cross-morphism">morphism</a> or <span class="math">\(A\)</span>-linear map
+<ul>
+<li>additive homomorphism, <span class="math">\(f(m + n) = f(m) + f(n)\)</span></li>
+<li><span class="math">\(f(ax) = af(x)\)</span></li>
+<li>kernel is <a href="#cross-submodule">submodule</a> and <a href="#cross-submodule">submodule</a> is kernel
+<ul>
+<li>for a kernel, it is a additive subgroup, and we have <span class="math">\(f(an) = af(n) = 0\)</span> so it is a submodule</li>
+<li>we have <span class="math">\(f:M\to M/N\)</span> the universal module-homomorphism. proof, the group-homomorphism has the additional property, we get universal by making the map</li>
+</ul></li>
+<li><span class="math">\({\text{Im }}f\)</span> is <a href="#cross-submodule">submodule</a>. proof by <span class="math">\(af(m) = f(am) \in {\text{Im }}f\)</span>
+<ul>
+<li><span class="math">\(M' \to M'/{\text{Im }}f\)</span> <span id="cross-cokernel" class="crosslink">cokernel</span></li>
+</ul></li>
+<li><a href="#cross-decomposition-1">decomposition 1</a> etc. holds. we proof by verify the group-isomorphisms is module-isomorphism <code>fix me: do it</code></li>
+</ul></li>
+<li><span id="cross-submodule" class="crosslink">submodule</span> an additive subgroup such that <span class="math">\(AN\in N\)</span>. well defined because it is closed under <span class="math">\(A\)</span></li>
+<li>when <span class="math">\(A\)</span> entire, <span id="cross-torsion-submodule" class="crosslink">torsion submodule</span> <span class="math">\(M_{\text{tor}}\)</span> <span class="math">\(x\in M: \exists a\in A : a\neq 0 \land ax = 0\)</span>. it is well-defined for we have entire!!!</li>
+<li>if <span class="math">\(\alpha\)</span> is an <a href="#cross-left-ideal">left ideal</a> then we have <span class="math">\(\alpha M = \sum a_i x_i\)</span> is an submodule. and we have <span class="math">\(\alpha (\beta M) = (\alpha\beta)M\)</span>, <span class="math">\((\alpha + \beta)M = \alpha M + \beta M\)</span>, <span class="math">\(\alpha (N+N') = \alpha N + \alpha N'\)</span>
+<ul>
+<li>proof 1. it is closed so an subgroup, <span class="math">\(A\alpha M\subset \alpha M\)</span> so it is submodule</li>
+<li>proof 2. the two side is well defined for ideal multiplication is again an ideal, and the left is just two application of making submodule, to show that equal, we have both side have the same structure of things in them</li>
+<li>proof 3. they are well defined almost for the abelian group</li>
+</ul></li>
+<li><span id="cross-factor-module" class="crosslink">factor module</span> for a submodule <span class="math">\(N\)</span> we have <span class="math">\(R\)</span> also operate on <span class="math">\(M/N\)</span>, it is well defined for <span class="math">\(x = y+n\)</span> thing. it is again a module, proof <span class="math">\(abx\)</span> by using alternatively thinking the elements in them and the coset itself, proof <span class="math">\(1x = x\)</span> trivially, proof <span class="math">\((a+b)x\)</span> and <span class="math">\(a(x+y)\)</span> by vanishing on all <span class="math">\(an\)</span> things, using the definition of <strong><a href="#cross-submodule">submodule</a></strong></li>
 </ul></li>
 </ul>
 <h3 id="vector-space">vector space</h3>
 <ul>
-<li><span id="cross-vector-space" class="crosslink">vector space</span>. <a href="#cross-module">module</a> over a <a href="#cross-field">field</a> ### p034 - 36</li>
+<li><a href="#cross-module">module</a> over a field <span class="math">\(F\)</span></li>
 </ul>
-<h2 id="chapter-02">chapter 02</h2>
-<h3 id="p083---92">p083 - 92</h3>
-<p>ring - abelian group of plus and monoid multiplication and <code>(x + y)z = xz + yz</code></p>
+<h3 id="polynomial">polynomial</h3>
+<p><em>first part is using the language of single variable polynomial, but they also works for several variables</em></p>
 <ul>
-<li>think distributivity kind of weeken linearization*</li>
-</ul>
-<p><code>U</code> the set of elements who has right and left inverse is a group, group of units in <code>A</code></p>
-<p>division ring</p>
+<li><span id="cross-polynomial" class="crosslink">polynomial</span> over a <strong><a href="#cross-commutative-ring">commutative ring</a></strong>
 <ul>
-<li>it must be two sided, think them as functions, and think of shift operator</li>
-</ul>
-<p>commutative ring</p>
-<p>commutative &amp;&amp; division ring = field</p>
-<p>subring = subgroup of additive group &amp;&amp; submonid of multi</p>
+<li><span class="math">\(p: \{X^0, X^1, X^2, X^3, \dots\}\to R\)</span> where <span class="math">\(R\)</span> is a ring and the function equals 0 on all but finite number</li>
+<li><span id="cross-primitive-polynomial" class="crosslink">primitive polynomial</span></li>
+<li><span id="cross-monomial" class="crosslink">monomial</span></li>
+<li><span id="cross-evaluation-function" class="crosslink">evaluation function</span> <span class="math">\(A[X]\)</span> with <span class="math">\(A\subset B\)</span> is ring, we have function <span class="math">\({\text{ev}}_v: A[X]\to A[v]\)</span> that makes <span class="math">\(X=B\)</span>
 <ul>
-<li>it seems that finding subring is harder than finding sub group, one should use distributive law to find them</li>
-<li>center is subring</li>
-<li>example</li>
-<li><code>Z</code></li>
-<li>addtive group endormors is a ring of add and compo</li>
-<li><code>Map(S,A)</code> into ring <code>A</code></li>
-<li>matrix</li>
-<li>polynomials</li>
-<li>convolution product of a group ring</li>
-<li><code>(f*g)(z) = Sum(f(x)g(y) | xy = z)</code></li>
-</ul>
-<p>left ideal: subgroup of additive group &amp;&amp; <code>Aa = a</code></p>
-<p>right ideal</p>
-<p>ideal</p>
+<li>if <span class="math">\({\text{ev}}_v\)</span> is a isomorphism, we say that <span class="math">\(v\)</span> is <span><span id="cross-variable"></span><span id="cross-transcendental" class="crosslink">transcendental </span></span> over <span class="math">\(A\)</span>
 <ul>
-<li><code>Aa</code> is left ideal. called principal</li>
-<li>also <code>A(a, b, c)</code> etc. generator of the left ideal</li>
-</ul>
-<p>intersection of ideal is ideal. also for left ideal</p>
-<ul>
-<li>commutative ring left ideal = ideal</li>
-</ul>
-<p>principal ring = commutative &amp;&amp; every ideal is principal</p>
-<ul>
-<li>the ring that every ideal is single generated?</li>
-</ul>
-<p>ideals</p>
-<ul>
-<li>is a multiplicative monoid, the unit is <code>A</code> is unit ideal, <code>(1)</code>, also for left ideals</li>
-<li>is addtive monoid</li>
-<li>but is not a ring!</li>
-<li>left ideal <code>a</code> =&gt; <code>aA</code> is ideal</li>
-<li>for two ideal, <code>ab &lt; a^b</code></li>
-</ul>
-<p>ring-homormor, kernel = additive kernel</p>
-<ul>
-<li>the kernel is ideal - it is maped to zero the repeller!!</li>
-</ul>
-<p>and we have factor ring and canonical map, and it is universal</p>
-<p>prime ideal</p>
-<ul>
-<li><code>ab</code> in <code>P</code> then <code>a</code> or <code>b</code> in <code>P</code></li>
-<li><code>P != R</code></li>
-</ul>
-<p>a useful sport: map from <code>Z</code> to <code>A</code> by <code>ne</code></p>
-<ul>
-<li>the kernel is an ideal of <code>Z</code>: <code>(n)</code></li>
-<li>we have a injective homomor <code>Z/nZ -&gt; A</code></li>
-<li>if <code>n</code> prime, <code>n</code> match</li>
-<li>case <code>0</code>: <code>A</code> characteristic <code>0</code>, it has subring <code>Z</code></li>
-<li>case <code>n</code> prime: <code>A</code> characteristic <code>p</code>, contains substring <code>Z/pZ = F_p</code></li>
-<li>if in field <code>K</code>, it contains <code>Q</code> or <code>F_p</code>. they are called prime field in <code>K</code></li>
-<li>by prime ring in <code>K</code> we means <code>Z</code> or <code>F_p</code></li>
-</ul>
-<p>let <code>A</code> a subring of <code>B</code> and <code>S</code> a subset of <code>B</code> that commuting with <code>A</code> then we have <code>A[S] = {a s s s s}</code>. if <code>B = A[S]</code> we say that <code>B</code> is generated by <code>S</code> over <code>A</code>. if <code>S</code> is finite, then finite generated.</p>
-<ul>
-<li>one might say that <code>A[S]</code> consists all not-necessory commutative polynomials in elements of <code>S</code> with coeffients in <code>A</code></li>
-<li>elements of <code>S</code> may not commute!!</li>
-<li>example: matrices, when <code>A</code> is <code>nI</code></li>
-<li>homomorphism is determined by its effect on generators</li>
-</ul>
-<p>residue class ring, residue class modulo <code>a</code>, <code>x === y (mod a)</code></p>
-<p>induced homomor by ideal in <code>A'</code>, product exists in <code>Ring</code></p>
-<p>zero divisors: <code>x != 0 &amp;&amp; y != 0 &amp;&amp; xy == 0</code></p>
-<p>entire: <code>1 != 0</code> &amp;&amp; commutative &amp;&amp; no zero divisors</p>
-<p>theorem: for entire ring, <code>a</code>, <code>b</code> generate same ideal if there is a unit such that <code>b = au</code></p>
-<ul>
-<li>the bijective proof is injective for normal ring</li>
-</ul>
-<h3 id="p093-97">p093 － 97</h3>
-<p><em>only discuss commutative ring!!!</em></p>
-<ul>
-<li>prime = <code>p</code> &amp;&amp; <code>A/p</code> entire =~= <code>xy in p =&gt; x in p || y in p</code></li>
-<li>maximal ideal: no bigger</li>
-<li>maximal =&gt; prime</li>
-<li>every ideal is contained in some maximal</li>
-<li>field has only 2 ideal</li>
-<li><code>m</code> maximal &lt;=&gt; <code>A/m</code> field</li>
-<li>homomor <code>f</code>, prime, maximal</li>
-<li>example</li>
-<li><code>Z</code>: <code>x^(p-1) == 1(mod p)</code> － using</li>
-<li>Chinese remainder theorem: <code>a_n</code> be ideals <code>a_i + a_j = A</code>, then for <code>x_n</code> exists <code>x</code>: <code>x == x_i (mod a_i)</code></li>
-<li>read the proof</li>
-<li><code>a_1^(v_1) + ... = A</code> problem <strong>fix me</strong></li>
-<li><code>A/^(a_i) ~=~ *(A/a_i)</code></li>
-<li><strong>fix me</strong></li>
-</ul>
-<h3 id="p098---107">p098 - 107</h3>
-<ul>
-<li>polynomial over a ring <code>A</code></li>
-<li>polynomial function ring homomor <code>ev_b: A[X] -&gt; B</code></li>
-<li><code>x</code> is transcendental over <code>A</code></li>
-<li><code>f -&gt; gf</code> the reduction map</li>
-<li>reduction of <code>f</code> modulo <code>p</code></li>
-<li>degree, linear, leading coefficient, constant</li>
-<li>assume <code>A</code> commutative</li>
-<li><code>deg(fg) = deg f + deg g</code> if <code>a_n</code> and <code>b_m</code> is not zero
-<ul>
-<li><code>A</code> entire =&gt; <code>A[X]</code> entire</li>
+<li><span class="math">\(\sqrt{2}\)</span> is not transcendental over <span class="math">\(Z\)</span>, <span class="math">\(e\)</span> and <span class="math">\(\pi\)</span> is <code>fix me: a proof?</code></li>
 </ul></li>
-<li>polynomials in n variables
-<ul>
-<li>algebraically independent</li>
-<li>degree</li>
-<li>homogeneous</li>
-<li><code>deg(fg) = deg(f) + deg(g)</code></li>
 </ul></li>
-<li><code>A</code> a commutative ring, <code>G</code> a monoid. group ring or moniod ring - polynomials is special case!</li>
-<li>get all <code>G -&gt; A</code> which is almost zero</li>
-<li>we get a ring</li>
-<li>and eval reduce in the ring <strong>fix me?</strong></li>
-</ul>
-<h3 id="p108---110">p108 - 110</h3>
+<li><span id="cross-reduction-map" class="crosslink">reduction map</span> <span class="math">\(A[X]\to B[X]\)</span> a map induced on coefficients</li>
+<li><span class="math">\(f:A\to B\)</span> uniquely extends to a <span class="math">\(A[X]\to B\)</span> such that <span class="math">\(X\to x\in B\)</span>, by first reduction and then evaluation on <span class="math">\(x\)</span>. <code>fix me: in what sense it is unique?</code></li>
+<li><span id="cross-degree-of-polynomial" class="crosslink">degree of polynomial</span> <span class="math">\(-\infty, 0, 1\)</span> etc
 <ul>
-<li>multiplicative subset: has 1 and closed by *</li>
-<li>quotient ring, ring of fraction of <code>A</code> by <code>S</code></li>
-<li><code>(a, s) ~ (a', s')  := exists s_1 (s'a-sa') = 0</code></li>
-<li>is equiv</li>
-<li><code>a/s</code> and <code>S^-1/A</code></li>
-<li><code>a/s * a'/s' = aa'/ss'</code></li>
-<li><code>a/s + a'/s' = (s'a + sa') / ss'</code></li>
-<li>it is a ring</li>
-<li><code>A -&gt; S^-1A</code>
-<ul>
-<li>f(s) is invertable</li>
-<li>and the homomor is universal</li>
+<li>if the leading coefficients is not zero divisor, we have <span class="math">\({\text{deg}}(fg)={\text{deg}}(f)+{\text{deg}}(g)\)</span> and if <span class="math">\(A\)</span> is entire, we have <span class="math">\(A[X]\)</span> entire</li>
+<li><span class="math">\({\text{deg}}(f+g)\leq \max({\text{deg}}(f), {\text{deg}}(g))\)</span></li>
 </ul></li>
-<li>if <code>A</code> is entire =&gt; it is injective</li>
-<li>examples</li>
-<li>quotient field</li>
-<li>rational function</li>
-<li>defined at b</li>
-<li>local ring: commutative and unique maximal ideal</li>
-<li><strong>fix me</strong></li>
-</ul>
-<h3 id="p111---114">p111 - 114</h3>
+<li><span id="cross-algebraically-independent" class="crosslink">algebraically independent</span> <span class="math">\(x_1, \dots, x_n\in B\)</span> is algebraic independent if evaluation map is injective
 <ul>
-<li>factorial (unique factorization ring)</li>
-<li>divides</li>
-<li>gcd</li>
-<li>order</li>
-<li>prime</li>
-<li>lcm</li>
-<li><strong>fix me</strong></li>
-</ul>
-<h2 id="chapter-02-exercises">chapter 02 EXERCISES</h2>
-<p><strong>fix me</strong></p>
-<h2 id="chapter-03">chapter 03</h2>
-<h3 id="p117">p117</h3>
-<p><em>thinking in vs!</em></p>
-<p><em>and by module, it is itself a abelian group first!</em></p>
+<li>not known if <span class="math">\(e\)</span> and <span class="math">\(\pi\)</span> is algebraically independent, if <span class="math">\(e+\pi\in {\mathbb{Q}}\)</span> <code>open problem</code></li>
+</ul></li>
+<li><span id="cross-homogeneous" class="crosslink">homogeneous</span>
 <ul>
-<li><code>M</code> is left module over <code>A</code></li>
-<li>abelian group</li>
-<li>ops of <code>A</code> on <code>M</code></li>
-<li>distributive</li>
-<li>examples</li>
-<li><code>A</code> is module over itself</li>
-<li>commutative group is Z-module</li>
-<li>left ideal of <code>A</code> is module over <code>A</code></li>
-<li>submodule <code>N</code>: <code>AN &lt; N</code></li>
-<li>module over field = vector space</li>
-<li>the ring is the field, scalar</li>
-<li>linear map over vs is a module</li>
-<li>because linear, the <code>a(x+y) = ax + ay</code> is possible</li>
-<li><code>A</code> entire, torsion submodule <code>M_tor</code>: <code>ax = 0 &amp;&amp; a != 0</code></li>
-<li>factor module</li>
-<li>hodule-homomor <code>f: M -&gt; M'</code></li>
-<li>over the same ring <code>A</code></li>
-<li>additive group homomorphism</li>
-<li><code>f(ax) = af(x)</code></li>
-<li>also <code>A</code>-homomor or <code>A</code>-linear map</li>
-<li>zero homomor</li>
-<li>kernel and image is submodule</li>
-<li>cokernel <code>M'/Im f</code></li>
-<li>the group canonical homos applies equally in module</li>
-<li>exact <code>Im f = Ker g</code>: <code>M' -f-&gt; M -g-&gt; M''</code></li>
-<li>monomorphism, embedding: <code>0 -&gt; N -u-&gt; M</code></li>
-<li>epimorphism: <code>N -u-&gt; M -&gt; 0</code></li>
-<li>there are algebras…</li>
-<li>no unit</li>
-<li>no assco but distributive</li>
-<li>bilinear map</li>
-<li>A-algebra, module + bilinear map <code>g: E * E -&gt; E</code></li>
-<li><strong>fix me</strong></li>
+<li><span class="math">\(\Leftrightarrow\)</span> <span class="math">\(f(ut_1, \dots, ut_n) = u^df(t_1, \dots, t_n)\)</span></li>
+</ul></li>
+<li><code>fix me: the group ring and monoid ring part</code></li>
+</ul></li>
 </ul>
-<h3 id="p122--">p122 -</h3>
+<h3 id="vector-space-1">vector space</h3>
 <ul>
-<li><code>A</code> a ring, and <code>X</code>, <code>X'</code> be <code>A</code>-modules, <code>Hom_A(X', X)</code> is abelian group</li>
-<li>if <code>A</code> is commutative, then <code>Hom_A</code> is <code>A</code>-module, the group action is <code>a(f) -&gt; af</code></li>
-<li><code>Hom_A</code> is also a functor, contravariant in first variable. covariant in second</li>
+<li><span id="cross-vector-space" class="crosslink">vector space</span>. <a href="#cross-module">module</a> over a <a href="#cross-field">field</a></li>
 </ul>
-<p><strong>fix me!!!</strong> I fear the category things!</p>
-<h2 id="chapter-04-polynomials">chapter 04 polynomials</h2>
-<h3 id="p174--">p174 -</h3>
-<ul>
-<li>Euclidean algorithm: <code>f = gq + r</code> if leading coefficient of <code>g</code> is unit</li>
-<li>zero of a polynomial</li>
-<li><code>k</code> be a field =&gt; <code>k[X]</code> is principal &amp;&amp; factorial</li>
-<li>irrducible <code>f in k[X]</code>: degree &gt;= 1 and not a product <code>f = gh &amp;&amp; g, h !in k</code></li>
-<li>monic</li>
-<li>at most n roots, and <code>X - a</code> divides <code>f</code></li>
-</ul>
-<p><strong>fix me!!!</strong></p>
-<h2 id="chapter-05-algebraic-extensions">chapter 05 algebraic extensions</h2>
 <h2 id="references-2">references</h2>
 <ul>
 <li><span id="cross-ref-algebra-lang" class="crosslink">ref-algebra-lang</span> <em>Algebra</em>, Serge Lang
@@ -1968,7 +1906,7 @@ $("#content").css("max-width", "1100px")
 <li><em>it is that you can use open ball if they are about as one function: same rate and not too far away in values</em></li>
 </ul></li>
 </ul>
-<h3 id="exercises-1">exercises</h3>
+<h3 id="exercises-2">exercises</h3>
 <ol start="0" style="list-style-type: decimal">
 <li>proof that <span class="math">\(B(S, F)\)</span> complete, where <span class="math">\(S\)</span> is metric space, and <span class="math">\(F\)</span> is Banach space. <span class="math">\(BC(S,F)\)</span> is closed in <span class="math">\(B(S, F)\)</span>
 <ul>
@@ -2086,7 +2024,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul></li>
 </ul>
-<h3 id="exercises-2">exercises</h3>
+<h3 id="exercises-3">exercises</h3>
 <ol style="list-style-type: decimal">
 <li><span class="math">\(F\)</span> complete then <span class="math">\(L(E,F)\)</span> complete. the 0 of former chapter deals with continuous functions under sup norm, this one deals with linear function under the specific norm, which is certainly not the sup norm
 <ul>
@@ -2159,7 +2097,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(A = A^*\)</span> hermitian, self-adjoint</li>
 </ul></li>
 </ul>
-<h3 id="exercises-3">exercises</h3>
+<h3 id="exercises-4">exercises</h3>
 <p><code>fix me</code></p>
 <h2 id="the-general-integral">the general integral</h2>
 <ul>
@@ -2276,7 +2214,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul>
 <p><code>fix me</code></p>
-<h3 id="exercises-4">exercises</h3>
+<h3 id="exercises-5">exercises</h3>
 <p><code>fix me</code></p>
 <h2 id="duality-and-representation-theorems">duality and representation theorems</h2>
 <h2 id="some-application-of-integration">some application of integration</h2>
