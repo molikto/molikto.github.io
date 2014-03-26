@@ -64,7 +64,20 @@ $("#content").css("max-width", "1100px")
         </div>
     </div>
     <div class="col-md-8">
-        <h1 id="meta-note">meta note</h1>
+        <h1 id="courses-to-be-done">courses to be done</h1>
+<ul>
+<li><a href="http://math.stanford.edu/~ionel/143/143hw-w13.html">http://math.stanford.edu/~ionel/143/143hw-w13.html</a></li>
+<li><a href="http://math.stanford.edu/~schoen/math144">http://math.stanford.edu/~schoen/math144</a></li>
+<li><a href="http://math.stanford.edu/~conrad/145Page/handouts.html">http://math.stanford.edu/~conrad/145Page/handouts.html</a></li>
+<li><a href="http://math.stanford.edu/~randrade/teaching/old/2012-2013/146">http://math.stanford.edu/~randrade/teaching/old/2012-2013/146</a></li>
+<li><a href="http://math.stanford.edu/~lhhuang/147/">http://math.stanford.edu/~lhhuang/147/</a></li>
+<li><a href="http://math.stanford.edu/~randrade/teaching/old/2012-2013/148">http://math.stanford.edu/~randrade/teaching/old/2012-2013/148</a></li>
+<li><a href="http://math.stanford.edu/~conrad/154Page">http://math.stanford.edu/~conrad/154Page</a></li>
+<li><a href="http://math.stanford.edu/~vakil/02-210">http://math.stanford.edu/~vakil/02-210</a></li>
+<li><a href="http://math.stanford.edu/~vakil/07-210B">http://math.stanford.edu/~vakil/07-210B</a></li>
+<li>and <a href="http://explorecourses.stanford.edu/CourseSearch/search?filter-catalognumber-MATH=on&amp;filter-academiclevel-GR=on&amp;page=0&amp;q=MATH&amp;view=catalog&amp;academicYear=&amp;collapse=,5,6,7,">more</a></li>
+</ul>
+<h1 id="meta-note">meta note</h1>
 <ul>
 <li>doing mathematics is like exploring a very different universe</li>
 <li>mathematics study objects and there structure inside and maps outside. so we divide our notes normally into 3 parts</li>
@@ -77,6 +90,14 @@ $("#content").css("max-width", "1100px")
 <li>mathematical truth can be discovered just as experimental science, we try examples see the result, make a conjuncture, and proof it</li>
 <li>i want to solve problems <a href="http://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics">http://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics</a></li>
 <li>actually proofing like Coq is good. for example, <em>every ideal is an principle ideal</em> should really be a function <code>ideal(p) -&gt; principle(p)</code> so it reminds us to find a ideal that do not instantly an principle and use this function to convince that it is an principle</li>
+<li>they said the Grothendieck do not solve problems, he found out a comfort space to the problem to stay at, but even working out the details is hard for me. is he had some <strong>intuition for abstraction</strong>???</li>
+<li>in view of “all theorems proofed is trivial”, the most important thing about machine proofed theorem is the softwares we used to proof them, so we can ask more questions</li>
+<li><em>It’s like a new toaster that comes with a 16-page manual. If you already under- stand toasters and if the toaster looks like previous toasters you’ve encountered, you might just plug it in and see if it works, rather than first reading all the details in the manual.</em></li>
+<li>i wish someday i can read the posts in <a href="http://zx31415.wordpress.com/page/2/">this</a> blog</li>
+<li>hot to compactly represent a mathematical structure?</li>
+<li>logic: not a implies not b <span class="math">\(\Leftrightarrow\)</span> b implies a</li>
+<li>the reason that we construct so many constructions is that we concrete our proof process by making them actually shown before your eyes, by constructions</li>
+<li>i do not know, but it seems to me that after read Lang’s Algebra and Real and Functional Analysis, you can read Algebraic Geometry</li>
 </ul>
 <h1 id="type">type</h1>
 <h2 id="idea">idea</h2>
@@ -307,7 +328,10 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-product-category" class="crosslink">product category</span></li>
 <li><span id="cross-dual-category" class="crosslink">dual category</span>
 <ul>
-<li><span id="cross-contravariant" class="crosslink">contravariant</span></li>
+<li><span id="cross-contravariant" class="crosslink">contravariant</span>
+<ul>
+<li>example of a contravariant functor. <span class="math">\(\mathcal{U}\to \mathcal{Ring}\)</span> take a space <span class="math">\(T\)</span> to the ring of real valued continuous functions on <span class="math">\(T\)</span>, then a continuous function between <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> will pull back a function <span class="math">\(a: Y\to{\mathbb{R}}\)</span> to <span class="math">\(b: X\to{\mathbb{R}}\)</span>, so contravariant</li>
+</ul></li>
 </ul></li>
 <li><span id="cross-skeleton-category" class="crosslink">skeleton category</span>
 <ul>
@@ -447,6 +471,32 @@ $("#content").css("max-width", "1100px")
 <p><img src="./images/adjoint4.jpg" style="width:450px" /></p>
 <h3 id="monads">monads</h3>
 <p><code>fix me: finish the lecture</code></p>
+<h3 id="abelian-category">abelian category</h3>
+<ul>
+<li><span id="cross-additive-category" class="crosslink">additive category</span>
+<ul>
+<li>conditions
+<ul>
+<li><span class="math">\({\mathcal{A}}(E, F)\)</span> is abelian group</li>
+<li>law of composition is bilinear</li>
+<li>a zero object <span class="math">\(0\)</span>, such that <span class="math">\(caa(0, E)\)</span> and <span class="math">\(caa(E, 0)\)</span> has precisely one element</li>
+<li>finite products and finite coproducts exists</li>
+</ul></li>
+<li>kernel of <span class="math">\(E\xleftarrow{f}F\)</span>. a morphism <span class="math">\(E'\to E\)</span> such that <span class="math">\(0\to {\mathcal{A}}(X, E')\to{\mathcal{A}}(X, E)\to{\mathcal{A}}(X, F)\)</span> is exact for all <span class="math">\(X\)</span></li>
+<li>cokernel of <span class="math">\(f\)</span>. a map <span class="math">\(F\to F''\)</span> such that <span class="math">\(0\to {\mathcal{A}}(F'', X)\to {\mathcal{A}}(F, X)\to{\mathcal{A}}(E, X)\)</span> is exact for all <span class="math">\(X\)</span></li>
+</ul></li>
+<li><span id="cross-abelian-category" class="crosslink">abelian category</span>
+<ul>
+<li>conditions
+<ul>
+<li>kernel and cokernel exists</li>
+<li>if <span class="math">\(f:E\to F\)</span> is a morphism with kernel <span class="math">\(0\)</span>, then <span class="math">\(f\)</span> is kernel of its cokernel. if <span class="math">\(f: E\to F\)</span> is morphism with cokernel <span class="math">\(0\)</span>, then <span class="math">\(f\)</span> is the cokernel of its kernel. a morphism with <span class="math">\(0\)</span> kernel and cokernel is <a href="#cross-isomorphism">isomorphism</a></li>
+</ul></li>
+<li><span id="cross-subobject" class="crosslink">subobject</span></li>
+<li><span id="cross-quotient-object" class="crosslink">quotient object</span></li>
+<li>example: vector bundles over a topological space</li>
+</ul></li>
+</ul>
 <h3 id="references-1">references</h3>
 <ul>
 <li><span id="cross-ref-youtube-category-video" class="crosslink">ref-youtube-category-video</span> <a href="http://simonwillerton.staff.shef.ac.uk/TheCatsters">http://simonwillerton.staff.shef.ac.uk/TheCatsters</a>
@@ -675,6 +725,9 @@ $("#content").css("max-width", "1100px")
 <li>can be viewed as <a href="#cross-connected-category">connected category</a>, then the groupoid viewed as a <a href="#cross-category">category</a> will have <a href="#cross-skeleton-category">skeleton category</a> one element with full <a href="#cross-isomorphism">isomorphism</a></li>
 </ul></li>
 </ul></li>
+</ul>
+<p>remark: see <a href="http://terrytao.wordpress.com/2009/10/19/grothendiecks-definition-of-a-group">this</a> and <a href="http://terrytao.wordpress.com/2010/07/10/cayley-graphs-and-the-geometry-of-groups">this</a> for how to think about groups</p>
+<ul>
 <li><span id="cross-group" class="crosslink">group</span> <span class="math">\({\mathcal{Grp}}\)</span> subcategory of <span class="math">\({\mathcal{Mon}}\)</span>
 <ul>
 <li><a href="#cross-object">object</a>
@@ -1158,7 +1211,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(B = A[S]=\sum as^is^j\cdots s^k\)</span> with <span class="math">\(A\)</span> commutate with <span class="math">\(S\)</span>, <span class="math">\(S\)</span> is a set of <span id="cross-ring-generators" class="crosslink">ring generators</span> of <span class="math">\(B\)</span> over <span class="math">\(A\)</span>. if <span class="math">\(S\)</span> is finite, we say that <span class="math">\(B\)</span> is finitely generated over <span class="math">\(A\)</span></li>
 <li><a href="#cross-product">product</a> exists and is like group product. the inclusion map is not ring homomorphism, though in group this is true</li>
 <li><a href="#cross-coproduct">coproduct</a> see <a href="http://en.wikipedia.org/wiki/Category_of_rings">Wikipedia</a></li>
-<li><span id="cross-left-ideal" class="crosslink">left ideal</span> additive subgroup and <span class="math">\(A\alpha\subset \alpha\)</span>, <span id="cross-right-ideal" class="crosslink">right ideal</span> <span class="math">\(\alpha A = \alpha\)</span>, <span id="cross-ideal" class="crosslink">ideal</span> <span class="math">\(\alpha  = A\alpha = \alpha A\)</span>
+<li><span id="cross-left-ideal" class="crosslink">left ideal</span> <strong>additive subgroup</strong> and <span class="math">\(A\alpha\subset \alpha\)</span>, <span id="cross-right-ideal" class="crosslink">right ideal</span> <span class="math">\(\alpha A = \alpha\)</span>, <span id="cross-ideal" class="crosslink">ideal</span> <span class="math">\(\alpha  = A\alpha = \alpha A\)</span>
 <ul>
 <li><em>ideal is submodule of the ring</em></li>
 <li>ideal is kernel, kernel is ideal
@@ -1252,7 +1305,7 @@ $("#content").css("max-width", "1100px")
 <li>distributive. trivial</li>
 </ul></li>
 <li>if <span class="math">\(0\in S\)</span> then <span class="math">\(S^{-1}A = \{0/1\}\)</span></li>
-<li><span class="math">\(\varphi_S: A\to S^{-1}A\)</span> such that <span class="math">\(a\to a/1\)</span>, and every element in <span class="math">\(\varphi_S(S)\)</span> is invertible, by <span class="math">\(1/s\)</span>, and this is universal in such morphisms. proof by for such a <span class="math">\(f:A\to B\)</span> we have <span class="math">\(f(s_1)(f(s')f(a)-f(s)f(a'))=0\)</span> to we have <span class="math">\(f(a)f(s)^{-1}=f(a')f(s')^{-1}\)</span> if we send <span class="math">\(a/s\)</span> to <span class="math">\(f(a)f(s)^{-1}\)</span> it is well defined and it is homomorphism and commutative, and unique</li>
+<li><span class="math">\(\varphi_S: A\to S^{-1}A\)</span> such that <span class="math">\(a\to a/1\)</span>, and every element in <span class="math">\(\varphi_S(S)\)</span> is invertible, by <span class="math">\(1/s\)</span>, and this is universal in such morphisms (making <span class="math">\(S\)</span> invertible!!!, it is an <strong>initial</strong>, and this means factor though, so what we should do is find the unique initial map that is induced by the actual map). proof by for such a <span class="math">\(f:A\to B\)</span> we have <span class="math">\(f(s_1)(f(s')f(a)-f(s)f(a'))=0\)</span> to we have <span class="math">\(f(a)f(s)^{-1}=f(a')f(s')^{-1}\)</span> if we send <span class="math">\(a/s\)</span> to <span class="math">\(f(a)f(s)^{-1}\)</span> it is well defined and it is homomorphism and commutative, and unique</li>
 <li>if <span class="math">\(A\)</span> is entire and <span class="math">\(S\)</span> do not contains <span class="math">\(0\)</span> then <span class="math">\(\varphi_S\)</span> is injective
 <ul>
 <li><span class="math">\(S\)</span> is non-zero elements, then we have <span id="cross-quotient-field" class="crosslink">quotient field</span> of <span class="math">\(A\)</span> and it is an <a href="#cross-field">field</a></li>
@@ -1264,11 +1317,14 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-local-ring" class="crosslink">local ring</span> commutative and has unique maximal ideal
 <ul>
 <li>if <span class="math">\(x\notin m\)</span> then <span class="math">\(x\)</span> is unit. proof by <span class="math">\(Ax = A\)</span></li>
-<li><code>fix me: local ring at p</code></li>
+<li><span id="cross-local-ring-at-a-prime-ideal" class="crosslink">local ring at a prime ideal</span> <span class="math">\(S^{-1}A\)</span> called local ring <span class="math">\(A\)</span> at <span class="math">\(p\)</span> where <span class="math">\(S=A-p\)</span>
+<ul>
+<li>proof. we see that <span class="math">\(S\)</span> is a multiplicative submonoid, by the definition of prime ideal. we see that <span class="math">\(a/s\)</span> is a maximal ideal. it is an ideal, by it has unit, and additive group, and that closed as an ideal. we see that it is maximal by suppose there is an <span class="math">\(m\subset m'\)</span>, then we have <span class="math">\(x\in m'\land x\notin m\)</span> then <span class="math">\(m+(x)\subset m'\)</span>, we proof it is actually <span class="math">\(A\)</span>. <span class="math">\(x\)</span> must be some <span class="math">\(s_1/s_2\)</span>, so we have <span class="math">\(m'=Am'=A\frac{s_2}{s_1}m'\supset A\)</span></li>
+</ul></li>
 </ul></li>
 <li>we can define <span class="math">\(\psi_S:J(A)\to J(S^{-1}A)\)</span> and it is homomorphism, and preserve intersection and inclusions
 <ul>
-<li><code>fix me: proof it</code></li>
+<li>proof is trivial <code>fix me</code></li>
 </ul></li>
 </ul></li>
 <li><span id="cross-Noetherian" class="crosslink">Noetherian</span>. <a href="#cross-commutative">commutative</a> ring and every ideal is finitely generated</li>
@@ -1321,7 +1377,11 @@ $("#content").css("max-width", "1100px")
 <p><img src="./images/entires.png" style="width:450px" /></p>
 <h3 id="exercises-1">exercises</h3>
 <ol style="list-style-type: decimal">
-<li></li>
+<li>we inspect an ideal <span class="math">\(\alpha\)</span> if there exists <span class="math">\(xy\in \alpha\)</span> and <span class="math">\(x\notin \alpha\)</span> and <span class="math">\(y\notin\alpha\)</span> then <span class="math">\(x\)</span> and <span class="math">\(y\)</span> cannot both in <span class="math">\(S\)</span>, because then <span class="math">\(xy\in S\)</span>, so we have <span class="math">\(alpha + (x)\)</span> is bigger than <span class="math">\(\alpha\)</span> so if it is maximal. so we have it</li>
+<li>this is easy, we have easily an isomorphism of fields, and then we proof using <span class="math">\(p'\)</span> that every ideal is contained in <span class="math">\(m'\)</span></li>
+<li>proofed above</li>
+<li>trivial</li>
+<li>we show that the they are prime <code>fix me</code>, and give the factorization</li>
 </ol>
 <p><code>fix me</code></p>
 <h3 id="module">module</h3>
@@ -1332,7 +1392,7 @@ $("#content").css("max-width", "1100px")
 <li><a href="#cross-object">object</a>. (left) <span class="math">\(A\)</span>-module <span class="math">\(M\)</span>
 <ul>
 <li><span class="math">\(M\)</span> an <a href="#cross-abelian-group">abelian group</a></li>
-<li><span class="math">\(A\)</span> a ring and operate on <span class="math">\(M\)</span> (as multiplicative monoid) <code>fix me: that's wired, i think is is automorphism? but it is only homomorphism?</code></li>
+<li><span class="math">\(A\)</span> a ring and operate on <span class="math">\(M\)</span> (as multiplicative monoid)</li>
 <li><span class="math">\(\forall a, b\in A, x, y\in M: (a+b)x = ax + bx \land a(x+y) = ax + ay\)</span></li>
 <li>we have
 <ul>
@@ -1365,10 +1425,28 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span class="math">\(M' \to M'/{\text{Im }}f\)</span> <span id="cross-cokernel" class="crosslink">cokernel</span></li>
 </ul></li>
-<li><a href="#cross-decomposition-1">decomposition 1</a> etc. holds. we proof by verify the group-isomorphisms is module-isomorphism <code>fix me: do it</code></li>
+<li><a href="#cross-decomposition-1">decomposition 1</a> etc. holds. we proof by verify the group-isomorphisms is module-isomorphism</li>
 </ul></li>
-<li><span id="cross-submodule" class="crosslink">submodule</span> an additive subgroup such that <span class="math">\(AN\in N\)</span>. well defined because it is closed under <span class="math">\(A\)</span></li>
-<li>when <span class="math">\(A\)</span> entire, <span id="cross-torsion-submodule" class="crosslink">torsion submodule</span> <span class="math">\(M_{\text{tor}}\)</span> <span class="math">\(x\in M: \exists a\in A : a\neq 0 \land ax = 0\)</span>. it is well-defined for we have entire!!!</li>
+<li><span id="cross-the-group-of-module-homomorphisms" class="crosslink">the group of module homomorphisms</span>. let <span class="math">\(A\)</span> a ring and <span class="math">\(X\)</span>, <span class="math">\(X'\)</span> modules, we investigate the <a href="#cross-abelian-group">abelian group</a> <span class="math">\({\text{Hom}}_A(X', X)\)</span> which contains <span class="math">\(f: X'\to X\)</span>
+<ul>
+<li>if <span class="math">\(A\)</span> is commutative, then <span class="math">\({\text{Hom}}_A(X', X)\)</span> is a <span class="math">\(A\)</span>-module, with <span class="math">\((af)(x) = af(x)\)</span></li>
+<li>it is also a <a href="#cross-functor">functor</a>, which is contravariant in the first and covariant in the second
+<ul>
+<li>when view the <a href="#cross-codomain">codomain</a> fixed, it is a functor <span class="math">\({\text{Hom}}(L, R)\to ({\text{Hom}}(R, D)\to {\text{Hom}}(L, D))\)</span> it is contravariant because we maps <span class="math">\(L\to {\text{Hom}}(L, D)\)</span>, by the definition of a functor, we know it is a functor, please consider what is the identity map in the right category</li>
+</ul></li>
+<li>for a single homomorphism <span class="math">\(f\)</span> which by the functor is mapped to a homomorphism of the <span class="math">\({\text{Hom}}\)</span> sets, we verify that it is again a homomorphism of the abelian group of homomorphisms, which is just <span class="math">\((g_1+g_2)\circ f = g_1\circ f + g_2\circ f\)</span></li>
+<li><span class="math">\(X'\xrightarrow{\lambda}X\rightarrow X''\to 0\)</span> is exact iff <span class="math">\({\text{Hom}}(X', Y)\leftarrow {\text{Hom}}(X, Y)\leftarrow {\text{Hom}}(X'', Y)\leftarrow 0\)</span> is exact
+<ul>
+<li>this statement is rather mysterious to me. for example, the <span class="math">\(\Rightarrow\)</span> direction actually say that you should proof the kernel of second arrow is trivial, and the image of this map is the kernel of the last arrow, this is easily proofed, by looking at the exact graph. i think the reverse direction is also easy. the problems is the <span class="math">\({\text{Hom}}\)</span>s is just the arrow induced, there should be other ways, so i do not know how one can use this result</li>
+</ul></li>
+<li><span class="math">\(0\to Y'\to Y\to Y''\)</span> iff <span class="math">\(0\to {\text{Hom}}(X, Y')\to{\text{Hom}}(X, Y)\to {\text{Hom}}(X, Y'')\)</span>
+<ul>
+<li>as an example, the fist two arrow saids, that it is an embedding, and the left says that any homomorphism to one submodule is an homomorphism to the bigger module, by only projecting to the submodule</li>
+</ul></li>
+</ul></li>
+<li><span id="cross-the-ring-of-module-endomorphisms" class="crosslink">the ring of module endomorphisms</span>. the idea of representation</li>
+<li><span id="cross-submodule" class="crosslink">submodule</span> an additive subgroup such that <span class="math">\(AN\subset N\)</span>. well defined because it is closed under <span class="math">\(A\)</span></li>
+<li>when <span class="math">\(A\)</span> entire, <span id="cross-torsion-submodule" class="crosslink">torsion submodule</span> <span class="math">\(M_{\text{tor}}\)</span> <span class="math">\(x\in M: \exists a\in A : a\neq 0 \land ax = 0\)</span>. it is well-defined for we have entire!!!. in what sense it resembles <a href="#cross-torsion-group">torsion group</a>? think <span class="math">\(R\)</span> as <span class="math">\(/NZ\)</span></li>
 <li>if <span class="math">\(\alpha\)</span> is an <a href="#cross-left-ideal">left ideal</a> then we have <span class="math">\(\alpha M = \sum a_i x_i\)</span> is an submodule. and we have <span class="math">\(\alpha (\beta M) = (\alpha\beta)M\)</span>, <span class="math">\((\alpha + \beta)M = \alpha M + \beta M\)</span>, <span class="math">\(\alpha (N+N') = \alpha N + \alpha N'\)</span>
 <ul>
 <li>proof 1. it is closed so an subgroup, <span class="math">\(A\alpha M\subset \alpha M\)</span> so it is submodule</li>
@@ -1376,12 +1454,55 @@ $("#content").css("max-width", "1100px")
 <li>proof 3. they are well defined almost for the abelian group</li>
 </ul></li>
 <li><span id="cross-factor-module" class="crosslink">factor module</span> for a submodule <span class="math">\(N\)</span> we have <span class="math">\(R\)</span> also operate on <span class="math">\(M/N\)</span>, it is well defined for <span class="math">\(x = y+n\)</span> thing. it is again a module, proof <span class="math">\(abx\)</span> by using alternatively thinking the elements in them and the coset itself, proof <span class="math">\(1x = x\)</span> trivially, proof <span class="math">\((a+b)x\)</span> and <span class="math">\(a(x+y)\)</span> by vanishing on all <span class="math">\(an\)</span> things, using the definition of <strong><a href="#cross-submodule">submodule</a></strong></li>
+<li><a href="#cross-product">product</a> exists</li>
+<li><a href="#cross-coproduct">coproduct</a> exists</li>
+<li><span id="cross-linear-combination" class="crosslink">linear combination</span> for <span class="math">\(S\in M\)</span>. <span class="math">\(\sum_{x\in S} a_x x\)</span> almost all but finite equal to <span class="math">\(0\)</span>
+<ul>
+<li><span class="math">\(N=A{\langle S \rangle}\)</span> <a href="#cross-submodule">submodule</a> generated by <span class="math">\(S\)</span></li>
+<li><span id="cross-principal-module" class="crosslink">principal module</span></li>
+<li><span id="cross-finite-generated-module" class="crosslink">finite generated module</span></li>
+<li><span id="cross-linearly-independent" class="crosslink">linearly independent</span></li>
+</ul></li>
+<li><span class="math">\(0\to M'\xrightarrow{f} M\xrightarrow{g} M''\to 0\)</span> exact then 1 iff 2, and 1 or 2 implies 3 and we say that <span class="math">\(\phi\)</span> splits <span class="math">\(f\)</span> and <span class="math">\(\varphi\)</span> spilits <span class="math">\(g\)</span>
+<ol style="list-style-type: decimal">
+<li><span class="math">\(\exists \varphi :M''\to M: g\circ\varphi = {\text{id}}\)</span></li>
+<li><span class="math">\(\exists\phi:M\to M': \phi \circ f = {\text{id}}\)</span></li>
+<li><span class="math">\(M = {\text{Im }}f \oplus {\text{Ker }}\phi\)</span> and <span class="math">\(M = {\text{Ker }}g\oplus {\text{Im }}\varphi\)</span></li>
+</ol></li>
+<li><span id="cross-free-module" class="crosslink">free module</span> module has base or zero module
+<ul>
+<li><span id="cross-basis-of-module" class="crosslink">basis of module</span> non-empty, generate <span class="math">\(M\)</span> and <a href="#cross-linearly-independent">linearly independent</a>
+<ul>
+<li>modules has no basis: far too many</li>
+</ul></li>
+<li>universal property, isomorphism of same cardinal base</li>
+</ul></li>
+<li><span id="cross-principal-module" class="crosslink">principal module</span> <span class="math">\(x\in M\)</span> such that <span class="math">\(M = Ax\)</span>
+<ul>
+<li>then <span class="math">\(A/\alpha \approx M\)</span></li>
+</ul></li>
 </ul></li>
 </ul>
+<p><code>fix me: 1.3.E and 1.3.F in Algebraic Geometry note, localization of module</code></p>
 <h3 id="vector-space">vector space</h3>
 <ul>
-<li><a href="#cross-module">module</a> over a field <span class="math">\(F\)</span></li>
+<li><a href="#cross-module">module</a> over a field <span class="math">\(F\)</span>
+<ul>
+<li>for <span class="math">\(S\in T\)</span> where <span class="math">\(S\)</span> <a href="#cross-linearly-independent">linearly independent</a> and <span class="math">\(S\)</span> generates <span class="math">\(V\)</span>, we have a base <span class="math">\(S\subset B\subset T\)</span>
+<ul>
+<li>proof using <a href="#cross-Zorn's-lemma">Zorn’s lemma</a>, and that <a href="#cross-field">field</a> has all inverses</li>
+</ul></li>
+<li>all basis has same cardinal
+<ul>
+<li><code>fix me: general proof</code></li>
+<li><span id="cross-dimension" class="crosslink">dimension</span> well-defined</li>
+<li><span class="math">\({\text{dim }}V = {\text{dim }}W + {\text{dim }}V/W\)</span></li>
+<li><span class="math">\({\text{dim }}V = {\text{dim }}{\text{Ker }}f + {\text{dim }}{\text{Im }}f\)</span></li>
+</ul></li>
+</ul></li>
 </ul>
+<p><code>fix me: page 30 of algebraic geometry notes, about dual and equvilance of finite dimensional vector space, 1.2C and 1.2.D</code></p>
+<p><code>fix me: the section about general algebras in page 121, and most section in. i think i should have a concrete understanding of group, ring and polynomials, and then finish Galois Theory, then Linear Algebra and then Homological Algebra, then skim Commutative Algebra, then try Algebraic Geometry</code></p>
 <h3 id="polynomial">polynomial</h3>
 <p><em>first part is using the language of single variable polynomial, but they also works for several variables</em></p>
 <ul>
