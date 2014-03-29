@@ -64,7 +64,8 @@ $("#content").css("max-width", "1100px")
         </div>
     </div>
     <div class="col-md-8">
-        <h1 id="courses-to-be-done">courses to be done</h1>
+        <p><strong>i think the best state of doing mathematics is always have the big picture in background, but in the same time, always solving details and problems, thus making real progress</strong></p>
+<h1 id="courses-to-be-done">courses to be done</h1>
 <ul>
 <li><a href="http://math.stanford.edu/~ionel/143/143hw-w13.html">http://math.stanford.edu/~ionel/143/143hw-w13.html</a></li>
 <li><a href="http://math.stanford.edu/~schoen/math144">http://math.stanford.edu/~schoen/math144</a></li>
@@ -73,9 +74,8 @@ $("#content").css("max-width", "1100px")
 <li><a href="http://math.stanford.edu/~lhhuang/147/">http://math.stanford.edu/~lhhuang/147/</a></li>
 <li><a href="http://math.stanford.edu/~randrade/teaching/old/2012-2013/148">http://math.stanford.edu/~randrade/teaching/old/2012-2013/148</a></li>
 <li><a href="http://math.stanford.edu/~conrad/154Page">http://math.stanford.edu/~conrad/154Page</a></li>
-<li><a href="http://math.stanford.edu/~vakil/02-210">http://math.stanford.edu/~vakil/02-210</a></li>
-<li><a href="http://math.stanford.edu/~vakil/07-210B">http://math.stanford.edu/~vakil/07-210B</a></li>
 <li>and <a href="http://explorecourses.stanford.edu/CourseSearch/search?filter-catalognumber-MATH=on&amp;filter-academiclevel-GR=on&amp;page=0&amp;q=MATH&amp;view=catalog&amp;academicYear=&amp;collapse=,5,6,7,">more</a></li>
+<li>i think in the graduate courses of Stanford, there are Analysis * 2, Algebra * 2, Geometry * 3, Algebraic Geometry * 3, MATH 243 Several Complex Variables, MATH 244 Riemann Surfaces, MATH 245 Topics in Algebraic Geometry * 3. this is about the picture</li>
 </ul>
 <h1 id="meta-note">meta note</h1>
 <ul>
@@ -98,6 +98,11 @@ $("#content").css("max-width", "1100px")
 <li>logic: not a implies not b <span class="math">\(\Leftrightarrow\)</span> b implies a</li>
 <li>the reason that we construct so many constructions is that we concrete our proof process by making them actually shown before your eyes, by constructions</li>
 <li>i do not know, but it seems to me that after read Lang’s Algebra and Real and Functional Analysis, you can read Algebraic Geometry</li>
+<li><strong>how to solve it</strong>
+<ul>
+<li><strong>fully see what you have get</strong>. use the tools at hand. it might do not directly leads you to the solution, but anyway use it!</li>
+<li><strong>see the logic of the problem</strong>. assume the solution, and see why it works, or what’s wrong with it</li>
+</ul></li>
 </ul>
 <h1 id="type">type</h1>
 <h2 id="idea">idea</h2>
@@ -497,7 +502,13 @@ $("#content").css("max-width", "1100px")
 <li>example: vector bundles over a topological space</li>
 </ul></li>
 </ul>
-<h3 id="references-1">references</h3>
+<h2 id="higher-category">higher category</h2>
+<ul>
+<li><span id="cross-2-category" class="crosslink">2-category</span></li>
+</ul>
+<h2 id="references-1">references</h2>
+<ul>
+<li>general category theory
 <ul>
 <li><span id="cross-ref-youtube-category-video" class="crosslink">ref-youtube-category-video</span> <a href="http://simonwillerton.staff.shef.ac.uk/TheCatsters">http://simonwillerton.staff.shef.ac.uk/TheCatsters</a>
 <ul>
@@ -512,11 +523,8 @@ $("#content").css("max-width", "1100px")
 <li>excellent! this will be great for review, but i do not know if one can read this first</li>
 <li>most notes here is adapted from these notes</li>
 </ul></li>
-<li><span id="cross-ref-category-for" class="crosslink">ref-category-for</span> <em>Category Theory for Working Mathematician</em></li>
-</ul>
-<h2 id="higher-category">higher category</h2>
-<ul>
-<li><span id="cross-2-category" class="crosslink">2-category</span></li>
+<li><span id="cross-ref-category-for" class="crosslink">ref-category-for</span> *Category Theory for Working Mathematician</li>
+</ul></li>
 </ul>
 <h1 id="set">set</h1>
 <h2 id="idea-2">idea</h2>
@@ -879,7 +887,13 @@ $("#content").css("max-width", "1100px")
 <li>world problem is undecidable…</li>
 </ul></li>
 </ul></li>
-<li><span id="cross-inverse-limit" class="crosslink">inverse limit</span> given <span class="math">\(\{(G_n, f_n)\}\)</span>, the sequences <span class="math">\(x = (x_0, x_1, \dots)\)</span> that satisfy <span class="math">\(x_0 = f_1(x_1)\)</span> etc, form a group <code>fix me: i think this part is non-essential, though interesting, i should read it in a more strong background</code></li>
+<li><span id="cross-inverse-limit" class="crosslink">inverse limit</span> given <span class="math">\(\{(G_n, f_n)\}\)</span>, the sequences <span class="math">\(x = (x_0, x_1, \dots)\)</span> that satisfy <span class="math">\(x_0 = f_1(x_1)\)</span> etc, form a group
+<ul>
+<li><img src="images/group-limit.jpg" style="width:400px" /></li>
+<li>it can also define on a general directed family of groups</li>
+<li><span id="cross-profinite-group" class="crosslink">profinite group</span> inverse limit of finite groups</li>
+<li><span id="cross-Cauchy-sequence-in-group" class="crosslink">Cauchy sequence in group</span>, <span id="cross-null-sequence-in-group" class="crosslink">null sequence in group</span>, <span id="cross-completion-of-group" class="crosslink">completion of group</span>. <code>fix me: is this completable with norm completion? if it is, read this...</code></li>
+</ul></li>
 <li>examples
 <ul>
 <li><span id="cross-symmetric-group" class="crosslink">symmetric group</span> <span class="math">\(S_n\)</span>
@@ -991,8 +1005,11 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>it is again a trivial application of class formula</li>
 </ul></li>
-<li>smallest prime index group is normal <code>fix me</code></li>
-<li>order <span class="math">\(pq\)</span>, <span class="math">\(p\neq q\)</span> and primes, then solvable <code>fix me</code></li>
+<li>smallest prime index group is normal
+<ul>
+<li>proof: if <span class="math">\(N_H=H\)</span> we have <span class="math">\(G\)</span> operates on <span class="math">\(G/H\)</span> and so we have a subgroup into a group of order <span class="math">\(p!\)</span> and we show that the kernel must be <span class="math">\(H\)</span>, i.e. <span class="math">\(hgHg^{-1}h^{-1} = gHg^{-1}\Rightarrow g^{-1}hg \in H\)</span></li>
+</ul></li>
+<li>order <span class="math">\(pq\)</span>, <span class="math">\(p\neq q\)</span> and primes, then solvable. trivial by above lemma</li>
 </ul></li>
 </ul>
 <ul>
@@ -1056,7 +1073,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\({\text{id}}^* = {\text{id}}\)</span></li>
 <li><span class="math">\((f\circ g)^* = g^*\circ f^*\)</span></li>
 <li><span class="math">\((A\times B)^* \cong A^*\times B^*\)</span></li>
-<li><code>fix me: is dual group only in finite case? is this part essential? should i finish this part?</code></li>
+<li><em>the dual things is a special case of a module, study it there</em></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1128,7 +1145,7 @@ $("#content").css("max-width", "1100px")
 <li>from the isomorphism</li>
 <li><span id="cross-Goursat's-lemma" class="crosslink">Goursat's lemma</span>. we show normal by analysis components. then we show that there is an morphism <span class="math">\(G\to G'/N'\)</span> which is constructed by taking the cosets of <span class="math">\(H\)</span> and map back by the cosets, the map is well defined because left is surjective and because you can check for associative. we can see that the kernel is exactly <span class="math">\(N\)</span>. and we show it is isomorphism by showing it is surjective by using right is surjective. this is a rather wired proof</li>
 <li>trivial</li>
-<li><code>fix me: proof again by myself</code> see the proof in <a href="#cross-ref-algebra-course">ref-algebra-course</a>, the main thing is that every conjugate is an automorphism, but what actually conjugate means is not touched</li>
+<li><code>*</code> see the proof in <a href="#cross-ref-algebra-course">ref-algebra-course</a>, the main thing is that every conjugate is an automorphism, but what actually conjugate means is not touched</li>
 <li>it is certainly union of, so we proof for disjoint. we show that if one element in common, then <span class="math">\(HxH' = HyH'\)</span>. the second part and the third part is not proofed. <strong>the goddam misprinting!!!!</strong>. a proof see <a href="#cross-ref-algebra-course">ref-algebra-course</a></li>
 <li>follow the hint. <span class="math">\(N\)</span> is easy to find, and finite is easy to proof. second part is by reduce to normal case, and show that <span class="math">\(N\times N'\)</span> is kernel into some finite group</li>
 <li>proofed above</li>
@@ -1136,12 +1153,74 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-semidirect-product" class="crosslink">semidirect product</span> trivial or lazy… <code>fix me: the properties of semipoduct as limit?</code></li>
 <li><span class="math">\(H\)</span>, <span class="math">\(N\)</span> normal, then <span class="math">\(hn = nh\)</span> and <span class="math">\(H\times N\cong HN\)</span>. the second part is trivial, we proof <span class="math">\(xy = yx\)</span> by first show that every element in <span class="math">\(HN= NH\)</span> has unique decomposition <span class="math">\(xy\)</span> and <span class="math">\(yx\)</span>, then if <span class="math">\(xy = y'x = x'y'\)</span> we have <span class="math">\(x = x'\)</span> and <span class="math">\(y = y'\)</span> so <span class="math">\(xy = yx\)</span></li>
 <li>the first part can be shown by calculate the order of <span class="math">\(NH\)</span> which must be <span class="math">\(|G|\)</span>. the second part is by assuming <span class="math">\(K = g(N)\neq N\)</span> then <span class="math">\(KN\subset G\)</span> then <span class="math">\((G:N) = |G|/|N| &gt; |KN| / |N|\)</span> cannot relative prime to <span class="math">\(|N|\)</span></li>
-<li><code>fix me</code> i didn’t make it out myself, see <a href="#cross-ref-algebra-course">ref-algebra-course</a>. you have <span class="math">\(|\bigcup G_s| \leq \sum |G_s| = |G|\)</span> and the left is not disjoint. the <span id="cross-right-part-about-finite-one-orbit-action" class="crosslink">right part about finite one orbit action</span> should be remembered</li>
+<li><code>*</code> i didn’t make it out myself, see <a href="#cross-ref-algebra-course">ref-algebra-course</a>. you have <span class="math">\(|\bigcup G_s| \leq \sum |G_s| = |G|\)</span> and the left is not disjoint. the <span id="cross-right-part-about-finite-one-orbit-action" class="crosslink">right part about finite one orbit action</span> should be remembered</li>
 <li>assume <span class="math">\(\{a_i\}\)</span> is an coset representative, then <span class="math">\(\bigcup_{x\in G} xHx^{-1} = \bigcup_i \bigcup_{x\in a_iH}xHx^{-1} = \bigcup_i a_iH a_i^{-1}\)</span>, because <span class="math">\(G = \bigcup_i a_i H\)</span>, left is not disjoint union, and right is disjoint union, so…</li>
 <li>for kindergarten?</li>
 <li>same above?</li>
 <li>the number of orbit of <span class="math">\(G\)</span> actioning on <span class="math">\(S\)</span> is the average number of fix points of an element of <span class="math">\(G\)</span></li>
-<li><code>fix me: i should proof this by myself</code> the proof is by <span class="math">\(P\)</span> actioning on <span class="math">\(A\)</span>, the number of fix points equal <span class="math">\(p\)</span> mod <span class="math">\(p\)</span> then there should be <span class="math">\(p\)</span></li>
+<li><code>*</code> the proof is by <span class="math">\(P\)</span> actioning on <span class="math">\(A\)</span>, the number of fix points equal <span class="math">\(p\)</span> mod <span class="math">\(p\)</span> then there should be <span class="math">\(p\)</span></li>
+<li>a <span class="math">\(p\)</span>-Sylow group of <span class="math">\(H\)</span> is a <span class="math">\(p\)</span> group of <span class="math">\(G\)</span> and then it is contained in a <span class="math">\(p\)</span>-Sylow group of <span class="math">\(G\)</span>, <span class="math">\(P\)</span>, we should proof that <span class="math">\(P_H = P\cap H\)</span>, certainly <span class="math">\(P_H\subset P\cap H\)</span>, we should proof that <span class="math">\(P\cap H\)</span> is a <span class="math">\(p\)</span>-group, thus <span class="math">\(P\cap H=P_H\)</span> by cardinality. this is a easy fact</li>
+<li>all <span class="math">\(p\)</span>-Sylow group is conjugate</li>
+<li><span class="math">\(P\)</span>, <span class="math">\(P'\)</span> two <span class="math">\(p\)</span>-Sylow group
+<ul>
+<li><span class="math">\(P'\subset N_P\Rightarrow P' = P\)</span>. because it is Sylow subgroup!</li>
+<li><span class="math">\(N_{P'} = N_P\Rightarrow P' = P\)</span>. <span class="math">\(P'\subset N_{P'}\)</span></li>
+<li><span class="math">\(N(N(P)) = N(P)\)</span>. we suppose <span class="math">\(a N_P a^{-1} = N_P\)</span> then <span class="math">\(P\)</span> is mapped into a conjugate subgroup of <span class="math">\(N_P\)</span> but we know that there is one, so <span class="math">\(aPa^{-1} = P\)</span> so <span class="math">\(a\in N_P\)</span></li>
+</ul></li>
+<li>a group of order <span class="math">\(p^2\)</span>, has a subgroup of center of order <span class="math">\(p\)</span>, so the cosets is cyclic and generated by some <span class="math">\(aP\)</span>, and thus all elements of <span class="math">\(G\)</span> is some <span class="math">\(a^ip^j\)</span>, and it is abelian. we consider the max order of elements of <span class="math">\(G\)</span>, if it is <span class="math">\(p^2\)</span> then <span class="math">\(G \cong C_{p^2}\)</span>, if it is <span class="math">\(p\)</span>, then we have all none <span class="math">\(e\)</span> elements have order <span class="math">\(p\)</span>, and we have <span class="math">\(G\cong C_p \times C_p\)</span></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>we use same trick as above</li>
+<li>it is not abelian, and normal is easy because smallest prime index</li>
+<li>this is easy</li>
+</ol></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>fixed points, show it is abelian</li>
+<li>trivial</li>
+</ol></li>
+<li>group of order less than 60 is solvable. first, <span class="math">\(p\neq q\)</span> is solvable. and <span class="math">\(p^2\)</span> is abelian. and <span class="math">\(p^n\)</span> is solvable. <span class="math">\(pqjkq\)</span> solvable
+<ul>
+<li>for <span class="math">\(p^2q\)</span> with <span class="math">\(p\lt q\)</span> we have <span class="math">\(q\)</span>-group exists, and it is normal, and then it is cyclic, and then we have the factor group cyclic, thus solvable</li>
+<li>and by 28, we know that all <span class="math">\(p^2q\)</span> is solvable, and one Sylow subgroups is normal</li>
+<li>so we actually only need to proof for <span class="math">\(24 = 2^3 3\)</span>, <span class="math">\(36 = 2^2 3^2\)</span>, <span class="math">\(40=2^3 5\)</span>, <span class="math">\(48 = 2^4 3\)</span></li>
+<li>by <span class="math">\(p^3q\)</span> we have <span class="math">\(36\)</span>, <span class="math">\(48\)</span> remains, proofed</li>
+</ul></li>
+<li>you show it should be a group of order <span class="math">\(12\)</span> and have 3 <span class="math">\(2^2\)</span>-Sylow group, and 4 <span class="math">\(3\)</span>-Sylow group. then you show that it is not ok, because you have 8 elements of order 3, and you only got 1 <span class="math">\(4\)</span>-Sylow group
+<ul>
+<li>you can proof a similar result for <span class="math">\(p^3q\)</span> which will result in group of order <span class="math">\(24\)</span>, with 4 <span class="math">\(3\)</span>-Sylow and 3 <span class="math">\(2^3\)</span>-Sylow group, you proof that if it is the case, then all element is in some Sylow subgroup, which cannot be</li>
+</ul>
+<ol start="29" style="list-style-type: decimal">
+<li>trivial</li>
+</ol>
+<ul>
+<li>we can proof using the same think for <span class="math">\(p^4q\)</span>, <span class="math">\(p^2p^2\)</span>, reduce always to the case of <span class="math">\(2\)</span> and <span class="math">\(3\)</span></li>
+<li><span id="cross-Burnside-theorem" class="crosslink">Burnside theorem</span>. <a href="http://en.wikipedia.org/wiki/Burnside_theorem">link</a></li>
+</ul></li>
+<li>by 28</li>
+<li>isomorphism groups of group order leq 10. 1-5 is already done by exercise 1. 7 is prime, 9 is by 24
+<ul>
+<li><ol start="6" style="list-style-type: decimal">
+<li>we have group of order 3 is normal so, assume <span class="math">\(a^2 = e\)</span> and <span class="math">\(b^3 = e\)</span> is the generators. we have <span class="math">\(aba^{-1}= b\)</span> or <span class="math">\(aba^{-1} = b^2\)</span>. the first case produce the cyclic group of order 6. the second is a valid group</li>
+</ol></li>
+<li><ol start="8" style="list-style-type: decimal">
+<li>if the max order is 8, you have <span class="math">\(C_8\)</span>, abelian. if max order is 4. then this subgroup is normal. we have all our elements then we calculate? <a href="http://groupprops.subwiki.org/wiki/Groups_of_order_8">link</a>. if max is 2, we have it is abelian, and it should be <span class="math">\(C_2\times C_2\times C_2\)</span>, it is abelian</li>
+</ol></li>
+<li><ol start="10" style="list-style-type: decimal">
+<li>we have group of order 5 is normal…</li>
+</ol></li>
+<li><code>fix me</code></li>
+</ul></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li>see 31</li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li>trivial</li>
+<li>that <span class="math">\(H\)</span> a subgroup of abelian group <span class="math">\(G\)</span> then there is a subgroup isomorphism to <span class="math">\(G/H\)</span>.</li>
 </ol>
 <p><code>fix me</code></p>
 <h3 id="ring">ring</h3>
@@ -1481,12 +1560,14 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>then <span class="math">\(A/\alpha \approx M\)</span></li>
 </ul></li>
+<li><code>fix me: projective module</code></li>
+<li><code>fix me: section 7 and 8</code></li>
 </ul></li>
 </ul>
 <p><code>fix me: 1.3.E and 1.3.F in Algebraic Geometry note, localization of module</code></p>
 <h3 id="vector-space">vector space</h3>
 <ul>
-<li><a href="#cross-module">module</a> over a field <span class="math">\(F\)</span>
+<li><span id="cross-vector-space" class="crosslink">vector space</span>. <a href="#cross-module">module</a> over a <a href="#cross-field">field</a>
 <ul>
 <li>for <span class="math">\(S\in T\)</span> where <span class="math">\(S\)</span> <a href="#cross-linearly-independent">linearly independent</a> and <span class="math">\(S\)</span> generates <span class="math">\(V\)</span>, we have a base <span class="math">\(S\subset B\subset T\)</span>
 <ul>
@@ -1498,6 +1579,12 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-dimension" class="crosslink">dimension</span> well-defined</li>
 <li><span class="math">\({\text{dim }}V = {\text{dim }}W + {\text{dim }}V/W\)</span></li>
 <li><span class="math">\({\text{dim }}V = {\text{dim }}{\text{Ker }}f + {\text{dim }}{\text{Im }}f\)</span></li>
+</ul></li>
+<li>if <span class="math">\(K\)</span> is a field with <a href="#cross-absolute-value">absolute value</a>, and <span class="math">\(E\)</span> a vector space over <span class="math">\(K\)</span>, then we can define <span id="cross-norm" class="crosslink">norm</span> by
+<ul>
+<li><span class="math">\(|v|\geq 0\)</span> and <span class="math">\(|v|=0\Leftrightarrow v=0\)</span></li>
+<li><span class="math">\(|xv| = |x||v|\)</span></li>
+<li><span class="math">\(|v + w| \leq |v|+|w|\)</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1534,11 +1621,68 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(\Leftrightarrow\)</span> <span class="math">\(f(ut_1, \dots, ut_n) = u^df(t_1, \dots, t_n)\)</span></li>
 </ul></li>
 <li><code>fix me: the group ring and monoid ring part</code></li>
+<li><span id="cross-Euclidean-algorithm" class="crosslink">Euclidean algorithm</span> <span class="math">\(f = pq+r\)</span></li>
+<li>over a field <span class="math">\(k\)</span>
+<ul>
+<li><span class="math">\(k[X]\)</span> is principal, thus <a href="#cross-factorial-ring">factorial ring</a></li>
+<li>has at most <span class="math">\(n\)</span> roots in <span class="math">\(k\)</span>, and if <span class="math">\(a\)</span> is a root, then <span class="math">\(X-a\)</span> divides <span class="math">\(f(X)\)</span></li>
+</ul></li>
+<li><code>fix me: a lot is omitted</code></li>
+<li><span id="cross-power-series" class="crosslink">power series</span></li>
 </ul></li>
 </ul>
-<h3 id="vector-space-1">vector space</h3>
+<h3 id="exercises-2">exercises</h3>
+<p><code>fix me</code></p>
+<h2 id="algebraic-equations">algebraic equations</h2>
+<h3 id="field-theory">field theory</h3>
 <ul>
-<li><span id="cross-vector-space" class="crosslink">vector space</span>. <a href="#cross-module">module</a> over a <a href="#cross-field">field</a></li>
+<li>example of <a href="#cross-field">field</a>s
+<ul>
+<li>number fields. number fields is subfield of <span class="math">\({\mathbb{C}}\)</span> and it is an extension of <span class="math">\({\mathbb{Q}}\)</span></li>
+</ul></li>
+<li><span id="cross-extension-field" class="crosslink">extension field</span> we may view it as an vector space…
+<ul>
+<li><span class="math">\([E:F]\)</span> the dimension of extension
+<ul>
+<li><span id="cross-finite-extension" class="crosslink">finite extension</span>, <span id="cross-infinite-extension" class="crosslink">infinite extension</span></li>
+<li><span class="math">\([E:K]=[E:F][F:K]\)</span></li>
+</ul></li>
+<li><span id="cross-algebraic-element" class="crosslink">algebraic element</span></li>
+<li><span id="cross-the-irreducible-polynomial" class="crosslink">the irreducible polynomial</span> of <span class="math">\(\alpha\)</span> over <span class="math">\(F\)</span>, <span class="math">\({\text{Irr}}(\alpha, F, X)\)</span></li>
+<li><span id="cross-algebraic-extension" class="crosslink">algebraic extension</span>
+<ul>
+<li>a <a href="#cross-finite-extension">finite extension</a> is an <a href="#cross-algebraic-extension">algebraic extension</a></li>
+<li><span class="math">\(\alpha\)</span> is algebraic over <span class="math">\(K\)</span>, then <span class="math">\(K(\alpha) = K[\alpha]\)</span> and <span class="math">\([K(\alpha):K] = {\text{deg}}{\text{Irr}}(\alpha, K, X)\)</span></li>
+</ul></li>
+<li><span id="cross-compositum" class="crosslink">compositum</span> <span class="math">\(EF\)</span>
+<ul>
+<li><span id="cross-finitely-generated-field-over-subfield" class="crosslink">finitely generated field over subfield</span></li>
+</ul></li>
+<li>finitely generated field over algebraic elements is finite algebraic extension</li>
+<li><span id="cross-distinguished-extensions" class="crosslink">distinguished extensions</span> can be chained, lifted, pulled up</li>
+<li>algebraic extensions is distinguished, finite extensions also</li>
+<li><a href="#cross-algebraic-extension">algebraic extension</a> <span class="math">\(E\)</span> of <span class="math">\(K\)</span> and an embedding <span class="math">\(\sigma: E\to E\)</span> is over <span class="math">\(K\)</span>, then <span class="math">\(\sigma\)</span> is automorphism
+<ul>
+<li>we only need to proof surjective, …</li>
+</ul></li>
+<li><span class="math">\(K\)</span> a field and <span class="math">\(f\in K[X]\)</span> then we can always find an extension <span class="math">\(E\)</span> in which <span class="math">\(f\)</span> has a root</li>
+<li><span><span id="cross-algebraic-closure"></span><span id="cross-algebraic-closed" class="crosslink">algebraic closed </span></span> every polynomial in <span class="math">\(L[X]\)</span> degree <span class="math">\(\leq 1\)</span> has root in <span class="math">\(L\)</span>, and it is determined up to isomorphism, <span class="math">\(K^a\)</span></li>
+<li>for field <span class="math">\(K\)</span>, exists field which is algebraic over <span class="math">\(K\)</span> and is <a href="#cross-algebraic-closed">algebraic closed</a></li>
+</ul></li>
+</ul>
+<h3 id="absolute-value">absolute value</h3>
+<ul>
+<li><span id="cross-absolute-value" class="crosslink">absolute value</span> on <a href="#cross-field">field</a> <span class="math">\(K\)</span>
+<ul>
+<li>def: a real function <span class="math">\(|\cdot|\)</span>
+<ul>
+<li><span class="math">\(|x|\geq 0\)</span>, <span class="math">\(|x|=0\Leftrightarrow x = 0\)</span></li>
+<li><span class="math">\(|xy| = |x||y|\)</span></li>
+<li><span class="math">\(|x+y| \leq |x| + |y|\)</span></li>
+</ul></li>
+<li><span id="cross-absolute-value-dependent" class="crosslink">absolute value dependent</span> if they defines same topology</li>
+<li><span class="math">\(|1|=|-1|=1\)</span>, <span class="math">\(|-x| =|x|\)</span>, <span class="math">\(|x^{-1}| = |x|^{-1}\)</span></li>
+</ul></li>
 </ul>
 <h2 id="references-2">references</h2>
 <ul>
@@ -1546,6 +1690,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span id="cross-ref-algebra-comp" class="crosslink">ref-algebra-comp</span> <em>A Companion to Lang’s Algebra</em></li>
 <li><span id="cross-ref-algebra-course" class="crosslink">ref-algebra-course</span>. <a href="http://math.berkeley.edu/~ribet/250/">algebra course at Berkeley</a></li>
+<li><span id="cross-ref-algebra-course-2" class="crosslink">ref-algebra-course-2</span> <a href="http://math.berkeley.edu/~serganov/114">http://math.berkeley.edu/~serganov/114</a></li>
 </ul></li>
 <li><span id="cross-ref-algebra-0" class="crosslink">ref-algebra-0</span> <em>Abstract Algebra: Chapter 0</em>, Paolo Aluffi
 <ul>
@@ -2019,7 +2164,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>it created a semi-constant in <span class="math">\(J\)</span></li>
 <li><em>understand what the theorem says, if you have a ideal, then almost all function that has the zeros of the ideal will in the ideal!!!</em></li>
-<li>i think i should verify carefully for <code>fix me: complex version</code></li>
+<li>complex version requires additionally self conjugate</li>
 </ul></li>
 <li><span id="cross-equicontinuous" class="crosslink">equicontinuous</span> of <span class="math">\(O\subset C(X, F)\)</span> at <span class="math">\(x_0\)</span>, <span class="math">\(X\)</span> is subset of <a href="#cross-metric-space">metric space</a> and <span class="math">\(F\)</span> is <a href="#cross-Banach-space">Banach space</a>. <span class="math">\(\forall e, \exists t (d(x, x_0) &lt; t \Rightarrow \forall f \in O: |f(x)-f(x_0)| &lt; e)\)</span></li>
 <li><span id="cross-Ascoli's-theorem" class="crosslink">Ascoli's theorem</span> <span class="math">\(X\)</span> compact subset of metric space, <span class="math">\(F\)</span> a Banach space, <span class="math">\(O\)</span> subset of <span class="math">\(C(X,F)\)</span> with sup-norm (<span class="math">\(O\)</span> is relatively compact in <span class="math">\(C(X,F)\)</span> <span class="math">\(\Leftrightarrow\)</span> <span class="math">\(O\)</span> is <a href="#cross-equicontinuous">equicontinuous</a> <span class="math">\(\land\)</span> <span class="math">\(\forall x \in X, O(x)={f(x)}\)</span> is relatively compact)
@@ -2027,9 +2172,9 @@ $("#content").css("max-width", "1100px")
 <li><em>it is that you can use open ball if they are about as one function: same rate and not too far away in values</em></li>
 </ul></li>
 </ul>
-<h3 id="exercises-2">exercises</h3>
+<h3 id="exercises-3">exercises</h3>
 <ol start="0" style="list-style-type: decimal">
-<li>proof that <span class="math">\(B(S, F)\)</span> complete, where <span class="math">\(S\)</span> is metric space, and <span class="math">\(F\)</span> is Banach space. <span class="math">\(BC(S,F)\)</span> is closed in <span class="math">\(B(S, F)\)</span>
+<li>proof that <span class="math">\(C(S, F)\)</span> complete, where <span class="math">\(S\)</span> is metric space, and <span class="math">\(F\)</span> is Banach space. <span class="math">\(BC(S,F)\)</span> is closed in <span class="math">\(B(S, F)\)</span>
 <ul>
 <li>construct by pointwize limit, then proof continuous (replace <span class="math">\(f\)</span> by a very close continuous function, that’s why you have sup norm), then proof that it converge</li>
 <li>bounded by <span class="math">\(\sup f = \sup \lim f_n(a)\)</span></li>
@@ -2145,7 +2290,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul></li>
 </ul>
-<h3 id="exercises-3">exercises</h3>
+<h3 id="exercises-4">exercises</h3>
 <ol style="list-style-type: decimal">
 <li><span class="math">\(F\)</span> complete then <span class="math">\(L(E,F)\)</span> complete. the 0 of former chapter deals with continuous functions under sup norm, this one deals with linear function under the specific norm, which is certainly not the sup norm
 <ul>
@@ -2218,7 +2363,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(A = A^*\)</span> hermitian, self-adjoint</li>
 </ul></li>
 </ul>
-<h3 id="exercises-4">exercises</h3>
+<h3 id="exercises-5">exercises</h3>
 <p><code>fix me</code></p>
 <h2 id="the-general-integral">the general integral</h2>
 <ul>
@@ -2335,7 +2480,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul>
 <p><code>fix me</code></p>
-<h3 id="exercises-5">exercises</h3>
+<h3 id="exercises-6">exercises</h3>
 <p><code>fix me</code></p>
 <h2 id="duality-and-representation-theorems">duality and representation theorems</h2>
 <h2 id="some-application-of-integration">some application of integration</h2>
