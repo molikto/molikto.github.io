@@ -5772,15 +5772,14 @@ button.close {
     display: none !important;
   }
 }
-@media (min-width: 992px) {
-  .container {
-    max-width: 900px;
-  }
-  .small-container {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.container {
+  max-width: 900px;
+}
+.small-container {
+  max-width: 700px;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .post-date {
   font-size: 14px;
@@ -5813,7 +5812,6 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   padding: 10px;
-  border-top: 1px solid #eeeeee;
   color: #999999;
   font-weight: lighter;
   margin-top: -4em;
