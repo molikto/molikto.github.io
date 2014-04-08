@@ -2,6 +2,7 @@ _cache
 _site
 _deploy
 .DS_Store
+*.pdf
 site
 site.hi
 site.o
