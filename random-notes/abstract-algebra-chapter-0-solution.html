@@ -288,13 +288,13 @@ $("#content").css("max-width", "1100px")
   if (hn == "localhost" || hn == "127.0.0.1" || hn == "0.0.0.0") {
     $.getScript("/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML", function() {
       MathJax.Hub.config.root = "/MathJax"
-      MathJax.Hub.Queue(function {
+      MathJax.Hub.Queue(function() {
         $(document.body).scrollspy('refresh')
       })
     })
   } else {
     $.getScript("http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", function() {
-      MathJax.Hub.Queue(function {
+      MathJax.Hub.Queue(function() {
         $(document.body).scrollspy('refresh')
       })
     })
