@@ -86,17 +86,17 @@ $("#content").css("max-width", "1100px")
 
 <script>
 
-  var hn = document.location.hostname
+  var hn = document.location.hostname;
   var after = function() {
     MathJax.Hub.Queue(function () {
       $(document.body).scrollspy('refresh')
+    });
   }
-  if (hn == "localhost" || hn == "127.0.0.1" || hn == "0.0.0.0")
+  if (hn == "localhost" || hn == "127.0.0.1" || hn == "0.0.0.0") {
     $.getScript("/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML", after)
-  else
+  } else {
     $.getScript("http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", after)
-
-});
+  }
 </script>
 
   </div>
