@@ -842,7 +842,7 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-Weyl-group" class="crosslink">Weyl group</span> <span class="math">\(W_H = N_H / H\)</span></li>
 <li>smallest index subgroup in finite group is normal</li>
 <li>how to consider this? if you consider what things can be a morphism in group, then you will notice that only when we make the group structure fuzz… kind of. then you want to make certain subgroup into a point, because subgroups has the good property of having boundary of coset. but <span class="math">\(aHbH = abH\)</span> will require that <span class="math">\(aH = Ha\)</span> for it</li>
-<li>index 2 subgroup is normal, i think this can be shown quickly by cosets</li>
+<li>index <span class="math">\(2\)</span> subgroup is normal, i think this can be shown quickly by cosets</li>
 <li><span id="cross-Dedekind-group" class="crosslink">Dedekind group</span> every subgroup is normal</li>
 <li><span id="cross-Hamiltonian-group" class="crosslink">Hamiltonian group</span>. <a href="#cross-Dedekind-group">Dedekind group</a> but not <a href="#cross-abelian-group">abelian group</a>. example: <a href="#cross-quaternion-group">quaternion group</a></li>
 </ul></li>
@@ -1010,7 +1010,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li><span class="math">\(p\)</span> group is contained in some <span class="math">\(p\)</span>-Sylow group</li>
 <li>all <span class="math">\(p\)</span>-Sylow group is <a href="#cross-conjugate">conjugate</a></li>
-<li>number of <span class="math">\(p\)</span>-Sylow group is 1 mod <span class="math">\(p\)</span>
+<li>number of <span class="math">\(p\)</span>-Sylow group is <span class="math">\(1 \mod p\)</span>
 <ul>
 <li>we follow the proof by Lang. first if <span class="math">\(H\)</span> is contained in normalizer of <span class="math">\(P\)</span>, then <span class="math">\(H\subset P\)</span>, this is proofed by seeing the prime indexes, we used the condition <span class="math">\(p\)</span>-Sylow as <strong>maximal</strong> <span class="math">\(p\)</span>. the next part is by taking <span class="math">\(S\)</span> all <strong>conjugate</strong> class of <span class="math">\(P\)</span> in <span class="math">\(G\)</span>, then we have <span class="math">\(|S|\)</span> is not divisible by <span class="math">\(p\)</span>, then we have <span class="math">\(H\)</span> also operate on <span class="math">\(S\)</span> and it cannot have one fixed point, which means it is contained in some <span class="math">\(aPa^{-1}\)</span>. by taking <span class="math">\(H = aPa^{-1}\)</span> we show that it is in <span class="math">\(S\)</span>. and <span class="math">\(H\)</span> has only one fixed point, showing that mod 1.</li>
 <li>the proof is essentially number theoretic, so the particular group structure is caused by finiteness and number theory</li>
@@ -1450,7 +1450,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li>if <span class="math">\(\sum \alpha_i = A\)</span> then <span class="math">\(\sum \alpha_i^{v_i} = A\)</span>
 <ul>
-<li>we use same kind of induction, we just proof for <span class="math">\(\alpha^v + b\)</span> case, using <span class="math">\(a_1^v = (1-b_1)^v = 1 + b\)</span>, this is easy. one interesting problem is that observe how the elements that add up to 1 changed. sometimes watching the given condition and figure out how to use them it very important</li>
+<li>we use same kind of induction, we just proof for <span class="math">\(\alpha^v + b\)</span> case, using <span class="math">\(a_1^v = (1-b_1)^v = 1 + b\)</span>, this is easy. one interesting problem is that observe how the elements that add up to <span class="math">\(1\)</span> changed. sometimes watching the given condition and figure out how to use them it very important</li>
 </ul></li>
 <li><span id="cross-local-ring" class="crosslink">local ring</span> commutative and has unique maximal ideal
 <ul>
@@ -3538,7 +3538,7 @@ $("#content").css("max-width", "1100px")
 <script src="./js/toc.js"></script>
 
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="./MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 <script>
 MathJax.Hub.Queue(function () {
