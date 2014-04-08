@@ -174,6 +174,9 @@ type Compiler = {
 <script src="../js/toc.js"></script>
 
 
+
+<script type="text/javascript" src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 <script>
 
   var hn = document.location.hostname;
@@ -183,7 +186,8 @@ type Compiler = {
     });
   }
   if (hn == "localhost" || hn == "127.0.0.1" || hn == "0.0.0.0") {
-    $.getScript("/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML", after)
+    //$.getScript("/MathJax.js?config=TeX-AMS-MML_HTMLorMML", after)
+    after()
   } else {
     $.getScript("http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", after)
   }
