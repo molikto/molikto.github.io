@@ -104,6 +104,22 @@ $("#content").css("max-width", "1100px")
 <li><strong>fully see what you have get</strong>. use the tools at hand. it might do not directly leads you to the solution, but anyway use it!</li>
 <li><strong>see the logic of the problem</strong>. assume the solution, and see why it works, or what’s wrong with it</li>
 </ul></li>
+<li>i still feel abstract… i study rings, modules, but can hardly find enough examples of ring or module… i know that’s a tensor product, but can hardly know what it looks like, i cannot make mathematics into me… feeling sad. as CY said, after studying a subject, you should be able to write down all things you have meet</li>
+<li><strong>recent thoughts on how to learn</strong>
+<ul>
+<li>back in time i am a formalist, i learn things and in the end i found that i need to learn algebra</li>
+<li>and i think it is important</li>
+<li>but today after reading Atiyah’s article and what Huajie said, i think i should learn <strong>more geometry</strong></li>
+<li>but the thing is, you must learn <strong>abstract algebra</strong> and <strong>analysis</strong> first, then you can learn some geometry..</li>
+<li>so finish Lang’s analysis really quick!!!</li>
+<li>another important thing is, about exercises
+<ul>
+<li><strong>best</strong>: to work the whole book out</li>
+<li><strong>second choice</strong>: do the exercises</li>
+</ul></li>
+</ul></li>
+<li>i feel that every time i use Zorn’s lemma, i feel a little more depressed, because i am out of the world where mathematical entities lives</li>
+<li>what is good mathematics? i suddenly have a feeling that mathematics is no longer interesting anymore… why?</li>
 </ul>
 <h1 id="type">type</h1>
 <h2 id="idea">idea</h2>
@@ -500,11 +516,12 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span class="math">\({\mathcal{A}}(E, F)\)</span> is abelian group</li>
 <li>law of composition is bilinear</li>
-<li>a zero object <span class="math">\(0\)</span>, such that <span class="math">\(caa(0, E)\)</span> and <span class="math">\(caa(E, 0)\)</span> has precisely one element</li>
+<li>a zero object <span class="math">\(0\)</span>, such that <span class="math">\({\mathcal{A}}(0, E)\)</span> and <span class="math">\({\mathcal{A}}(E, 0)\)</span> has precisely one element</li>
 <li>finite products and finite coproducts exists</li>
 </ul></li>
 <li>kernel of <span class="math">\(E\xleftarrow{f}F\)</span>. a morphism <span class="math">\(E'\to E\)</span> such that <span class="math">\(0\to {\mathcal{A}}(X, E')\to{\mathcal{A}}(X, E)\to{\mathcal{A}}(X, F)\)</span> is exact for all <span class="math">\(X\)</span></li>
 <li>cokernel of <span class="math">\(f\)</span>. a map <span class="math">\(F\to F''\)</span> such that <span class="math">\(0\to {\mathcal{A}}(F'', X)\to {\mathcal{A}}(F, X)\to{\mathcal{A}}(E, X)\)</span> is exact for all <span class="math">\(X\)</span></li>
+<li><span id="cross-additive-functor" class="crosslink">additive functor</span></li>
 </ul></li>
 <li><span id="cross-abelian-category" class="crosslink">abelian category</span>
 <ul>
@@ -515,6 +532,13 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li><span id="cross-subobject" class="crosslink">subobject</span></li>
 <li><span id="cross-quotient-object" class="crosslink">quotient object</span></li>
+<li><span id="cross-exact-functor" class="crosslink">exact functor</span> functor preserve exact sequence, or equally <a href="#cross-short-exact-sequence">short exact sequence</a>
+<ul>
+<li><span id="cross-left-exact-functor" class="crosslink">left exact functor</span> preserve <span class="math">\(0\to A\to B\to C\)</span>
+<ul>
+<li><a href="#cross-right-adjoint">right adjoint</a> . <a href="#cross-additive-functor">additive functor</a> is <a href="#cross-left-exact-functor">left exact functor</a></li>
+</ul></li>
+</ul></li>
 <li>example: vector bundles over a topological space</li>
 </ul></li>
 </ul>
@@ -728,7 +752,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span><span id="cross-unit"></span><span id="cross-unit-element" class="crosslink">unit element </span></span> <span class="math">\(\forall a\in S: ae = ea\)</span>
 <ul>
-<li>unique. actually, unique in any <a href="#cross-law-of-composition">law of composition</a> with unit</li>
+<li>unique. <span class="math">\(e = ee' = e'\)</span></li>
 </ul></li>
 <li><a href="#cross-law-of-composition">law of composition</a>. <span class="math">\(abc = a(bc)\)</span>, <a href="#cross-associative">associative</a>
 <ul>
@@ -760,9 +784,12 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>group is about symmetric
 <ul>
-<li>for example the idea of normal subgroup, it is about <span class="math">\(hghg = hhgg\)</span> kind of thing ### group</li>
+<li>for example the idea of normal subgroup, it is about <span class="math">\(hghg = hhgg\)</span> kind of thing</li>
 <li>see <a href="http://terrytao.wordpress.com/2009/10/19/grothendiecks-definition-of-a-group">this</a> and <a href="http://terrytao.wordpress.com/2010/07/10/cayley-graphs-and-the-geometry-of-groups">this</a> for how to think about groups</li>
 </ul></li>
+</ul>
+<h3 id="group-1">group</h3>
+<ul>
 <li><span id="cross-group" class="crosslink">group</span> <span class="math">\({\mathcal{Grp}}\)</span> subcategory of <span class="math">\({\mathcal{Mon}}\)</span>
 <ul>
 <li><a href="#cross-object">object</a>
@@ -909,7 +936,7 @@ $("#content").css("max-width", "1100px")
 <li>world problem is undecidable…</li>
 </ul></li>
 </ul></li>
-<li><span id="cross-inverse-limit" class="crosslink">inverse limit</span> given <span class="math">\(\{(G_n, f_n)\}\)</span>, the sequences <span class="math">\(x = (x_0, x_1, \dots)\)</span> that satisfy <span class="math">\(x_0 = f_1(x_1)\)</span> etc, form a group
+<li><span id="cross-inverse-limit-of-group" class="crosslink">inverse limit of group</span> given <span class="math">\(\{(G_n, f_n)\}\)</span>, the sequences <span class="math">\(x = (x_0, x_1, \dots)\)</span> that satisfy <span class="math">\(x_0 = f_1(x_1)\)</span> etc, form a group
 <ul>
 <li><img src="images/group-limit.jpg" style="width:400px" /></li>
 <li>it can also define on a general directed family of groups</li>
@@ -927,6 +954,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(A_n\)</span> is generated by 3-cycles. we proof all even product of transpositions is generated by it</li>
 <li><span class="math">\(n\geq 5\)</span>, all 3-cycles are conjugate in <span class="math">\(A_n\)</span></li>
 <li><span class="math">\(n\geq 5\)</span>, <span class="math">\(A_n\)</span> is simple</li>
+<li><code>fix me: proofs</code></li>
 </ul></li>
 <li><span class="math">\(({\mathbb{Z}}/p{\mathbb{Z}})^*\)</span> is a group. proof is trivial</li>
 <li><span id="cross-cyclic-group" class="crosslink">cyclic group</span> <span class="math">\(C_n\)</span>. <a href="#cross-isomorphism">isomorphism</a> to <span class="math">\({\mathbb{Z}}\)</span> or <span class="math">\({\mathbb{Z}}/n{\mathbb{Z}}\)</span>, the <strong>additive group</strong>!!!
@@ -958,7 +986,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>it is kind of likes cross product <span class="math">\(ij = k\)</span>, <span class="math">\(jk = i\)</span>, <span class="math">\(ki = j\)</span>, <span class="math">\(ji = -k\)</span>, <span class="math">\(kj = -i\)</span>, <span class="math">\(ik = -j\)</span></li>
 <li>it is associative. it can be proofed by just think the kinds of 3 pairs</li>
-<li>all subgroup is normal. this is easy</li>
+<li>all subgroup is normal. this is easy, because it lacks subgroups…</li>
 <li>but it is not abelian, and thus…</li>
 </ul></li>
 </ul></li>
@@ -1074,14 +1102,14 @@ $("#content").css("max-width", "1100px")
 <li>structure of <span id="cross-free-abelian-group" class="crosslink">free abelian group</span> <span class="math">\(F^{ab}(A)\)</span>. <span class="math">\(\bigoplus_{i\in A} {\mathbb{Z}}_i\)</span>
 <ul>
 <li><span id="cross-base" class="crosslink">base</span> non-empty and <span class="math">\(A\)</span> is unique expressed <span class="math">\(x =\sum x_i e_i\)</span> for <span class="math">\(x_i\in {\mathbb{Z}}\)</span> almost all zero</li>
-<li>the <a href="#cross-adjunction">adjunction</a></li>
+<li>the <a href="#cross-adjuction-functor">adjuction functor</a></li>
 <li><span class="math">\(f:A\to B\)</span> surjective and <span class="math">\(B\)</span> is free, then we can find <span class="math">\(C\)</span> free such that <span class="math">\(A = {\text{Ker }}f \oplus C\)</span>
 <ul>
 <li>proof using base</li>
 </ul></li>
 <li>subgroup is also <a href="#cross-free-abelian-group">free abelian group</a>, and has smaller <a href="#cross-cardinal">cardinal</a> base
 <ul>
-<li>special case of free module over principal entire ring</li>
+<li>special case of free module over principal entire ring <code>fix me</code></li>
 </ul></li>
 </ul></li>
 <li>structure of <span id="cross-torsion-element" class="crosslink">torsion element</span> forms a <span id="cross-torsion-group" class="crosslink">torsion group</span>. <span class="math">\(A = \bigoplus _p A(p)\)</span> where <span class="math">\(A(p)\)</span> is the subgroup of elements of order <span class="math">\(p^n\)</span>. not necessary finite
@@ -1320,7 +1348,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul></li>
 </ul></li>
-<li><a href="#cross-morphism">morphism</a>. <span class="math">\(f(a + b) = f(a) + f(b)\)</span>, <span class="math">\(f(ab) = f(a)f(b)\)</span>, <span class="math">\(f(1) = 1\)</span>
+<li><a href="#cross-morphism">morphism</a>. <span class="math">\(f(a + b) = f(a) + f(b)\)</span>, <span class="math">\(f(ab) = f(a)f(b)\)</span>, <span class="math">\(f(1) = 1\)</span>, or say that it is a map such that is the corresponding group morphism and monoid morphism
 <ul>
 <li><span class="math">\({\text{Im }}f\)</span> is subring</li>
 <li><a href="#cross-monomorphism">monomorphism</a>
@@ -1351,7 +1379,10 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(\{0, 1\}\subset Z_R\)</span></li>
 </ul></li>
 </ul></li>
-<li><span class="math">\(B = A[S]=\sum as^is^j\cdots s^k\)</span> with <span class="math">\(A\)</span> commutate with <span class="math">\(S\)</span>, <span class="math">\(S\)</span> is a set of <span id="cross-ring-generators" class="crosslink">ring generators</span> of <span class="math">\(B\)</span> over <span class="math">\(A\)</span>. if <span class="math">\(S\)</span> is finite, we say that <span class="math">\(B\)</span> is finitely generated over <span class="math">\(A\)</span></li>
+<li><span class="math">\(B = A[S]=\sum as^is^j\cdots s^k\)</span> with <span class="math">\(A\)</span> commutate with <span class="math">\(S\)</span>, <span class="math">\(S\)</span> is a set of <span id="cross-ring-generators" class="crosslink">ring generators</span> of <span class="math">\(B\)</span> over <span class="math">\(A\)</span>. if <span class="math">\(S\)</span> is finite, we say that <span class="math">\(B\)</span> is finitely generated over <span class="math">\(A\)</span>
+<ul>
+<li>in Atiyah, a <span id="cross-finitely-generated-ring" class="crosslink">finitely generated ring</span> is when viewed as <span class="math">\({\mathbb{Z}}\)</span>-algebra</li>
+</ul></li>
 <li><a href="#cross-product">product</a> exists and is like group product. the inclusion map is not ring homomorphism, though in group this is true</li>
 <li><a href="#cross-coproduct">coproduct</a> see <a href="http://en.wikipedia.org/wiki/Category_of_rings">Wikipedia</a></li>
 <li><span id="cross-left-ideal" class="crosslink">left ideal</span> <strong>additive subgroup</strong> and <span class="math">\(A\alpha\subset \alpha\)</span>, <span id="cross-right-ideal" class="crosslink">right ideal</span> <span class="math">\(\alpha A = \alpha\)</span>, <span id="cross-ideal" class="crosslink">ideal</span> <span class="math">\(\alpha  = A\alpha = \alpha A\)</span>
@@ -1362,7 +1393,6 @@ $("#content").css("max-width", "1100px")
 <li>we define <span class="math">\((x + \alpha)(y + \alpha) = (xy + \alpha)\)</span> we show that it is well defined, we show that it is representative independent, and it is associative hand has unit, and distributive. we used <span class="math">\(xa \in\alpha\)</span> in the proof that it is well defined. just like the normal group case… this is <strong>indeed wired</strong>, the normal groups has inherited product, but ring have <strong>not</strong>, consider <span class="math">\((2 + {\mathbb{Z}}/12{\mathbb{Z}})(3 + {\mathbb{Z}}/21{\mathbb{Z}})\)</span>, if we define it be the inherited products, then it will not include <span class="math">\(6 + 12\)</span> and will not be a coset, that’s why the product is defined differently</li>
 <li>the unit of the cosets is <span class="math">\(1+\alpha\)</span> and the zero is <span class="math">\(\alpha\)</span>, this is because it is an ideal and it is kind of like a zero which takes everything back</li>
 </ul></li>
-<li><span class="math">\(\alpha \cap \beta\)</span> is ideal. same for any index</li>
 <li>for ideals, <span class="math">\(\alpha\beta = \{x_1y_1 + x_2y_2 + \cdots+ x_ny_n\}\)</span> is an ideal
 <ul>
 <li>it forms a groupoid, with unit <span class="math">\(A\)</span></li>
@@ -1375,10 +1405,6 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-generators-for-ideal" class="crosslink">generators for ideal</span> is a <a href="#cross-left-ideal">left ideal</a> <span class="math">\(x_1a_1 + x_2a_2 + \cdots + x_na_n\)</span> with <span class="math">\(x_i\in A\)</span> is generated by <span class="math">\((a_1, a_2,..., a_n)\)</span></li>
 <li><a href="#cross-intersection">intersection</a> closed for left, right, twoside</li>
 <li>an ideal contains <span class="math">\(1\)</span> must be <span class="math">\(A\)</span></li>
-<li><span class="math">\(p = f^{-1}(p')\)</span> is ideal
-<ul>
-<li>my proof is always lame, see <a href="http://math.stackexchange.com/a/693707/29742">this</a>. i should have more this kind of thinking, when i want to proof that something has some property, i just proof it has the property, <strong>but the better thing is always force it to have the property, because it not only show the result, but also that why it has the property</strong></li>
-</ul></li>
 </ul></li>
 <li><span><span id="cross-factor-ring"></span><span id="cross-quotient-ring" class="crosslink">quotient ring </span></span>
 <ul>
@@ -1387,9 +1413,16 @@ $("#content").css("max-width", "1100px")
 <li><img src="images/ring-decom.png" style="width:400px" />
 <ul>
 <li>and another thing is that the factor thought things, and it is universal</li>
+<li>this result is when we view the 3-last part, by the induced morphism <span class="math">\(R\to R'\to R'/p'\)</span>: we can form <span class="math">\(R/p\hookrightarrow R'/p'\)</span> just like in group
+<ul>
+<li><span class="math">\(p = f^{-1}(p')\)</span> is ideal</li>
 </ul></li>
-<li><span class="math">\(\frac{R/I}{J/I} = \frac{R}{J}\)</span></li>
-<li>we can form <span class="math">\(G/p\hookrightarrow G'/p'\)</span> just like in group</li>
+</ul></li>
+<li><span class="math">\(\frac{R/I}{J/I} = \frac{R}{J}\)</span> where <span class="math">\(I\subset J\)</span> ideals
+<ul>
+<li><span class="math">\(J/I\)</span> is ideal of <span class="math">\(R/I\)</span>. trivial</li>
+<li>and we find kernel</li>
+</ul></li>
 <li><span><span id="cross-skew-field"></span><span id="cross-division-ring" class="crosslink">division ring </span></span> <span class="math">\(1\neq 0\)</span> and ever element invertible
 <ul>
 <li>a trivial example of non-commutative division ring is some kind of matrices</li>
@@ -1429,6 +1462,8 @@ $("#content").css("max-width", "1100px")
 <li>proof it</li>
 </ul></li>
 <li><span class="math">\(\phi\)</span> injective <span class="math">\(\Leftrightarrow\)</span> <span class="math">\(\cap \alpha = (0)\)</span></li>
+<li>example <span class="math">\(C_6 = C_2\times C_3\)</span>, see how above conditions works</li>
+<li><code>fix me: proof this when needed</code></li>
 </ul></li>
 <li><span id="cross-prime-ideal" class="crosslink">prime ideal</span> <span class="math">\(R/p\)</span> is <a href="#cross-entire-ring">entire ring</a>
 <ul>
@@ -1511,9 +1546,15 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li>morphism preserve prime ideal, but not maximal ideal, or in detail
 <ul>
-<li>for <span class="math">\(f: A\to A'\)</span> is an homomorphism of commutative rings, <span class="math">\(p'\)</span> then <span class="math">\(A'\)</span> then <span class="math">\(p = f^{-1}(p')\)</span></li>
-<li>for <span class="math">\(f: A\to A'\)</span> surjective, if <span class="math">\(m'\)</span> then <span class="math">\(m\)</span>. proof using field</li>
-<li>is is rather evident in spirit of the decomposition theorem</li>
+<li>for <span class="math">\(f: A\to A'\)</span> is an homomorphism of commutative rings, <span class="math">\(p'\)</span> then <span class="math">\(A'\)</span> then <span class="math">\(p = f^{-1}(p')\)</span>
+<ul>
+<li>basic proof. <span class="math">\(xy \in p\Rightarrow f(xy)=f(x)f(y)\in p'\Rightarrow f(x)\in p'\)</span></li>
+<li>view the injective map from a ring to a <a href="#cross-entire-ring">entire ring</a>, the property of zero-divisor is local, so we get zero-divisor of the first ring is zero-divisor of second ring, nonsense</li>
+</ul></li>
+<li>for <span class="math">\(f: A\to A'\)</span> surjective, if <span class="math">\(m'\)</span> then <span class="math">\(m\)</span>. proof using field
+<ul>
+<li>is is rather evident in spirit of the decomposition theorem, the injective map do not insure to contains the inverse in the field, but when surjective, we get a isomorphism, trivial</li>
+</ul></li>
 </ul></li>
 <li><span id="cross-nilradical" class="crosslink">nilradical</span> <span class="math">\({\mathscr{N}}\)</span> all <a href="#cross-nilpotent">nilpotent</a>s
 <ul>
@@ -1588,6 +1629,7 @@ $("#content").css("max-width", "1100px")
 <li>multiplicative monoid. trivial</li>
 <li>distributive. trivial</li>
 </ul></li>
+<li><span class="math">\((a, 1) = 0\Rightarrow \)</span>bS: ab = 0$</li>
 <li>if <span class="math">\(0\in S\)</span> then <span class="math">\(S^{-1}A = \{0/1\}\)</span></li>
 <li><span class="math">\(\varphi_S: A\to S^{-1}A\)</span> such that <span class="math">\(a\to a/1\)</span>, and every element in <span class="math">\(\varphi_S(S)\)</span> is invertible, by <span class="math">\(1/s\)</span>, and this is universal in such morphisms (making <span class="math">\(S\)</span> invertible!!!, it is an <strong>initial</strong>, and this means factor though, so what we should do is find the unique initial map that is induced by the actual map). proof by for such a <span class="math">\(f:A\to B\)</span> we have <span class="math">\(f(s_1)(f(s')f(a)-f(s)f(a'))=0\)</span> to we have <span class="math">\(f(a)f(s)^{-1}=f(a')f(s')^{-1}\)</span> if we send <span class="math">\(a/s\)</span> to <span class="math">\(f(a)f(s)^{-1}\)</span> it is well defined and it is homomorphism and commutative, and unique</li>
 <li>if <span class="math">\(A\)</span> is entire and <span class="math">\(S\)</span> do not contains <span class="math">\(0\)</span> then <span class="math">\(\varphi_S\)</span> is injective
@@ -1606,6 +1648,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>all trivial, because of the extension theorems</li>
 </ul></li>
+<li><span class="math">\(f\in A\)</span> then we have <span class="math">\(A_f\)</span> where <span class="math">\(S=\{f^n\}_{n \geq 0}\)</span></li>
 </ul></li>
 <li><span id="cross-Noetherian-ring" class="crosslink">Noetherian ring</span>. <a href="#cross-commutative">commutative</a> ring and every ideal is finitely generated</li>
 <li><span class="math">\(ab\neq 0\)</span>, <span class="math">\(a\)</span> <span id="cross-divides" class="crosslink">divides</span> <span class="math">\(b\)</span>, or <span class="math">\(a|b\)</span> (left is small!) if <span class="math">\(\exists c\in A: ac = b\)</span></li>
@@ -1671,7 +1714,7 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-field" class="crosslink">field</span>. <a href="#cross-commutative">commutative</a> . <a href="#cross-division-ring">division ring</a>
 <ul>
 <li><span class="math">\(\Leftrightarrow\)</span> <strong>commutative</strong> and has no non-trivial ideal</li>
-<li><span class="math">\(\Leftrightarrow\)</span> <strong>commutative</strong> and every morphism in <span class="math">\({\mathcal{Ring}}\)</span> is injective
+<li><span class="math">\(\Leftrightarrow\)</span> <strong>commutative</strong> and every morphism from it in <span class="math">\({\mathcal{CRing}}\)</span> is injective
 <ul>
 <li>we find a non-unit, and form a proper ideal, then take <span class="math">\(A/(x)\)</span>, we have injective, so <span class="math">\((x) = 0\)</span>, we have <span class="math">\(x = 0\)</span>. this proof fails in <a href="#cross-division-ring">division ring</a>, we do not know the left ideal is a ideal</li>
 </ul></li>
@@ -1761,7 +1804,7 @@ $("#content").css("max-width", "1100px")
 <li>so module is just <strong>ring operation that additionally has the latter equation</strong>?</li>
 <li>let <span class="math">\(R\)</span> be the ring of linear map over <a href="#cross-vector-space">vector space</a> <span class="math">\(V\)</span>, then <span class="math">\(V\)</span> is a module over <span class="math">\(R\)</span> <strong>remember this, seems useful</strong></li>
 </ul></li>
-<li><a href="#cross-morphism">morphism</a> or <span class="math">\(A\)</span>-linear map
+<li><a href="#cross-morphism">morphism</a> or <span class="math">\(A\)</span>-<span id="cross-linear-map" class="crosslink">linear map</span>
 <ul>
 <li>additive homomorphism, <span class="math">\(f(m + n) = f(m) + f(n)\)</span></li>
 <li><span class="math">\(f(ax) = af(x)\)</span></li>
@@ -1773,6 +1816,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\({\text{Im }}f\)</span> is <a href="#cross-submodule">submodule</a>. proof by <span class="math">\(af(m) = f(am) \in {\text{Im }}f\)</span>
 <ul>
 <li><span class="math">\(M' \to M'/{\text{Im }}f = {\text{Coker }}f\)</span> <span id="cross-cokernel" class="crosslink">cokernel</span></li>
+<li><strong>this is the first unusual thing about module, and it is because we fixed the multiplicative structure but only moved the additive structure</strong></li>
 </ul></li>
 <li><a href="#cross-monomorphism">monomorphism</a> <span class="math">\(\Leftrightarrow\)</span> <span class="math">\({\text{Ker }}f\)</span> trivial <span class="math">\(\Leftrightarrow\)</span> <span class="math">\(f\)</span> injective
 <ul>
@@ -1783,7 +1827,7 @@ $("#content").css("max-width", "1100px")
 <li><a href="#cross-split-epimorphism">split epimorphism</a> <span class="math">\(\Leftrightarrow\)</span> <span class="math">\(0\to {\text{Ker }}f\to M\to N\to 0\)</span> splits</li>
 </ul></li>
 </ul></li>
-<li>when <span class="math">\(R\)</span> commutative. <span class="math">\(n\)</span>-multilinear maps <span class="math">\(L^n(E_1, \dots, E_n; F)\)</span> where <span class="math">\(E_i\)</span> and <span class="math">\(F\)</span> are <span class="math">\(R\)</span>-modules is <span class="math">\(f: E_1\times \cdots \times E_n\to F\)</span>, which is linear in each variable</li>
+<li><span class="math">\(n\)</span>-<span><span id="cross-multilinear"></span><span id="cross-multilinear-map" class="crosslink">multilinear map </span></span>s <span class="math">\(L^n(E_1, \dots, E_n; F)\)</span> where <span class="math">\(E_i\)</span> and <span class="math">\(F\)</span> are <span class="math">\(R\)</span>-modules is <span class="math">\(f: E_1\times \cdots \times E_n\to F\)</span>, which is linear in each variable</li>
 <li><span id="cross-submodule" class="crosslink">submodule</span> an additive subgroup such that <span class="math">\(AN\subset N\)</span>. well defined because it is closed under <span class="math">\(A\)</span></li>
 <li>if <span class="math">\(\alpha\)</span> is an <a href="#cross-left-ideal">left ideal</a> then we have <span class="math">\(\alpha M = \sum a_i x_i\)</span> is an submodule. and we have <span class="math">\(\alpha (\beta M) = (\alpha\beta)M\)</span>, <span class="math">\((\alpha + \beta)M = \alpha M + \beta M\)</span>, <span class="math">\(\alpha (N+N') = \alpha N + \alpha N'\)</span>
 <ul>
@@ -1796,7 +1840,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(\frac{L/N}{M/N}\cong \frac{L}{M}\)</span>. by the map, find kernel</li>
 <li><span class="math">\(\frac{M_1+M_2}{M_1} \cong \frac{M_2}{M_1\cap M_2}\)</span>. by <span class="math">\(M_2\to M_1 + M_2\to \frac{M_1+M_2}{M_1}\)</span></li>
 </ul></li>
-<li>for submodules <span class="math">\(N\)</span>, <span class="math">\(P\)</span>, <span class="math">\((N:P)\subset A\)</span> such that <span class="math">\(aP\subset N\)</span> is ideal of <span class="math">\(A\)</span>
+<li>for submodules <span class="math">\(N\)</span>, <span class="math">\(P\)</span>, <span class="math">\((N:P)\subset A\)</span> such that <span class="math">\(aP\subset N\)</span> is <strong>ideal</strong> of <span class="math">\(A\)</span>
 <ul>
 <li><span id="cross-module-annililator" class="crosslink">module annililator</span> <span class="math">\((0:M) = \{aM = 0\} = {\text{Ann}}(M)\)</span>
 <ul>
@@ -1810,8 +1854,6 @@ $("#content").css("max-width", "1100px")
 <li>faithful is trivial</li>
 </ul></li>
 </ul></li>
-<li><a href="#cross-product">product</a> exists</li>
-<li><a href="#cross-coproduct">coproduct</a> exists</li>
 <li><span id="cross-linear-combination" class="crosslink">linear combination</span> for <span class="math">\(S\in M\)</span>. <span class="math">\(\sum_{x\in S} a_x x\)</span> almost all but finite equal to <span class="math">\(0\)</span>
 <ul>
 <li><span class="math">\(N=A{\langle S \rangle}\)</span> <a href="#cross-submodule">submodule</a> generated by <span class="math">\(S\)</span></li>
@@ -1835,39 +1877,30 @@ $("#content").css("max-width", "1100px")
 <li>itself may have different cardinal of base, then it has an embedding into itself</li>
 </ul></li>
 </ul></li>
+<li><a href="#cross-product">product</a> exists</li>
+<li><a href="#cross-coproduct">coproduct</a> exists</li>
 <li><span id="cross-finite-generated-module" class="crosslink">finite generated module</span> trivial facts
 <ul>
 <li><span id="cross-Noetherian-module" class="crosslink">Noetherian module</span> all submodule finitely generated <span class="math">\(R\)</span>-module
 <ul>
 <li><span class="math">\(\Leftrightarrow\)</span> every ascending sequence of submodules is finite</li>
 <li><span class="math">\(\Leftrightarrow\)</span> every non-empty set of submodules has a maximal element</li>
-<li><span class="math">\(N\subset M(M \Leftrightarrow N \land M/N)\)</span></li>
-<li><span class="math">\(R\)</span> <a href="#cross-Noetherian-ring">Noetherian ring</a> and <span class="math">\(M\)</span> finitely generated, then <span class="math">\(M\)</span> <a href="#cross-Noetherian-module">Noetherian module</a></li>
-<li><code>fix me</code></li>
-<li>example, <a href="#cross-finite-generated-module">finite generated module</a> has a non-finite generated submodule. take <span class="math">\(R = {\mathbb{Z}}(x_1, x_2, \dots)\)</span> then <span class="math">\(R\)</span> is finitely generated, but <span class="math">\((x_i)\)</span> is not. so a</li>
+<li><span class="math">\(N\subset M(M \Leftrightarrow N \land M/N)\)</span>
+<ul>
+<li>left to right is trivial inverse map. right to left, make a bijection <span class="math">\(L\leftrightarrow (L\cap N, \frac{L + N}{N})\)</span></li>
+<li><span class="math">\(M\land N\Leftrightarrow M + N\)</span>. trivial corollary by two factoring</li>
+<li><span class="math">\(R\)</span> <a href="#cross-Noetherian-ring">Noetherian ring</a> and <span class="math">\(M\)</span> finitely generated, then <span class="math">\(M\)</span> <a href="#cross-Noetherian-module">Noetherian module</a>. by mapping from <span class="math">\(A^n\)</span></li>
+</ul></li>
+<li>example, <a href="#cross-finite-generated-module">finite generated module</a> has a non-finite generated submodule. take <span class="math">\(R = {\mathbb{Z}}(x_1, x_2, \dots)\)</span> then <span class="math">\(R\)</span> is finitely generated, but <span class="math">\((x_i)\)</span> is not</li>
 </ul></li>
 <li><span class="math">\(\Leftrightarrow\)</span> isomorphic to some quotient of <span class="math">\(A^n\)</span></li>
-<li><span class="math">\(\varphi: A\to A\)</span> such that <span class="math">\(\varphi(M)\subset \alpha M\)</span> then <span class="math">\(\varphi^n + a_1 \varphi^{n-1} + \dots + a_n = 0\)</span> with <span class="math">\(a_i \in \alpha\)</span>
-<ul>
-<li><code>fix me: a linear algebra proof</code></li>
-<li><span class="math">\(\alpha M = M\)</span> then <span class="math">\(x = 1 + a_1 +\ldots + a_n \equiv 1 \mod \alpha\)</span> and <span class="math">\(xM = 0\)</span></li>
-<li><span id="cross-Nakayama's-lemma" class="crosslink">Nakayama's lemma</span> <span class="math">\(\alpha \in {\mathscr{R}}\Rightarrow (\alpha M = M\Rightarrow M = 0)\)</span></li>
-<li><span class="math">\(\alpha \subset {\mathscr{R}}\Rightarrow (M = \alpha M + N\Rightarrow M = N)\)</span>
-<ul>
-<li><span class="math">\(\alpha \frac{M}{N} = \frac{\alpha M + N}{N} = \frac{M}{N}\)</span> <code>fix me</code></li>
 </ul></li>
-</ul></li>
-<li><span class="math">\(A\)</span> local ring, <span class="math">\(M/mM\)</span> is a <span class="math">\(A/m\)</span>-module, a <span class="math">\(k\)</span>-vector space
+<li><span id="cross-restriction-of-scalars" class="crosslink">restriction of scalars</span> for <span class="math">\(f: A\to B\)</span> and <span class="math">\(N\)</span> a <span class="math">\(B\)</span>-module, we get a <span class="math">\(A\)</span>-module
 <ul>
-<li><span class="math">\(x_i\)</span>’s image is base of the vector space, then <span class="math">\(x_i\)</span> generate <span class="math">\(M\)</span>. proof, <span class="math">\(N\to M\to M/mM\)</span> is onto, so <span class="math">\(N + mM = M\)</span> so by above, we have <span class="math">\(N = M\)</span></li>
-</ul></li>
+<li><span class="math">\(N\)</span> and <span class="math">\(B\)</span> finitely generated then <span class="math">\(N\)</span> as <span class="math">\(A\)</span>-module is finitely generated</li>
 </ul></li>
 <li><span id="cross-the-group-of-module-homomorphisms" class="crosslink">the group of module homomorphisms</span>. let <span class="math">\(A\)</span> a ring and <span class="math">\(X\)</span>, <span class="math">\(X'\)</span> modules, we investigate the <a href="#cross-abelian-group">abelian group</a> <span class="math">\({\text{Hom}}_A(X', X)\)</span> which contains <span class="math">\(f: X'\to X\)</span>
 <ul>
-<li>if <span class="math">\(A\)</span> is commutative, then <span class="math">\({\text{Hom}}_A(X', X)\)</span> is a <span class="math">\(A\)</span>-module, with <span class="math">\((af)(x) = af(x)\)</span>
-<ul>
-<li><span class="math">\({\text{Hom}}(A,M)\cong M\)</span> as <span class="math">\(A\)</span>-modules</li>
-</ul></li>
 <li>it is also a <a href="#cross-functor">functor</a>, which is contravariant in the first and covariant in the second
 <ul>
 <li>when view the <a href="#cross-codomain">codomain</a> fixed, it is a functor <span class="math">\({\text{Hom}}(L, R)\to ({\text{Hom}}(R, D)\to {\text{Hom}}(L, D))\)</span> it is contravariant because we maps <span class="math">\(L\to {\text{Hom}}(L, D)\)</span>, by the definition of a functor, we know it is a functor, please consider what is the identity map in the right category</li>
@@ -1899,8 +1932,7 @@ $("#content").css("max-width", "1100px")
 <li><img src="./images/snake-1.jpg" style="width:300px" /></li>
 <li><img src="./images/snake-2.jpg" style="width:400px" /></li>
 <li>the vertical exactness is trivial</li>
-<li>we proof that <span class="math">\(\alpha_1({\text{Ker }}\lambda)\subset {\text{Ker }}\mu\)</span> by trivial</li>
-<li>and we have <span class="math">\({\text{Coker }}\)</span> homos, also trivial</li>
+<li>we proof that <span class="math">\(\alpha_1({\text{Ker }}\lambda)\subset {\text{Ker }}\mu\)</span> by trivial M* and we have <span class="math">\({\text{Coker }}\)</span> homos, also trivial+</li>
 <li>the <span class="math">\(\delta\)</span> is almost well defined, we proof it is a well-defined function, suppose <span class="math">\(\beta_1(c_1 - c_2)= 0\)</span> then there is <span class="math">\(d\in L_1\)</span> such that <span class="math">\(\alpha_1(d) = c_1 - c_2\)</span> so it dies, and morphism is trivial</li>
 <li>the first exactness is <span class="math">\(\alpha_1({\text{Ker }}\lambda) = {\text{Ker }}(\beta_1|{\text{Ker }}\mu)\)</span>. expanded trivial</li>
 <li>the second exactness is <span class="math">\(\beta_1({\text{Ker }}\mu) = {\text{Ker }}\delta\)</span>. we found the kernel of <span class="math">\(\delta\)</span>. expanded <span class="math">\((m\in M_1\land \nu\beta_1(m) = 0\land l\in L_0\land \alpha_0(l) = \mu(m))\Rightarrow (l\in {\text{Im }}\lambda\Leftrightarrow \beta_1(m)\in \beta_1({\text{Ker }}\mu))\)</span>. we know that <span class="math">\(\mu(\alpha_1(k) - m) =0\Rightarrow \exists u\in {\text{Ker }}\mu (m + u \in {\text{Im }}\alpha_1 = {\text{Ker }}\beta_1\Rightarrow \beta_1(m+u) = 0\Rightarrow \beta_1(m) = \beta_1(u) \in\beta_1({\text{Ker }}\mu))\)</span>. reverse is almost the same</li>
@@ -1909,10 +1941,31 @@ $("#content").css("max-width", "1100px")
 <li>trivial by the picture <img src="./images/snake-proof.jpg" style="width:200px" /></li>
 </ul></li>
 </ul></li>
-<li>2.11 in atiyah <code>fix me</code></li>
+<li>if we have a long exact sequence with ends <span class="math">\(0\)</span> and a additive function on all module and kernel of the sequence, we have <span class="math">\(\sum_{i = 0}^n (-1)^{-i}f(M_i) = 0\)</span>
+<ul>
+<li>proof by split into short exact sequences we have <span class="math">\(f(M_i) = f(N_i) + f(N_{i + 1})\)</span></li>
 </ul></li>
-<li><span id="cross-the-ring-of-module-endomorphisms" class="crosslink">the ring of module endomorphisms</span>. the idea of representation</li>
-<li><code>fix me: projective module, lack of motivation, see the chapter 0 book</code></li>
+</ul></li>
+<li>a a<span><span id="cross-Euler-Poincare-mapping"></span><span id="cross-additive-function" class="crosslink">additive function </span></span> on <span class="math">\(A\)</span>-modules is that <span class="math">\(f(M') - f(M) + f(M'') = 0\)</span>.</li>
+<li><span id="cross-finite-filteration" class="crosslink">finite filteration</span> <span class="math">\(M = M_1\supset \cdots\supset M_r = 0\)</span>
+<ul>
+<li><span id="cross-length-of-filteration" class="crosslink">length of filteration</span></li>
+<li><span id="cross-simple-module" class="crosslink">simple module</span>, <span id="cross-simple-filteration" class="crosslink">simple filteration</span></li>
+<li><span id="cross-finite-length-module" class="crosslink">finite length module</span> is module which has finite <a href="#cross-simple-filteration">simple filteration</a>, and it has <span id="cross-length-of-module" class="crosslink">length of module</span></li>
+<li>we can define a <a href="#cross-additive-function">additive function</a> over all finite length module generated by defining on <a href="#cross-simple-module">simple module</a>s</li>
+</ul></li>
+<li><span id="cross-direct-limit" class="crosslink">direct limit</span> and <span id="cross-inverse-limit" class="crosslink">inverse limit</span> <code>fix me</code></li>
+<li><code>fix me: projective module</code></li>
+</ul></li>
+</ul>
+<h3 id="module-over-commutative-ring">module over commutative ring</h3>
+<ul>
+<li><a href="#cross-module">module</a> over <a href="#cross-commutative-ring">commutative ring</a>
+<ul>
+<li><span id="cross-module-of-module-homomorphisms" class="crosslink">module of module homomorphisms</span> <span class="math">\({\text{Hom}}_A(X', X)\)</span> is a <span class="math">\(A\)</span>-module, with <span class="math">\((af)(x) = af(x)\)</span>
+<ul>
+<li><span class="math">\({\text{Hom}}(A,M)\cong M\)</span> as <span class="math">\(A\)</span>-modules</li>
+</ul></li>
 <li><span id="cross-dual-module" class="crosslink">dual module</span> <span class="math">\(E\)</span> a <strong>free module</strong> over commutative ring <span class="math">\(A\)</span>. viewing <span class="math">\(A\)</span> as an <span class="math">\(A\)</span> module, we have <span class="math">\(E^* =  {\text{Hom}}(E, A)\)</span> a module, elements is called <span id="cross-functional" class="crosslink">functional</span>s. <span class="math">\(f(x) = {\langle x, f \rangle}\)</span>, and we have an injection <span class="math">\(E\to E^{**}\)</span>
 <ul>
 <li><span class="math">\(E\)</span> a finite free moudule over commutative ring <span class="math">\(A\)</span>, of finite dimension <span class="math">\(n\)</span>, then <span class="math">\(E^*\)</span> is free of dimension <span class="math">\(n\)</span>, with <span id="cross-dual-basis" class="crosslink">dual basis</span></li>
@@ -1920,26 +1973,102 @@ $("#content").css("max-width", "1100px")
 <li>we have exactness <span class="math">\(0\to W\to V\to U\to 0\Rightarrow 0\to U^*\to V^*\to W^*\to 0\)</span>. because free module is projective <code>fix me</code></li>
 <li><code>fix me: dual module in vector space case</code></li>
 </ul></li>
+<li><span id="cross-the-ring-of-module-endomorphisms" class="crosslink">the ring of module endomorphisms</span>. <span class="math">\(A\)</span> commutative and <span class="math">\(R\)</span> a ring, <span class="math">\(\rho: R\to {\text{End}}_A(M)\)</span> is <span id="cross-representation" class="crosslink">representation</span> of <span class="math">\(R\)</span> on <span class="math">\(M\)</span>, occurs especially when <span class="math">\(A = K\)</span> is a field</li>
+<li><span id="cross-finitely-generated-module-over-commutative-ring" class="crosslink">finitely generated module over commutative ring</span>
+<ul>
+<li><span class="math">\(\varphi: A\to A\)</span> such that <span class="math">\(\varphi(M)\subset \alpha M\)</span> then <span class="math">\(\varphi^n + a_1 \varphi^{n-1} + \dots + a_n = 0\)</span> with <span class="math">\(a_i \in \alpha\)</span>
+<ul>
+<li><code>fix me: a linear algebra proof. is it only true for commutative rings?</code></li>
+<li><span class="math">\(\alpha M = M\)</span> then <span class="math">\(x = 1 + a_1 +\ldots + a_n \equiv 1 \mod \alpha\)</span> and <span class="math">\(xM = 0\)</span></li>
+<li><span id="cross-Nakayama's-lemma" class="crosslink">Nakayama's lemma</span> <span class="math">\(\alpha \in {\mathscr{R}}\Rightarrow (\alpha M = M\Rightarrow M = 0)\)</span></li>
+<li><span class="math">\(\alpha \subset {\mathscr{R}}\Rightarrow (M = \alpha M + N\Rightarrow M = N)\)</span>
+<ul>
+<li><span class="math">\(\alpha \frac{M}{N} = \frac{\alpha M + N}{N} = \frac{M}{N}\)</span> <code>fix me</code></li>
+</ul></li>
+</ul></li>
+<li><span class="math">\(A\)</span> local ring, <span class="math">\(M/mM\)</span> is a <span class="math">\(A/m\)</span>-module, a <span class="math">\(k\)</span>-vector space
+<ul>
+<li><span class="math">\(x_i\)</span>’s image is base of the vector space, then <span class="math">\(x_i\)</span> generate <span class="math">\(M\)</span>. proof, <span class="math">\(N\to M\to M/mM\)</span> is onto, so <span class="math">\(N + mM = M\)</span> so by above, we have <span class="math">\(N = M\)</span></li>
+</ul></li>
+</ul></li>
+<li><span id="cross-tensor-product" class="crosslink">tensor product</span> is <a href="#cross-initial">initial</a> in <a href="#cross-coslice-category">coslice category</a> of <span class="math">\(E_1\times \cdots\times E_n\)</span> where the arrows should be <a href="#cross-multilinear-map">multilinear map</a>
+<ul>
+<li>remark on why defined over commutative ring, see <a href="#cross-ref-algebra-0">ref-algebra-0</a></li>
+<li>construction is trivial</li>
+<li><span class="math">\(M\otimes N\cong N\otimes M\)</span>. trivial</li>
+<li><span class="math">\((M\otimes N)\otimes P\cong M\otimes (N\otimes P)\cong M\otimes N\otimes P\)</span></li>
+<li><span class="math">\((A\otimes M)\cong M\)</span></li>
+<li><span class="math">\({\text{Hom}}(M\otimes N, P)\cong {\text{Hom}}(M, {\text{Hom}}(N, P))\)</span></li>
+<li><span class="math">\(\_\otimes_R N\)</span> is left-adjoint to <span class="math">\({\text{Hom}}_R(N, \_)\)</span>
+<ul>
+<li>cocontinuous. <span class="math">\((M\oplus N) \otimes P \cong (M\otimes P)\oplus (N\otimes P)\)</span></li>
+<li>left exact</li>
+<li><span class="math">\(\frac{R}{I}\otimes_R N\cong \frac{N}{IN}\)</span>, <span class="math">\(N\)</span> is <span class="math">\(R\)</span>-module and <span class="math">\(I\)</span> ideal of <span class="math">\(R\)</span>
+<ul>
+<li><span class="math">\(\frac{R}{I}\otimes_R\frac{R}{J}\cong \frac{R}{I+J}\)</span>, ideal <span class="math">\(I\)</span>, <span class="math">\(J\)</span> of <span class="math">\(R\)</span>
+<ul>
+<li><span class="math">\({\mathbb{Z}}/n{\mathbb{Z}}\otimes {\mathbb{Z}}/m{\mathbb{Z}}= {\mathbb{Z}}/\text{gcd}(m, n){\mathbb{Z}}\)</span></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><span class="math">\(M'\to M\to M''\to 0\Rightarrow M'\otimes N\to M\otimes N\to M''\otimes N\to 0\)</span> exactness, with maps <span class="math">\(f\otimes 1\)</span>
+<ul>
+<li>the proof used the nonsense property of exact sequence… <strong>wired</strong></li>
+</ul></li>
+<li><code>fix me: proof above when you understand</code></li>
+<li>if <span class="math">\(\sum x_i\otimes y_i = 0\)</span> in <span class="math">\(M\otimes N\)</span> then there is <span class="math">\(M_0\otimes N_0\)</span> two finitely generated submodule, such that it is still <span class="math">\(0\)</span></li>
+<li>example
+<ul>
+<li><span class="math">\(2\otimes 1\)</span> as element of <span class="math">\({\mathbb{Z}}\otimes {\mathbb{Z}}/2{\mathbb{Z}}\)</span> is zero, but is non zero as element of <span class="math">\(2{\mathbb{Z}}\otimes {\mathbb{Z}}/2{\mathbb{Z}}\)</span></li>
+</ul></li>
+</ul></li>
+<li><a href="#cross-free-module">free module</a> over <a href="#cross-commutative-ring">commutative ring</a> has defined <span id="cross-dimension" class="crosslink">dimension</span>. we get it by factor though a maximal module and use the invariant of vector space</li>
+<li><span id="cross-flat-module" class="crosslink">flat module</span> <span class="math">\(T_N = \_\otimes_R N\)</span> is <a href="#cross-exact-functor">exact functor</a>
+<ul>
+<li><span class="math">\(\Leftrightarrow\)</span> <span class="math">\(f:M'\to M\)</span> injective and <span class="math">\(M'\)</span>, <span class="math">\(M\)</span> finitely generated then <span class="math">\(f\otimes 1\)</span> injective</li>
+<li><span class="math">\(f: A\to B\)</span> is ring morphism, <span class="math">\(N_B = B\otimes_A N\)</span> is flat</li>
+</ul></li>
+<li><span id="cross-module-over-principal-entire-rings" class="crosslink">module over principal entire rings</span> <code>fix me</code>
+<ul>
 <li>when <span class="math">\(A\)</span> entire, <span id="cross-torsion-submodule" class="crosslink">torsion submodule</span> <span class="math">\(M_{\text{tor}}\)</span> <span class="math">\(x\in M: \exists a\in A : a\neq 0 \land ax = 0\)</span>. it is well-defined for we have entire!!!. in what sense it resembles <a href="#cross-torsion-group">torsion group</a>? think <span class="math">\(R\)</span> as <span class="math">\({\mathbb{Z}}\)</span></li>
-<li><code>fix me: section 7 and 8</code></li>
+</ul></li>
+<li><span id="cross-extensions-of-scalars" class="crosslink">extensions of scalars</span> for <span class="math">\(f: A\to B\)</span> and <span class="math">\(A\)</span>-module <span class="math">\(M\)</span>, <span class="math">\(M_B = B\otimes_A M\)</span> is a <span class="math">\(B\)</span>-module
+<ul>
+<li><span class="math">\(M\)</span> finitely generated <span class="math">\(\Rightarrow\)</span> <span class="math">\(M_B\)</span> finitely generated</li>
+</ul></li>
 </ul></li>
 </ul>
-<p><code>fix me: 1.3.E and 1.3.F in Algebraic Geometry note, localization of module</code></p>
-<p><img src="./images/free-module.png" style="width:450px" /></p>
+<p><img src="./images/free-module.png" style="width:550px" /></p>
 <h3 id="algebra-1">algebra</h3>
 <ul>
 <li><span class="math">\(R\)</span>-<span id="cross-algebra" class="crosslink">algebra</span>. a ring homomorphism from a commutative ring <span class="math">\(f: R\to S\)</span> such that <span class="math">\(f(R)\subset Z_S\)</span>
 <ul>
 <li>a ring which is a <span class="math">\(R\)</span>-module, and <span class="math">\(r(ab) = r(a)b = ar(b)\)</span></li>
-<li><a href="#cross-morphism">morphism</a> <span class="math">\(f: A\to B\)</span> such that <span class="math">\(f(ra) = rf(a)\)</span></li>
+<li><a href="#cross-morphism">morphism</a> <span class="math">\(f: A\to B\)</span> such that <span class="math">\(f(ra) = rf(a)\)</span>
+<ul>
+<li><span class="math">\(\Leftrightarrow\)</span> both ring and module morphism</li>
+<li><span class="math">\(\Leftrightarrow\)</span> <span class="math">\(h\circ f = g\)</span></li>
+</ul></li>
+<li><span id="cross-finite-algebra" class="crosslink">finite algebra</span> <span class="math">\(f: R\to S\)</span>, <span class="math">\(S\)</span> finitely generated as <span class="math">\(R\)</span>-module</li>
+<li><span id="cross-finite-type-algebra" class="crosslink">finite type algebra</span> there is finite <span class="math">\(x_i\in S\)</span> such that every <span class="math">\(B\)</span> is polynomial of <span class="math">\(x_i\)</span> with coefficients in <span class="math">\(f(R)\)</span>
+<ul>
+<li><span class="math">\(\Leftrightarrow\)</span> there is a <span class="math">\(A\)</span>-algebra epimorphism from <span class="math">\(A[X_1, \ldots, X_n]\to B\)</span></li>
+</ul></li>
+<li><span id="cross-tensor-product-of-algebra" class="crosslink">tensor product of algebra</span> with <span class="math">\(\sum(b_i\otimes c_i)\sum(b'_j\otimes c'_j) = \sum_{i,j}b_ib_j'\otimes c_ic'_j\)</span>
+<ul>
+<li>is a <a href="#cross-commutative-ring">commutative ring</a> and a <span class="math">\(A\)</span>-algebra</li>
+<li><img src="./images/algebra-diagram.jpg" style="width:200px" /></li>
+</ul></li>
 <li>examples
 <ul>
 <li>ring is <span class="math">\({\mathbb{Z}}\)</span> algebra, by <span class="math">\(3ab = a(3b) = (3a)b\)</span> which follows form distributivity of ring, and any ring morphism is an <span class="math">\(R\)</span>-algebra morphism</li>
 <li><a href="#cross-group-ring">group ring</a> <span class="math">\(R[G]\)</span></li>
 </ul></li>
 </ul></li>
+<li><span id="cross-associative-algebra" class="crosslink">associative algebra</span> a ring without unit and a module</li>
 </ul>
 <h3 id="exercises-2">exercises</h3>
+<p><em>from <a href="#cross-ref-algebra-lang">ref-algebra-lang</a></em></p>
 <ol style="list-style-type: decimal">
 <li><span class="math">\(\dim U + \dim W = \dim (V + W) + \dim(U\cap W)\)</span>. trivial by extending basis</li>
 <li>free module over commutative ring has determined rank. follow the hint</li>
@@ -1949,6 +2078,11 @@ $("#content").css("max-width", "1100px")
 <li><code>fix me</code></li>
 <li>trivial</li>
 <li><code>fix me</code></li>
+</ol>
+<p><code>fix me</code></p>
+<p><em>from <a href="#cross-ref-algebra-atiyah">ref-algebra-atiyah</a>, chapter 02</em></p>
+<ol style="list-style-type: decimal">
+<li>a trivial proof is such that if we have a bilinear, <span class="math">\(ma + nb = 1\)</span> then <span class="math">\((c, d) = (c, d(ma+nb)) = (c, dma) = m(c, ad) = (0, ad) = 0\)</span>, all bilinear is trivial map, so the tensor product is trivial map</li>
 </ol>
 <p><code>fix me</code></p>
 <h2 id="vector-space">vector space</h2>
@@ -1962,24 +2096,22 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li>all basis has same cardinal
 <ul>
-<li><code>fix me: general proof</code></li>
-<li><span id="cross-dimension" class="crosslink">dimension</span> well-defined</li>
+<li>proof <code>fix me</code>, so has defined <a href="#cross-dimension">dimension</a></li>
 <li><span class="math">\(\dim V = \dim W + \dim V/W\)</span></li>
 <li><span class="math">\(\dim V = \dim {\text{Ker }}f + \dim {\text{Im }}f\)</span>
 <ul>
 <li>we proof by picking basis in both image and kernel, and picking a set by pullback the basis in image, we show that they generate <span class="math">\(V\)</span> and the basis is independent, which are all trivial</li>
 </ul></li>
 </ul></li>
-<li>if <span class="math">\(K\)</span> is a field with <a href="#cross-absolute-value">absolute value</a>, and <span class="math">\(E\)</span> a vector space over <span class="math">\(K\)</span>, then we can define <span id="cross-norm" class="crosslink">norm</span> by
+<li><span><span id="cross-nvs"></span><span id="cross-normed-vector-space" class="crosslink">normed vector space </span></span> if <span class="math">\(K\)</span> is a field with <a href="#cross-absolute-value">absolute value</a>, and <span class="math">\(E\)</span> a vector space over <span class="math">\(K\)</span>, then we can define <span id="cross-norm" class="crosslink">norm</span> by
 <ul>
 <li><span class="math">\(|v|\geq 0\)</span> and <span class="math">\(|v|=0\Leftrightarrow v=0\)</span></li>
 <li><span class="math">\(|xv| = |x||v|\)</span></li>
 <li><span class="math">\(|v + w| \leq |v|+|w|\)</span></li>
+<li>if we drop the <span class="math">\(=0\)</span> condition, we get <span id="cross-seminorm" class="crosslink">seminorm</span></li>
 </ul></li>
 </ul></li>
 </ul>
-<p><code>fix me: page 30 of algebraic geometry notes, about dual and equvilance of finite dimensional vector space, 1.2C and 1.2.D</code></p>
-<p><code>fix me: the section about general algebras in page 121</code></p>
 <h2 id="polynomial">polynomial</h2>
 <h3 id="polynomial-1">polynomial</h3>
 <ul>
@@ -2044,7 +2176,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(k[X]\)</span> is Euclidean ring, thus <a href="#cross-pid">pid</a> and <a href="#cross-factorial-ring">factorial ring</a></li>
 <li>has at most <span class="math">\(n\)</span> roots in <span class="math">\(k\)</span>, and if <span class="math">\(a\)</span> is a root, then <span class="math">\(X-a\)</span> divides <span class="math">\(f(X)\)</span>. proof by using <a href="#cross-Euclidean-algorithm">Euclidean algorithm</a> on <span class="math">\(X-a\)</span> where <span class="math">\(a\)</span> is a root. we show reminder is zero</li>
 </ul></li>
-<li><code>fix me: a lot is omitted. because we are only considering Galois theory on fields now</code></li>
+<li><code>fix me: rest of chapter 4</code></li>
 </ul></li>
 <li><span><span id="cross-power-series"></span><span id="cross-formal-power-series" class="crosslink">formal power series </span></span> <span class="math">\(A[[X, Y, Z]]\)</span>
 <ul>
@@ -2146,7 +2278,7 @@ $("#content").css("max-width", "1100px")
 </ul>
 <h3 id="real-field">real field</h3>
 <ul>
-<li><span id="cross-ordering-of-field" class="crosslink">ordering of field</span> we define a set of <span id="cross-positive-elements" class="crosslink">positive elements</span> over a field. such that <span class="math">\(x\in P\)</span> or <span class="math">\(x=0\)</span> or <span class="math">\(-x\in P\)</span> and <span class="math">\(x+y\in P\)</span>, <span class="math">\(xy\in P\)</span>
+<li><span><span id="cross-order-of-field"></span><span id="cross-ordering-of-field" class="crosslink">ordering of field </span></span> we define a set of <span id="cross-positive-elements" class="crosslink">positive elements</span> over a field. such that <span class="math">\(x\in P\)</span> or <span class="math">\(x=0\)</span> or <span class="math">\(-x\in P\)</span> and <span class="math">\(x+y\in P\)</span>, <span class="math">\(xy\in P\)</span>
 <ul>
 <li><span class="math">\(1\in P\)</span></li>
 <li><span class="math">\(1 + 1 + 1 + \dots + 1 \in P\)</span>, so <span class="math">\(K\)</span> has characteristic <span class="math">\(0\)</span></li>
@@ -2172,22 +2304,15 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(|1|=|-1|=1\)</span>, <span class="math">\(|-x| =|x|\)</span>, <span class="math">\(|x^{-1}| = |x|^{-1}\)</span></li>
 </ul></li>
 </ul>
-<h2 id="linear-algebra-and-representations">linear algebra and representations</h2>
+<h2 id="linear-algebra">linear algebra</h2>
 <p><em>we assume <span class="math">\(R\)</span> be a <a href="#cross-commutative-ring">commutative ring</a></em></p>
+<h3 id="matrix">matrix</h3>
 <ul>
-<li><span class="math">\(m\times n\)</span> <span id="cross-matrix" class="crosslink">matrix</span> in ring <span class="math">\(R\)</span> a doubly finite indexed family of elements in <span class="math">\(R\)</span> <code>(|m -n)</code>
+<li><span class="math">\(m\times n\)</span> <span id="cross-matrix" class="crosslink">matrix</span>. a doubly finite indexed family of elements in <span class="math">\(R\)</span> <code>(|m -n)</code>, is a <span class="math">\(R\)</span>-module (the entire set of matrix is module, sometimes )
 <ul>
-<li>as a <span class="math">\(R\)</span> module: <span class="math">\(A+B\)</span>, <span class="math">\(cA\)</span></li>
+<li><span class="math">\(A+B\)</span>, <span class="math">\(cA\)</span></li>
 <li><span id="cross-transpose" class="crosslink">transpose</span> <span class="math">\(A'\)</span>. <span class="math">\((A+B)' =A' + B'\)</span>, <span class="math">\((cA)'=cA'\)</span></li>
 <li><span class="math">\(AB\)</span>. <span class="math">\((AB)' =B'A'\)</span></li>
-<li>for <span id="cross-square-matrix" class="crosslink">square matrix</span>s of <span class="math">\(n\times n\)</span>, form a ring
-<ul>
-<li><span class="math">\(R\to {\text{Mat}}_n(R)\)</span></li>
-<li><span id="cross-trace" class="crosslink">trace</span> <span class="math">\({\text{tr}}(A) = \sum(a_{ii})\)</span>
-<ul>
-<li><span class="math">\({\text{tr}}(AB) = {\text{tr}}(BA)\)</span></li>
-</ul></li>
-</ul></li>
 <li>for a ring homomorphism <span class="math">\(\varphi:R\to R'\)</span>, we have
 <ul>
 <li><span class="math">\(\varphi(A+B) = \varphi A+\varphi B\)</span></li>
@@ -2197,11 +2322,57 @@ $("#content").css("max-width", "1100px")
 <li>they are all trivial</li>
 </ul></li>
 </ul></li>
+<li>for <span id="cross-square-matrix" class="crosslink">square matrix</span>s of <span class="math">\(n\times n\)</span>, form a <span class="math">\(R\)</span>-algebra
+<ul>
+<li><span class="math">\(R\to {\text{Mat}}_n(R)\)</span></li>
+<li><span id="cross-trace" class="crosslink">trace</span> <span class="math">\({\text{tr}}(A) = \sum(a_{ii})\)</span>
+<ul>
+<li><span class="math">\({\text{tr}}(AB) = {\text{tr}}(BA)\)</span></li>
+</ul></li>
+<li><span id="cross-determinant" class="crosslink">determinant</span></li>
+</ul></li>
 <li>for <a href="#cross-field">field</a> <span class="math">\(k\)</span>
 <ul>
 <li><span id="cross-rank-of-matrix" class="crosslink">rank of matrix</span>
 <ul>
 <li>the number of independent row vector and column vector is same</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="multilinear-and-forms">multilinear and forms</h3>
+<ul>
+<li><a href="#cross-multilinear">multilinear</a> and <a href="#cross-form">form</a>s
+<ul>
+<li><span id="cross-alternating-multilinear" class="crosslink">alternating multilinear</span> <span class="math">\(E^n\to F\)</span>, such that two adjacent elements equal then <span class="math">\(0\)</span>
+<ul>
+<li>interchange position will change sign. trivial</li>
+<li><span class="math">\(x_i\to x_i + ax_j\)</span> do not change value. trivial</li>
+</ul></li>
+<li><span id="cross-form" class="crosslink">form</span>. <span class="math">\(L^n(E_1, \dots, E_n; R)\)</span>
+<ul>
+<li><span id="cross-bilinear-form" class="crosslink">bilinear form</span></li>
+<li><span><span id="cross-scalar-product"></span><span id="cross-sequilinear-form" class="crosslink">sequilinear form </span></span> <span class="math">\({\mathbb{Z}}\)</span>-bilinear and for a automorphism of period <span class="math">\(2\)</span>, we have <span id="cross-anti-linear" class="crosslink">anti-linear</span> on second one</li>
+<li><span id="cross-symmetric-form" class="crosslink">symmetric form</span> <span class="math">\({\langle x, y \rangle} = {\langle y, x \rangle}\)</span></li>
+<li><span id="cross-hermitian-form" class="crosslink">hermitian form</span> . <a href="#cross-scalar-product">scalar product</a> <span class="math">\(\land\)</span> <span class="math">\({\langle x,y \rangle} = \bar{{\langle y,x \rangle}}\)</span></li>
+<li><span id="cross-orthogonal" class="crosslink">orthogonal</span> <span class="math">\({\langle u,w \rangle} = 0\)</span></li>
+</ul></li>
+<li>hermitian <a href="#cross-form">form</a> over <a href="#cross-ordered-field">ordered field</a>s <span class="math">\(k\)</span> with <span class="math">\(i=\sqrt{-1}\)</span>
+<ul>
+<li><span id="cross-orthonormal" class="crosslink">orthonormal</span></li>
+<li><span id="cross-positive-hermitian-form" class="crosslink">positive hermitian form</span> hermitian <span class="math">\(\land\)</span> <span class="math">\({\langle x,x \rangle} \geq 0\)</span></li>
+<li><span id="cross-positive-definite-hermitian-form" class="crosslink">positive definite hermitian form</span> positive <span class="math">\(\land\)</span> <span class="math">\({\langle x,x \rangle} = 0 \Leftrightarrow x = 0\)</span></li>
+</ul></li>
+<li><a href="#cross-positive-definite-hermitian-form">positive definite hermitian form</a> over <span class="math">\(k\)</span> such that every element is a square
+<ul>
+<li>we define <a href="#cross-norm">norm</a> by <span class="math">\(|v|=\sqrt{v^2}\)</span></li>
+<li><span id="cross-Schwarz-inequality" class="crosslink">Schwarz inequality</span> <span class="math">\(|vw|\leq |v||w|\)</span></li>
+<li><span id="cross-Fourier-coefficient" class="crosslink">Fourier coefficient</span> of <span class="math">\(v\)</span> with respect <span class="math">\(w\)</span>. unique <span class="math">\(c\)</span>: <span class="math">\({\langle v - cw, w \rangle} = 0\)</span> if <span class="math">\(|w| \neq 0\)</span>
+<ul>
+<li><span class="math">\(v - c_1 v_1 - c_2 v_2  - \cdots - c_n v_n\)</span> perpendicular to <span class="math">\(v_i\)</span> when they are mutually perpendicular</li>
+<li><span class="math">\(|w + u|^2 = |u|^2 + |w|^2\)</span> when prependicular</li>
+<li><span class="math">\(|w + u|^2 + |w - u|^2 = 2|w|^2 + 2|u|^2\)</span></li>
+</ul></li>
+<li><span class="math">\(v_i\)</span> orthogonal, then <span class="math">\(|x - \sum (c_k v_k)| \leq |x - \sum(a_k v_k)|\)</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2266,9 +2437,12 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span id="cross-interior-point" class="crosslink">interior point</span> has one neighbor in <span class="math">\(S\)</span>. <span id="cross-interior" class="crosslink">interior</span></li>
 <li><span id="cross-exterior-point" class="crosslink">exterior point</span> has one neighbor in <span class="math">\(X-S\)</span>. <span id="cross-exterior" class="crosslink">exterior</span></li>
-<li><span id="cross-boundary-point" class="crosslink">boundary point</span> every neighbor meets both <span class="math">\(S\)</span> and <span class="math">\(X-S\)</span>. <span id="cross-boundary" class="crosslink">boundary</span>
+<li><span id="cross-boundary-point" class="crosslink">boundary point</span> every neighbor meets both <span class="math">\(S\)</span> and <span class="math">\(X-S\)</span>, <span class="math">\(\partial S\)</span>. <span id="cross-boundary" class="crosslink">boundary</span>
 <ul>
 <li><span class="math">\(X = S^i \coprod S^e \coprod S^b\)</span></li>
+<li><span class="math">\(\partial (A\cup B)\subset \partial A\cup\partial B\)</span>. trivial</li>
+<li><span class="math">\(\partial (A\cap B)\subset \partial A\cup\partial B\)</span>. trivial</li>
+<li><span class="math">\(\partial (A\times B) = (\partial A\times {\text{Cl }}B)\cup ({\text{Cl }}A\times \partial B)\)</span>. trivial</li>
 </ul></li>
 <li><span id="cross-adherent-point" class="crosslink">adherent point</span> every neighbor meets <span class="math">\(S\)</span>. <span id="cross-closure" class="crosslink">closure</span>
 <ul>
@@ -2340,8 +2514,12 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>any seq has at most one limit</li>
 <li>subspace of Hausdorff space is Hausdorff</li>
+<li><span class="math">\(\Leftrightarrow\)</span> <span class="math">\(\Delta = \{(x, x)\}\)</span> is closed in <span class="math">\(X\times X\)</span>
+<ul>
+<li>product of Hausdorff is Hausdorff</li>
 </ul></li>
-<li><span id="cross-regular-space" class="crosslink">regular space</span>
+</ul></li>
+<li><span id="cross-regular-space" class="crosslink">regular space</span> open neighbor separate <span class="math">\(x\)</span> and <span class="math">\(A\)</span>
 <ul>
 <li><a href="#cross-second-countable-space">second countable space</a> . <a href="#cross-regular-space">regular space</a> is <a href="#cross-metrizable">metrizable</a></li>
 </ul></li>
@@ -2354,7 +2532,12 @@ $("#content").css("max-width", "1100px")
 </ul>
 <h2 id="countability-axioms">countability axioms</h2>
 <ul>
-<li><span id="cross-second-countable-space" class="crosslink">second countable space</span> has countable base</li>
+<li><span id="cross-second-countable-space" class="crosslink">second countable space</span> has countable base <span class="math">\(\Rightarrow\)</span> <a href="#cross-separable">separable</a>
+<ul>
+<li>closed under countable product</li>
+<li>has countable subcover</li>
+<li>every base contains a countable base <code>fix me</code></li>
+</ul></li>
 <li><span id="cross-separable" class="crosslink">separable</span> has countable dense set</li>
 </ul>
 <h2 id="compactness">compactness</h2>
@@ -2368,18 +2551,16 @@ $("#content").css("max-width", "1100px")
 <li><strong>compact subspace of Hausdorff space is closed</strong></li>
 <li><span id="cross-Tychonoff's" class="crosslink">Tychonoff's</span> product preserve compact</li>
 </ul></li>
-<li><span id="cross-sequentially-compact" class="crosslink">sequentially compact</span> every sequence has a point of accumulation
+<li><p><span id="cross-sequentially-compact" class="crosslink">sequentially compact</span> every sequence has a convergence subsequence</p></li>
+<li><span id="cross-Lang-sequentially-compact" class="crosslink">Lang sequentially compact</span> every sequence has a point of accumulation (containing infinite <span class="math">\(n\)</span>s)
 <ul>
-<li><em>you are not going too far away!!!</em></li>
-<li><em>so actually compact is a stronger condition!</em></li>
-<li><em>this def is not same as the Wikipedia one!!!</em></li>
-<li>compact <span class="math">\(\Rightarrow\)</span> seq compact</li>
-<li>in <a href="#cross-second-countable-space">second countable space</a> compact = seq compact
+<li>compact <span class="math">\(\Rightarrow\)</span> Lang seq compact</li>
+<li>in <a href="#cross-second-countable-space">second countable space</a> compact = Lang seq compact
 <ul>
 <li>proof: open cover =&gt; countable cover =&gt; unique point cover =&gt; must finite =&gt; if not =&gt; acc point!</li>
 </ul></li>
 </ul></li>
-<li><span id="cross-locally-compact-space" class="crosslink">locally compact space</span> every point has an compact <a href="#cross-neighborhood">neighborhood</a></li>
+<li><p><span id="cross-locally-compact-space" class="crosslink">locally compact space</span> every point has an compact <a href="#cross-neighborhood">neighborhood</a></p></li>
 </ul>
 <h2 id="filter">filter</h2>
 <ul>
@@ -2428,12 +2609,12 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>the locally compact Hausdorff case</li>
 </ul></li>
-<li><span id="cross-Tietze-extension" class="crosslink">Tietze extension</span></li>
+<li><span id="cross-Tietze-extension" class="crosslink">Tietze extension</span> we can extends a continuous function <span class="math">\(A\to {\mathbb{R}}\)</span> where <span class="math">\(A\subset X\)</span> is closed, and with same image if <span class="math">\([0, 1]\)</span></li>
 </ul></li>
 </ul>
 <h2 id="metric-space">metric space</h2>
 <ul>
-<li><span><span id="cross-metrizable"></span><span id="cross-metric-space" class="crosslink">metric space </span></span>
+<li><span><span id="cross-metrizable"></span><span id="cross-metric"></span><span id="cross-metric-space" class="crosslink">metric space </span></span>
 <ul>
 <li><span class="math">\(d(a, b): T\to {\mathbb{R}}\)</span>
 <ul>
@@ -2444,9 +2625,12 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-open-ball" class="crosslink">open ball</span>, <span id="cross-closed-ball" class="crosslink">closed ball</span>, <span id="cross-sphere" class="crosslink">sphere</span></li>
 <li><span id="cross-Cauchy-seq" class="crosslink">Cauchy seq</span></li>
 <li><span id="cross-seq-converge" class="crosslink">seq converge</span></li>
-<li><span id="cross-Cauchy-complete" class="crosslink">Cauchy complete</span>. Cauchy seq converge</li>
+<li><span><span id="cross-complete-space"></span><span id="cross-Cauchy-complete" class="crosslink">Cauchy complete </span></span>. Cauchy seq converge</li>
 <li><a href="#cross-continuous-at-point">continuous at point</a> is <span class="math">\(\delta\)</span> <span class="math">\(\epsilon\)</span></li>
-<li>is <a href="#cross-normal-space">normal space</a></li>
+<li>is <a href="#cross-normal-space">normal space</a>
+<ul>
+<li>proof using <span class="math">\(d(x, A)&lt;d(x, B)\)</span> thing, and we show it is open</li>
+</ul></li>
 <li><span id="cross-metric-equivalence" class="crosslink">metric equivalence</span> give same topology
 <ul>
 <li><span class="math">\(C_1|x|_1 \leq |x|_2 \leq C_2|x|_1\)</span></li>
@@ -2455,7 +2639,8 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>how about a discrete metric??</li>
 </ul></li>
-<li><span id="cross-totally-bounded" class="crosslink">totally bounded</span> exists finite open ball of <span class="math">\(r\)</span> cover for all <span class="math">\(r\)</span></li>
+<li><span id="cross-totally-bounded" class="crosslink">totally bounded</span> exists finite open ball of <span class="math">\(r\)</span> cover for all <span class="math">\(r\)</span> <span class="math">\(\Rightarrow\)</span> bounded</li>
+<li>open subset of metric space (connected <span class="math">\(\Leftrightarrow\)</span> path-connected). proofed using the star shape thing <code>fix me</code></li>
 <li>compact <span class="math">\(\Leftrightarrow\)</span> seq compact <span class="math">\(\Leftrightarrow\)</span> complete and totally bounded
 <ul>
 <li>proof: metric =&gt; seq compact == compact =&gt; complete &amp;&amp; totally bounded || <strong>the proof is intricate!, it should really be a memorized technical lemma!!</strong></li>
@@ -2466,21 +2651,33 @@ $("#content").css("max-width", "1100px")
 <li>continuous = uniform continuous. proof using <span class="math">\(r\)</span> has min, because it is compact</li>
 </ul></li>
 </ul></li>
-<li>compact metric space is <a href="#cross-separable">separable</a></li>
+<li><a href="#cross-separable">separable</a> <span class="math">\(\leftrightarrow\)</span> <a href="#cross-second-countable-space">second countable space</a>. trivial</li>
 </ul></li>
 </ul>
 <h2 id="normed-vector-space">normed vector space</h2>
 <ul>
-<li><span id="cross-normed-vector-space" class="crosslink">normed vector space</span> over <span class="math">\({\mathbb{R}}\)</span> or <span class="math">\({\mathbb{C}}\)</span>
+<li>for a <a href="#cross-field">field</a> with <a href="#cross-absolute-value">absolute value</a>, we have <a href="#cross-topology">topology</a> and <a href="#cross-metric">metric</a> defined by <a href="#cross-absolute-value">absolute value</a>
 <ul>
-<li>define a function to <span class="math">\({\mathbb{R}}\)</span></li>
-<li><span class="math">\(|x| \ge 0\)</span> and only <span class="math">\(= 0\)</span> if <span class="math">\(x = 0\)</span></li>
-<li><span class="math">\(|cx| = |c||x|\)</span></li>
-<li><span class="math">\(|x+y| &lt;|x| + |y|\)</span></li>
-<li>all norm is equivalent</li>
+<li><a href="#cross-topological-field">topological field</a> we proof that <span class="math">\(+\)</span> and <span class="math">\(\times\)</span> and <span class="math">\(\-^{-1}\)</span> is continuous <code>fix me</code></li>
+<li><span id="cross-completion-of-field-with-absolute-value" class="crosslink">completion of field with absolute value</span> a field with absolute value has unique completion
+<ul>
+<li>we defined the <span id="cross-null-sequence" class="crosslink">null sequence</span>s, which is a <a href="#cross-maximal-ideal">maximal ideal</a></li>
+<li>we factor all <a href="#cross-Cauchy-sequence">Cauchy sequence</a>s</li>
+<li>and define <a href="#cross-absolute-value">absolute value</a> on it by continuity</li>
+<li>we proof it is complete</li>
+</ul></li>
+<li><a href="#cross-absolute-value">absolute value</a> function is continuous
+<ul>
+<li>why? because <span class="math">\(|x - y|\leq\epsilon \Rightarrow \left||x|-|y|\right|\leq \left||x-y|\right| = |x-y|\)</span></li>
+</ul></li>
+</ul></li>
+<li><a href="#cross-normed-vector-space">normed vector space</a> has <a href="#cross-topology">topology</a> and <a href="#cross-metric">metric</a> defined by the <a href="#cross-norm">norm</a>
+<ul>
+<li><a href="#cross-topological-vector-space">topological vector space</a> <code>fix me</code></li>
+<li><span class="math">\(K\)</span> complete field with non-trivial <a href="#cross-absolute-value">absolute value</a>, all norm on <span class="math">\(K^n\)</span> are equivalent <code>fix me: the proof in Lang's Algebra</code></li>
 <li>examples
 <ul>
-<li><span id="cross-sup-norm" class="crosslink">sup norm</span>
+<li><span id="cross-sup-norm" class="crosslink">sup norm</span> <span class="math">\(\sup\)</span>-norm
 <ul>
 <li><span id="cross-uniformly-cauchy" class="crosslink">uniformly cauchy</span>, <span id="cross-uniformly-convergent" class="crosslink">uniformly convergent</span></li>
 </ul></li>
@@ -2490,18 +2687,80 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(L^p\)</span>-norm <span id="cross-Lebesgue-space" class="crosslink">Lebesgue space</span>s</li>
 <li><a href="http://en.wikipedia.org/wiki/Norm_(mathematics)">http://en.wikipedia.org/wiki/Norm_(mathematics)</a></li>
 </ul></li>
-<li>normed vector space locally compact <span class="math">\(\Leftrightarrow\)</span> finite dimensional
+<li><a href="#cross-locally-compact">locally compact</a> <span class="math">\(\Leftrightarrow\)</span> finite dimensional
 <ul>
 <li>in <span class="math">\({\mathbb{R}}^n\)</span> compact <span class="math">\(\Leftrightarrow\)</span> closed and bounded</li>
 </ul></li>
 <li>example of incomplete normed vector space <a href="http://math.stackexchange.com/questions/209665/series-in-incomplete-normed-space">http://math.stackexchange.com/questions/209665/series-in-incomplete-normed-space</a></li>
 <li>one point compactification</li>
-<li><span class="math">\(B(S, F)\)</span> <span id="cross-space-of-bounded-maps-to-nvs" class="crosslink">space of bounded maps to nvs</span></li>
-<li><span class="math">\(C(S, F)\)</span> <span id="cross-space-of-continuous-maps-to-nvs" class="crosslink">space of continuous maps to nvs</span></li>
-<li><span class="math">\(BC(S, F)\)</span> <span id="cross-space-of-bounded-continuous-maps-to-nvs" class="crosslink">space of bounded continuous maps to nvs</span></li>
+<li><span id="cross-completion-of-normed-vector-space" class="crosslink">completion of normed vector space</span> almost the same as <a href="#cross-completion-of-field-with-absolute-value">completion of field with absolute value</a> <code>fix me: the proof in Lang's Analysis</code></li>
+<li><span id="cross-Banach-space" class="crosslink">Banach space</span> complete normed vector space</li>
+<li><a href="#cross-norm">norm</a> is continuous</li>
 </ul></li>
 </ul>
-<h2 id="exercise-from-ref-topology-lang">exercise from <a href="#cross-ref-topology-lang">ref-topology-lang</a></h2>
+<h2 id="exercise">exercise</h2>
+<p><em>from <a href="#cross-ref-topology-lang">ref-topology-lang</a></em></p>
+<ol style="list-style-type: decimal">
+<li><span id="cross-close-graph-theorem" class="crosslink">close graph theorem</span> compact Hausdorff space <span class="math">\(X\)</span> and <span class="math">\(Y\)</span>, <span class="math">\(f:X\to Y\)</span> continuous <span class="math">\(\Leftrightarrow\)</span> graph closed in <span class="math">\(X\times Y\)</span>
+<ul>
+<li>left to right. we proof that every point in <span class="math">\(X\times Y - f\)</span> has a open neighborhood. point <span class="math">\((x, y)\)</span> such that <span class="math">\(y \neq f(x)\)</span> then we can found a open neighbor <span class="math">\(D\)</span> in <span class="math">\(Y\)</span> that contains <span class="math">\(y\)</span> but <span class="math">\(f(x)\notin{\text{Cl }}D\)</span>, for <span class="math">\(D' = f^{-1}(D)\)</span>, we have <span class="math">\(X\notin {\text{Cl }}D'\)</span>, if in, then every open neighbor of <span class="math">\(f(x)\)</span> inverse map to a open neighbor of <span class="math">\(X\)</span>, and intersect <span class="math">\(D'\)</span>, the point will maps into <span class="math">\(D\)</span>, so <span class="math">\(y\in {\text{Cl }}D\)</span>, then <span class="math">\(X-{\text{Cl }}D'\times D\)</span> will do</li>
+<li>for a proof of metric space, see <a href="#cross-ref-rf-course">ref-rf-course</a></li>
+<li><span id="cross-extension-of-uniform-map-on-closure-to-complete-metric-space" class="crosslink">extension of uniform map on closure to complete metric space</span> trivial</li>
+</ul></li>
+<li>seminorms
+<ol style="list-style-type: lower-alpha">
+<li>trivial</li>
+<li>if it is norm, then for different points, we have balls of <span class="math">\(d(x, y)/4\)</span> will do, if they have common point, <span class="math">\(d(x + y) \leq d(x, c) + d(c, y) \leq d(x, y)2\)</span>. if Hausdorff, trivial</li>
+<li>well defined by it convergence, then all other trivial</li>
+<li>trivial</li>
+</ol></li>
+<li><span class="math">\(l^1\)</span> space
+<ol style="list-style-type: lower-alpha">
+<li>show that it is complete. norm is trivial, and complete by taking pointwize, is Cauchy, so has limit, define the sequence, then we show it is limit under <span class="math">\(l^1\)</span>-norm, we first have <span class="math">\(A=\sup |a(k)|\)</span> is bounded, by making the <span class="math">\(\epsilon = 1/2 \epsilon + \dots\)</span>, <span class="math">\(\sum_{i = 1}^N|a(\infty)_i\leq \sum a(k) + \epsilon/2^i \leq A + \epsilon\)</span>, the <span class="math">\(k\)</span> is by picking the biggest one in the finite sequence of choice of <span class="math">\(N\)</span>, then because this sequence <strong>bounded increasing</strong>, we have the result we want; then we show <span class="math">\(\lim |a(k) - a(\infty)| = 0\)</span>, i.e. it convergence to the sequence we want in the norm <code>fix me</code></li>
+<li><span class="math">\(|a_n|\leq|b_n|\)</span> is compact and unit sphere not compact <code>fix me</code></li>
+</ol></li>
+<li><span id="cross-Holder-condition" class="crosslink">Holder condition</span> of order <span class="math">\(\alpha\in (0,1]\)</span>. <span class="math">\(f:[0, 1]\to {\mathbb{R}}\)</span>, <span class="math">\(\exists C: |f(x)- f(y)\leq C|x-y|^\alpha\)</span>. we define <span class="math">\(|f|_\alpha = \sup|f(x)| + \sup\frac{|f(x) - f(y)|}{|x-y|^\alpha}\)</span>
+<ol style="list-style-type: lower-alpha">
+<li>show the functions is vector space and <span class="math">\(|\cdot|_\alpha\)</span> is a norm. trivial</li>
+<li>show <span class="math">\(|f|_\alpha\leq 1\)</span> is compact subset of <span class="math">\(C([0, 1])\)</span>. <code>fix me</code></li>
+</ol></li>
+<li><a href="#cross-metric-space">metric space</a>s
+<ol style="list-style-type: lower-alpha">
+<li>trivial</li>
+<li>trivial</li>
+<li><span id="cross-embedding-of-metric-space-into-real-normed-vector-space" class="crosslink">embedding of metric space into real normed vector space</span></li>
+</ol></li>
+<li>distance of <span class="math">\(x\)</span> and <span class="math">\(A\)</span>. continuous of <span class="math">\(x\to \inf_{a\in A} d(x, a)\)</span></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>done</li>
+<li><span class="math">\(\frac{d(x, A)}{d(x, A)+d(x, B)}\)</span> to proof <a href="#cross-Urysohn's-lemma">Urysohn’s lemma</a></li>
+</ol></li>
+<li>done</li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li>done</li>
+<li>done</li>
+<li>in complete normed vector space, line segment with ends in/out <span class="math">\(A\)</span> has point on <span class="math">\(\partial A\)</span>. we find the set of interior and exterior points on <span class="math">\([0, 1]\)</span>, then if they are full, we have <span class="math">\([0, 1] = U\coprod V\)</span> where <span class="math">\(U\)</span>, <span class="math">\(V\)</span> open</li>
+<li>done</li>
+<li>done</li>
+<li>trivial</li>
+<li>done</li>
+<li><code>fix me</code></li>
+<li><span id="cross-Urysohn-meterization-theorem" class="crosslink">Urysohn meterization theorem</span> <code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><span id="cross-proper-maps" class="crosslink">proper maps</span> <code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><span id="cross-the-marriage-problem" class="crosslink">the marriage problem</span> <code>fix me</code></li>
+<li><span id="cross-Contor-set" class="crosslink">Contor set</span> <code>fix me</code></li>
+<li><span id="cross-Peano-curve" class="crosslink">Peano curve</span> <code>fix me</code></li>
+<li><span id="cross-the-semi-parallelogram-law" class="crosslink">the semi parallelogram law</span> <code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+</ol>
 <h2 id="references-3">references</h2>
 <ul>
 <li><span id="cross-ref-topology-exercise" class="crosslink">ref-topology-exercise</span> <em>General Topology Exercise Textbook</em></li>
@@ -2717,30 +2976,27 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-ref-at-concise" class="crosslink">ref-at-concise</span> <em>A Concise Course in Algebraic Topology</em></li>
 <li><span id="cross-ref-at-hatcher" class="crosslink">ref-at-hatcher</span> <em>Algebraic Topology</em>, Hatcher</li>
 </ul>
-<h1 id="real-and-functional-analysis">real and functional analysis</h1>
-<p><em>idea: integration is kind of infinite sums, we require the infinity be small, i.e., our sum is not too big, and we need a group structure to do the adding</em></p>
+<h1 id="analysis">analysis</h1>
+<h2 id="idea-6">idea</h2>
+<ul>
+<li>integration is kind of infinite sums, we require the infinity be small, i.e., our sum is not too big, and we need a group structure to do the adding*</li>
+<li>do not ask why we do analysis on Banach, we have Banach space, so we do analysis</li>
+</ul>
 <p>we use <span class="math">\({\mathbb{F}}\)</span> stands for <span class="math">\({\mathbb{R}}\)</span> or <span class="math">\({\mathbb{C}}\)</span></p>
-<h2 id="continuous-functions-on-compact-spaces">continuous functions on compact spaces</h2>
+<h2 id="space-of-functions">space of functions</h2>
+<p>we can define convergence in the space of functions <span class="math">\(f: X\to T\)</span> where <span class="math">\(T\)</span> has some topology</p>
 <ul>
-<li><em>i’d like to know the importance of these theorems, because they seems so arbitrary</em>
+<li>we can simply define <span id="cross-pointwise-convergence" class="crosslink">pointwise convergence</span>
 <ul>
-<li><a href="http://en.wikipedia.org/wiki/Continuous_functions_on_a_compact_Hausdorff_space">Wikipedia</a></li>
+<li>what’s the topology? <code>fix me</code></li>
+<li>is there a norm? see <a href="http://math.stackexchange.com/questions/33476/norm-for-pointwise-convergence">this</a>. so we cannot expect this <strong><a href="#cross-topological-space">topological space</a></strong> to be a metric space</li>
 </ul></li>
-<li>for <span class="math">\(B(S,F)\)</span> using sup-norm
+</ul>
+<h3 id="continuous-functions-on-compact-spaces-with-sup-norm">continuous functions on compact spaces with <span class="math">\(\sup\)</span>-norm</h3>
+<p>we assume <span class="math">\(X\)</span> compact and <span class="math">\(C(X, {\mathbb{F}}) = BC(X, {\mathbb{F}})\)</span> is the Banach space with <span class="math">\(\sup\)</span>-norm</p>
 <ul>
-<li><span class="math">\(F\)</span> complete <span class="math">\(\Rightarrow\)</span> <span class="math">\(B(S,F)\)</span> complete</li>
-<li><span class="math">\(BC(S, F)\)</span> is closed in <span class="math">\(B(S, F)\)</span></li>
-</ul></li>
-<li><span class="math">\({\mathbb{F}}\)</span> valued <span id="cross-algebra-of-functions" class="crosslink">algebra of functions</span> on <span class="math">\(X\)</span>
+<li><span id="cross-Stone-Weierstrass-theorem" class="crosslink">Stone-Weierstrass theorem</span> <span class="math">\({\mathbb{F}}\)</span>-<a href="#cross-algebra">algebra</a> <span class="math">\(A\subset C(X, {\mathbb{F}})\)</span>. separate points (and self-conjugate) <span class="math">\(\Leftrightarrow\)</span> closure is <span class="math">\(C(X, {\mathbb{F}})\)</span>
 <ul>
-<li><span class="math">\(fg\in A\)</span>, <span class="math">\(f+g\in A\)</span>, <span class="math">\(cf\in A\)</span></li>
-<li>example of algebra: <span class="math">\(C(X)\)</span>, polynomials</li>
-<li><span id="cross-separates-points" class="crosslink">separates points</span></li>
-</ul></li>
-<li><span id="cross-Stone-Weierstrass-theorem" class="crosslink">Stone-Weierstrass theorem</span> on compact set <span class="math">\(S\)</span> an algebra <span class="math">\(A\)</span> of <span class="math">\({\mathbb{R}}\)</span>
-<ul>
-<li>separate points <span class="math">\(\land\)</span> contains constant <span class="math">\(\Leftrightarrow\)</span> uniform closure is <span class="math">\(C(S)\)</span></li>
-<li>complex version, <span class="math">\(A\)</span> additionally self conjugate, same result</li>
 <li>proof: first under the max, min, we can approx using compact(for each point, construct an all lower function, then using them to get an all upper function), second, we can approx abs using polynomials. in complex version, we have conjugate to proof the real valued ones separate points, then we use real valued to approx complex valued</li>
 </ul></li>
 <li><span id="cross-ring-of-real-or-complex-valued-functions" class="crosslink">ring of real or complex valued functions</span>
@@ -2748,19 +3004,175 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(Z_f\)</span> zeros of a continuous function is closed</li>
 <li><span class="math">\(Z(J) = \bigcap Z_f\)</span></li>
 </ul></li>
-<li><span class="math">\(X\)</span> an compact space, <span class="math">\(R\)</span> ring of <span class="math">\({\mathbb{F}}\)</span> valued continuous function on <span class="math">\(X\)</span>, with sup norm. <span class="math">\(J\)</span> a closed ideal. <span class="math">\(f \in R \land f(x) = 0 \forall x \in Z(J)\Rightarrow f \in J\)</span>
+<li><span class="math">\(J\subset C(X, {\mathbb{F}})\)</span> is closed ideal. <span class="math">\(f \in C(X, {\mathbb{F}}) : f(x) = 0 \forall x \in Z(J)\Rightarrow f \in J\)</span>
 <ul>
+<li>complex version requires additionally self conjugate</li>
 <li>it created a semi-constant in <span class="math">\(J\)</span></li>
 <li><em>understand what the theorem says, if you have a ideal, then almost all function that has the zeros of the ideal will in the ideal!!!</em></li>
-<li>complex version requires additionally self conjugate</li>
 </ul></li>
 <li><span id="cross-equicontinuous" class="crosslink">equicontinuous</span> of <span class="math">\(O\subset C(X, F)\)</span> at <span class="math">\(x_0\)</span>, <span class="math">\(X\)</span> is subset of <a href="#cross-metric-space">metric space</a> and <span class="math">\(F\)</span> is <a href="#cross-Banach-space">Banach space</a>. <span class="math">\(\forall e, \exists t (d(x, x_0) &lt; t \Rightarrow \forall f \in O: |f(x)-f(x_0)| &lt; e)\)</span></li>
-<li><span id="cross-Ascoli's-theorem" class="crosslink">Ascoli's theorem</span> <span class="math">\(X\)</span> compact subset of metric space, <span class="math">\(F\)</span> a Banach space, <span class="math">\(O\)</span> subset of <span class="math">\(C(X,F)\)</span> with sup-norm (<span class="math">\(O\)</span> is relatively compact in <span class="math">\(C(X,F)\)</span> <span class="math">\(\Leftrightarrow\)</span> <span class="math">\(O\)</span> is <a href="#cross-equicontinuous">equicontinuous</a> <span class="math">\(\land\)</span> <span class="math">\(\forall x \in X, O(x)={f(x)}\)</span> is relatively compact)
+<li><span id="cross-Ascoli's-theorem" class="crosslink">Ascoli's theorem</span> <span class="math">\(X\)</span> compact subset of metric space, <span class="math">\(F\)</span> a Banach space, <span class="math">\(O\)</span> subset of <span class="math">\(C(X,F)\)</span> with <span class="math">\(\sup\)</span>-norm (<span class="math">\(O\)</span> is relatively compact in <span class="math">\(C(X,F)\)</span> <span class="math">\(\Leftrightarrow\)</span> <span class="math">\(O\)</span> is <a href="#cross-equicontinuous">equicontinuous</a> <span class="math">\(\land\)</span> <span class="math">\(\forall x \in X, O(x)={f(x)}\)</span> is relatively compact)
 <ul>
 <li><em>it is that you can use open ball if they are about as one function: same rate and not too far away in values</em></li>
 </ul></li>
 </ul>
+<h3 id="banach-spaces">Banach spaces</h3>
+<p>we assume <span class="math">\(E\)</span> and <span class="math">\(F\)</span> is <a href="#cross-normed-vector-space">normed vector space</a> over <span class="math">\({\mathbb{F}}\)</span></p>
+<p><em>we see that we defined different norm on the space <span class="math">\(B(S, F)\)</span> and <span class="math">\(L(S, F)\)</span> this is interesting</em></p>
+<ul>
+<li><a href="#cross-Banach-space">Banach space</a> over <span class="math">\({\mathbb{F}}\)</span>
+<ul>
+<li><span class="math">\({a_n} \ge 0\)</span> such that <span class="math">\(\sum a_n\)</span> converges (in <strong>Banach</strong> space <span class="math">\(\forall n, |x_n| \leq a_n\)</span> then <span class="math">\(\sum x_n\)</span> converges)</li>
+<li><span class="math">\(B(S, F)\)</span> <span id="cross-space-of-bounded-maps-to-nvs" class="crosslink">space of bounded maps to nvs</span> is <a href="#cross-nvs">nvs</a> with <span class="math">\(\sup\)</span>-norm
+<ul>
+<li><span class="math">\(F\)</span> complete <span class="math">\(\Rightarrow\)</span> <span class="math">\(B(S,F)\)</span> complete</li>
+</ul></li>
+<li><span class="math">\(C(S, F)\)</span> <span id="cross-space-of-continuous-maps-to-nvs" class="crosslink">space of continuous maps to nvs</span>
+<ul>
+<li>if <span class="math">\(S\)</span> compact, then <span class="math">\(C(S, F) = BC(S, F)\)</span>
+<ul>
+<li>we show that every continuous function <span class="math">\(f\)</span> is bounded on compact space. <span class="math">\(f(X)\)</span> is compact, so totally bounded, so bounded</li>
+</ul></li>
+</ul></li>
+<li><span class="math">\(BC(S, F)\)</span> <span id="cross-space-of-bounded-continuous-maps-to-nvs" class="crosslink">space of bounded continuous maps to nvs</span> is <a href="#cross-nvs">nvs</a> with <span class="math">\(\sup\)</span>-norm
+<ul>
+<li><span class="math">\(BC(S, F)\)</span> is closed in <span class="math">\(B(S, F)\)</span></li>
+</ul></li>
+<li><span id="cross-continuous-linear-map" class="crosslink">continuous linear map</span> <span class="math">\(L(E, F)\)</span> subset of <a href="#cross-linear-map">linear map</a> is <a href="#cross-nvs">nvs</a>
+<ul>
+<li><span class="math">\(\Leftrightarrow\)</span> <span class="math">\(\exists C &gt; 0 \forall x \in E: |l(x)| \leq C|x| \)</span>
+<ul>
+<li><span class="math">\(C\)</span> is bound of <span class="math">\(l\)</span>, <span class="math">\(l\)</span> is bounded</li>
+<li>finite dimensional to normed vector space is always continuous, they are trivially bounded</li>
+<li>define <a href="#cross-norm">norm</a> by <span class="math">\(\inf C\)</span></li>
+</ul></li>
+<li>example of non-continuous linear map: <a href="http://en.wikipedia.org/wiki/Linear_map#Continuity">http://en.wikipedia.org/wiki/Linear_map#Continuity</a> <a href="http://en.wikipedia.org/wiki/Discontinuous_linear_map">http://en.wikipedia.org/wiki/Discontinuous_linear_map</a></li>
+<li>so it is an normed vector space</li>
+<li><span class="math">\(|u\circ v| \leq |u||v|\)</span> for <span class="math">\(L\)</span> map composition</li>
+<li><span class="math">\(F\)</span> complete <span class="math">\(\Rightarrow\)</span> <span class="math">\(L(E, F)\)</span> complete <code>fix me</code></li>
+<li><span id="cross-operator" class="crosslink">operator</span> <span class="math">\(L(E, E)\)</span></li>
+<li><span><span id="cross-toplinear"></span><span id="cross-toplinear-isomorphism" class="crosslink">toplinear isomorphism </span></span> <span class="math">\({\text{Lis}}(E, F)\)</span></li>
+<li><span id="cross-toplinear-automorphism" class="crosslink">toplinear automorphism</span> <span class="math">\({\text{Laut}}(E)\)</span></li>
+<li><a href="#cross-isometry">isometry</a> . <a href="#cross-toplinear">toplinear</a> and <span class="math">\(|u(x)| = |x|\)</span></li>
+</ul></li>
+<li><span id="cross-continuous-multilinear-map" class="crosslink">continuous multilinear map</span>
+<ul>
+<li><span class="math">\(\Leftrightarrow\)</span> <span class="math">\(|l(x, y)|\leq C|x||y|\)</span> <code>fix me</code>
+<ul>
+<li>define <a href="#cross-norm">norm</a> by <span class="math">\(\inf C\)</span></li>
+</ul></li>
+<li><span class="math">\(L(E, L(F, G))\cong L(E, F; G)\)</span></li>
+<li><span class="math">\(G\)</span> complete <span class="math">\(\Rightarrow\)</span> <span class="math">\(L(E, F; G)\)</span> complete</li>
+<li>examples: matrix mul, dot product, cross product</li>
+</ul></li>
+<li><span id="cross-dual-space" class="crosslink">dual space</span> <span class="math">\(L(E, {\mathbb{F}}) = E'\)</span>, <span id="cross-functional" class="crosslink">functional</span>s on <span class="math">\(E\)</span>
+<ul>
+<li>complete, because <span class="math">\(F\)</span> is complete</li>
+<li><span id="cross-Hahn-Banach-theorem" class="crosslink">Hahn-Banach theorem</span> subspace <span class="math">\(F\)</span> of <span class="math">\(E\)</span>, <span class="math">\(l: F\to {\mathbb{F}}\)</span> a functional, then has same bound extension on <span class="math">\(E\)</span>
+<ul>
+<li>in <span class="math">\(E\)</span>, <span class="math">\(v \neq 0\)</span> <span class="math">\(\Rightarrow\)</span> <span class="math">\(l(v) \neq 0\)</span> exists
+<ul>
+<li>generate the one dimensional space</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><span id="cross-dual-dual-space" class="crosslink">dual dual space</span> <span class="math">\(L(L(E, {\mathbb{F}}), {\mathbb{F}}) = E''\)</span>
+<ul>
+<li>norm-preserve embedding <span class="math">\(E\)</span> into <span class="math">\(E''\)</span> by <span class="math">\(f_x: E' \to {\mathbb{F}}\)</span> such that <span class="math">\(f_x(l) = l(x)\)</span>
+<ul>
+<li><span class="math">\(|f_x| \leq |x|\)</span>, left is bounded by right, expand by definition!</li>
+<li><span class="math">\(|f_x| \ge |x|\)</span>, the bound is bigger than <span class="math">\(|x|\)</span>, find one at least <span class="math">\(x\)</span>!, <span class="math">\(x = f_x({\text{id}}) \leq |f|\)</span></li>
+</ul></li>
+</ul></li>
+<li>space with <span id="cross-weak$^*$-topology" class="crosslink">weak$^*$ topology</span> on <span class="math">\(E'\)</span> is determined by <span class="math">\(\{f_x\}\)</span>
+<ul>
+<li><span id="cross-Alaoglu's-theorem" class="crosslink">Alaoglu's theorem</span> <span class="math">\(E\)</span> a Banach space, then <span class="math">\(E'_1\)</span> is compact for the weak<span class="math">\(^*\)</span> topology
+<ul>
+<li>the proof is by mapping it to the graph, but it is rather wired <code>fix me</code></li>
+<li>notice that <span class="math">\(E'\)</span> has standard topology by norm, the relation <code>fix me</code></li>
+</ul></li>
+</ul></li>
+<li>algebra. vs <span class="math">\(A\)</span> and multiplication: bilinear
+<ul>
+<li>cross product in <span class="math">\({\mathbb{R}}^3\)</span> not associative normed algebra</li>
+</ul></li>
+<li><span id="cross-normed-algebra" class="crosslink">normed algebra</span>. <span id="cross-associative-algebra" class="crosslink">associative algebra</span> on normed space <span class="math">\(\land\)</span> <span class="math">\(|uv| \leq |u||v|\)</span></li>
+<li><span id="cross-Banach-algebra" class="crosslink">Banach algebra</span>. <a href="#cross-normed-algebra">normed algebra</a> and complete
+<ul>
+<li>bounded functions by multiplication of function</li>
+<li><span class="math">\(A\)</span> Banach algebra with unit <span class="math">\(e\)</span>, invertible elements is open in <span class="math">\(A\)</span>, and if <span class="math">\(|v| &lt; 1\)</span> then <span class="math">\(e+v\)</span> is invertible
+<ul>
+<li>the proof is rather wired</li>
+</ul></li>
+<li><span class="math">\(u \to u^{-1}\)</span> is continuous (defined on invertible elements)</li>
+<li><span class="math">\(E\)</span> and <span class="math">\(F\)</span> Banach space, then <span class="math">\({\text{Lis}}(E, F)\)</span> is open in <span class="math">\(L(E, F)\)</span></li>
+<li><span class="math">\({\text{End}}(E)\)</span> is Banach algebra by composition, if <span class="math">\(E\)</span> finite dimensional, it is the algebra of matrices <code>fix me</code></li>
+</ul></li>
+<li><span id="cross-linear-extension-theorem" class="crosslink">linear extension theorem</span> <span class="math">\(F\subset E\)</span>, <span class="math">\(G\)</span> Banach space, continuous linear map <span class="math">\(l: F \to G\)</span> has unique linear extension <span class="math">\(\bar{l}: \bar{F} \to G\)</span> on the closure of <span class="math">\(F\)</span> that has same norm
+<ul>
+<li>example of open subspace? think functional</li>
+<li>this is kind of like <a href="#cross-Hahn-Banach-theorem">Hahn-Banach theorem</a>, but the codomian is wider…? <code>fix me: finish the proof</code></li>
+</ul></li>
+<li>operators <code>fix me</code>
+<ul>
+<li><span class="math">\(S\)</span>-invariant subspace</li>
+<li><span class="math">\(B\)</span> commute with <span class="math">\(S\)</span> <span class="math">\(\Rightarrow\)</span> kernel and image is <span class="math">\(S\)</span>-invariant</li>
+<li>direct sum</li>
+<li>if <span class="math">\(A\)</span> is an operator on <span class="math">\(E\)</span>, we are interested to express <span class="math">\(E\)</span> as direct sum of <span class="math">\(A\)</span>-invariant subspaces!</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="convexity">convexity</h3>
+<p><span class="math">\(E\)</span> over <span class="math">\({\mathbb{R}}\)</span></p>
+<ul>
+<li><span id="cross-convex-set" class="crosslink">convex set</span> closed under <span class="math">\((1-t)x+ty\)</span>
+<ul>
+<li><span id="cross-locally-convex-space" class="crosslink">locally convex space</span></li>
+</ul></li>
+</ul>
+<p><code>fix me</code></p>
+<h3 id="hilbert-space">Hilbert space</h3>
+<p><code>fix me: i should make the part of Hilbert space and bilinear form clear</code></p>
+<p>we use vs over <span class="math">\({\mathbb{C}}\)</span>, and assume our form is positive</p>
+<ul>
+<li><span id="cross-total-family" class="crosslink">total family</span> union of finite generated space is dense in <span class="math">\(E\)</span></li>
+<li><span id="cross-Hilbert-basis" class="crosslink">Hilbert basis</span> total and orthonormal family</li>
+<li><span id="cross-pre-Hilbert-space" class="crosslink">pre-Hilbert space</span> vs <span class="math">\(\land\)</span> positive definite hermitian form</li>
+<li><span id="cross-Hilbert-space" class="crosslink">Hilbert space</span> per-Hilbert and complete under <span class="math">\(L^2\)</span>-norm
+<ul>
+<li>closed subspace of Hilbert space, a point out’s min dis correspond point in it</li>
+<li>theorem 1.6 closed subspace has perpendicular point!</li>
+<li>exists Hilbert basis</li>
+<li><span class="math">\(F\)</span> a closed space, <span class="math">\(E\)</span> Hilbert space, <span class="math">\(E = F + F^\perp\)</span></li>
+<li><span id="cross-orthogonal-projection" class="crosslink">orthogonal projection</span></li>
+<li>you get a point in generated space of countable closed perpendicular subspaces <span class="math">\(F_i\)</span> by projections…
+<ul>
+<li><span id="cross-orthogonal-decomposition" class="crosslink">orthogonal decomposition</span></li>
+<li><span id="cross-Bessel-inqeulity" class="crosslink">Bessel inqeulity</span></li>
+</ul></li>
+</ul></li>
+<li><span class="math">\(l_y = {\langle x,y \rangle}\)</span> is functional, <span class="math">\(y \to l_y\)</span> is norm-preserving, antilinear isomorphism
+<ul>
+<li><span class="math">\({\text{End}}(E)\)</span> operators = continuous linear map</li>
+<li><span class="math">\(\text{Sesqu}(E)\)</span> continuous sesqu form
+<ul>
+<li><span class="math">\(\text{Herm}(E)\)</span> all continuous hermitian forms</li>
+</ul></li>
+<li><span class="math">\(A \to \pi_A\)</span> is norm preserving isomorphism between <span class="math">\({\text{End}}(E)\)</span> and <span class="math">\(\text{Sesqu}(E)\)</span></li>
+<li><span id="cross-adjoint-on-Hilbert-space" class="crosslink">adjoint on Hilbert space</span>, <span id="cross-transpose-on-Hilbert-space" class="crosslink">transpose on Hilbert space</span> <span class="math">\({\langle Ax, y \rangle} = {\langle x, A^* y \rangle}\)</span>
+<ul>
+<li><span class="math">\((A+B)^* = A^* + B^*\)</span>, <span class="math">\(A^{**} = A\)</span>, <span class="math">\((aA)^* = \bar{a}A^*\)</span>, <span class="math">\((AB)^* = B^*A^*\)</span></li>
+</ul></li>
+<li>sesquilinear form <span class="math">\(\pi\)</span> then <span class="math">\(q(x) = \pi(x, x)\)</span> is quadratic form</li>
+<li>complex Hilbert space, <span class="math">\({\langle Ax, x \rangle} = 0 \Rightarrow A = O\)</span>
+<ul>
+<li>fails in real: rotation</li>
+</ul></li>
+<li><span class="math">\(A = A^*\)</span> hermitian, self-adjoint</li>
+</ul></li>
+</ul>
 <h3 id="exercises-4">exercises</h3>
+<p><em>chapter 03</em></p>
 <ol start="0" style="list-style-type: decimal">
 <li>proof that <span class="math">\(C(S, F)\)</span> complete, where <span class="math">\(S\)</span> is metric space, and <span class="math">\(F\)</span> is Banach space. <span class="math">\(BC(S,F)\)</span> is closed in <span class="math">\(B(S, F)\)</span>
 <ul>
@@ -2778,182 +3190,66 @@ $("#content").css("max-width", "1100px")
 <li>omitted</li>
 <li><code>fix me</code></li>
 <li>compact metric space <span class="math">\(X\)</span>, then <span class="math">\(C(X, {\mathbb{F}})\)</span> is separable. follow the hint, use SW on a countable algebra</li>
-<li>tensor products are dense</li>
-<li><code>fix me: finish after this</code></li>
-</ol>
-<h2 id="banach-spaces">Banach spaces</h2>
+<li><span class="math">\(X\)</span>, <span class="math">\(Y\)</span> compact Hausdorff, <span class="math">\(f\in C(X)\)</span>, <span class="math">\(g\in C(Y)\)</span>, then tensor products are dense
 <ul>
-<li><code>fix me: the image of continuous linear map is not necessary closed</code></li>
-</ul>
-<p>we assume <span class="math">\(E\)</span> and <span class="math">\(F\)</span> is <a href="#cross-normed-vector-space">normed vector space</a></p>
-<ul>
-<li><span id="cross-Banach-space" class="crosslink">Banach space</span>. complete normed vector space
-<ul>
-<li><span class="math">\({a_n} \ge 0\)</span> such that <span class="math">\(\sum a_n\)</span> converges (in <strong>Banach</strong> space <span class="math">\(\forall n, |x_n| \leq a_n\)</span> then <span class="math">\(\sum x_n\)</span> converges)</li>
-<li><span id="cross-continuous-linear-map" class="crosslink">continuous linear map</span> <span class="math">\(L(E, F)\)</span>, where <span class="math">\(E\)</span>, <span class="math">\(F\)</span> is normed vector space
-<ul>
-<li><span id="cross-linear-map" class="crosslink">linear map</span> on vector space <span class="math">\(T(ax_1+bx_2) = aT(x_1) + bT(x_2)\)</span></li>
-<li><span class="math">\(l: E \to F\)</span> continuous <span class="math">\(\Leftrightarrow\)</span> <span class="math">\(\exists C &gt; 0 \forall x \in E: |l(x)| \leq C|x| \)</span>
-<ul>
-<li>example of non-continuous linear map: <a href="http://en.wikipedia.org/wiki/Linear_map#Continuity">http://en.wikipedia.org/wiki/Linear_map#Continuity</a> <a href="http://en.wikipedia.org/wiki/Discontinuous_linear_map">http://en.wikipedia.org/wiki/Discontinuous_linear_map</a></li>
-<li><span class="math">\(C\)</span> is bound of <span class="math">\(l\)</span>, <span class="math">\(l\)</span> is bounded</li>
-<li>finite dimensional to normed vector space is always continuous, they are trivially bounded</li>
+<li>using SW theorem, note that <span class="math">\(C(X)\)</span> is functions to <span class="math">\({\mathbb{F}}\)</span></li>
 </ul></li>
-<li><a href="#cross-norm">norm</a> of linear map. lub of all <span class="math">\(|l(x)|\)</span> on <span class="math">\(S_1\)</span>
-<ul>
-<li><span class="math">\(|u\circ v| \leq |u||v|\)</span> for <span class="math">\(L\)</span> map composition</li>
-</ul></li>
-<li>so it is an normed vector space</li>
-<li><span class="math">\(F\)</span> complete <span class="math">\(\Rightarrow\)</span> <span class="math">\(L(E, F)\)</span> complete <code>fix me</code></li>
-<li><span id="cross-operator" class="crosslink">operator</span> <span class="math">\(E \to E\)</span> continuous linear map</li>
-<li><span id="cross-toplinear-isomorphisms" class="crosslink">toplinear isomorphisms</span> <span class="math">\({\text{Lis}}(E, F)\)</span></li>
-<li><a href="#cross-automorphism">automorphism</a> <span class="math">\({\text{Laut}}(E)\)</span></li>
-<li><span id="cross-isometry" class="crosslink">isometry</span> toplinear and <span class="math">\(|u(x)| = |x|\)</span></li>
-</ul></li>
-<li><span id="cross-bilinear" class="crosslink">bilinear</span> for normed vector space <span class="math">\(E\)</span>, <span class="math">\(F\)</span>, <span class="math">\(G\)</span>, <span class="math">\(l: E \times F \to G\)</span> is linear for two components
-<ul>
-<li>bilinear continuous <span class="math">\(\Leftrightarrow\)</span> <span class="math">\(|l(x, y)|\leq C|x||y|\)</span> <code>fix me</code></li>
-<li>norm of bilinear, <span class="math">\(L(E, F; G)\)</span></li>
-<li>and <span class="math">\(G\)</span> complete <span class="math">\(\Rightarrow\)</span> <span class="math">\(L(E, F; G)\)</span> complete</li>
-<li>examples: matrix mul, dot product, cross product</li>
-<li><a href="#cross-isometry">isometry</a> between <span class="math">\(L(E, L(F, G))\)</span> and <span class="math">\(L(E, F; G)\)</span></li>
-</ul></li>
-<li><span id="cross-multilinear-map" class="crosslink">multilinear map</span></li>
-<li><span id="cross-dual-space" class="crosslink">dual space</span> <span class="math">\(L(E, {\mathbb{F}}) = E'\)</span>, functionals on <span class="math">\(E\)</span>
-<ul>
-<li>complete, because <span class="math">\(F\)</span> is complete</li>
-<li><span id="cross-Hahn-Banach-theorem" class="crosslink">Hahn-Banach theorem</span> subspace <span class="math">\(F\)</span> of real nvs <span class="math">\(E\)</span>, <span class="math">\(l: F\to {\mathbb{R}}\)</span> a functional, then has same bound extension on <span class="math">\(E\)</span>
-<ul>
-<li><em>extension of continuous linear functionals</em></li>
-<li>in nvs <span class="math">\(E\)</span>, <span class="math">\(v \neq 0\)</span> <span class="math">\(\Rightarrow\)</span> <span class="math">\(l(v) \neq 0\)</span> exists</li>
-<li>in <span class="math">\({\mathbb{C}}\)</span> case</li>
-</ul></li>
-</ul></li>
-<li><span id="cross-dual-dual-space" class="crosslink">dual dual space</span> <span class="math">\(E''\)</span>
-<ul>
-<li><span class="math">\(f_x: E' \to {\mathbb{F}}\)</span> such that <span class="math">\(f_x(l) = l(x)\)</span>, then <span class="math">\(x\to f_x\)</span> is <a href="#cross-linear-map">linear map</a> and <a href="#cross-injective">injective</a> and <a href="#cross-norm">norm</a> preserve. it is not necessary surjective
-<ul>
-<li><span class="math">\(|f_x| \leq |x|\)</span>, left is bounded by right, expand by definition!</li>
-<li><span class="math">\(|f_x| \ge |x|\)</span>, the bound is bigger than <span class="math">\(|x|\)</span>, find one at least <span class="math">\(x\)</span>!, <span class="math">\(x = f_x({\text{id}}) \leq |f|\)</span></li>
-</ul></li>
-<li>this is, you evaluate at bigger value of a linear map, you get bigger!</li>
-<li><span id="cross-weak$^*$-topology" class="crosslink">weak$^*$ topology</span> on <span class="math">\(E'\)</span> is determined by <span class="math">\(\{f_x\}\)</span></li>
-<li><span id="cross-Alaoglu's-theorem" class="crosslink">Alaoglu's theorem</span> <span class="math">\(E\)</span> a Banach space, then <span class="math">\(E'_1\)</span> is compact for the weak<span class="math">\(^*\)</span> topology
-<ul>
-<li>the proof is by mapping it to the graph, but it is rather wired <code>fix me</code></li>
-<li>notice that <span class="math">\(E'\)</span> has standard topology by norm, the relation <code>fix me</code></li>
-</ul></li>
-</ul></li>
-<li>algebra. vs <span class="math">\(A\)</span> and multiplication: bilinear
-<ul>
-<li>cross product in <span class="math">\({\mathbb{R}}^3\)</span> not associative normed algebra</li>
-</ul></li>
-<li><span id="cross-normed-algebra" class="crosslink">normed algebra</span>. associative algebra on normed space <span class="math">\(\land\)</span> <span class="math">\(|uv| \leq |u||v|\)</span></li>
-<li><span id="cross-Banach-algebra" class="crosslink">Banach algebra</span>. <a href="#cross-normed-algebra">normed algebra</a> and complete
-<ul>
-<li>bounded functions by multiplication of function</li>
-<li><span class="math">\(A\)</span> Banach algebra with unit <span class="math">\(e\)</span>, invertible elements is open in <span class="math">\(A\)</span>, and if <span class="math">\(|v| &lt; 1\)</span> then <span class="math">\(e+v\)</span> is invertible
-<ul>
-<li>the proof is rather wired</li>
-</ul></li>
-<li><span class="math">\(u \to u^{-1}\)</span> is continuous</li>
-<li><span class="math">\(E\)</span> and <span class="math">\(F\)</span> Banach space, then <span class="math">\({\text{Lis}}(E, F)\)</span> is open in <span class="math">\(L(E, F)\)</span></li>
-<li><span class="math">\(L(Z, Z)\)</span> is Banach algebra by composition <code>fix me</code></li>
-</ul></li>
-<li><span class="math">\(E\)</span> nvs, <span class="math">\(F\)</span> subspace of <span class="math">\(E\)</span>, <span class="math">\(G\)</span> Banach space, continuous linear map <span class="math">\(l: F \to G\)</span> has unique linear extension <span class="math">\(\bar{l}: \bar{F} \to G\)</span> on the closure of <span class="math">\(F\)</span> that has same norm
-<ul>
-<li>example of open subspace? think functional</li>
-<li>this is kind of like <a href="#cross-Hahn-Banach-theorem">Hahn-Banach theorem</a>, but the codomian is wider…? <code>fix me: finish the proof</code></li>
-</ul></li>
-<li>completion of normed vs <span class="math">\(E\)</span> unique exists
-<ul>
 <li><code>fix me</code></li>
-</ul></li>
-<li>operators
-<ul>
-<li><span class="math">\(S\)</span>-invariant subspace</li>
-<li><span class="math">\(B\)</span> commute with <span class="math">\(S\)</span> <span class="math">\(\Rightarrow\)</span> kernel and image is <span class="math">\(S\)</span>-invariant</li>
-<li>direct sum</li>
-<li>if <span class="math">\(A\)</span> is an operator on <span class="math">\(E\)</span>, we are interested to express <span class="math">\(E\)</span> as direct sum of <span class="math">\(A\)</span>-invariant subspaces!</li>
-</ul></li>
-</ul></li>
-</ul>
-<h3 id="exercises-5">exercises</h3>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+</ol>
+<p><em>chapter 04</em></p>
 <ol style="list-style-type: decimal">
 <li><span class="math">\(F\)</span> complete then <span class="math">\(L(E,F)\)</span> complete. the 0 of former chapter deals with continuous functions under sup norm, this one deals with linear function under the specific norm, which is certainly not the sup norm
 <ul>
 <li>pointwize convergence to <span class="math">\(l\)</span>, linear by <span class="math">\(\lim l_n(ax + by) = a\lim l_n (x) + b \lim l_n(y)\)</span> <code>fix me</code>, and bounded the same…?</li>
 </ul></li>
-<li><code>fix me: finish after this</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><ol style="list-style-type: lower-alpha">
+<li>finite dimensional subspace closed <code>fix me</code></li>
+<li><code>fix me</code></li>
+</ol></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
 </ol>
-<h2 id="hilbert-space">Hilbert space</h2>
-<p>we use vs over <span class="math">\(C\)</span>, and assume our product is positive</p>
-<ul>
-<li>forms
-<ul>
-<li><span><span id="cross-semi-lienar"></span><span id="cross-antilinear" class="crosslink">antilinear </span></span> <span class="math">\(l(ax)=\bar{a}l(x)\)</span></li>
-<li><span><span id="cross-scalar-product"></span><span id="cross-sesquilinear-form" class="crosslink">sesquilinear form </span></span> <span class="math">\(E\times E \to C:  {\langle x, y \rangle}\)</span> linear in <span class="math">\(x\)</span> and <a href="#cross-antilinear">antilinear</a> in <span class="math">\(y\)</span></li>
-<li><span id="cross-hermitian" class="crosslink">hermitian</span> . <a href="#cross-scalar-product">scalar product</a> <span class="math">\(\land\)</span> <span class="math">\({\langle x,y \rangle} = \bar{{\langle y,x \rangle}}\)</span></li>
-<li><span id="cross-positive-form" class="crosslink">positive form</span> hermitian <span class="math">\(\land\)</span> <span class="math">\({\langle x,x \rangle} \geq 0\)</span></li>
-<li><span id="cross-positive-definite-form" class="crosslink">positive definite form</span> positive <span class="math">\(\land\)</span> <span class="math">\({\langle x,x \rangle} = 0 \Leftrightarrow x = 0\)</span></li>
-<li><span id="cross-orthogonal" class="crosslink">orthogonal</span> <span class="math">\({\langle u,w \rangle} = 0\)</span></li>
-<li><span id="cross-null-space" class="crosslink">null space</span> <span class="math">\(E_0\)</span> for <a href="#cross-hermitian">hermitian</a>
-<ul>
-<li><span class="math">\({\langle w,w \rangle} = 0 \Rightarrow w \in E_0\)</span></li>
-</ul></li>
-</ul></li>
-<li><span id="cross-seminorm" class="crosslink">seminorm</span></li>
-<li><span class="math">\(L^2\)</span>-norm is a seminorm</li>
-<li><span id="cross-Schwarz-inquality" class="crosslink">Schwarz inquality</span> <span class="math">\(|{\langle u, w \rangle}| \leq |v||w|\)</span></li>
-<li><span id="cross-unit-vector" class="crosslink">unit vector</span></li>
-<li><span id="cross-Fourier-coefficient" class="crosslink">Fourier coefficient</span> of <span class="math">\(v\)</span> with respect <span class="math">\(w\)</span>. unique <span class="math">\(c\)</span>: <span class="math">\(&lt;v - cw, w&gt; = 0\)</span> if <span class="math">\(|w| \neq 0\)</span>
-<ul>
-<li><span class="math">\(v - c_1 v_1 - c_2 v_2  - \cdots - c_n v_n\)</span> perpendicular to <span class="math">\(v_i\)</span> when they are mutually perpendicular</li>
-<li><span class="math">\(|w + u|^2 = |u|^2 + |w|^2\)</span> when prependicular</li>
-<li><span class="math">\(|w + u|^2 + |w - u|^2 = 2|w|^2 + 2|u|^2\)</span></li>
-</ul></li>
-<li><span id="cross-total-family" class="crosslink">total family</span> union of finite generated space is dense in <span class="math">\(E\)</span></li>
-<li><span id="cross-orthogonal" class="crosslink">orthogonal</span></li>
-<li><span id="cross-orthonormal" class="crosslink">orthonormal</span></li>
-<li><span id="cross-Hilbert-basis" class="crosslink">Hilbert basis</span> total and orthonormal family</li>
-<li><span class="math">\(v_i\)</span> orthogonal, then <span class="math">\(|x - \sum (c_k v_k)| \leq |x - \sum(a_k v_k)|\)</span></li>
-<li><span id="cross-pre-Hilbert-space" class="crosslink">pre-Hilbert space</span> vs <span class="math">\(\land\)</span> positive definite hermitian form</li>
-<li><span id="cross-Hilbert-space" class="crosslink">Hilbert space</span> per-Hilbert and complete under <span class="math">\(L^2\)</span>-norm
-<ul>
-<li>closed subspace of Hilbert space, a point out’s min dis correspond point in it</li>
-<li>theorem 1.6 closed subspace has perpendicular point!</li>
-<li>exists Hilbert basis</li>
-<li><span class="math">\(E = F + F^\perp\)</span></li>
-<li><span id="cross-orthogonal-projection" class="crosslink">orthogonal projection</span></li>
-<li>you get a point in generated space of countable closed perpendicular subspaces <span class="math">\(F_i\)</span> by projections…
-<ul>
-<li><span id="cross-orthogonal-decomposition" class="crosslink">orthogonal decomposition</span></li>
-<li><span id="cross-Bessel-inqeulity" class="crosslink">Bessel inqeulity</span></li>
-</ul></li>
-</ul></li>
-<li><span class="math">\(l_y = {\langle x,y \rangle}\)</span> is functional, <span class="math">\(y \to l_y\)</span> is norm-preserving, antilinear isomorphism
-<ul>
-<li><span class="math">\({\text{End}}(E)\)</span> operators = continuous linear map</li>
-<li><span class="math">\(\text{Sesqu}(E)\)</span> continuous sesqu form
-<ul>
-<li><span class="math">\(\text{Herm}(E)\)</span> all continuous hermitian forms</li>
-</ul></li>
-<li><span class="math">\(A \to \pi_A\)</span> is norm preserving isomorphism between <span class="math">\(End(E)\)</span> and <span class="math">\(\text{Sesqu}(E)\)</span></li>
-<li><span id="cross-adjoint-on-Hilbert-space" class="crosslink">adjoint on Hilbert space</span>, <span id="cross-transpose-on-Hilbert-space" class="crosslink">transpose on Hilbert space</span> <span class="math">\(&lt;Ax, y&gt; = &lt;x, A^* y&gt;\)</span>
-<ul>
-<li><span class="math">\((A+B)^* = A^* + B^*\)</span>, <span class="math">\(A^{**} = A\)</span>, <span class="math">\((aA)^* = \bar{a}A^*\)</span>, <span class="math">\((AB)^* = B^*A^*\)</span></li>
-</ul></li>
-<li>sesquilinear form <span class="math">\(\pi\)</span> then <span class="math">\(q(x) = \pi(x, x)\)</span> is quadratic form</li>
-<li>complex Hilbert space, <span class="math">\({\langle Ax, x \rangle} = 0 \Rightarrow A = O\)</span>
-<ul>
-<li>fails in real: rotation</li>
-</ul></li>
-<li><span class="math">\(A = A^*\)</span> hermitian, self-adjoint</li>
-</ul></li>
-</ul>
-<h3 id="exercises-6">exercises</h3>
-<p><code>fix me</code></p>
-<h2 id="the-general-integral">the general integral</h2>
+<p><em>chapter 05</em></p>
+<ol style="list-style-type: decimal">
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+</ol>
+<h2 id="integration">integration</h2>
+<p>we assume <span class="math">\(E\)</span> a <a href="#cross-Banach-space">Banach space</a> over <span class="math">\({\mathbb{F}}\)</span></p>
+<h3 id="measurable-and-measured-space">measurable and measured space</h3>
 <ul>
 <li><span id="cross-measurable-space" class="crosslink">measurable space</span>
 <ul>
@@ -2968,20 +3264,20 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li><a href="#cross-morphism">morphism</a>. <span id="cross-measurable-maps" class="crosslink">measurable maps</span> inverse of <a href="#cross-measurable-set">measurable set</a> is <a href="#cross-measurable-set">measurable set</a>
 <ul>
-<li>closed by composite, which means is an category</li>
-<li>for <a href="#cross-Borel-measurable">Borel measurable</a>, only check for open sets is sufficient</li>
+<li>closed by composite, which means is an category. trivial</li>
+<li>for <a href="#cross-Borel-measurable">Borel measurable</a>, only check for open sets is sufficient. trivial</li>
 <li><em>we assume Borel measurable from now on</em></li>
-<li><span class="math">\(f = (g, h)\)</span>, f <span class="math">\(\Rightarrow\)</span> <span class="math">\(g\)</span>, <span class="math">\(h\)</span>. <span class="math">\(g\)</span>, <span class="math">\(h\)</span> and every open set in <span class="math">\(Y\times W\)</span> is countable union of the product base <span class="math">\(\Rightarrow\)</span> <span class="math">\(f\)</span>
+<li><span class="math">\(f = (g, h)\)</span>, f <span class="math">\(\Rightarrow\)</span> <span class="math">\(g\)</span>, <span class="math">\(h\)</span>. <span class="math">\(g\)</span>, <span class="math">\(h\)</span> and every open set in <span class="math">\(Y\times W\)</span> is countable union of the product base <span class="math">\(\Rightarrow\)</span> <span class="math">\(f\)</span>. trivial
 <ul>
-<li>complex function <span class="math">\(\Leftrightarrow\)</span> parts</li>
-<li><span class="math">\(f\)</span> is measurable to nvs, then <span class="math">\(|f|\)</span>, composite with <code>fix me</code> absolute value function</li>
-</ul></li>
+<li>complex function <span class="math">\(\Leftrightarrow\)</span> parts. trivial, viewed as <span class="math">\({\mathbb{R}}\)</span>-vector space, <span class="math">\({\mathbb{C}}\cong {\mathbb{R}}^2\)</span></li>
+<li><span class="math">\(f\)</span> is measurable to nvs, then <span class="math">\(|f|\)</span>, composite with absolute value function</li>
 <li><span class="math">\(af+bg\)</span>, <span class="math">\(fg\)</span> into complex is measurable, similar for finite dimensional space</li>
-<li><span class="math">\(f\)</span> is <span class="math">\(X\)</span> into <strong>metric</strong> space, and <span class="math">\(f_n\)</span> pointwize convergence to <span class="math">\(f\)</span> is measurable, then <span class="math">\(f\)</span> is</li>
+</ul></li>
+<li><span class="math">\(f\)</span> is <span class="math">\(X\)</span> into <strong>metric</strong> space, and <span class="math">\(f_n\)</span> <a href="#cross-pointwize-convergence">pointwize convergence</a> to <span class="math">\(f\)</span> is measurable, then <span class="math">\(f\)</span> is measurable <code>fix me</code></li>
 <li><span id="cross-simple-map" class="crosslink">simple map</span> disjoint finite union of constant function on measurable sets
 <ul>
-<li><strong>finite dimensional</strong> <span class="math">\(\Leftrightarrow\)</span> pointwize limit of simple maps</li>
-<li><span class="math">\(f: X\to{\mathbb{R}}^+\)</span> positive real valued map, then <span class="math">\(f\)</span> is pointwise limit of some increasing sequence of simple maps</li>
+<li><strong>finite dimensional</strong>. measurable <span class="math">\(\Leftrightarrow\)</span> pointwize limit of simple maps <code>fix me</code></li>
+<li><span class="math">\(f: X\to{\mathbb{R}}^+\)</span> positive real valued map, then <span class="math">\(f\)</span> is pointwise limit of some increasing sequence of simple maps <code>fix me</code></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -2995,58 +3291,79 @@ $("#content").css("max-width", "1100px")
 <li><span id="cross-counting-measure" class="crosslink">counting measure</span></li>
 <li>closed by <span class="math">\(A_n \subset A_{n+1}\)</span>, <span class="math">\(\bigcup A_n\)</span> limit</li>
 <li>closed by <span class="math">\(A_{n+1} \subset A_n\)</span>, <span class="math">\(\mu(A_i) &lt; \infty\)</span>, <span class="math">\(\bigcap A_n\)</span> limit</li>
+<li><span id="cross-almost-everywhere" class="crosslink">almost everywhere</span> except a measure <span class="math">\(0\)</span> subset</li>
 </ul></li>
-<li><span id="cross-almost-everywhere" class="crosslink">almost everywhere</span></li>
-<li><span id="cross-step-map" class="crosslink">step map</span> <span class="math">\({\text{St}}(\mu, E)\)</span> finite valued and finite measured
+<li><span id="cross-step-map" class="crosslink">step map</span> <span class="math">\({\text{St}}(\mu, E)\)</span> finite valued and finite measured is <a href="#cross-vector-space">vector space</a>
 <ul>
-<li>is a vector space, also closed for <span class="math">\(|f|\)</span></li>
+<li><span class="math">\(\Rightarrow\)</span> <span class="math">\(|f|: X\to {\mathbb{F}}\)</span></li>
 </ul></li>
-<li><span class="math">\(\sigma\)</span>-finite: countable union of finite measure sets</li>
-<li><span class="math">\(\mu\)</span>-measurable: pointwise limit of step maps almost everywhere
+<li><span class="math">\(\sigma\)</span>-finite. countable union of finite measure sets</li>
+<li><span class="math">\(\mu\)</span>-measurable maps. <a href="#cross-pointwise-convergence">pointwise convergence</a> of <a href="#cross-step-map">step map</a>s <a href="#cross-almost-everywhere">almost everywhere</a> is <a href="#cross-vector-space">vector space</a>
 <ul>
 <li>vanish outside <span class="math">\(\sigma\)</span>-finite set</li>
-<li>is a vector space. closed by continuous bilinear map product, <span class="math">\(|f|\)</span> closed, <span class="math">\(1/f\)</span> closed for <span class="math">\(f \neq 0\)</span></li>
+<li>if <span class="math">\(f: X\to {\mathbb{F}}\)</span> closed by continuous bilinear map product, <span class="math">\(|f|\)</span> closed, <span class="math">\(1/f\)</span> closed for <span class="math">\(f \neq 0\)</span></li>
 <li><span class="math">\(\Leftrightarrow\)</span> exists <span class="math">\(\mu(Z) = 0\)</span> that <span class="math">\(f|(X-Z)\)</span> measurable, <span class="math">\(f\)</span> vanishs outside a <span class="math">\(\sigma\)</span>-finite set, and <span class="math">\(f(X-Z)\)</span> contains a countable dense set
 <ul>
 <li>if <span class="math">\(u\)</span> is <span class="math">\(\sigma\)</span>-finite and <span class="math">\(f\)</span> into <span class="math">\({\mathbb{C}}\)</span> then only requires <span class="math">\(f|(X-Z)\)</span> measurable!</li>
 </ul></li>
-<li>limit of <span class="math">\(\sigma\)</span>-measurable is <span class="math">\(\sigma\)</span>-measurable</li>
+<li><span class="math">\(f_n\)</span> <span class="math">\(\sigma\)</span>-measurable and convergence <a href="#cross-almost-everywhere">almost everywhere</a> to <span class="math">\(f\)</span> <span class="math">\(\Rightarrow\)</span> <span class="math">\(f\)</span> is <span class="math">\(\sigma\)</span>-measurable</li>
 <li><em>so <span class="math">\(\sigma\)</span>-measurable is preserved under standard ops, without composition</em></li>
 </ul></li>
 </ul></li>
 </ul>
-<p>we assume that <span class="math">\((X, \mathcal{M}, \mu)\)</span> is an measured space, and <span class="math">\(E\)</span> an Banach space</p>
+<h3 id="integration-1">integration</h3>
+<p><span class="math">\((X, \mathcal{M}, \mu)\)</span> is an measured space, and <span class="math">\(E\)</span> an <a href="#cross-Banach-space">Banach space</a> over <span class="math">\({\mathbb{F}}\)</span></p>
 <ul>
-<li>integral of step functions <span class="math">\(\int_X f {\text{ d}}\mu = \sum \mu(A_i)f(A_i)\)</span>
+<li>integral of <a href="#cross-step-function">step function</a>s <span class="math">\(\int_X f {\text{ d}}\mu = \sum \mu(A_i)f(A_i)\)</span>
 <ul>
 <li><span class="math">\(\int_A f {\text{ d}}\mu = \int_X f_A {\text{ d}}\mu\)</span></li>
 <li><span class="math">\(\left|\int_X f {\text{ d}}\mu\right| \leq \|f\|_1 \leq \|f\| \mu(A)\)</span>
 <ul>
-<li><span class="math">\(L^1\)</span>-siminorm</li>
+<li><span class="math">\(L^1\)</span>-siminorm. <span class="math">\(\|f\|_1 = \int_X |f|{\text{ d}}\mu\)</span></li>
 </ul></li>
 </ul></li>
-<li><span class="math">\(L^1\)</span>-completion <span class="math">\({\text{St}}(\mu) \to L^1(\mu)\)</span>
+<li><span class="math">\(L^1\)</span>-completion <span class="math">\({\text{St}}(\mu) \to L^1(\mu)\)</span></li>
+<li><span class="math">\(\mathcal{L}^1(\mu)\)</span> space of <span id="cross-integrable-map" class="crosslink">integrable map</span>s. <span class="math">\(L^1\)</span>-convergence of <a href="#cross-step-map">step map</a>s <a href="#cross-almost-everywhere">almost everywhere</a>. it is a <a href="#cross-Banach-space">Banach space</a>
 <ul>
-<li>this is the equivalence class of Cauchy seq of step functions that convergence under <span class="math">\(L^1\)</span> norm</li>
-<li>there is <span class="math">\(L^1\)</span>-Cauchy sequence that are not pointwise convergence</li>
-<li>there are pointwise convergence sequence that are not <span class="math">\(L^1\)</span>-Cauchy??</li>
-<li>why we cannot use this definition using null-seq to proof? i think for me, it just means… forget this shit…</li>
-</ul></li>
-<li><span class="math">\(\mathcal{L}^1(\mu)\)</span> spaces has <a href="#cross-almost-everywhere">almost everywhere</a> convergence <span class="math">\(L^1\)</span>-Cauchy sequence
-<ul>
-<li>is a vs</li>
-<li><span id="cross-fundamental-lemma-of-integration" class="crosslink">fundamental lemma of integration</span> a Cauchy seq of step maps <span class="math">\(\{f_n\}\)</span> has a <strong>subseq</strong> convergence pointwise almost everywhere, and convergence absolutely and uniformly outside any <span class="math">\(\mu(Z) &lt; \epsilon\)</span></li>
+<li><span id="cross-fundamental-lemma-of-integration" class="crosslink">fundamental lemma of integration</span> a <span class="math">\(L^1\)</span>-Cauchy seq of <strong>step map</strong>s <span class="math">\(\{f_n\}\)</span> has a <strong>subseq</strong> <a href="#cross-pointwise-convergence">pointwise convergence</a> . <a href="#cross-almost-everywhere">almost everywhere</a>, and <a href="#cross-absolute-convergence">absolute convergence</a> and <a href="#cross-uniform-convergence">uniform convergence</a> outside any <span class="math">\(\mu(Z) &lt; \epsilon\)</span></li>
 <li><span class="math">\(g_n\)</span> and <span class="math">\(h_n\)</span> Cauchy seq of step maps, convergence almost everywhere to same map
 <ul>
 <li><span class="math">\(\lim \int_X g_n = \lim \int_X h_n\)</span></li>
 <li><span class="math">\({g_n - h_n}\)</span> is null seq</li>
 </ul></li>
-<li><span id="cross-integrable-map" class="crosslink">integrable map</span>s of <span class="math">\(\mathcal{L}^1(\mu)\)</span>, <span class="math">\(\int_X f {\text{ d}}\mu = \lim\int_X f_n{\text{ d}}\mu\)</span>
+<li>so every function in this space, we can pick one sequence that convergence almost everywhere to it, and we know that all this kind of sequence will have same limit of integral. so we define <span class="math">\(\int_X f {\text{ d}}\mu = \lim\int_X f_n{\text{ d}}\mu\)</span></li>
+<li><span class="math">\(|f|\in \mathcal{L}^1(\mu)\)</span>
 <ul>
-<li><span class="math">\(|f|\in \mathcal{L}^1(\mu)\)</span></li>
 <li><span class="math">\(|f_n|\)</span> approximate <span class="math">\(|f|\)</span></li>
-<li><span class="math">\(\|f\|_1 = \lim \|f_n\|_1\)</span></li>
-<li><span class="math">\(\mathcal{L}^1\)</span> is complete</li>
+<li><span class="math">\(\|f\|_1 = \lim \|f_n\|_1\)</span> and well defined</li>
+</ul></li>
+<li>proof of complete</li>
+<li>for <span class="math">\(A\in \mathcal{M}\)</span>, <span class="math">\(f_A\)</span></li>
+<li>for <span class="math">\(A, B\in \mathcal{M}\)</span> disjoint, <span class="math">\(\int_{A\cup B} f = \int_A f + \int_B f\)</span></li>
+<li>for <span class="math">\(\lambda\in L(E, F)\)</span> we have <span class="math">\(\mathcal{L}^1(\mu, E)\to \mathcal{L}^1(\mu, F)\)</span> by <span class="math">\(f\to \lambda \circ f\)</span> and <span class="math">\(\lambda \int_X f = \int_X \lambda \circ f\)</span></li>
+<li><a href="#cross-toplinear-isomorphism">toplinear isomorphism</a> <span class="math">\(\mathcal{L}^1(\mu, E\times F)\cong \mathcal{L}^1(\mu, E)\times \mathcal{L}^1(\mu, F)\)</span>, <span class="math">\(f = (g, h)\)</span> then <span class="math">\(f\)</span> <span class="math">\(\Leftrightarrow\)</span> <span class="math">\(g\land h\)</span> and then <span class="math">\(\int f = (\int g, \int h)\)</span>
+<ul>
+<li><span class="math">\(\int f = \int g + i\int h\)</span></li>
+</ul></li>
+<li><span class="math">\(\left|\int_X f {\text{ d}}\mu\right| \leq \|f\|_1 \leq \|f\| \mu(A)\)</span></li>
+<li><span class="math">\(S_c =\{x\in X| |f(x)\geq c\}\)</span> finite measure. <span class="math">\(f\)</span> vanish outset <span class="math">\(\sigma\)</span>-finite set</li>
+<li><span class="math">\(f_n\)</span> a <span class="math">\(L^1\)</span>-Cauchy sequence <span class="math">\(L^1\)</span>-convergence to <span class="math">\(f\in \mathcal{L}^1\)</span>, then there is subsequence convergence to <span class="math">\(f\)</span> almost everywhere, and a set of <span class="math">\(\mu(Z)&lt; \epsilon\)</span> such that uniform convergence on <span class="math">\(X-Z\)</span>
+<ul>
+<li><span class="math">\(\|f\|_1 = 0\)</span> <span class="math">\(\Leftrightarrow\)</span> <span class="math">\(f\)</span> is <span class="math">\(0\)</span> <a href="#cross-almost-everywhere">almost everywhere</a></li>
+<li><span class="math">\(f_n\)</span> a Cauchy sequence convergence to <span class="math">\(f\)</span>, then <span class="math">\(f\in \mathcal{L}^1\)</span> and is the <span class="math">\(L^1\)</span>-limit of <span class="math">\(f_n\)</span></li>
+</ul></li>
+<li>for <span class="math">\(E = {\mathbb{R}}\)</span>
+<ul>
+<li><span class="math">\(\sup(f, g) = \frac{1}{2}(f + g + |f-g|)\)</span> is integrable</li>
+<li><span class="math">\(f = f^+ + f^-\)</span> then <span class="math">\(f\)</span> <span class="math">\(\Leftrightarrow\)</span> <span class="math">\(f^+\)</span> and <span class="math">\(f^-\)</span></li>
+<li>integration is increasing function</li>
+<li><span class="math">\(f_n\)</span> is increasing / decreasing and <span class="math">\(\int_X f_n{\text{ d}}\mu\)</span> is bounded, then <span class="math">\(f_n\)</span> is Cauchy and both <span class="math">\(L^1\)</span> and almost everywhere convergence to some <span class="math">\(f\)</span></li>
+<li>there is <span class="math">\(g\in \mathcal{L}^1\)</span> such that <span class="math">\(g\leq 0\)</span> and <span class="math">\(F_n\leq g\)</span> then <span class="math">\(\sup f_n\)</span> and <span class="math">\(\inf f_n\)</span> in <span class="math">\(\mathcal{L}^1\)</span> and <span class="math">\(\sup \int f_n\leq \int\sup f_n\)</span> and <span class="math">\(\int \inf f_n\leq \inf \int f_n\)</span></li>
+<li><span id="cross-Fautou's-lemma" class="crosslink">Fautou's lemma</span> <span class="math">\(f_n \leq 0\)</span> and <span class="math">\(\lim \inf\|f_n\|_1\)</span> exists, then <span class="math">\(\lim\inf f_n(x)\)</span> exists for almost all <span class="math">\(x\)</span>, and <span class="math">\(\lim\inf f_n\)</span> is in <span class="math">\(\mathcal{L}^1\)</span> and <span class="math">\(\int_X \lim\inf f_n {\text{ d}}\mu \leq \lim\inf\int_X f_n{\text{ d}}\mu=\lim\inf \|f_n\|_1\)</span></li>
+</ul></li>
+<li><span id="cross-dominated-convergence-theorem" class="crosslink">dominated convergence theorem</span> sequence <span class="math">\(f_n\in \mathcal{L}^1\)</span> such that <span class="math">\(g\leq 0\)</span> and <span class="math">\(|f_n|\leq g\)</span>, and <span class="math">\(f_n\)</span> convergence almost everywhere to <span class="math">\(f\)</span>, then <span class="math">\(f\in\mathcal{L}^1\)</span> and is the limit</li>
+<li><span class="math">\(f\)</span> be <span class="math">\(\mu\)</span>-measurable, then <span class="math">\(f\in\mathcal{L}^1\)</span> iff <span class="math">\(|f|\)</span> in <span class="math">\(\mathcal{L}^1\)</span>. if there is <span class="math">\(g\in \mathcal{L}^1\)</span> such that <span class="math">\(g\leq 0\)</span> and <span class="math">\(|f|\leq g\)</span> then <span class="math">\(f\in\mathcal{L}^1\)</span></li>
+<li><code>fix me: sooo many theorems omitted, Serge Lang is...</code></li>
 </ul></li>
 <li>relation of <span class="math">\(\mathcal{L}^1(\mu)\)</span> and <span class="math">\(L^1(\mu)\)</span>
 <ul>
@@ -3055,28 +3372,18 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(\|f\|_1 = \|\gamma(f)\|_1\)</span></li>
 <li><span class="math">\(\int_x f = \int_x \gamma(f)\)</span></li>
 <li>integral on <span class="math">\(\mathcal{L}^1\)</span> is continuous linear map</li>
-<li><code>fix me: show that there are integrals etc defined on $L^1$</code></li>
-</ul></li>
-<li>for <span class="math">\(E = {\mathbb{R}}\)</span>
-<ul>
-<li><span class="math">\(\sup(f, g) = \frac{1}{2}(f + g + |f-g|)\)</span> is integrable</li>
-<li><span class="math">\(f = f^+ + f^-\)</span> then <span class="math">\(f\)</span> <span class="math">\(\Leftrightarrow\)</span> <span class="math">\(f^+\)</span> and <span class="math">\(f^-\)</span></li>
-<li>is increasing function</li>
-</ul></li>
-<li>for <span class="math">\(A\in \mathcal{M}\)</span>, <span class="math">\(f_A\)</span></li>
-<li><span class="math">\(\left|\int_X f {\text{ d}}\mu\right| \leq \|f\|_1 \leq \|f\| \mu(A)\)</span></li>
-<li>theorem 4.1, 4.2 <code>fix me</code></li>
+<li><code>fix me: refine and understand above results</code></li>
 </ul></li>
 </ul>
-<p><code>fix me</code></p>
-<h3 id="exercises-7">exercises</h3>
+<h3 id="approximations">approximations</h3>
+<h3 id="extension-of-positive-measure-from-algebra">extension of positive measure from algebra</h3>
+<h3 id="product-space">product space</h3>
+<h3 id="lebesgue-integral-in-mathbbrp">Lebesgue integral in <span class="math">\({\mathbb{R}}^p\)</span></h3>
+<h3 id="exercises-5">exercises</h3>
 <p><code>fix me</code></p>
 <h2 id="duality-and-representation-theorems">duality and representation theorems</h2>
 <h2 id="some-application-of-integration">some application of integration</h2>
 <h2 id="integration-on-locally-compact-spaces">integration on locally compact spaces</h2>
-<h2 id="riemann-stieltjes-integral-and-measure">Riemann-Stieltjes integral and measure</h2>
-<h2 id="distributions">distributions</h2>
-<h2 id="integration-on-locally-compact-groups">integration on locally compact groups</h2>
 <h2 id="differential-calculus">differential calculus</h2>
 <h2 id="inverse-mappings-and-differential-equations">inverse mappings and differential equations</h2>
 <h2 id="reference-1">reference</h2>
@@ -3845,11 +4152,11 @@ $("#content").css("max-width", "1100px")
 
 
 
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+ <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 
-<!-- <script src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+ <!--<script src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 <script>
   MathJax.Hub.Queue(function() {
     $(document.body).scrollspy('refresh')
