@@ -71,6 +71,12 @@ $("#content").css("max-width", "1100px")
         <p>             </p>
 <p><strong>i think the best state of doing mathematics is always have the big picture in background, but in the same time, always solving details and problems, thus making real progress</strong></p>
 <p><strong>give the conjectures their full meaning</strong></p>
+<h1 id="一周一本书-推全书-习题全做-am">一周一本书, 推全书, 习题全做: AM</h1>
+<h1 id="weakness">weakness</h1>
+<ul>
+<li>group operation</li>
+<li>proofs about complex category</li>
+</ul>
 <h1 id="meta-note">meta note</h1>
 <ul>
 <li>we organize by category when possible, or by topic and structure</li>
@@ -163,9 +169,10 @@ $("#content").css("max-width", "1100px")
 <li>and <a href="http://explorecourses.stanford.edu/CourseSearch/search?filter-catalognumber-MATH=on&amp;filter-academiclevel-GR=on&amp;page=0&amp;q=MATH&amp;view=catalog&amp;academicYear=&amp;collapse=,5,6,7,">more</a></li>
 <li>i think in the graduate courses of Stanford, there are Analysis * 2, Algebra * 2, Geometry * 3, Algebraic Geometry * 3, MATH 243 Several Complex Variables, MATH 244 Riemann Surfaces, MATH 245 Topics in Algebraic Geometry * 3. this is about the picture</li>
 </ul>
-<h2 id="lists">lists</h2>
+<h2 id="booklists">booklists</h2>
 <ul>
 <li><a href="http://www.amazon.com/gp/richpub/listmania/byauthor/A3JZQYJIEJ9QYK/ref=cm_pdp_lm_all">a list</a> on Amazon</li>
+<li><a href="http://book.douban.com/doulist/1378460/">mathematical physics</a></li>
 </ul>
 <h1 id="type">type</h1>
 <p><code>fix me: state of art formations?</code></p>
@@ -301,7 +308,7 @@ $("#content").css("max-width", "1100px")
 <li>you should think that two map before a monomorphism, then the later structure is compressible, you can study the structure of two map to show things about the two composite</li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-epimorphism"></span>epimorphism</span></li>
-<li><span class="crosslink"><span id="cross-endomorphism"></span><span id="cross-endofunctor"></span>endomorphism</span> maps to self</li>
+<li><span class="crosslink"><span id="cross-endomorphism"></span><span id="cross-endofunctor"></span><span id="cross-embedding"></span>endomorphism</span> maps to self</li>
 <li><span class="crosslink"><span id="cross-automorphism"></span>automorphism</span> <a href="#cross-endomorphism">endomorphism</a> and <a href="#cross-isomorphism">isomorphism</a></li>
 </ul></li>
 <li><a href="#cross-associative">associative</a> <a href="#cross-composition-law">composition law</a> of <a href="#cross-morphism">morphism</a></li>
@@ -309,6 +316,7 @@ $("#content").css("max-width", "1100px")
 </ol>
 <ul>
 <li><span class="crosslink"><span id="cross-connected-category"></span>connected category</span></li>
+<li><span class="crosslink"><span id="cross-subcategory"></span>subcategory</span>, subset of objects and morphisms and is category. <span class="crosslink"><span id="cross-full-subcategory"></span>full subcategory</span> morphisms is full</li>
 </ul></li>
 </ul>
 <h3 id="category-category">category category</h3>
@@ -417,10 +425,9 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span class="crosslink"><span id="cross-weakly-initial"></span>weakly initial</span> + <a href="#cross-equalizer">equalizer</a> <span class="math">\({\Rightarrow}\)</span> <a href="#cross-initial">initial</a> <code>fix me</code></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-coproduct"></span>coproduct</span>
+<li><span class="crosslink"><span id="cross-coproduct"></span>coproduct</span> finite or infinite
 <ul>
 <li><a href="#cross-pushout">pushout</a> + <a href="#cross-initial">initial</a> <span class="math">\({\Rightarrow}\)</span> <a href="#cross-coproduct">coproduct</a></li>
-<li><span class="crosslink"><span id="cross-generalized-coproduct"></span>generalized coproduct</span> infinite case?</li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-coequalizer"></span>coequalizer</span></li>
 <li><span class="crosslink"><span id="cross-pushout"></span>pushout</span>
@@ -430,7 +437,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="crosslink"><span id="cross-cocomplete"></span>cocomplete</span>
 <ul>
 <li>have all <a href="#cross-colimit">colimit</a>s</li>
-<li><a href="#cross-generalized-coproduct">generalized coproduct</a> and <a href="#cross-coequalizer">coequalizer</a> is sufficient</li>
+<li>infinite <a href="#cross-coproduct">coproduct</a> and <a href="#cross-coequalizer">coequalizer</a> is sufficient</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -439,7 +446,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="crosslink"><span id="cross-limit"></span>limit</span> mapping in
 <ul>
 <li><span class="crosslink"><span id="cross-terminal"></span>terminal</span> empty diagram</li>
-<li><span class="crosslink"><span id="cross-product"></span>product</span> two point diagram</li>
+<li><span class="crosslink"><span id="cross-product"></span>product</span> points diagram, finite or infinite</li>
 <li><span class="crosslink"><span id="cross-pullback"></span><span id="cross-fiber-product"></span>pullback</span> three point and two morphism diagram
 <ul>
 <li>has <a href="#cross-equalizer">equalizer</a> and <a href="#cross-product">product</a> then has pullback</li>
@@ -448,7 +455,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="crosslink"><span id="cross-complete"></span>complete</span>
 <ul>
 <li>have all <a href="#cross-limit">limit</a>s</li>
-<li><a href="#cross-product">product</a> and <a href="#cross-equalizer">equalizer</a> is sufficient</li>
+<li>infinite <a href="#cross-product">product</a> and <a href="#cross-equalizer">equalizer</a> is sufficient</li>
 </ul></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-preserve-colimits"></span><span id="cross-preserve-limits"></span>preserve colimits</span> preserve limit and cone
@@ -516,6 +523,13 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span class="crosslink"><span id="cross-subobject"></span>subobject</span></li>
 <li><span class="crosslink"><span id="cross-quotient-object"></span>quotient object</span></li>
+<li><span class="crosslink"><span id="cross-exact-sequence"></span>exact sequence</span>
+<ul>
+<li><span class="crosslink"><span id="cross-short-exact-sequence"></span>short exact sequence</span>
+<ul>
+<li>decomposition into <a href="#cross-short-exact-sequence">short exact sequence</a> <img src="./images/short-exact.jpg" style="width:450px" /></li>
+</ul></li>
+</ul></li>
 <li><span class="crosslink"><span id="cross-exact-functor"></span>exact functor</span> functor preserve exact sequence, or equally <a href="#cross-short-exact-sequence">short exact sequence</a>
 <ul>
 <li><span class="crosslink"><span id="cross-left-exact-functor"></span>left exact functor</span> preserve <span class="math">\(0\to A\to B\to C\)</span>
@@ -681,7 +695,7 @@ $("#content").css("max-width", "1100px")
 <li>what it means by: <span class="math">\(|X| = |Y|\)</span> and <span class="math">\(|X| &lt; |Y|\)</span></li>
 <li><span class="math">\(|X| &lt; |P(X)|\)</span></li>
 <li><span class="math">\(|A| \leq |B| \land |B| \leq |A| {\Rightarrow}|A| = |B|\)</span></li>
-<li>cardinal arith
+<li><span class="crosslink"><span id="cross-cardinal-arithmetic"></span>cardinal arithmetic</span>
 <ul>
 <li><span class="math">\(a + b = |A\cup B|\)</span> disjoint</li>
 <li><span class="math">\(a \cdot b = |A\times B|\)</span></li>
@@ -720,6 +734,10 @@ $("#content").css("max-width", "1100px")
 <h2 id="group-likes">group-likes</h2>
 <h3 id="monoid">monoid</h3>
 <ul>
+<li><span class="math">\({\mathcal{SemiGrp}}\)</span>
+<ul>
+<li><a href="#cross-object">object</a> <span class="crosslink"><span id="cross-semigroup"></span>semigroup</span> a set with <a href="#cross-associative">associative</a> <a href="#cross-low-of-composition">low of composition</a></li>
+</ul></li>
 <li><span class="math">\({\mathcal{Mon}}\)</span>
 <ul>
 <li><a href="#cross-object">object</a> <span class="crosslink"><span id="cross-monoid"></span>monoid</span> <span class="math">\((S\in{\mathcal{Set}}, *:S\times S\to S, e\in S)\)</span>
@@ -732,10 +750,10 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>product of zero element. proof well defined trivial</li>
 <li>product of infinite but almost all zero set. proof well defined trivial</li>
-<li><span class="math">\(\forall m,n\in {\mathbb{N}}: a^n a^m = a^{m + n}\)</span></li>
+<li><span class="math">\(\forall m,n\in {\mathbb{N}}: a^n a^m = a^{m + n}\)</span>. this is <strong>not free</strong>! proofed using <a href="#cross-associative">associative</a></li>
 </ul></li>
 </ol></li>
-<li><a href="#cross-morphism">morphism</a> <span class="crosslink"><span id="cross-monoid-homomorphism"></span>monoid homomorphism</span> <span class="math">\(f(e) = e\)</span>, <span class="math">\(f(ab) = f(a) f(b)\)</span></li>
+<li><a href="#cross-morphism">morphism</a> <span class="crosslink"><span id="cross-homomorphism"></span>homomorphism</span> <span class="math">\(f(e) = e\)</span>, <span class="math">\(f(ab) = f(a) f(b)\)</span></li>
 <li><span class="crosslink"><span id="cross-submonoid"></span>submonoid</span></li>
 </ul></li>
 </ul>
@@ -743,10 +761,11 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span class="math">\({\mathcal{GP}}\)</span>
 <ul>
-<li><a href="#cross-object">object</a> <span class="crosslink"><span id="cross-groupoid"></span>groupoid</span></li>
+<li><a href="#cross-object">object</a> <span class="crosslink"><span id="cross-groupoid"></span>groupoid</span> a category such that every morphism is isomorphism (every element has <span class="math">\({\text{id}}\)</span>)</li>
 <li><span class="crosslink"><span id="cross-connected-groupoid"></span><span id="cross-groupoid-connected"></span>connected groupoid</span>
 <ul>
-<li>can be viewed as <a href="#cross-connected-category">connected category</a>, then the groupoid viewed as a <a href="#cross-category">category</a> will have <a href="#cross-skeleton-category">skeleton category</a> one element with full <a href="#cross-isomorphism">isomorphism</a></li>
+<li>as a <a href="#cross-category">category</a> is <a href="#cross-connected-category">connected category</a></li>
+<li><a href="#cross-skeleton-category">skeleton category</a> is one element with full <a href="#cross-isomorphism">isomorphism</a>s. trivial</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -765,23 +784,26 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><a href="#cross-object">object</a> <span class="crosslink"><span id="cross-group"></span>group</span>
 <ol style="list-style-type: decimal">
+<li><a href="#cross-monoid">monoid</a></li>
 <li><span class="crosslink"><span id="cross-inverse"></span>inverse</span> <span class="math">\(xy = yx = e\)</span>
 <ul>
 <li>unique</li>
+<li>group multiplication always give an <a href="#cross-isomorphism">isomorphism</a> as set, multiple by inverse is the inverse map</li>
 </ul></li>
+</ol>
+<ul>
 <li><span class="math">\(n,m \in \mathbb{Z}\)</span>, <span class="math">\(a^n a^m = a^{n+m}\)</span>
 <ul>
 <li>power arithmetic is well defined</li>
 </ul></li>
-</ol>
-<ul>
 <li>actually left unit and left inverse is sufficient</li>
+<li><span class="crosslink"><span id="cross-trivial-group"></span>trivial group</span> is smallest group</li>
 </ul></li>
-<li><a href="#cross-morphism">morphism</a> <span class="crosslink"><span id="cross-group-homomorphism"></span>group homomorphism</span> inheritance <a href="#cross-monoid-homomorphism">monoid homomorphism</a>, and only <span class="math">\(f(ab) = f(a)f(b)\)</span> is sufficient
+<li><a href="#cross-morphism">morphism</a> <a href="#cross-homomorphism">homomorphism</a> only <span class="math">\(f(ab) = f(a)f(b)\)</span> is sufficient, because <span class="math">\(f(e)= f(e)f(e){\Rightarrow}e = f(e)\)</span>
 <ul>
-<li><span class="crosslink"><span id="cross-kernel"></span>kernel</span> <span class="math">\({\text{ker }}f\)</span> is a subgroup
+<li><span class="crosslink"><span id="cross-kernel"></span>kernel</span> <span class="math">\({\text{ker }}f\)</span> is a <a href="#cross-normal-subgroup">normal subgroup</a>. trivial
 <ul>
-<li>kernel is normal. and <a href="#cross-normal">normal</a> is kernel. first is trivial by definition. second is by proofing that there is a group structure on the cosets, this is trivial by <span class="math">\(xHyH = xyH\)</span></li>
+<li><em>consider as maps, you have a subset of maps, that if you perform out of order, then you do not go out of the subset</em></li>
 </ul></li>
 <li><a href="#cross-image">image</a> <span class="math">\({\text{im }}f\)</span> is a subgroup
 <ul>
@@ -803,7 +825,6 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><a href="#cross-surjective">surjective</a> is certainly <a href="#cross-epimorphism">epimorphism</a>, a proof for reverse if <a href="https://groups.google.com/forum/#!msg/sci.math/DV2iNGdzQ8U/AEMrOtkjQG0J">here</a>, which also works in <span class="math">\({\mathcal{FinGrp}}\)</span> <code>fix me: proof it</code></li>
 </ul></li>
-<li>the cokernel is not well defined here, but is well defined for abelian groups</li>
 </ul></li>
 <li><a href="#cross-isomorphism">isomorphism</a>
 <ul>
@@ -813,78 +834,101 @@ $("#content").css("max-width", "1100px")
 <li><a href="#cross-isomorphism">isomorphism</a> is <a href="#cross-monomorphism">monomorphism</a> and <a href="#cross-epimorphism">epimorphism</a> so it is bijective. if it is bijective, we can define the inverse map by just function inverse</li>
 </ul></li>
 </ul></li>
-<li>morphism and <a href="#cross-order-of-group-element">order of group element</a></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-order-of-group-element"></span>order of group element</span>
+<li><span class="crosslink"><span id="cross-group-generator"></span>group generator</span> <span class="math">\(G = \langle S \rangle\)</span> every element finitely expressed. <span class="crosslink"><span id="cross-finitely-generated-group"></span>finitely generated group</span></li>
+<li><span class="crosslink"><span id="cross-subgroup"></span>subgroup</span> a subset such that inclusion is <a href="#cross-homomorphism">homomorphism</a>
 <ul>
-<li>this is kind of like group in algebraic topology, they have something to do with morphisms</li>
-<li>formula for <span class="math">\(|g^m|\)</span></li>
-<li>the group order divides each other, this is trivial by the index theorem</li>
-<li>see also <a href="#cross-cyclic-group">cyclic group</a></li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-subgroup"></span>subgroup</span> <a href="#cross-inclusion">inclusion</a> is <a href="#cross-homomorphism">homomorphism</a>
-<ul>
-<li>or closed</li>
-</ul></li>
-<li>group multiplication always give an <a href="#cross-isomorphism">isomorphism</a> as set, multiple by inverse is the inverse map</li>
-<li><span class="crosslink"><span id="cross-coset"></span>coset</span>. <span class="crosslink"><span id="cross-left-coset"></span>left coset</span>. <span class="crosslink"><span id="cross-right-coset"></span>right coset</span>
-<ul>
-<li>proof that it is <a href="#cross-equivalence-relation">equivalence relation</a></li>
-<li><a href="#cross-coset">coset</a>s have same cardinality, no matter left or right</li>
+<li>contains <span class="math">\(e\)</span> and <strong>closed</strong> by <a href="#cross-loc">loc</a> and <a href="#cross-inverse">inverse</a></li>
+<li><span class="crosslink"><span id="cross-coset"></span>coset</span>. <span class="crosslink"><span id="cross-left-coset"></span>left coset</span>. <span class="crosslink"><span id="cross-right-coset"></span>right coset</span> of <strong><a href="#cross-subgroup">subgroup</a></strong>
+<ol style="list-style-type: decimal">
+<li>proof that it is <a href="#cross-equivalence-relation">equivalence relation</a>, because <a href="#cross-subgroup">subgroup</a> closed, and we have <strong><a href="#cross-inverse">inverse</a></strong></li>
+<li><a href="#cross-coset">coset</a>s have same cardinality, no matter left or right. this is again by <strong>closed</strong> also <strong>having inverse</strong> because <span class="math">\(H^{-1} = H{\Rightarrow}aH \leftrightarrow Ha^{-1}\)</span></li>
+</ol></li>
 <li><span class="math">\((G:H)\)</span> <span class="crosslink"><span id="cross-index-of-subgroup"></span>index of subgroup</span> the <a href="#cross-cardinal">cardinal</a> of <a href="#cross-coset">coset</a>s
 <ul>
-<li>number of left cosets and right cosets is same, by make a bijection <span class="math">\(aH \to Ha^{-1}\)</span></li>
+<li><span class="crosslink"><span id="cross-group-index-theorem"></span>group index theorem</span> <span class="math">\((G:H)(H:K) = (G:K)\)</span>. we are actually doing <a href="#cross-cardinal-arithmetic">cardinal arithmetic</a>, by giving the bijection, doing this is actually <strong>highly trivial</strong>, but the result is <strong>not trivial at all</strong>, we mostly used the <strong>covering</strong></li>
+<li><span class="crosslink"><span id="cross-order-of-group"></span>order of group</span> <span class="math">\((G:1)\)</span></li>
 </ul></li>
-<li><span class="math">\((G:H)(H:K) = (G:K)\)</span>
-<ul>
-<li>example: group of prime order is cyclic. we should always see what subgroup a group have to determine their structure</li>
-</ul></li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-decomposition-of-group-into-subgroups"></span>decomposition of group into subgroups</span> <span class="math">\(H\cap K = \{e\}\land HK = G\land hk = kh\)</span> then <span class="math">\(G \cong K\times H\)</span>
-<ul>
-<li>example: <span class="math">\(C_6 = C_2 \times C_3\)</span>, with <span class="math">\(C_2 = \{0, 3\}\)</span>, <span class="math">\(C_3 = \{0, 2, 4\}\)</span>, actually it is not obvious that <span class="math">\(HK = G\)</span>, but because it is abelian, <span class="math">\(hk = kh\)</span> is obvious</li>
+<li>index <span class="math">\(2\)</span> subgroup is normal. cosets is disjoint, and <span class="math">\(H = H\)</span></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-normal-subgroup"></span>normal subgroup</span> <span class="math">\(gN = Ng\)</span>
 <ul>
-<li>closed under <a href="#cross-intersection">intersection</a></li>
-<li>closed by inverse map, but not morphism!</li>
+<li><em>how to consider this? if you consider what things can be a morphism in group, then you will notice that only when we make the group structure fuzz… kind of. then you want to make certain subgroup into a point, because subgroups has the good property of having boundary of coset. but <span class="math">\(aHbH = abH\)</span> will require that <span class="math">\(aH = Ha\)</span> for it</em></li>
+<li><span class="crosslink"><span id="cross-quotient-group"></span>quotient group</span> <span class="math">\(G/H\)</span>. normal is kernel. we give it a group structure</li>
+<li>closed under <a href="#cross-intersection">intersection</a>. <strong>kernel for product</strong></li>
+<li>closed by inverse map. <strong>kernel for chaining</strong> <span class="math">\(G\to F\to F/k\)</span>. <em>but not for morphism</em></li>
+<li>closed by <span class="math">\(N_1N_2\)</span> <code>fix me: can we found a map like above?</code></li>
 <li><span class="crosslink"><span id="cross-normalizer"></span>normalizer</span> <span class="math">\(N_H\)</span> is a group
 <ul>
 <li>if <span class="math">\(K\subset N_H\)</span> then <span class="math">\(KH\)</span> is a subgroup</li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-Weyl-group"></span>Weyl group</span> <span class="math">\(W_H = N_H / H\)</span></li>
-<li>smallest index subgroup in finite group is normal</li>
-<li>how to consider this? if you consider what things can be a morphism in group, then you will notice that only when we make the group structure fuzz… kind of. then you want to make certain subgroup into a point, because subgroups has the good property of having boundary of coset. but <span class="math">\(aHbH = abH\)</span> will require that <span class="math">\(aH = Ha\)</span> for it</li>
-<li>index <span class="math">\(2\)</span> subgroup is normal, i think this can be shown quickly by cosets</li>
 <li><span class="crosslink"><span id="cross-Dedekind-group"></span>Dedekind group</span> every subgroup is normal</li>
 <li><span class="crosslink"><span id="cross-Hamiltonian-group"></span>Hamiltonian group</span> <a href="#cross-Dedekind-group">Dedekind group</a> but not <a href="#cross-abelian-group">abelian group</a>. example: <a href="#cross-quaternion-group">quaternion group</a></li>
+<li><span class="crosslink"><span id="cross-simple-group"></span>simple group</span> nor-trivial and no non-trivial <a href="#cross-normal-subgroup">normal subgroup</a></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-centralizer"></span>centralizer</span> of <span class="math">\(S\)</span> <span class="math">\(Z_S\)</span>. <span class="math">\(zsz^{-1} = s\)</span>
+</ul></li>
+<li><strong>canonical decomposition</strong> <img src="images/group-d1.png" style="width:400px" /> * we define the map by <span class="math">\(aH\to f(a)\)</span> because for all <span class="math">\(y\in H\)</span>, <span class="math">\(f(xy) = f(x)\)</span> we see it is a well defined map, then we see that it is a morphism, and it is unique
+<ul>
+<li><strong>canonical isomorphisms</strong>
+<ul>
+<li><span class="crosslink"><span id="cross-canonical-group-isomorphism-0"></span>canonical group isomorphism 0</span> <span class="math">\(\frac{G_1\times G_2}{H_1\times H_2}\cong\frac{G_1}{H_1}\times\frac{G_2}{H_2}\)</span>
+<ul>
+<li>first we proof that <span class="math">\(H_1\times H_2\)</span> is normal, this is trivial, then we show that if <span class="math">\(g_i H_1\)</span> and <span class="math">\(g_j H_2\)</span> then <span class="math">\((g_i, g_j) H_1\times H_2\)</span>, we define the map and show it is a morphism, then we show the kernel is trivial and it is surjective, so it is an isomorphism</li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-canonical-group-isomorphism-1"></span>canonical group isomorphism 1</span> <span class="math">\(\frac{G/H}{N/H}\cong\frac{G}{N}\)</span>, <span class="math">\(H\subset N\)</span> normal
+<ul>
+<li>first all <span class="math">\(A/B\)</span> is well defined, then we see that left is well defined. for <span class="math">\(G/H\)</span> and <span class="math">\(G/N\)</span> we define a map <span class="math">\(gH\to gN\)</span>, we see that it is a morphism, then we show that the kernel is <span class="math">\(N/H\)</span></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-canonical-group-isomorphism-2"></span>canonical group isomorphism 2</span> <span class="math">\(\frac{H}{H\cap K}\cong \frac{HK}{K}\)</span>, <span class="math">\(H\subset N_K\)</span>, so <span class="math">\(HK = KH\)</span> is subgroup, and <span class="math">\(H\cap K\)</span> is normal in <span class="math">\(H\)</span>
+<ul>
+<li>proof that <span class="math">\(H\cap K\)</span> is normal in <span class="math">\(H\)</span>, <span class="math">\(hk = k_2 h\)</span> and <span class="math">\(k \in H\)</span> so <span class="math">\(k_2 \in H\)</span> so normal. we define the map <span class="math">\(h\to hK\)</span>, then we show that it is morphism and it’s kernel is <span class="math">\(H\cap K\)</span></li>
+<li>this means you have normalizer, you can add/subtract the irrelevant dims to the problem. notice that <span class="math">\(K\)</span> is not always subgroup of <span class="math">\(H\)</span></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-butterfly-lemma"></span>butterfly lemma</span>
+<ol style="list-style-type: decimal">
+<li><span class="math">\(U\)</span>, <span class="math">\(V\)</span> subgroup of <span class="math">\(G\)</span></li>
+<li><span class="math">\(u\)</span>, <span class="math">\(v\)</span> normal subgroup of <span class="math">\(U\)</span>, <span class="math">\(V\)</span></li>
+<li>then <span class="math">\(\frac{u(U\cap V)}{u(U\cap v)}\cong\frac{(U\cap V)v}{(u\cap V)v}\cong\frac{U\cap V}{(u\cap V)(U\cap v)}\)</span></li>
+</ol>
+<ul>
+<li>proof of the group is normal. if <span class="math">\(a\in U\cap V\)</span> we have <span class="math">\(a(u\cap V) = (u\cap V)b\)</span> where <span class="math">\(b\)</span> exists and is in <span class="math">\(U\)</span> because <span class="math">\(u\)</span> normal in <span class="math">\(U\)</span>, and it is in <span class="math">\(V\)</span> because <span class="math">\(V\)</span> is closed. so it is normal</li>
+<li>then we use <a href="#cross-canonical-group-isomorphism-2">canonical group isomorphism 2</a>, we should show that <span class="math">\(((u\cap V)v)\cap(U\cap V) = (u\cap V)(U\cap v)\)</span>, which should be trivial. it is tedious and not instructive, but that’s kind of the fact of my mathematical ability now</li>
+</ul></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-centralizer"></span>centralizer</span> of <span class="math">\(S\)</span>, <span class="math">\(Z_S\)</span>. <span class="math">\(zsz^{-1} = s\)</span>
 <ul>
 <li>of <span class="math">\(G\)</span>, <span class="crosslink"><span id="cross-center-of-group"></span>center of group</span> is a <a href="#cross-normal-subgroup">normal subgroup</a></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-quotient-group"></span>quotient group</span> <span class="math">\(G/H\)</span>. and if <span class="math">\(H\)</span> is normal, the result is also a group</li>
-<li><span class="crosslink"><span id="cross-exact-sequence-of-group"></span>exact sequence of group</span> shape like this: <span class="math">\(&gt;&gt;&gt;&gt;&gt;&gt;\)</span></li>
-<li><span class="crosslink"><span id="cross-generate"></span><span id="cross-generator"></span>generate</span> <span class="math">\(G = \langle S \rangle\)</span> seems to be the inner structure of a group
+<li><span class="crosslink"><span id="cross-commutator"></span>commutator</span> <span class="math">\(xyx^{-1}y^{-1}\)</span>. <span class="crosslink"><span id="cross-commutator-subgroup"></span>commutator subgroup</span> <span class="math">\(G^c\)</span>
 <ul>
-<li><span class="crosslink"><span id="cross-finitely-generated"></span>finitely generated</span></li>
-<li><span class="crosslink"><span id="cross-transposition"></span>transposition</span> generate <a href="#cross-symmetric-group">symmetric group</a> <span class="math">\(S_n\)</span></li>
+<li>normal, proof by blablabla</li>
+<li><span class="math">\(G/G^c\)</span> is commutative, proof by cosets</li>
+<li>all homomorphism into commutative group factor through it, proof by showing that if it maps into an abelian group, then the kernel is contained in it. then using <a href="#cross-canonical-group-isomorphism-1">canonical group isomorphism 1</a></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-free-group"></span>free group</span> <span class="math">\(F(A)\)</span>. the words thing. on set <span class="math">\(A\)</span>. the <a href="#cross-universal-arrow">universal arrow</a>!</li>
-<li><a href="#cross-product">product</a> exists. we show that the product is a group by defining pointwize multiplication, then we define the universal arrow. we show that it is a morphism and it is a product, then we show that it is unique
+<li><a href="#cross-product">product</a> we show that the product is a group by defining pointwize multiplication, then we define the universal arrow. we show that it is a morphism and it is a product, then we show that it is unique
 <ul>
-<li>canonical embedding into the product</li>
+<li><span class="crosslink"><span id="cross-canonical-embedding-into-the-group-product"></span>canonical embedding into the group product</span> because we have <a href="#cross-unit">unit</a></li>
+<li><span class="crosslink"><span id="cross-decomposition-of-group-into-subgroups"></span>decomposition of group into subgroups</span> <span class="math">\(H\cap K = \{e\}\land HK = G\land hk = kh\)</span> then <span class="math">\(G \cong K\times H\)</span>
+<ul>
+<li>example: <span class="math">\(C_6 = C_2 \times C_3\)</span>, with <span class="math">\(C_2 = \{0, 3\}\)</span>, <span class="math">\(C_3 = \{0, 2, 4\}\)</span>, actually it is not obvious that <span class="math">\(HK = G\)</span>, but because it is abelian, <span class="math">\(hk = kh\)</span> is obvious</li>
+</ul></li>
 </ul></li>
 <li><a href="#cross-coproduct">coproduct</a> the <span class="crosslink"><span id="cross-free-product"></span>free product</span> <span class="math">\(G*H\)</span>
+<ol style="list-style-type: decimal">
+<li>some properties from the universal property without constructing it
 <ul>
 <li>the insertion map must be injective</li>
 <li>and all elements in the coproduct can be expressed as <span class="math">\(i_1(g_1)i_2(g_2)\cdots i_k(g_k)\)</span>
 <ul>
 <li>we can show this only using universal properties. the generated subgroup in coproduct is a subgroup, and we has injections in to the subgroup, then we have an universal arrow from coproduct to this subgroup, which can be viewed as an universal arrow from coproduct to coproduct with image the subgroup, then we have two arrow, the other one is <span class="math">\({\text{id}}\)</span>, so the subgroup is the coproduct~!</li>
 </ul></li>
+</ul></li>
 <li>consider the category of <span class="math">\((f, G)\)</span> such that <span class="math">\(f: S\to G\)</span> with morphisms group homomorphisms <span class="math">\(\lambda\)</span> such that <span class="math">\(\lambda \circ f_1 = f_2\)</span>, a <span class="crosslink"><span id="cross-free-group"></span>free group</span> is an <a href="#cross-initial">initial</a> in this category</li>
 <li><a href="#cross-free-group">free group</a> exists and generated by <span class="math">\(S\)</span>, the <span class="math">\(f\)</span> is injective <code>fix me: this proof is rather dumb... why can't just use the words thing?</code></li>
 <li><span class="math">\(F(|G|)\to G\)</span>, then we see that every group is a factor group of some <a href="#cross-free-group">free group</a></li>
+</ol>
+<ul>
 <li>coproduct exists <code>fix me: reason same as above</code></li>
 <li><span class="math">\(\{G_i\}\)</span> a family of subgroup such that 1. generate <span class="math">\(G\)</span>, 2. if <span class="math">\(x=g_{i_1}g_{i_2}\cdots g_{i_k}\)</span> with all <span class="math">\(g_{i_v} \neq e\)</span> and <span class="math">\(i_v \neq i_{v+1}\)</span> then <span class="math">\(x \neq e\)</span> (every words is not <span class="math">\(e\)</span>). then <span class="math">\(G\)</span> is coproduct
 <ul>
@@ -894,24 +938,35 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>we define the finite sequence and restrict to <span class="math">\(\neq 1\)</span> and alternating case, we define the product, the unit element and inverse function, we proof it is associative by induction</li>
 </ul></li>
-</ul></li>
-<li>see <a href="http://en.wikipedia.org/wiki/Category_of_groups">Wikipedia</a> for more about the category of groups</li>
 <li>we can defined by generator and relations <span class="math">\(G = {\langle S, R \rangle}\)</span> where <span class="math">\(R\subset F(S)\)</span>, <span class="math">\(G\)</span> is <span class="math">\(F(S)/N\)</span> where <span class="math">\(N\)</span> is the smallest normal subgroup containing <span class="math">\(R\)</span></li>
-<li><a href="#cross-pushout">pushout</a> exists, also called <span class="crosslink"><span id="cross-free-product-with-amalgamation"></span>free product with amalgamation</span>, it is by coproduct and take the smallest normal group containing all <span class="math">\(f(a)g(a)^{-1}\)</span></li>
-<li><a href="#cross-initial">initial</a>/<a href="#cross-finial">finial</a> the <span class="crosslink"><span id="cross-trivial-group"></span>trivial group</span></li>
-<li><span class="crosslink"><span id="cross-order-of-group"></span>order of group</span> the definition is somewhat… it is the number of elements</li>
-<li><span class="crosslink"><span id="cross-commutator"></span>commutator</span> <span class="math">\(xyx^{-1}y^{-1}\)</span>, <span class="math">\(G^c\)</span>
-<ul>
-<li>normal, proof by blablabla</li>
-<li><span class="math">\(G/G^c\)</span> is commutative, proof by cosets</li>
-<li>all homomorphism into commutative group factor through it, proof by showing that if it maps into an abelian group, then the kernel is contained in it. then using <a href="#cross-decomposition-1">decomposition 1</a></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-simple-group"></span>simple group</span> nor-trivial and no normal groups other than <span class="math">\({e}\)</span> and itself</li>
-<li><span class="crosslink"><span id="cross-presentation-of-group"></span>presentation of group</span>
+<li><a href="#cross-pushout">pushout</a> exists, also called <span class="crosslink"><span id="cross-free-product-with-amalgamation"></span>free product with amalgamation</span>, it is by coproduct and take the smallest normal group containing all <span class="math">\(f(a)g(a)^{-1}\)</span></li>
+<li><span class="crosslink"><span id="cross-semidirect-product"></span>semidirect product</span> <span class="math">\(N{\lhd}G\)</span>, <span class="math">\(G = NH\)</span>, <span class="math">\(N\cap H = \{e\}\)</span>
 <ul>
-<li><span class="crosslink"><span id="cross-finitely-presented"></span>finitely presented</span>
+<li><span class="math">\({\Leftrightarrow}\)</span> every element unique written as <span class="math">\(nh\)</span></li>
+<li><span class="math">\({\Leftrightarrow}\)</span> every element unique written as <span class="math">\(hn\)</span></li>
+</ul></li>
+<li><a href="#cross-initial">initial</a>/<a href="#cross-finial">finial</a> the <span class="crosslink"><span id="cross-trivial-group"></span>trivial group</span></li>
+<li><span class="crosslink"><span id="cross-group-tower"></span>group tower</span>s
 <ul>
-<li>world problem is undecidable…</li>
+<li><span class="crosslink"><span id="cross-normal-tower"></span>normal tower</span>. <span class="crosslink"><span id="cross-abelian-tower"></span>abelian tower</span>. <span class="crosslink"><span id="cross-cyclic-tower"></span>cyclic tower</span></li>
+<li><span class="crosslink"><span id="cross-solvable-tower"></span>solvable tower</span> has an abelian tower</li>
+<li>finite + solvable = has an cyclic refinement
+<ul>
+<li>by induction and using <a href="#cross-canonical-group-isomorphism-2">canonical group isomorphism 2</a></li>
+</ul></li>
+<li><span class="math">\(H\)</span> normal (<span class="math">\(G\)</span> solvable <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(G/H\)</span> and <span class="math">\(H\)</span> is solvable)
+<ul>
+<li>right to left is trivial. <span class="math">\(H\)</span> solvable: construct <span class="math">\(H_i\)</span> like in textbook, we show a normal tower, then we show a morphism, then we show injective then we show abelian. and then we show that <span class="math">\(G/H\)</span> is solvable. we show that <span class="math">\(G_{i+1}H\)</span> normal in <span class="math">\(G_i H\)</span>, by <span class="math">\(hg_iG_{i+1}H g_i^{-1}h^{-1}  = hG_{i+1} H h^{-1} = hG_{i+1}H = h H G_{i+1} = G_{i+1} H\)</span>, then we show that <span class="math">\(G_i H/ G_{i+1}H\to G_i/G_{i+1}\)</span> is injective, 1. show that cosets in left is just <span class="math">\(g_ihHG_{i+1} = g_iG_{i+1}H\)</span> represented by <span class="math">\(g_i\)</span>, 2. define the map be <span class="math">\(g_i G_{i+1} H \to g_i G_{i+1}\)</span>, then it is morphism, and it is injective, 3. using <a href="#cross-canonical-group-isomorphism-1">canonical group isomorphism 1</a>, we show that it isomorphism to a tower of <span class="math">\(G_i H/ H\)</span> with <span class="math">\(G_0H/H = G/H\)</span> and <span class="math">\(G_rH/H = H/H\)</span>, so proofed</li>
+<li>lemma: <span class="math">\(h(H\cap G) = H\cap hG\)</span>. it is used to show above injective</li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-Schreier-theorem"></span>Schreier theorem</span> two normal tower ending with trivial group have equivalent refinements
+<ul>
+<li>you should have a picture of the corresponding groups in the refined tower</li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-Jordan-Hölder"></span>Jordan-Hölder</span> simple tower is canonical
+<ul>
+<li>by <a href="#cross-Schreier-theorem">Schreier theorem</a>, we find the refinement and show that actually it is nothing refined</li>
 </ul></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-inverse-limit-of-group"></span>inverse limit of group</span> given <span class="math">\(\{(G_n, f_n)\}\)</span>, the sequences <span class="math">\(x = (x_0, x_1, \dots)\)</span> that satisfy <span class="math">\(x_0 = f_1(x_1)\)</span> etc, form a group
@@ -921,20 +976,6 @@ $("#content").css("max-width", "1100px")
 <li><span class="crosslink"><span id="cross-profinite-group"></span>profinite group</span> inverse limit of finite groups</li>
 <li><span class="crosslink"><span id="cross-Cauchy-sequence-in-group"></span>Cauchy sequence in group</span>. <span class="crosslink"><span id="cross-null-sequence-in-group"></span>null sequence in group</span>. <span class="crosslink"><span id="cross-completion-of-group"></span>completion of group</span> <code>fix me: is this completable with norm completion? if it is, read this...</code></li>
 </ul></li>
-<li>examples
-<ul>
-<li><span class="crosslink"><span id="cross-symmetric-group"></span>symmetric group</span> <span class="math">\(S_n\)</span>
-<ul>
-<li><span class="math">\((S_n:1) = n!\)</span></li>
-<li>we define the sing homomorphism <span class="math">\(S_n\to \{1, -1\}\)</span></li>
-<li>and the kernel is <span class="crosslink"><span id="cross-alternating-group"></span>alternating group</span> <span class="math">\(A_n\)</span></li>
-<li>we proof that <span class="math">\(S_n\)</span> is not <a href="#cross-solvable">solvable</a> by showing that this kind of abelian tower will have all 3-cycles</li>
-<li><span class="math">\(A_n\)</span> is generated by 3-cycles. we proof all even product of transpositions is generated by it</li>
-<li><span class="math">\(n\geq 5\)</span>, all 3-cycles are conjugate in <span class="math">\(A_n\)</span></li>
-<li><span class="math">\(n\geq 5\)</span>, <span class="math">\(A_n\)</span> is simple</li>
-<li><code>fix me: proofs</code></li>
-</ul></li>
-<li><span class="math">\(({\mathbb{Z}}/p{\mathbb{Z}})^*\)</span> is a group. proof is trivial</li>
 <li><span class="crosslink"><span id="cross-cyclic-group"></span>cyclic group</span> <span class="math">\(C_n\)</span>. <a href="#cross-isomorphism">isomorphism</a> to <span class="math">\({\mathbb{Z}}\)</span> or <span class="math">\({\mathbb{Z}}/n{\mathbb{Z}}\)</span>, the <strong>additive group</strong>!!!
 <ul>
 <li>infinite cyclic group has exactly 2 generator</li>
@@ -946,15 +987,35 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>trivial</li>
 </ul></li>
-<li>if <span class="math">\(p\)</span> is prime, then <span class="math">\((({\mathbb{Z}}/p{\mathbb{Z}})^*, \cdot)\)</span> is cyclic
-<ul>
-<li>it is an abelian group, so there should be one maximal order element <span class="math">\(g\)</span>, so <span class="math">\(h^{|g|} = 1\)</span> for all <span class="math">\(h\)</span>, but we have <span class="math">\(x^d = 1\)</span> at most have <span class="math">\(d\)</span> solutions in <span class="math">\({\mathbb{Z}}/p{\mathbb{Z}}\)</span> <code>fix me</code>, so <span class="math">\(|g|\geq p\)</span></li>
-</ul></li>
+<li>if <span class="math">\(p\)</span> is prime, then <span class="math">\((({\mathbb{Z}}/p^r{\mathbb{Z}})^*, \cdot)\)</span> is cyclic, except for <span class="math">\(p = 2 \land r \geq 3\)</span> which is of <span class="math">\((2, 2^{r-2})\)</span>
+<ol style="list-style-type: decimal">
+<li><span class="math">\(r = 1\)</span> case. it is an abelian group, so there should be one maximal order element <span class="math">\(g\)</span>, so <span class="math">\(h^{|g|} = 1\)</span> for all <span class="math">\(h\)</span>, but we have <span class="math">\(x^d = 1\)</span> at most have <span class="math">\(d\)</span> solutions in <span class="math">\({\mathbb{Z}}/p{\mathbb{Z}}\)</span>, so <span class="math">\(|g|\geq p - 1\)</span></li>
+<li>for general <span class="math">\(p \neq 2\)</span>, we expand <span class="math">\((p + 1)^{up^m} -1 \)</span> and inspect the pattern of order of <span class="math">\(p\)</span> in each term. in first <span class="math">\(p^2 -1\)</span> term, there is no decreasing, only stay in one place at <span class="math">\(p\)</span> term, with order <span class="math">\(p^{m + p -1}\)</span>, and at <span class="math">\(p^k\)</span> it decrease <span class="math">\(k -1\)</span> with order <span class="math">\(p^{m + p^k - k}\)</span>, clearly all order bigger than <span class="math">\(p^{m + 1}\)</span></li>
+<li>so <span class="math">\((p +1)\)</span> is of order <span class="math">\(p^{r -1}\)</span></li>
+<li>by <span class="math">\(\text{gcd}(p^{r-1}, p-1) = 1\)</span>, we get the group is cyclic of order <span class="math">\(p^{r-1}(p -1)\)</span></li>
+<li>for <span class="math">\(p = 2\)</span> we have group order <span class="math">\(2^{r-1}\)</span>, it is almost the same expanding, but we show that it is of same divider by sum of 2nd and 4th term</li>
+</ol></li>
 <li><span class="math">\(\text{gcd}(m, n) = 1{\Rightarrow}C_{mn} = C_m \times C_n\)</span>
 <ul>
 <li>to show right is cyclic, we define <span class="math">\(C_{mn}\to C_m\times C_n\)</span>, we show that only that… and we show that it is surjective. we are done??</li>
 </ul></li>
+<li><span class="crosslink"><span id="cross-order-of-group-element"></span>order of group element</span> order of cyclic group generated by element</li>
 </ul></li>
+<li>examples
+<ul>
+<li><span class="crosslink"><span id="cross-symmetric-group"></span>symmetric group</span> <span class="math">\(S_n\)</span>
+<ul>
+<li><span class="math">\((S_n:1) = n!\)</span></li>
+<li><span class="crosslink"><span id="cross-transposition"></span>transposition</span> generate <a href="#cross-symmetric-group">symmetric group</a> <span class="math">\(S_n\)</span></li>
+<li>we define the sing homomorphism <span class="math">\(S_n\to \{1, -1\}\)</span></li>
+<li>and the kernel is <span class="crosslink"><span id="cross-alternating-group"></span>alternating group</span> <span class="math">\(A_n\)</span></li>
+<li>we proof that <span class="math">\(S_n\)</span> is not <a href="#cross-solvable">solvable</a> by showing that this kind of abelian tower will have all 3-cycles</li>
+<li><span class="math">\(A_n\)</span> is generated by 3-cycles. we proof all even product of transpositions is generated by it</li>
+<li><span class="math">\(n\geq 5\)</span>, all 3-cycles are conjugate in <span class="math">\(A_n\)</span></li>
+<li><span class="math">\(n\geq 5\)</span>, <span class="math">\(A_n\)</span> is simple</li>
+<li><code>fix me: proofs</code></li>
+</ul></li>
+<li><span class="math">\(({\mathbb{Z}}/n{\mathbb{Z}})^*\)</span> is a group. <span class="math">\(an + kp_1 = 1\land bn +jq = 1{\Rightarrow}(kj)pq + (a + b -abn)n = 1\)</span></li>
 <li><span class="crosslink"><span id="cross-dihedral-group"></span>dihedral group</span> of <span class="math">\(n\)</span> side polygon <span class="math">\(D_{2n}\)</span>
 <ul>
 <li><span class="math">\(D_6 = S_3\)</span>, but normality it is not, because geometry restrictions</li>
@@ -969,180 +1030,11 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-decomposition-of-group-morphism"></span>decomposition of group morphism</span>
-<ul>
-<li><img src="images/group-d1.png" style="width:400px" />
-<ul>
-<li>we define the map by <span class="math">\(aH\to f(a)\)</span> because for all <span class="math">\(y\in H\)</span>, <span class="math">\(f(xy) = f(x)\)</span> we see it is a well defined map, then we see that it is a morphism, and it is unique</li>
-</ul></li>
-<li><span class="math">\(f: G\to G'\)</span> and <span class="math">\(H'\)</span> normal in <span class="math">\(G'\)</span> then <span class="math">\(f^{-1}(H')\)</span> normal in <span class="math">\(G\)</span> and <span class="math">\(\bar{f}:G/H\to G'/H'\)</span> is injective, if <span class="math">\(f\)</span> is surjective, it is an isomorphism
-<ul>
-<li>we show it is normal. and show it is associative, and injective, by triviality</li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-decomposition-0"></span>decomposition 0</span> <span class="math">\(\frac{G_1\times G_2}{H_1\times H_2}\cong\frac{G_1}{H_1}\times\frac{G_2}{H_2}\)</span>
-<ul>
-<li>first we proof that <span class="math">\(H_1\times H_2\)</span> is normal, this is trivial, then we show that if <span class="math">\(g_i H_1\)</span> and <span class="math">\(g_j H_2\)</span> then <span class="math">\((g_i, g_j) H_1\times H_2\)</span>, we define the map and show it is a morphism, then we show the kernel is trivial and it is surjective, so it is an isomorphism</li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-decomposition-1"></span>decomposition 1</span> <span class="math">\(\frac{G/H}{N/H}\cong\frac{G}{N}\)</span>, <span class="math">\(H\subset N\)</span> normal
-<ul>
-<li>first all <span class="math">\(A/B\)</span> is well defined, then we see that left is well defined. for <span class="math">\(G/H\)</span> and <span class="math">\(G/N\)</span> we define a map <span class="math">\(gH\to gN\)</span>, we see that it is a morphism, then we show that the kernel is <span class="math">\(N/H\)</span></li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-decomposition-2"></span>decomposition 2</span> <span class="math">\(\frac{H}{H\cap K}\cong \frac{HK}{K}\)</span>, <span class="math">\(H\subset N_K\)</span>, so <span class="math">\(HK = KH\)</span> is subgroup, and <span class="math">\(H\cap K\)</span> is normal in <span class="math">\(H\)</span>
-<ul>
-<li>proof that <span class="math">\(H\cap K\)</span> is normal in <span class="math">\(H\)</span>, <span class="math">\(hk = k_2 h\)</span> and <span class="math">\(k \in H\)</span> so <span class="math">\(k_2 \in H\)</span> so normal. we define the map <span class="math">\(h\to hK\)</span>, then we show that it is morphism and it’s kernel is <span class="math">\(H\cap K\)</span></li>
-<li>this means you have normalizer, you can add/subtract the irrelevant dims to the problem. notice that <span class="math">\(K\)</span> is not always subgroup of <span class="math">\(H\)</span></li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-butterfly-lemma"></span>butterfly lemma</span>
-<ul>
-<li><span class="math">\(U\)</span>, <span class="math">\(V\)</span> subgroup of <span class="math">\(G\)</span></li>
-<li><span class="math">\(u\)</span>, <span class="math">\(v\)</span> normal subgroup of <span class="math">\(U\)</span>, <span class="math">\(V\)</span></li>
-<li><span class="math">\(\frac{u(U\cap V)}{u(U\cap v)}\cong\frac{(U\cap V)v}{(u\cap V)v}\cong\frac{U\cap V}{(u\cap V)(U\cap v)}\)</span></li>
-<li>proof of the group is normal. if <span class="math">\(a\in U\cap V\)</span> we have <span class="math">\(a(u\cap V) = (u\cap V)b\)</span> where <span class="math">\(b\)</span> exists and is in <span class="math">\(U\)</span> because <span class="math">\(u\)</span> normal in <span class="math">\(U\)</span>, and it is in <span class="math">\(V\)</span> because <span class="math">\(V\)</span> is closed. so it is normal</li>
-<li>then we use <a href="#cross-decomposition-2">decomposition 2</a>, we should show that <span class="math">\(((u\cap V)v)\cap(U\cap V) = (u\cap V)(U\cap v)\)</span>, which should be trivial. it is tedious and not instructive, but that’s kind of the fact of my mathematical ability now</li>
-</ul></li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-group-tower"></span>group tower</span>s
-<ul>
-<li><span class="crosslink"><span id="cross-normal-tower"></span>normal tower</span>. <span class="crosslink"><span id="cross-abelian-tower"></span>abelian tower</span>. <span class="crosslink"><span id="cross-cyclic-tower"></span>cyclic tower</span></li>
-<li><span class="crosslink"><span id="cross-solvable-tower"></span>solvable tower</span> has an abelian tower</li>
-<li>finite + solvable = has an cyclic refinement
-<ul>
-<li>by induction and using <a href="#cross-decomposition-2">decomposition 2</a></li>
-</ul></li>
-<li><span class="math">\(H\)</span> normal (<span class="math">\(G\)</span> solvable <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(G/H\)</span> and <span class="math">\(H\)</span> is solvable)
-<ul>
-<li>right to left is trivial. <span class="math">\(H\)</span> solvable: construct <span class="math">\(H_i\)</span> like in textbook, we show a normal tower, then we show a morphism, then we show injective then we show abelian. and then we show that <span class="math">\(G/H\)</span> is solvable. we show that <span class="math">\(G_{i+1}H\)</span> normal in <span class="math">\(G_i H\)</span>, by <span class="math">\(hg_iG_{i+1}H g_i^{-1}h^{-1}  = hG_{i+1} H h^{-1} = hG_{i+1}H = h H G_{i+1} = G_{i+1} H\)</span>, then we show that <span class="math">\(G_i H/ G_{i+1}H\to G_i/G_{i+1}\)</span> is injective, 1. show that cosets in left is just <span class="math">\(g_ihHG_{i+1} = g_iG_{i+1}H\)</span> represented by <span class="math">\(g_i\)</span>, 2. define the map be <span class="math">\(g_i G_{i+1} H \to g_i G_{i+1}\)</span>, then it is morphism, and it is injective, 3. using <a href="#cross-decomposition-1">decomposition 1</a>, we show that it isomorphism to a tower of <span class="math">\(G_i H/ H\)</span> with <span class="math">\(G_0H/H = G/H\)</span> and <span class="math">\(G_rH/H = H/H\)</span>, so proofed</li>
-<li>lemma: <span class="math">\(h(H\cap G) = H\cap hG\)</span>. it is used to show above injective</li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-Schreier-theorem"></span>Schreier theorem</span> two normal tower ending with trivial group have equivalent refinements
-<ul>
-<li>you should have a picture of the corresponding groups in the refined tower</li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-Jordan-Hölder"></span>Jordan-Hölder</span> simple tower is canonical
-<ul>
-<li>by <a href="#cross-Schreier-theorem">Schreier theorem</a>, we find the refinement and show that actually it is nothing refined</li>
-</ul></li>
-</ul></li>
-</ul>
-<h3 id="finite-group">finite group</h3>
-<ul>
-<li><span class="math">\({\mathcal{FinGrp}}\)</span>
-<ul>
-<li><span class="crosslink"><span id="cross-finite-group"></span>finite group</span></li>
-<li>when dealing with finite group, it is just ok to think of what multi table it have, and think how many distinct elements you have</li>
-<li><span class="crosslink"><span id="cross--p--group"></span><span class="math">\(p\)</span>-group</span> finite group of order <span class="math">\(p^n\)</span> where <span class="math">\(p\)</span> prime</li>
-<li><span class="math">\(p\)</span>-<span class="crosslink"><span id="cross-Sylow-subgroup"></span>Sylow subgroup</span></li>
-<li>finite abelian group <span class="math">\(G\)</span> has subgroup order <span class="math">\(p\)</span> dividing <span class="math">\(|G|\)</span>
-<ul>
-<li>easy if you know facts about <a href="#cross-finite-generated-abelian-group">finite generated abelian group</a></li>
-</ul></li>
-<li><span class="math">\(p\)</span>-Sylow group exists
-<ul>
-<li>the proof is standard, i think i cannot come up with a proof of this myself, because i am too dumb… just repeat it myself… if <span class="math">\(G\)</span> has order <span class="math">\(p^n\)</span> we are done, so we assume not. we consider proper subgroup of <span class="math">\(G\)</span>, if there exists a subgroup <span class="math">\(H\)</span> such that <span class="math">\(p^n\)</span> divides <span class="math">\(|H|\)</span> then we are done, because we can induction. suppose not, then we have in <span class="math">\(|G| = \sum (G:G_x) = |Z| + \sum (G:G_x)\)</span> the right must all dividable by <span class="math">\(p\)</span>, so is <span class="math">\(|Z|\)</span>. and we can construct a group of order <span class="math">\(p\)</span> in <span class="math">\(Z\)</span>. and we can factor it to induction again, and project back and show that the group has order <span class="math">\(p^n\)</span></li>
-</ul></li>
-<li><span class="math">\(H\)</span> a <span class="math">\(p\)</span> group actioning on finite set <span class="math">\(S\)</span>, then number of fix points is <span class="math">\(|S|\)</span> mod <span class="math">\(p\)</span>
-<ul>
-<li>using the <a href="#cross-orbit-decomposition-formula">orbit decomposition formula</a>, <span class="math">\(|S| = \sum (H: H_{s_i}) = |F| \sum (H:H_{s_1})\)</span> the right part must divide <span class="math">\(p\)</span>, so <span class="math">\(|S|-|F|\)</span> divides <span class="math">\(p\)</span></li>
-</ul></li>
-<li><span class="math">\(p\)</span> group is contained in some <span class="math">\(p\)</span>-Sylow group</li>
-<li>all <span class="math">\(p\)</span>-Sylow group is <a href="#cross-conjugate">conjugate</a></li>
-<li>number of <span class="math">\(p\)</span>-Sylow group is <span class="math">\(1 \mod p\)</span>
-<ul>
-<li>we follow the proof by Lang. first if <span class="math">\(H\)</span> is contained in normalizer of <span class="math">\(P\)</span>, then <span class="math">\(H\subset P\)</span>, this is proofed by seeing the prime indexes, we used the condition <span class="math">\(p\)</span>-Sylow as <strong>maximal</strong> <span class="math">\(p\)</span>. the next part is by taking <span class="math">\(S\)</span> all <strong>conjugate</strong> class of <span class="math">\(P\)</span> in <span class="math">\(G\)</span>, then we have <span class="math">\(|S|\)</span> is not divisible by <span class="math">\(p\)</span>, then we have <span class="math">\(H\)</span> also operate on <span class="math">\(S\)</span> and it cannot have one fixed point, which means it is contained in some <span class="math">\(aPa^{-1}\)</span>. by taking <span class="math">\(H = aPa^{-1}\)</span> we show that it is in <span class="math">\(S\)</span>. and <span class="math">\(H\)</span> has only one fixed point, showing that mod 1.</li>
-<li>the proof is essentially number theoretic, so the particular group structure is caused by finiteness and number theory</li>
-</ul></li>
-<li><span class="math">\(p\)</span>-group has non-trivial center, thus solvable, and also has cyclic tower
-<ul>
-<li>it is again a trivial application of class formula</li>
-</ul></li>
-<li>smallest prime index group is normal
-<ul>
-<li>proof: if <span class="math">\(N_H=H\)</span> we have <span class="math">\(G\)</span> operates on <span class="math">\(G/H\)</span> and so we have a subgroup into a group of order <span class="math">\(p!\)</span> and we show that the kernel must be <span class="math">\(H\)</span>, i.e. <span class="math">\(hgHg^{-1}h^{-1} = gHg^{-1}{\Rightarrow}g^{-1}hg \in H\)</span></li>
-</ul></li>
-<li>order <span class="math">\(pq\)</span>, <span class="math">\(p\neq q\)</span> and primes, then solvable. trivial by above lemma</li>
-</ul></li>
-</ul>
-<h3 id="abelian-group">abelian group</h3>
-<ul>
-<li><span class="math">\({\mathcal{Ab}}\)</span>
-<ul>
-<li><a href="#cross-object">object</a> <span class="crosslink"><span id="cross-abelian-group"></span>abelian group</span></li>
-<li><a href="#cross-morphism">morphism</a>
-<ul>
-<li>example: <span class="math">\(n\)</span> power map exists, because <a href="#cross-commutative">commutative</a>, the deeper result is that abelian group is essentially an module over <span class="math">\({\mathbb{Z}}\)</span></li>
-<li><a href="#cross-homomorphism">homomorphism</a> in <span class="math">\({\mathcal{Ab}}\)</span> is again a <a href="#cross-abelian-group">abelian group</a></li>
-</ul></li>
-<li><a href="#cross-product">product</a> finite case is <a href="#cross-direct-sum">direct sum</a></li>
-<li><a href="#cross-coproduct">coproduct</a> <span class="crosslink"><span id="cross-direct-sum"></span>direct sum</span> <span class="math">\(G\oplus H\)</span>, only finite non zero
-<ul>
-<li>proof that is is coproduct. we should be using a infinite sum now, and etc.</li>
-</ul></li>
-<li><a href="#cross-pullback">pullback</a> is the subgroup of <span class="math">\(A\times B\)</span> such that <span class="math">\(f(a) = g(b)\)</span></li>
-<li>structure of <span class="crosslink"><span id="cross-free-abelian-group"></span>free abelian group</span> <span class="math">\(F^{ab}(A)\)</span>. <span class="math">\(\bigoplus_{i\in A} {\mathbb{Z}}_i\)</span>
-<ul>
-<li><span class="crosslink"><span id="cross-base"></span>base</span> non-empty and <span class="math">\(A\)</span> is unique expressed <span class="math">\(x =\sum x_i e_i\)</span> for <span class="math">\(x_i\in {\mathbb{Z}}\)</span> almost all zero</li>
-<li>the <a href="#cross-adjuction-functor">adjuction functor</a></li>
-<li><span class="math">\(f:A\to B\)</span> surjective and <span class="math">\(B\)</span> is free, then we can find <span class="math">\(C\)</span> free such that <span class="math">\(A = {\text{ker }}f \oplus C\)</span>
-<ul>
-<li>proof using base</li>
-</ul></li>
-<li>subgroup is also <a href="#cross-free-abelian-group">free abelian group</a>, and has smaller <a href="#cross-cardinal">cardinal</a> base
-<ul>
-<li>special case of free module over principal entire ring <code>fix me</code></li>
-</ul></li>
-</ul></li>
-<li>structure of <span class="crosslink"><span id="cross-torsion-element"></span>torsion element</span> forms a <span class="crosslink"><span id="cross-torsion-group"></span>torsion group</span>. <span class="math">\(A = \bigoplus _p A(p)\)</span> where <span class="math">\(A(p)\)</span> is the subgroup of elements of order <span class="math">\(p^n\)</span>. not necessary finite
-<ul>
-<li>we proof by showing the map in surjective, injective by showing the kernel is trivial. surjective using the relative prime decomposition</li>
-<li>abelian <span class="math">\(p\)</span>-group isomorphism to product of cyclic <span class="math">\(p\)</span>-groups
-<ul>
-<li><code>fix me</code></li>
-</ul></li>
-<li>an easy exercise. a non cyclic finite abelian group must contain some <span class="math">\(C_p\times C_p\)</span>
-<ul>
-<li>proof by above. suppose not cyclic, if there must be multiple <span class="math">\(A(p)\)</span> and one of them has multiple <span class="math">\(p\)</span>-group, because if it is <span class="math">\(p\)</span>-group and not cyclic, it must has multiple cyclic decomposition, and we can pick a <span class="math">\(C_p\times C_p\)</span> in it. so it must contain multiple <span class="math">\(A(p)\)</span>, if it everyone has one <span class="math">\(p\)</span>-cyclic group, then itself is cyclic. so one of them must contain multiple <span class="math">\(p\)</span>-cyclic group. proofed again</li>
-<li>proof by hand. i do not want to proof again, this is basically the relative prime thing</li>
-</ul></li>
-<li>in <a href="#cross-abelian-group">abelian group</a> the max finite order divide each finite order
-<ul>
-<li>proof see exercise in <a href="#cross-ref-algebra-0">ref-algebra-0</a>, it is by contradiction</li>
-<li>can we proof it using the structure of torsion group? i think a problem is that there might be no maximal order at all. we proof that the cyclic group all have order smaller than one number, if not, we have no maximal order element. so we can pick the maximal order of each one, and proofed</li>
-</ul></li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-finitely-generated-abelian-group"></span>finitely generated abelian group</span> <span class="math">\(A = A_{\text{tor}}\oplus B\)</span> where <span class="math">\(B\)</span> is free
-<ul>
-<li>finitely generated torsion abelian group is finite
-<ul>
-<li>proof is trivial</li>
-</ul></li>
-<li>finitely generated torsion-free abelian group is free
-<ul>
-<li>the proof is by picking a maximal set of independent generators and so any set of this plus another generator is linearly dependent, so <span class="math">\(my\in B\)</span> where <span class="math">\(B\)</span> free. so we define <span class="math">\(A\to mA\to B\subset A\)</span>, the first is injective because it is torsion free, the second is injective because it’s the inclusion map, so we have the <span class="math">\(A= B\)</span></li>
-<li>we proof that <span class="math">\(A/A_{\text{tor}}\)</span> is torsion free, thus free. to show direct sum <code>fix me</code></li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-rank"></span>rank</span> of <span class="math">\(A\)</span></li>
-<li>an example of abelian group that do not has this structure is <span class="math">\({\mathbb{Q}}\)</span>, <a href="http://en.wikipedia.org/wiki/Free_abelian_group#Torsion_and_divisibility">here</a>, it is torsion-free but not free. same for <span class="math">\({\mathbb{R}}\)</span> because it has one non-free subgroup</li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-dual-group"></span>dual group</span> for <span class="math">\(A\)</span> of exponent <span class="math">\(m\)</span>, <span class="math">\(A^*\)</span>
-<ul>
-<li>for <span class="math">\(A\)</span>, <span class="math">\(B\)</span> of same exponent <span class="math">\(m\)</span>, <span class="math">\(f: A\to B\)</span>, we define <span class="math">\(f^*:B^*\to A^*\)</span> by <span class="math">\(f^*(\chi) = \chi \circ f\)</span></li>
-<li><span class="math">\({\text{id}}^* = {\text{id}}\)</span></li>
-<li><span class="math">\((f\circ g)^* = g^*\circ f^*\)</span></li>
-<li><span class="math">\((A\times B)^* \cong A^*\times B^*\)</span></li>
-<li><em>the dual things is a special case of a module, study it there</em></li>
-</ul></li>
-</ul></li>
 </ul>
 <h3 id="group-action">group action</h3>
 <ul>
 <li>a left <span class="crosslink"><span id="cross-action"></span>action</span> of <a href="#cross-group">group</a> <span class="math">\(G\)</span> on <span class="math">\(A\)</span> in category <span class="math">\({\mathcal{C}}\)</span>, is a <strong>morphism</strong> <span class="math">\(\sigma:G \to {\text{aut}}_{\mathcal{C}}(A)\)</span>
 <ul>
-<li>alternative on <span class="math">\(S\in {\mathcal{Set}}\)</span>
-<ul>
-<li><span class="math">\(es = s\)</span></li>
-<li><span class="math">\(gfs = (gf) s\)</span></li>
-<li>this is auto <a href="#cross-automorphism">automorphism</a>! group has <a href="#cross-inverse">inverse</a>!</li>
-</ul></li>
 <li><span class="crosslink"><span id="cross-faithful-action"></span><span id="cross-effective-action"></span>faithful action</span> when we view group as an single element <a href="#cross-category">category</a>, it is just <a href="#cross-faithful">faithful</a></li>
 <li><span class="crosslink"><span id="cross-conjugate"></span>conjugate</span> subgroup <span class="math">\(B = xAx^{-1}\)</span>
 <ul>
@@ -1193,6 +1085,123 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul></li>
 </ul>
+<h3 id="finite-group">finite group</h3>
+<ul>
+<li><span class="math">\({\mathcal{FinGrp}}\)</span>
+<ul>
+<li><span class="crosslink"><span id="cross-finite-group"></span>finite group</span></li>
+<li><em>when dealing with finite group, it is just ok to think of what multi table it have, and think how many distinct elements you have</em></li>
+<li><span class="crosslink"><span id="cross--p--group"></span><span class="math">\(p\)</span>-group</span> finite group of order <span class="math">\(p^n\)</span> where <span class="math">\(p\)</span> prime</li>
+<li><span class="math">\(p\)</span>-<span class="crosslink"><span id="cross-Sylow-subgroup"></span>Sylow subgroup</span></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>finite abelian group <span class="math">\(G\)</span> has subgroup order <span class="math">\(p\)</span> dividing <span class="math">\(|G|\)</span>
+<ul>
+<li>easy if you know facts about <a href="#cross-finitely-generated-abelian-group">finitely generated abelian group</a></li>
+</ul></li>
+<li><span class="math">\(p\)</span>-Sylow group exists
+<ul>
+<li>the proof is standard, i think i cannot come up with a proof of this myself, because i am too dumb… just repeat it myself… if <span class="math">\(G\)</span> has order <span class="math">\(p^n\)</span> we are done, so we assume not. we consider proper subgroup of <span class="math">\(G\)</span>, if there exists a subgroup <span class="math">\(H\)</span> such that <span class="math">\(p^n\)</span> divides <span class="math">\(|H|\)</span> then we are done, because we can induction. suppose not, then we have in <span class="math">\(|G| = \sum (G:G_x) = |Z| + \sum (G:G_x)\)</span> the right must all dividable by <span class="math">\(p\)</span>, so is <span class="math">\(|Z|\)</span>. and we can construct a group of order <span class="math">\(p\)</span> in <span class="math">\(Z\)</span>. and we can factor it to induction again, and project back and show that the group has order <span class="math">\(p^n\)</span></li>
+</ul></li>
+<li><span class="math">\(H\)</span> a <span class="math">\(p\)</span> group actioning on finite set <span class="math">\(S\)</span>, then number of fix points is <span class="math">\(|S|\)</span> mod <span class="math">\(p\)</span>
+<ul>
+<li>using the <a href="#cross-orbit-decomposition-formula">orbit decomposition formula</a>, <span class="math">\(|S| = \sum (H: H_{s_i}) = |F| \sum (H:H_{s_1})\)</span> the right part must divide <span class="math">\(p\)</span>, so <span class="math">\(|S|-|F|\)</span> divides <span class="math">\(p\)</span></li>
+</ul></li>
+<li><span class="math">\(p\)</span> group is contained in some <span class="math">\(p\)</span>-Sylow group</li>
+<li>all <span class="math">\(p\)</span>-Sylow group is <a href="#cross-conjugate">conjugate</a></li>
+<li>number of <span class="math">\(p\)</span>-Sylow group is <span class="math">\(1\mod p\)</span>
+<ul>
+<li>we follow the proof by Lang. first if <span class="math">\(H\)</span> is contained in normalizer of <span class="math">\(P\)</span>, then <span class="math">\(H\subset P\)</span>, this is proofed by seeing the prime indexes, we used the condition <span class="math">\(p\)</span>-Sylow as <strong>maximal</strong> <span class="math">\(p\)</span>. the next part is by taking <span class="math">\(S\)</span> all <strong>conjugate</strong> class of <span class="math">\(P\)</span> in <span class="math">\(G\)</span>, then we have <span class="math">\(|S|\)</span> is not divisible by <span class="math">\(p\)</span>, then we have <span class="math">\(H\)</span> also operate on <span class="math">\(S\)</span> and it cannot have one fixed point, which means it is contained in some <span class="math">\(aPa^{-1}\)</span>. by taking <span class="math">\(H = aPa^{-1}\)</span> we show that it is in <span class="math">\(S\)</span>. and <span class="math">\(H\)</span> has only one fixed point, showing that mod 1.</li>
+<li>the proof is essentially number theoretic, so the particular group structure is caused by finiteness and number theory</li>
+</ul></li>
+<li><span class="math">\(p\)</span>-group has non-trivial center, thus solvable, and also has cyclic tower
+<ul>
+<li>it is again a trivial application of class formula</li>
+</ul></li>
+</ol>
+<ul>
+<li>smallest prime index group is normal
+<ul>
+<li>proof: if <span class="math">\(N_H=H\)</span> we have <span class="math">\(G\)</span> operates on <span class="math">\(G/H\)</span> and so we have a subgroup into a group of order <span class="math">\(p!\)</span> and we show that the kernel must be <span class="math">\(H\)</span>, i.e. <span class="math">\(hgHg^{-1}h^{-1} = gHg^{-1}{\Rightarrow}g^{-1}hg \in H\)</span></li>
+</ul></li>
+<li>order <span class="math">\(pq\)</span>, <span class="math">\(p\neq q\)</span> and primes, then solvable. trivial by above lemma</li>
+</ul></li>
+</ul>
+<h3 id="abelian-group">abelian group</h3>
+<ul>
+<li><span class="math">\({\mathcal{Ab}}\)</span>
+<ul>
+<li><a href="#cross-object">object</a> <span class="crosslink"><span id="cross-abelian-group"></span>abelian group</span></li>
+<li><a href="#cross-morphism">morphism</a>
+<ul>
+<li>example: <span class="math">\(n\)</span> power map exists, because <a href="#cross-commutative">commutative</a>, the deeper result is that abelian group is essentially an module over <span class="math">\({\mathbb{Z}}\)</span></li>
+<li><a href="#cross-homomorphism">homomorphism</a> in <span class="math">\({\mathcal{Ab}}\)</span> is again a <a href="#cross-abelian-group">abelian group</a></li>
+</ul></li>
+<li><a href="#cross-product">product</a> finite case is <a href="#cross-direct-sum">direct sum</a></li>
+<li><a href="#cross-coproduct">coproduct</a> <span class="crosslink"><span id="cross-direct-sum"></span>direct sum</span> <span class="math">\(G\oplus H\)</span>, only finite non zero
+<ul>
+<li>proof that is is coproduct. we should be using a infinite sum now, and etc.</li>
+</ul></li>
+<li><a href="#cross-pullback">pullback</a> is the subgroup of <span class="math">\(A\times B\)</span> such that <span class="math">\(f(a) = g(b)\)</span></li>
+<li>structure of <span class="crosslink"><span id="cross-free-abelian-group"></span>free abelian group</span> <span class="math">\(F^{ab}(A)\)</span>. <span class="math">\(\bigoplus_{i\in A} {\mathbb{Z}}_i\)</span>
+<ul>
+<li><span class="crosslink"><span id="cross-base"></span>base</span> non-empty and <span class="math">\(A\)</span> is unique expressed <span class="math">\(x =\sum x_i e_i\)</span> for <span class="math">\(x_i\in {\mathbb{Z}}\)</span> almost all zero</li>
+<li><a href="#cross-adjoint">adjoint</a> to sets</li>
+<li><span class="math">\(f:A\to B\)</span> surjective and <span class="math">\(B\)</span> is free, then we can find <span class="math">\(C\)</span> free such that <span class="math">\(A = {\text{ker }}f \oplus C\)</span>
+<ul>
+<li>proof using base</li>
+</ul></li>
+<li>subgroup is also <a href="#cross-free-abelian-group">free abelian group</a>, and has smaller <a href="#cross-cardinal">cardinal</a> base
+<ul>
+<li>special case of free module over principal entire ring <code>fix me</code></li>
+</ul></li>
+</ul></li>
+<li>structure of <span class="crosslink"><span id="cross-torsion-element"></span>torsion element</span> forms a <span class="crosslink"><span id="cross-torsion-group"></span>torsion group</span>. <span class="math">\(A = \bigoplus _p A(p)\)</span> where <span class="math">\(A(p)\)</span> is the subgroup of elements of order <span class="math">\(p^n\)</span>. not necessary finite
+<ol style="list-style-type: decimal">
+<li>we proof by showing the map in surjective, injective by showing the kernel is trivial. surjective using the relative prime decomposition</li>
+<li>abelian <span class="math">\(p\)</span>-group isomorphism to product of cyclic <span class="math">\(p\)</span>-groups
+<ul>
+<li><code>fix me</code></li>
+</ul></li>
+</ol>
+<ul>
+<li>an easy exercise. a non cyclic finite abelian group must contain some <span class="math">\(C_p\times C_p\)</span>
+<ul>
+<li>proof by above. suppose not cyclic, if there must be multiple <span class="math">\(A(p)\)</span> and one of them has multiple <span class="math">\(p\)</span>-group, because if it is <span class="math">\(p\)</span>-group and not cyclic, it must has multiple cyclic decomposition, and we can pick a <span class="math">\(C_p\times C_p\)</span> in it. so it must contain multiple <span class="math">\(A(p)\)</span>, if it everyone has one <span class="math">\(p\)</span>-cyclic group, then itself is cyclic. so one of them must contain multiple <span class="math">\(p\)</span>-cyclic group. proofed again</li>
+<li>proof by hand. i do not want to proof again, this is basically the relative prime thing</li>
+</ul></li>
+<li>in <a href="#cross-abelian-group">abelian group</a> the max finite order divide each finite order
+<ul>
+<li>proof see exercise in <a href="#cross-ref-algebra-0">ref-algebra-0</a>, it is by contradiction</li>
+<li>can we proof it using the structure of torsion group? i think a problem is that there might be no maximal order at all. we proof that the cyclic group all have order smaller than one number, if not, we have no maximal order element. so we can pick the maximal order of each one, and proofed</li>
+</ul></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-finitely-generated-abelian-group"></span>finitely generated abelian group</span> <span class="math">\(A = A_{\text{tor}}\oplus B\)</span> where <span class="math">\(B\)</span> is free
+<ol style="list-style-type: decimal">
+<li>finitely generated torsion abelian group is finite
+<ul>
+<li>proof is trivial</li>
+</ul></li>
+<li>finitely generated torsion-free abelian group is free
+<ul>
+<li>the proof is by picking a maximal set of independent generators and so any set of this plus another generator is linearly dependent, so <span class="math">\(my\in B\)</span> where <span class="math">\(B\)</span> free. so we define <span class="math">\(A\to mA\to B\subset A\)</span>, the first is injective because it is torsion free, the second is injective because it’s the inclusion map, so we have the <span class="math">\(A= B\)</span></li>
+<li>we proof that <span class="math">\(A/A_{\text{tor}}\)</span> is torsion free, thus free. to show direct sum <code>fix me</code></li>
+</ul></li>
+</ol>
+<ul>
+<li><span class="crosslink"><span id="cross-rank"></span>rank</span> of <span class="math">\(A\)</span></li>
+<li>an example of abelian group that do not has this structure is <span class="math">\({\mathbb{Q}}\)</span>, <a href="http://en.wikipedia.org/wiki/Free_abelian_group#Torsion_and_divisibility">here</a>, it is torsion-free but not free. same for <span class="math">\({\mathbb{R}}\)</span> because it has one non-free subgroup</li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-dual-group"></span>dual group</span> for <span class="math">\(A\)</span> of exponent <span class="math">\(m\)</span>, <span class="math">\(A^*\)</span>
+<ul>
+<li>for <span class="math">\(A\)</span>, <span class="math">\(B\)</span> of same exponent <span class="math">\(m\)</span>, <span class="math">\(f: A\to B\)</span>, we define <span class="math">\(f^*:B^*\to A^*\)</span> by <span class="math">\(f^*(\chi) = \chi \circ f\)</span></li>
+<li><span class="math">\({\text{id}}^* = {\text{id}}\)</span></li>
+<li><span class="math">\((f\circ g)^* = g^*\circ f^*\)</span></li>
+<li><span class="math">\((A\times B)^* \cong A^*\times B^*\)</span></li>
+<li><em>the dual things is a special case of a module, study it there</em></li>
+</ul></li>
+</ul></li>
+</ul>
 <h3 id="exercises">exercises</h3>
 <p><em>from <a href="#cross-ref-algebra-lang">ref-algebra-lang</a></em></p>
 <ol style="list-style-type: decimal">
@@ -1206,8 +1215,8 @@ $("#content").css("max-width", "1100px")
 <li>it is certainly union of, so we proof for disjoint. we show that if one element in common, then <span class="math">\(HxH' = HyH'\)</span>. the second part and the third part is not proofed. <strong>the goddam misprinting!!!!</strong>. a proof see <a href="#cross-ref-algebra-course">ref-algebra-course</a></li>
 <li>follow the hint. <span class="math">\(N\)</span> is easy to find, and finite is easy to proof. second part is by reduce to normal case, and show that <span class="math">\(N\times N'\)</span> is kernel into some finite group</li>
 <li>proofed above</li>
-<li><code>fix me: do not understand how to construct, if it is like in 12, then what's the point of abelian?</code></li>
-<li><span class="crosslink"><span id="cross-semidirect-product"></span>semidirect product</span> trivial or lazy… <code>fix me: the properties of semipoduct as limit?</code></li>
+<li><code>fix me: wtf, if it is like in 12, then what's the point of abelian?</code></li>
+<li>above</li>
 <li><span class="math">\(H\)</span>, <span class="math">\(N\)</span> normal, then <span class="math">\(hn = nh\)</span> and <span class="math">\(H\times N\cong HN\)</span>. the second part is trivial, we proof <span class="math">\(xy = yx\)</span> by first show that every element in <span class="math">\(HN= NH\)</span> has unique decomposition <span class="math">\(xy\)</span> and <span class="math">\(yx\)</span>, then if <span class="math">\(xy = y'x = x'y'\)</span> we have <span class="math">\(x = x'\)</span> and <span class="math">\(y = y'\)</span> so <span class="math">\(xy = yx\)</span></li>
 <li>the first part can be shown by calculate the order of <span class="math">\(NH\)</span> which must be <span class="math">\(|G|\)</span>. the second part is by assuming <span class="math">\(K = g(N)\neq N\)</span> then <span class="math">\(KN\subset G\)</span> then <span class="math">\((G:N) = |G|/|N| &gt; |KN| / |N|\)</span> cannot relative prime to <span class="math">\(|N|\)</span></li>
 <li><code>*</code> i didn’t make it out myself, see <a href="#cross-ref-algebra-course">ref-algebra-course</a>. you have <span class="math">\(|\bigcup G_s| \leq \sum |G_s| = |G|\)</span> and the left is not disjoint. the <span class="crosslink"><span id="cross-right-part-about-finite-one-orbit-action"></span>right part about finite one orbit action</span> should be remembered</li>
@@ -1254,17 +1263,14 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li>by 28</li>
 <li>isomorphism groups of group order leq 10. 1-5 is already done by exercise 1. 7 is prime, 9 is by 24
-<ol start="6" style="list-style-type: decimal">
-<li>we have group of order 3 is normal so, assume <span class="math">\(a^2 = e\)</span> and <span class="math">\(b^3 = e\)</span> is the generators. we have <span class="math">\(aba^{-1}= b\)</span> or <span class="math">\(aba^{-1} = b^2\)</span>. the first case produce the cyclic group of order 6. the second is a valid group</li>
-<li>if the max order is 8, you have <span class="math">\(C_8\)</span>, abelian. if max order is 4. then this subgroup is normal. we have all our elements then we calculate? <a href="http://groupprops.subwiki.org/wiki/Groups_of_order_8">link</a>. if max is 2, we have it is abelian, and it should be <span class="math">\(C_2\times C_2\times C_2\)</span>, it is abelian</li>
-<li>we have group of order 5 is normal…</li>
-</ol>
 <ul>
-<li><code>fix me</code></li>
+<li>6 – we have group of order 3 is normal so, assume <span class="math">\(a^2 = e\)</span> and <span class="math">\(b^3 = e\)</span> is the generators. we have <span class="math">\(aba^{-1}= b\)</span> or <span class="math">\(aba^{-1} = b^2\)</span>. the first case produce the cyclic group of order 6. the second is a valid group</li>
+<li>8 – if the max order is 8, you have <span class="math">\(C_8\)</span>, abelian. if max order is 4. then this subgroup is normal. we have all our elements then we calculate? <a href="http://groupprops.subwiki.org/wiki/Groups_of_order_8">link</a>. if max is 2, we have it is abelian, and it should be <span class="math">\(C_2\times C_2\times C_2\)</span>, it is abelian</li>
+<li>10 – we have group of order 5 is normal, and we already have 6 elements by subgroup of order 2 and 5, and by semiproduct representation, we have we can only have elements of the form <span class="math">\(ab^i\)</span>, totally 4, so we have only determine what product will make these… <code>fix me</code></li>
 </ul></li>
+<li><span class="math">\(S^3\)</span> is of order <span class="math">\(6\)</span>, has 3 conjugate <span class="math">\(2\)</span>-group and 1 <span class="math">\(3\)</span>-group (<strong>silly me!</strong> clockwise is same as counterclockwise!!!) <code>fix me</code></li>
 <li><code>fix me</code></li>
-<li><code>fix me</code></li>
-<li><code>fix me</code></li>
+<li>trivial. <span class="math">\(\sigma\pi^n = \pi^n\sigma^3\)</span></li>
 <li>see 31</li>
 <li><code>fix me</code></li>
 <li><code>fix me</code></li>
@@ -1279,12 +1285,19 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li>trivial</li>
 <li><code>fix me</code></li>
+<li><span class="crosslink"><span id="cross-primitive-group"></span>primitive group</span> if have non trivial stable partitions, then a isotropy is isotropy for the partition, because <a href="#cross-transitive-action">transitive action</a>, we found a action that translate in partition, then not maximal. suppose maximal, same reason</li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li>trivial</li>
+<li>trivial</li>
+<li>trivial</li>
+<li><code>fix me</code></li>
 <li><code>fix me</code></li>
 <li><code>fix me</code></li>
 <li><code>fix me</code></li>
 <li><code>fix me</code></li>
 </ol>
-<p><code>fix me</code></p>
 <h2 id="ring">ring</h2>
 <h3 id="ring-1">ring</h3>
 <ul>
@@ -1299,7 +1312,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span class="math">\(0r = r0 = 0\)</span></li>
 <li>there are many things without <span class="math">\(1\)</span>, for example <span class="math">\(2{\mathbb{Z}}\)</span></li>
-<li><span class="crosslink"><span id="cross-zero-ring"></span>zero ring</span></li>
+<li><span class="crosslink"><span id="cross-zero-ring"></span>zero ring</span> is smallest ring</li>
 <li><span class="crosslink"><span id="cross-left-unit-of-ring"></span>left unit of ring</span> has right inverse, <span class="crosslink"><span id="cross-right-unit-of-ring"></span>right unit of ring</span> has left inverse, <span class="crosslink"><span id="cross-unit-of-ring"></span>unit of ring</span> <span class="math">\(A^*\)</span>, invertible elements of <span class="math">\(A\)</span>
 <ul>
 <li><span class="math">\(u\)</span> <a href="#cross-left-unit-of-ring">left unit of ring</a> <span class="math">\({\Leftrightarrow}\)</span> left multiplication by <span class="math">\(u\)</span> is surjective
@@ -1340,33 +1353,34 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li><span class="math">\(\lambda: R\to {\text{end}}_{{\mathcal{Ab}}}(R)\)</span>, is injective ring homomorphism</li>
 </ul></li>
-<li><a href="#cross-initial">initial</a> <span class="math">\({\mathbb{Z}}\)</span>
-<ul>
-<li><span class="crosslink"><span id="cross-characteristic-of-ring"></span>characteristic of ring</span></li>
-<li>for <a href="#cross-field">field</a> <span class="math">\(K\)</span>, the characteristic <span class="math">\(0\)</span> fields contains an image of <span class="math">\({\mathbb{Q}}\)</span> and for characteristic <span class="math">\(p\)</span> contains some isomorphic image of <span class="math">\(F_p\)</span>. smallest subfield contains <span class="math">\(1\)</span> and has no trivial automorphism. and <span class="crosslink"><span id="cross-prime-ring"></span>prime ring</span> we means <span class="math">\({\mathbb{Z}}\)</span> or <span class="math">\(F_p\)</span> in it</li>
-</ul></li>
 <li><span class="crosslink"><span id="cross-subring"></span>subring</span> additive subgroup, contains <span class="math">\(1\)</span>, closed by <span class="math">\(\cdot\)</span>
 <ul>
-<li>example: center of ring, viewed as multiplication group, the center</li>
 <li><span class="crosslink"><span id="cross-center-of-ring"></span>center of ring</span> <span class="math">\(Z_R\)</span>, the center viewed a multiplicative group
 <ul>
 <li><span class="math">\(\{0, 1\}\subset Z_R\)</span></li>
 </ul></li>
 </ul></li>
-<li><span class="math">\(B = A[S]=\sum as^is^j\cdots s^k\)</span> with <span class="math">\(A\)</span> commutate with <span class="math">\(S\)</span>, <span class="math">\(S\)</span> is a set of <span class="crosslink"><span id="cross-ring-generators"></span>ring generators</span> of <span class="math">\(B\)</span> over <span class="math">\(A\)</span>. if <span class="math">\(S\)</span> is finite, we say that <span class="math">\(B\)</span> is finitely generated over <span class="math">\(A\)</span>
+<li><a href="#cross-initial">initial</a> <span class="math">\({\mathbb{Z}}\)</span>
 <ul>
+<li><span class="crosslink"><span id="cross-characteristic-of-ring"></span>characteristic of ring</span></li>
+<li>for <a href="#cross-field">field</a> <span class="math">\(K\)</span>, the characteristic <span class="math">\(0\)</span> fields contains an image of <span class="math">\({\mathbb{Q}}\)</span> and for characteristic <span class="math">\(p\)</span> contains some isomorphic image of <span class="math">\(F_p\)</span>. smallest subfield contains <span class="math">\(1\)</span> and has no trivial automorphism. and <span class="crosslink"><span id="cross-prime-ring"></span>prime ring</span> we means <span class="math">\({\mathbb{Z}}\)</span> or <span class="math">\(F_p\)</span> in it</li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-ring-generators"></span>ring generators</span> of <span class="math">\(B\)</span> over <span class="math">\(A\)</span>, <span class="math">\(S\)</span>. <span class="math">\(B = A[S]=\sum as^is^j\cdots s^k\)</span> with <span class="math">\(A\)</span> commutate with <span class="math">\(S\)</span>
+<ul>
+<li><span class="math">\(B\)</span> finitely generated over <span class="math">\(A\)</span></li>
 <li>in Atiyah, a <span class="crosslink"><span id="cross-finitely-generated-ring"></span>finitely generated ring</span> is when viewed as <span class="math">\({\mathbb{Z}}\)</span>-algebra</li>
 </ul></li>
-<li><a href="#cross-product">product</a> exists and is like group product. the inclusion map is not ring homomorphism, though in group this is true</li>
+<li><a href="#cross-product">product</a> exists and is like group product. the inclusion map is <strong>not</strong> ring homomorphism, though in group this is true</li>
 <li><a href="#cross-coproduct">coproduct</a> see <a href="http://en.wikipedia.org/wiki/Category_of_rings">Wikipedia</a></li>
 <li><span class="crosslink"><span id="cross-left-ideal"></span>left ideal</span> <strong>additive subgroup</strong> and <span class="math">\(A\alpha\subset \alpha\)</span>, <span class="crosslink"><span id="cross-right-ideal"></span>right ideal</span> <span class="math">\(\alpha A = \alpha\)</span>, <span class="crosslink"><span id="cross-ideal"></span>ideal</span> <span class="math">\(\alpha  = A\alpha = \alpha A\)</span>
 <ul>
 <li><em>ideal is submodule of the ring</em></li>
-<li>ideal is kernel, kernel is ideal
+<li><span class="crosslink"><span id="cross-quotient-ring"></span><span id="cross-factor-ring"></span>quotient ring</span>. ideal is kernel, kernel is ideal
 <ul>
 <li>we define <span class="math">\((x + \alpha)(y + \alpha) = (xy + \alpha)\)</span> we show that it is well defined, we show that it is representative independent, and it is associative hand has unit, and distributive. we used <span class="math">\(xa \in\alpha\)</span> in the proof that it is well defined. just like the normal group case… this is <strong>indeed wired</strong>, the normal groups has inherited product, but ring have <strong>not</strong>, consider <span class="math">\((2 + {\mathbb{Z}}/12{\mathbb{Z}})(3 + {\mathbb{Z}}/21{\mathbb{Z}})\)</span>, if we define it be the inherited products, then it will not include <span class="math">\(6 + 12\)</span> and will not be a coset, that’s why the product is defined differently</li>
 <li>the unit of the cosets is <span class="math">\(1+\alpha\)</span> and the zero is <span class="math">\(\alpha\)</span>, this is because it is an ideal and it is kind of like a zero which takes everything back</li>
 </ul></li>
+<li>an ideal contains <span class="math">\(1\)</span> must be <span class="math">\(A\)</span></li>
 <li>for ideals, <span class="math">\(\alpha\beta = \{x_1y_1 + x_2y_2 + \cdots+ x_ny_n\}\)</span> is an ideal
 <ul>
 <li>it forms a groupoid, with unit <span class="math">\(A\)</span></li>
@@ -1374,28 +1388,23 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li><span class="math">\(\alpha + \beta\)</span> viewed as normal additive subgroup is left, right two sided ideal</li>
 <li>and we have <span class="math">\(\beta(\alpha_1 + \alpha_2) = \beta\alpha_1 + \beta\alpha_2\)</span></li>
+<li><a href="#cross-intersection">intersection</a> closed for left, right, twoside</li>
 <li><span class="math">\(\alpha \cap (\beta_1 + \beta_2) = \alpha\cap \beta_1 + \alpha\cap \beta_2\)</span> if <span class="math">\(\alpha\subset \beta_1\)</span> or <span class="math">\(\alpha \subset \beta_2\)</span></li>
 <li><span class="crosslink"><span id="cross-left-principal-ideal"></span><span id="cross-right-principal-ideal"></span><span id="cross-two-sided-principal-ideal"></span><span id="cross-principal-ideal"></span>left principal ideal</span> <span class="math">\(Aa\)</span>, <span class="math">\(aA\)</span>, <span class="math">\(AaA\)</span></li>
 <li><span class="crosslink"><span id="cross-generators-for-ideal"></span>generators for ideal</span> is a <a href="#cross-left-ideal">left ideal</a> <span class="math">\(x_1a_1 + x_2a_2 + \cdots + x_na_n\)</span> with <span class="math">\(x_i\in A\)</span> is generated by <span class="math">\((a_1, a_2,..., a_n)\)</span></li>
-<li><a href="#cross-intersection">intersection</a> closed for left, right, twoside</li>
-<li>an ideal contains <span class="math">\(1\)</span> must be <span class="math">\(A\)</span></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-quotient-ring"></span><span id="cross-factor-ring"></span>quotient ring</span>
-<ul>
-<li>in Atiyah’s words. there is a order-isomorphism between ideals contains <span class="math">\(\alpha\)</span> and ideals of <span class="math">\(A/\alpha\)</span></li>
-</ul></li>
-<li><img src="images/ring-decom.png" style="width:400px" />
+<li><strong>canonical decomposition</strong> <img src="images/ring-decom.png" style="width:400px" />
 <ul>
 <li>and another thing is that the factor thought things, and it is universal</li>
-<li>this result is when we view the 3-last part, by the induced morphism <span class="math">\(R\to R'\to R'/p'\)</span>: we can form <span class="math">\(R/p\hookrightarrow R'/p'\)</span> just like in group
+</ul></li>
+<li><strong>canonical ring isomorphisms</strong>
 <ul>
-<li><span class="math">\(p = f^{-1}(p')\)</span> is ideal</li>
-</ul></li>
-</ul></li>
-<li><span class="math">\(\frac{R/I}{J/I} = \frac{R}{J}\)</span> where <span class="math">\(I\subset J\)</span> ideals
+<li><span class="crosslink"><span id="cross-canonical-ring-isomorphism-1"></span>canonical ring isomorphism 1</span> <span class="math">\(\frac{R/I}{J/I} = \frac{R}{J}\)</span> where <span class="math">\(I\subset J\)</span> ideals
 <ul>
 <li><span class="math">\(J/I\)</span> is ideal of <span class="math">\(R/I\)</span>. trivial</li>
-<li>and we find kernel</li>
+<li>in Atiyah’s words. there is a order-isomorphism between ideals contains <span class="math">\(\alpha\)</span> and ideals of <span class="math">\(A/\alpha\)</span></li>
+<li>this is similar result for <a href="#cross-canonical-group-isomorphism-1">canonical group isomorphism 1</a>, but notice what we means by <span class="math">\(J/I\)</span></li>
+</ul></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-division-ring"></span><span id="cross-skew-field"></span>division ring</span> <span class="math">\(1\neq 0\)</span> and ever element invertible
 <ul>
@@ -1405,6 +1414,7 @@ $("#content").css("max-width", "1100px")
 <li>so it is <a href="#cross-principal-ring">principal ring</a></li>
 </ul></li>
 <li><span class="math">\({\Rightarrow}\)</span> all morphism from it is injective</li>
+<li>finite <a href="#cross-division-ring">division ring</a> is <a href="#cross-field">field</a> <code>fix me</code></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-principal-left-ring"></span><span id="cross-principal-right-ring"></span><span id="cross-principal-ring"></span>principal left ring</span> every ideal is <a href="#cross-principal-ideal">principal ideal</a>, left, right
 <ul>
@@ -1452,56 +1462,6 @@ $("#content").css("max-width", "1100px")
 <li>suppose <span class="math">\(a\in \alpha\)</span> and <span class="math">\(b\in \beta\)</span> not in <span class="math">\(p\)</span>, then <span class="math">\(ab\in \alpha\cap \beta\)</span> then…</li>
 </ul></li>
 <li>a prime ideal which is not principal? <code>fix me</code></li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-prime-spectrum"></span>prime spectrum</span> for ring <span class="math">\(A\)</span>, <span class="math">\(X\)</span> is the set of all prime ideals, for each <span class="math">\(E\subset A\)</span>, <span class="math">\(V(E)\)</span> is the set of all prime ideals of <span class="math">\(A\)</span> containing <span class="math">\(E\)</span>. we have a <span class="crosslink"><span id="cross-Zariski-topology"></span>Zariski topology</span>
-<ul>
-<li><span class="math">\(V(E) = V(\alpha) = V(r(\alpha))\)</span>, where <span class="math">\(E\)</span> generate <span class="math">\(\alpha\)</span></li>
-<li><span class="math">\(V(0) = X\)</span>, <span class="math">\(V(1) = \emptyset\)</span></li>
-<li><span class="math">\(V(\bigcup E_i) = \bigcap V(E_i)\)</span></li>
-<li><span class="math">\(V(a\cap b) = V(ab) = V(a)\cup V(b)\)</span>. equal 1 is easy, one side is trivial, the other <span class="math">\(h\in a\cap b{\Rightarrow}h^2 \in ab\)</span>. equal 2 one side is easy, the other by the property of prime ideal</li>
-<li><span class="math">\({\text{Spec}}({\mathbb{Z}})\)</span> <img src="./images/spec-z.jpg" style="width:450px" /></li>
-<li><span class="math">\({\text{Spec}}({\mathbb{R}}) = \emptyset\)</span></li>
-<li><span class="math">\({\text{Spec}}({\mathbb{C}}[x])\)</span> <img src="./images/spec-cx.jpg" style="width:450px" /></li>
-<li>let <span class="math">\(f\in A\)</span> and <span class="math">\(X_f = X-V(f)\)</span>
-<ul>
-<li>they are base of <a href="#cross-Zariski-topology">Zariski topology</a>. fine a element, and find the base</li>
-<li><span class="math">\(X_f\cap X_g = X_{fg}\)</span>. proofed above</li>
-</ul></li>
-<li><span class="math">\(X_f = \emptyset {\Leftrightarrow}f\in {\mathscr{N}}\)</span>. <a href="#cross-nilpotent">nilpotent</a>s is the intersection of all prime ideals, which have a magical proof</li>
-<li><span class="math">\(X_f = X {\Leftrightarrow}\)</span> <span class="math">\(f\)</span> unit. trivial</li>
-<li><span class="math">\(X\)</span> is quasi-compact (it means compact here)
-<ul>
-<li>consider a open cover of it, we down to base, and then we show that it equals to require <span class="math">\(\forall p\exists f: f\notin p\)</span> then we show that <span class="math">\((f_i) = A\)</span>, because it is not in a maximal ideal, so <span class="math">\(\sum x_i f_i = 1\)</span> finite, so this can be a finite subcover</li>
-</ul></li>
-<li><span class="math">\(X_f\)</span> is quasi-compact</li>
-<li><span class="math">\(X\)</span> compact <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(X= \bigcup X_f\)</span> finite</li>
-<li><span class="math">\(\{x\}\)</span> is closed <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(p_x\)</span> is maximal. proof by showing that <span class="math">\(m = V(E)\)</span>, it is the only ideal contains some subset <span class="math">\(E\)</span>
-<ul>
-<li><span class="math">\({\mkern 1.5mu\overline{\mkern-1.5mu\{x\}\mkern-1.5mu}\mkern 1.5mu} = V(p_x)\)</span>. proof as above</li>
-</ul></li>
-<li><span class="math">\(X\)</span> is <span class="math">\(T_0\)</span> space
-<ul>
-<li>by the observation <span class="math">\(y\in {\mkern 1.5mu\overline{\mkern-1.5mu\{x\}\mkern-1.5mu}\mkern 1.5mu} {\Leftrightarrow}p_x\subset p_y\)</span></li>
-</ul></li>
-<li><a href="#cross-irreducible-space-|-irreducible-subspace">irreducible space | irreducible subspace</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\({\mathscr{N}}\in {\text{Spec}}(A)\)</span>
-<ul>
-<li>we replace by <span class="math">\(X_f\)</span>. right to left is trivial, because if they are non-empty, they will both contain <span class="math">\({\mathscr{N}}\)</span>. by the characterization of nilpotent <span class="math">\(X_f\)</span>, we know that the irreducibility is the same <span class="math">\(f,g \notin {\mathscr{N}}{\Rightarrow}fg \notin {\mathscr{N}}\)</span>, so prime</li>
-</ul></li>
-<li>the irreducible components of <span class="math">\(X\)</span> is closed sets <span class="math">\(V(p)\)</span> where <span class="math">\(p\)</span> is a minimal prime ideal. proof by 1. they are irreducible, because all <span class="math">\(V(p)-V(E)\)</span> nonempty intersect at <span class="math">\(p\)</span>; 2. they are maximal. and if we have a component, they are closed, so of the form <span class="math">\(V(p)\)</span> then <span class="math">\(p\subset q{\Rightarrow}(X-V(p)\subset X-V(q)\)</span> so we should have a minimal element, proofed</li>
-<li>for <span class="math">\(\phi:A\to B\)</span>, we have <span class="math">\(\varphi = \phi^*: {\text{Spec}}(B)\to {\text{Spec}}(A)\)</span>
-<ul>
-<li>it is continuous. by proofing <span class="math">\(\varphi^{-1}(X_f) = Y_{\phi(f)}\)</span></li>
-<li><span class="math">\(\varphi^{-1}(V(\alpha)) = V(\alpha^e)\)</span>. trivial</li>
-<li><span class="math">\({\mkern 1.5mu\overline{\mkern-1.5mu\varphi(V(\beta))\mkern-1.5mu}\mkern 1.5mu} = V(\beta^c)\)</span>. trivial</li>
-<li>if <span class="math">\(\phi\)</span> surjective, then <span class="math">\(\varphi\)</span> is <a href="#cross-homeomorphism">homeomorphism</a> <span class="math">\({\text{Spec}}(B)\to V({\text{ker }}\varphi)\)</span>
-<ul>
-<li>we know bijective, and <span class="math">\(\varphi\)</span> continuous, we show that <span class="math">\(\varphi^{-1}\)</span> continuous</li>
-<li><span class="math">\({\text{Spec}}(A)\leftrightarrow {\text{Spec}}(A/{\mathscr{N}})\)</span></li>
-</ul></li>
-<li><span class="math">\({\text{ker }}(\phi)\subset{\mathscr{N}}\)</span> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(\varphi({\text{Spec}}(B))\)</span> dense in <span class="math">\({\text{Spec}}(X)\)</span></li>
-<li><span class="math">\((f\circ g)^* = g^*\circ f^*\)</span></li>
-<li><code>fix me</code></li>
-</ul></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-maximal-ideal"></span>maximal ideal</span> <span class="math">\(I \neq R\)</span> and not contained in any ideal
 <ul>
@@ -1579,7 +1539,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>we use same kind of induction, we just proof for <span class="math">\(\alpha^v + b\)</span> case, using <span class="math">\(a_1^v = (1-b_1)^v = 1 + b\)</span>, this is easy. one interesting problem is that observe how the elements that add up to <span class="math">\(1\)</span> changed. sometimes watching the given condition and figure out how to use them it very important</li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-local-ring"></span>local ring</span> commutative and has unique maximal ideal
+<li><span class="crosslink"><span id="cross-local-ring"></span>local ring</span> commutative and has unique <a href="#cross-maximal-ideal">maximal ideal</a>
 <ul>
 <li><span class="math">\({\Leftrightarrow}\)</span> if <span class="math">\(x\notin m\)</span> then <span class="math">\(x\)</span> is unit. proof by <span class="math">\(Ax = A\)</span>, and every ideal is in a maximal ideal, which is just the one</li>
 <li><span class="math">\({\Leftrightarrow}\)</span> a ring and a maximal ideal such that <span class="math">\(1+m\)</span> is unit
@@ -1588,44 +1548,19 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-semi-local-ring"></span>semi-local ring</span> finite ideal</li>
-<li><span class="crosslink"><span id="cross-ring-of-fractions"></span>ring of fractions</span> of ring <span class="math">\(A\)</span> by multiplicative submonoid <span class="math">\(S\)</span>, <span class="math">\(S^{-1}A\)</span>
-<ul>
-<li><span class="math">\((a,s)\sim(a',s'){\Leftrightarrow}s_1(s'a-sa') = 0\)</span>, by <span class="math">\(a/s\)</span></li>
-<li>we define <span class="math">\((a/s)(a'/s') = aa'/ss'\)</span></li>
-<li><span class="math">\(\frac{a}{s} +\frac{a'}{s'}=\frac{s'a+sa'}{ss'}\)</span></li>
-<li>we proof it is a ring
-<ul>
-<li>additive group
-<ul>
-<li><span class="math">\(+\)</span> is well defined. proof by calculation</li>
-<li>associative. <span class="math">\(\frac{as_bs_c+s_abs_c+s_as_bc}{s_as_bs_c}\)</span></li>
-<li>unit, inverse. trivial</li>
-</ul></li>
-<li>multiplicative monoid. trivial</li>
-<li>distributive. trivial</li>
-</ul></li>
-<li><span class="math">\((a, 1) = 0{\Rightarrow}\)</span>bS: ab = 0$</li>
-<li>if <span class="math">\(0\in S\)</span> then <span class="math">\(S^{-1}A = \{0/1\}\)</span></li>
-<li><span class="math">\(\varphi_S: A\to S^{-1}A\)</span> such that <span class="math">\(a\to a/1\)</span>, and every element in <span class="math">\(\varphi_S(S)\)</span> is invertible, by <span class="math">\(1/s\)</span>, and this is universal in such morphisms (making <span class="math">\(S\)</span> invertible!!!, it is an <strong>initial</strong>, and this means factor though, so what we should do is find the unique initial map that is induced by the actual map). proof by for such a <span class="math">\(f:A\to B\)</span> we have <span class="math">\(f(s_1)(f(s')f(a)-f(s)f(a'))=0\)</span> to we have <span class="math">\(f(a)f(s)^{-1}=f(a')f(s')^{-1}\)</span> if we send <span class="math">\(a/s\)</span> to <span class="math">\(f(a)f(s)^{-1}\)</span> it is well defined and it is homomorphism and commutative, and unique</li>
-<li>if <span class="math">\(A\)</span> is entire and <span class="math">\(S\)</span> do not contains <span class="math">\(0\)</span> then <span class="math">\(\varphi_S\)</span> is injective
-<ul>
-<li><span class="math">\(S\)</span> is non-zero elements, then we have <span class="crosslink"><span id="cross-quotient-field"></span>quotient field</span> of <span class="math">\(A\)</span> and it is an <a href="#cross-field">field</a></li>
-<li><span class="math">\(K(x_1, \dots, x_n)\)</span> the quotient field of <span class="math">\(A[x_1, \dots, x_n]\)</span>, <span class="crosslink"><span id="cross-rational-function"></span>rational function</span>
-<ul>
-<li><span class="crosslink"><span id="cross-rational-function-defined-at"></span>rational function defined at</span> <span class="math">\(b\)</span></li>
-</ul></li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-local-ring-at-a-prime-ideal"></span>local ring at a prime ideal</span> <span class="math">\(S^{-1}A\)</span> called local ring <span class="math">\(A\)</span> at <span class="math">\(p\)</span> where <span class="math">\(S=A-p\)</span>
-<ul>
-<li>proof. we see that <span class="math">\(S\)</span> is a multiplicative submonoid, by the definition of prime ideal. we see that <span class="math">\(a/s\)</span> is a maximal ideal. it is an ideal, by it has unit, and additive group, and that closed as an ideal. we see that it is maximal by suppose there is an <span class="math">\(m\subset m'\)</span>, then we have <span class="math">\(x\in m'\land x\notin m\)</span> then <span class="math">\(m+(x)\subset m'\)</span>, we proof it is actually <span class="math">\(A\)</span>. <span class="math">\(x\)</span> must be some <span class="math">\(s_1/s_2\)</span>, so we have <span class="math">\(m'=Am'=A\frac{s_2}{s_1}m'\supset A\)</span></li>
-</ul></li>
-<li>we can define <span class="math">\(\psi_S:J(A)\to J(S^{-1}A)\)</span>, <span class="math">\(A\)</span> is the set of ideals. closed under <span class="math">\(a+b\)</span>, <span class="math">\(ab\)</span>, <span class="math">\(a\cap b\)</span>
-<ul>
-<li>all trivial, because of the extension theorems</li>
-</ul></li>
-<li><span class="math">\(f\in A\)</span> then we have <span class="math">\(A_f\)</span> where <span class="math">\(S=\{f^n\}_{n \geq 0}\)</span></li>
-</ul></li>
 <li><span class="crosslink"><span id="cross-noetherian-ring"></span>noetherian ring</span> <a href="#cross-commutative">commutative</a> ring and every ideal is finitely generated</li>
+<li><span class="crosslink"><span id="cross-Dedekind-ring"></span>Dedekind ring</span> an <a href="#cross-entire-ring">entire ring</a> such that every nonzero proper ideal factors into a product of <a href="#cross-prime-ideal">prime ideal</a>s
+<ol start="0" style="list-style-type: decimal">
+<li>definition by Lang. let <span class="math">\(o\)</span> by a <a href="#cross-subring">subring</a> of <a href="#cross-field">field</a> <span class="math">\(k\)</span> such that every element of <span class="math">\(k\)</span> is quotient of <span class="math">\(o\)</span>. a <span class="crosslink"><span id="cross-fractional-ideal"></span>fractional ideal</span> <span class="math">\(\alpha\)</span> is a non-zero additive subgroup of <span class="math">\(k\)</span> such that <span class="math">\(o\alpha = \alpha\)</span> and there is <span class="math">\(c\in o\)</span> such that <span class="math">\(c\alpha \subset o\)</span>, a <a href="#cross-Dedekind-ring">Dedekind ring</a> is a ring <span class="math">\(o\)</span> as above such that the fractional ideals form a group under multiplication. for <span class="math">\(a\in k\)</span> nonzero, <span class="math">\(oa\)</span> is <span class="crosslink"><span id="cross-principal-fractional-ideal"></span>principal fractional ideal</span>, they form a subgroup called <span class="crosslink"><span id="cross-ideal-class-group"></span><span id="cross-Picard-group"></span>ideal class group</span> of <span class="math">\(o\)</span></li>
+<li>then <a href="#cross-Dekekind-ring">Dekekind ring</a> is trivially <a href="#cross-entire-ring">entire ring</a></li>
+<li>ideal of <span class="math">\(o\)</span> is finitely generated, so is <a href="#cross-noetherian-ring">noetherian ring</a>. because ideal of <span class="math">\(o\)</span> is also a <a href="#cross-fraction-ideal">fraction ideal</a>, we get it’s inverse, and express <span class="math">\(1\)</span>, and show that it is generated ring is just itself, by the uniqueness of <a href="#cross-inverse">inverse</a></li>
+<li>every ideal is product of prime ideals. if <span class="math">\(a\)</span> prime, we are done. then <span class="math">\(a\)</span> proper in some prime ideal <span class="math">\(p\)</span>, we want to know about <span class="math">\(ap^{-1}\)</span>, because <span class="math">\(p^{-1}\)</span> contains <span class="math">\(1\)</span> (<span class="math">\(pp^{-1} = o), we have \)</span>aap<sup>{-1}<span class="math">\(, \)</span>apa</sup>p{-1}pp^{-1} = o$, we can found a tower of prime ideals, which must end, we are done</li>
+<li>if there is only one prime ideal <span class="math">\(p\)</span>, and <span class="math">\(t\in p\)</span>, <span class="math">\(t\notin p^2\)</span> then <span class="math">\(p = (t)\)</span>. by expand <span class="math">\((t)\)</span> and it can only be <span class="math">\(p\)</span></li>
+<li>for <span class="math">\(p\)</span> prime ideal, <span class="math">\(o_p\)</span> the local ring at <span class="math">\(p\)</span> is again <a href="#cross-Dedekind-ring">Dedekind ring</a>. trivial</li>
+<li>define <span class="math">\(\alpha|\beta\)</span> if <span class="math">\(\beta = \alpha \gamma\)</span>, proof well defined. and <span class="math">\(\alpha | \beta {\Leftrightarrow}\beta\subset \alpha\)</span> and <span class="math">\(\alpha + \beta\)</span> is <a href="#cross-gcd">gcd</a> and <a href="#cross-relatively-prime">relatively prime</a> well defined. trivial</li>
+<li>every <a href="#cross-prime-ideal">prime ideal</a> is <a href="#cross-maximal-ideal">maximal ideal</a>. by the unique factorization into prime ideals</li>
+<li>there is <span class="math">\(c\in k\)</span> such that <span class="math">\(c\alpha +\beta = o\)</span> and every ideal class in <a href="#cross-Picard-group">Picard group</a> contains representative prime to given ideal <code>fix me</code></li>
+</ol></li>
 <li><span class="math">\(ab\neq 0\)</span>, <span class="math">\(a\)</span> <span class="crosslink"><span id="cross-divides"></span>divides</span> <span class="math">\(b\)</span>, or <span class="math">\(a|b\)</span> (left is small!) if <span class="math">\(\exists c\in A: ac = b\)</span></li>
 <li><span class="crosslink"><span id="cross-prime-element"></span>prime element</span> <span class="math">\(p|ab{\Rightarrow}p|a \lor p|b\)</span>
 <ul>
@@ -1664,7 +1599,6 @@ $("#content").css("max-width", "1100px")
 <li>example of non-factorial ring <span class="math">\(\sin^2 x = (1+ \cos x) (1-\cos x)\)</span></li>
 </ul></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-Dedekind-ring"></span>Dedekind ring</span> an <a href="#cross-entire-ring">entire ring</a> such that every nonzero proper ideal factors into a product of <a href="#cross-prime-ideal">prime ideal</a>s</li>
 <li><span class="crosslink"><span id="cross-principal-entire-ring"></span><span id="cross-pid"></span>principal entire ring</span> <a href="#cross-entire-ring">entire ring</a> and every ideal is <a href="#cross-principal-ideal">principal ideal</a>
 <ul>
 <li><span class="math">\((a, b) = (c)\)</span> then <span class="math">\(c\)</span> is <a href="#cross-gcd">gcd</a> of <span class="math">\(a\)</span> and <span class="math">\(b\)</span>. proof by definition</li>
@@ -1698,23 +1632,94 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul>
 <p><img src="./images/entires.png" style="width:450px" /></p>
+<ul>
+<li><span class="crosslink"><span id="cross-ring-of-fractions"></span><span id="cross-fraction-ring"></span><span id="cross-localization-of-ring"></span>ring of fractions</span> of ring <span class="math">\(A\)</span> by multiplicative submonoid <span class="math">\(S\)</span>, <span class="math">\(S^{-1}A\)</span>
+<ol style="list-style-type: decimal">
+<li><span class="math">\((a,s)\sim(a',s'){\Leftrightarrow}s_1(s'a-sa') = 0\)</span>, by <span class="math">\(a/s\)</span></li>
+<li>we define <span class="math">\((a/s)(a'/s') = aa'/ss'\)</span></li>
+<li><span class="math">\(\frac{a}{s} +\frac{a'}{s'}=\frac{s'a+sa'}{ss'}\)</span></li>
+</ol>
+<ul>
+<li>it is a ring
+<ol style="list-style-type: decimal">
+<li>additive group
+<ul>
+<li><span class="math">\(+\)</span> is well defined. proof by calculation</li>
+<li>associative. <span class="math">\(\frac{as_bs_c+s_abs_c+s_as_bc}{s_as_bs_c}\)</span></li>
+<li>unit, inverse. trivial</li>
+</ul></li>
+<li>multiplicative monoid. trivial</li>
+<li>distributive. trivial</li>
+</ol>
+<ul>
+<li><span class="math">\((a, 1) = 0{\Rightarrow}\exists b\in S: ab = 0\)</span></li>
+<li>if <span class="math">\(0\in S\)</span> then <span class="math">\(S^{-1}A\)</span> <a href="#cross-zero-ring">zero ring</a></li>
+</ul></li>
+<li><span class="math">\(\varphi_S: A\to S^{-1}A\)</span> such that <span class="math">\(a\to a/1\)</span>, and every element in <span class="math">\(\varphi_S(S)\)</span> is invertible, by <span class="math">\(1/s\)</span>, and this is universal in such morphisms (making <span class="math">\(S\)</span> invertible!!!, it is an <strong>initial</strong>, and this means factor though, so what we should do is find the unique initial map that is induced by the actual map). proof by for such a <span class="math">\(f:A\to B\)</span> we have <span class="math">\(f(s_1)(f(s')f(a)-f(s)f(a'))=0\)</span> to we have <span class="math">\(f(a)f(s)^{-1}=f(a')f(s')^{-1}\)</span> if we send <span class="math">\(a/s\)</span> to <span class="math">\(f(a)f(s)^{-1}\)</span> it is well defined and it is homomorphism and commutative, and unique
+<ul>
+<li>if <span class="math">\(A\)</span> is entire and <span class="math">\(S\)</span> do not contains <span class="math">\(0\)</span> then <span class="math">\(\varphi_S\)</span> is <strong>injective</strong></li>
+</ul></li>
+<li><span class="math">\(S\)</span> is non-zero elements, then we have <span class="crosslink"><span id="cross-quotient-field"></span>quotient field</span> of <span class="math">\(A\)</span> and it is an <a href="#cross-field">field</a>
+<ul>
+<li><span class="math">\(K(x_1, \dots, x_n)\)</span> the quotient field of <span class="math">\(A[x_1, \dots, x_n]\)</span>, <span class="crosslink"><span id="cross-rational-function"></span>rational function</span>
+<ul>
+<li><span class="crosslink"><span id="cross-rational-function-defined-at"></span>rational function defined at</span> <span class="math">\(b\)</span></li>
+</ul></li>
+</ul></li>
+<li>we can define <span class="math">\(\psi_S:J(A)\to J(S^{-1}A)\)</span>, <span class="math">\(A\)</span> is the set of ideals. closed under <span class="math">\(a+b\)</span>, <span class="math">\(ab\)</span>, <span class="math">\(a\cap b\)</span>
+<ul>
+<li>all trivial, because of the extension theorems</li>
+<li>we show all ideals will represented as <span class="math">\(S^{-1}p\)</span> for some ideal <span class="math">\(p\)</span> of <span class="math">\(A\)</span></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-local-ring-at-a-prime-ideal"></span>local ring at a prime ideal</span> <span class="math">\(S^{-1}A\)</span> is <a href="#cross-local-ring">local ring</a> <span class="math">\(A\)</span> at <span class="math">\(p\)</span> where <span class="math">\(S=A-p\)</span>
+<ul>
+<li>old proof. we see that <span class="math">\(S\)</span> is a multiplicative submonoid, by the definition of prime ideal. we see that <span class="math">\(a/s\)</span> is a maximal ideal. it is an ideal, by it has unit, and additive group, and that closed as an ideal. we see that it is maximal by suppose there is an <span class="math">\(m\subset m'\)</span>, then we have <span class="math">\(x\in m'\land x\notin m\)</span> then <span class="math">\(m+(x)\subset m'\)</span>, we proof it is actually <span class="math">\(A\)</span>. <span class="math">\(x\)</span> must be some <span class="math">\(s_1/s_2\)</span>, so we have <span class="math">\(m'=Am'=A\frac{s_2}{s_1}m'\supset A\)</span></li>
+<li>new proof, let <span class="math">\(E = A/p\)</span> entire, and <span class="math">\(T = E - p\)</span>, then <span class="math">\(T^{-1}E\)</span> the <a href="#cross-quotient-field">quotient field</a>. show that <span class="math">\(S^{-1}\to T^{-1}E\)</span> has kernel <span class="math">\(S^{-1}p\)</span>, only maximal by the fact that <span class="math">\(S^{-1}A - S^{-1}p = (A-p)^{-1}(A-p)\)</span> every one is <a href="#cross-unit">unit</a></li>
+</ul></li>
+<li><span class="math">\(f\in A\)</span> then we have <span class="math">\(A_f\)</span> where <span class="math">\(S=\{f^n\}_{n \geq 0}\)</span></li>
+<li><span class="math">\(A\)</span> <a href="#cross-principal-ring">principal ring</a> <span class="math">\({\Rightarrow}\)</span> <span class="math">\(S^{-1}A\)</span> principal. trivial</li>
+<li><span class="math">\(A\)</span> <a href="#cross-factorial-ring">factorial ring</a> <span class="math">\({\Rightarrow}\)</span> <span class="math">\(S^{-1}A\)</span> factorial, with primes <span class="math">\((p)\cap S\)</span> empty. trivial</li>
+<li><span class="math">\(A\)</span> <a href="#cross-factorial-ring">factorial ring</a> <span class="math">\(p\)</span> prime, local ring <span class="math">\(A_{(p)}\)</span> principal. trivial, all ideal is of <span class="math">\(J(p^k(A-(p)))\)</span></li>
+</ul></li>
+</ul>
 <h3 id="exercises-1">exercises</h3>
 <p><em>from <a href="#cross-ref-algebra-lang">ref-algebra-lang</a></em></p>
 <ol style="list-style-type: decimal">
-<li>we inspect an ideal <span class="math">\(\alpha\)</span> if there exists <span class="math">\(xy\in \alpha\)</span> and <span class="math">\(x\notin \alpha\)</span> and <span class="math">\(y\notin\alpha\)</span> then <span class="math">\(x\)</span> and <span class="math">\(y\)</span> cannot both in <span class="math">\(S\)</span>, because then <span class="math">\(xy\in S\)</span>, so we have <span class="math">\(\alpha + (x)\)</span> is bigger than <span class="math">\(\alpha\)</span> so if it is maximal. so we have it</li>
+<li><code>*</code> commutative <span class="math">\(A\)</span> and <span class="math">\(S\)</span> a multiplicative subset not containing <span class="math">\(0\)</span>, <span class="math">\(m\)</span> a maximal element in ideals not intersect <span class="math">\(S\)</span>, show <span class="math">\(m\)</span> prime
+<ol style="list-style-type: decimal">
+<li>proof a. suppose <span class="math">\(m\)</span> is maximal, and <span class="math">\(xy\in m\land x\notin m\land y\notin m\)</span>, then <span class="math">\(x\notin S\lor y\notin S\)</span>
+<ul>
+<li><span class="math">\(x\notin S\land y\in S\)</span>, proof that <span class="math">\((x)\cap S=\emptyset\)</span>, using that <span class="math">\(y\in S\)</span></li>
+<li><span class="math">\(x\notin S\land y\notin S\)</span>, proof that <span class="math">\((x)\cap S=\emptyset \lor (y)\cap S = \emptyset\)</span>
+<ul>
+<li>if one is not, reduce to above</li>
+<li>if all empty, then proof that one of <span class="math">\(m + (x)\)</span>, <span class="math">\(m+(y)\)</span> do not intersect. using if all intersect, product is in <span class="math">\(m\)</span></li>
+</ul></li>
+</ul></li>
+<li><em>it turns out my proof is rather dumb</em>, we should <strong>use maximality</strong> a different way*. if <span class="math">\(x,y\notin m\)</span>, by maximality, <span class="math">\((m+(x))\cap S \neq \emptyset\)</span>, same for <span class="math">\(y\)</span>, deduce for <span class="math">\(xy\)</span>, so we know <span class="math">\(xy\notin m\)</span></li>
+</ol></li>
 <li>the ideals is correspondence</li>
-<li>proofed above</li>
-<li><span class="math">\(A\)</span> principal then <span class="math">\(S^{-1}A\)</span> principal. it is really trivial, if you think</li>
-<li>we show that the they are prime, and give the factorization</li>
-<li>trivial, we find the min order of <span class="math">\(p\)</span> in the ideal</li>
-<li>trivial, for all common divisor, we have a ideal, and we show that, <span class="math">\(d\)</span> is in it</li>
-<li><span class="math">\({\mathbb{Z}}/p^r{\mathbb{Z}}\)</span> is cyclic, except <span class="math">\(p =2\land r \geq 3\)</span>. <code>fix me</code></li>
-<li>trivial, we show that the ideal structure is symmetric</li>
-<li>ring of <span class="math">\(a + b\sqrt{-d}\)</span>. trivial</li>
-<li><code>fix me</code></li>
-<li><code>fix me</code></li>
+<li>done</li>
+<li>done</li>
+<li>done</li>
+<li>done</li>
+<li>done</li>
+<li>in <a href="#cross-cyclic-group">cyclic group</a></li>
+<li><span class="crosslink"><span id="cross-Gaussian-integer"></span>Gaussian integer</span> <span class="math">\({\mathbb{Z}}[i]\)</span> is principal ring, proofed by <a href="#cross-Euclidean-algorithm">Euclidean algorithm</a> by parts
+<ul>
+<li><code>fix me</code> extension of prime ideal</li>
+</ul></li>
+<li>ring of <span class="math">\(a + b\sqrt{-d}\)</span>. trivial. <span class="math">\(3\)</span>, <span class="math">\(2+\sqrt{-5}\)</span>, <span class="math">\(2-\sqrt{-5}\)</span> <a href="#cross-irreducible-element">irreducible element</a>s in <span class="math">\({\mathbb{Z}}[\sqrt{-5}]\)</span>. by calculation</li>
+<li>trivial</li>
+<li><span class="crosslink"><span id="cross-Möbius-function"></span>Möbius function</span> first proof for distinct primes, then trivial</li>
+<li>done</li>
+<li>done</li>
+<li>done</li>
+<li>done</li>
+<li>done</li>
+<li>done</li>
+<li>done</li>
 </ol>
-<p><code>fix me</code></p>
 <p><em>from <a href="#cross-ref-algebra-atiyah">ref-algebra-atiyah</a>, chapter 01</em></p>
 <ol style="list-style-type: decimal">
 <li>done</li>
@@ -1722,8 +1727,8 @@ $("#content").css("max-width", "1100px")
 <li>done</li>
 <li>done</li>
 <li>done. every prime ideal is an contraction of a prime ideal of <span class="math">\(A[[x]]\)</span>. we show that a prime ideal generate some ideal in it <span class="math">\(p + XA[[x]]\)</span>. and we show that if it is prime, then the generated ideal is prime</li>
-<li>proof by <span class="math">\(1-xa = u{\Rightarrow}1-u = (1-u)^2{\Rightarrow}u = 1{\Rightarrow}ax = 0\)</span></li>
-<li><code>fix me</code></li>
+<li><span class="math">\(A\)</span> such that every ideal not contained in the nilradical contains a non-zero idempotent, show nilradical is Jacobson radical. proof by <span class="math">\(1-xa = u{\Rightarrow}1-u = (1-u)^2{\Rightarrow}u = 1{\Rightarrow}ax = 0\)</span></li>
+<li>every element has <span class="math">\(\exists n: x^n = x\)</span>, then every prime ideal is maximal. we have <span class="math">\(x^n -x = x(x^{n-1} -1 ) = 0\in p\)</span> we have <span class="math">\(x\)</span> in <span class="math">\(p\)</span>, or <span class="math">\(x^{n-1} -1 \in p\)</span>, suppose first, then do not need inverse, suppose last, then mod 1, trivial, it has inverse <span class="math">\(x^{n-2}\)</span> in the field</li>
 <li>Zorn’s lemma</li>
 <li>done</li>
 <li>1 to 2 is easy, 2 to 3 is easy, 3 to 1 is easy</li>
@@ -1780,17 +1785,14 @@ $("#content").css("max-width", "1100px")
 <li>let <span class="math">\(R\)</span> be the ring of linear map over <a href="#cross-vector-space">vector space</a> <span class="math">\(V\)</span>, then <span class="math">\(V\)</span> is a module over <span class="math">\(R\)</span> <strong>remember this, seems useful</strong></li>
 </ul></li>
 <li><a href="#cross-morphism">morphism</a> or <span class="math">\(A\)</span>-<span class="crosslink"><span id="cross-linear-map"></span>linear map</span>
-<ul>
+<ol style="list-style-type: decimal">
 <li>additive homomorphism, <span class="math">\(f(m + n) = f(m) + f(n)\)</span></li>
 <li><span class="math">\(f(ax) = af(x)\)</span></li>
-<li>kernel is <a href="#cross-submodule">submodule</a> and <a href="#cross-submodule">submodule</a> is kernel
+</ol>
 <ul>
-<li>for a kernel, it is a additive subgroup, and we have <span class="math">\(f(an) = af(n) = 0\)</span> so it is a submodule</li>
-<li>we have <span class="math">\(f:M\to M/N\)</span> the universal module-homomorphism. proof, the group-homomorphism has the additional property, we get universal by making the map</li>
-</ul></li>
-<li><span class="math">\({\text{im }}f\)</span> is <a href="#cross-submodule">submodule</a>. proof by <span class="math">\(af(m) = f(am) \in {\text{im }}f\)</span>
+<li><span class="crosslink"><span id="cross-cokernel"></span>cokernel</span> <span class="math">\({\text{im }}f\)</span> is <a href="#cross-submodule">submodule</a>. proof by <span class="math">\(af(m) = f(am) \in {\text{im }}f\)</span>
 <ul>
-<li><span class="math">\(M' \to M'/{\text{im }}f = {\text{coker }}f\)</span> <span class="crosslink"><span id="cross-cokernel"></span>cokernel</span></li>
+<li><span class="math">\(M' \to M'/{\text{im }}f = {\text{coker }}f\)</span></li>
 <li><strong>this is the first unusual thing about module, and it is because we fixed the multiplicative structure but only moved the additive structure</strong></li>
 </ul></li>
 <li><a href="#cross-monomorphism">monomorphism</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\({\text{ker }}f\)</span> trivial <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(f\)</span> injective
@@ -1803,15 +1805,20 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul></li>
 <li><span class="math">\(n\)</span>-<span class="crosslink"><span id="cross-multilinear-map"></span><span id="cross-multilinear"></span>multilinear map</span>s <span class="math">\(L^n(E_1, \dots, E_n; F)\)</span> where <span class="math">\(E_i\)</span> and <span class="math">\(F\)</span> are <span class="math">\(R\)</span>-modules is <span class="math">\(f: E_1\times \cdots \times E_n\to F\)</span>, which is linear in each variable</li>
-<li><span class="crosslink"><span id="cross-submodule"></span>submodule</span> an additive subgroup such that <span class="math">\(AN\subset N\)</span>. well defined because it is closed under <span class="math">\(A\)</span></li>
+<li><span class="crosslink"><span id="cross-submodule"></span>submodule</span> an additive subgroup such that <span class="math">\(AN\subset N\)</span>. well defined because it is closed under <span class="math">\(A\)</span>
+<ul>
+<li>kernel is <a href="#cross-submodule">submodule</a> and <a href="#cross-submodule">submodule</a> is kernel
+<ul>
+<li>for a kernel, it is a additive subgroup, and we have <span class="math">\(f(an) = af(n) = 0\)</span> so it is a submodule</li>
+<li>we have <span class="math">\(f:M\to M/N\)</span> the universal module-homomorphism. proof, the group-homomorphism has the additional property, we get universal by making the map</li>
+</ul></li>
 <li>if <span class="math">\(\alpha\)</span> is an <a href="#cross-left-ideal">left ideal</a> then we have <span class="math">\(\alpha M = \sum a_i x_i\)</span> is an submodule. and we have <span class="math">\(\alpha (\beta M) = (\alpha\beta)M\)</span>, <span class="math">\((\alpha + \beta)M = \alpha M + \beta M\)</span>, <span class="math">\(\alpha (N+N') = \alpha N + \alpha N'\)</span>
 <ul>
 <li>proof 1. it is closed so an subgroup, <span class="math">\(A\alpha M\subset \alpha M\)</span> so it is submodule</li>
 <li>proof 2. the two side is well defined for ideal multiplication is again an ideal, and the left is just two application of making submodule, to show that equal, we have both side have the same structure of things in them</li>
 <li>proof 3. they are well defined almost for the abelian group</li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-factor-module"></span>factor module</span> for a submodule <span class="math">\(N\)</span> we have <span class="math">\(R\)</span> also operate on <span class="math">\(M/N\)</span>, it is well defined for <span class="math">\(x = y+n\)</span> thing. it is again a module, proof <span class="math">\(abx\)</span> by using alternatively thinking the elements in them and the coset itself, proof <span class="math">\(1x = x\)</span> trivially, proof <span class="math">\((a+b)x\)</span> and <span class="math">\(a(x+y)\)</span> by vanishing on all <span class="math">\(an\)</span> things, using the definition of <strong><a href="#cross-submodule">submodule</a></strong>
-<ul>
+<li><span class="crosslink"><span id="cross-factor-module"></span>factor module</span> for a submodule <span class="math">\(N\)</span> we have <span class="math">\(R\)</span> also operate on <span class="math">\(M/N\)</span>, it is well defined for <span class="math">\(x = y+n\)</span> thing. it is again a module, proof <span class="math">\(abx\)</span> by using alternatively thinking the elements in them and the coset itself, proof <span class="math">\(1x = x\)</span> trivially, proof <span class="math">\((a+b)x\)</span> and <span class="math">\(a(x+y)\)</span> by vanishing on all <span class="math">\(an\)</span> things, using the definition of <strong><a href="#cross-submodule">submodule</a></strong></li>
 <li><span class="math">\(\frac{L/N}{M/N}\cong \frac{L}{M}\)</span>. by the map, find kernel</li>
 <li><span class="math">\(\frac{M_1+M_2}{M_1} \cong \frac{M_2}{M_1\cap M_2}\)</span>. by <span class="math">\(M_2\to M_1 + M_2\to \frac{M_1+M_2}{M_1}\)</span></li>
 </ul></li>
@@ -1823,12 +1830,14 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\((N:P) = {\text{Ann}}((N + P)/ N)\)</span>. trivial</li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-faithful-module"></span>faithful module</span> <span class="math">\({\text{Ann}}(M) = 0\)</span></li>
-<li><span class="math">\(a\subset {\text{Ann}}(M)\)</span> then <span class="math">\(M\)</span> is <span class="math">\(A/a\)</span>-module, and faithful
+<li><span class="math">\(\alpha\subset {\text{Ann}}(M)\)</span> then <span class="math">\(M\)</span> is <span class="math">\(A/\alpha\)</span>-module, and faithful
 <ul>
 <li>well defined by <span class="math">\(\bar{x}m\)</span> is independent of <span class="math">\(a\)</span></li>
 <li>faithful is trivial</li>
 </ul></li>
 </ul></li>
+<li><a href="#cross-product">product</a> exists</li>
+<li><a href="#cross-coproduct">coproduct</a> exists</li>
 <li><span class="crosslink"><span id="cross-linear-combination"></span>linear combination</span> for <span class="math">\(S\in M\)</span>. <span class="math">\(\sum_{x\in S} a_x x\)</span> almost all but finite equal to <span class="math">\(0\)</span>
 <ul>
 <li><span class="math">\(N=A{\langle S \rangle}\)</span> <a href="#cross-submodule">submodule</a> generated by <span class="math">\(S\)</span></li>
@@ -1852,8 +1861,6 @@ $("#content").css("max-width", "1100px")
 <li>itself may have different cardinal of base, then it has an embedding into itself</li>
 </ul></li>
 </ul></li>
-<li><a href="#cross-product">product</a> exists</li>
-<li><a href="#cross-coproduct">coproduct</a> exists</li>
 <li><span class="crosslink"><span id="cross-finite-generated-module"></span>finite generated module</span> trivial facts
 <ul>
 <li><span class="crosslink"><span id="cross-noetherian-module"></span>noetherian module</span> all submodule finitely generated <span class="math">\(R\)</span>-module
@@ -1882,7 +1889,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li>for a single homomorphism <span class="math">\(f\)</span> which by the functor is mapped to a homomorphism of the <span class="math">\({\text{hom}}\)</span> sets, we verify that it is again a homomorphism of the abelian group of homomorphisms, which is just <span class="math">\((g_1+g_2)\circ f = g_1\circ f + g_2\circ f\)</span></li>
 </ul></li>
-<li>exact sequences
+<li><a href="#cross-exact-sequence">exact sequence</a>s in module
 <ul>
 <li><span class="math">\(X'\xrightarrow{\lambda}X\rightarrow X''\to 0\)</span> is exact iff <span class="math">\({\text{hom}}(X', Y)\leftarrow {\text{hom}}(X, Y)\leftarrow {\text{hom}}(X'', Y)\leftarrow 0\)</span> is exact
 <ul>
@@ -1892,7 +1899,6 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>as an example, the fist two arrow saids, that it is an embedding, and the left says that any homomorphism to one submodule is an homomorphism to the bigger module, by only projecting to the submodule</li>
 </ul></li>
-<li>decomposition into <span class="crosslink"><span id="cross-short-exact-sequence"></span>short exact sequence</span> <img src="./images/short-exact.jpg" style="width:450px" /></li>
 <li><span class="crosslink"><span id="cross-split-short-exact-sequence"></span>split short exact sequence</span> <span class="math">\(0\to M'\xrightarrow{f} M\xrightarrow{g} M''\to 0\)</span> exact then 1 iff 2, and 1 or 2 implies 3 and we say that <span class="math">\(\phi\)</span> splits <span class="math">\(f\)</span> and <span class="math">\(\varphi\)</span> spilits <span class="math">\(g\)</span>
 <ol style="list-style-type: decimal">
 <li><span class="math">\(\exists \varphi :M''\to M: g\circ\varphi = {\text{id}}\)</span></li>
@@ -2203,6 +2209,7 @@ $("#content").css("max-width", "1100px")
 <h3 id="exercises-3">exercises</h3>
 <p><code>fix me</code></p>
 <h2 id="field">field</h2>
+<h3 id="field-1">field</h3>
 <ul>
 <li><span class="math">\({\mathcal{Fld}}\)</span>
 <ul>
@@ -2327,7 +2334,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>all trivial</li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-smallest-normal-extension"></span>smallest normal extension</span> for <span class="math">\(k\subset E\)</span> algebraic extension, intersection of all normal extensions containing <span class="math">\(E\)</span> is again normal. if <span class="math">\(\sigma_i\)</span> is all embedding of <span class="math">\(E\subset k^a\)</span>, then <span class="math">\(K = \prod \sigma_i E\)</span> is normal, because for any embedding of <span class="math">\(K\)</span>, it maps <span class="math">\(E_i\)</span> parts to a different part, so automorphism, so normal. and all normal extension must contains <span class="math">\(K\)</span>, because it must contains all <span class="math">\(\simga_i E\)</span>, because if not then we can extends to a embedding of it out of it, so not automorphism</li>
+<li><span class="crosslink"><span id="cross-smallest-normal-extension"></span>smallest normal extension</span> for <span class="math">\(k\subset E\)</span> algebraic extension, intersection of all normal extensions containing <span class="math">\(E\)</span> is again normal. if <span class="math">\(\sigma_i\)</span> is all embedding of <span class="math">\(E\subset k^a\)</span>, then <span class="math">\(K = \prod \sigma_i E\)</span> is normal, because for any embedding of <span class="math">\(K\)</span>, it maps <span class="math">\(E_i\)</span> parts to a different part, so automorphism, so normal. and all normal extension must contains <span class="math">\(K\)</span>, because it must contains all <span class="math">\(\sigma_i E\)</span>, because if not then we can extends to a embedding of it out of it, so not automorphism</li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-separable-degree"></span>separable degree</span> <span class="math">\([E:F]_s = {\text{hom}}(E, F^a)_F\)</span> of <span class="math">\(F\subset E\)</span> algebraic
 <ul>
@@ -2570,22 +2577,6 @@ $("#content").css("max-width", "1100px")
 <li><span class="crosslink"><span id="cross-weak-topology"></span>weak topology</span> by <span class="math">\(f\)</span></li>
 <li><a href="#cross-product">product</a> <span class="crosslink"><span id="cross-product-topology"></span>product topology</span> <a href="#cross-set-product">set product</a> with <a href="#cross-weak-topology">weak topology</a> for projection</li>
 <li><a href="#cross-coproduct">coproduct</a> disjoint union</li>
-</ul></li>
-<li>used in algebraic geometry
-<ul>
-<li><span class="crosslink"><span id="cross-irreducible-space"></span>irreducible space</span> every pair of non-empty open set intersect
-<ul>
-<li><span class="math">\({\Leftrightarrow}\)</span> cannot <span class="math">\(X = X_1\cup X_2\)</span> where <span class="math">\(X_i\subsetneq X\)</span> closed</li>
-<li><span class="math">\(Y{\Rightarrow}{\text{Cl }}Y\)</span>. trivial</li>
-<li>every irreducible space is a subspace of maximal irreducible space. and maximals is closed cover of <span class="math">\(X\)</span>
-<ul>
-<li>for <a href="#cross-Hausdorff-space">Hausdorff space</a> they are trivial</li>
-</ul></li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-noetherian-space"></span>noetherian space</span> for all <span class="math">\(Y_1 \supset Y_2\supset \cdots\)</span> closed, there is some trivial <span class="math">\(Y_r = Y_{r+1} =\cdots\)</span> tail
-<ul>
-<li>every non-empty closed subset <span class="math">\(Y\)</span> can be expressedn as a finite</li>
-</ul></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-pointed-space"></span>pointed space</span>
 <ul>
@@ -3182,7 +3173,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(Z(T_1) \cup Z(T_2) = Z(T_1 T_2)\)</span>, <span class="math">\(\bigcap Z(T_i) = Z(\cup T_i)\)</span>, so they are closed under intersection, finite union and <span class="math">\(X\)</span> and <span class="math">\(\emptyset\)</span> is in it, constant <span class="math">\(0\)</span> and constant <span class="math">\(1\)</span></li>
 <li>example: <span class="math">\({\mathbf{A}}^1\)</span>, the Zarisk topology is just finite topology</li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-affine-variety"></span>affine variety</span>/<span class="crosslink"><span id="cross-quasi-affine-variety"></span>quasi-affine variety</span> closed/open <a href="#cross-irreducible-subspace">irreducible subspace</a> of <span class="math">\({\mathbf{A}}^n\)</span></li>
+<li><span class="crosslink"><span id="cross-affine-variety"></span>affine variety</span>/<span class="crosslink"><span id="cross-quasi-affine-variety"></span>quasi-affine variety</span> closed/open <a href="#cross-irreducible-subspace">irreducible subspace</a> of <span class="math">\({\mathbf{A}}^n\)</span> has <a href="#cross-dimension-of-topological-space">dimension of topological space</a></li>
 <li>ideal of <span class="math">\(Y\subset {\mathbf{A}}^n\)</span>. <span class="math">\(I(Y) = \{f\in A| \forall x\in Y: f(x) = 0\}\subset A\)</span> is ideal. we get a <strong><a href="#cross-order-preserving">order-preserving</a> bijection</strong> between <a href="#cross-radical-ideal">radical ideal</a>s and <a href="#cross-algebraic-set">algebraic set</a>s
 <ul>
 <li><span class="math">\(T_1\subset T_2\subset A{\Rightarrow}Z(T_1)\supset Z(T_2)\)</span></li>
@@ -3190,12 +3181,95 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(I(Y_1\cup Y_2)=I(Y_1)\cap I(Y_2)\)</span></li>
 <li><span class="math">\(\alpha {\lhd}A{\Rightarrow}I(Z(\alpha)) = \sqrt{\alpha}\)</span>. by <a href="#cross-Hilbert's-Nullstellensatz">Hilbert’s Nullstellensatz</a></li>
 <li><span class="math">\(Z(I(Y)) = \bar{Y}\)</span>. a point in closure will have polynomials, such that all of them vanish on <span class="math">\(Y\)</span>, so they are in <span class="math">\(I(Y)\)</span>, and so</li>
-<li>algebraic set <span class="math">\(T\)</span> <a href="#cross-irreducible-space">irreducible space</a> <span class="math">\({\Leftrightarrow}\)</span> prime ideal</li>
-<li><span class="math">\({\mathbf{A}}^n\)</span> is <a href="#cross-noetherian-space">noetherian space</a>, because descending chain of closed subsets will induce ascending chain of ideals</li>
+<li><a href="#cross-affine-variety">affine variety</a> <span class="math">\({\Leftrightarrow}\)</span> prime ideal</li>
+<li><span class="math">\({\mathbf{A}}^n\)</span> is <a href="#cross-noetherian-space">noetherian space</a>, because descending chain of closed subsets will induce ascending chain of ideals, so algebraic set has <strong>unique cover by varieties</strong></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-affine-coordinate-ring"></span>affine coordinate ring</span> <span class="math">\(A(Y) = A/I(Y)\)</span> for <a href="#cross-algebraic-set">algebraic set</a> <span class="math">\(Y\)</span>
 <ul>
 <li><span class="math">\(Y\)</span> is <a href="#cross-affine-variety">affine variety</a> <span class="math">\({\Leftrightarrow}\)</span> some <span class="math">\(A(Y)\)</span> is <a href="#cross-entire-ring">entire ring</a> and finitely generated <span class="math">\(k\)</span>-algebra. right to lift is because finitely generated, so we have a map from some polynomial ring to it</li>
+<li>for <a href="#cross-algebraic-set">algebraic set</a> <span class="math">\(Y\)</span>, the <a href="#cross-dimension-of-topological-space">dimension of topological space</a> equals the <a href="#cross-dimension-of-ring">dimension of ring</a> of <span class="math">\(A(Y)\)</span>. we expand the set by <a href="#cross-affine-variety">affine variety</a>s, then each one correspond prime ideals <span class="math">\(p\supset I(Y)\)</span>
+<ul>
+<li><span class="math">\(\dim {\mathbf{A}}^n = n\)</span></li>
+<li><span class="math">\(\dim Y = \dim \bar{Y}\)</span></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="move-to-topology-after">move to topology after</h2>
+<ul>
+<li>used in algebraic geometry
+<ul>
+<li><span class="crosslink"><span id="cross-irreducible-space"></span><span id="cross-irreducible-set"></span>irreducible space</span> every pair of non-empty open set intersect
+<ul>
+<li><span class="math">\({\Leftrightarrow}\)</span> cannot <span class="math">\(X = X_1\cup X_2\)</span> where <span class="math">\(X_i\subsetneq X\)</span> closed</li>
+<li><span class="math">\(Y{\Rightarrow}{\text{Cl }}Y\)</span>. trivial</li>
+<li>every irreducible space is a subspace of maximal irreducible space. and maximals is closed cover of <span class="math">\(X\)</span>
+<ul>
+<li>for <a href="#cross-Hausdorff-space">Hausdorff space</a> they are trivial</li>
+</ul></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-noetherian-space"></span>noetherian space</span> for all <span class="math">\(Y_1 \supset Y_2\supset \cdots\)</span> closed, there is some trivial <span class="math">\(Y_r = Y_{r+1} =\cdots\)</span> tail
+<ul>
+<li>every non-empty closed subset <span class="math">\(Y\)</span> can be expressed as a finite union of <a href="#cross-irreducible-set">irreducible set</a> closed, unique in the form <span class="math">\(Y = \bigcup Y_i\)</span>, each not included in others. by decompose into chains, and stop all stop somewhere. the unique is by if <span class="math">\(Y'_1 = \bigcup (Y'_1 \cap Y_i)\)</span> is another cover, irreducible shows it is one of the old cover</li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-dimension-of-topological-space"></span>dimension of topological space</span> <span class="math">\(\sup_n:Z_0\subset Z_1\subset \cdots\subset Z_n\)</span> where <span class="math">\(Z_i\)</span> irreducible</li>
+</ul></li>
+</ul>
+<h2 id="fix-me">fix me</h2>
+<ul>
+<li>for commutative ring
+<ul>
+<li><span class="crosslink"><span id="cross-prime-spectrum"></span>prime spectrum</span> for ring <span class="math">\(A\)</span>, <span class="math">\(X\)</span> is the set of all prime ideals, for each <span class="math">\(E\subset A\)</span>, <span class="math">\(V(E)\)</span> is the set of all prime ideals of <span class="math">\(A\)</span> containing <span class="math">\(E\)</span>. we have a <span class="crosslink"><span id="cross-Zariski-topology"></span>Zariski topology</span>
+<ul>
+<li><span class="crosslink"><span id="cross-height-of-prime-ideal"></span>height of prime ideal</span> <span class="math">\(\sup_n p_0\subset p_1\subset \cdots \subset p_n = p\)</span></li>
+<li><span class="crosslink"><span id="cross-dimension-of-ring"></span><span id="cross-Krull-dimension"></span>dimension of ring</span> sup all height</li>
+<li><span class="math">\(V(E) = V(\alpha) = V(r(\alpha))\)</span>, where <span class="math">\(E\)</span> generate <span class="math">\(\alpha\)</span></li>
+<li><span class="math">\(V(0) = X\)</span>, <span class="math">\(V(1) = \emptyset\)</span></li>
+<li><span class="math">\(V(\bigcup E_i) = \bigcap V(E_i)\)</span></li>
+<li><span class="math">\(V(a\cap b) = V(ab) = V(a)\cup V(b)\)</span>. equal 1 is easy, one side is trivial, the other <span class="math">\(h\in a\cap b{\Rightarrow}h^2 \in ab\)</span>. equal 2 one side is easy, the other by the property of prime ideal</li>
+<li><span class="math">\({\text{Spec}}({\mathbb{Z}})\)</span> <img src="./images/spec-z.jpg" style="width:450px" /></li>
+<li><span class="math">\({\text{Spec}}({\mathbb{R}}) = \emptyset\)</span></li>
+<li><span class="math">\({\text{Spec}}({\mathbb{C}}[x])\)</span> <img src="./images/spec-cx.jpg" style="width:450px" /></li>
+<li>let <span class="math">\(f\in A\)</span> and <span class="math">\(X_f = X-V(f)\)</span>
+<ul>
+<li>they are base of <a href="#cross-Zariski-topology">Zariski topology</a>. fine a element, and find the base</li>
+<li><span class="math">\(X_f\cap X_g = X_{fg}\)</span>. proofed above</li>
+</ul></li>
+<li><span class="math">\(X_f = \emptyset {\Leftrightarrow}f\in {\mathscr{N}}\)</span>. <a href="#cross-nilpotent">nilpotent</a>s is the intersection of all prime ideals, which have a magical proof</li>
+<li><span class="math">\(X_f = X {\Leftrightarrow}\)</span> <span class="math">\(f\)</span> unit. trivial</li>
+<li><span class="math">\(X\)</span> is quasi-compact (it means compact here)
+<ul>
+<li>consider a open cover of it, we down to base, and then we show that it equals to require <span class="math">\(\forall p\exists f: f\notin p\)</span> then we show that <span class="math">\((f_i) = A\)</span>, because it is not in a maximal ideal, so <span class="math">\(\sum x_i f_i = 1\)</span> finite, so this can be a finite subcover</li>
+</ul></li>
+<li><span class="math">\(X_f\)</span> is quasi-compact</li>
+<li><span class="math">\(X\)</span> compact <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(X= \bigcup X_f\)</span> finite</li>
+<li><span class="math">\(\{x\}\)</span> is closed <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(p_x\)</span> is maximal. proof by showing that <span class="math">\(m = V(E)\)</span>, it is the only ideal contains some subset <span class="math">\(E\)</span>
+<ul>
+<li><span class="math">\({\mkern 1.5mu\overline{\mkern-1.5mu\{x\}\mkern-1.5mu}\mkern 1.5mu} = V(p_x)\)</span>. proof as above</li>
+</ul></li>
+<li><span class="math">\(X\)</span> is <span class="math">\(T_0\)</span> space
+<ul>
+<li>by the observation <span class="math">\(y\in {\mkern 1.5mu\overline{\mkern-1.5mu\{x\}\mkern-1.5mu}\mkern 1.5mu} {\Leftrightarrow}p_x\subset p_y\)</span></li>
+</ul></li>
+<li><a href="#cross-irreducible-space">irreducible space</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\({\mathscr{N}}\in {\text{Spec}}(A)\)</span>
+<ul>
+<li>we replace by <span class="math">\(X_f\)</span>. right to left is trivial, because if they are non-empty, they will both contain <span class="math">\({\mathscr{N}}\)</span>. by the characterization of nilpotent <span class="math">\(X_f\)</span>, we know that the irreducibility is the same <span class="math">\(f,g \notin {\mathscr{N}}{\Rightarrow}fg \notin {\mathscr{N}}\)</span>, so prime</li>
+</ul></li>
+<li>the irreducible components of <span class="math">\(X\)</span> is closed sets <span class="math">\(V(p)\)</span> where <span class="math">\(p\)</span> is a minimal prime ideal. proof by 1. they are irreducible, because all <span class="math">\(V(p)-V(E)\)</span> nonempty intersect at <span class="math">\(p\)</span>; 2. they are maximal. and if we have a component, they are closed, so of the form <span class="math">\(V(p)\)</span> then <span class="math">\(p\subset q{\Rightarrow}(X-V(p)\subset X-V(q)\)</span> so we should have a minimal element, proofed</li>
+<li>for <span class="math">\(\phi:A\to B\)</span>, we have <span class="math">\(\varphi = \phi^*: {\text{Spec}}(B)\to {\text{Spec}}(A)\)</span>
+<ul>
+<li>it is continuous. by proofing <span class="math">\(\varphi^{-1}(X_f) = Y_{\phi(f)}\)</span></li>
+<li><span class="math">\(\varphi^{-1}(V(\alpha)) = V(\alpha^e)\)</span>. trivial</li>
+<li><span class="math">\({\mkern 1.5mu\overline{\mkern-1.5mu\varphi(V(\beta))\mkern-1.5mu}\mkern 1.5mu} = V(\beta^c)\)</span>. trivial</li>
+<li>if <span class="math">\(\phi\)</span> surjective, then <span class="math">\(\varphi\)</span> is <a href="#cross-homeomorphism">homeomorphism</a> <span class="math">\({\text{Spec}}(B)\to V({\text{ker }}\varphi)\)</span>
+<ul>
+<li>we know bijective, and <span class="math">\(\varphi\)</span> continuous, we show that <span class="math">\(\varphi^{-1}\)</span> continuous</li>
+<li><span class="math">\({\text{Spec}}(A)\leftrightarrow {\text{Spec}}(A/{\mathscr{N}})\)</span></li>
+</ul></li>
+<li><span class="math">\({\text{ker }}(\phi)\subset{\mathscr{N}}\)</span> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(\varphi({\text{Spec}}(B))\)</span> dense in <span class="math">\({\text{Spec}}(X)\)</span></li>
+<li><span class="math">\((f\circ g)^* = g^*\circ f^*\)</span></li>
+<li><code>fix me</code></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -3808,11 +3882,12 @@ $("#content").css("max-width", "1100px")
 
 
 
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
 
 
 
-<!--<script src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="./MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 <script>
   MathJax.Hub.Queue(function() {
     $(document.body).scrollspy('refresh')
