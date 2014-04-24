@@ -87,7 +87,9 @@ $("#content").css("max-width", "1100px")
 <hr />
 <p><strong>i think the best state of doing mathematics is always have the big picture in background, but in the same time, always solving details and problems, thus making real progress</strong></p>
 <p><strong>give the conjectures their full meaning</strong></p>
+<p><strong>i feel my learning mathematics is just like a “guided tour”, actually i do not know why guided like this. thinking how G create mathematics single handed. i think i am just lame</strong></p>
 <h1 id="一周一本书-推全书-习题全做-am">一周一本书, 推全书, 习题全做: AM</h1>
+<h1 id="shit-fight-it">SHIT, FIGHT IT</h1>
 <h1 id="meta-mathematics">meta mathematics</h1>
 <h2 id="personal-learning">personal learning</h2>
 <h3 id="weakness">weakness</h3>
@@ -97,7 +99,7 @@ $("#content").css("max-width", "1100px")
 </ul>
 <h3 id="about-stupidity">about stupidity</h3>
 <ul>
-<li>though i think i have a fake relief for fundamental problems. i still feel unable to do some math. but… they are just manipulation of symbols!</li>
+<li>though i think i have a fake relief for fundamental problems. i still feel unable to do some math. but… they are just manipulation of symbols!… actually they are not, you will not go too far with this kind of thinking. read the book, and understand. find more materials, read a lot of material to get insight is the only method to learn some math for stupid me</li>
 </ul>
 <h2 id="resources">resources</h2>
 <h3 id="pages-on-problem-solving">pages on problem solving</h3>
@@ -772,16 +774,20 @@ $("#content").css("max-width", "1100px")
 <li>you can insert any parentheses</li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-commutative"></span>commutative</span> <span class="math">\(ab = ba\)</span> it seems then we must have <span class="math">\(S_1 = S_2 = S_3\)</span>?</li>
+<li><span class="crosslink"><span id="cross-idempotent"></span>idempotent</span> <span class="math">\(x^2 = x\)</span></li>
 <li>example of non-associative loc: <span class="math">\(-\)</span> for integer</li>
 </ul></li>
 </ul>
 <h2 id="group-likes">group-likes</h2>
-<h3 id="monoid">monoid</h3>
+<h3 id="semigroup">semigroup</h3>
 <ul>
 <li><span class="math">\({\mathcal{SemiGrp}}\)</span>
 <ul>
 <li><a href="#cross-object">object</a> <span class="crosslink"><span id="cross-semigroup"></span>semigroup</span> a set with <a href="#cross-associative">associative</a> <a href="#cross-low-of-composition">low of composition</a></li>
 </ul></li>
+</ul>
+<h3 id="monoid">monoid</h3>
+<ul>
 <li><span class="math">\({\mathcal{Mon}}\)</span>
 <ul>
 <li><a href="#cross-object">object</a> <span class="crosslink"><span id="cross-monoid"></span>monoid</span> <span class="math">\((S\in{\mathcal{Set}}, *:S\times S\to S, e\in S)\)</span>
@@ -1022,9 +1028,9 @@ $("#content").css("max-width", "1100px")
 <li><span class="crosslink"><span id="cross-group-extension"></span>group extension</span> a <a href="#cross-exact-sequence">exact sequence</a> <span class="math">\(1\to N\to G\to H\to 1\)</span> is split if <span class="math">\(H\)</span> can be identified with subgroup of <span class="math">\(G\)</span> and <span class="math">\(N\cap H = \{e\}\)</span>
 <ul>
 <li><em>if we have simple group tower, how are we going to make them together?</em></li>
-<li><span class="math">\(\leftarrow\)</span> <span class="crosslink"><span id="cross-semidirect-product"></span>semidirect product</span> <span class="math">\(N{\lhd}G\)</span>, <span class="math">\(G = NH\)</span>, <span class="math">\(N\cap H = \{e\}\)</span> <span class="math">\({\Leftrightarrow}\)</span> every element unique written as <span class="math">\(nh\)</span> <span class="math">\({\Leftrightarrow}\)</span> every element unique written as <span class="math">\(hn\)</span>
+<li><span class="math">\(\Leftarrow\)</span> <span class="crosslink"><span id="cross-semidirect-product"></span>semidirect product</span> <span class="math">\(N{\lhd}G\)</span>, <span class="math">\(G = NH\)</span>, <span class="math">\(N\cap H = \{e\}\)</span> <span class="math">\({\Leftrightarrow}\)</span> every element unique written as <span class="math">\(nh\)</span> <span class="math">\({\Leftrightarrow}\)</span> every element unique written as <span class="math">\(hn\)</span>
 <ul>
-<li>by <span class="math">\(\alpha: H\hookrigharrow G\twoheadrightarrow G/N\)</span>, surjective by <span class="math">\(G = NH\)</span> then every <span class="math">\(gN = hnN = hN = \alpha(h)\)</span>, injective by <span class="math">\(N\cap H = \{e\}\)</span></li>
+<li>by <span class="math">\(\alpha: H\hookrightarrow G\twoheadrightarrow G/N\)</span>, surjective by <span class="math">\(G = NH\)</span> then every <span class="math">\(gN = hnN = hN = \alpha(h)\)</span>, injective by <span class="math">\(N\cap H = \{e\}\)</span></li>
 <li><code>fix me: the abstract definition for two group</code></li>
 </ul></li>
 <li>try on order <span class="math">\(27\)</span>, using the abstract semidirect product</li>
@@ -1429,6 +1435,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span class="math">\(B\)</span> finitely generated over <span class="math">\(A\)</span></li>
 <li>in Atiyah, a <span class="crosslink"><span id="cross-finitely-generated-ring"></span>finitely generated ring</span> is when viewed as <span class="math">\({\mathbb{Z}}\)</span>-algebra</li>
+<li><span class="crosslink"><span id="cross-noetherian-ring"></span>noetherian ring</span> every left ideal is finitely generated. or <a href="#cross-noetherian-module">noetherian module</a> when viewed as a left module over itself</li>
 </ul></li>
 <li><a href="#cross-product">product</a> exists and is like group product. the inclusion map is <strong>not</strong> ring homomorphism, though in group this is true</li>
 <li><a href="#cross-coproduct">coproduct</a> see <a href="http://en.wikipedia.org/wiki/Category_of_rings">Wikipedia</a></li>
@@ -1437,7 +1444,7 @@ $("#content").css("max-width", "1100px")
 <li><em>ideal is submodule of the ring</em></li>
 <li><span class="crosslink"><span id="cross-quotient-ring"></span><span id="cross-factor-ring"></span>quotient ring</span>. ideal is kernel, kernel is ideal
 <ul>
-<li>we define <span class="math">\((x + \alpha)(y + \alpha) = (xy + \alpha)\)</span> we show that it is well defined, we show that it is representative independent, and it is associative hand has unit, and distributive. we used <span class="math">\(xa \in\alpha\)</span> in the proof that it is well defined. just like the normal group case… this is <strong>indeed wired</strong>, the normal groups has inherited product, but ring have <strong>not</strong>, consider <span class="math">\((2 + {\mathbb{Z}}/12{\mathbb{Z}})(3 + {\mathbb{Z}}/21{\mathbb{Z}})\)</span>, if we define it be the inherited products, then it will not include <span class="math">\(6 + 12\)</span> and will not be a coset, that’s why the product is defined differently</li>
+<li>we define <span class="math">\((x + \alpha)(y + \alpha) = (xy + \alpha)\)</span> we show that it is well defined, we show that it is representative independent, and it is associative hand has unit, and distributive. we used <span class="math">\(xa \in\alpha\)</span> in the proof that it is well defined. just like the normal group case… this is <strong>indeed wired</strong>, the normal groups has inherited product, but ring have <strong>not</strong>, consider <span class="math">\((2 + {\mathbb{Z}}/12{\mathbb{Z}})(3 + {\mathbb{Z}}/12{\mathbb{Z}})\)</span>, if we define it be the inherited products, then it will not include <span class="math">\(6 + 12\)</span> and will not be a coset, that’s why the product is defined differently</li>
 <li>the unit of the cosets is <span class="math">\(1+\alpha\)</span> and the zero is <span class="math">\(\alpha\)</span>, this is because it is an ideal and it is kind of like a zero which takes everything back</li>
 </ul></li>
 <li>an ideal contains <span class="math">\(1\)</span> must be <span class="math">\(A\)</span></li>
@@ -1494,7 +1501,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\((\alpha+\beta)(\alpha\cap \beta)\subset\alpha\beta\)</span>
 <ul>
 <li>you get <span class="math">\(=\)</span> when <span class="math">\(\alpha + \beta= A\)</span>, or say <span class="crosslink"><span id="cross-coprime"></span>coprime</span>. proof by that <span class="math">\(a + b = 1\)</span> then <span class="math">\(c\in \alpha\cap \beta\)</span> then <span class="math">\(ca + bc = c(a+ b) = c\)</span></li>
-<li>if <span class="math">\(\alpha_i\)</span> all <a href="#cross-coprime">coprime</a>, then <span class="math">\(\prod \alpha = \cap \alpha\)</span></li>
+<li>if <span class="math">\(\alpha_i\)</span> all <a href="#cross-coprime">coprime</a>, then <span class="math">\(\prod \alpha = \cap \alpha\)</span>.</li>
 </ul></li>
 <li><span class="math">\((4)\cap (3) = (12) = (4)\cdot (3)\)</span></li>
 <li><span class="math">\((4)\cap (6) = (12) \neq (24) = (4) \cdot (6)\)</span></li>
@@ -1502,13 +1509,9 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li><span class="crosslink"><span id="cross-decomposition-of-commutative-ring-into-quotient-rings"></span>decomposition of commutative ring into quotient rings</span> define <span class="math">\(\phi: A\to \prod A/\alpha\)</span>
 <ul>
-<li><span class="math">\(\phi\)</span> surjective <span class="math">\({\Leftrightarrow}\)</span> all <a href="#cross-coprime">coprime</a>
-<ul>
-<li>proof it</li>
-</ul></li>
-<li><span class="math">\(\phi\)</span> injective <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(\cap \alpha = (0)\)</span></li>
+<li><span class="math">\(\phi\)</span> surjective <span class="math">\({\Leftrightarrow}\)</span> all <a href="#cross-coprime">coprime</a>.</li>
+<li><span class="math">\(\phi\)</span> injective <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(\cap \alpha = (0)\)</span>. trivial, the kernel</li>
 <li>example <span class="math">\(C_6 = C_2\times C_3\)</span>, see how above conditions works</li>
-<li><code>fix me: proof this when needed</code></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-prime-ideal"></span>prime ideal</span> <span class="math">\(R/p\)</span> is <a href="#cross-entire-ring">entire ring</a>
 <ul>
@@ -1547,6 +1550,12 @@ $("#content").css("max-width", "1100px")
 <li>basic proof. <span class="math">\(xy \in p{\Rightarrow}f(xy)=f(x)f(y)\in p'{\Rightarrow}f(x)\in p'\)</span></li>
 <li>view the injective map from a ring to a <a href="#cross-entire-ring">entire ring</a>, the property of zero-divisor is local, so we get zero-divisor of the first ring is zero-divisor of second ring, nonsense</li>
 </ul></li>
+<li><span class="math">\(f: A\to B\)</span>, <span class="math">\(p\)</span> a prime ideal of <span class="math">\(A\)</span>, <span class="math">\(p\)</span> is the contraction of some prime ideal of <span class="math">\(B\)</span> iff <span class="math">\(p^{ec}=p\)</span>
+<ul>
+<li><span class="math">\(p = q^c{\Rightarrow}p^e = q\)</span>. <span class="math">\(p = q^c\subset p^{ec}{\Rightarrow}q\subset p^e\land f(p)\subset q{\Rightarrow}p^e\subset q\)</span> so <span class="math">\(p^e =q\)</span></li>
+<li><span class="math">\(p^{ec} = p{\Rightarrow}q^c\)</span> for some prime <span class="math">\(q\)</span> in <span class="math">\(B\)</span>. we let <span class="math">\(S = f(A-p)\)</span>, then <span class="math">\(p^e\)</span> do not meet <span class="math">\(S\)</span>, then <span class="math">\(S^{-1}p^e\)</span> prime and in <span class="math">\(m\)</span> of <span class="math">\(S^{-1}B\)</span>, then <span class="math">\(q\)</span> the contraction of <span class="math">\(m\)</span>, we have <span class="math">\(q^c = p\)</span></li>
+</ul></li>
+<li>contraction of <a href="#cross-primary-ideal">primary ideal</a> is again <a href="#cross-primary-ideal">primary ideal</a></li>
 <li>for <span class="math">\(f: A\to A'\)</span> surjective, if <span class="math">\(m'\)</span> then <span class="math">\(m\)</span>. proof using field
 <ul>
 <li>is is rather evident in spirit of the decomposition theorem, the injective map do not insure to contains the inverse in the field, but when surjective, we get a isomorphism, trivial</li>
@@ -1580,7 +1589,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li><span class="crosslink"><span id="cross-ideal-quotient"></span>ideal quotient</span> <span class="math">\((\alpha:\beta) = \{x\in A: x\beta\subset \alpha\}\)</span>
 <ul>
-<li><span class="math">\({\text{Ann}}(\beta) = (0:\beta)\)</span> the <span class="crosslink"><span id="cross-annihilator"></span>annihilator</span></li>
+<li><span class="math">\({\text{ann}}(\beta) = (0:\beta)\)</span> <a href="#cross-annihilator">annihilator</a> viewed as <span class="math">\(A\)</span>-module</li>
 <li><span class="math">\(a\subset (a:b)\)</span>, <span class="math">\((a:b)b\subset a\)</span>, <span class="math">\(((a:b):c) = (a:bc) = ((a:c): b)\)</span>, <span class="math">\((\cap a: b) = \cap (a:b)\)</span>, <span class="math">\((a: \sum b) = \cap (a:b)\)</span>
 <ul>
 <li>all trivial</li>
@@ -1611,7 +1620,6 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-semi-local-ring"></span>semi-local ring</span> finite ideal</li>
-<li><span class="crosslink"><span id="cross-noetherian-ring"></span>noetherian ring</span> <a href="#cross-commutative">commutative</a> ring and every ideal is finitely generated</li>
 <li><span class="crosslink"><span id="cross-Dedekind-ring"></span>Dedekind ring</span> an <a href="#cross-entire-ring">entire ring</a> such that every nonzero proper ideal factors into a product of <a href="#cross-prime-ideal">prime ideal</a>s
 <ol start="0" style="list-style-type: decimal">
 <li>definition by Lang. let <span class="math">\(o\)</span> by a <a href="#cross-subring">subring</a> of <a href="#cross-field">field</a> <span class="math">\(k\)</span> such that every element of <span class="math">\(k\)</span> is quotient of <span class="math">\(o\)</span>. a <span class="crosslink"><span id="cross-fractional-ideal"></span>fractional ideal</span> <span class="math">\(\alpha\)</span> is a non-zero additive subgroup of <span class="math">\(k\)</span> such that <span class="math">\(o\alpha = \alpha\)</span> and there is <span class="math">\(c\in o\)</span> such that <span class="math">\(c\alpha \subset o\)</span>, a <a href="#cross-Dedekind-ring">Dedekind ring</a> is a ring <span class="math">\(o\)</span> as above such that the fractional ideals form a group under multiplication. for <span class="math">\(a\in k\)</span> nonzero, <span class="math">\(oa\)</span> is <span class="crosslink"><span id="cross-principal-fractional-ideal"></span>principal fractional ideal</span>, they form a subgroup called <span class="crosslink"><span id="cross-ideal-class-group"></span><span id="cross-Picard-group"></span>ideal class group</span> of <span class="math">\(o\)</span></li>
@@ -1695,6 +1703,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul>
 <p><img src="./images/entires.png" style="width:450px" /></p>
+<h3 id="localization">localization</h3>
 <ul>
 <li><span class="crosslink"><span id="cross-ring-of-fractions"></span><span id="cross-fraction-ring"></span><span id="cross-localization-of-ring"></span>ring of fractions</span> of ring <span class="math">\(A\)</span> by multiplicative submonoid <span class="math">\(S\)</span>, <span class="math">\(S^{-1}A\)</span>
 <ol style="list-style-type: decimal">
@@ -1730,10 +1739,19 @@ $("#content").css("max-width", "1100px")
 <li><span class="crosslink"><span id="cross-rational-function-defined-at"></span>rational function defined at</span> <span class="math">\(b\)</span></li>
 </ul></li>
 </ul></li>
-<li>we can define <span class="math">\(\psi_S:J(A)\to J(S^{-1}A)\)</span>, <span class="math">\(A\)</span> is the set of ideals. closed under <span class="math">\(a+b\)</span>, <span class="math">\(ab\)</span>, <span class="math">\(a\cap b\)</span>
+<li>we can define <span class="math">\(\psi_S:J(A)\to J(S^{-1}A)\)</span>, <span class="math">\(A\)</span> is the set of ideals. closed under <span class="math">\(a+b\)</span>, <span class="math">\(ab\)</span>, <span class="math">\(a\cap b\)</span>, <span class="math">\(\sqrt{\alpha}\)</span>
 <ul>
 <li>all trivial, because of the extension theorems</li>
-<li>we show all ideals will represented as <span class="math">\(S^{-1}p\)</span> for some ideal <span class="math">\(p\)</span> of <span class="math">\(A\)</span></li>
+<li>all ideal <span class="math">\(\beta \in S^{-1}A\)</span> <span class="math">\(\beta = \beta^{ce}\)</span></li>
+<li>if <span class="math">\(\alpha\)</span> is ideal in <span class="math">\(A\)</span>, then <span class="math">\(\alpha^{ec} = \bigcup_{s\in S}(\alpha: s)\)</span>. <span class="math">\(\alpha^e = (1)\)</span> iff <span class="math">\(\alpha\)</span> meet <span class="math">\(S\)</span>. proof <span class="math">\(x\in \alpha^{ec} = (S^{-1}\alpha)^c{\Leftrightarrow}x/1=a/s{\Leftrightarrow}xst\in \alpha {\Leftrightarrow}x\in \bigcup_{s\in S}(\alpha:s)\)</span>. <em>learn how to do this</em>
+<ul>
+<li><span class="math">\(\alpha\)</span> is some contracted ideal <span class="math">\({\Leftrightarrow}\)</span> no element of <span class="math">\(S\)</span> is zero-divisor in <span class="math">\(A/\alpha\)</span></li>
+</ul></li>
+<li>for prime ideals <span class="math">\(p\)</span> do not meet <span class="math">\(S\)</span> <span class="math">\(p\leftrightarrow S^{-1}p\)</span>. first proof prime in <span class="math">\(A\)</span> induce prime in right. right to left is true for any homomorphism
+<ul>
+<li>nilradial is <span class="math">\(S{-1}{\mathscr{N}}\)</span></li>
+<li>when at <a href="#cross-local-ring-at-a-prime-ideal">local ring at a prime ideal</a></li>
+</ul></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-local-ring-at-a-prime-ideal"></span>local ring at a prime ideal</span> <span class="math">\(S^{-1}A\)</span> is <a href="#cross-local-ring">local ring</a> <span class="math">\(A\)</span> at <span class="math">\(p\)</span> where <span class="math">\(S=A-p\)</span>
 <ul>
@@ -1741,9 +1759,30 @@ $("#content").css("max-width", "1100px")
 <li>new proof, let <span class="math">\(E = A/p\)</span> entire, and <span class="math">\(T = E - p\)</span>, then <span class="math">\(T^{-1}E\)</span> the <a href="#cross-quotient-field">quotient field</a>. show that <span class="math">\(S^{-1}\to T^{-1}E\)</span> has kernel <span class="math">\(S^{-1}p\)</span>, only maximal by the fact that <span class="math">\(S^{-1}A - S^{-1}p = (A-p)^{-1}(A-p)\)</span> every one is <a href="#cross-unit-of-ring">unit of ring</a></li>
 </ul></li>
 <li><span class="math">\(f\in A\)</span> then we have <span class="math">\(A_f\)</span> where <span class="math">\(S=\{f^n\}_{n \geq 0}\)</span></li>
+<li><span class="math">\(A\)</span> <a href="#cross-neotherian-ring">neotherian ring</a> <span class="math">\({\Rightarrow}\)</span> <span class="math">\(S^{-1}A\)</span> noetherian. <code>fix me</code></li>
 <li><span class="math">\(A\)</span> <a href="#cross-principal-ring">principal ring</a> <span class="math">\({\Rightarrow}\)</span> <span class="math">\(S^{-1}A\)</span> principal. trivial</li>
 <li><span class="math">\(A\)</span> <a href="#cross-factorial-ring">factorial ring</a> <span class="math">\({\Rightarrow}\)</span> <span class="math">\(S^{-1}A\)</span> factorial, with primes <span class="math">\((p)\cap S\)</span> empty. trivial</li>
 <li><span class="math">\(A\)</span> <a href="#cross-factorial-ring">factorial ring</a> <span class="math">\(p\)</span> prime, local ring <span class="math">\(A_{(p)}\)</span> principal. trivial, all ideal is of <span class="math">\(J(p^k(A-(p)))\)</span></li>
+</ul></li>
+</ul>
+<h3 id="primary-decomposition">primary decomposition</h3>
+<ul>
+<li><span class="crosslink"><span id="cross-primary-ideal"></span>primary ideal</span> <span class="math">\(q\)</span>, <span class="math">\(xy\in q{\Rightarrow}x\in q \lor \exists n&gt;0: y^n\in q\)</span> <span class="math">\({\Leftrightarrow}\)</span> every <a href="#cross-zero-divisor">zero divisor</a> in <span class="math">\(A\q\)</span> is <a href="#cross-nilpotent">nilpotent</a>
+<ul>
+<li>contraction of <a href="#cross-primary-ideal">primary ideal</a> is primary</li>
+<li><span class="math">\(p = \sqrt{q}\)</span> is prime, <span class="math">\(q\)</span> is <span class="math">\(p\)</span>-primary
+<ul>
+<li>primary is not necessary prime power <span class="math">\(q = (x, y^2){\lhd}k[x, y]\)</span>, and prime power is not necessary primary</li>
+<li>if <span class="math">\(\sqrt{\alpha}\)</span> is maximal ideal, then <span class="math">\(\alpha\)</span> is <a href="#cross-primary-ideal">primary ideal</a>. because every zero-divisor in <span class="math">\(A/\alpha\)</span> is either unit or nilpotent</li>
+<li>power of maximal ideal is primary</li>
+<li>if <span class="math">\(q_i\)</span> <strong>finite</strong> are <span class="math">\(p\)</span>-primary, then <span class="math">\(q = \cap q_i\)</span> is <span class="math">\(p\)</span>-primary</li>
+<li><span class="math">\(x\in q{\Rightarrow}(q:x) = (1)\)</span>. <span class="math">\(x\notin q{\Rightarrow}(q:x)\)</span> is <span class="math">\(p\)</span>-primary. <span class="math">\(x\notin p{\Rightarrow}(q:x) = q\)</span></li>
+</ul></li>
+<li><a href="#cross-primary-decomposition">primary decomposition</a> of an ideal <span class="math">\(\alpha{\lhd}A\)</span> is <span class="math">\(\alpha = \bigcap_{i = 1}^n q_i\)</span>
+<ul>
+<li><span class="crosslink"><span id="cross-minimal-primary-decomposition"></span><span id="cross-reduced-primary-decomposition"></span>minimal primary decomposition</span> if <span class="math">\(r(q_i)\)</span> distince and no <span class="math">\(q_i-\bigcap_{i\neq j}q_j\neq \emptyset\)</span>. any <a href="#cross-primary-decomposition">primary decomposition</a> can be reduced to <a href="#cross-minimal-primary-decomposition">minimal primary decomposition</a></li>
+<li><span class="math">\(\alpha\)</span> has <a href="#cross-primary-decomposition">primary decomposition</a> and <span class="math">\(\alpha = \bigcap q_i\)</span> minimal, then <span class="math">\(p_i = \sqrt{q_i}\)</span> are the prime ideals in the set of ideals <span class="math">\(\sqrt{\alpha: x}\)</span> for <span class="math">\(x\in A\)</span>, independent of particular decomposition</li>
+</ul></li>
 </ul></li>
 </ul>
 <h3 id="exercises-1">exercises</h3>
@@ -1830,7 +1869,7 @@ $("#content").css("max-width", "1100px")
 <h3 id="module-1">module</h3>
 <p><em>please have a picture of abelian cosets!!!</em></p>
 <ul>
-<li><span class="math">\(A\)</span>-<span class="math">\(\mathcal{Mod}\)</span>
+<li><span class="math">\(A\)</span>-<span class="math">\({\mathcal{Mod}}\)</span>
 <ul>
 <li><a href="#cross-object">object</a> <span class="math">\(A\)</span>-<span class="crosslink"><span id="cross-module"></span>module</span> <span class="math">\(M\)</span>
 <ol style="list-style-type: decimal">
@@ -1892,20 +1931,6 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(\frac{L/N}{M/N}\cong \frac{L}{M}\)</span>. by the map, find kernel</li>
 <li><span class="math">\(\frac{M_1+M_2}{M_1} \cong \frac{M_2}{M_1\cap M_2}\)</span>. by <span class="math">\(M_2\to M_1 + M_2\to \frac{M_1+M_2}{M_1}\)</span></li>
 </ul></li>
-<li>for submodules <span class="math">\(N\)</span>, <span class="math">\(P\)</span>, <span class="math">\((N:P)\subset A\)</span> such that <span class="math">\(aP\subset N\)</span> is <strong>ideal</strong> of <span class="math">\(A\)</span>
-<ul>
-<li><span class="crosslink"><span id="cross-module-annililator"></span>module annililator</span> <span class="math">\((0:M) = \{aM = 0\} = {\text{Ann}}(M)\)</span>
-<ul>
-<li><span class="math">\({\text{Ann}}(M + N) = {\text{Ann}}(M) \cap {\text{Ann}}(N)\)</span></li>
-<li><span class="math">\((N:P) = {\text{Ann}}((N + P)/ N)\)</span>. trivial</li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-faithful-module"></span>faithful module</span> <span class="math">\({\text{Ann}}(M) = 0\)</span></li>
-<li><span class="math">\(\alpha\subset {\text{Ann}}(M)\)</span> then <span class="math">\(M\)</span> is <span class="math">\(A/\alpha\)</span>-module, and faithful
-<ul>
-<li>well defined by <span class="math">\(\bar{x}m\)</span> is independent of <span class="math">\(a\)</span></li>
-<li>faithful is trivial</li>
-</ul></li>
-</ul></li>
 <li><a href="#cross-product">product</a> exists</li>
 <li><a href="#cross-coproduct">coproduct</a> exists</li>
 <li><span class="crosslink"><span id="cross-linear-combination"></span>linear combination</span> for <span class="math">\(S\in M\)</span>. <span class="math">\(\sum_{x\in S} a_x x\)</span> almost all but finite equal to <span class="math">\(0\)</span>
@@ -1932,7 +1957,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li><span class="math">\(M\to{\text{hom}}_A(F, M)\)</span> is exact when <span class="math">\(F\)</span> free. this is by if the sequence is exact, because <span class="math">\({\text{hom}}(A, M)\cong M\)</span>, we have it exact, then the free product exact <code>fix me</code></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-finite-generated-module"></span>finite generated module</span> trivial facts
+<li><span class="crosslink"><span id="cross-finitely-generated-module"></span>finitely generated module</span> trivial facts
 <ul>
 <li><span class="crosslink"><span id="cross-noetherian-module"></span>noetherian module</span> all submodule finitely generated <span class="math">\(R\)</span>-module
 <ul>
@@ -1941,16 +1966,12 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(N\subset M(M {\Leftrightarrow}N \land M/N)\)</span>
 <ul>
 <li>left to right is trivial inverse map. right to left, make a bijection <span class="math">\(L\leftrightarrow (L\cap N, \frac{L + N}{N})\)</span></li>
-<li><span class="math">\(M\land N{\Leftrightarrow}M + N\)</span>. trivial corollary by two factoring</li>
+<li><span class="math">\(N, N'{\lhd}M\land M = N + N'{\Rightarrow}(N\land N'{\Leftrightarrow}N + N')\)</span>. trivial corollary by <span class="math">\(N\times N'\to M\)</span></li>
 <li><span class="math">\(R\)</span> <a href="#cross-noetherian-ring">noetherian ring</a> and <span class="math">\(M\)</span> finitely generated, then <span class="math">\(M\)</span> <a href="#cross-noetherian-module">noetherian module</a>. by mapping from <span class="math">\(A^n\)</span></li>
 </ul></li>
 <li>example, <a href="#cross-finite-generated-module">finite generated module</a> has a non-finite generated submodule. take <span class="math">\(R = {\mathbb{Z}}(x_1, x_2, \dots)\)</span> then <span class="math">\(R\)</span> is finitely generated, but <span class="math">\((x_i)\)</span> is not</li>
 </ul></li>
 <li><span class="math">\({\Leftrightarrow}\)</span> isomorphic to some quotient of <span class="math">\(A^n\)</span></li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-restriction-of-scalars"></span>restriction of scalars</span> for <span class="math">\(f: A\to B\)</span> and <span class="math">\(N\)</span> a <span class="math">\(B\)</span>-module, we get a <span class="math">\(A\)</span>-module
-<ul>
-<li><span class="math">\(N\)</span> and <span class="math">\(B\)</span> finitely generated then <span class="math">\(N\)</span> as <span class="math">\(A\)</span>-module is finitely generated</li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-the-group-of-module-homomorphisms"></span>the group of module homomorphisms</span> let <span class="math">\(A\)</span> a ring and <span class="math">\(X\)</span>, <span class="math">\(X'\)</span> modules, we investigate the <a href="#cross-abelian-group">abelian group</a> <span class="math">\({\text{hom}}_A(X', X)\)</span> which contains <span class="math">\(f: X'\to X\)</span>
 <ul>
@@ -2017,7 +2038,23 @@ $("#content").css("max-width", "1100px")
 <li><span class="crosslink"><span id="cross-finite-length-module"></span>finite length module</span> is module which has finite <a href="#cross-simple-filteration">simple filteration</a>, and it has <span class="crosslink"><span id="cross-length-of-module"></span>length of module</span></li>
 <li>we can define a <a href="#cross-additive-function">additive function</a> over all finite length module generated by defining on <a href="#cross-simple-module">simple module</a>s</li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-direct-limit"></span>direct limit</span> and <span class="crosslink"><span id="cross-inverse-limit"></span>inverse limit</span> <code>fix me</code></li>
+<li><em>direct limit</em>
+<ol style="list-style-type: decimal">
+<li>for a system of module defined on a <a href="#cross-direct-set">direct set</a>, with associative homomorphism, <span class="math">\((M_i, \nu_ij)\)</span></li>
+<li>we construct by direct sum with quotient. get <span class="crosslink"><span id="cross-direct-limit"></span>direct limit</span> <span class="math">\(\lim_{\rightarrow} M_i\)</span>, with canonical homomorphisms <span class="math">\(\mu_i\)</span>
+<ul>
+<li>every element is some <span class="math">\(\mu_i(x_i)\)</span>. proof by taking <span class="math">\(\sup\)</span></li>
+</ul></li>
+<li>it is universal. we construct the map <span class="math">\(\alpha\)</span>, and show that it is well defined, and unique</li>
+<li>homomorphism of direct limits over same <a href="#cross-direct-set">direct set</a>. a set of homomorphisms <span class="math">\(M_i\to N_i\)</span> such that commutative with the <span class="math">\(u_{ij}\)</span>s will induce a homomorphism of the <a href="#cross-direct-limit">direct limit</a>s <span class="math">\(M\to N\)</span></li>
+<li>exactness on each <span class="math">\(M_i\to N_i\to P_i\)</span> will induce exactness on <span class="math">\(M\to N\to P\)</span>. trivial</li>
+<li>it is commute with <a href="#cross-tensor-product">tensor product</a> in commutative setting</li>
+<li>direct limit of ring as <span class="math">\({\mathbb{Z}}\)</span>-module is again a ring *. <span class="math">\({\mathscr{N}}(\lim_\rightarrow A_i) = \lim_\rightarrow {\mathscr{N}}_i\)</span></li>
+<li>infinite tensor product for module and algebra defined by <a href="#cross-direct-limit">direct limit</a></li>
+</ol>
+<ul>
+<li>submodules <span class="math">\(M_i\)</span>, we have <span class="math">\(\lim_\rightarrow M_i = \bigcup M_i\)</span>. trivial</li>
+</ul></li>
 </ul></li>
 </ul>
 <h3 id="module-over-commutative-ring">module over commutative ring</h3>
@@ -2036,16 +2073,19 @@ $("#content").css("max-width", "1100px")
 <li><code>fix me: dual module in vector space case</code></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-the-ring-of-module-endomorphisms"></span>the ring of module endomorphisms</span> <span class="math">\(A\)</span> commutative and <span class="math">\(R\)</span> a ring, <span class="math">\(\rho: R\to {\text{end}}_A(M)\)</span> is <span class="crosslink"><span id="cross-representation"></span>representation</span> of <span class="math">\(R\)</span> on <span class="math">\(M\)</span>, occurs especially when <span class="math">\(A = K\)</span> is a field</li>
-<li><span class="crosslink"><span id="cross-finitely-generated-module-over-commutative-ring"></span>finitely generated module over commutative ring</span>
+<li><a href="#cross-finitely-generated-module">finitely generated module</a> over <a href="#cross-commutative-ring">commutative ring</a>
 <ul>
 <li><span class="math">\(\varphi: A\to A\)</span> such that <span class="math">\(\varphi(M)\subset \alpha M\)</span> then <span class="math">\(\varphi^n + a_1 \varphi^{n-1} + \dots + a_n = 0\)</span> with <span class="math">\(a_i \in \alpha\)</span>
 <ul>
 <li><code>fix me: a linear algebra proof. is it only true for commutative rings?</code></li>
 <li><span class="math">\(\alpha M = M\)</span> then <span class="math">\(x = 1 + a_1 +\ldots + a_n \equiv 1 \mod \alpha\)</span> and <span class="math">\(xM = 0\)</span></li>
-<li><span class="crosslink"><span id="cross-Nakayama's-lemma"></span>Nakayama’s lemma</span> <span class="math">\(\alpha \in {\mathscr{R}}{\Rightarrow}(\alpha M = M{\Rightarrow}M = 0)\)</span></li>
-<li><span class="math">\(\alpha \subset {\mathscr{R}}{\Rightarrow}(M = \alpha M + N{\Rightarrow}M = N)\)</span>
+<li><span class="crosslink"><span id="cross-Nakayama's-lemma"></span>Nakayama’s lemma</span> <span class="math">\(\alpha \subset {\mathscr{R}}{\Rightarrow}(\alpha M = M{\Rightarrow}M = 0)\)</span>
 <ul>
-<li><span class="math">\(\alpha \frac{M}{N} = \frac{\alpha M + N}{N} = \frac{M}{N}\)</span> <code>fix me</code></li>
+<li><span class="math">\(\alpha \subset {\mathscr{R}}{\Rightarrow}(M = \alpha M + N{\Rightarrow}M = N)\)</span>
+<ol style="list-style-type: decimal">
+<li>proof by <span class="math">\(\alpha \frac{M}{N} = \frac{\alpha M + N}{N} = \frac{M}{N}\)</span></li>
+<li>another proof. it is actually <strong>really easy</strong>, suppose not zero, and suppose minimal number of base, then <span class="math">\(x_0 = \sum a_i x_i{\Rightarrow}(1-a_0)x_0 = \sum a_i x_i\)</span>, and <span class="math">\(1-a_0\)</span> is invertible, so we have the result</li>
+</ol></li>
 </ul></li>
 </ul></li>
 <li><span class="math">\(A\)</span> local ring, <span class="math">\(M/mM\)</span> is a <span class="math">\(A/m\)</span>-module, a <span class="math">\(k\)</span>-vector space
@@ -2053,57 +2093,144 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(x_i\)</span>’s image is base of the vector space, then <span class="math">\(x_i\)</span> generate <span class="math">\(M\)</span>. proof, <span class="math">\(N\to M\to M/mM\)</span> is onto, so <span class="math">\(N + mM = M\)</span> so by above, we have <span class="math">\(N = M\)</span></li>
 </ul></li>
 </ul></li>
+<li>associated primes and etc. <code>fix me: please do exercise of AM, stop read Lang!!!</code>
+<ul>
+<li>for submodules <span class="math">\(N\)</span>, <span class="math">\(P\)</span>, <span class="math">\((N:P)\subset A\)</span> such that <span class="math">\(aP\subset N\)</span> is <strong>ideal</strong> of <span class="math">\(A\)</span></li>
+<li><span class="crosslink"><span id="cross-annihilator"></span>annihilator</span> <span class="math">\((0:N) = \{aN = 0\} = {\text{ann}}(N)\)</span>, we set <span class="math">\(N = 0\)</span>
+<ul>
+<li>for module <span class="math">\(M\)</span>, <span class="math">\(\alpha \subset {\text{ann}}(M)\)</span>, then <span class="math">\(M\)</span> can be regarded as <span class="math">\(A/\alpha\)</span>-module. <span class="math">\(M\)</span> is <span class="crosslink"><span id="cross-faithful-module"></span>faithful module</span> if <span class="math">\({\text{ann}}(M) = 0\)</span>. <em>we cannot reduce the operation anymore</em></li>
+<li><span class="math">\({\text{ann}}(M + N) = {\text{ann}}(M) \cap {\text{ann}}(N)\)</span></li>
+<li><span class="math">\((N:P) = {\text{ann}}((N + P)/ N)\)</span>. trivial</li>
+<li><span class="math">\(A/{\text{ann}}(x)\cong Ax\)</span>. trivial
+<ul>
+<li><span class="math">\((Ax)_p\neq 0\)</span> for <span class="math">\(p\)</span> prime <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\({\text{ann}}(x)\subset p\)</span>. <span class="math">\(t(s_2a_1-s_1a_2)x = 0{\Rightarrow}ts_2 x = 0\)</span>, trivial</li>
+</ul></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-principal-homomorphism"></span>principal homomorphism</span> for <span class="math">\(a\in A\)</span>, <span class="math">\(a_M: M\to M\)</span>, <span class="math">\(x\to ax\)</span> for <span class="math">\(x \in M\)</span></li>
+<li><span class="crosslink"><span id="cross-locally-nilpotent"></span>locally nilpotent</span> <span class="math">\(\forall x\in M\exists n(x): a^{n(x)}x = 0\)</span>
+<ul>
+<li><span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(a\)</span> lies in every prime ideal such that <span class="math">\(M_p\neq 0\)</span>. proof is tricky… <span class="math">\(M_p\neq 0{\Rightarrow}\exists x\in M:(Ax)_p\neq 0\)</span> <span class="math">\({\Rightarrow}{\text{ann}}(x)\subset p{\Rightarrow}(a^n\in {\text{ann}}(x){\Rightarrow}a\in p)\)</span>. <span class="math">\(\exists x\forall n: a^n\neq 0{\Rightarrow}\)</span> prime such that not intersect <span class="math">\(1, a, a^2, \dots\)</span> <span class="math">\(p\)</span>, then <span class="math">\((Ax)_p\neq 0{\Rightarrow}(M_p\neq 0\land a\notin p)\)</span>. <strong>how to construct not every</strong></li>
+<li>for finitely generated, <span class="math">\(\exists n\forall x:a^nx = 0\)</span></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-associated-prime-ideal"></span>associated prime ideal</span> <span class="math">\(p\)</span> with <span class="math">\(M\)</span>, <span class="math">\(\exists x: p = {\text{ann}}(x)\)</span>
+<ul>
+<li><span class="math">\(p\)</span> a maximal element in the ideals which are annihilators of some <span class="math">\(x\neq 0\)</span> <span class="math">\({\Rightarrow}\)</span> <span class="math">\(p\)</span> prime. <span class="math">\(p = {\text{ann}}(x)\land ab \in p\land a\notin p{\Rightarrow}ax\neq 0 \land (b, p) = {\text{ann}}(ax){\Rightarrow}b \in p\)</span></li>
+<li>if <span class="math">\(A\)</span> <a href="#cross-noetherian-ring">noetherian ring</a> and <span class="math">\(M\)</span> a nonzero module
+<ul>
+<li>there is a <a href="#cross-associated-prime-ideal">associated prime ideal</a> with <span class="math">\(M\)</span></li>
+<li>if <span class="math">\(M\)</span> <a href="#cross-noetherian-module">noetherian module</a>, then <span class="math">\(M = M_1 \supset M_2\supset \cdots\supset M_r = 0\)</span> such that <span class="math">\(M_i/M_{i+1}\)</span> isomorphic to <span class="math">\(A/p_i\)</span></li>
+<li><span class="math">\(a_M\)</span> injective <span class="math">\({\Leftrightarrow}\)</span> not in any associated prime of <span class="math">\(M\)</span></li>
+<li><span class="math">\(a_M\)</span> is <a href="#cross-locally-nilpotent">locally nilpotent</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(a\)</span> in every <a href="#cross-associated-prime">associated prime</a> of <span class="math">\(M\)</span> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(a\)</span> in every prime <span class="math">\(p\)</span> such that <span class="math">\(M_p\neq 0\)</span>. we only need to proof 2 implies 1 or 3. <span class="math">\(M_p\neq 0{\Rightarrow}\exists x: (Ax)_p\neq 0{\Rightarrow}\exists q{\lhd}A\)</span> such that <span class="math">\(q\)</span> is <a href="#cross-associated-prime">associated prime</a> of <span class="math">\((Ax)\)</span>… <code>fix me</code></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#cross-free-module">free module</a> over <a href="#cross-commutative-ring">commutative ring</a> has defined <span class="crosslink"><span id="cross-dimension"></span>dimension</span>. we get it by factor though a maximal module and use the invariant of vector space</li>
+<li><span class="crosslink"><span id="cross-module-over-principal-entire-rings"></span>module over principal entire rings</span> <code>fix me</code>
+<ul>
+<li>when <span class="math">\(A\)</span> entire, <span class="crosslink"><span id="cross-torsion-submodule"></span>torsion submodule</span> <span class="math">\(M_{\text{tor}}\)</span> <span class="math">\(x\in M: \exists a\in A : a\neq 0 \land ax = 0\)</span>. it is well-defined for we have entire!!!. in what sense it resembles <a href="#cross-torsion-group">torsion group</a>? think <span class="math">\(R\)</span> as <span class="math">\({\mathbb{Z}}\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="tensor-product">tensor product</h3>
+<ul>
 <li><span class="crosslink"><span id="cross-tensor-product"></span>tensor product</span> is <a href="#cross-initial">initial</a> in <a href="#cross-coslice-category">coslice category</a> of <span class="math">\(E_1\times \cdots\times E_n\)</span> where the arrows should be <a href="#cross-multilinear-map">multilinear map</a>
-<ol style="list-style-type: decimal">
-<li><span class="math">\((x + x', y) - (x, y) - (x', y)\)</span>, right, <span class="math">\((ax, y) - a(x, y)\)</span>, right</li>
-</ol>
 <ul>
 <li>remark on why defined over commutative ring, see <a href="#cross-ref-algebra-0">ref-algebra-0</a></li>
-<li>construction is trivial</li>
+</ul>
+<ol start="0" style="list-style-type: decimal">
+<li>canonical isomorphisms
+<ul>
 <li><span class="math">\(M\otimes N\cong N\otimes M\)</span>. trivial</li>
+<li><span class="math">\((A\otimes M)\cong M\)</span>. trivial</li>
 <li><span class="math">\((M\otimes N)\otimes P\cong M\otimes (N\otimes P)\cong M\otimes N\otimes P\)</span></li>
-<li><span class="math">\((A\otimes M)\cong M\)</span></li>
-<li><span class="math">\({\text{hom}}(M\otimes N, P)\cong {\text{hom}}(M, {\text{hom}}(N, P))\)</span></li>
-<li><span class="math">\(\_\otimes_R N\)</span> is left-adjoint to <span class="math">\({\text{hom}}_R(N, \_)\)</span>
+</ul></li>
+<li>induce map 2. for <span class="math">\(f: M\to M'\)</span>, <span class="math">\(g: N\to N'\)</span> we have <span class="math">\(f\otimes g: M\otimes N\to M'\otimes N'\)</span> with <span class="math">\(x\otimes y\to f(x)\otimes g(y)\)</span></li>
+<li>exist, by construction like, <span class="math">\((x + x', y) - (x, y) - (x', y)\)</span>, right, <span class="math">\((ax, y) - a(x, y)\)</span>, right
 <ul>
-<li>cocontinuous. <span class="math">\((M\oplus N) \otimes P \cong (M\otimes P)\oplus (N\otimes P)\)</span></li>
-<li>left exact</li>
-<li><span class="math">\(\frac{R}{I}\otimes_R N\cong \frac{N}{IN}\)</span>, <span class="math">\(N\)</span> is <span class="math">\(R\)</span>-module and <span class="math">\(I\)</span> ideal of <span class="math">\(R\)</span>
+<li><span class="crosslink"><span id="cross-pure-tensor"></span>pure tensor</span> <span class="math">\(x\otimes y\)</span>
+<ol style="list-style-type: decimal">
+<li>every element is a linear combination of pure tensors</li>
+<li>homomorphism is determined on pure tensor</li>
+</ol></li>
+<li><span class="math">\(x\otimes y\)</span> is <strong>ambiguous</strong>, you should know which it belongs
 <ul>
+<li>example: <span class="math">\(2\otimes 1\)</span> as element of <span class="math">\({\mathbb{Z}}\otimes {\mathbb{Z}}/2{\mathbb{Z}}\)</span> is zero, but is non zero as element of <span class="math">\(2{\mathbb{Z}}\otimes {\mathbb{Z}}/2{\mathbb{Z}}\)</span></li>
+</ul></li>
+<li>but we can always reduce a <span class="math">\(0\)</span> element to a tensor product of finitely generated modules. <span class="math">\(\sum x_i\otimes y_i = 0\)</span> then <span class="math">\(M_0 = (x_i)\)</span> and <span class="math">\(N_0 = (y_i)\)</span> then <span class="math">\(\sum x_i \otimes y_i = 0\)</span> in <span class="math">\(M_0\otimes N_0\)</span>
+<ul>
+<li>how to think of this? think what’s in a tensor product, and think how it is related to submodule</li>
+</ul></li>
+</ul></li>
+<li><span class="math">\(\_\otimes_R N\)</span> left-adjoint to <span class="math">\({\text{hom}}_R(N, \_)\)</span>
+<ol style="list-style-type: decimal">
+<li>functor with <span class="math">\(\alpha\otimes N: M_1\otimes N\to M_2\otimes N\)</span> by induce on <span class="math">\(M_1\times N\to M_2\times N\to M_2\otimes N\)</span>
+<ol style="list-style-type: decimal">
+<li><span class="math">\(m\otimes n\to \alpha(m)\otimes n\)</span></li>
+<li><span class="math">\((\alpha \otimes N)\circ (\beta\otimes N)\)</span> agree with <span class="math">\((\alpha\circ \beta)\otimes N\)</span> on <span class="math">\(m\otimes n\to \alpha(\beta(m))\otimes n\)</span> so the map agree</li>
+</ol></li>
+<li><span class="math">\({\text{hom}}_R(M\otimes_R N, M')\cong {\text{hom}}_R(M, {\text{hom}}_R(N, M'))\)</span>
+<ol style="list-style-type: decimal">
+<li>for any <span class="math">\(f: M\otimes_R N\to M'\)</span> we can define a linear map from <span class="math">\(M\)</span> to <span class="math">\({\text{hom}}_R(N, M')\)</span> simply</li>
+<li>for any <span class="math">\(g: M\to {\text{hom}}_R(N, M')\)</span> we can define a map <span class="math">\(g':M\times N\to M'\)</span> by <span class="math">\((m, n)\to g(m)(n)\)</span>. it is linear in second variable, as it is a linear map. it is linear in first variable, as <span class="math">\(g'((a, n_0) + (b, n_0)) = g'((a, n_0)) + g'((b, n_0)) = g(a)(n_0) + g(b)(n_0)\)</span> as <span class="math">\(g(a + b) = g(a) + g(b)\)</span>, the former <span class="math">\(=g(a + b)(n_0) = g'((a+b, n_0))\)</span>. so we have induced map</li>
+<li>it is easily see that they both add to <span class="math">\({\text{id}}\)</span></li>
+</ol></li>
+<li><a href="#cross-cocontinuous">cocontinuous</a>
+<ul>
+<li><span class="math">\((M\oplus N) \otimes P \cong (M\otimes P)\oplus (N\otimes P)\)</span></li>
+<li><span class="math">\(R^{\oplus A}\otimes_R R^{\oplus B} \cong R^{\oplus A\times B}\)</span> <code>fix me</code></li>
+</ul></li>
+</ol></li>
+<li>it is right exact <code>fix me: should in abelian category part</code>
+<ol style="list-style-type: decimal">
+<li>proof by exact calculation</li>
+<li>proof in Atiyah. using the <span class="math">\({\text{hom}}\)</span> thing twice, <span class="math">\(\forall P: {\text{hom}}(M, {\text{hom}}(N, P)){\Rightarrow}{\text{hom}}(M\otimes N, P){\Rightarrow}E\otimes N\)</span>. <em>so the exact thing and the adjoint thing is related</em></li>
+</ol>
+<ul>
+<li><span class="math">\(\frac{R}{I}\otimes_R N\cong \frac{N}{IN}\)</span>, <span class="math">\(N\)</span> is <span class="math">\(R\)</span>-module and <span class="math">\(I\)</span> ideal of <span class="math">\(R\)</span>. one thing is that the map from <span class="math">\(IN\)</span> is well-defined, because we have if <span class="math">\(f\)</span> is a bilinear and <span class="math">\(am = bn\)</span> then <span class="math">\(f(a, m) = af(1, m) = f(1, am) = f(1, bn) = f(b, n)\)</span>
+<ul>
+<li>so how to you show that a thing is isomorphic to the tensor product? show it satisfies the universal property!</li>
+</ul></li>
 <li><span class="math">\(\frac{R}{I}\otimes_R\frac{R}{J}\cong \frac{R}{I+J}\)</span>, ideal <span class="math">\(I\)</span>, <span class="math">\(J\)</span> of <span class="math">\(R\)</span>
 <ul>
 <li><span class="math">\({\mathbb{Z}}/n{\mathbb{Z}}\otimes {\mathbb{Z}}/m{\mathbb{Z}}= {\mathbb{Z}}/\text{gcd}(m, n){\mathbb{Z}}\)</span></li>
 </ul></li>
 </ul></li>
-</ul></li>
-<li><span class="math">\(M'\to M\to M''\to 0{\Rightarrow}M'\otimes N\to M\otimes N\to M''\otimes N\to 0\)</span> exactness, with maps <span class="math">\(f\otimes 1\)</span>
-<ul>
-<li>the proof used the nonsense property of exact sequence… <strong>wired</strong></li>
-</ul></li>
-<li><code>fix me: proof above when you understand</code></li>
-<li>if <span class="math">\(\sum x_i\otimes y_i = 0\)</span> in <span class="math">\(M\otimes N\)</span> then there is <span class="math">\(M_0\otimes N_0\)</span> two finitely generated submodule, such that it is still <span class="math">\(0\)</span></li>
-<li>example
-<ul>
-<li><span class="math">\(2\otimes 1\)</span> as element of <span class="math">\({\mathbb{Z}}\otimes {\mathbb{Z}}/2{\mathbb{Z}}\)</span> is zero, but is non zero as element of <span class="math">\(2{\mathbb{Z}}\otimes {\mathbb{Z}}/2{\mathbb{Z}}\)</span></li>
-</ul></li>
-</ul></li>
-<li><a href="#cross-free-module">free module</a> over <a href="#cross-commutative-ring">commutative ring</a> has defined <span class="crosslink"><span id="cross-dimension"></span>dimension</span>. we get it by factor though a maximal module and use the invariant of vector space</li>
 <li><span class="crosslink"><span id="cross-flat-module"></span>flat module</span> <span class="math">\(T_N = \_\otimes_R N\)</span> is <a href="#cross-exact-functor">exact functor</a>
 <ul>
-<li><span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(f:M'\to M\)</span> injective and <span class="math">\(M'\)</span>, <span class="math">\(M\)</span> finitely generated then <span class="math">\(f\otimes 1\)</span> injective</li>
-<li><span class="math">\(f: A\to B\)</span> is ring morphism, <span class="math">\(N_B = B\otimes_A N\)</span> is flat</li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-module-over-principal-entire-rings"></span>module over principal entire rings</span> <code>fix me</code>
+<li><span class="math">\({\Leftrightarrow}\)</span> exact on <a href="#cross-short-exact-sequence">short exact sequence</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(f: M'\hookrightarrow M{\Rightarrow}f\otimes {\text{id}}: M'\otimes N\hookrightarrow M\otimes N\)</span> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(f:M'\to M\)</span> injective and <span class="math">\(M'\)</span>, <span class="math">\(M\)</span> finitely generated then <span class="math">\(f\otimes {\text{id}}\)</span> injective
 <ul>
-<li>when <span class="math">\(A\)</span> entire, <span class="crosslink"><span id="cross-torsion-submodule"></span>torsion submodule</span> <span class="math">\(M_{\text{tor}}\)</span> <span class="math">\(x\in M: \exists a\in A : a\neq 0 \land ax = 0\)</span>. it is well-defined for we have entire!!!. in what sense it resembles <a href="#cross-torsion-group">torsion group</a>? think <span class="math">\(R\)</span> as <span class="math">\({\mathbb{Z}}\)</span></li>
+<li>we just need to proof finitely generated part. we look at the kernel, and use</li>
+<li><span class="math">\(M\land N{\Rightarrow}M\otimes_R N\)</span>. rather trivial</li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-extensions-of-scalars"></span>extensions of scalars</span> for <span class="math">\(f: A\to B\)</span> and <span class="math">\(A\)</span>-module <span class="math">\(M\)</span>, <span class="math">\(M_B = B\otimes_A M\)</span> is a <span class="math">\(B\)</span>-module
+</ul></li>
+</ol>
+<ul>
+<li><span class="math">\(f: A\to B\)</span> is ring morphism, <span class="math">\(N\)</span> a flat <span class="math">\(A\)</span>-module, then <span class="math">\(N_B = B\otimes_A N\)</span> is flat <span class="math">\(B\)</span>-module</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li>base change
+<ol style="list-style-type: decimal">
+<li><span class="math">\(R\)</span>-<span class="crosslink"><span id="cross-balanced-bilinear"></span>balanced bilinear</span> a <span class="math">\({\mathbb{Z}}\)</span>-bilinear into a group <span class="math">\(G\)</span>, <span class="math">\(\varphi: M\times N\to G\)</span>, such that <span class="math">\(\varphi(rm,n) = \varphi(m, rn)\)</span></li>
+<li>universal property holds for <span class="math">\(R\)</span>-balanced bilinear</li>
+<li><span class="math">\((R, S)\)</span>-<span class="crosslink"><span id="cross-bimodule"></span>bimodule</span>. a <span class="math">\(R\)</span>-module and <span class="math">\(S\)</span>-module, such that <span class="math">\(r(sn) = s(rn)\)</span></li>
+<li><a href="#cross-adjoint">adjoint</a> <span class="math">\({\text{hom}}_R(M, {\text{hom}}_S(N, P))\cong {\text{hom}}_S(M\otimes_R N, P)\)</span> where <span class="math">\(M\)</span> is <span class="math">\(R\)</span>-module, <span class="math">\(N\)</span> is <span class="math">\((R, S)\)</span>-bimodule, <span class="math">\(P\)</span> is <span class="math">\(S\)</span>-module</li>
+<li><span class="math">\((M\otimes_A N)\otimes_B P\cong M\otimes_A (N\otimes_B P)\)</span>. how to proof this kind of results? we define <span class="math">\(f_p: M\times N\to M\otimes_A(N\otimes_B P)\)</span> such that <span class="math">\((m, n)\to m\otimes(n\otimes p)\)</span>. it is clearly bilinear, so induce a map from <span class="math">\(M\otimes_A N\)</span> for every <span class="math">\(p\)</span>. and then…</li>
+</ol></li>
+<li>change of scalars. for <span class="math">\(f: A\to B\)</span> and <span class="math">\(N\)</span> a <span class="math">\(B\)</span>-module, <span class="math">\(M\)</span> a <span class="math">\(A\)</span>-module, in each case, we get a <span class="math">\((A,B)\)</span>-<a href="#cross-bimodule">bimodule</a>
+<ol style="list-style-type: decimal">
+<li><span class="crosslink"><span id="cross-restriction-of-scalars"></span>restriction of scalars</span> <span class="math">\(f_*\)</span> <a href="#cross-functor">functor</a> <span class="math">\(B\text{-}{\mathcal{Mod}}\to A\text{-}{\mathcal{Mod}}\)</span>
+<ul>
+<li><span class="math">\(N\)</span> and <span class="math">\(B\)</span> finitely generated then <span class="math">\(N\)</span> as <span class="math">\(A\)</span>-module is finitely generated</li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-extensions-of-scalars"></span>extensions of scalars</span> <span class="math">\(f^*(M) = M_B = B\otimes_A M\)</span> is <a href="#cross-functor">functor</a> <span class="math">\(A\text{-}{\mathcal{Mod}}\to B\text{-}{\mathcal{Mod}}\)</span>
 <ul>
 <li><span class="math">\(M\)</span> finitely generated <span class="math">\({\Rightarrow}\)</span> <span class="math">\(M_B\)</span> finitely generated</li>
 </ul></li>
-</ul></li>
+</ol></li>
+</ol></li>
 </ul>
 <p><img src="./images/free-module.png" style="width:450px" /></p>
+<h3 id="localization-1">localization</h3>
 <ul>
 <li><strong>localization of module</strong> for <span class="math">\(A\)</span>-module <span class="math">\(M\)</span>, define <span class="math">\(S^{-1}M\)</span> by <span class="math">\((m, s)\sim (m', s') {\Leftrightarrow}\exists t\in S: t(s'm-sm') = 0\)</span>
 <ol style="list-style-type: decimal">
@@ -2126,17 +2253,41 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li><span class="math">\(S^{-1}(N + P) = S^{-1}N + S^{-1}P\)</span>. trivial</li>
 <li><span class="math">\(S^{-1}(N\cap P) = S^{-1}N+S^{-1}P\)</span>. trivial</li>
+<li>as <span class="math">\(S^{-1}A\)</span>-module, <span class="math">\(S^{-1}A\otimes_A M\cong S^{-1}M\)</span>
+<ul>
+<li>adding as <span class="math">\(S^{-1}\)</span> a <a href="#cross-exact-functor">exact functor</a>, we show that <span class="math">\(S^{-1}A\)</span> is flat <span class="math">\(A\)</span>-module</li>
+</ul></li>
+<li><span class="math">\(S^{-1}M\otimes_{S^{-1}A}S^{-1}N \cong S^{-1}(M\otimes_A N)\)</span>, and <span class="math">\(f((m/s)\otimes(n/t)) = (m\otimes n)/st\)</span>
+<ul>
+<li><span class="math">\(M_p\otimes_{A_p}N_p\cong (M\otimes_A N)_p\)</span></li>
+<li><em>it is pure algebra… i hate it</em></li>
+</ul></li>
+<li><span class="math">\(M\)</span> finitely generated <span class="math">\(S^{-1}({\text{ann}}(M)) = {\text{ann}}(S^{-1}M)\)</span>. <span class="math">\(x\in{\text{ann}}(M){\Rightarrow}\frac{x}{s_1}\in {\text{ann}}(S^{-1}M)\)</span> and <span class="math">\(\frac{n}{s_1}\in{\text{ann}}(S^{-1}M){\Rightarrow}ns_im_i = 0{\Rightarrow}n\prod s_i\in {\text{ann}}(M)\land \frac{n}{s_1} = \frac{n\prod s_i}{s_1\prod s_i}\)</span>
+<ul>
+<li><span class="math">\(N\)</span>, <span class="math">\(P\)</span> submodules of <span class="math">\(M\)</span>, and <span class="math">\(P\)</span> finitely generated, <span class="math">\(S^{-1}(N:P) = (S^{-1}N:S^{-1}P)\)</span>
+<ul>
+<li><span class="math">\(S^{-1}(\alpha:\beta) = (S^{-1}\alpha:S^{-1}\beta)\)</span> when <span class="math">\(\beta\)</span> finitely generated</li>
+</ul></li>
+</ul></li>
 <li><span class="crosslink"><span id="cross-fraction-module-at-prime-ideal"></span>fraction module at prime ideal</span> <span class="math">\(M_p\)</span>
 <ul>
 <li><span class="math">\(M\to \prod M_p\)</span> for all <span class="math">\(p\)</span> <a href="#cross-maximal-ideal">maximal ideal</a>s in injective
 <ul>
 <li><span class="math">\(\forall m\exists s\notin m: sa = 0\)</span>. an element out of all maximal is unit, so consider module generated by <span class="math">\(s_i\)</span> we have it out of all maximal, so it is <span class="math">\(A\)</span>, so <span class="math">\(\sum x_i s_i = 1\)</span> so we have a <span class="math">\(\sum x_i s_i a = 0\)</span> so <span class="math">\(a = 0\)</span></li>
 </ul></li>
+<li><span class="math">\(\varphi: M\to N\)</span> injective/surjective <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(\varphi_m: M_m\to N_m\)</span> at each maximal ideal <span class="math">\(m\)</span>
+<ul>
+<li>proof for surjective. i am so stupid… same idea like in Atiyah, <span class="math">\({\text{coker }}f\hookrightarrow \prod ({\text{coker }}f)_p\)</span></li>
+</ul></li>
 <li>if <span class="math">\(0\to M'_p\to M_p\to M''_p\to 0\)</span> exact then <span class="math">\(0\to M'\to M\to M''\to 0\)</span> exact
 <ul>
 <li>we form the product of <span class="math">\(M_p\)</span> so they are exact, so we embed <span class="math">\(M\)</span>s into it, a embedding in exact is exact, which is trivial, because the map is induced, and commute</li>
 </ul></li>
 <li><span class="math">\(A\)</span> <a href="#cross-entire-ring">entire ring</a> and <span class="math">\(M\)</span> <a href="#cross-torsion-free-module">torsion-free module</a>, then <span class="math">\(M\to M_p\)</span> injective. trivial</li>
+<li><span class="math">\(M\)</span> flat <span class="math">\(A\)</span>-module <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(M_p\)</span> flat <span class="math">\(A_p\)</span>-module for each maximal ideal
+<ul>
+<li>left to right is trivial. <span class="math">\(N\to P{\Rightarrow}N_m\to P_m{\Rightarrow}N_m\otimes_{A_m}M_m\to P_m\otimes_{A_m}M_m\)</span> <span class="math">\({\Rightarrow}\)</span> <span class="math">\((N\otimes_A M)_m\to (P\otimes_A M)_m{\Rightarrow}N\otimes_A M\to P\otimes_A M\)</span></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2163,10 +2314,12 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(R[x]\)</span> is <a href="#cross-finite-type-algebra">finite type algebra</a>, but not <a href="#cross-finite-algebra">finite algebra</a></li>
 </ul></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-tensor-product-of-algebra"></span>tensor product of algebra</span> with <span class="math">\(\sum(b_i\otimes c_i)\sum(b'_j\otimes c'_j) = \sum_{i,j}b_ib_j'\otimes c_ic'_j\)</span>
+<li><span class="crosslink"><span id="cross-tensor-product-of-algebra"></span>tensor product of algebra</span> <span class="math">\(D = B\otimes_A C\)</span>
+<ol style="list-style-type: decimal">
+<li>with <span class="math">\(\sum(b_i\otimes c_i)\sum(b'_j\otimes c'_j) = \sum_{i,j}b_ib_j'\otimes c_ic'_j\)</span>. it is a <a href="#cross-ring">ring</a>, and if <span class="math">\(B\)</span> and <span class="math">\(C\)</span> is <a href="#cross-commutative-ring">commutative ring</a>, is is too</li>
+</ol>
 <ul>
-<li>is a <a href="#cross-commutative-ring">commutative ring</a> and a <span class="math">\(A\)</span>-algebra</li>
-<li><img src="./images/algebra-diagram.jpg" style="width:200px" /></li>
+<li>it is a <span class="math">\(A\)</span>-algebra, by <span class="math">\(a\to f(a)\otimes 1 = 1\otimes g(a)\)</span>, it is well defined, consider how <span class="math">\(A\)</span> operate on <span class="math">\(B\)</span> and <span class="math">\(C\)</span> as a module <img src="./images/algebra-diagram.jpg" style="width:200px" /></li>
 </ul></li>
 <li>examples
 <ul>
@@ -2211,9 +2364,50 @@ $("#content").css("max-width", "1100px")
 </ol>
 <p><em>from <a href="#cross-ref-algebra-atiyah">ref-algebra-atiyah</a>, chapter 02</em></p>
 <ol style="list-style-type: decimal">
-<li>a trivial proof is such that if we have a bilinear, <span class="math">\(ma + nb = 1\)</span> then <span class="math">\((c, d) = (c, d(ma+nb)) = (c, dma) = m(c, ad) = (0, ad) = 0\)</span>, all bilinear is trivial map, so the tensor product is trivial map</li>
+<li>a trivial proof is such that if we have a bilinear, <span class="math">\(ma + nb = 1\)</span> then <span class="math">\((c, d) = (c, d(ma+nb)) = (c, dma) = m(c, ad) = (0, ad) = 0\)</span>, all bilinear is trivial map, so the tensor product is trivial map. another proof is <span class="math">\(x\otimes y = (ma + nb) x\otimes y = ambn(x\otimes y){\Rightarrow}x\otimes y = 0\)</span></li>
+<li>in text</li>
+<li><span class="math">\(A\)</span> local ring, and <span class="math">\(M\)</span>, <span class="math">\(N\)</span> finitely generated <span class="math">\(A\)</span> module. if <span class="math">\(M\otimes N=0\)</span> then <span class="math">\(M = 0\)</span> or <span class="math">\(N = 0\)</span>
+<ul>
+<li><span class="math">\(k = A/m\)</span>, and <span class="math">\(M_k = k\otimes M \cong M/mM\)</span>. so <span class="math">\(M_k = 0{\Rightarrow}M = mM{\Rightarrow}M = 0\)</span>. so <span class="math">\(M \otimes_A N = 0{\Rightarrow}M_k\otimes N_k = 0{\Rightarrow}M_k = 0 \lor N_k = 0\)</span></li>
+<li>if i do not see the hint, i cannot work it out</li>
+</ul></li>
+<li><span class="math">\(M = \coprod M_i{\Leftrightarrow}M_i\)</span> flatness. you should proof that if a sequence exact iff the component exact for coproduct</li>
+<li><span class="math">\(A[x]\)</span> is flat <span class="math">\(A\)</span>-algebra. i don’t know, but it seems to me if flat algebra means flat module + algebra, then we show it is a flat module, but as a module <span class="math">\(A[x]\cong A^{{\mathbb{N}}}\)</span>, so i do not know there is something to show</li>
+<li><strong>polynomial with module coefficient</strong> <span class="math">\(M[x]\)</span> is <span class="math">\(A[x]\)</span>-module. <span class="math">\(M[x]\cong A[x]\otimes_A M\)</span>. trivial, you use the same way as you proof 2</li>
+<li>in text</li>
+<li>1 in text. 2 isn’t just <span class="math">\(M{\Rightarrow}B\otimes_A M{\Rightarrow}N\otimes_B(B\otimes_A M){\Rightarrow}(N\otimes_B B)\otimes_A M\)</span></li>
+<li>the generator is exactly generators of <span class="math">\(M'\)</span> and representatives of generators of <span class="math">\(M''\)</span></li>
+<li><code>*</code> <span class="math">\(\alpha\in {\mathscr{R}}\)</span> <span class="math">\(N\)</span> finitely generated, surjection <span class="math">\(M/\alpha M\to N/\alpha N{\Rightarrow}M\to N\)</span>, with maps <span class="math">\(f^*\)</span> induced and <span class="math">\(f\)</span></li>
+<li>i think they are trivial. injective follows as <span class="math">\(A^m\cong {\text{im }}\varphi\)</span> then any subspace of a vector space has smaller or equal cardinal basis</li>
+<li>the thing is about <strong><a href="#cross-split-exact-sequence">split exact sequence</a></strong>, the right split, so we have <span class="math">\(M = {\text{ker }}f\times A^n\)</span>. the other part is by if <span class="math">\({\text{ker }}f\)</span> cannot finitely generated then certainly <span class="math">\(M\)</span> cannot, because any generator of <span class="math">\(M\)</span> is of form <span class="math">\((a, b)\)</span> and the projection cannot generate the first part</li>
+<li><code>*</code> <code>fix me: redo when have time</code></li>
+<li>in text</li>
+<li>in text</li>
+<li>in text</li>
+<li>in text</li>
+<li>in text</li>
+<li>in text</li>
+<li>in text</li>
+<li>in text</li>
+<li>in text</li>
+<li>in text</li>
+<li><code>fix me: do them when learned Tor</code></li>
+<li><code>fix me</code></li>
+<li><code>fix me</code></li>
+<li><span class="crosslink"><span id="cross-absolutely-flat-ring"></span>absolutely flat ring</span> every <span class="math">\(A\)</span>-module is flat <span class="math">\({\Leftrightarrow}\)</span> every principal ideal is <a href="#cross-idempotent">idempotent</a>, every finitely generated ideal is direct summand of <span class="math">\(A\)</span> <code>fix me</code></li>
+<li><code>fix me</code></li>
 </ol>
-<p><code>fix me</code></p>
+<p><em>from <a href="#cross-ref-algebra-atiyah">ref-algebra-atiyah</a>, chapter 03</em></p>
+<ol style="list-style-type: decimal">
+<li>for finitely generated <span class="math">\(A\)</span>-module <span class="math">\(M\)</span>, <span class="math">\(S^{-1}M = 0{\Leftrightarrow}sM = 0\)</span>. trivial</li>
+<li><span class="math">\(S = 1 + \alpha{\Rightarrow}S^{-1}\alpha \in {\mathscr{R}}\)</span>. trivial. 1. use the element proof. 2. trivial</li>
+<li><span class="math">\((ST)^{-1}A\cong U^{-1}(S^{-1}A)\)</span> first show that <span class="math">\(U\)</span> is well defined, then define the homomorphism, then show well defined. surjection is trivial. then find the kernel</li>
+<li><span class="math">\(S^{-1}B\cong f(S)^{-1}B\)</span>. trivial, just a lot of checks</li>
+<li>for each <span class="math">\(p\)</span>, <span class="math">\(A_p\)</span> has no non-zero nilpotent, then <span class="math">\(A\)</span> has no non-zero nilpotent. not true for integral domain. the embedding</li>
+<li>we know every set has a prime ideal out of it, and every prime ideal <span class="math">\(A-p\)</span> is multiplicative set. and there is minimal element in prime ideals</li>
+<li><span class="crosslink"><span id="cross-saturated-multiplicative-set"></span>saturated multiplicative set</span> trivial. the last one is all prime ideals which do not add to <span class="math">\(A\)</span> with <span class="math">\(\alpha\)</span></li>
+<li><span class="math">\(S\subset T\)</span> and <span class="math">\(\varphi: S^{-1}A\to T^{-1}A\)</span> <code>fix me: tired</code></li>
+</ol>
 <h2 id="vector-space">vector space</h2>
 <h3 id="vector-space-1">vector space</h3>
 <ul>
@@ -2252,6 +2446,10 @@ $("#content").css("max-width", "1100px")
 <li><a href="#cross-zero-divisor">zero divisor</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(\exists a : af = 0\)</span>. result for <span class="math">\(n\)</span> variables, we show that we have a zero-divisor constant for <span class="math">\(A\)</span>, as it is a zero-divisor, viewing as polynomial over <span class="math">\(A\)</span>, we have another polynomial of <span class="math">\(B, C, \dots\)</span> as zero-divisor, so on and on, we get finally a number
 <ul>
 <li><span class="math">\(R\)</span> is <a href="#cross-entire-ring">entire ring</a> <span class="math">\(R[x, y]\)</span> is entire. trivial</li>
+</ul></li>
+<li><span class="math">\(p{\lhd}A\)</span> prime <span class="math">\({\Rightarrow}\)</span> <span class="math">\(p[x, y]\)</span> prime. proof 1. induction then induction. proof 2. use isomorphism, and notice that <span class="math">\(A/p[x, y]\)</span> is <a href="#cross-entire-ring">entire ring</a>
+<ul>
+<li>not for maximal, a ad-hoc example is <span class="math">\(2{\mathbb{N}}[x]x + {\mathbb{N}}\)</span></li>
 </ul></li>
 <li><span class="math">\(\frac{R[x]}{\alpha R[x]}\cong \frac{R}{\alpha}[x]\)</span>
 <ul>
@@ -2577,7 +2775,7 @@ $("#content").css("max-width", "1100px")
 <li>they are all trivial</li>
 </ul></li>
 </ul></li>
-<li>for <span class="crosslink"><span id="cross-square-matrix"></span>square matrix</span>s of <span class="math">\(n\times n\)</span>, form a <span class="math">\(R\)</span>-<a href="#cross-algebra">algebra</a>, it is just <span class="math">\(\end(R^n)\)</span>
+<li>for <span class="crosslink"><span id="cross-square-matrix"></span>square matrix</span>s of <span class="math">\(n\times n\)</span>, form a <span class="math">\(R\)</span>-<a href="#cross-algebra">algebra</a>, it is just <span class="math">\({\text{end}}(R^n)\)</span>
 <ul>
 <li><span class="math">\(R\to {\text{Mat}}_n(R)\)</span></li>
 <li><span class="crosslink"><span id="cross-trace"></span>trace</span> <span class="math">\({\text{tr}}(A) = \sum(a_{ii})\)</span>
@@ -3310,7 +3508,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\(\alpha\)</span> is ideal generated by <span class="math">\(T\)</span>
 <ul>
 <li><span class="math">\(Z(T) = Z(\alpha)\)</span>. trivial</li>
-<li><span class="math">\(A\)</span> is <a href="#cross-Notherian-ring">Notherian ring</a>, so <span class="math">\(Z(T)\)</span> can be finitely expressed by <span class="math">\(f_i\)</span></li>
+<li><span class="math">\(A\)</span> is <a href="#cross-noetherian-ring">noetherian ring</a>, so <span class="math">\(Z(T)\)</span> can be finitely expressed by <span class="math">\(f_i\)</span></li>
 </ul></li>
 <li><a href="#cross-Zarisk-topology">Zarisk topology</a> for affine space, with closed sets is <a href="#cross-algebraic-set">algebraic set</a>s
 <ul>
@@ -4037,11 +4235,11 @@ $("#content").css("max-width", "1100px")
 
 
 
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
 
 
 
-<!--<script src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="./MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 <script>
   MathJax.Hub.Queue(function() {
