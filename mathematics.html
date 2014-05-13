@@ -554,14 +554,23 @@ $("#content").css("max-width", "1100px")
 <li><a href="#cross-product">product</a> is <a href="#cross-pullback">pullback</a> in <span class="math">\({\mathcal{C}}\)</span></li>
 <li><a href="#cross-equalizer">equalizer</a> is a limit of a diagram in <span class="math">\({\mathcal{C}}\)</span></li>
 <li><a href="#cross-colimit">colimit</a>s preserved</li>
+<li><p><span class="math">\({\mathcal{C}}(UY, X)\cong ({\mathcal{C}}\downarrow B)(Y, B\times X)\)</span> <span class="math">\({\diamond}\)</span></p>
+<p><img src="./images/slice-adjoint.jpg" style="width:300px" /></p></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-coslice-category"></span>coslice category</span> <span class="math">\((x\downarrow {\text{Id}})\)</span>
+<li><p><span class="crosslink"><span id="cross-coslice-category"></span>coslice category</span> <span class="math">\((x\downarrow {\text{Id}})\)</span></p>
 <ul>
 <li><a href="#cross-coproduct">coproduct</a> is <a href="#cross-pushout">pushout</a> in <span class="math">\({\mathcal{C}}\)</span></li>
 <li><a href="#cross-coequalizer">coequalizer</a> is a colimit of a diagram in <span class="math">\({\mathcal{C}}\)</span></li>
 <li><a href="#cross-limit">limit</a>s preserved</li>
 <li>when the category is a groupoid, then <span class="math">\(\lambda = g \circ f^{-1}\)</span> is determined</li>
+<li><span class="math">\({\mathcal{C}}(X, UY)\cong (B\downarrow {\mathcal{C}})(X\amalg B, Y)\)</span></li>
 </ul></li>
+<li><p><span class="crosslink"><span id="cross-sectioned-category"></span>sectioned category</span> <span class="math">\({\mathcal{C}}_B\)</span> arrow pairs of sections of <span class="math">\(B\)</span>, <a href="#cross-morphism">morphism</a> is arrows making the diagram commute. <span class="math">\({\mathcal{C}}_B = {\text{id}}_B \downarrow ({\mathcal{C}}\downarrow B) = (B\downarrow {\mathcal{C}})\downarrow B\)</span></p>
+<ul>
+<li><span class="math">\(({\mathcal{C}}\downarrow B)(Y, UZ)\cong {\mathcal{C}}_B(Y\amalg B, Z)\)</span></li>
+</ul></li>
+<li><span class="math">\((A, {\mathcal{C}}, B)\)</span></li>
+<li><span class="math">\((A, {\mathcal{C}}, B)_f = f\downarrow ({\mathcal{C}}\downarrow B)\)</span> where <span class="math">\(f: A\to B\)</span> is bicomplete when <span class="math">\({\mathcal{C}}\)</span> is</li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-pointed-category"></span>pointed category</span> for a <a href="#cross-category">category</a> <span class="math">\({\mathcal{C}}\)</span> with <a href="#cross-terminal">terminal</a> <span class="math">\(1\)</span> the <a href="#cross-coslice-category">coslice category</a> <span class="math">\(1\downarrow {\mathcal{C}}\)</span>
 <ul>
@@ -928,10 +937,6 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span class="math">\({\S}\)</span> a model category with a non-dual theorem <code>fix me</code></li>
 </ul></li>
-<li>the <a href="#cross-coslice-categroy">coslice categroy</a> is also a <a href="#cross-model-category">model category</a> <span class="math">\({\diamond}\)</span> subcategory, having lims, 2, 3, 4, 5 is trivial
-<ul>
-<li>so <a href="#cross-pointed-category">pointed category</a>. so the <a href="#cross-slice-category">slice category</a>, which is <a href="#cross-coslice-category">coslice category</a> of the <a href="#cross-dual-category">dual category</a></li>
-</ul></li>
 <li><p><span class="crosslink"><span id="cross-cofibrant"></span>cofibrant</span> <span class="math">\(\emptyset\to A\)</span> is <a href="#cross-cofibration">cofibration</a>. <span class="crosslink"><span id="cross-cofibrant-replacement"></span>cofibrant replacement</span><br /> <span class="crosslink"><span id="cross-fibrant"></span>fibrant</span> <span class="math">\(A\to *\)</span> is <a href="#cross-fibration">fibration</a>. <span class="crosslink"><span id="cross-fibrant-replacement"></span>fibrant replacement</span><br /> <span class="math">\({\mathcal{M}}_c\)</span>, <span class="math">\({\mathcal{M}}_f\)</span>, <span class="math">\({\mathcal{M}}_{cf}\)</span> is <a href="#cross-subcategory">subcategory</a>s</p>
 <p><img src="./images/frs.jpg" style="width:200px" /></p>
 <ul>
@@ -996,15 +1001,40 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul></li>
 <li><span class="math">\(f, g:A\to X\)</span> <code>fix me</code>
 <ul>
-<li>if <span class="math">\(A\)</span> <a href="#cross-cofibrant">cofibrant</a> aNd <span class="math">\(f{\sim_l}g\)</span> then <span class="math">\(f{\sim_r}g\)</span></li>
+<li>if <span class="math">\(A\)</span> <a href="#cross-cofibrant">cofibrant</a> and <span class="math">\(f{\sim_l}g\)</span> then <span class="math">\(f{\sim_r}g\)</span></li>
 <li>if <span class="math">\(X\)</span> <a href="#cross-fibrant">fibrant</a> and <span class="math">\(f{\sim_r}g\)</span> then <span class="math">\(f{\sim_l}g\)</span></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-homotopy"></span>homotopy</span> when <span class="math">\(X\to Y\)</span> from <a href="#cross-cofibrant">cofibrant</a> to <a href="#cross-fibrant">fibrant</a> <span class="math">\(\pi(A, X)\)</span>
+<li><span class="crosslink"><span id="cross-homotopy"></span>homotopy</span> when <span class="math">\(X\to Y\)</span> from <a href="#cross-cofibrant">cofibrant</a> to <a href="#cross-fibrant">fibrant</a> <span class="math">\(\pi(A, X)\)</span><br /></li>
+<li><span class="math">\(p:Z\to Y\)</span> between <a href="#cross-fibrant">fibrant</a>s, then <a href="#cross-weq">weq</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(p_*\)</span> bijection<br /><span class="math">\(i: W\to X\)</span> between <a href="#cross-cofibrant">cofibrant</a>s, then <a href="#cross-ewq">ewq</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(i^*\)</span> bijection <code>fix me</code>
 <ul>
 <li>when <span class="math">\(X\to Y\)</span> bifibrant, <span class="math">\(f: A\to X\)</span> is <a href="#cross-weq">weq</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="crosslink"><span id="cross-homotopy-equivalence"></span>homotopy equivalence</span> <code>fix me</code></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-homotopy-category"></span>homotopy category</span> <span class="math">\({\text{Ho}}{\mathcal{M}}\)</span> <code>fix me</code></li>
-<li><p><span class="crosslink"><span id="cross-proper-model-category"></span>proper model category</span> <code>fix me</code></p></li>
+<li><span class="math">\(U:{\mathcal{N}}\to cmm\)</span> where <span class="math">\({\mathcal{N}}\)</span> is <a href="#cross-model-category">model category</a>
+<ul>
+<li><span class="crosslink"><span id="cross-creates-model-structure"></span>creates model structure</span> <a href="#cross-weq">weq</a> and <a href="#cross-fibration">fibration</a>s created by <span class="math">\(U\)</span></li>
+<li><p><span class="crosslink"><span id="cross-strongly-creates-model-structure"></span>strongly creates model structure</span> all created by <span class="math">\(U\)</span></p></li>
+<li>with <span class="math">\({\mathcal{N}}\)</span> is <span class="math">\(B\downarrow {\mathcal{M}}\)</span>, <span class="math">\({\mathcal{M}}\downarrow B\)</span> and <span class="math">\((A/{\mathcal{M}}/B)_f\)</span> and <span class="math">\(U\)</span> the forgetful functor <code>fix me</code>
+<ul>
+<li><span class="math">\(U\)</span> <a href="#cross-strongly-creates-model-structure">strongly creates model structure</a> <span class="math">\({\diamond}\)</span> subcategory, having lims, 2, 3, 4, 5 is trivial</li>
+<li>if <span class="math">\({\mathcal{M}}\)</span> left/right <a href="#cross-proper-model-category">proper model category</a> then <span class="math">\({\mathcal{N}}\)</span></li>
+<li>if <span class="math">\({\mathcal{M}}\)</span> compactly/cofibrantly generated, then so <span class="math">\({\mathcal{N}}\)</span></li>
+<li>the adjoints are <span class="crosslink"><span id="cross-Quillen-adjoint"></span>Quillen adjoint</span>s</li>
+</ul></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-proper-model-category"></span>proper model category</span> is both <a href="#cross-left-proper-model-category">left proper model category</a> and <a href="#cross-right-proper-model-category">right proper model category</a>
+<ul>
+<li><span class="crosslink"><span id="cross-left-proper-model-category"></span>left proper model category</span> the <a href="#cross-pushout">pushout</a> of <a href="#cross-weq">weq</a> along <a href="#cross-cofibration">cofibration</a> is <a href="#cross-weq">weq</a>
+<ul>
+<li><span class="math">\({\Leftarrow}\)</span> every object is <a href="#cross-cofibrant">cofibrant</a> <code>fix me</code></li>
+<li><span class="math">\({\Leftrightarrow}\)</span> <span class="crosslink"><span id="cross-left-gluing-lemma"></span>left gluing lemma</span> <code>fix me</code></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-right-proper-model-category"></span>right proper model category</span> the <a href="#cross-pullback">pullback</a> of <a href="#cross-weq">weq</a> along <a href="#cross-fibration">fibration</a> is <a href="#cross-weq">weq</a>
+<ul>
+<li><span class="math">\({\Leftarrow}\)</span> every object is <a href="#cross-fibrant">fibrant</a></li>
+<li><span class="math">\({\Leftrightarrow}\)</span> <span class="crosslink"><span id="cross-right-gluing-lemma"></span>right gluing lemma</span></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 <h2 id="higher-category">higher category</h2>
@@ -5317,11 +5347,11 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 
 
 
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
 
 
 
-<!--<script src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="./MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 <script>
   MathJax.Hub.Queue(function() {
