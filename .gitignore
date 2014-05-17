@@ -6,6 +6,8 @@ _deploy
 site
 site.hi
 site.o
+main.md
+main.html
 diary/
 screens/
 MathJax/
