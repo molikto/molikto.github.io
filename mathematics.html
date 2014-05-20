@@ -51,46 +51,103 @@ $("#content").css("max-width", "1100px")
     </div>
     <div class="col-md-8">
         <p>             </p>
-<h1 id="rules">RULES</h1>
-<h2 id="there-is-nothing.-forget-yourself-forget-the-world">there is nothing. forget yourself, forget the world</h2>
-<h2 id="always-thinking-internalize-things-always-rigid-make-real-progress-pick-things-on-the-way">always thinking, internalize things, always rigid, make real progress, pick things on the way</h2>
-<h2 id="get-intuition-and-get-rigid-and-formal">get intuition, and get rigid and formal</h2>
-<h2 id="when-you-found-yourself-rereading-a-page-over-and-over-again-you-are-not-ready-for-this-book-example-may">when you found yourself rereading a page over and over again, you are not ready for this book, example, May</h2>
-<p><em>meta note</em></p>
+<!--  *meta note*
+
+
+## the ideal math note
+
+* in a proof assistant
+    * but it should be easy to use
+* linear context, but unlinear presentation
+
+## how to write it now
+
+* we organize by category when possible, or by topic and structure
+* `*informal things*`
+* we do not write linearly, but we implicitly keep a linear construction of all mathematics, though it is better we make it explicit
+* using itemize
+    * "parent requires parts" or `class parent { def child }`
+    * "so we can define child of parent" `class parent { def child = ? }`
+    * "as parent defined, we can define child" `def child = ?`
+    * "from parent we can get" `class parent { def child = ? }` or `def child = ?`
+    * "child is a kind/instance of parent" or `class extends parent`/`object extends parent`
+    * "under these conditions" `parent -> child`
+
+
+-->
+
+
+<h1 id="various-no-math">various no-math</h1>
+<h2 id="state-of-madness">state of madness</h2>
 <ul>
-<li>we organize by category when possible, or by topic and structure</li>
-<li><code>*informal things*</code></li>
-<li>we do not write linearly, but we implicitly keep a linear construction of all mathematics, though it is better we make it explicit</li>
-<li>using itemize
+<li>there is actually no real world, and mathematics might be a more realistic world
 <ul>
-<li>“parent requires parts” or <code>class parent { def child }</code></li>
-<li>“so we can define child of parent” <code>class parent { def child = ? }</code></li>
-<li>“as parent defined, we can define child” <code>def child = ?</code></li>
-<li>“from parent we can get” <code>class parent { def child = ? }</code> or <code>def child = ?</code></li>
-<li>“child is a kind/instance of parent” or <code>class extends parent</code>/<code>object extends parent</code></li>
-<li>“under these conditions” <code>parent -&gt; child</code></li>
+<li>doing mathematics is like exploring a very different universe</li>
+<li>there is nothing. forget yourself, forget the world</li>
+</ul></li>
+<li>active
+<ul>
+<li>always thinking, internalize things, always rigid, make real progress, pick things on the way</li>
+<li>mathematical truth can be discovered just as experimental science, we try examples see the result, make a conjuncture, and proof it</li>
+<li>i want to solve problems <a href="http://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics">http://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics</a></li>
+<li>you should always <strong>proof the whole book out</strong> and <strong>do all exercises</strong></li>
+<li>as we know axiomatic method is not enough, so <strong>do study examples</strong>, and often example produce theory</li>
+<li>constructive
+<ul>
+<li>actually proofing like Coq is good. for example, <em>every ideal is an principle ideal</em> should really be a function <code>ideal(p) -&gt; principle(p)</code> so it reminds us to find a ideal that do not instantly an principle and use this function to convince that it is an principle</li>
+</ul></li>
+</ul></li>
+<li>reactive
+<ul>
+<li>learn things when needed, this is the most efficient way, you can immediately see it used in practice</li>
+</ul></li>
+<li>ensure you understand
+<ul>
+<li>mental image of the mathematical world, intuition
+<ul>
+<li><em>It’s like a new toaster that comes with a 16-page manual. If you already understand toasters and if the toaster looks like previous toasters you’ve encountered, you might just plug it in and see if it works, rather than first reading all the details in the manual.</em></li>
+<li>get intuition, and get rigid and formal</li>
+<li>about mathematical experience. mathematics is elegant, if you do not think something natural, you do not understand it. remember when you understand group action</li>
+<li>but today after reading Atiyah’s article and what Huajie said, i think i should learn <strong>more geometry</strong></li>
+<li>i still feel abstract… i study rings, modules, but can hardly find enough examples of ring or module… i know that’s a tensor product, but can hardly know what it looks like, i cannot make mathematics into me… feeling sad. as CY said, after studying a subject, you should be able to write down all things you have meet</li>
+</ul></li>
+<li>understand the problem
+<ul>
+<li>they said the Grothendieck do not solve problems, he found out a comfort space to the problem to stay at, but even working out the details is hard for me. is he had some <strong>intuition for abstraction</strong>???</li>
+<li>give the conjectures their full meaning</li>
+<li><strong>fully see what you have get</strong>. use the tools at hand. it might do not directly leads you to the solution, but anyway use it!</li>
+<li><strong>see the logic of the problem</strong>. assume the solution, and see why it works, or what’s wrong with it</li>
+<li>the reason that we construct so many constructions is that we concrete our proof process by making them actually shown before your eyes, by constructions</li>
+</ul></li>
+</ul></li>
+<li>symbolic, not understanding. sometimes you just do not understand it now
+<ul>
+<li>how to proof? it is sufficient to make sure you can write all rigid sentences. you can omitted the writing, but you should always make sure you can freely think rigidly. <strong>only idea is not enough</strong></li>
+</ul></li>
+<li><strong>npo</strong>
+<ul>
+<li>the static and dynamic structure of the mathematical world is not the same, so you have multiple views
+<ul>
+<li>it is always helpful to view the picture of mathematics as static, there are no such thing <span class="math">\(x+y\)</span>, it is just an element. for example, finite addition is always well defined, because we can write finitely. but it is not infinite addition. we should rely on a map from <span class="math">\({\mathbb{N}}\)</span> to the group, then show how the addtion is performed and ended</li>
+<li>i feel that every time i use Zorn’s lemma, i feel a little more depressed, because i am out of the world where mathematical entities lives</li>
+</ul></li>
+</ul></li>
+<li>know where you are
+<ul>
+<li>i think the best state of doing mathematics is always have the big picture in background, but in the same time, always solving details and problems, thus making real progress</li>
+<li>i feel my learning mathematics is just like a “guided tour”, actually i do not know why guided like this. thinking how G create mathematics single handed. i think i am just lame</li>
+</ul></li>
+<li>if you cannot do these, <strong>DO NOT WASTE YOUR TIME!!</strong>
+<ul>
+<li>when you found yourself rereading a page over and over again, you are not ready for this book, example, May</li>
+<li>do not read proofs that you are not going to understand!!!</li>
 </ul></li>
 </ul>
-<p><strong>i will one day do all my math learning in a proof assistant!!! must</strong></p>
-<hr />
-<h1 id="meta-mathematics">meta mathematics</h1>
-<h2 id="top">top</h2>
-<p><strong>i think the best state of doing mathematics is always have the big picture in background, but in the same time, always solving details and problems, thus making real progress</strong></p>
-<p><strong>give the conjectures their full meaning</strong></p>
-<p><strong>i feel my learning mathematics is just like a “guided tour”, actually i do not know why guided like this. thinking how G create mathematics single handed. i think i am just lame</strong></p>
-<p><strong>about mathematical experience. mathematics is elegant, if you do not think something natural, you do not understand it. remember when you understand group action</strong></p>
-<p><strong>learn things when needed, this is the most efficient way, you can immediately see it used in practice</strong></p>
-<h2 id="personal-learning">personal learning</h2>
-<h3 id="weakness">weakness</h3>
+<h2 id="meta-math-questions">meta-math questions</h2>
 <ul>
-<li>group operation</li>
-<li>proofs about complex category</li>
+<li>why we are constantly consulting our <strong>intuition about space</strong>, if as Atiyah said, mathematics is the study of “special” and “temporal”, then this actually makes sense</li>
 </ul>
-<h3 id="about-stupidity">about stupidity</h3>
-<ul>
-<li>though i think i have a fake relief for fundamental problems. i still feel unable to do some math. but… they are just manipulation of symbols!… actually they are not, you will not go too far with this kind of thinking. read the book, and understand. find more materials, read a lot of material to get insight is the only method to learn some math for stupid me</li>
-</ul>
-<h2 id="resources">resources</h2>
+<h2 id="a-mass-of-resources">a mass of resources</h2>
 <h3 id="pages-on-problem-solving">pages on problem solving</h3>
 <ul>
 <li><a href="http://terrytao.wordpress.com/career-advice/solving-mathematical-problems/">http://terrytao.wordpress.com/career-advice/solving-mathematical-problems/</a></li>
@@ -148,69 +205,19 @@ $("#content").css("max-width", "1100px")
 <li><a href="http://math.bard.edu/greg/Strings">http://math.bard.edu/greg/Strings</a></li>
 </ul></li>
 </ul>
-<h2 id="dao">dao</h2>
-<h3 id="proofing">proofing</h3>
+<h2 id="idiot-tests">idiot tests</h2>
 <ul>
-<li>how to proof? it is sufficient to make sure you can write all rigid sentences. you can omitted the writing, but you should always make sure you can freely think rigidly. <strong>only idea is not enough</strong></li>
-<li>mathematical truth can be discovered just as experimental science, we try examples see the result, make a conjuncture, and proof it</li>
-<li>i want to solve problems <a href="http://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics">http://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics</a></li>
-<li><strong>fully see what you have get</strong>. use the tools at hand. it might do not directly leads you to the solution, but anyway use it!</li>
-<li><strong>see the logic of the problem</strong>. assume the solution, and see why it works, or what’s wrong with it</li>
-<li><strong>recent thoughts on how to learn</strong>
-<ul>
-<li>back in time i am a formalist, i learn things and in the end i found that i need to learn algebra</li>
-<li>and i think it is important</li>
-<li>but today after reading Atiyah’s article and what Huajie said, i think i should learn <strong>more geometry</strong></li>
-<li>but the thing is, you must learn <strong>abstract algebra</strong> and <strong>analysis</strong> first, then you can learn some geometry..</li>
-<li>so finish Lang’s analysis really quick!!!</li>
-<li>another important thing is, about exercises
-<ul>
-<li><strong>best</strong>: to work the whole book out</li>
-<li><strong>second choice</strong>: do the exercises</li>
-</ul></li>
-</ul></li>
-<li>on <strong>proofing</strong>
-<ul>
-<li>you can just go and proof it</li>
-<li>a skim is nothing</li>
-<li>so proof or keep, or read &amp;&amp; understand</li>
-</ul></li>
-<li>as we know axiomatic method is not enough, so <strong>do study examples</strong>, and often example produce theory</li>
+<li><a href="http://zx31415.wordpress.com/page/2/">this</a></li>
 </ul>
-<h3 id="patterns-definition">patterns, definition</h3>
-<ul>
-<li>we define a “from”, found “characteristic”, sometimes cardinal characteristic, and sometimes we have multiple definition for just cardinal 0, cardinal 1, cardinal finite, cardinal infinite (consider local ring, a ring has only 1 maximal ideal; consider cyclic group, a group generated by one). i should really pay attention to them</li>
-<li>the definition should be abstract, so you can see what’s essential in it, but must with examples, so you can feel what it is about. when proofing things, feel free to rely on your concrete examples, but always check it is rigid by abstract definitions</li>
-<li>define in right place!! it is like a software engineering problem the problem of mathematical foundation, we should found a better foundation, which has no trivial questions at all</li>
-<li>we generally have multiple definitions, because sometimes we forced to give a elementary definition, then give a advanced one, or just for different views. the thing is, when we want to generalize (we remove some conditions), things differ</li>
-</ul>
-<h3 id="mental">mental</h3>
-<ul>
-<li>doing mathematics is like exploring a very different universe</li>
-<li>it is always helpful to view the picture of mathematics as static, there are no such thing <span class="math">\(x+y\)</span>, it is just an element. for example, finite addition is always well defined, because we can write finitely. but it is not infinite addition. we should rely on a map from <span class="math">\({\mathbb{N}}\)</span> to the group, then show how the addtion is performed and ended</li>
-<li>actually proofing like Coq is good. for example, <em>every ideal is an principle ideal</em> should really be a function <code>ideal(p) -&gt; principle(p)</code> so it reminds us to find a ideal that do not instantly an principle and use this function to convince that it is an principle</li>
-<li>they said the Grothendieck do not solve problems, he found out a comfort space to the problem to stay at, but even working out the details is hard for me. is he had some <strong>intuition for abstraction</strong>???</li>
-<li>in view of “all theorems proofed is trivial”, the most important thing about machine proofed theorem is the softwares we used to proof them, so we can ask more questions</li>
-<li><em>It’s like a new toaster that comes with a 16-page manual. If you already understand toasters and if the toaster looks like previous toasters you’ve encountered, you might just plug it in and see if it works, rather than first reading all the details in the manual.</em></li>
-<li>i wish someday i can read the posts in <a href="http://zx31415.wordpress.com/page/2/">this</a> blog</li>
-<li>the reason that we construct so many constructions is that we concrete our proof process by making them actually shown before your eyes, by constructions</li>
-<li>i still feel abstract… i study rings, modules, but can hardly find enough examples of ring or module… i know that’s a tensor product, but can hardly know what it looks like, i cannot make mathematics into me… feeling sad. as CY said, after studying a subject, you should be able to write down all things you have meet</li>
-<li>i feel that every time i use Zorn’s lemma, i feel a little more depressed, because i am out of the world where mathematical entities lives</li>
-<li>what is good mathematics? i suddenly have a feeling that mathematics is no longer interesting anymore… why?</li>
-<li>so what is mathematics? it is know more about the mathematical world</li>
-</ul>
-<h3 id="intuition">intuition</h3>
-<ul>
-<li>why we are constantly consulting our <strong>intuition about space</strong>, if as Atiyah said, mathematics is the study of “special” and “temporal”, then this actually makes sense</li>
-</ul>
-<h2 id="more">more</h2>
-<p>nothing</p>
+<hr />
 <h1 id="type">type</h1>
 <h2 id="idea">idea</h2>
 <ul>
 <li>i want to take <a href="#cross-homotopy-type-theory">homotopy type theory</a> as the foundation of mathematics, it is a <strong>good idea</strong>, but no one knows exactly how to do it now. but nonetheless i will present ideas in it. it should be understand that, all mathematics we do now will have a good old foundation in <a href="#cross-ZFC-set-theory">ZFC set theory</a>, as long as we ignore the issues with categories. so basically when we finished type theory, set theory, and category theory, we should have our formalism in mind</li>
+<li>but we do not do constructive math, because i do not like it. though constructive view is good</li>
+<li>the notes here is only to capture an idea of type theory, and conform myself about the ugliness of ZFC. it is not rigor, but nontheless i will use it now!</li>
 </ul>
-<h3 id="informal-notes-about-mathematical-logic-and-foundation">informal notes about mathematical logic and foundation</h3>
+<h3 id="informal-notes-about-mathematical-logic-and-foundation.-2014-04">informal notes about mathematical logic and foundation. 2014-04</h3>
 <ul>
 <li>why there are independent theorems? it can be true, can be not true, but has no impact on us. in other words, <strong>logic is just a tool</strong>. basically we</li>
 <li>considering mathematics questions and answers as a a list of strings, then we are in 4 kind of situation. this is just a asymmetric, and Godel’s result states that there is always the situation.
@@ -241,6 +248,10 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul></li>
 </ul>
+<h3 id="more-informal-notes.-2014-05">more informal notes. 2014-05</h3>
+<ul>
+<li>now i actually do not think is there any foundational crisis in mathematics back in time, it is just a Russell paradox, and the solution of ZFC is <strong>ugly</strong></li>
+</ul>
 <h2 id="type-theory">type theory</h2>
 <ul>
 <li><span class="crosslink"><span id="cross-type-theory"></span><span id="cross-hott"></span><span id="cross-homotopy-type-theory"></span>type theory</span>
@@ -265,7 +276,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="crosslink"><span id="cross-computation-rule"></span><span id="cross-computation"></span>computation rule</span></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-derivation"></span>derivation</span></li>
-<li><span class="crosslink"><span id="cross-type"></span>type</span> <em>they are higher groupoids</em>
+<li><span class="crosslink"><span id="cross-type"></span>type</span> <strong>are higher groupoids</strong>
 <ul>
 <li><span class="crosslink"><span id="cross-universe"></span>universe</span>
 <ul>
@@ -273,7 +284,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="crosslink"><span id="cross---UUU--CUMUL"></span><span class="math">\({\mathcal{U}}\)</span>-CUMUL</span> <span class="math">\(\frac{\Gamma\vdash A: {\mathcal{U}}_i}{\Gamma\vdash A: U_{i+1}}\)</span></li>
 <li><span class="crosslink"><span id="cross-universe-polymorphism"></span>universe polymorphism</span> we use this trick to do justify why we are not using explicit universe level when doing informally. <em>or how weak we are</em></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-function"></span>function</span>
+<li><span class="crosslink"><span id="cross-function"></span>function</span>. <em>actually they are functors</em>
 <ul>
 <li><span class="crosslink"><span id="cross---Pi--FORM"></span><span class="math">\(\Pi\)</span>-FORM</span> <span class="math">\(\frac{\Gamma\vdash A:{\mathcal{U}}_i\quad \Gamma, x: A\vdash B:{\mathcal{U}}_i}{\Gamma\vdash \Pi_{x:A}B:{\mathcal{U}}_i}\)</span></li>
 <li><span class="crosslink"><span id="cross---Pi--INTRO"></span><span class="math">\(\Pi\)</span>-INTRO</span> <span class="math">\(\frac{\Gamma, x:A\vdash b:B}{\Gamma\vdash \lambda (x: A). b: \Pi_{x: A}B}\)</span></li>
@@ -281,16 +292,50 @@ $("#content").css("max-width", "1100px")
 <li><span class="crosslink"><span id="cross---Pi--COMP"></span><span class="math">\(\Pi\)</span>-COMP</span> <span class="math">\(\frac{\Gamma, x:A\vdash b:B\quad \Gamma\vdash a:A}{\Gamma\vdash (\lambda(x:A).b)(a)\equiv b[a/x]: B[a/x]}\)</span></li>
 <li><span class="crosslink"><span id="cross---Pi--UNIQ"></span><span class="math">\(\Pi\)</span>-UNIQ</span></li>
 <li><em>you can think there are bunch of primitives, especially induction rules will confirm certain function exists</em>, but <strong>actually the semantics is defined inside the theory</strong></li>
-<li><span class="crosslink"><span id="cross-apply"></span>apply</span> <span class="math">\({\text{ap}}: (f: A\to B) \to (x=_A y)\to (f(x) =_B f(y))\)</span> exists, and <span class="math">\({\text{ap}}(f, {\text{refl}}_x)\equiv {\text{refl}}_{f(x)}\)</span> <span class="math">\({\diamond}\)</span> by <a href="#cross-path-induction">path induction</a>. <em>so function is actually functors, required by <span class="math">\(J\)</span>. think like this, all primitives for inductive type will require you to respect equality, and when defining functions, we actually is always invoking a bunch of primitives, so…</em></li>
-</ul></li>
-<li><span class="crosslink"><span id="cross-identity-type"></span>identity type</span>
+<li><span class="crosslink"><span id="cross-apply"></span>apply</span> <span class="math">\({\text{ap}}: (f: A\to B) \to (x=_A y)\to (f(x) =_B f(y))\)</span> exists, and <span class="math">\({\text{ap}}(f, {\text{refl}}_x)\equiv {\text{refl}}_{f(x)}\)</span> <span class="math">\({\diamond}\)</span> by <a href="#cross-path-induction">path induction</a>. <em>so function is actually functors, required by <span class="math">\(J\)</span>. think like this, all primitives for inductive type will require you to respect equality, and when defining functions, we actually is always invoking a bunch of primitives, so…</em>
 <ul>
-<li><span class="crosslink"><span id="cross-----INTRO"></span><span id="cross-refl"></span><span id="cross-reflection"></span><span class="math">\(=\)</span>-INTRO</span> <span class="math">\({\text{refl}}\)</span></li>
+<li><span class="math">\({\text{ap}}_f(p\cdot q) = {\text{ap}}_f(p)\cdot {\text{ap}}_f(q)\)</span>, …</li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-transport"></span>transport</span> type family <span class="math">\(P\)</span> over <span class="math">\(A\)</span> and <span class="math">\(p: x =_A y\)</span> there is <span class="math">\(p_*: P(x)\to P(y)\)</span>
+<ul>
+<li><span class="math">\({\S}\)</span> <span class="math">\({\text{isSet}}\)</span></li>
+<li><span class="math">\({\text{lift}}(u, p): (x, u) = (y, p_*(u))\)</span> in <span class="crosslink"><span id="cross-t-total-space"></span>t total space</span> <span class="math">\(\sum_{x:A}P(x)\)</span>. <em>the <a href="#cross-coproduct-type">coproduct type</a> is also non-trivial???</em>. <span class="crosslink"><span id="cross-t-section"></span>t section</span>. <span class="crosslink"><span id="cross-t-fiberwise"></span>t fiberwise</span></li>
+<li><span class="math">\({\text{apd}}_f: p_*(f(x))=_{P(y)} f(y)\)</span></li>
+</ul></li>
+<li><p><span class="crosslink"><span id="cross-t-homotopy"></span>t homotopy</span> <span class="math">\((f \sim g)\)</span> <span class="math">\(\prod_{x: A} f(x) = g(x)\)</span> <em>they are natural transforms</em></p>
+<p><img src="./images/t-homotopy.jpg" style="width:200px" /></p></li>
+<li><span class="crosslink"><span id="cross-t-quasi-inverse"></span>t quasi-inverse</span> <span class="math">\({\text{qinv}}(f)\)</span>. <span class="math">\(g: B\to A\)</span>, <span class="math">\(\alpha: f\circ g \sim {\text{id}}_B\)</span> and <span class="math">\(\beta\)</span>
+<ul>
+<li><span class="math">\((A\simeq B) = \sum_{f: A\to B} {\text{isequiv}}(f)\)</span> <code>fix me</code></li>
+</ul></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-identity-type"></span>identity type</span> <em>the good properties of identity type is in the <span class="math">\(J\)</span> rule, it is essentially <strong>if they are used in same way, then they are the same</strong>~</em>
+<ul>
+<li><span class="crosslink"><span id="cross-----INTRO"></span><span id="cross-refl"></span><span id="cross-reflection"></span><span class="math">\(=\)</span>-INTRO</span> <span class="math">\({\text{refl}}\)</span> <em>the basic intro rule for a identity type, it is like <a href="#cross-identity-morphism">identity morphism</a> in category, and it really is:</em>
+<ul>
+<li><span class="math">\(p = p\cdot {\text{refl}}= {\text{refl}}\cdot p\)</span> <span class="math">\({\diamond}\)</span> <a href="#cross-path-induction">path induction</a></li>
+</ul></li>
 <li><span class="crosslink"><span id="cross-----ELIM"></span><span id="cross-path-induction"></span><span class="math">\(=\)</span>-ELIM</span></li>
 <li><span class="crosslink"><span id="cross-----COMP"></span><span class="math">\(=\)</span>-COMP</span> <span class="math">\(J\)</span>
 <ul>
 <li><code>open problem</code> how to <span class="math">\(J\)</span> compute with <a href="#cross-univalence-axiom">univalence axiom</a>?</li>
 <li><span class="math">\((x = y)\to (y = z)\to (x = z)\)</span> exists, and <span class="math">\({\text{refl}}_x\cdot{\text{refl}}_x \equiv {\text{refl}}_x\)</span></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-identity-inverse"></span>identity inverse</span> for <span class="math">\(x = y\)</span> we have a <span class="math">\(y = x\)</span> <span class="math">\({\diamond}\)</span> <a href="#cross-path-induction">path induction</a>
+<ul>
+<li><span class="math">\(p^{-1}\cdot p = {\text{refl}}_y\)</span>, <span class="math">\(p\cdot p^{-1}={\text{refl}}_x\)</span>, <span class="math">\((p^{-1})^{-1} = p\)</span> <span class="math">\({\diamond}\)</span> <a href="#cross-path-induction">path induction</a></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-t-compose"></span>t compose</span> for <span class="math">\(p: x = y\)</span>, <span class="math">\(q: y = z\)</span> we have <span class="math">\(p\cdot q: x = z\)</span> <span class="math">\({\diamond}\)</span> <a href="#cross-path-induction">path induction</a>, it is sufficient to assume <span class="math">\(x = y\)</span> …
+<ul>
+<li><span class="math">\(p\cdot (q\cdot r) = (p\cdot q)\cdot r\)</span></li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-t-loop-space"></span>t loop space</span> <span class="math">\(\Omega(A, a)\)</span> is <span class="math">\(a=_A a\)</span>
+<ul>
+<li><p><span class="crosslink"><span id="cross-t-Eckmann-Hilton"></span>t Eckmann-Hilton</span> the <a href="#cross-t-compose">t compose</a> of second loop space <span class="math">\(\Omega^2(A)\times \Omega^2(A)\to \Omega^2(A)\)</span> is commutative <span class="math">\(\alpha\cdot \beta = \beta\cdot \alpha\)</span></p>
+<p><img src="./images/identity-ec.jpg" style="width:300px" /></p>
+<p><em>this picture is not for loop space!!!, imagine yourself</em>. the type of <span class="math">\(\alpha: {\text{refl}}_a =_{a =_A a} {\text{refl}}_a\)</span> and <span class="math">\(\beta: {\text{refl}}_a =_{a =_A a} {\text{refl}}_a\)</span></p>
+<p><span class="math">\({\diamond}\)</span> we have <span class="math">\(\alpha \star \beta: p\cdot r =q \cdot s\)</span> by because <span class="math">\(\alpha: p = q\)</span> we have <span class="math">\(p\cdot r = q\cdot r\)</span> similarly we have <span class="math">\(q\cdot r = q\cdot s\)</span>, so composing we have <span class="math">\(\alpha\star\beta\)</span>. assuming they are all single element, we see… we have <span class="math">\(\alpha\cdot \beta = \alpha \star\beta = \alpha\star ' \beta = \beta\cdot \alpha\)</span></p></li>
+<li><span class="crosslink"><span id="cross-pointed-type"></span>pointed type</span> <span class="math">\((A, a)\)</span></li>
 </ul></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-higher-inductive-type"></span><span id="cross-hit"></span>higher inductive type</span>
@@ -299,6 +344,8 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li><span class="crosslink"><span id="cross-product-type"></span>product type</span></li>
 <li><span class="crosslink"><span id="cross-coproduct-type"></span>coproduct type</span></li>
+<li><p><a href="#cross-W-type">W-type</a> is <span class="crosslink"><span id="cross-homotopy-initial-algebra"></span>homotopy-initial algebra</span>s, <span class="math">\({\S}\)</span></p>
+<pre><code>isHinit_N(I) = forall C: NAlg -&gt; isContr(NHom(I, C))</code></pre></li>
 </ul></li>
 <li><code>open problem</code> formalize <a href="#cross-hit">hit</a> it like <a href="#cross-W-type">W-type</a></li>
 </ul></li>
@@ -313,17 +360,21 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\((P:{\mathcal{U}})\to {\text{isProp}}(P)\to {\text{isSet}}(P)\)</span> <code>fix me</code></li>
 <li><span class="math">\((A:{\mathcal{U}})\to {\text{isProp}}({\text{isProp}}(P))\)</span></li>
 <li><span class="math">\((A:{\mathcal{U}})\to {\text{isProp}}({\text{isSet}}(A))\)</span></li>
-<li><span class="crosslink"><span id="cross-subtype"></span>subtype</span> <span class="math">\(P\)</span> is type family of proposition then, <span class="math">\(\{x: A| P(x)\}\doteq \sum_{x:A} P(x)\)</span>, it is well defined for if <span class="math">\(x = y\)</span> then <span class="math">\((x, p_x) = (y, p_y)\)</span>
+<li><span class="crosslink"><span id="cross-subtype"></span>subtype</span> <span class="math">\(P\)</span> is type family of proposition then, <span class="math">\(\{x: A| P(x)\}\doteq \sum_{x:A} P(x)\)</span>, it is well defined for if <span class="math">\(x = y\)</span> then <span class="math">\((x, p_x) = (y, p_y)\)</span> <span class="math">\({\diamond}\)</span> transposing
 <ul>
 <li><span class="crosslink"><span id="cross-subuniverse"></span>subuniverse</span>s <span class="math">\({\text{Set}}_{\mathcal{U}}\doteq \{s: U| {\text{isSet}}(s)\}\)</span>, <span class="math">\({\text{Prop}}_{\mathcal{U}}\)</span>, <span class="math">\({\text{Set}}_{{\mathcal{U}}_i}\to {\text{Set}}_{{\mathcal{U}}_{i+1}}\)</span> is not equivalence</li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-exclude-in-the-middle"></span>exclude in the middle</span> <span class="math">\((P:{\text{Prop}}_{\mathcal{U}}, a: P)\to (a + \lnot a)\)</span></li>
+<li><span class="crosslink"><span id="cross-exclude-in-the-middle"></span><span id="cross-lem"></span>exclude in the middle</span> <span class="math">\((P:{\text{Prop}}_{\mathcal{U}}, a: P)\to (a + \lnot a)\)</span>
+<ul>
+<li><span class="crosslink"><span id="cross-decidable"></span>decidable</span> if <a href="#cross-lem">lem</a> holds</li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-propositional-resizing"></span>propositional resizing</span> mere proposition in lower universe inject to higher one is equivalence</li>
 <li><span class="crosslink"><span id="cross-propositional-truncation"></span>propositional truncation</span> for all type <span class="math">\(A\)</span> we have <span class="math">\(\|A\|\)</span>, and if <span class="math">\(x:A\)</span> then <span class="math">\(|a|:\|A\|\)</span> and <span class="math">\(x, y: \|A\|\)</span> then <span class="math">\(x = y\)</span></li>
 <li><span class="crosslink"><span id="cross-axiom-of-choice"></span>axiom of choice</span> <span class="math">\((X: {\text{Set}}, Y: X\to {\text{Set}}_{\mathcal{U}})\to  (\coprod _{x:X}\|Y(x)\|\to \|\coprod_{x:X} Y(x)\|)\)</span></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-contractible-type"></span>contractible type</span> <span class="math">\(\sum_{x: A}\coprod_{x:A}(a = x)\)</span></li>
+<li><span class="crosslink"><span id="cross-contractible-type"></span>contractible type</span> <span class="math">\(\sum_{x: A}\coprod_{x:A}(a = x)\)</span> is mere proposition</li>
 <li><span class="crosslink"><span id="cross-0-type"></span><span id="cross-set"></span>0-type</span> <span class="math">\({\text{isSet}}\doteq A: U_i\to (x, y: A)\to (p,q: x = y)\to (p = q)\)</span></li>
-<li><span class="crosslink"><span id="cross-natural-number"></span>natural number</span> <span class="math">\({\mathbb{N}}\doteq (0: {\mathbb{N}}, s: {\mathbb{N}}\to {\mathbb{N}})\)</span></li>
+<li><span class="crosslink"><span id="cross-natural-number"></span>natural number</span> <span class="math">\({\mathbb{N}}\doteq (0: {\mathbb{N}}, s: {\mathbb{N}}\to {\mathbb{N}})\)</span> is <a href="#cross-set">set</a> <span class="math">\({\diamond}\)</span> using <span class="crosslink"><span id="cross-encode-decode"></span>encode-decode</span> method</li>
 </ul>
 <h3 id="some-universal-definition">some universal definition</h3>
 <p><em>which i do not know where to put, they should be basic types, but i do not want to form them in types, just in sets now</em></p>
@@ -344,7 +395,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="crosslink"><span id="cross-transitive"></span>transitive</span> <span class="math">\(a \sim b\land b\sim c{\Rightarrow}a\sim c\)</span></li>
 <li><span class="crosslink"><span id="cross-reflective"></span>reflective</span> <span class="math">\(a \sim a\)</span></li>
 <li><span class="crosslink"><span id="cross-symmetric"></span>symmetric</span> <span class="math">\(a\sim b{\Rightarrow}b\sim a\)</span></li>
-<li><strong><a href="http://mathoverflow.net/a/7868/23140">alternatively</a></strong> we have a quotient map</li>
+<li><strong><a href="http://mathoverflow.net/a/7868/23140">alternatively</a></strong> we have a quotient map. for any <a href="#cross-eqr">eqr</a>, we can define the <a href="#cross-quotient-map">quotient map</a> to map into the quotient class, and for any quotient map, we can define the <a href="#cross-eqr">eqr</a>. categorically, it is far more convenient to use the quotient map</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -411,7 +462,10 @@ $("#content").css("max-width", "1100px")
 <li><em>is category abstract? i think it should be called concrete, because when problems are categorical, then the concrete method should be category theory</em></li>
 </ul>
 <ol style="list-style-type: decimal">
-<li><span class="crosslink"><span id="cross-object"></span>object</span></li>
+<li><span class="crosslink"><span id="cross-objectA"></span>objectA</span> a <a href="#cross-type">type</a>
+<ul>
+<li><span class="crosslink"><span id="cross-small-category"></span>small category</span> this is a relative concept, some times the type is just a <span class="math">\(A:{\mathcal{U}}\)</span>, a small type, some time it is <a href="#cross-subuniverse">subuniverse</a> of <span class="math">\({\mathcal{U}}_1: {\mathcal{U}}_2\)</span>, and we can think <span class="math">\({\mathcal{Cat}}_{{\mathcal{U}}_i}\)</span> at any level</li>
+</ul></li>
 <li><span class="crosslink"><span id="cross-morphism"></span>morphism</span>
 <ul>
 <li><span class="crosslink"><span id="cross-domain"></span>domain</span></li>
@@ -475,6 +529,7 @@ $("#content").css("max-width", "1100px")
 <li><a href="#cross-object">object</a> <a href="#cross-category">category</a></li>
 <li><a href="#cross-morphism">morphism</a> <span class="crosslink"><span id="cross-functor"></span>functor</span> preserve <a href="#cross-identity-morphism">identity morphism</a> and <a href="#cross-law-of-composition">law of composition</a> <span class="math">\(F({\text{id}}_x) = {\text{id}}_{F(x)}\)</span>, <span class="math">\(F(g\circ f) = F(g) \circ F(f)\)</span>
 <ul>
+<li><em>what’s functoriality? thinks maps between them</em></li>
 <li>it preserve all commuting diagrams. <em>this can made formal by using diagram and freely generated categories</em>
 <ul>
 <li>this is not sufficient, consider a functor maps to a constant and a constant map</li>
@@ -515,7 +570,7 @@ $("#content").css("max-width", "1100px")
 <li><a href="#cross-ccc">ccc</a> with <a href="#cross-exponential">exponential</a> is <span class="crosslink"><span id="cross-functor-category"></span>functor category</span> <span class="math">\({\mathcal{C}}^{\mathcal{D}}\)</span> <span class="math">\({\diamond}\)</span> …
 <ul>
 <li><a href="#cross-object">object</a> <a href="#cross-functor">functor</a></li>
-<li><a href="#cross-morphism">morphism</a> <span class="crosslink"><span id="cross-natural-transform"></span>natural transform</span> for <span class="math">\(T,U:{\mathcal{D}}\to{\mathcal{C}}\)</span>, <span class="math">\(\tau: {\mathcal{D}}\to (T\downarrow U)\)</span> such that <span class="math">\(P\circ \tau = Q\circ \tau = {\text{Id}}_{\mathcal{D}}\)</span>
+<li><a href="#cross-morphism">morphism</a> <span class="crosslink"><span id="cross-natural-transform"></span>natural transform</span> for <span class="math">\(T,U:{\mathcal{D}}\to{\mathcal{C}}\)</span>, <span class="math">\(\tau: {\mathcal{D}}\to (T\downarrow U)\)</span> such that <span class="math">\(P\circ \tau = Q\circ \tau = {\text{Id}}_{\mathcal{D}}\)</span>. <span class="crosslink"><span id="cross-natural-in"></span>natural in</span> when restricted to a single object <span class="math">\(c\)</span>, for any <span class="math">\(f: c\to c'\)</span> we have a single <span class="math">\(\tau_c: Tc\to Uc\)</span>
 <ul>
 <li><a href="#cross-isomorphism">isomorphism</a> <span class="crosslink"><span id="cross-natural-isomorphism"></span>natural isomorphism</span> we usually use <span class="math">\(\cong\)</span> as the notation
 <ul>
@@ -526,7 +581,7 @@ $("#content").css("max-width", "1100px")
 <ul>
 <li>if <span class="math">\({\mathcal{C}}\)</span> has lim of a type so is <span class="math">\({\mathcal{C}}^{\mathcal{D}}\)</span> and it is pointwise <code>fix me</code></li>
 <li><span class="math">\({\mathcal{D}}\)</span> not having, but <span class="math">\({\mathcal{C}}^{\mathcal{D}}\)</span> having and not pointwise <span class="math">\({\S}\)</span> <code>fix me</code></li>
-<li><span class="math">\({\mathcal{C}}\)</span> <a href="#cross-ccc">ccc</a> and <a href="#cross-complete">complete</a> <span class="math">\({\Rightarrow}\)</span> <span class="math">\({\mathcal{C}}^{\mathcal{D}}\)</span> <a href="#cross-ccc">ccc</a>
+<li><span class="math">\({\mathcal{C}}\)</span> <a href="#cross-ccc">ccc</a> and <a href="#cross-complete">complete</a> <span class="math">\({\Rightarrow}\)</span> <span class="math">\({\mathcal{C}}^{\mathcal{D}}\)</span> <a href="#cross-ccc">ccc</a> <code>fix me</code>
 <ul>
 <li><a href="http://ncatlab.org/nlab/show/cartesian+closed+category">1</a>, <a href="http://math.stackexchange.com/questions/304932/adjunction-relation">2</a>, <a href="http://math.stackexchange.com/questions/798808/is-the-arrow-category-of-cartesian-closed-category-cartesian-closed">3</a>, <a href="http://mathoverflow.net/questions/104152/exponentials-in-functor-categories/104178#104178">4</a></li>
 </ul></li>
@@ -715,7 +770,7 @@ $("#content").css("max-width", "1100px")
 <li><p>is half of <a href="#cross-equivalence-of-categories">equivalence of categories</a> if the <a href="#cross-unit-of-adjoint">unit of adjoint</a> and <a href="#cross-counit-of-adjoint">counit of adjoint</a> is <a href="#cross-isomorphism">isomorphism</a>s <code>fix me: proof</code></p></li>
 </ul></li>
 </ul>
-<h2 id="lims-and-adjoints">lims and adjoints</h2>
+<h2 id="example-of-adjoints-lims">example of adjoints, lims</h2>
 <ul>
 <li><span class="crosslink"><span id="cross-colimit"></span>colimit</span> for functor <span class="math">\(J:{\mathcal{D}}\to{\mathcal{C}}\)</span> <a href="#cross-universal-arrow">universal arrow</a> from <span class="math">\(J\)</span> to <a href="#cross-diagonal-functor">diagonal functor</a> <span class="math">\(\Delta:{\mathcal{C}}\to{\mathcal{C}}^{\mathcal{D}}\)</span>. mapping out. the universal arrow is actually a set of arrows, see the picture, so it is <a href="#cross-left-adjoint">left adjoint</a> of <span class="math">\(\Delta\)</span>. we use <span class="crosslink"><span id="cross-universal-cone"></span>universal cone</span> to refer to the arrows that commute but not universal
 <ul>
@@ -828,9 +883,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-reflective-subcategory"></span>reflective subcategory</span> a <a href="#cross-full-subcategory">full subcategory</a> <span class="math">\(i: {\mathcal{D}}{\hookrightarrow}{\mathcal{C}}\)</span> having a <a href="#cross-left-adjoint">left adjoint</a></li>
-<li><p><span class="crosslink"><span id="cross-coreflective-subcategory"></span>coreflective subcategory</span> a <a href="#cross-full-subcategory">full subcategory</a> such that <span class="math">\(i\)</span> have a <a href="#cross-right-adjoint">right adjoint</a></p></li>
-<li><p><span class="crosslink"><span id="cross-exponential"></span>exponential</span> for <span class="math">\({\mathcal{C}}\)</span> with binary <a href="#cross-product">product</a>. <span class="math">\(B^C\)</span> and <span class="crosslink"><span id="cross-exponential-evaluation"></span>exponential evaluation</span> <span class="math">\(\epsilon: C^B\times B\to C\)</span> such that <img src="./images/exp.jpg" style="width:300px" /></p>
-<p>then we have <span class="math">\({\mathcal{C}}(A\times B, C)\cong {\mathcal{C}}(A, C^B)\)</span></p></li>
+<li><span class="crosslink"><span id="cross-coreflective-subcategory"></span>coreflective subcategory</span> a <a href="#cross-full-subcategory">full subcategory</a> such that <span class="math">\(i\)</span> have a <a href="#cross-right-adjoint">right adjoint</a></li>
 </ul>
 <h2 id="special-objects">special objects</h2>
 <ul>
@@ -878,10 +931,42 @@ then we check that the composes with <span class="math">\(w^*\)</span> is the un
 <li><p><span class="crosslink"><span id="cross-coring-object"></span>coring object</span></p></li>
 </ul></li>
 </ul>
-<h2 id="cartesian-closed-category">cartesian closed category</h2>
+<h2 id="monoidal-category">monoidal category</h2>
 <ul>
-<li><span class="crosslink"><span id="cross-distributive-category"></span>distributive category</span> have finite <a href="#cross-product">product</a> and finite <a href="#cross-coproduct">coproduct</a> and <span class="math">\((A\times C) + (B\times C)\cong (A+B)\times C\)</span></li>
-<li><span class="crosslink"><span id="cross-cartesian-closed-category"></span><span id="cross-ccc"></span>cartesian closed category</span> have all finite <a href="#cross-product">product</a> and <a href="#cross-exponential">exponential</a>s
+<li><p><span class="crosslink"><span id="cross-monoidal-category"></span>monoidal category</span> <span class="math">\({\mathcal{M}}\)</span>. <span class="crosslink"><span id="cross-unit-object"></span>unit object</span> <span class="math">\(1\in {\mathcal{M}}\)</span>. functor <span class="crosslink"><span id="cross-tensor-product"></span>tensor product</span> <span class="math">\(\otimes:{\mathcal{M}}\times {\mathcal{M}}\to {\mathcal{M}}\)</span>. <a href="#cross-natural-isomorphism">natural isomorphism</a> <span class="crosslink"><span id="cross-associator"></span>associator</span> <span class="math">\(a: (x\otimes y)\otimes z\leftrightarrow x\otimes (y\otimes z)\)</span>, <span class="crosslink"><span id="cross-left-unitor"></span>left unitor</span> <span class="math">\(l: 1\otimes x\leftrightarrow x\)</span> and <span class="crosslink"><span id="cross-right-unitor"></span>right unitor</span> <span class="math">\(r:x\otimes 1\leftrightarrow x\)</span>; <span class="crosslink"><span id="cross-strict-monoidal-category"></span>strict monoidal category</span> the <a href="#cross-natural-isomorphism">natural isomorphism</a>s are all identity natural transforms</p>
+<p><img src="./images/monoidal-1.jpg" style="width:500px" /></p>
+<p><img src="./images/monoidal-2.jpg" style="width:300px" /></p>
+<ul>
+<li><span class="crosslink"><span id="cross-left-closed-monoidal"></span>left closed monoidal</span> <span class="math">\(\_\otimes b\)</span>, <span class="crosslink"><span id="cross-right-closed-monoidal"></span>right closed monoidal</span> <span class="math">\(b\otimes \_\)</span>, <span class="crosslink"><span id="cross-biclosed-monoidal"></span>biclosed monoidal</span> have <a href="#cross-right-adjoint">right adjoint</a></li>
+<li><p><span class="math">\({\Leftarrow}\)</span> <span class="crosslink"><span id="cross-braided-monoidal-category"></span>braided monoidal category</span>. <a href="#cross-natural-isomorphism">natural isomorphism</a> <span class="crosslink"><span id="cross-braiding"></span>braiding</span> <span class="math">\(B:x\otimes y\leftrightarrow y\otimes x\)</span></p>
+<p><img src="./images/braiding.jpg" style="width:400px" /></p></li>
+<li><span class="math">\({\Leftarrow}\)</span> <span class="crosslink"><span id="cross-symmetric-monoidal-category"></span>symmetric monoidal category</span> <span class="math">\(B_{x, y}B_{y,x} = 1_{x\otimes y}\)</span>
+<ul>
+<li><p><span class="crosslink"><span id="cross-closed-monoidal"></span>closed monoidal</span> there is <span class="math">\([X,\_]\)</span> <a href="#cross-right-adjoint">right adjoint</a> of <span class="math">\(\_\otimes X\)</span>, <span class="math">\({\text{hom}}(a\otimes b, c)\cong {\text{hom}}(a, [b, c])\)</span>. if it is <a href="#cross-left-closed-monoidal">left closed monoidal</a> or <a href="#cross-right-closed-monodial">right closed monodial</a> it is <a href="#cross-biclosed-monodial">biclosed monodial</a> <em>we preserve this to braided and symmetric</em></p>
+<p><img src="./images/internal-hom-adjoint.jpg" style="width:200px" /></p>
+<ul>
+<li><span class="crosslink"><span id="cross-internal-hom"></span>internal hom</span>. <span class="crosslink"><span id="cross-internal-evaluation"></span>internal evaluation</span> the universal arrow. <span class="crosslink"><span id="cross-internal-composition"></span>internal composition</span> the adjoint of two evaluation <span class="math">\([Y, Z]\otimes [X, Y]\otimes X\to Z\)</span></li>
+</ul></li>
+</ul></li>
+<li><span class="math">\({\Leftarrow}\)</span> <span class="crosslink"><span id="cross-cartesian-monoidal-category"></span>cartesian monoidal category</span> if the <a href="#cross-tensor-product">tensor product</a> is <a href="#cross-product">product</a>
+<ul>
+<li><span class="crosslink"><span id="cross-cartesian-closed-category"></span><span id="cross-ccc"></span>cartesian closed category</span>, see bellow</li>
+</ul></li>
+<li><p><span class="crosslink"><span id="cross-monoidal-functor"></span>monoidal functor</span> <span class="math">\(F: {\mathcal{C}}\to {\mathcal{C}}'\)</span>. <a href="#cross-natural-transform">natural transform</a> <span class="math">\(\Phi: F(x)\otimes F(y)\leftrightarrow F(x\otimes y)\)</span>. <a href="#cross-morphism">morphism</a> <span class="math">\(\phi: 1_{{\mathcal{C}}'}\leftrightarrow F(1_{\mathcal{C}})\)</span>. <span class="crosslink"><span id="cross-strong-monoidal-functor"></span>strong monoidal functor</span> replace the morphisms to <a href="#cross-isomorphism">isomorphism</a>s. <span class="crosslink"><span id="cross-strict-monoidal-functor"></span>strict monoidal functor</span> replace by identity</p>
+<p><img src="./images/monoidal-functor.jpg" style="width:620px" /></p>
+<ul>
+<li><p><span class="crosslink"><span id="cross-braid-monoidal-functor"></span>braid monoidal functor</span>. <span class="crosslink"><span id="cross-symmetric-monoidal-functor"></span>symmetric monoidal functor</span></p>
+<p><img src="./images/braid-functor.jpg" style="width:260px" /></p></li>
+</ul></li>
+<li><p><span class="crosslink"><span id="cross-monoidal-natural-transform"></span>monoidal natural transform</span>. <span class="crosslink"><span id="cross-braided-natural-transform"></span>braided natural transform</span>. <span class="crosslink"><span id="cross-symmetric-natural-transform"></span>symmetric natural transform</span>. <span class="crosslink"><span id="cross-monoidal-equivalence"></span>monoidal equivalence</span>. <span class="crosslink"><span id="cross-braided-equivalence"></span>braided equivalence</span>. <span class="crosslink"><span id="cross-symmetric-equivalence"></span>symmetric equivalence</span></p>
+<p><img src="./images/monoidal-transform.jpg" style="width:280px" /></p></li>
+</ul></li>
+<li><p><span class="crosslink"><span id="cross-distributive-category"></span>distributive category</span> have finite <a href="#cross-product">product</a> and finite <a href="#cross-coproduct">coproduct</a> and <span class="math">\((A\times C) + (B\times C)\cong (A+B)\times C\)</span></p></li>
+<li><a href="#cross-ccc">ccc</a> have all finite <a href="#cross-product">product</a> and <a href="#cross-exponential">exponential</a>s
+<ul>
+<li><p><a href="#cross-internal-hom">internal hom</a> <span class="crosslink"><span id="cross-exponential"></span>exponential</span> for <span class="math">\({\mathcal{C}}\)</span> with binary <a href="#cross-product">product</a>. <span class="math">\(B^C\)</span> and <span class="crosslink"><span id="cross-exponential-evaluation"></span>exponential evaluation</span> <span class="math">\(\epsilon: C^B\times B\to C\)</span> such that <img src="./images/exp.jpg" style="width:300px" /></p>
+<p>then we have <span class="math">\({\mathcal{C}}(A\times B, C)\cong {\mathcal{C}}(A, C^B)\)</span></p></li>
+</ul>
 <ol style="list-style-type: decimal">
 <li><span class="math">\((\_)^A: {\mathcal{C}}\to {\mathcal{C}}\)</span> is a <a href="#cross-functor">functor</a>. it is right adjoint of <span class="math">\(\_\times A: {\mathcal{C}}\to {\mathcal{C}}\)</span>, so exponential functor is <a href="#cross-continuous">continuous</a>, product functor is <a href="#cross-cocontinuous">cocontinuous</a>
 <ul>
@@ -925,10 +1010,6 @@ then we check that the composes with <span class="math">\(w^*\)</span> is the un
 </ul></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-topos"></span>topos</span> is a <a href="#cross-category">category</a> having finite <a href="#cross-limit">limit</a>s, <a href="#cross-exponential">exponential</a>s and a <a href="#cross-subobject-classifier">subobject classifier</a></li>
-</ul>
-<h2 id="monoidal-category">monoidal category</h2>
-<ul>
-<li><span class="crosslink"><span id="cross-monoidal-category"></span>monoidal category</span> <span class="math">\(\otimes: {\mathcal{C}}\times{\mathcal{C}}\to{\mathcal{C}}\)</span> and <span class="math">\(I\)</span> with <span class="math">\(\alpha\)</span> and <span class="math">\(\lambda\)</span> and <span class="math">\(\rho\)</span> <img src="./images/monoidal.jpg" style="width:400px" /></li>
 </ul>
 <h2 id="abelian-category">abelian category</h2>
 <ul>
@@ -976,6 +1057,7 @@ then we check that the composes with <span class="math">\(w^*\)</span> is the un
 <ul>
 <li><span class="crosslink"><span id="cross-model-category"></span>model category</span> is a category <span class="math">\({\mathcal{M}}\)</span> with <a href="#cross-subcategory">subcategory</a>s. we assume <span class="math">\({\mathcal{M}}\)</span> is model category
 <ul>
+<li><a href="http://mathoverflow.net/questions/29635/what-determines-a-model-structure/29653#29653">see here</a>, and <a href="http://www.math.harvard.edu/~oantolin/notes/modelcatsets.html">here</a></li>
 <li><em>said that we want to inverse some arrows, so we have model category</em></li>
 </ul>
 <ol style="list-style-type: decimal">
@@ -1099,10 +1181,10 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li>if <span class="math">\(A\)</span> <a href="#cross-cofibrant">cofibrant</a> and <span class="math">\(f{\sim_l}g\)</span> then <span class="math">\(f{\sim_r}g\)</span></li>
 <li>if <span class="math">\(X\)</span> <a href="#cross-fibrant">fibrant</a> and <span class="math">\(f{\sim_r}g\)</span> then <span class="math">\(f{\sim_l}g\)</span></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-homotopy"></span>homotopy</span> when <span class="math">\(X\to Y\)</span> from <a href="#cross-cofibrant">cofibrant</a> to <a href="#cross-fibrant">fibrant</a> <span class="math">\(\pi(A, X)\)</span><br /></li>
+<li><span class="crosslink"><span id="cross-lr-homotopy"></span>lr homotopy</span> when <span class="math">\(X\to Y\)</span> from <a href="#cross-cofibrant">cofibrant</a> to <a href="#cross-fibrant">fibrant</a> <span class="math">\(\pi(A, X)\)</span><br /></li>
 <li><span class="math">\(p:Z\to Y\)</span> between <a href="#cross-fibrant">fibrant</a>s, then <a href="#cross-weq">weq</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(p_*\)</span> bijection<br /><span class="math">\(i: W\to X\)</span> between <a href="#cross-cofibrant">cofibrant</a>s, then <a href="#cross-weq">weq</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(i^*\)</span> bijection <code>fix me</code>
 <ul>
-<li>when <span class="math">\(X\to Y\)</span> bifibrant, <span class="math">\(f: A\to X\)</span> is <a href="#cross-weq">weq</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="crosslink"><span id="cross-homotopy-equivalence"></span>homotopy equivalence</span> <code>fix me</code></li>
+<li>when <span class="math">\(X\to Y\)</span> bifibrant, <span class="math">\(f: A\to X\)</span> is <a href="#cross-weq">weq</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="crosslink"><span id="cross-lr-homotopy-equivalence"></span>lr homotopy equivalence</span> <code>fix me</code></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-homotopy-category"></span>homotopy category</span> <span class="math">\({\text{Ho}}{\mathcal{M}}\)</span> <code>fix me</code> <code>fix me: initial in the category</code>. localization of <span class="math">\({\mathcal{M}}\)</span> at <span class="math">\(\mathcal{W}\)</span></li>
 <li><span class="math">\(U:{\mathcal{N}}\to {\mathcal{M}}\)</span> where <span class="math">\({\mathcal{N}}\)</span> is <a href="#cross-model-category">model category</a>
@@ -1280,9 +1362,10 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li><span class="crosslink"><span id="cross-ref-category-for-sol"></span>ref-category-for-sol</span> <a href="http://maths.mq.edu.au/~street/PilletRapport.pdf">http://maths.mq.edu.au/~street/PilletRapport.pdf</a></li>
 </ul></li>
 </ul></li>
-<li>model category
+<li>…
 <ul>
 <li><em>Homotopy theories and model categories</em></li>
+<li><em>Basic Concepts of Enriched Category Theory</em></li>
 </ul></li>
 </ul>
 <h1 id="set">set</h1>
@@ -2865,7 +2948,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul>
 <h3 id="tensor-product">tensor product</h3>
 <ul>
-<li><span class="crosslink"><span id="cross-tensor-product"></span>tensor product</span> is <a href="#cross-initial">initial</a> in <a href="#cross-coslice-category">coslice category</a> of <span class="math">\(E_1\times \cdots\times E_n\)</span> where the arrows should be <a href="#cross-multilinear-map">multilinear map</a>
+<li><a href="#cross-tensor-product">tensor product</a> is <a href="#cross-initial">initial</a> in <a href="#cross-coslice-category">coslice category</a> of <span class="math">\(E_1\times \cdots\times E_n\)</span> where the arrows should be <a href="#cross-multilinear-map">multilinear map</a>
 <ul>
 <li>remark on why defined over commutative ring, see <a href="#cross-ref-algebra-0">ref-algebra-0</a></li>
 </ul>
@@ -3582,10 +3665,6 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul>
 <h1 id="topological-space">topological space</h1>
 <h2 id="idea-2">idea</h2>
-<ul>
-<li>it describe what we means by a space, which has a notation of <strong>nearness</strong> of points, which means the point have some <strong>extension</strong>, so infinite extension will destroy it</li>
-<li>a very exciting <a href="http://math.stackexchange.com/questions/31859/what-concept-does-an-open-set-axiomatise">post</a> about what topological space really means</li>
-</ul>
 <h2 id="topological-space-1">topological space</h2>
 <h3 id="topological-space-2">topological space</h3>
 <ul>
@@ -3596,12 +3675,19 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li><a href="#cross-set">set</a> <span class="math">\(A\)</span></li>
 <li><span class="crosslink"><span id="cross-open-set"></span><span id="cross-topology"></span>open set</span>s <span class="math">\({\mathscr{T}}\)</span>. we write <span class="math">\(U{\subset_O}X\)</span>
 <ul>
+<li><span class="math">\({\Leftrightarrow}\)</span> <span class="crosslink"><span id="cross-Sierpinski-space"></span>Sierpinski space</span> <code>fix me</code></li>
 <li><span class="crosslink"><span id="cross-closed-set"></span>closed set</span>. <span class="math">\(F{\subset_C}X\)</span></li>
 <li><span class="crosslink"><span id="cross-neighborhood"></span>neighborhood</span> of <span class="math">\(p\)</span> is a subset including a <a href="#cross-open-set">open set</a> <span class="math">\(U\)</span> containing <span class="math">\(p\)</span></li>
 </ul></li>
 <li><span class="math">\(\{A, \emptyset\} \subset {\mathscr{T}}\)</span></li>
 <li><span class="math">\({\mathscr{T}}\)</span> closed under finite <a href="#cross-intersection">intersection</a> and any <a href="#cross-union">union</a></li>
-</ol></li>
+</ol>
+<ul>
+<li>a very exciting <a href="http://math.stackexchange.com/questions/31859/what-concept-does-an-open-set-axiomatise">post</a> about what topological space really means
+<ul>
+<li><em>In the particular case of the Zariski topology, it is always possible to verify in finite time whether a polynomial is nonzero at a point by computing with sufficient precision, but without additional information it is not necessarily possible to verify in finite time whether a polynomial is zero at a point.</em></li>
+</ul></li>
+</ul></li>
 <li><a href="#cross-morphism">morphism</a> <span class="crosslink"><span id="cross-continuous-function"></span><span id="cross-continuous"></span>continuous function</span>
 <ul>
 <li><span class="crosslink"><span id="cross-continuous-at-point"></span>continuous at point</span> every neighborhood <span class="math">\(U\)</span> of <span class="math">\(f(x)\)</span> there is a neighborhood <span class="math">\(N\)</span> of <span class="math">\(x\)</span> such that <span class="math">\(f(N)\subset U\)</span></li>
@@ -3707,7 +3793,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li><span class="math">\({\S}\)</span> <span class="math">\(-1, 1, -1, 2, -1, 3, \dots\)</span></li>
 <li><span class="math">\({\Leftrightarrow}\)</span> some <a href="#cross-subnet">subnet</a> convergence to the point</li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-sequential-space"></span>sequential space</span> <span class="crosslink"><span id="cross-sequentially-open"></span>sequentially open</span> is <a href="#cross-open">open</a> or form in closed…
+<li><span class="crosslink"><span id="cross-sequential-space"></span>sequential space</span> <a href="#cross-sequentially-open">sequentially open</a> is <a href="#cross-open">open</a> or form in closed…
 <ul>
 <li><span class="crosslink"><span id="cross-sequentially-open"></span>sequentially open</span> sequentially convergence sequence is <a href="#cross-eventually-in">eventually in</a></li>
 <li><span class="crosslink"><span id="cross-sequentially-closed"></span>sequentially closed</span> sequentially limit is in</li>
@@ -3874,7 +3960,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul></li>
 <li><span class="crosslink"><span id="cross-compactification"></span>compactification</span>
 <ul>
-<li><span class="crosslink"><span id="cross-Alexandroff-compactification"></span><span id="cross-one-point-compactification"></span>Alexandroff compactification</span> <span class="math">\(X^* = X\cup \{\infty\}\)</span> with open sets 1. open sets of <span class="math">\(X\)</span> and 2. for <span class="math">\(V\)</span> such that <span class="math">\(X-V\)</span> closed and compact, <span class="math">\(V\cup \{\infty\}\)</span>. proof: a cover must contain <span class="math">\(\infty\)</span>, so remain a compact set
+<li><span class="crosslink"><span id="cross-Alexandroff-compactification"></span><span id="cross-one-point-compactification"></span>Alexandroff compactification</span> <span class="math">\(X^* = X\cup \{\infty\}\)</span> with open sets 1. open sets of <span class="math">\(X\)</span> and 2. for <span class="math">\(V\)</span> such that <span class="math">\(X-V\)</span> closed and compact, <span class="math">\(V\cup \{\infty\}\)</span> <span class="math">\({\diamond}\)</span> a cover must contain <span class="math">\(\infty\)</span>, so remain a compact set
 <ul>
 <li><span class="math">\(i: X\to X^*\)</span> is continuous and <a href="#cross-open-map">open map</a></li>
 </ul></li>
@@ -4242,7 +4328,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <h2 id="basic-constructions">basic constructions</h2>
 <h3 id="general-topological-construction">general topological construction</h3>
 <ul>
-<li><span class="math">\({\mathcal{Top}}\)</span>, if we referred <a href="#cross-exponential">exponential</a>, it is to be understand we are defining in a <a href="#cross-ccc">ccc</a> like <span class="math">\({\mathcal{CGWH}}\)</span>. <span class="crosslink"><span id="cross-topological-category"></span>topological category</span> <span class="math">\({\mathcal{Topl}}\)</span> any subcategory of <span class="math">\({\mathcal{Top}}\)</span> contains basic objects like <span class="math">\(I\)</span>
+<li><span class="crosslink"><span id="cross-topological-category"></span>topological category</span> <span class="math">\({\mathcal{Topl}}\)</span> any subcategory of <span class="math">\({\mathcal{Top}}\)</span> contains basic objects like <span class="math">\(I\)</span> . for example <span class="math">\({\mathcal{Top}}\)</span>. if we referred <a href="#cross-exponential">exponential</a>, it is to be understand we are defining in a <a href="#cross-ccc">ccc</a> like <span class="math">\({\mathcal{CGWH}}\)</span>
 <ul>
 <li><span class="crosslink"><span id="cross-shpere"></span>shpere</span> <span class="math">\(S^n\)</span>. <span class="crosslink"><span id="cross-infinite-dimensional-sphere"></span>infinite-dimensional sphere</span> <span class="math">\(S^\infty\)</span></li>
 <li><span class="crosslink"><span id="cross-disk"></span>disk</span> <span class="math">\(D^n\)</span>. <span class="crosslink"><span id="cross-northern-hemisphere"></span>northern hemisphere</span> <span class="math">\(D^n_N\)</span>. <span class="crosslink"><span id="cross-southern-hemisphere"></span>southern hemisphere</span> <span class="math">\(D^n_S\)</span>. <span class="crosslink"><span id="cross-stereographic-projection"></span>stereographic projection</span>. <span class="crosslink"><span id="cross-north-pole"></span>north pole</span> <span class="math">\(N = (0, 0, \dots, 0, 1)\)</span>. <span class="crosslink"><span id="cross-south-pole"></span>south pole</span> <span class="math">\(S\)</span></li>
@@ -4265,26 +4351,25 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <ul>
 <li><span class="math">\({\S}\)</span> <span class="math">\({\Sigma_o}S^n\cong S^{n + 1}\)</span>. we can construct the homeomorphism easily</li>
 </ul></li>
-<li><p><span class="crosslink"><span id="cross-bundle"></span>bundle</span> <span class="math">\(p:E\to B\)</span> when restricted to <span class="math">\(U\in {\mathcal{O}}\)</span> a <a href="#cross-cover">cover</a> of <span class="math">\(B\)</span>, there are <a href="#cross-homeomorphism">homeomorphism</a>s <span class="math">\(\phi: U\times F\to p^{-1}(U)\)</span> such that <span class="math">\(p\circ \phi = \pi_1\)</span> where <span class="math">\(F\)</span> is a fixed topological space</p></li>
+<li><span class="crosslink"><span id="cross-bundle"></span>bundle</span> <span class="math">\(p:E\to B\)</span> when restricted to <span class="math">\(U\in {\mathcal{O}}\)</span> a <a href="#cross-cover">cover</a> of <span class="math">\(B\)</span>, there are <a href="#cross-homeomorphism">homeomorphism</a>s <span class="math">\(\phi: U\times F\to p^{-1}(U)\)</span> such that <span class="math">\(p\circ \phi = \pi_1\)</span> where <span class="math">\(F\)</span> is a fixed topological space</li>
+<li><p><span class="crosslink"><span id="cross-unpointed-path-space"></span>unpointed path space</span> <span class="math">\(Y^I\)</span> <span class="math">\(@_t\)</span> evaluation at <span class="math">\(t\)</span></p></li>
 </ul></li>
-<li>in any <a href="#cross-pointed-category">pointed category</a> of <a href="#cross-ccc">ccc</a> <span class="math">\({\mathcal{Topl}}\)</span>, like <span class="math">\({\mathcal{CGWH}}_*\)</span>
+<li>in any <a href="#cross-pointed-category">pointed category</a> <span class="math">\({\mathcal{Topl}}_*\)</span>. if we used the fact <a href="#cross-ccc">ccc</a> and <a href="#cross-closed-monodial-category">closed monodial category</a>, we assume working in one like <span class="math">\({\mathcal{CGWH}}_*\)</span>
 <ul>
-<li><span class="math">\(\pi_0(X)\)</span> is based set</li>
 <li><a href="#cross-smash-product">smash product</a> is same with usual definition
 <ul>
-<li><span class="crosslink"><span id="cross-cone"></span>cone</span> <span class="math">\(CX = X\land I\)</span></li>
+<li><span class="crosslink"><span id="cross-cone"></span>cone</span> <span class="math">\(CX = X\land I\)</span>, <span class="math">\({\text{in}}_0\)</span></li>
+<li><span class="crosslink"><span id="cross-cylinder"></span>cylinder</span> <span class="math">\(X\rtimes I\)</span>, <span class="math">\({\text{in}}_0\)</span>, <span class="math">\({\text{in}}_1\)</span></li>
 <li><span class="crosslink"><span id="cross-suspension"></span>suspension</span> <span class="math">\(\Sigma X = X\land S^1\)</span></li>
 </ul></li>
-<li><span class="math">\(Y^X_*\)</span>
+<li><a href="#cross-maps-of-pairs">maps of pairs</a> <span class="math">\(Y^X_*\)</span>
 <ul>
-<li><span class="crosslink"><span id="cross-path-space"></span>path space</span> <span class="math">\(PX = X^I_*\)</span></li>
-<li><span class="crosslink"><span id="cross-loop-space"></span>loop space</span> <span class="math">\(\Omega X = X^S_*\)</span></li>
+<li><span class="crosslink"><span id="cross-path-space"></span>path space</span> <span class="math">\(PX = X^I_*\)</span> using <span class="math">\(1\)</span> as basepoint. <span class="math">\(@_0\)</span> evaluation map. is <a href="#cross-contractible">contractible</a></li>
 </ul></li>
 </ul></li>
 </ul>
-<h3 id="graph">graph</h3>
-<p><code>fix me</code></p>
 <h3 id="cw-complex">CW complex</h3>
+<p><code>fix me: graph</code></p>
 <ul>
 <li><span class="math">\({\mathcal{CWC}}\)</span> can be viewed as a subcategory of <span class="math">\({\mathcal{CGWH}}\)</span>
 <ul>
@@ -4309,14 +4394,14 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul>
 <h3 id="homotopy-space">homotopy space</h3>
 <ul>
-<li><span class="crosslink"><span id="cross-homotopy"></span><span id="cross-homotopy-class"></span>homotopy</span> for <a href="#cross-continuous-function">continuous function</a> <span class="math">\(f,g: X\to Y\)</span>, <a href="#cross-continuous-function">continuous function</a> <span class="math">\(h: X\times I\to Y\)</span> such that <span class="math">\(h(x, 0) = f(x)\)</span>, <span class="math">\(h(x, 1) = g(x)\)</span>. if in <a href="#cross-ccc">ccc</a>, we can say a path <span class="math">\(f{\leadsto}g\)</span> in <span class="math">\(X^Y\)</span>
+<li><span class="crosslink"><span id="cross-homotopy"></span><span id="cross-homotopy-class"></span>homotopy</span> for <a href="#cross-continuous-function">continuous function</a> <span class="math">\(f,g: X\to Y\)</span>, <a href="#cross-continuous-function">continuous function</a> <span class="math">\(h: X\times I\to Y\)</span> such that <span class="math">\(h(x, 0) = f(x)\)</span>, <span class="math">\(h(x, 1) = g(x)\)</span>. if in <a href="#cross-ccc">ccc</a>, we can say a path <span class="math">\(f{\leadsto}g\)</span> in <span class="math">\(Y^X\)</span>
 <ul>
 <li>its <a href="#cross-equivalence-relation">equivalence relation</a> <span class="math">\({\diamond}\)</span> trivial, notice we should proof the composition is continuous</li>
 <li><span class="crosslink"><span id="cross-deformation-retraction"></span>deformation retraction</span> you know this</li>
 <li><span class="crosslink"><span id="cross-strong-deformation-retraction"></span>strong deformation retraction</span> always fixed</li>
 <li><span class="crosslink"><span id="cross-neighborhood-deformation-retraction"></span><span id="cross-ndr"></span>neighborhood deformation retraction</span> we require more a <span class="math">\(u:X\to I\)</span> with <span class="math">\(u(Y) = 0\)</span> we only retract a neighborhood with <span class="math">\(u(x)&lt;1\)</span>. <em>it is like having a continuous neighborhood which is a deformation retraction</em></li>
 </ul></li>
-<li>there is a <a href="#cross-functor">functor</a> from <span class="math">\({\mathcal{Topl}}\)</span> to the <span class="crosslink"><span id="cross-homotopy-space"></span>homotopy space</span> <span class="math">\({\mathcal{hTop}}\)</span> or similar
+<li>there is a <a href="#cross-functor">functor</a> from <span class="math">\({\mathcal{Topl}}\)</span> to the <span class="crosslink"><span id="cross-homotopy-space"></span>homotopy space</span> <span class="math">\({\mathcal{hTop}}\)</span> or similar. same rules like first section
 <ul>
 <li><a href="#cross-object">object</a> same</li>
 <li><a href="#cross-morphism">morphism</a> <span class="math">\({\langle X, Y \rangle}\)</span> <a href="#cross-homotopy-class">homotopy class</a> of <a href="#cross-continuous-function">continuous function</a>s
@@ -4328,12 +4413,26 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li>non-locally contractible but contractible space <span class="math">\({\S}\)</span> easy</li>
 </ul></li>
 </ul></li>
+<li><span class="math">\(\Pi_n(X) = {\langle S^n, X \rangle}\)</span></li>
 </ul></li>
-<li>a functor from <span class="math">\({\mathcal{Topl}}_*\)</span> to <span class="math">\({\mathcal{hTop}}_*\)</span> or similar
+<li>a functor from <span class="math">\({\mathcal{Topl}}_*\)</span> to <span class="math">\({\mathcal{hTop}}_*\)</span> or similar. same rules like first section
 <ul>
 <li><a href="#cross-object">object</a> same</li>
-<li><a href="#cross-morphism">morphism</a> <span class="math">\([X, Y]\)</span></li>
+<li><a href="#cross-morphism">morphism</a> <span class="math">\([X, Y]\)</span>
+<ul>
+<li><a href="#cross-contractible-space">contractible space</a> <span class="math">\({\Leftrightarrow}\)</span> factor though <span class="math">\(CX\)</span></li>
 <li><span class="math">\({\S}\)</span> is there exist two continuous function that can only be homotopy in <span class="math">\({\mathcal{hTop}}\)</span> but not <span class="math">\({\mathcal{hTop_*}}\)</span>, i.e. only exist homotopy that moves basepoint in the middle of the transform? <a href="#cross-hatcher-0-6">hatcher-0-6</a> <strong>it seems fundamental group and groupoid both plays well with homotopy category</strong>, <em>this category is useless…</em></li>
+</ul></li>
+<li><a href="#cross-cogroup-object">cogroup object</a> and <a href="#cross-group-object">group object</a>
+<ul>
+<li><span class="math">\({\Leftarrow}\)</span> <span class="math">\(S^1\)</span> <span class="math">\({\diamond}\)</span> the stay-a-while-then-go map</li>
+<li>from <a href="#cross-left-adjoint">left adjoint</a> of <span class="math">\(\_\land \_\)</span>, we know if <span class="math">\(A\)</span> is <a href="#cross-cogroup-object">cogroup object</a> then so is <span class="math">\(A\land B\)</span></li>
+<li><span class="math">\(\Sigma^2 X\)</span> is <a href="#cross-cocommutative">cocommutative</a> <a href="#cross-cogroup-object">cogroup object</a>, so is <span class="math">\(S^n\)</span></li>
+<li>if <span class="math">\(X\)</span> is <a href="#cross-cogroup-object">cogroup object</a> then <span class="math">\(Y^X_*\)</span> is <a href="#cross-group-object">group object</a>, so is <span class="math">\(\Omega X\)</span>, preserving <a href="#cross-cocommutative">cocommutative</a>, so is <span class="math">\(\Omega^2 X\)</span></li>
+<li>if <span class="math">\(Y\)</span> is <a href="#cross-group-object">group object</a> then is <span class="math">\(Y^X_*\)</span></li>
+</ul></li>
+<li><p><span class="math">\(\pi_n(X) = [S^n, X]\)</span>. we know we can lift the functor to <span class="math">\({\mathcal{Grp}}\)</span>, and the lift is unique for <span class="math">\(n\geq 2\)</span> <code>fix me</code> <img src="./images/homotopy-group-lift.jpg" style="width:200px" /></p>
+<p><em>the definition here is not the same as <a href="#cross-fundamental-group">fundamental group</a> in <span class="math">\({\mathcal{Top}}\)</span>!!!, it required the presence of mapping space</em></p></li>
 </ul></li>
 </ul>
 <h2 id="fundamental-group">fundamental group</h2>
@@ -4426,7 +4525,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <h2 id="covering-space">covering space</h2>
 <p>we assume all space considered is <a href="#cross-locally-path-connected">locally path connected</a> and <a href="#cross-connected">connected</a></p>
 <ul>
-<li><span class="crosslink"><span id="cross-covering-space"></span><span id="cross-covering"></span>covering space</span> <span class="math">\(q: E\to B\)</span>
+<li><span class="crosslink"><span id="cross-covering-space"></span>covering space</span> <span class="math">\(q: E\to B\)</span>
 <ol style="list-style-type: decimal">
 <li><a href="#cross-surjective">surjective</a></li>
 <li>each <span class="math">\(b\in B\)</span>, has <a href="#cross-open">open</a> <a href="#cross-neighborhood">neighborhood</a> <span class="math">\(V\)</span>, such that each <a href="#cross-disjoint-component">disjoint component</a> of <span class="math">\(q^{-1}(V)\)</span> is open and mapped <a href="#cross-homeomorphically">homeomorphically</a> onto <span class="math">\(V\)</span> by <span class="math">\(q\)</span>
@@ -4674,8 +4773,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li>chapter 1, section 5 <code>fix me</code></li>
 </ul>
 <hr />
-<p>from now on, in the algebraic topology part, we assume we are working in <span class="math">\({\mathcal{CGWH}}\)</span>, the category of <a href="#cross-cgwh">cgwh</a>, with all constructions adding <span class="math">\(k\)</span>, and unlike in <a href="#cross-cgwh">cgwh</a> section, we use <span class="math">\(\times\)</span> as <span class="math">\({\times_k}\)</span></p>
-<h2 id="model-category-mathcalcgwh">model category <span class="math">\({\mathcal{CGWH}}\)</span></h2>
+<h2 id="fibration-and-cofibration">fibration and cofibration</h2>
 <ul>
 <li><span class="math">\({\mathcal{CGWH}}\)</span> as a <a href="#cross-monoidal-category">monoidal category</a> <a href="#cross-proper-model-category">proper model category</a>
 <ol style="list-style-type: decimal">
@@ -4727,7 +4825,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul></li>
 <li>axioms <span class="math">\({\diamond}\)</span>
 <ol style="list-style-type: decimal">
-<li>bicomplete</li>
+<li>bicomplete, subcategory <span class="math">\({\diamond}\)</span> two lift</li>
 <li>2 of 3. <code>fix me</code></li>
 <li>retraction. <code>fix me</code></li>
 <li>lifts <code>fix me</code></li>
@@ -4736,7 +4834,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li>with <span class="math">\(Mf = Y\cup_f (X\times I)\)</span> we have <span class="math">\(X\to Mf\to Y\)</span>. it is not hard to check first is cofibration, by considering the induced map fades when towards bottom, the second is homotopy equivalence, which is trivial by the inclusion map, and it is easily checked is a fibration</li>
 <li>with <span class="math">\(Nf = X\times Y^I\)</span> we have <span class="math">\(X\to Nf\to Y\)</span> the first maps to constant path at <span class="math">\(x\)</span>, the second maps to path’s end. the first is a cofibration and homotopy equivalence, the second is a fibration. fibration is by the lifted path, the map <span class="math">\(A\times I\to Nf\)</span> is very interesting, at <span class="math">\(t = 0\)</span> points, we move entirely as <span class="math">\(g: A\to Nf\)</span>, at other points <span class="math">\(t = t_0\)</span>, we first move alone <span class="math">\(g\)</span>, as we know <span class="math">\(h\)</span> at <span class="math">\(t = 0\)</span> starts here, we then works alone <span class="math">\(h\)</span> till <span class="math">\(t_0\)</span>, then we get it. to proof first is acyclic cofibration is trivial</li>
 </ol></li>
-<li>all space is <a href="#cross-fibrant">fibrant</a> and <a href="#cross-cofibrant">cofibrant</a>, so <a href="#cross-proper-model-category">proper model category</a> <code>fix me</code></li>
+<li>all space is <a href="#cross-fibrant">fibrant</a> and <a href="#cross-cofibrant">cofibrant</a>, so <a href="#cross-proper-model-category">proper model category</a> <span class="math">\({\diamond}\)</span> vainly true</li>
 </ol></li>
 </ul></li>
 </ul>
