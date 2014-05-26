@@ -5929,3 +5929,14 @@ body {
     width: 263px;
   }
 }
+.highlighter {
+  position: absolute;
+  border-bottom: 2px solid orangered;
+  top: -10px;
+  left: 2%;
+  width: 96%;
+  box-shadow: 0 1px 1px white;
+}
+.last-change-marker {
+  box-shadow: 1px 0 0 1px rgba(255, 69, 0, 0.5);
+}
