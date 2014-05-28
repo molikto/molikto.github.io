@@ -700,7 +700,7 @@ $("#content").css("max-width", "1100px")
 <li><span class="math">\({\Leftrightarrow}\)</span> <a href="#cross-zero-object">zero object</a>. i.e. every category having <a href="#cross-zero-object">zero object</a> is pointed</li>
 <li><a href="#cross-coproduct">coproduct</a> and <a href="#cross-wedge-sum">wedge sum</a> is the same. also as <span class="math">\(A\lor B\)</span></li>
 <li><span class="crosslink"><span id="cross-half-smash-product"></span>half-smash product</span> for <span class="math">\(X\in {\mathcal{C}}\)</span> and <span class="math">\(Y\in {\mathcal{C}}_*\)</span> <span class="math">\(X\rtimes Y\)</span>. in topology it is <span class="math">\(\frac{X\times Y}{*\times Y}\)</span></li>
-<li><a href="#cross-smash-product">smash product</a> is a functor, i do not want to generalize now… <code>fix me</code></li>
+<li><a href="#cross-smash-product">smash product</a> <span class="math">\(X\land Y = \frac{X\times Y}{X\lor Y}\)</span></li>
 <li><a href="#cross-maps-of-pairs">maps of pairs</a> also as <span class="math">\(Y^X_*\)</span></li>
 <li><span class="crosslink"><span id="cross-axis-map"></span>axis map</span> <span class="math">\({\text{ax}}_X: X\to X\times Y\)</span></li>
 <li><span class="crosslink"><span id="cross-coaxis-map"></span>coaxis map</span> <span class="math">\({\text{coax}}_X X\amalg Y \to X\)</span>
@@ -1051,7 +1051,7 @@ then we check that the composes with <span class="math">\(w^*\)</span> is the un
 <p><img src="./images/braid-functor.jpg" style="width:260px" /></p></li>
 </ul></li>
 <li><p><span class="crosslink"><span id="cross-monoidal-natural-transform"></span>monoidal natural transform</span>. <span class="crosslink"><span id="cross-braided-natural-transform"></span>braided natural transform</span>. <span class="crosslink"><span id="cross-symmetric-natural-transform"></span>symmetric natural transform</span>. <span class="crosslink"><span id="cross-monoidal-equivalence"></span>monoidal equivalence</span>. <span class="crosslink"><span id="cross-braided-equivalence"></span>braided equivalence</span>. <span class="crosslink"><span id="cross-symmetric-equivalence"></span>symmetric equivalence</span></p>
-<p><img src="./images/monoidal-transform.jpg" style="width:280px" /></p></li>
+<p><img src="./images/monoidal-transform.jpg" style="width:250px" /></p></li>
 </ul></li>
 <li><p><span class="crosslink"><span id="cross-distributive-category"></span>distributive category</span> have finite <a href="#cross-product">product</a> and finite <a href="#cross-coproduct">coproduct</a> and <span class="math">\((A\times C) + (B\times C)\cong (A+B)\times C\)</span></p></li>
 <li><a href="#cross-ccc">ccc</a> have all finite <a href="#cross-product">product</a> and <a href="#cross-exponential">exponential</a>s
@@ -1460,8 +1460,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul>
 <h1 id="set">set</h1>
 <p>the theory is classical, we do not use the definitions founded in <a href="#cross-ref-hott">ref-hott</a></p>
-<h2 id="basic-set-theory">basic set theory</h2>
-<h3 id="set-1">set</h3>
+<h2 id="set-1">set</h2>
 <ul>
 <li><span class="math">\({\mathcal{Set}}\)</span>
 <ul>
@@ -1523,7 +1522,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li><a href="#cross-object">object</a> <a href="#cross-pointed-object">pointed object</a> in <span class="math">\({\mathcal{Set}}\)</span>. <span class="crosslink"><span id="cross-pointed-set"></span>pointed set</span> with <a href="#cross-basepoint">basepoint</a></li>
 </ul></li>
 </ul>
-<h3 id="ordering">ordering</h3>
+<h2 id="ordering">ordering</h2>
 <ul>
 <li><span class="math">\({\mathcal{Pos}}\)</span> <a href="#cross-subcategory">subcategory</a> of <span class="math">\({\mathcal{Set}}\)</span>
 <ul>
@@ -1598,7 +1597,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li><a href="#cross-skeleton-category">skeleton category</a> <a href="#cross-ordinal-number">ordinal number</a>s</li>
 </ul></li>
 </ul>
-<h3 id="ordinal">ordinal</h3>
+<h2 id="ordinal">ordinal</h2>
 <ul>
 <li><span class="math">\(\mathcal{Ord}\)</span> <a href="#cross-skeleton-category">skeleton category</a> of <a href="#cross-well-ordered-set">well ordered set</a>
 <ul>
@@ -1618,7 +1617,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul></li>
 </ul></li>
 </ul>
-<h3 id="cardinal">cardinal</h3>
+<h2 id="cardinal">cardinal</h2>
 <ul>
 <li><a href="#cross-skeleton-category">skeleton category</a> of <span class="math">\({\mathcal{Set}}\)</span>
 <ul>
@@ -3870,10 +3869,10 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li><span class="crosslink"><span id="cross-locally-compact-2"></span>locally compact 2</span> every point has a <a href="#cross-relatively-compact">relatively compact</a> <a href="#cross-local-base">local base</a>
 <ul>
 <li><span class="math">\({\Leftarrow}\)</span> <a href="#cross-compact">compact</a> <code>fix me</code></li>
-<li><code>fix me: 0 and 2 has no relations</code> <span class="math">\({\S}\)</span></li>
+<li>0 and 2 has no relations <span class="math">\({\S}\)</span> <code>eg</code></li>
 </ul></li>
 <li>for <a href="#cross-Hausdorff-space">Hausdorff space</a> they are equal. 2 <span class="math">\({\Leftrightarrow}\)</span> 0. 1 <span class="math">\({\Rightarrow}\)</span> 0 <code>fix me</code></li>
-<li><a href="http://math.stackexchange.com/questions/337450/compact-and-locally-hausdorff-but-not-locally-compact">compact and locally Hausdorff but not locally compact</a> <span class="math">\({\S}\)</span> <code>fix me: read it</code></li>
+<li><a href="http://math.stackexchange.com/questions/337450/compact-and-locally-hausdorff-but-not-locally-compact">compact and locally Hausdorff but not locally compact</a> <span class="math">\({\S}\)</span> <code>eg: read it</code></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-compactification"></span>compactification</span>
 <ul>
@@ -3891,7 +3890,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul>
 <h2 id="cgwhcgwh-space">cg/wh/cgwh space</h2>
 <ul>
-<li><span class="math">\(X\to kX\to kX: {\mathcal{Top}}\to {\mathcal{kTop}}\to {\mathcal{Top}}\)</span> <a href="#cross-full-subcategory">full subcategory</a> <a href="#cross-corefletive-subcategory">corefletive subcategory</a> of <span class="math">\({\mathcal{Top}}\)</span>
+<li><span class="math">\(X\to kX: {\mathcal{Top}}\to {\mathcal{kTop}}\)</span> <a href="#cross-full-subcategory">full subcategory</a> <a href="#cross-corefletive-subcategory">corefletive subcategory</a> of <span class="math">\({\mathcal{Top}}\)</span>
 <ul>
 <li><a href="#cross-functor">functor</a> is <a href="#cross-right-adjoint">right adjoint</a> to <span class="math">\(i\)</span>, so <span class="math">\({\mathcal{kTop}}\)</span> is a <a href="#cross-corefletive-subcategory">corefletive subcategory</a>
 <ol style="list-style-type: decimal">
@@ -3907,7 +3906,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul></li>
 </ol>
 <ul>
-<li>for <span class="math">\({\mathscr{T}}_1\subset {\mathscr{T}}_2\)</span> on <span class="math">\(X\)</span>, we have <span class="math">\(k{\mathscr{T}}_1\subset k{\mathscr{T}}_2\)</span> <span class="math">\({\diamond}\)</span> more closed set, less continuous function, easer to satisfy the condition</li>
+<li><span class="math">\(f: K\to Y\)</span> continuous <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(f\circ u: C\to Y\)</span> continuous for all <span class="math">\(u: C\to K\)</span> with <span class="math">\(C\)</span> <a href="#cross-hompact">hompact</a> <span class="math">\({\diamond}\)</span> trivial, use definition</li>
 </ul></li>
 <li><a href="#cross-object">object</a> <span class="crosslink"><span id="cross--k--space"></span><span id="cross-hompactly-generated-space"></span><span id="cross-hompactly-generated"></span><span id="cross-kspace"></span><span class="math">\(k\)</span>-space</span> <span class="math">\(kK = K\)</span>
 <ul>
@@ -3915,7 +3914,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li><span class="math">\({\Leftarrow}\)</span> <a href="#cross-locally-compact">locally compact</a> (so compact) <a href="#cross-Hausdorff-space">Hausdorff space</a> <span class="math">\({\diamond}\)</span> taking the map <span class="math">\({\text{id}}\)</span></li>
 <li><span class="math">\({\Leftarrow}\)</span> <a href="#cross-sequential-space">sequential space</a>, thus <a href="#cross-metric-space">metric space</a> and <a href="#cross-first-countable-space">first countable space</a><br /><span class="math">\({\diamond}\)</span> let <span class="math">\(Y\subset X\)</span>, <span class="math">\(Y\)</span> is <a href="#cross-klosed">klosed</a> subspace of sequential space <span class="math">\(X\)</span>, for <span class="math">\(y_k\to x\)</span>, we define from the <a href="#cross-one-point-compactification">one-point compactification</a> of <span class="math">\({\mathbb{N}}\)</span>, and because convergence, it is continuous, if <span class="math">\(x\notin Y\)</span>, then the image is <span class="math">\({\mathbb{N}}\)</span> open</li>
 <li>if <span class="math">\(X\)</span> is <a href="#cross-Hausdorff">Hausdorff</a>, then <a href="#cross-hompactly-generated">hompactly generated</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="crosslink"><span id="cross-compactly-generated"></span>compactly generated</span> <span class="math">\({\diamond}\)</span> we can force the compact space to be <a href="#cross-hompact">hompact</a></li>
-<li><span class="math">\(f: K\to Y\)</span> continuous <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(f\circ u: C\to Y\)</span> continuous for all <span class="math">\(u: C\to K\)</span> with <span class="math">\(C\)</span> <a href="#cross-hompact">hompact</a> <span class="math">\({\diamond}\)</span> trivial, use definition</li>
+<li>for <span class="math">\({\mathscr{T}}_1\subset {\mathscr{T}}_2\)</span> on <span class="math">\(X\)</span>, we have <span class="math">\(k{\mathscr{T}}_1\subset k{\mathscr{T}}_2\)</span> <span class="math">\({\diamond}\)</span> more closed set, less continuous function, easer to satisfy the condition</li>
 </ul></li>
 <li><a href="#cross-colimit">colimit</a> do not change
 <ul>
@@ -3924,10 +3923,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul></li>
 <li>because <a href="#cross-right-adjoint">right adjoint</a>, limit is preserved, but not always same object
 <ul>
-<li><a href="#cross-product">product</a> <span class="math">\(X{\times_k}Y = k(X\times Y)\)</span>
-<ul>
-<li>if <span class="math">\(X\)</span>, <span class="math">\(Y\)</span> are <a href="#cross-weak-Hausdorff">weak Hausdorff</a>, then <span class="math">\(X{\times_k}Y = kX{\times_k}kY\)</span> <code>fix me</code></li>
-</ul></li>
+<li><a href="#cross-product">product</a> <span class="math">\(X{\times_k}Y = k(X\times Y)\)</span></li>
 <li>situations when product is the same
 <ul>
 <li>if <span class="math">\(X\)</span>, <span class="math">\(Y\)</span> <a href="#cross-first-countable-space">first countable space</a> then <span class="math">\(X\times Y= X{\times_k}Y\)</span> is first countable</li>
@@ -3936,7 +3932,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li><span class="crosslink"><span id="cross-tube-lemma"></span>tube lemma</span> <code>fix me</code></li>
 </ul></li>
 </ul></li>
-<li>closed or open <a href="#cross-subspace">subspace</a> is <a href="#cross-kspace">kspace</a><br /><span class="math">\({\diamond}\)</span> closed is trivial. we show that any <a href="#cross--k--closed"><span class="math">\(k\)</span> closed</a> subset <span class="math">\(F\)</span> of <span class="math">\(Y\subset_O X\)</span> with <span class="math">\(k\)</span> topology is closed as subset of <span class="math">\(Y\)</span>, or <span class="math">\(V = Y-F\)</span> is open subset of <span class="math">\(Y\)</span>, or <span class="math">\(V\)</span> is open subset of <span class="math">\(X\)</span> (then <span class="math">\(V = Y\cap V\)</span> is open as subset of <span class="math">\(Y\)</span>), or for all <span class="math">\(u: C\to X\)</span> <a href="#cross-hompact">hompact</a>, <span class="math">\(u^{-1}(Y)\)</span> open, we proof for all <span class="math">\(a\in u^{-1}(V)\)</span> it has a open neighborhood in it. we take a open neighborhoods with <span class="math">\(C-u^{-1}(Y)\)</span> as it is closed set, if the open neighborhood is disjoint to <span class="math">\(u^{-1}(F)\)</span>, we are done, if not, we have a closed subset in <span class="math">\(u^{-1}Y\)</span> so we induce a map from a <a href="#cross-hompact">hompact</a> space to <span class="math">\(Y\)</span>, so the inverse image is closed, so we have again done</li>
+<li><a href="#cross-regular-subobject">regular subobject</a> closed or open <a href="#cross-subspace">subspace</a> is <a href="#cross-kspace">kspace</a><br /><span class="math">\({\diamond}\)</span> closed is trivial. we show that any <a href="#cross--k--closed"><span class="math">\(k\)</span> closed</a> subset <span class="math">\(F\)</span> of <span class="math">\(Y\subset_O X\)</span> with <span class="math">\(k\)</span> topology is closed as subset of <span class="math">\(Y\)</span>, or <span class="math">\(V = Y-F\)</span> is open subset of <span class="math">\(Y\)</span>, or <span class="math">\(V\)</span> is open subset of <span class="math">\(X\)</span> (then <span class="math">\(V = Y\cap V\)</span> is open as subset of <span class="math">\(Y\)</span>), or for all <span class="math">\(u: C\to X\)</span> <a href="#cross-hompact">hompact</a>, <span class="math">\(u^{-1}(Y)\)</span> open, we proof for all <span class="math">\(a\in u^{-1}(V)\)</span> it has a open neighborhood in it. we take a open neighborhoods with <span class="math">\(C-u^{-1}(Y)\)</span> as it is closed set, if the open neighborhood is disjoint to <span class="math">\(u^{-1}(F)\)</span>, we are done, if not, we have a closed subset in <span class="math">\(u^{-1}Y\)</span> so we induce a map from a <a href="#cross-hompact">hompact</a> space to <span class="math">\(Y\)</span>, so the inverse image is closed, so we have again done</li>
 </ul></li>
 <li><a href="#cross-exponential">exponential</a>. unlike <span class="math">\({\mathcal{Top}}\)</span> it is <a href="#cross-ccc">ccc</a> <span class="math">\({\diamond}\)</span>
 <ol style="list-style-type: decimal">
@@ -3952,7 +3948,6 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <code>fix me: proof yourself</code></li>
 <li>we show the induced map is continuous. unique, and has the properties is trivial. we define <span class="math">\(\bar{f}(a) = \lambda b.(a, b)\)</span>. it is enough to show as <span class="math">\(A\to Y^X_o\)</span>. <span class="math">\({\Leftrightarrow}\)</span> for subbase <span class="math">\({\Leftrightarrow}\)</span> preimage of <span class="math">\((C, u, P)=\{g| g\circ u(C)\cap P\neq \emptyset\}\)</span> is closed <span class="math">\({\Leftrightarrow}\)</span> <a href="#cross-klosed">klosed</a>, <code>fix me</code></li>
 <li>we show it is unique arrow</li>
-<li>we are done, because there is a adjoint, and the functor is unique</li>
 </ol>
 <ul>
 <li>if <span class="math">\(X\)</span> is <a href="#cross-hompact">hompact</a> and <span class="math">\(Y\)</span> <a href="#cross-metric-space">metric space</a> then <span class="math">\(Y^X\)</span> <a href="#cross-metric-space">metric space</a> with <span class="math">\(\sup\)</span>-norm <code>fix me</code></li>
@@ -3980,9 +3975,11 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <ol style="list-style-type: decimal">
 <li><a href="#cross-product">product</a> for <span class="math">\(C\to \prod W_i\)</span>, because <a href="#cross--T-1--space"><span class="math">\(T_1\)</span> space</a>, points are closed, we can form a selection as a line, it is a closed subspace, so projecting back, we get a <a href="#cross-hompact">hompact</a> subspace of <span class="math">\(C\)</span>, so we induce a map from this space to <span class="math">\(W_i\)</span>, so the image is closed, so we have a open neighborhoods in this slice. <a href="http://math.stackexchange.com/questions/785016/product-of-weak-hausdorff-space-is-weak-hausdorff">see my answer here</a></li>
 <li><a href="#cross-equalizer">equalizer</a> <span class="math">\({\diamond}\)</span> trivial, subset with weak topology, just do it</li>
-</ol></li>
+</ol>
+<ul>
+<li><a href="#cross-subspace">subspace</a> is <a href="#cross-whspace">whspace</a> <span class="math">\({\diamond}\)</span> trivial</li>
+</ul></li>
 <li><a href="#cross-colimit">colimit</a> preserved, might different</li>
-<li><a href="#cross-subspace">subspace</a> is <a href="#cross-whspace">whspace</a>. the <span class="math">\(\mathbb{2}\)</span> is no longer a good tools to get subobject, we use the usual definition to proof this</li>
 </ul></li>
 </ul>
 <ul>
@@ -3993,33 +3990,26 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <ul>
 <li><span class="math">\({\Leftarrow}\)</span> <a href="#cross-locally-compact">locally compact</a> <a href="#cross-Hausdorff">Hausdorff</a> space <span class="math">\({\diamond}\)</span> trivial, see <a href="#cross--k--space"><span class="math">\(k\)</span>-space</a></li>
 <li><span class="math">\({\Leftarrow}\)</span> (<span class="math">\(A\)</span> <a href="#cross-weak-Hausdorff">weak Hausdorff</a> <span class="math">\({\Rightarrow}\)</span> <span class="math">\(kA\)</span>) <span class="math">\({\diamond}\)</span> trivial</li>
-<li>a <a href="#cross-kspace">kspace</a> is <a href="#cross-weak-Hausdorff">weak Hausdorff</a> so <a href="#cross-cgwh">cgwh</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(\Delta K\)</span> closed in <span class="math">\(K{\times_k}K\)</span> <code>fix me</code>
-<ul>
-<li><a href="#cross-pullback">pullback</a> is closed space <code>fix me</code></li>
-<li>arbitrary product is <a href="#cross-cgwh">cgwh</a> <code>fix me</code></li>
-</ul></li>
+<li>a <a href="#cross-kspace">kspace</a> is <a href="#cross-weak-Hausdorff">weak Hausdorff</a> so <a href="#cross-cgwh">cgwh</a> <span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(\Delta K\)</span> closed in <span class="math">\(K{\times_k}K\)</span> <code>fix me</code></li>
 </ul></li>
 <li><a href="#cross-morphism">morphism</a>
 <ul>
 <li><span class="math">\(g: G\to Y\)</span> is continuous <span class="math">\({\Leftrightarrow}\)</span> restriction to each <a href="#cross-hompact">hompact</a> subspace is continuous</li>
 </ul></li>
-<li><a href="#cross-limit">limit</a> same as in <a href="#cross-kspace">kspace</a></li>
-<li><a href="#cross-colimit">colimit</a> same as <a href="#cross-whspace">whspace</a> <code>fix me</code>
+<li><a href="#cross-limit">limit</a> same as in <a href="#cross-kspace">kspace</a>
 <ul>
-<li><span class="math">\(\pi: X\to Y\)</span> is quotient map, then <span class="math">\(Y\)</span> is <a href="#cross-cgwh">cgwh</a> iff <span class="math">\((\pi\times \pi)^{-1}(\Delta Y)\)</span> is closed in <span class="math">\(X{\times_k}X\)</span></li>
-<li>if <span class="math">\(Y\)</span> is <a href="#cross-cgwh">cgwh</a>, <span class="math">\(A\)</span> closed in <span class="math">\(X\)</span>, and <span class="math">\(f: A\to Y\)</span> continuous, then the pushout <span class="math">\(Y\cup_f X\)</span> is <a href="#cross-cgwh">cgwh</a></li>
-<li><span class="math">\(\{X_i\}\)</span> is <a href="#cross-cgwh">cgwh</a> with inclusion <span class="math">\(X_i\to X_{i+1}\)</span> closed image, then <span class="math">\({\text{colim }}X_i\)</span> is <a href="#cross-cgwh">cgwh</a></li>
-</ul></li>
 <li><a href="#cross-regular-subobject">regular subobject</a>
 <ul>
 <li>if <span class="math">\(Y\)</span> open or closed subset, then the subspace topology is equal to subspace topology in <span class="math">\({\mathcal{Top}}\)</span>. because it is preserved both by <a href="#cross-whspace">whspace</a> and <a href="#cross-kspace">kspace</a></li>
 </ul></li>
-<li><a href="#cross-exponential">exponential</a> we know <span class="math">\(X^Y\)</span> is <a href="#cross-kspace">kspace</a>, it is also <a href="#cross-cgwh">cgwh</a> <code>fix me</code>
-<ul>
-<li>notice that even though <span class="math">\({\mathcal{Top}}\)</span> is not <a href="#cross-ccc">ccc</a>, but by the ccc of <span class="math">\({\mathcal{CGWH}}\)</span>, we sometimes can show a exponential objects exists for certain things, even in <span class="math">\({\mathcal{Top}}\)</span>, required the constructions performed is the same version of <span class="math">\(\times\)</span></li>
-<li>actually what is really happening is that. when we restrict to good spaces, and then the product is also well behaved, then we can <strong>topologize</strong> the maping set, and it is again having the good property, so we can go on and on in this process. the <strong>goodness</strong> is picked to be not too strong and not too weak, so it ensure you can <strong>run</strong>(by making your staring point not too strange) without <strong>going out of the circle</strong></li>
-<li><strong>but</strong>, when it is in this circle, and it is the limit in good-old world, it is limit in new world!!!</li>
 </ul></li>
+<li><a href="#cross-colimit">colimit</a> same as <a href="#cross-whspace">whspace</a> <code>fix me</code>
+<ul>
+<li><span class="math">\(\pi: X\to Y\)</span> is quotient map, then <span class="math">\(Y\)</span> is <a href="#cross-cgwh">cgwh</a> iff <span class="math">\((\pi\times \pi)^{-1}(\Delta Y)\)</span> is closed in <span class="math">\(X{\times_k}X\)</span></li>
+<li>if <span class="math">\(X\)</span>, <span class="math">\(Y\)</span> is <a href="#cross-cgwh">cgwh</a>, <span class="math">\(A\)</span> closed in <span class="math">\(X\)</span>, and <span class="math">\(f: A\to Y\)</span> continuous, then the pushout <span class="math">\(Y\cup_f X\)</span> is <a href="#cross-cgwh">cgwh</a></li>
+<li><span class="math">\(\{X_i\}\)</span> is <a href="#cross-cgwh">cgwh</a> with inclusion <span class="math">\(X_i\to X_{i+1}\)</span> closed image, then <span class="math">\({\text{colim }}X_i\)</span> is <a href="#cross-cgwh">cgwh</a></li>
+</ul></li>
+<li><a href="#cross-exponential">exponential</a> we know <span class="math">\(X^Y\)</span> is <a href="#cross-kspace">kspace</a>, it is also <a href="#cross-cgwh">cgwh</a> <code>fix me</code></li>
 </ul></li>
 <li><span class="math">\({\mathcal{CGWH}}^2\)</span> <a href="#cross-category-of-pairs">category of pairs</a> of <span class="math">\({\mathcal{CGWH}}\)</span>
 <ul>
@@ -4259,7 +4249,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <h2 id="basic-constructions">basic constructions</h2>
 <h3 id="general-topological-construction">general topological construction</h3>
 <ul>
-<li><span class="crosslink"><span id="cross-topological-category"></span>topological category</span> <span class="math">\({\mathcal{Topl}}\)</span> any subcategory of <span class="math">\({\mathcal{Top}}\)</span> contains basic objects like <span class="math">\(I\)</span>. for example <span class="math">\({\mathcal{Top}}\)</span>. if we referred <a href="#cross-exponential">exponential</a>, it is to be understand we are defining in a <a href="#cross-ccc">ccc</a> like <span class="math">\({\mathcal{CGWH}}\)</span>, with category of pairs and pointed category closed monoidal
+<li><span class="crosslink"><span id="cross-topological-category"></span>topological category</span> <span class="math">\({\mathcal{Topl}}\)</span> any subcategory of <span class="math">\({\mathcal{Top}}\)</span> contains basic objects like <span class="math">\(I\)</span>. for example <span class="math">\({\mathcal{Top}}\)</span>. if we referred <a href="#cross-exponential">exponential</a>, it is to be understand we are defining in a <a href="#cross-ccc">ccc</a> like <span class="math">\({\mathcal{CGWH}}\)</span>, with category of pairs and pointed category <a href="#cross-closed-monoidal">closed monoidal</a>
 <ul>
 <li><span class="crosslink"><span id="cross-shpere"></span>shpere</span> <span class="math">\(S^n\)</span>. <span class="crosslink"><span id="cross-infinite-dimensional-sphere"></span>infinite-dimensional sphere</span> <span class="math">\(S^\infty\)</span></li>
 <li><span class="crosslink"><span id="cross-disk"></span>disk</span> <span class="math">\(D^n\)</span>. <span class="crosslink"><span id="cross-northern-hemisphere"></span>northern hemisphere</span> <span class="math">\(D^n_N\)</span>. <span class="crosslink"><span id="cross-southern-hemisphere"></span>southern hemisphere</span> <span class="math">\(D^n_S\)</span>. <span class="crosslink"><span id="cross-stereographic-projection"></span>stereographic projection</span>. <span class="crosslink"><span id="cross-north-pole"></span>north pole</span> <span class="math">\(N = (0, 0, \dots, 0, 1)\)</span>. <span class="crosslink"><span id="cross-south-pole"></span>south pole</span> <span class="math">\(S\)</span>. notice that <span class="math">\(D^0\)</span> is the terminal object</li>
@@ -4298,7 +4288,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li><a href="#cross-based-exponential">based exponential</a> <span class="math">\(Y^X_*\)</span>
 <ul>
 <li><span class="crosslink"><span id="cross-path-space"></span>path space</span> <span class="math">\(PX = X^I_*\)</span> using <span class="math">\(1\)</span> as basepoint. <span class="math">\(@_0\)</span> evaluation map. is <a href="#cross-contractible">contractible</a></li>
-<li><span class="crosslink"><span id="cross-loop-space"></span>loop space</span> <span class="math">\(\Omega X\)</span></li>
+<li><span class="crosslink"><span id="cross-loop-space"></span>loop space</span> <span class="math">\(\Omega X = X^{S_1}_*\)</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -4327,14 +4317,13 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul></li>
 </ul>
 <h3 id="homotopy-categories">homotopy categories</h3>
+<pre><code>* [[respect homotopy]] factor though homotopy category</code></pre>
 <ul>
-<li><a href="#cross-homotopy-category">homotopy category</a> <span class="crosslink"><span id="cross-homotopy-space"></span>homotopy space</span> <code>fix me: make it the real one in model category</code>
+<li>of <span class="math">\({\mathcal{Topl}}\)</span> <span class="crosslink"><span id="cross-homotopy-space"></span>homotopy space</span>
 <ul>
-<li><a href="#cross-morphism">morphism</a> <span class="crosslink"><span id="cross-homotopy"></span><span id="cross-homotopy-class"></span>homotopy</span> <code>fix me: def in model category</code>
+<li><a href="#cross-object">object</a> same</li>
+<li><a href="#cross-morphism">morphism</a> <span class="math">\({\langle X, Y \rangle}\)</span>. for <a href="#cross-continuous-function">continuous function</a> <span class="math">\(f,g: X\to Y\)</span>, <a href="#cross-continuous-function">continuous function</a> <span class="math">\(h: X\times I\to Y\)</span> such that <span class="math">\(h(x, 0) = f(x)\)</span>, <span class="math">\(h(x, 1) = g(x)\)</span>. if in <a href="#cross-ccc">ccc</a>, we can say a path <span class="math">\(f{\leadsto}g\)</span> in <span class="math">\(Y^X\)</span>
 <ul>
-<li>in <span class="math">\({\mathcal{Topl}}\)</span> for <a href="#cross-continuous-function">continuous function</a> <span class="math">\(f,g: X\to Y\)</span>, <a href="#cross-continuous-function">continuous function</a> <span class="math">\(h: X\times I\to Y\)</span> such that <span class="math">\(h(x, 0) = f(x)\)</span>, <span class="math">\(h(x, 1) = g(x)\)</span>. if in <a href="#cross-ccc">ccc</a>, we can say a path <span class="math">\(f{\leadsto}g\)</span> in <span class="math">\(Y^X\)</span></li>
-<li>in <span class="math">\({\mathcal{Topl}}_*\)</span> by <span class="math">\(I_+\to Y^X_*\)</span>, or <span class="math">\(X\rtimes I\to Y\)</span></li>
-<li>in pair category</li>
 <li>is <a href="#cross-eqr">eqr</a> <span class="math">\({\diamond}\)</span> trivial, notice we should proof the composition is continuous</li>
 <li><a href="#cross-isomorphism">isomorphism</a>s is <span class="math">\(f \circ g \simeq {\text{id}}\)</span> things, which is called <span class="crosslink"><span id="cross-homotopy-equivalence"></span>homotopy equivalence</span> in <span class="math">\({\mathcal{Top}}\)</span></li>
 <li><span class="crosslink"><span id="cross-deformation-retraction"></span>deformation retraction</span> you know this</li>
@@ -4346,14 +4335,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li><span class="crosslink"><span id="cross-locally-contractible-space"></span>locally contractible space</span> every point has a <a href="#cross-local-base">local base</a> of contractible neighborhoods</li>
 <li>non-locally contractible but contractible space <span class="math">\({\S}\)</span> easy</li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-nullhomotopic"></span>nullhomotopic</span></li>
-<li><span class="crosslink"><span id="cross-respect-homotopy"></span>respect homotopy</span> factor though homotopy category</li>
-</ul></li>
-<li>of <span class="math">\({\mathcal{Topl}}\)</span>
-<ul>
-<li><a href="#cross-object">object</a> same</li>
-<li><a href="#cross-morphism">morphism</a> <span class="math">\({\langle X, Y \rangle}\)</span></li>
-<li><a href="#cross-respect-homotopy">respect homotopy</a>
+<li><em>respect homotopy</em>
 <ul>
 <li><span class="math">\(\_\times Y\)</span> <span class="math">\({\diamond}\)</span> <span class="math">\(H\times {\text{id}}: X\times I\times Z\to Y\times Z\)</span></li>
 <li><span class="math">\(\_^\_\)</span> by composing the homotopy with the map <span class="math">\(A^A\to (A^A)^{A^A}\)</span> which is adjoint the <a href="#cross-internal-composition">internal composition</a></li>
@@ -4363,12 +4345,12 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li>a functor from <span class="math">\({\mathcal{Topl}}_*\)</span> to <span class="math">\({\mathcal{hTop}}_*\)</span> or similar. same rules like first section
 <ul>
 <li><a href="#cross-object">object</a> same</li>
-<li><a href="#cross-morphism">morphism</a> <span class="math">\([X, Y]\)</span>
+<li><a href="#cross-morphism">morphism</a> <span class="math">\([X, Y]\)</span>. <span class="math">\(I_+\to Y^X_*\)</span>, or <span class="math">\(X\rtimes I\to Y\)</span>
 <ul>
-<li><a href="#cross-nullhomotopic">nullhomotopic</a> <span class="math">\({\Leftrightarrow}\)</span> factor though <span class="math">\(CX\)</span></li>
+<li><span class="crosslink"><span id="cross-nullhomotopic"></span>nullhomotopic</span> <span class="math">\({\Leftrightarrow}\)</span> factor though <span class="math">\(CX\)</span></li>
 <li><span class="math">\({\S}\)</span> is there exist two continuous function that can only be homotopy in <span class="math">\({\mathcal{hTop}}\)</span> but not <span class="math">\({\mathcal{hTop_*}}\)</span>, i.e. only exist homotopy that moves basepoint in the middle of the transform? <a href="#cross-hatcher-0-6">hatcher-0-6</a> <strong>it seems fundamental group and groupoid both plays well with homotopy category</strong>, <em>this category is useless…</em></li>
 </ul></li>
-<li><a href="#cross-respect-homotopy">respect homotopy</a>
+<li><em>respect homotopy</em>
 <ul>
 <li><span class="math">\(\_\rtimes \_\)</span> and <span class="math">\(\_\land\_\)</span> <span class="math">\({\diamond}\)</span> using the map of pairs is isomorphic to quotient and above</li>
 </ul></li>
@@ -4397,9 +4379,8 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul></li>
 <li><a href="#cross-arrow-category">arrow category</a> of <span class="math">\({\mathcal{CGWH}}\)</span>
 <ul>
-<li>homotopies
+<li><a href="#cross-morphism">morphism</a>
 <ul>
-<li>normal one</li>
 <li><span class="crosslink"><span id="cross-pointwise-homotopy-equivalence"></span>pointwise homotopy equivalence</span> the <span class="math">\(\alpha^d\)</span> and <span class="math">\(\alpha_t\)</span> is <a href="#cross-homotopy-equivalence">homotopy equivalence</a></li>
 </ul></li>
 </ul></li>
