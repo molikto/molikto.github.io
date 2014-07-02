@@ -23,7 +23,6 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="./mathematics.html">mathematics</a></li>
-            <li><a href="./random-notes.html">temp</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="https://github.com/molikto">github</a></li>
@@ -767,6 +766,7 @@ the natural is proofed by uniqueness of induced arrow. from <a href="#cross-natu
 <ul>
 <li><span class="math">\({\mathcal{C}}(A, C)\times {\mathcal{C}}(B, C)\cong {\mathcal{C}}(A+B, C)\)</span></li>
 </ul></li>
+<li>every <a href="#cross-presheaf">presheaf</a> is a <a href="#cross-colimit">colimit</a> of <a href="#cross-representable-presheaf">representable presheaf</a>s <span class="math">\({\diamond}\)</span> <a href="http://ncatlab.org/nlab/show/presheaf#limits_and_colimits">here</a> <code>fix me</code></li>
 </ul></li>
 <li><a href="#cross-elementary-topos">elementary topos</a>. <a href="#cross-complete">complete</a> and <a href="#cross-cocomplete">cocomplete</a> <code>fix me</code></li>
 <li><span class="crosslink"><span id="cross-contra-Yoneda-lemma"></span>contra Yoneda lemma</span> <span class="math">\(y: {\mathcal{Set}}^{{\mathcal{C}}^{\text{op}}}({\mathcal{C}}(\_, c), F)\cong Fc\)</span> natural in <span class="math">\(c\)</span> and <span class="math">\(F\)</span> <span class="math">\({\diamond}\)</span> dual</li>
@@ -4098,6 +4098,9 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li><span class="math">\(Z^{X\rtimes Y}_*\cong  (Z^Y, *)^X_*\)</span> <code>fix me</code></li>
 </ul></li>
 </ul>
+<ul>
+<li><span class="math">\({\mathcal{CGHaus}}\)</span> <a href="#cross-compactly-generated">compactly generated</a> <a href="#cross-Hausdorff-space">Hausdorff space</a></li>
+</ul>
 <h2 id="order-topology">order topology</h2>
 <ul>
 <li><span class="crosslink"><span id="cross-order-topology"></span>order topology</span> on <a href="#cross-linear-order">linear order</a>. topology by <a href="#cross-subbase">subbase</a> of rays. or final order-continuous topology, in the sense for <span class="math">\(a&lt;b\)</span> there is <span class="math">\(U_a&lt;U_b\)</span> <span class="math">\({\diamond}\)</span> we proof preiamge of ray is open, trivial
@@ -4599,20 +4602,43 @@ Nm-&gt;CP
 <ul>
 <li><span class="crosslink"><span id="cross-coface"></span>coface</span> <span class="math">\(d^i: n-1\to n\)</span>, <span class="crosslink"><span id="cross-codegeneracy"></span>codegeneracy</span> <span class="math">\(s^j: n+1 \to n\)</span>s generates them and satisfiy the <span class="crosslink"><span id="cross-cosimplicial-identities"></span>cosimplicial identities</span>. so you should know how to obtain a <a href="#cross-simplicial-object">simplicial object</a> especially a <a href="#cross-simplicial-set">simplicial set</a> <span class="math">\({\diamond}\)</span> it is easy to show the identities, and that all order morphism is composition of there two kind and they are independent, so any functor must define on all of them and this is sufficient</li>
 </ul></li>
-<li><span class="math">\({\mathcal{sSet}}\)</span>
+<li><span class="math">\({\mathcal{sSet}}\)</span> has all <a href="#cross-colimit">colimit</a>s <code>fix me</code>
 <ul>
-<li><span class="crosslink"><span id="cross-standard--n--simplex"></span><span id="cross-standard-simplex"></span>standard <span class="math">\(n\)</span>-simplex</span> <span class="math">\(|\Delta^n|\)</span>. for <span class="math">\(\theta: n \to m\)</span> we have <span class="math">\(\theta_*:|\Delta^m|\to|\Delta^n|\)</span> and this is a functor <span class="math">\({\diamond}\)</span> from <a href="#cross-simplicial-category">simplicial category</a> to the category of <a href="#cross-standard-simplex">standard simplex</a>s. consider yourself the simplest case. <code>fix me</code>
+<li><span class="crosslink"><span id="cross-face-map"></span>face map</span>. <span class="crosslink"><span id="cross-degeneracy-map"></span>degeneracy map</span>. <span class="crosslink"><span id="cross-sub-simplical-set"></span><span id="cross-subss"></span>sub simplical set</span></li>
+<li><strong>eg</strong> <a href="#cross-simplicial-abelian-group">simplicial abelian group</a> by composing the <a href="#cross-free-group">free group</a> functor, get a <a href="#cross-simplicial-object">simplicial object</a> in <span class="math">\({\mathcal{Ab}}\)</span> and <span class="crosslink"><span id="cross-Moore-complex"></span>Moore complex</span> <span class="math">\({\mathbb{Z}}Y_0\leftarrow {\mathbb{Z}}Y_1\leftarrow\dots\)</span> with maps <span class="math">\(\sum(-1)^i d_i\)</span> <code>fix me</code>
 <ul>
-<li><span class="crosslink"><span id="cross-singular-set"></span>singular set</span> a <a href="#cross-simplicial-set">simplicial set</a> <span class="math">\(S(T)\)</span> by <span class="math">\(n\to {\text{hom}}(|\Delta^n|, T)\)</span></li>
-<li><span class="math">\({\Leftrightarrow}\)</span> <span class="math">\(\Delta^n={\text{hom}}(\_, n)\)</span> <code>fix me</code></li>
+<li><span class="crosslink"><span id="cross-integral-sigular-homology-group"></span>integral sigular homology group</span> <span class="math">\(H_*(X, {\mathbb{Z}})\)</span> <span class="math">\({\mathbb{Z}}SX\)</span> <code>fix me</code></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-simplicial-abelian-group"></span>simplicial abelian group</span> by composing the <a href="#cross-free-group">free group</a> functor, get a <a href="#cross-simplicial-object">simplicial object</a> in <span class="math">\({\mathcal{Ab}}\)</span> and <span class="crosslink"><span id="cross-Moore-complex"></span>Moore complex</span> <span class="math">\({\mathbb{Z}}Y_0\leftarrow {\mathbb{Z}}Y_1\leftarrow\dots\)</span> with maps <span class="math">\(\sum(-1)^i d_i\)</span> <code>fix me</code>
+<li><strong>eg 1.4</strong> <span class="crosslink"><span id="cross-classifying-space"></span><span id="cross-nerve"></span>classifying space</span> the <a href="#cross-simplicial-set">simplicial set</a> with <span class="math">\(B{\mathcal{C}}_n={\text{hom}}(n, {\mathcal{C}})\)</span> <code>fix me</code></li>
+<li><span class="crosslink"><span id="cross-standard--n--simplex"></span>standard <span class="math">\(n\)</span>-simplex</span> <span class="math">\({\text{hom}}_\Delta(\_, n)\)</span> it is the <a href="#cross-representable-presheaf">representable presheaf</a> by <span class="math">\(n\)</span> in <span class="math">\(\Delta\)</span>, by <span class="crosslink"><span id="cross-Yoneda-lemma"></span>Yoneda lemma</span> <span class="math">\({\text{hom}}_{\mathcal{sSet}}(\Delta^n, Y)\cong Y_n\)</span>
 <ul>
-<li><span class="crosslink"><span id="cross-inetgral-sigular-homology-group"></span>inetgral sigular homology group</span> <span class="math">\(H_*(X, {\mathbb{Z}})\)</span> <span class="math">\({\mathbb{Z}}SX\)</span> <code>fix me</code></li>
+<li>expanding the definition. we have <span class="math">\(\Delta^1\)</span>, for every <span class="math">\(m\in \Delta\)</span> there is a set <span class="math">\({\text{hom}}(m, 1)\)</span>, we have <span class="math">\({\text{hom}}(0, 1)\)</span> has 2 element, so it has two vertex, <span class="math">\({\text{hom}}(1, 1)\)</span> has 3 element, <span class="math">\({\text{hom}}(2, 1)\)</span> has 4 element, but all are degeneracy</li>
+<li><a href="#cross-subss">subss</a> boundary <span class="math">\(\partial \Delta^n\)</span>, and <span class="math">\(\partial\Delta^0 = \emptyset\)</span></li>
+<li><a href="#cross-subss">subss</a> <span class="math">\(k\)</span>-th <span class="crosslink"><span id="cross-horn"></span>horn</span> <span class="math">\(\Lambda^n_k\)</span> boundary without one face</li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-classifying-space"></span><span id="cross-nerve"></span>classifying space</span> the <a href="#cross-simplicial-set">simplicial set</a> with <span class="math">\(B{\mathcal{C}}_n={\text{hom}}(n, {\mathcal{C}})\)</span> <code>fix me</code></li>
-<li>by <span class="crosslink"><span id="cross-Yoneda-lemma"></span>Yoneda lemma</span> <span class="math">\({\text{hom}}(\Delta^n, Y)\cong Y_n\)</span></li>
-<li><span class="math">\(\partial \Delta^n\)</span> <span class="math">\(k\)</span>th<span class="crosslink"><span id="cross-horn"></span>horn</span> <span class="math">\(\Lambda^n_k\)</span></li>
+<li>realization
+<ol style="list-style-type: decimal">
+<li><a href="#cross-standard--n--simplex">standard <span class="math">\(n\)</span>-simplex</a> <span class="math">\(|\Delta^n|\)</span>. for <span class="math">\(\theta: n \to m\)</span> we have <span class="math">\(\theta_*:|\Delta^m|\to|\Delta^n|\)</span> and this is a functor <span class="math">\({\diamond}\)</span> from <a href="#cross-simplicial-category">simplicial category</a> to the category of <a href="#cross-standard-simplex">standard simplex</a>s. consider yourself the simplest case</li>
+<li><span class="math">\(|X| = \lim_{\Delta^n\to X} |\Delta^n|\)</span>, and is <a href="#cross-functorial">functorial</a> <span class="math">\({\diamond}\)</span> there is <span class="math">\(X\cong \lim_{\Delta^n\rightarrow X} \Delta^n\)</span> in <span class="math">\(\Delta\downarrow X\)</span>, because every functor is a colimit of <a href="#cross-representable-functor">representable functor</a>s
+<ul>
+<li><span class="math">\(|\Delta^n| = |\Delta^n|\)</span> <span class="math">\({\diamond}\)</span> trivial, kind of by definition</li>
+</ul></li>
+<li><span class="crosslink"><span id="cross-singular-set"></span>singular set</span> for topological space <span class="math">\(T\)</span>. a <a href="#cross-simplicial-set">simplicial set</a> <span class="math">\(S(T)\)</span> by <span class="math">\(n\to {\text{hom}}(|\Delta^n|, T)\)</span>, and we have <a href="#cross-adjoint">adjoint</a> <span class="math">\({\text{hom}}_{\mathcal{Top}}(|X|, Y)\cong {\text{hom}}_{\mathcal{sSet}}(X, SY)\)</span> <span class="math">\({\diamond}\)</span> it is simplicial, and adjoint is by <span class="math">\({\text{hom}}_{\mathcal{Top}}(|\Delta^n|, Y)\cong {\text{hom}}_{\mathcal{sSet}}(\Delta^n, SY)\)</span></li>
+<li><span class="math">\(|X|\)</span> is <a href="#cross-cwcomplex">cwcomplex</a> <span class="math">\({\diamond}\)</span> <code>fix me</code>
+<ul>
+<li>so <span class="math">\(|\_|: {\mathcal{sSet}}\to{\mathcal{CGHaus}}\)</span> preserves finite limits, as we already seen</li>
+</ul></li>
+</ol></li>
+<li><a href="#cross-model-category">model category</a>
+<ul>
+<li><a href="#cross-fibration">fibration</a> <span class="crosslink"><span id="cross-Kan-fibration"></span>Kan fibration</span> and <span class="crosslink"><span id="cross-Serre-fibration"></span>Serre fibration</span></li>
+<li><a href="#cross-fibrant">fibrant</a> <span class="crosslink"><span id="cross-Kan-complex"></span>Kan complex</span>
+<ul>
+<li><span class="math">\({\Leftrightarrow}\)</span> for each <span class="math">\(n\)</span>-tuple of <span class="math">\((n-1)\)</span>-simplices <span class="math">\((y_0, \dots, \hat{y^k}, \dots, y_n)\)</span> such that <span class="math">\(d_iy_j = d_{j-1}y_i\)</span> if <span class="math">\(i &lt; j\)</span> and <span class="math">\(j\neq k\)</span>, there is <span class="math">\(n\)</span>-simplex <span class="math">\(y\)</span> such that <span class="math">\(d_iy = y_i\)</span> <span class="math">\({\diamond}\)</span> <code>fix me</code></li>
+<li><span class="math">\(SX\to *\)</span> is <a href="#cross-fibrant">fibrant</a> <span class="math">\({\diamond}\)</span> in adjoint diagram</li>
+<li>simplicial group is fibrant</li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 <h1 id="algebraic-topology">algebraic topology</h1>
