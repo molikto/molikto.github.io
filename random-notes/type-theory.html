@@ -3,11 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>random-notes</title>
-        <link rel="stylesheet" type="text/css" href="./css/snailya.css" />
+        <title>type theory notes</title>
+        <link rel="stylesheet" type="text/css" href="../css/snailya.css" />
     </head>
     <body>
-    <script src="./js/jquery.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
 
     <div class="navbar navbar-default" role="navigation">
       <div class="container">
@@ -18,11 +18,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="./">snailya</a>
+          <a class="navbar-brand" href="../">snailya</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="./mathematics.html">mathematics</a></li>
+            <li><a href="../mathematics.html">mathematics</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="https://github.com/molikto">github</a></li>
@@ -32,41 +32,44 @@
       </div>
     </div>
   <div class="body small-container" id="content">
-    <ul>
     
-        <li>
-            <a href="./random-notes/reason.html"> reason </a> - 2014 June 19
-        </li>
-    
-        <li>
-            <a href="./random-notes/type-theory.html"> type theory notes </a> - 2014 June  5
-        </li>
-    
-        <li>
-            <a href="./random-notes/roadmap.html"> road map </a> - 2014 May 19
-        </li>
-    
-        <li>
-            <a href="./random-notes/making-snailya.html"> making Snailya </a> - 2014 March  3
-        </li>
-    
-        <li>
-            <a href="./random-notes/statistics.html"> statistics notes </a> - 2014 January  1
-        </li>
-    
-        <li>
-            <a href="./random-notes/scope.html"> old list </a> - 2013 February  2
-        </li>
-    
-        <li>
-            <a href="./random-notes/pl-ideas.html"> old pl ideas archive </a> - 2013 January  1
-        </li>
-    
-        <li>
-            <a href="./random-notes/old-type-theory.html"> old type theory notes </a> - 2013 January  1
-        </li>
-    
+
+
+
+<script>
+$("#content").css("max-width", "1100px")
+</script>
+
+
+<div class="row">
+    <div class="bs-docs-container">
+        <div class="col-md-3">
+            <div class="bs-docs-sidebar hidden-print" role="complementary">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <ul>
+<li>a basic guide to recursive functions: http://plato.stanford.edu/entries/recursive-functions/</li>
 </ul>
+    </div>
+</div>
+ 
+</div>
+<script src="../js/jquery.toc.js"></script>
+<script src="../js/toc.js"></script>
+
+
+
+
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script>
+  MathJax.Hub.Queue(function() {
+    $(document.body).scrollspy('refresh')
+  })
+</script>
+
 
   </div>
 
@@ -76,7 +79,7 @@
       </div>
     </div>
 
-      <script src="./js/bootstrap.min.js"></script>
+      <script src="../js/bootstrap.min.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

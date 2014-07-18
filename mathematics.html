@@ -514,6 +514,9 @@ $("#content").css("max-width", "1100px")
 <h2 id="category-1">category</h2>
 <ul>
 <li><span class="crosslink"><span id="cross-category"></span><span id="cross-category-theory"></span>category</span> or <span class="crosslink"><span id="cross-precategory"></span>precategory</span>?
+<ul>
+<li>it is unclear how we can do this inside type theory. should we always use category or precategory</li>
+</ul>
 <ol style="list-style-type: decimal">
 <li><span class="crosslink"><span id="cross-object"></span>object</span> (a <a href="#cross-type">type</a>? <a href="#cross-set">set</a>?)
 <ul>
@@ -735,15 +738,20 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 </ul>
 <h2 id="higher-category">higher category</h2>
-<p>the idea is in the Beaz article, well said</p>
 <ul>
-<li><span class="crosslink"><span id="cross-strict--2--category"></span><span id="cross-strict-2-category"></span>strict <span class="math">\(2\)</span>-category</span> every <span class="math">\({\text{hom}}(x, y)\)</span> is again a category, and functors <span class="math">\(1\to {\text{hom}}(x, x)\)</span> and <span class="math">\({\text{hom}}(a, b)\times {\text{hom}}(b, c)\to {\text{hom}}(a, c)\)</span>. inductively, <span class="crosslink"><span id="cross-strict--n--category"></span>strict <span class="math">\(n\)</span>-category</span> every <span class="math">\({\text{hom}}\)</span> is a <span class="math">\((n-1)\)</span>-category, the product is <span class="math">\(n\)</span>-category product with <span class="math">\(n\)</span>-functor <code>fix me</code></li>
+<li><span class="crosslink"><span id="cross-strict--2--category"></span><span id="cross-strict-2-category"></span>strict <span class="math">\(2\)</span>-category</span> every <span class="math">\({\text{hom}}(x, y)\)</span> is again a category, and functors <span class="math">\(1\to {\text{hom}}(x, x)\)</span> and <span class="math">\(c_{ABC}:{\text{hom}}(a, b)\times {\text{hom}}(b, c)\to {\text{hom}}(a, c)\)</span>, which satifies <span class="math">\(c_{ACD}\circ (c_{ABC}\times 1)=c_{ABD}\circ (1\times c_{BCD})\)</span>. inductively, <span class="crosslink"><span id="cross-strict--n--category"></span>strict <span class="math">\(n\)</span>-category</span> every <span class="math">\({\text{hom}}\)</span> is a <span class="math">\((n-1)\)</span>-category, the product is <span class="math">\(n\)</span>-category product with <span class="math">\(n\)</span>-functor <code>fix me</code>
+<ul>
+<li>functorical of composition, just like in <span class="math">\({\mathcal{Cat}}\)</span></li>
+</ul></li>
 <li><span class="crosslink"><span id="cross-weak--n--category"></span><span id="cross-weak-n-category"></span>weak <span class="math">\(n\)</span>-category</span>
 <ul>
 <li><span class="crosslink"><span id="cross-2-category"></span>2-category</span> <a href="#cross-weak-2-category">weak 2-category</a> is “equiv” to a <a href="#cross-strict-2-category">strict 2-category</a></li>
 <li><span class="math">\({\S}\)</span> <code>eg</code></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross----infty,-n---category"></span><span class="math">\((\infty, n)\)</span>-category</span> <span class="math">\(\infty\)</span> category with all <span class="math">\(k\)</span>-morphism invertable above <span class="math">\(n\)</span></li>
+<li><span class="crosslink"><span id="cross----infty,-n---category"></span><span class="math">\((\infty, n)\)</span>-category</span> <span class="math">\(\infty\)</span> category with all <span class="math">\(k\)</span>-morphism invertable above <span class="math">\(n\)</span>
+<ul>
+<li>the <span class="math">\((\infty, 0)\)</span>-cateogry is just groupoids. the <span class="math">\((\infty, 2)\)</span>-category is called <span class="math">\(\infty\)</span>-<span class="crosslink"><span id="cross-bicategory"></span>bicategory</span>s</li>
+</ul></li>
 </ul>
 <h2 id="three-concept">three concept</h2>
 <h3 id="universal-arrow">universal arrow</h3>
