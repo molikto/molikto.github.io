@@ -49,46 +49,7 @@ $("#content").css("max-width", "1100px")
         </div>
     </div>
     <div class="col-md-8">
-        <!--
-
-\makeatletter
-\def\itemhook{}
-\def\itemhooki{}
-\def\itemhookii{}
-\def\itemhookiii{}
-\def\itemhookiv{}
-\def\enumhook{}
-\def\enumhooki{}
-\def\enumhookii{}
-\def\enumhookiii{}
-\def\enumhookiv{}
-\def\deschook{}
-\def\enumerate{%
-  \ifnum \@enumdepth > 10\@toodeep\else
-    \advance\@enumdepth\@ne
-    \edef\@enumctr{enum\romannumeral\the\@enumdepth}%
-      \expandafter
-      \list
-        \csname label\@enumctr\endcsname
-        {\usecounter\@enumctr\def\makelabel##1{\hss\llap{##1}}%
-          \enumhook \csname enumhook\romannumeral\the\@enumdepth\endcsname}%
-  \fi}
-\def\itemize{%
-  \ifnum \@itemdepth > 10\@toodeep\else
-    \advance\@itemdepth\@ne
-    \edef\@itemitem{labelitem\romannumeral\the\@itemdepth}%
-    \expandafter
-    \list
-      \csname\@itemitem\endcsname
-      {\def\makelabel##1{\hss\llap{##1}}%
-        \itemhook \csname itemhook\romannumeral\the\@itemdepth\endcsname}%
-  \fi}
-\makeatother
-
--->
-
-
-<!--  *meta note*
+        <!--  *meta note*
 
 
 ## the ideal math note
@@ -417,7 +378,7 @@ $("#content").css("max-width", "1100px")
 </ul></li>
 <li><span class="crosslink"><span id="cross-contractible-type"></span>contractible type</span> <span class="math">\(\sum_{x: A}\coprod_{x:A}(a = x)\)</span> is mere proposition</li>
 <li><span class="crosslink"><span id="cross-0-type"></span><span id="cross-set"></span>0-type</span> <span class="math">\({\text{isSet}}\doteq A: U_i\to (x, y: A)\to (p,q: x = y)\to (p = q)\)</span></li>
-<li><span class="crosslink"><span id="cross-natural-number"></span>natural number</span> <span class="math">\({\mathbb{N}}\doteq (0: {\mathbb{N}}, s: {\mathbb{N}}\to {\mathbb{N}})\)</span> is <a href="#cross-set">set</a> <span class="math">\({\diamond}\)</span> using <span class="crosslink"><span id="cross-encode-decode"></span>encode-decode</span> method</li>
+<li><span class="crosslink"><span id="cross-natural-number"></span><span id="cross-sequence"></span>natural number</span> <span class="math">\({\mathbb{N}}\doteq (0: {\mathbb{N}}, s: {\mathbb{N}}\to {\mathbb{N}})\)</span> is <a href="#cross-set">set</a> <span class="math">\({\diamond}\)</span> using <span class="crosslink"><span id="cross-encode-decode"></span>encode-decode</span> method</li>
 </ul>
 <h3 id="some-universal-definition">some universal definition</h3>
 <p><em>which i do not know where to put, they should be basic types, but i do not want to form them in types, just in sets now</em></p>
@@ -3628,7 +3589,6 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul></li>
 </ul>
 <h1 id="topological-space">topological space</h1>
-<h2 id="idea-3">idea</h2>
 <h2 id="topological-space-1">topological space</h2>
 <h3 id="topological-space-2">topological space</h3>
 <ul>
@@ -3724,15 +3684,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li><a href="#cross-initial">initial</a> <span class="crosslink"><span id="cross-empty-space"></span>empty space</span></li>
 <li><a href="#cross-final">final</a> <span class="crosslink"><span id="cross-one-point-space"></span>one point space</span></li>
 </ul></li>
-<li>is not <a href="#cross-ccc">ccc</a>, but sometimes has <a href="#cross-exponential-object">exponential object</a>. we consider various topology on <span class="math">\(F\subset Y^X\)</span>, for example all set functions or all continuous functions
-<ul>
-<li><a href="#cross-pointwise-convergence">pointwise convergence</a></li>
-<li><span class="crosslink"><span id="cross-compact-open-topology"></span>compact open topology</span>. for <span class="math">\(K\subset X\)</span> compact and <span class="math">\(U{\subset_O}Y\)</span>, <span class="math">\(B' = \{f| f(K)\subset U\}\)</span> be the <a href="#cross-subbase">subbase</a></li>
-<li><span class="crosslink"><span id="cross-uniform-convergence"></span>uniform convergence</span> if <span class="math">\(Y\)</span> is <a href="#cross-uniform-space">uniform space</a>. we define a <a href="#cross-convergence">convergence</a> on <span class="math">\(F\)</span> <span class="math">\(\forall U\in \mathcal{U}\exists N\in D: n\geq N{\Rightarrow}(f_n(x), f_N(x))\in U\)</span>. is certainly not convergence into <a href="#cross-product-uniform">product uniform</a>, and it induce a <a href="#cross-uniform-space">uniform space</a> on <span class="math">\(F\)</span> <code>fix me</code>
-<ul>
-<li>if <span class="math">\(Y\)</span> <a href="#cross-complete">complete</a> so is <span class="math">\(F\)</span> <code>fix me</code></li>
-</ul></li>
-</ul></li>
+<li><p>is not <a href="#cross-ccc">ccc</a>, but sometimes has <a href="#cross-exponential-object">exponential object</a>. sometimes it is certain <span class="crosslink"><span id="cross-compact-open-topology"></span>compact open topology</span>. for <span class="math">\(K\subset X\)</span> compact and <span class="math">\(U{\subset_O}Y\)</span>, <span class="math">\(B' = \{f| f(K)\subset U\}\)</span> be the <a href="#cross-subbase">subbase</a></p></li>
 </ul></li>
 <li><span class="math">\({\mathcal{Top_*}}\)</span> <a href="#cross-pointed-category">pointed category</a> of <span class="math">\({\mathcal{Top}}\)</span>
 <ul>
@@ -3759,20 +3711,25 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <li><span class="math">\({\S}\)</span> <span class="math">\(-1, 1, -1, 2, -1, 3, \dots\)</span></li>
 <li><span class="math">\({\Leftrightarrow}\)</span> some <a href="#cross-subnet">subnet</a> convergence to the point <span class="math">\({\diamond}\)</span> trivial</li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-sequential-space"></span>sequential space</span> <a href="#cross-sequentially-open">sequentially open</a> is <a href="#cross-open">open</a> <span class="math">\({\Leftrightarrow}\)</span> form in closed…
+<li>using <a href="#cross-sequence">sequence</a>
 <ul>
-<li><span class="crosslink"><span id="cross-sequentially-open"></span>sequentially open</span> sequentially convergence sequence is <a href="#cross-eventually-in">eventually in</a></li>
-<li><span class="crosslink"><span id="cross-sequentially-closed"></span>sequentially closed</span> sequentially limit is in</li>
-<li><span class="crosslink"><span id="cross-sequentially-closure"></span>sequentially closure</span> adherent points by sequences (it is a subspace of closure)</li>
-<li><span class="math">\({\lnot\S}\)</span> see <em>General Topology</em>, Stephen Willard, 10.6</li>
+<li><a href="#cross-open">open</a> <span class="math">\({\Rightarrow}\)</span> <span class="crosslink"><span id="cross-sequentially-open"></span>sequentially open</span> sequentially convergence sequence is <a href="#cross-eventually-in">eventually in</a> it</li>
+<li><a href="#cross-closed">closed</a> <span class="math">\({\Rightarrow}\)</span> <span class="crosslink"><span id="cross-sequentially-closed"></span>sequentially closed</span> sequentially convergence to <span class="math">\(x\)</span> then <span class="math">\(x\)</span> is in it
+<ul>
+<li><span class="crosslink"><span id="cross-sequential-space"></span>sequential space</span> <a href="#cross-sequentially-open">sequentially open</a> <span class="math">\({\Leftrightarrow}\)</span> <a href="#cross-open">open</a> or form in closed…</li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-Frechet-Urysohn-space"></span><span id="cross-fuspace"></span>Frechet-Urysohn space</span> <a href="#cross-sequentially-closure">sequentially closure</a> is <a href="#cross-closure">closure</a>. so you can use <a href="#cross-sequence">sequence</a> instead of <a href="#cross-net">net</a>s <span class="math">\({\Leftrightarrow}\)</span> every <a href="#cross-subspace">subspace</a> is <a href="#cross-sequential-space">sequential space</a> <span class="math">\({\diamond}\)</span> <code>fix me</code>
+<li><span class="crosslink"><span id="cross-sequentially-closure"></span>sequentially closure</span> adherent points by sequences (it is a subspace of closure). not <a href="#cross-idempotent">idempotent</a>, so this operator is not even into <a href="#cross-sequentially-closed">sequentially closed</a> subsets, it is from subsets to subsets
 <ul>
+<li><span class="crosslink"><span id="cross-Frechet-Urysohn-space"></span><span id="cross-fuspace"></span>Frechet-Urysohn space</span> <a href="#cross-sequentially-closure">sequentially closure</a> is <a href="#cross-closure">closure</a>. so you can use <a href="#cross-sequence">sequence</a> instead of <a href="#cross-net">net</a>s <span class="math">\({\Leftrightarrow}\)</span> every <a href="#cross-subspace">subspace</a> is <a href="#cross-sequential-space">sequential space</a> <span class="math">\({\diamond}\)</span> left to right is easy. for subspace <span class="math">\(S\subset X\)</span> and a set <span class="math">\(C\)</span>, we have <span class="math">\((C\cap S)^s_S = (C\cap S)^s_U\cap S = (C\cap S)^c_U\cap S=\dots\)</span></li>
+<li><span class="math">\({\lnot\S}\)</span> see <em>General Topology</em>, Stephen Willard, 10.6</li>
 <li><a href="#cross-sequential-space">sequential space</a> but no Frechet-Urysohn <span class="math">\({\S}\)</span> <a href="http://dantopology.wordpress.com/2010/08/18/a-note-about-the-arens-space/">link</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
 <h3 id="uniform-structure">uniform structure</h3>
+<p><em>in other words, uniform spaces is a subcategory of <span class="math">\({\mathcal{Top}}\)</span>, not full. and there are a universal arrow in Hausdorff unifrom spaces, etc.</em></p>
+<p><em>but there are always problems like is uniform spaces closed in it? and is complete spaces closed in it?</em></p>
 <ul>
 <li><span class="math">\({\mathcal{UTop}}\)</span> is a <a href="#cross-subcategory">subcategory</a> of <span class="math">\({\mathcal{Top}}\)</span>
 <ul>
@@ -3790,8 +3747,11 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <ul>
 <li><a href="#cross-isomorphism">isomorphism</a> <span class="crosslink"><span id="cross-uniform-isomorphism"></span>uniform isomorphism</span>. <span class="crosslink"><span id="cross-uniform-invariant"></span>uniform invariant</span> in the sense corespond to <a href="#cross-topology-invariant">topology invariant</a></li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-relative-uniform"></span>relative uniform</span></li>
+<li>lims
+<ul>
+<li><a href="#cross-subobject">subobject</a> <span class="crosslink"><span id="cross-relative-uniform"></span>relative uniform</span> has <a href="#cross-subspace-topology">subspace topology</a></li>
 <li><a href="#cross-product">product</a> <span class="crosslink"><span id="cross-product-uniform"></span>product uniform</span> smallest uniform to make projection <a href="#cross-uniform-continuous">uniform continuous</a> <span class="math">\({\Leftrightarrow}\)</span> <a href="#cross-subbase-of-uniform">subbase of uniform</a> like <a href="#cross-product-topology">product topology</a> <span class="math">\({\Rightarrow}\)</span> <a href="#cross-uniform-topology">uniform topology</a> equal to <a href="#cross-product-topology">product topology</a></li>
+</ul></li>
 <li><span class="crosslink"><span id="cross-complete-space"></span>complete space</span> every <a href="#cross-Cauchy-net">Cauchy net</a> <a href="#cross-convergence">convergence</a>
 <ul>
 <li><span class="crosslink"><span id="cross-Cauchy-net"></span><span id="cross-Cauchy-sequence"></span>Cauchy net</span> <span class="math">\(\forall U\in \mathcal{U}\exists N \in D: m, n \geq N{\Rightarrow}(S_m, S_n)\in U\)</span>
@@ -3800,12 +3760,13 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul></li>
 <li><span class="math">\({\Rightarrow}\)</span> closed subset complete <span class="math">\({\diamond}\)</span> trivial</li>
 <li><span class="math">\({\Rightarrow}\)</span> product is complete <span class="math">\({\diamond}\)</span> trivial</li>
-<li>each <a href="#cross-uniform-space">uniform space</a> has a <a href="#cross-completion">completion</a> <code>fix me</code></li>
+<li>each <a href="#cross-uniform-space">uniform space</a> has a <a href="#cross-complete-space">complete space</a> as embeding <code>fix me</code></li>
 <li><a href="#cross-Hausdorff-space">Hausdorff space</a> has uniqule Hausdorff completion up to unique isomorphism, in the <a href="#cross-completion">completion</a> sense <code>fix me</code>
 <ul>
 <li><span class="math">\({\Rightarrow}\)</span> <a href="#cross-Hausdorff">Hausdorff</a> <a href="#cross-complete-space">complete space</a> with <a href="#cross-uniformly-continuous-map">uniformly continuous map</a> is a <a href="#cross-reflective-subcategory">reflective subcategory</a> of <span class="math">\({\mathcal{UTop}}\)</span></li>
 </ul></li>
 </ul></li>
+<li><span class="crosslink"><span id="cross-totally-bounded"></span>totally bounded</span> exists finite open ball of <span class="math">\(r\)</span> cover for all <span class="math">\(r\)</span> <span class="math">\({\Rightarrow}\)</span> bounded</li>
 </ul></li>
 </ul>
 <h3 id="connectedness">connectedness</h3>
@@ -3932,6 +3893,18 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <ul>
 <li>a <a href="#cross-Hausdorff-space">Hausdorff space</a> is <a href="#cross-paracompact">paracompact</a> <span class="math">\({\Leftrightarrow}\)</span> every over cover is <a href="#cross-numberable-open-cover">numberable open cover</a> <code>ex</code></li>
 </ul></li>
+<li><span class="crosslink"><span id="cross-sequentially-compact"></span>sequentially compact</span> every sequence has a convergence subsequence
+<ul>
+<li><span class="math">\({\S}\)</span> not equal to compact</li>
+</ul></li>
+<li><a href="#cross-compact">compact</a> <span class="math">\({\Rightarrow}\)</span> <span class="crosslink"><span id="cross-Lang-sequentially-compact"></span>Lang sequentially compact</span> every sequence has a point of accumulation (containing infinite <span class="math">\(n\)</span>s)
+<ul>
+<li>in <a href="#cross-second-countable-space">second countable space</a> compact = Lang seq compact <span class="math">\({\diamond}\)</span> open cover <span class="math">\({\Rightarrow}\)</span> countable cover <span class="math">\({\Rightarrow}\)</span> unique point cover, must finite, if not, acc point!</li>
+<li><em>why they are different? it seems we can pick a sequence, but it is not eventually in <strong>every</strong> neighbor, because we only checked countable neighbors</em></li>
+</ul></li>
+</ul>
+<h3 id="locally-compactness">locally compactness</h3>
+<ul>
 <li><span class="crosslink"><span id="cross-locally-compact-space"></span><span id="cross-locally-compact-0"></span>locally compact space</span> every point has an compact <a href="#cross-local-base">local base</a>
 <ul>
 <li><span class="crosslink"><span id="cross-locally-compact-1"></span>locally compact 1</span> every point has a compact neighborhood
@@ -3945,12 +3918,6 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 </ul></li>
 <li>for <a href="#cross-Hausdorff-space">Hausdorff space</a> they are equal. 2 <span class="math">\({\Leftrightarrow}\)</span> 0. 1 <span class="math">\({\Rightarrow}\)</span> 0 <code>fix me</code></li>
 <li><a href="http://math.stackexchange.com/questions/337450/compact-and-locally-hausdorff-but-not-locally-compact">compact and locally Hausdorff but not locally compact</a> <span class="math">\({\S}\)</span> <code>eg: read it</code></li>
-</ul></li>
-<li><p><span class="crosslink"><span id="cross-sequentially-compact"></span>sequentially compact</span> every sequence has a convergence subsequence</p></li>
-<li><span class="crosslink"><span id="cross-Lang-sequentially-compact"></span>Lang sequentially compact</span> every sequence has a point of accumulation (containing infinite <span class="math">\(n\)</span>s)
-<ul>
-<li><span class="math">\({\Leftarrow}\)</span> <a href="#cross-compact">compact</a></li>
-<li>in <a href="#cross-second-countable-space">second countable space</a> compact = Lang seq compact <span class="math">\({\diamond}\)</span> open cover <span class="math">\({\Rightarrow}\)</span> countable cover <span class="math">\({\Rightarrow}\)</span> unique point cover, must finite, if not, acc point!</li>
 </ul></li>
 </ul>
 <h2 id="separation-by-continuous-functions">separation by continuous functions</h2>
@@ -4121,7 +4088,7 @@ by pushout <span class="math">\(i_1\)</span> and <span class="math">\(i_2\)</spa
 <ul>
 <li><span class="crosslink"><span id="cross-topological-group"></span>topological group</span> <span class="math">\(G\)</span> a <a href="#cross-group-object">group object</a> in <span class="math">\({\mathcal{Top}}_*\)</span> (<strong>or</strong> <span class="math">\(x\times y\)</span> and <span class="math">\(x^{-1}\)</span> is continuous)
 <ul>
-<li><span class="math">\({\Rightarrow}\)</span> two <a href="#cross-uniform-space">uniform space</a> structure, generated by <span class="math">\(x~_l y\)</span> if <span class="math">\(x^{-1}\in U\)</span> where <span class="math">\(U\)</span> is all symmetric neighborhoods of <span class="math">\(G\)</span></li>
+<li><span class="math">\({\Rightarrow}\)</span> two <a href="#cross-uniform-space">uniform space</a> structure, generated by <span class="math">\(x \sim_l y\)</span> if <span class="math">\(x^{-1}y\in U\)</span> where <span class="math">\(U\)</span> is all symmetric neighborhoods of <span class="math">\(G\)</span></li>
 </ul></li>
 <li><span class="crosslink"><span id="cross-topological-abelian-group"></span>topological abelian group</span> a abelian <a href="#cross-group-object">group object</a> in <span class="math">\({\mathcal{Top}}_*\)</span>
 <ul>
@@ -4445,16 +4412,13 @@ Nm-&gt;CP
 <ul>
 <li>how about a discrete metric??</li>
 </ul></li>
-<li><span class="crosslink"><span id="cross-totally-bounded"></span>totally bounded</span> exists finite open ball of <span class="math">\(r\)</span> cover for all <span class="math">\(r\)</span> <span class="math">\({\Rightarrow}\)</span> bounded</li>
 <li>open subset of metric space (connected <span class="math">\({\Leftrightarrow}\)</span> path-connected) <span class="math">\({\diamond}\)</span> using the star shape thing <code>fix me</code></li>
-<li>compact <span class="math">\({\Leftrightarrow}\)</span> Lang seq compact <span class="math">\({\Leftrightarrow}\)</span> complete and totally bounded<br /> <span class="math">\({\diamond}\)</span> metric =&gt; seq compact == compact =&gt; complete &amp;&amp; totally bounded || <strong>the proof is intricate!, it should really be a memorized technical lemma!!</strong>
+<li><a href="#cross-totally-bounded">totally bounded</a> <span class="math">\({\Rightarrow}\)</span> <span class="crosslink"><span id="cross-bounded"></span>bounded</span></li>
+<li>compact <span class="math">\({\Leftrightarrow}\)</span> <a href="#cross-Lang-seq-compact">Lang seq compact</a> <span class="math">\({\Leftrightarrow}\)</span> complete and <a href="#cross-totally-bounded">totally bounded</a><br /> <span class="math">\({\diamond}\)</span> metric =&gt; seq compact == compact =&gt; complete &amp;&amp; totally bounded || <strong>the proof is intricate!, it should really be a memorized technical lemma!!</strong>
 <ul>
-<li>subset of complete metric space (totally bounded <span class="math">\({\Leftrightarrow}\)</span> relatively compact)</li>
+<li>subset of complete metric space (<a href="#cross-totally-bounded">totally bounded</a> <span class="math">\({\Leftrightarrow}\)</span> <a href="#cross-relatively-compact">relatively compact</a>)</li>
 <li><span class="math">\(f\)</span> <strong>continuous</strong> on compact set has max</li>
-<li><span class="math">\(f: A \to F\)</span> compact subset of metric space to metric space
-<ul>
-<li>continuous = uniform continuous <span class="math">\({\diamond}\)</span> proof using <span class="math">\(r\)</span> has min, because it is compact</li>
-</ul></li>
+<li><span class="math">\(f: A \to F\)</span> compact subset of metric space to metric space. continuous = uniform continuous <span class="math">\({\diamond}\)</span> proof using <span class="math">\(r\)</span> has min, because it is compact</li>
 </ul></li>
 <li><a href="#cross-separable">separable</a> <span class="math">\({\Leftrightarrow}\)</span> <a href="#cross-second-countable-space">second countable space</a> <span class="math">\({\diamond}\)</span> trivial</li>
 </ul></li>
@@ -5462,22 +5426,25 @@ we again have <span class="math">\({\text{in}}_1: f{\hookrightarrow}M\alpha\)</s
 </ul>
 <h1 id="analysis">analysis</h1>
 <p>we use <span class="math">\({\mathbb{F}}\)</span> stands for <span class="math">\({\mathbb{R}}\)</span> or <span class="math">\({\mathbb{C}}\)</span>, we assume that all <a href="#cross-vector-space">vector space</a> is over <span class="math">\({\mathbb{F}}\)</span></p>
-<p><code>fix me: resonate that they are the only choices</code></p>
+<p><em>a rather coarse reason is we need complete spaces to get the limit</em></p>
 <h2 id="basic-analysis">basic analysis</h2>
 <p><code>fix me: things about real numbers that might be used in abstract theory</code></p>
 <h2 id="topology-of-function-spaces">topology of function spaces</h2>
 <p>we will almost always deal with <a href="#cross-uniform-space">uniform space</a>s, <a href="#cross-metric-space">metric space</a> or <a href="#cross-topological-vector-space">topological vector space</a>, so we always have the definition of <a href="#cross-Cauchy-sequence">Cauchy sequence</a>, and <a href="#cross-uniform-convergence">uniform convergence</a> of function space. and in <a href="#cross-metric-space">metric space</a>, we can use sequence to replace <a href="#cross-net">net</a>s when dealing with limit</p>
-<p>actually most of the theorems here can be formulated in uniform spaces</p>
-<h3 id="set-theory-exponential-tx">set-theory exponential <span class="math">\(T^X\)</span></h3>
+<h3 id="topology-of-continuous-functions-in-mathcalset">topology of continuous functions in <span class="math">\({\mathcal{Set}}\)</span></h3>
+<p><em>not necessary the exponetial, because only the underlying set is same</em></p>
+<pre><code>    * [pointwise convergence]
+    * [[uniform convergence]] if $Y$ is [uniform space]. we define a [topology] or convergence by on $F$ $\forall U\in \mathcal{U}\exists N\in D: n\geq N\then (f_n(x), f_N(x))\in U$. is certainly not convergence into [product uniform]. in the case of [normed vector space], the function space is again a [uniform space]
+        * if $Y$ [complete] so is $F$ `fix me`</code></pre>
 <ul>
 <li><a href="#cross-pointwise-convergence">pointwise convergence</a>. topology when <span class="math">\(T\)</span> is a <a href="#cross-vector-space">vector space</a> makes a <a href="#cross-topological-vector-space">topological vector space</a>. but <a href="http://math.stackexchange.com/questions/33476/norm-for-pointwise-convergence">not</a> always induced by a <a href="#cross-norm">norm</a> and not always a <a href="#cross-sequential-space">sequential space</a></li>
 <li>if <span class="math">\(T\)</span> is <a href="#cross-normed-vector-space">normed vector space</a> we have <span class="crosslink"><span id="cross---sup--norm"></span><span class="math">\(\sup\)</span>-norm</span> on <strong>bounded functions</strong>, defining a norm <span class="math">\(|f| = \sup_{x\in X} |f(x)|\)</span>. if not bounded, we only have <a href="#cross-topological-vector-space">topological vector space</a> and <a href="#cross-metric-space">metric space</a>, by defining the open balls, not necessary a <a href="#cross-norm">norm</a>
 <ul>
 <li><span class="math">\({\Rightarrow}\)</span> <a href="#cross-pointwise-convergence">pointwise convergence</a>. or say the topology is finer</li>
-<li><span class="math">\(T\)</span> complete <span class="math">\({\Rightarrow}\)</span> <span class="math">\(T^X\)</span> complete <span class="math">\({\diamond}\)</span> see bellow</li>
 </ul></li>
+<li><span class="math">\(T\)</span> complete <span class="math">\({\Rightarrow}\)</span> <span class="math">\(T^X\)</span> complete <span class="math">\({\diamond}\)</span> see bellow</li>
 </ul>
-<h3 id="topology-of-topological-tx">topology of topological <span class="math">\(T^X\)</span></h3>
+<h3 id="exponential-in-mathcaltop">exponential in <span class="math">\({\mathcal{Top}}\)</span></h3>
 <p><span class="math">\(X\)</span> a topological space</p>
 <ul>
 <li><p><span class="math">\(X\)</span> compact <span class="math">\({\Rightarrow}\)</span> <span class="math">\(C(X, T)\)</span> is bounded, so has <span class="math">\(\sup\)</span>-norm <span class="math">\({\diamond}\)</span> we show that every continuous function <span class="math">\(f\)</span> is bounded on compact space. <span class="math">\(f(X)\)</span> is compact, so totally bounded, so bounded</p></li>
@@ -5943,7 +5910,7 @@ we again have <span class="math">\({\text{in}}_1: f{\hookrightarrow}M\alpha\)</s
 </ul></li>
 </ul>
 <h1 id="manifold">manifold</h1>
-<h2 id="idea-4">idea</h2>
+<h2 id="idea-3">idea</h2>
 <ul>
 <li>as in a website, this is <strong>algebraist’s view</strong> of differential geometry. as Atiyah said, we must not lose the intuition in the maze of algebra and topology</li>
 </ul>
