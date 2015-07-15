@@ -16,32 +16,33 @@
 </head>
 <body><div class="container"><h2 id="category">category</h2>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-26553">
+<p><script type="math/tex; mode=display" id="MathJax-Element-28030">
 \def\dom{\operatorname{dom}}
 \def\cod{\operatorname{cod}}
 \def\img{\operatorname{img}}
 \def\proj{\operatorname{proj}}
 \def\id{\operatorname{id}}
 \def\hom{\operatorname{hom}}
+\def\op{\text{op}}
 </script></p>
 
 <ul>
-<li><strong>directed graph</strong> is a set <script type="math/tex" id="MathJax-Element-26554">A</script> of <strong>arrows</strong> and set <script type="math/tex" id="MathJax-Element-26555">O</script> of <strong>object</strong>. and two function <script type="math/tex" id="MathJax-Element-26556">\dom</script> and <script type="math/tex" id="MathJax-Element-26557">\cod</script> with type <script type="math/tex" id="MathJax-Element-26558">A \to O</script></li>
-<li><p>product over the graph is just pairs of arrows with <script type="math/tex" id="MathJax-Element-26559">\dom g = \text{cod} f</script></p></li>
-<li><p>a <strong>category</strong> is a graph with <script type="math/tex" id="MathJax-Element-26560">\text{id}: O\to A</script>, <script type="math/tex" id="MathJax-Element-26561">\circ : A \times_O A\to A</script>, where with proper domain conditions, and associativity law of composition, also unit axioms</p>
+<li><strong>directed graph</strong> is a set <script type="math/tex" id="MathJax-Element-28031">A</script> of <strong>arrows</strong> and set <script type="math/tex" id="MathJax-Element-28032">O</script> of <strong>object</strong>. and two function <script type="math/tex" id="MathJax-Element-28033">\dom</script> and <script type="math/tex" id="MathJax-Element-28034">\cod</script> with type <script type="math/tex" id="MathJax-Element-28035">A \to O</script></li>
+<li><p>product over the graph is just pairs of arrows with <script type="math/tex" id="MathJax-Element-28036">\dom g = \text{cod} f</script></p></li>
+<li><p>a <strong>category</strong> is a graph with <script type="math/tex" id="MathJax-Element-28037">\text{id}: O\to A</script>, <script type="math/tex" id="MathJax-Element-28038">\circ : A \times_O A\to A</script>, where with proper domain conditions, and associativity law of composition, also unit axioms</p>
 
 <ul><li>we have examples 1, 2, 3, discrete categories, monoids, groups, groupoids, preorders (only one arrow between two object in one direction), partial orders (only one arrow between two object), linear order (one and only one), ordinals, <strong>simplicial category</strong> (finite ordinals and order-preserving functions)</li>
-<li><strong>hom-set</strong>, <script type="math/tex" id="MathJax-Element-26562">\hom_C(a, b)</script> is set of arrows <script type="math/tex" id="MathJax-Element-26563">a\to b</script> </li>
-<li><strong>inverse</strong> or <script type="math/tex" id="MathJax-Element-26564">f</script> is <script type="math/tex" id="MathJax-Element-26565">g</script>: <script type="math/tex" id="MathJax-Element-26566">fg = \text{id}, gf = \text{id}</script> <br>
-<ul><li>inverse is unique. <script type="math/tex" id="MathJax-Element-26567">g=gfg_1=g_1</script></li>
+<li><strong>hom-set</strong>, <script type="math/tex" id="MathJax-Element-28039">\hom_C(a, b)</script> is set of arrows <script type="math/tex" id="MathJax-Element-28040">a\to b</script> </li>
+<li><strong>inverse</strong> or <script type="math/tex" id="MathJax-Element-28041">f</script> is <script type="math/tex" id="MathJax-Element-28042">g</script>: <script type="math/tex" id="MathJax-Element-28043">fg = \text{id}, gf = \text{id}</script> <br>
+<ul><li>inverse is unique. <script type="math/tex" id="MathJax-Element-28044">g=gfg_1=g_1</script></li>
 <li>reflective</li>
 <li><strong>isomorphism</strong>: a arrow has inverse, <strong>isomorphic</strong> objects has isomorphism between</li></ul></li>
 <li><strong>endomorphism</strong>, <strong>idempotent</strong>, <strong>automorphism</strong></li>
-<li><strong>monic</strong> or <strong>left cancelable</strong> <script type="math/tex" id="MathJax-Element-26568">m</script>, <script type="math/tex" id="MathJax-Element-26569">m\circ f_1=m\circ f_2\implies f_1 = f_2</script>, compose is also monic. <script type="math/tex" id="MathJax-Element-26570">g\circ f</script> monic then <script type="math/tex" id="MathJax-Element-26571">f</script> monic (trivial)</li>
-<li><strong>epi</strong> or <strong>right cancelable</strong> <script type="math/tex" id="MathJax-Element-26572">h</script>, <script type="math/tex" id="MathJax-Element-26573">g_1\circ h=g_2\circ h\implies g_1 =g_2</script>, compose is also epi</li>
-<li>for <script type="math/tex" id="MathJax-Element-26574">h: a\to b</script> a <strong>right inverse</strong> or <strong>section</strong> is <script type="math/tex" id="MathJax-Element-26575">r: b \to a</script> such that <script type="math/tex" id="MathJax-Element-26576">hr=1_b</script> (not usually unique), and makes <script type="math/tex" id="MathJax-Element-26577">h</script> a <strong>split epi</strong></li>
-<li>for <script type="math/tex" id="MathJax-Element-26578">h: a\to b</script> a <strong>left inverse</strong> or <strong>retraction</strong> is <script type="math/tex" id="MathJax-Element-26579">l : b\to a</script> such that <script type="math/tex" id="MathJax-Element-26580">lh=1_a</script> and makes <script type="math/tex" id="MathJax-Element-26581">h</script> a <strong>split monic</strong></li>
-<li>if <script type="math/tex" id="MathJax-Element-26582">fg=1_a</script> then there is a left inverse, a right inverse and a idempotent, and it is a <strong>split idempotent</strong></li>
+<li><strong>monic</strong> or <strong>left cancelable</strong> <script type="math/tex" id="MathJax-Element-28045">m</script>, <script type="math/tex" id="MathJax-Element-28046">m\circ f_1=m\circ f_2\implies f_1 = f_2</script>, compose is also monic. <script type="math/tex" id="MathJax-Element-28047">g\circ f</script> monic then <script type="math/tex" id="MathJax-Element-28048">f</script> monic (trivial)</li>
+<li><strong>epi</strong> or <strong>right cancelable</strong> <script type="math/tex" id="MathJax-Element-28049">h</script>, <script type="math/tex" id="MathJax-Element-28050">g_1\circ h=g_2\circ h\implies g_1 =g_2</script>, compose is also epi</li>
+<li>for <script type="math/tex" id="MathJax-Element-28051">h: a\to b</script> a <strong>right inverse</strong> or <strong>section</strong> is <script type="math/tex" id="MathJax-Element-28052">r: b \to a</script> such that <script type="math/tex" id="MathJax-Element-28053">hr=1_b</script> (not usually unique), and makes <script type="math/tex" id="MathJax-Element-28054">h</script> a <strong>split epi</strong></li>
+<li>for <script type="math/tex" id="MathJax-Element-28055">h: a\to b</script> a <strong>left inverse</strong> or <strong>retraction</strong> is <script type="math/tex" id="MathJax-Element-28056">l : b\to a</script> such that <script type="math/tex" id="MathJax-Element-28057">lh=1_a</script> and makes <script type="math/tex" id="MathJax-Element-28058">h</script> a <strong>split monic</strong></li>
+<li>if <script type="math/tex" id="MathJax-Element-28059">fg=1_a</script> then there is a left inverse, a right inverse and a idempotent, and it is a <strong>split idempotent</strong></li>
 <li><strong>terminal</strong>, <strong>initial</strong>, <strong>null object</strong>, <strong>zero arrow</strong></li></ul></li>
 </ul>
 
@@ -102,7 +103,15 @@
 <h2 id="temp">temp</h2>
 
 <ul>
-<li><p><strong>concrete category</strong> <script type="math/tex" id="MathJax-Element-26707">(C, U)</script> where <script type="math/tex" id="MathJax-Element-26708">U: C\to \Set</script> is a faithful functor </p></li>
+<li><p><strong>concrete category</strong> <script type="math/tex" id="MathJax-Element-30133">(C, U)</script> where <script type="math/tex" id="MathJax-Element-30134">U: C\to \Set</script> is a faithful functor </p></li>
 <li><p><code>omit: p28 middle - p29</code> on <strong>preadditive</strong> and <strong>bilinear</strong></p></li>
+<li><p><strong>duality in categories</strong>, <strong>opposite category</strong>, <strong>contravariant functor</strong>, <strong>power-set functor</strong></p>
+
+<ul><li><strong>covariant hom-functor</strong> <script type="math/tex" id="MathJax-Element-30135">\hom(a, \_): C \to \Set</script>, for <script type="math/tex" id="MathJax-Element-30136">k: b\to b'</script> we have it maps to <script type="math/tex" id="MathJax-Element-30137">\hom(a, k)=k_*:\hom(a,b)\to\hom(a, b')</script> by the functor</li>
+<li><strong>contravariant hom-functor</strong> <script type="math/tex" id="MathJax-Element-30138">\hom(\_, a):C^\op\to \Set</script>, send <script type="math/tex" id="MathJax-Element-30139">g</script> to <script type="math/tex" id="MathJax-Element-30140">g^*</script></li>
+<li>for <script type="math/tex" id="MathJax-Element-30141">g: a\to a'</script>, <script type="math/tex" id="MathJax-Element-30142">f: b\to b'</script> we have a diagram <code>img</code></li></ul></li>
+<li><p><strong>product category</strong>, <strong>projection functor</strong>, <strong>product of two functors</strong>, <strong>bifunctors</strong> <script type="math/tex" id="MathJax-Element-30143">S: B\times C\to D</script></p>
+
+<ul><li><script type="math/tex" id="MathJax-Element-30144">(U'\times V')\circ(U\times V)=U'U\times V'V</script></li></ul></li>
 </ul></div></body>
 </html>
