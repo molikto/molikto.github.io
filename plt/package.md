@@ -1,4 +1,5 @@
 
 
+### resources
 
-> Written with [StackEdit](https://stackedit.io/).
+* <http://steshaw.org/plt>
