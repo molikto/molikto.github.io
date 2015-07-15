@@ -32,8 +32,11 @@
 	4. `TODO: alg`
 	5. trivial
 
+\(
+\def\Cat{\mathcal{Cat}}
+\)
 
-* **natural transformation**  $\tau$, **component** $\tau c$ **natual in** $c$: from $S, T: C\to B$ assigns each object $c$ an arrow $\tau c$ (the shape), $\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf$
+* $\mathcal{Cat}$ **natural transformation**  $\tau$, **component** $\tau c$ **natual in** $c$: from $S, T: C\to B$ assigns each object $c$ an arrow $\tau c$ (the shape), $\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf$
 	* they form the functor category $B^C$. and **natural isomorphism** iff each component is isomorphism (proof `TODO`)
 	* **equivalence of categories** $C$, $D$ is $(S, T, \tau_1, \tau_2)$, such that $\tau_1: I_C\simeq T\circ S$ and $\tau_2: I_D\simeq S\circ T$
 
