@@ -1,8 +1,15 @@
 ## category
 
+$$
+\def\dom{\operatorname{dom}}
+\def\cod{\operatorname{cod}}
+\def\img{\operatorname{img}}
+\def\proj{\operatorname{proj}}
+\def\id{\operatorname{id}}
+$$
 
-* **directed graph** is a set $A$ of **arrows** and set $O$ of **object**. and two function $\text{dom}$ and $\text{cod}$ with type $A \to O$
-* product over the graph is just pairs of arrows with $\text{dom} g = \text{cod} f$
+* **directed graph** is a set $A$ of **arrows** and set $O$ of **object**. and two function $\dom$ and $\cod$ with type $A \to O$
+* product over the graph is just pairs of arrows with $\dom g = \text{cod} f$
 * a category is a graph with $\text{id}: O\to A$, $\circ : A \times_O A\to A$, where with proper domain conditions, and associativity law of composition, also unit axioms
 	* we have examples 1, 2, 3, discrete categories, monoids, groups, groupoids, preorders (only one arrow between two object in one direction), partial orders (only one arrow between two object), linear order (one and only one), ordinals, **simplicial category** (finite ordinals and order-preserving functions)
 	* **inverse** or $f$ is $g$: $fg = \text{id}, gf = \text{id}$
@@ -15,10 +22,16 @@
 	* for $h: a\to b$ a **right inverse** or **section** is $r: b \to a$ such that $hr=1_b$ (not usually unique), and makes $h$ a **split epi**
 	* for $h: a\to b$ a **left inverse** or **retraction** is $l : b\to a$ such that $lh=1_a$ and makes $h$ a **split monic**
 	* if $fg=1_a$ then there is a left inverse, a right inverse and a idempotent, and it is a **split idempotent**
-	* for $r\circ i = id: X\to Y\to X$
-* **functor** is a map between two category, consists obj map and arr map, preserve unit and associ
+	* **terminal**, **initial**, **null object**, **zero arrow**
+
+$$
+\def\Cat{\mathcal{Cat}}
+\def \Set{\mathcal{Set}}
+$$
+
+* **functor** is a map between two category, consists obj map and arr map, preserve unit and associ, category and functors forms $\Cat$
 	* **forgetful functor** may be considered by (a, b) => (a) of a Sigma type
-	* $T: C\to B$ and $S: B\to A$ has **composition** $S\circ T$,  is a functor $C\to A$. it is associ (because function composition is associ), and there is identity functor, so $\mathcal{Cat}$ of all small categories is a category
+	* $T: C\to B$ and $S: B\to A$ has **composition** $S\circ T$,  is a functor $C\to A$. it is associ (because function composition is associ), and there is identity functor, so $\Cat$ of all small categories is a category
 	* **full functor**, $\forall c, c_1, \forall g: Tc\to Tc_1\exists f: c\to c_1: g = Tf$
 		* compose is full
 	* **faithful functor** $\forall c, c_1, \forall f, f_1: c\to c_1, Tf = Tf_1\implies f = f_1$
@@ -32,11 +45,8 @@
 	4. `TODO: alg`
 	5. trivial
 
-\(
-\def\Cat{\mathcal{Cat}}
-\)
 
-* $\mathcal{Cat}$ **natural transformation**  $\tau$, **component** $\tau c$ **natual in** $c$: from $S, T: C\to B$ assigns each object $c$ an arrow $\tau c$ (the shape), $\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf$
+* **functor category**, **natural transformation**  $\tau$, **component** $\tau c$ **natural in** $c$: from $S, T: C\to B$ assigns each object $c$ an arrow $\tau c$ (the shape), $\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf$
 	* they form the functor category $B^C$. and **natural isomorphism** iff each component is isomorphism (proof `TODO`)
 	* **equivalence of categories** $C$, $D$ is $(S, T, \tau_1, \tau_2)$, such that $\tau_1: I_C\simeq T\circ S$ and $\tau_2: I_D\simeq S\circ T$
 
@@ -57,4 +67,7 @@
 	3. trivial
 	4. `TODO: alg`
 	5. `TODO: alg`
-	6. 
+	6. all idempotents in $\Set$ split. for $f: C \to D$, $A = \{x|f(x) = x\}$, then $\img f= A$, because if $y\in\img f\land y = f(x)$ then $f(y)=f(f(x))=f(x)=y$, and also clearly $A\subset \img f$ because every $x\in A$ is image of itself. so $f = \proj_{\img f}\circ f $ also $\id_{\img f} = f\circ \proj_{\img f}$
+	7. an arrow $f: a \to b$ is **regular** if there is $g: b\to a$ such that $f = f g f$
+		1. $f$ has left or right inverse then is regular. trivial
+		2. in $\Set$ every arrow with $a\neq \emptyset$ is regular 
