@@ -16,45 +16,48 @@
 </head>
 <body><div class="container"><h2 id="category">category</h2>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-11823">
+<p><script type="math/tex; mode=display" id="MathJax-Element-26553">
 \def\dom{\operatorname{dom}}
 \def\cod{\operatorname{cod}}
 \def\img{\operatorname{img}}
 \def\proj{\operatorname{proj}}
 \def\id{\operatorname{id}}
+\def\hom{\operatorname{hom}}
 </script></p>
 
 <ul>
-<li><strong>directed graph</strong> is a set <script type="math/tex" id="MathJax-Element-11824">A</script> of <strong>arrows</strong> and set <script type="math/tex" id="MathJax-Element-11825">O</script> of <strong>object</strong>. and two function <script type="math/tex" id="MathJax-Element-11826">\dom</script> and <script type="math/tex" id="MathJax-Element-11827">\cod</script> with type <script type="math/tex" id="MathJax-Element-11828">A \to O</script></li>
-<li>product over the graph is just pairs of arrows with <script type="math/tex" id="MathJax-Element-11829">\dom g = \text{cod} f</script></li>
-<li>a category is a graph with <script type="math/tex" id="MathJax-Element-11830">\text{id}: O\to A</script>, <script type="math/tex" id="MathJax-Element-11831">\circ : A \times_O A\to A</script>, where with proper domain conditions, and associativity law of composition, also unit axioms <br>
+<li><strong>directed graph</strong> is a set <script type="math/tex" id="MathJax-Element-26554">A</script> of <strong>arrows</strong> and set <script type="math/tex" id="MathJax-Element-26555">O</script> of <strong>object</strong>. and two function <script type="math/tex" id="MathJax-Element-26556">\dom</script> and <script type="math/tex" id="MathJax-Element-26557">\cod</script> with type <script type="math/tex" id="MathJax-Element-26558">A \to O</script></li>
+<li><p>product over the graph is just pairs of arrows with <script type="math/tex" id="MathJax-Element-26559">\dom g = \text{cod} f</script></p></li>
+<li><p>a <strong>category</strong> is a graph with <script type="math/tex" id="MathJax-Element-26560">\text{id}: O\to A</script>, <script type="math/tex" id="MathJax-Element-26561">\circ : A \times_O A\to A</script>, where with proper domain conditions, and associativity law of composition, also unit axioms</p>
+
 <ul><li>we have examples 1, 2, 3, discrete categories, monoids, groups, groupoids, preorders (only one arrow between two object in one direction), partial orders (only one arrow between two object), linear order (one and only one), ordinals, <strong>simplicial category</strong> (finite ordinals and order-preserving functions)</li>
-<li><strong>inverse</strong> or <script type="math/tex" id="MathJax-Element-11832">f</script> is <script type="math/tex" id="MathJax-Element-11833">g</script>: <script type="math/tex" id="MathJax-Element-11834">fg = \text{id}, gf = \text{id}</script> <br>
-<ul><li>inverse is unique. <script type="math/tex" id="MathJax-Element-11835">g=gfg_1=g_1</script></li>
+<li><strong>hom-set</strong>, <script type="math/tex" id="MathJax-Element-26562">\hom_C(a, b)</script> is set of arrows <script type="math/tex" id="MathJax-Element-26563">a\to b</script> </li>
+<li><strong>inverse</strong> or <script type="math/tex" id="MathJax-Element-26564">f</script> is <script type="math/tex" id="MathJax-Element-26565">g</script>: <script type="math/tex" id="MathJax-Element-26566">fg = \text{id}, gf = \text{id}</script> <br>
+<ul><li>inverse is unique. <script type="math/tex" id="MathJax-Element-26567">g=gfg_1=g_1</script></li>
 <li>reflective</li>
 <li><strong>isomorphism</strong>: a arrow has inverse, <strong>isomorphic</strong> objects has isomorphism between</li></ul></li>
 <li><strong>endomorphism</strong>, <strong>idempotent</strong>, <strong>automorphism</strong></li>
-<li><strong>monic</strong> or <strong>left cancelable</strong> <script type="math/tex" id="MathJax-Element-11836">m</script>, <script type="math/tex" id="MathJax-Element-11837">m\circ f_1=m\circ f_2\implies f_1 = f_2</script>, compose is also monic. <script type="math/tex" id="MathJax-Element-11838">g\circ f</script> monic then <script type="math/tex" id="MathJax-Element-11839">f</script> monic (trivial)</li>
-<li><strong>epi</strong> or <strong>right cancelable</strong> <script type="math/tex" id="MathJax-Element-11840">h</script>, <script type="math/tex" id="MathJax-Element-11841">g_1\circ h=g_2\circ h\implies g_1 =g_2</script>, compose is also epi</li>
-<li>for <script type="math/tex" id="MathJax-Element-11842">h: a\to b</script> a <strong>right inverse</strong> or <strong>section</strong> is <script type="math/tex" id="MathJax-Element-11843">r: b \to a</script> such that <script type="math/tex" id="MathJax-Element-11844">hr=1_b</script> (not usually unique), and makes <script type="math/tex" id="MathJax-Element-11845">h</script> a <strong>split epi</strong></li>
-<li>for <script type="math/tex" id="MathJax-Element-11846">h: a\to b</script> a <strong>left inverse</strong> or <strong>retraction</strong> is <script type="math/tex" id="MathJax-Element-11847">l : b\to a</script> such that <script type="math/tex" id="MathJax-Element-11848">lh=1_a</script> and makes <script type="math/tex" id="MathJax-Element-11849">h</script> a <strong>split monic</strong></li>
-<li>if <script type="math/tex" id="MathJax-Element-11850">fg=1_a</script> then there is a left inverse, a right inverse and a idempotent, and it is a <strong>split idempotent</strong></li>
+<li><strong>monic</strong> or <strong>left cancelable</strong> <script type="math/tex" id="MathJax-Element-26568">m</script>, <script type="math/tex" id="MathJax-Element-26569">m\circ f_1=m\circ f_2\implies f_1 = f_2</script>, compose is also monic. <script type="math/tex" id="MathJax-Element-26570">g\circ f</script> monic then <script type="math/tex" id="MathJax-Element-26571">f</script> monic (trivial)</li>
+<li><strong>epi</strong> or <strong>right cancelable</strong> <script type="math/tex" id="MathJax-Element-26572">h</script>, <script type="math/tex" id="MathJax-Element-26573">g_1\circ h=g_2\circ h\implies g_1 =g_2</script>, compose is also epi</li>
+<li>for <script type="math/tex" id="MathJax-Element-26574">h: a\to b</script> a <strong>right inverse</strong> or <strong>section</strong> is <script type="math/tex" id="MathJax-Element-26575">r: b \to a</script> such that <script type="math/tex" id="MathJax-Element-26576">hr=1_b</script> (not usually unique), and makes <script type="math/tex" id="MathJax-Element-26577">h</script> a <strong>split epi</strong></li>
+<li>for <script type="math/tex" id="MathJax-Element-26578">h: a\to b</script> a <strong>left inverse</strong> or <strong>retraction</strong> is <script type="math/tex" id="MathJax-Element-26579">l : b\to a</script> such that <script type="math/tex" id="MathJax-Element-26580">lh=1_a</script> and makes <script type="math/tex" id="MathJax-Element-26581">h</script> a <strong>split monic</strong></li>
+<li>if <script type="math/tex" id="MathJax-Element-26582">fg=1_a</script> then there is a left inverse, a right inverse and a idempotent, and it is a <strong>split idempotent</strong></li>
 <li><strong>terminal</strong>, <strong>initial</strong>, <strong>null object</strong>, <strong>zero arrow</strong></li></ul></li>
 </ul>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-8081">
+<p><script type="math/tex; mode=display" id="MathJax-Element-25109">
 \def\Cat{\mathcal{Cat}}
 \def \Set{\mathcal{Set}}
 </script></p>
 
 <ul>
-<li><p><strong>functor</strong> is a map between two category, consists obj map and arr map, preserve unit and associ, category and functors forms <script type="math/tex" id="MathJax-Element-8082">\Cat</script></p>
+<li><p><strong>functor</strong> is a map between two category, consists obj map and arr map, preserve unit and associ, category and functors forms <script type="math/tex" id="MathJax-Element-25110">\Cat</script></p>
 
 <ul><li><strong>forgetful functor</strong> may be considered by (a, b) =&gt; (a) of a Sigma type</li>
-<li><script type="math/tex" id="MathJax-Element-8083">T: C\to B</script> and <script type="math/tex" id="MathJax-Element-8084">S: B\to A</script> has <strong>composition</strong> <script type="math/tex" id="MathJax-Element-8085">S\circ T</script>,  is a functor <script type="math/tex" id="MathJax-Element-8086">C\to A</script>. it is associ (because function composition is associ), and there is identity functor, so <script type="math/tex" id="MathJax-Element-8087">\Cat</script> of all small categories is a category</li>
-<li><strong>full functor</strong>, <script type="math/tex" id="MathJax-Element-8088">\forall c, c_1, \forall g: Tc\to Tc_1\exists f: c\to c_1: g = Tf</script> <br>
+<li><script type="math/tex" id="MathJax-Element-25111">T: C\to B</script> and <script type="math/tex" id="MathJax-Element-25112">S: B\to A</script> has <strong>composition</strong> <script type="math/tex" id="MathJax-Element-25113">S\circ T</script>,  is a functor <script type="math/tex" id="MathJax-Element-25114">C\to A</script>. it is associ (because function composition is associ), and there is identity functor, so <script type="math/tex" id="MathJax-Element-25115">\Cat</script> of all small categories is a category</li>
+<li><strong>full functor</strong>, <script type="math/tex" id="MathJax-Element-25116">\forall c, c_1, \forall g: Tc\to Tc_1\exists f: c\to c_1: g = Tf</script> <br>
 <ul><li>compose is full</li></ul></li>
-<li><strong>faithful functor</strong> <script type="math/tex" id="MathJax-Element-8089">\forall c, c_1, \forall f, f_1: c\to c_1, Tf = Tf_1\implies f = f_1</script> <br>
+<li><strong>faithful functor</strong> <script type="math/tex" id="MathJax-Element-25117">\forall c, c_1, \forall f, f_1: c\to c_1, Tf = Tf_1\implies f = f_1</script> <br>
 <ul><li>compose if faithful</li></ul></li>
 <li><strong>subcategory</strong> and <strong>inclusion functor</strong> is faithful. <strong>full subcategory</strong> when the inclusion functor is full</li></ul></li>
 <li><p>exercises, c01, p15</p>
@@ -64,32 +67,42 @@
 <li>trivial</li>
 <li><code>TODO: alg</code></li>
 <li>trivial</li></ol></li>
-<li><p><strong>functor category</strong>, <strong>natural transformation</strong>  <script type="math/tex" id="MathJax-Element-8090">\tau</script>, <strong>component</strong> <script type="math/tex" id="MathJax-Element-8091">\tau c</script> <strong>natural in</strong> <script type="math/tex" id="MathJax-Element-8092">c</script>: from <script type="math/tex" id="MathJax-Element-8093">S, T: C\to B</script> assigns each object <script type="math/tex" id="MathJax-Element-8094">c</script> an arrow <script type="math/tex" id="MathJax-Element-8095">\tau c</script> (the shape), <script type="math/tex" id="MathJax-Element-8096">\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf</script></p>
+<li><p><strong>functor category</strong>, <strong>natural transformation</strong>  <script type="math/tex" id="MathJax-Element-25118">\tau</script>, <strong>component</strong> <script type="math/tex" id="MathJax-Element-25119">\tau c</script> <strong>natural in</strong> <script type="math/tex" id="MathJax-Element-25120">c</script>: from <script type="math/tex" id="MathJax-Element-25121">S, T: C\to B</script> assigns each object <script type="math/tex" id="MathJax-Element-25122">c</script> an arrow <script type="math/tex" id="MathJax-Element-25123">\tau c</script> (the shape), <script type="math/tex" id="MathJax-Element-25124">\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf</script></p>
 
-<ul><li>they form the functor category <script type="math/tex" id="MathJax-Element-8097">B^C</script>. and <strong>natural isomorphism</strong> iff each component is isomorphism (proof <code>TODO</code>)</li>
-<li><strong>equivalence of categories</strong> <script type="math/tex" id="MathJax-Element-8098">C</script>, <script type="math/tex" id="MathJax-Element-8099">D</script> is <script type="math/tex" id="MathJax-Element-8100">(S, T, \tau_1, \tau_2)</script>, such that <script type="math/tex" id="MathJax-Element-8101">\tau_1: I_C\simeq T\circ S</script> and <script type="math/tex" id="MathJax-Element-8102">\tau_2: I_D\simeq S\circ T</script></li></ul></li>
+<ul><li>they form the functor category <script type="math/tex" id="MathJax-Element-25125">B^C</script>. and <strong>natural isomorphism</strong> iff each component is isomorphism (proof <code>TODO</code>)</li>
+<li><strong>equivalence of categories</strong> <script type="math/tex" id="MathJax-Element-25126">C</script>, <script type="math/tex" id="MathJax-Element-25127">D</script> is <script type="math/tex" id="MathJax-Element-25128">(S, T, \tau_1, \tau_2)</script>, such that <script type="math/tex" id="MathJax-Element-25129">\tau_1: I_C\simeq T\circ S</script> and <script type="math/tex" id="MathJax-Element-25130">\tau_2: I_D\simeq S\circ T</script></li></ul></li>
 <li><p>exercises, c01, p18</p>
 
-<ol><li><script type="math/tex" id="MathJax-Element-8103">e</script> is natural trasformation…</li>
+<ol><li><script type="math/tex" id="MathJax-Element-25131">e</script> is natural trasformation…</li>
 <li>trivial</li>
 <li><code>TODO: alg</code></li>
 <li>if there is, define the natural transform by that arrow. and we know that it is unique… trivial</li>
 <li>trivial</li>
 <li><code>TODO: alg</code></li></ol></li>
-</ul>
+<li><p>exercises, c01, p21</p>
 
-<h2 id="temp">temp</h2>
-
-<ul>
-<li>exercises, c01, p21 <br>
 <ol><li>trivial</li>
 <li>trivial</li>
 <li>trivial</li>
 <li><code>TODO: alg</code></li>
 <li><code>TODO: alg</code></li>
-<li>all idempotents in <script type="math/tex" id="MathJax-Element-15134">\Set</script> split. for <script type="math/tex" id="MathJax-Element-15135">f: C \to D</script>, <script type="math/tex" id="MathJax-Element-15136">A = \{x|f(x) = x\}</script>, then <script type="math/tex" id="MathJax-Element-15137">\img f= A</script>, because if <script type="math/tex" id="MathJax-Element-15138">y\in\img f\land y = f(x)</script> then <script type="math/tex" id="MathJax-Element-15139">f(y)=f(f(x))=f(x)=y</script>, and also clearly <script type="math/tex" id="MathJax-Element-15140">A\subset \img f</script> because every <script type="math/tex" id="MathJax-Element-15141">x\in A</script> is image of itself. so <script type="math/tex" id="MathJax-Element-15142">f = \proj_{\img f}\circ f </script> also <script type="math/tex" id="MathJax-Element-15143">\id_{\img f} = f\circ \proj_{\img f}</script></li>
-<li>an arrow <script type="math/tex" id="MathJax-Element-15144">f: a \to b</script> is <strong>regular</strong> if there is <script type="math/tex" id="MathJax-Element-15145">g: b\to a</script> such that <script type="math/tex" id="MathJax-Element-15146">f = f g f</script> <br>
-<ol><li><script type="math/tex" id="MathJax-Element-15147">f</script> has left or right inverse then is regular. trivial</li>
-<li>in <script type="math/tex" id="MathJax-Element-15148">\Set</script> every arrow with <script type="math/tex" id="MathJax-Element-15149">a\neq \emptyset</script> is regular </li></ol></li></ol></li>
+<li>all idempotents in <script type="math/tex" id="MathJax-Element-25132">\Set</script> split. for <script type="math/tex" id="MathJax-Element-25133">f: C \to D</script>, <script type="math/tex" id="MathJax-Element-25134">A = \{x|f(x) = x\}</script>, then <script type="math/tex" id="MathJax-Element-25135">\img f= A</script>, because if <script type="math/tex" id="MathJax-Element-25136">y\in\img f\land y = f(x)</script> then <script type="math/tex" id="MathJax-Element-25137">f(y)=f(f(x))=f(x)=y</script>, and also clearly <script type="math/tex" id="MathJax-Element-25138">A\subset \img f</script> because every <script type="math/tex" id="MathJax-Element-25139">x\in A</script> is image of itself. so <script type="math/tex" id="MathJax-Element-25140">f = \proj_{\img f}\circ f </script> also <script type="math/tex" id="MathJax-Element-25141">\id_{\img f} = f\circ \proj_{\img f}</script></li>
+<li>an arrow <script type="math/tex" id="MathJax-Element-25142">f: a \to b</script> is <strong>regular</strong> if there is <script type="math/tex" id="MathJax-Element-25143">g: b\to a</script> such that <script type="math/tex" id="MathJax-Element-25144">f = f g f</script> <br>
+<ol><li><script type="math/tex" id="MathJax-Element-25145">f</script> has left or right inverse then is regular. trivial</li>
+<li>in <script type="math/tex" id="MathJax-Element-25146">\Set</script> every arrow with <script type="math/tex" id="MathJax-Element-25147">a\neq \emptyset</script> is regular. for everyone in <script type="math/tex" id="MathJax-Element-25148">y\in\img f\land f(x) = y</script> define <script type="math/tex" id="MathJax-Element-25149">g(y) = x</script> and for other values, define at any element. then <script type="math/tex" id="MathJax-Element-25150">\forall x, f(g(f(x)))=f(x_1)</script>, where <script type="math/tex" id="MathJax-Element-25151">x_1</script> has property <script type="math/tex" id="MathJax-Element-25152">f(x_1) = f(x)</script></li></ol></li>
+<li>we define the arrow by pointing <script type="math/tex" id="MathJax-Element-25153">f(0)=e'</script> and <script type="math/tex" id="MathJax-Element-25154">f(1) = t'(e')</script> and so on. we can see we can define and the definition is unique</li>
+<li><script type="math/tex" id="MathJax-Element-25155">fg=fk\implies TfTg=TfTk\implies Tg=Tk \implies g=k</script></li></ol></li>
+<li><p>exercises, c01, p24</p>
+
+<ol><li><code>omit</code></li>
+<li><code>omit</code></li>
+<li><code>omit</code></li></ol></li>
+</ul>
+
+<h2 id="temp">temp</h2>
+
+<ul>
+<li><p><strong>concrete category</strong> <script type="math/tex" id="MathJax-Element-26707">(C, U)</script> where <script type="math/tex" id="MathJax-Element-26708">U: C\to \Set</script> is a faithful functor </p></li>
+<li><p><code>omit: p28 middle - p29</code> on <strong>preadditive</strong> and <strong>bilinear</strong></p></li>
 </ul></div></body>
 </html>
