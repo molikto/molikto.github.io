@@ -6,12 +6,15 @@ $$
 \def\img{\operatorname{img}}
 \def\proj{\operatorname{proj}}
 \def\id{\operatorname{id}}
+\def\hom{\operatorname{hom}}
 $$
 
 * **directed graph** is a set $A$ of **arrows** and set $O$ of **object**. and two function $\dom$ and $\cod$ with type $A \to O$
 * product over the graph is just pairs of arrows with $\dom g = \text{cod} f$
-* a category is a graph with $\text{id}: O\to A$, $\circ : A \times_O A\to A$, where with proper domain conditions, and associativity law of composition, also unit axioms
+
+* a **category** is a graph with $\text{id}: O\to A$, $\circ : A \times_O A\to A$, where with proper domain conditions, and associativity law of composition, also unit axioms
 	* we have examples 1, 2, 3, discrete categories, monoids, groups, groupoids, preorders (only one arrow between two object in one direction), partial orders (only one arrow between two object), linear order (one and only one), ordinals, **simplicial category** (finite ordinals and order-preserving functions)
+	* **hom-set**, $\hom_C(a, b)$ is set of arrows $a\to b$ 
 	* **inverse** or $f$ is $g$: $fg = \text{id}, gf = \text{id}$
 		* inverse is unique. $g=gfg_1=g_1$
 		* reflective
@@ -59,7 +62,6 @@ $$
 	5. trivial
 	6. `TODO: alg`
 
-## temp 
 
 * exercises, c01, p21
 	1.  trivial
@@ -70,4 +72,18 @@ $$
 	6. all idempotents in $\Set$ split. for $f: C \to D$, $A = \{x|f(x) = x\}$, then $\img f= A$, because if $y\in\img f\land y = f(x)$ then $f(y)=f(f(x))=f(x)=y$, and also clearly $A\subset \img f$ because every $x\in A$ is image of itself. so $f = \proj_{\img f}\circ f $ also $\id_{\img f} = f\circ \proj_{\img f}$
 	7. an arrow $f: a \to b$ is **regular** if there is $g: b\to a$ such that $f = f g f$
 		1. $f$ has left or right inverse then is regular. trivial
-		2. in $\Set$ every arrow with $a\neq \emptyset$ is regular 
+		2. in $\Set$ every arrow with $a\neq \emptyset$ is regular. for everyone in $y\in\img f\land f(x) = y$ define $g(y) = x$ and for other values, define at any element. then $\forall x, f(g(f(x)))=f(x_1)$, where $x_1$ has property $f(x_1) = f(x)$
+	8. we define the arrow by pointing $f(0)=e'$ and $f(1) = t'(e')$ and so on. we can see we can define and the definition is unique
+	9. $fg=fk\implies TfTg=TfTk\implies Tg=Tk \implies g=k$
+
+
+* exercises, c01, p24
+	1. `omit`
+	2. `omit`
+	3. `omit`
+
+## temp 
+
+* **concrete category** $(C, U)$ where $U: C\to \Set$ is a faithful functor 
+
+* `omit: p28 middle - p29` on **preadditive** and **bilinear**
