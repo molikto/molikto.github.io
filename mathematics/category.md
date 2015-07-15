@@ -7,6 +7,7 @@ $$
 \def\proj{\operatorname{proj}}
 \def\id{\operatorname{id}}
 \def\hom{\operatorname{hom}}
+\def\op{\text{op}}
 $$
 
 * **directed graph** is a set $A$ of **arrows** and set $O$ of **object**. and two function $\dom$ and $\cod$ with type $A \to O$
@@ -87,3 +88,11 @@ $$
 * **concrete category** $(C, U)$ where $U: C\to \Set$ is a faithful functor 
 
 * `omit: p28 middle - p29` on **preadditive** and **bilinear**
+
+* **duality in categories**, **opposite category**, **contravariant functor**, **power-set functor**
+	* **covariant hom-functor** $\hom(a, \_): C \to \Set$, for $k: b\to b'$ we have it maps to $\hom(a, k)=k_*:\hom(a,b)\to\hom(a, b')$ by the functor
+	* **contravariant hom-functor** $\hom(\_, a):C^\op\to \Set$, send $g$ to $g^*$
+	* for $g: a\to a'$, $f: b\to b'$ we have a diagram `img`
+
+* **product category**, **projection functor**, **product of two functors**, **bifunctors** $S: B\times C\to D$
+	* $(U'\times V')\circ(U\times V)=U'U\times V'V$
