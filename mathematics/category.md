@@ -50,8 +50,9 @@ $$
 	5. trivial
 
 
-* **functor category**, **natural transformation**  $\tau$, **component** $\tau c$ **natural in** $c$: from $S, T: C\to B$ assigns each object $c$ an arrow $\tau c$ (the shape), $\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf$
+* **functor category** $B^C$, **natural transformation**  $\tau$, **component** $\tau c$ **natural in** $c$: from $S, T: C\to B$ assigns each object $c$ an arrow $\tau c$ (the shape), $\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf$
 	* they form the functor category $B^C$. and **natural isomorphism** iff each component is isomorphism (proof `TODO`)
+	* $B^2$ is the **category of arrows**
 	* **equivalence of categories** $C$, $D$ is $(S, T, \tau_1, \tau_2)$, such that $\tau_1: I_C\simeq T\circ S$ and $\tau_2: I_D\simeq S\circ T$
 
 
@@ -83,8 +84,6 @@ $$
 	2. `omit`
 	3. `omit`
 
-## temp 
-
 * **concrete category** $(C, U)$ where $U: C\to \Set$ is a faithful functor 
 
 * **preadditive category** a category where each hom-set is a abelian group, and $(g+g')\circ(f+f')=g\circ f+g\circ f'+g'\circ f+g'\circ f'$
@@ -93,7 +92,39 @@ $$
 * **duality in categories**, **opposite category**, **contravariant functor**, **power-set functor**
 	* **covariant hom-functor** $\hom(a, \_): C \to \Set$, for $k: b\to b'$ we have it maps to $\hom(a, k)=k_*:\hom(a,b)\to\hom(a, b')$ by the functor
 	* **contravariant hom-functor** $\hom(\_, a):C^\op\to \Set$, send $g$ to $g^*$
-	* for $g: a\to a'$, $f: b\to b'$ we have a diagram `img`
+	* for $g: a\to a'$, $f: b\to b'$ we have a diagram `img`, which is used to proof that $\hom$ is a bifunctor
 
-* **product category**, **projection functor**, **product of two functors**, **bifunctors** $S: B\times C\to D$
+* **product category**, **projection functor**, **product of two functors** $U\times V: B\times C\to B'\times C'$
 	* $(U'\times V')\circ(U\times V)=U'U\times V'V$
+	* then $\times : \Cat\times \Cat \to \Cat$ can be considered as a functor itself (in the domain, you can consider them formal pairs of categories)
+	* also in the definition, we know a functor into a product category is always just two functor!
+	* $(B\times C)^\op \simeq B^\op\times C^\op$
+
+
+* **bifunctors** $S: B\times C\to D$. equalivant way to discribe in term of functor: for $c\in C$ and $b\in B$ $L_c: B\to D$ and $M_d: C\to D$ and $M_b(c) = L_c(b)$, $\forall f: b\to b'\forall g: c\to c', M_b' g\circ L_c f = L_{c'} f\circ M_b g$. proof: see the book
+	* $\hom: C^\op\times C\to Set$ is a bifunctor
+
+* **natural transformations of bifunctors** for $S, S': B\times C\to D$, and $\alpha$ an function $(b, c)\mapsto \alpha(b, c)$ to arrows in $D$, $\alpha$ **natural in $b$** if for each $c\in C$, $\alpha(\_, c): S(\_, c)\to S'(\_, c)$ is a natural transformation of functors $B\to D$. proof use projects in dimensions
+* **universal natural transformation** of $C$, $u$, in the sense that for any $\tau$, we have a unique bifunctor $F: C\times 2\to B$ and $Fu=\tau$
+
+
+
+* exercises, c02, p39
+	1. trivial
+	2. only one times only one is only one
+	3. trivial
+	4. `TODO: alg`
+	5. `TODO: alg`
+
+* exercises, c02, p41
+	1. `TODO: alg`
+	2. trivial
+	3. trivial
+	4. $Q^P$ is preorder. they are only determined by the nodes in the image, also a natural transformation is requires that all arrows exists. so if there is one, there is only one
+	5. `TODO: alg`
+	6. `TODO: alg`
+	7. trivial
+	8. $H: C\to B^2$, $F: C\times 2\to B$ `TODO`
+
+## t
+
