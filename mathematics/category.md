@@ -87,7 +87,8 @@ $$
 
 * **concrete category** $(C, U)$ where $U: C\to \Set$ is a faithful functor 
 
-* `omit: p28 middle - p29` on **preadditive** and **bilinear**
+* **preadditive category** a category where each hom-set is a abelian group, and $(g+g')\circ(f+f')=g\circ f+g\circ f'+g'\circ f+g'\circ f'$
+	* a functor between two preadditive category is **additive** if each function between hom-sets is a homomorphism. compose is also additive. then $\mathbf{Ab}\text{-}\Cat$ is is the category of preadditive category with additive functors
 
 * **duality in categories**, **opposite category**, **contravariant functor**, **power-set functor**
 	* **covariant hom-functor** $\hom(a, \_): C \to \Set$, for $k: b\to b'$ we have it maps to $\hom(a, k)=k_*:\hom(a,b)\to\hom(a, b')$ by the functor
