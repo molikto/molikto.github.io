@@ -6,7 +6,7 @@
 ## notes
 
 
-* matheamtics *([old math notes](mathematics.html) needs clean up)*
+* mathematics *([old math notes](mathematics.html) needs clean up)*
 	* [foundation](mathematics/foundation.html)
 	* [category](mathematics/category.html)
 * [plt](plt/package.html) *(programming language theory)*
