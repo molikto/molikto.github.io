@@ -2,9 +2,6 @@
 
 # snailya
 
-this is the personal site for molikto ()
-
-
 
 ## notes
 
