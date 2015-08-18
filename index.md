@@ -20,9 +20,9 @@ this is the personal site for molikto ([old site](index2.html))
 
 ## trivialities
 
-I use some tools to make my life organized
+I use some tools to make my life organized. i use OmniFocus to plan, Google Calendar to record process and index result, blogging and Zetero to store
 
-* stackedit.io
+* stackedit.io and export as blog
 	* big trunk of notes in relatively good formating
 	* meta-notes about all the stuff listed
 * Google Calendar and Calendar on Mac OS X
@@ -32,6 +32,7 @@ I use some tools to make my life organized
     * keeps big project of todos
     * small inboxes per project base
     * todo for non-technical
+    * use the forecast view to determine what to do
 * Zetero
     * books --- sometimes with inline notes
     * papers --- sometimes with inline notes
