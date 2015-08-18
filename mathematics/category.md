@@ -8,6 +8,7 @@ $$
 \def\id{\operatorname{id}}
 \def\hom{\operatorname{hom}}
 \def\op{\text{op}}
+\def\AbCat{\mathbf{Ab}\text{-}\Cat}
 $$
 
 * **directed graph** is a set $A$ of **arrows** and set $O$ of **object**. and two function $\dom$ and $\cod$ with type $A \to O$
@@ -51,7 +52,7 @@ $$
 
 
 * **functor category** $B^C$, **natural transformation**  $\tau$, **component** $\tau c$ **natural in** $c$: from $S, T: C\to B$ assigns each object $c$ an arrow $\tau c$ (the shape), $\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf$
-	* they form the functor category $B^C$. and **natural isomorphism** iff each component is isomorphism (proof `TODO`)
+	* they form the functor category $B^C$. and **natural isomorphism** iff each component is isomorphism (trivial. componentwise)
 	* $B^2$ is the **category of arrows**
 	* **equivalence of categories** $C$, $D$ is $(S, T, \tau_1, \tau_2)$, such that $\tau_1: I_C\simeq T\circ S$ and $\tau_2: I_D\simeq S\circ T$
 
@@ -87,7 +88,7 @@ $$
 * **concrete category** $(C, U)$ where $U: C\to \Set$ is a faithful functor 
 
 * **preadditive category** a category where each hom-set is a abelian group, and $(g+g')\circ(f+f')=g\circ f+g\circ f'+g'\circ f+g'\circ f'$
-	* a functor between two preadditive category is **additive** if each function between hom-sets is a homomorphism. compose is also additive. then $\mathbf{Ab}\text{-}\Cat$ is is the category of preadditive category with additive functors
+	* a functor between two preadditive category is **additive** if each function between hom-sets is a homomorphism. compose is also additive. then $\AbCat$ is is the category of preadditive category with additive functors
 
 * **duality in categories**, **opposite category**, **contravariant functor**, **power-set functor**
 	* **covariant hom-functor** $\hom(a, \_): C \to \Set$, for $k: b\to b'$ we have it maps to $\hom(a, k)=k_*:\hom(a,b)\to\hom(a, b')$ by the functor
@@ -96,15 +97,15 @@ $$
 
 * **product category**, **projection functor**, **product of two functors** $U\times V: B\times C\to B'\times C'$
 	* $(U'\times V')\circ(U\times V)=U'U\times V'V$
-	* then $\times : \Cat\times \Cat \to \Cat$ can be considered as a functor itself (in the domain, you can consider them formal pairs of categories)
+	* then $\times : \Cat\times \Cat \to \Cat$ can be considered as a functor itself (in the domain, you can consider them formal pairs of categories, the above line proofs associ)
 	* also in the definition, we know a functor into a product category is always just two functor!
-	* $(B\times C)^\op \simeq B^\op\times C^\op$
+	* $(B\times C)^\op \simeq B^\op\times C^\op$. because they are just formal pairs
 
 
 * **bifunctors** $S: B\times C\to D$. equalivant way to discribe in term of functor: for $c\in C$ and $b\in B$ $L_c: B\to D$ and $M_d: C\to D$ and $M_b(c) = L_c(b)$, $\forall f: b\to b'\forall g: c\to c', M_b' g\circ L_c f = L_{c'} f\circ M_b g$. proof: see the book
 	* $\hom: C^\op\times C\to Set$ is a bifunctor
 
-* **natural transformations of bifunctors** for $S, S': B\times C\to D$, and $\alpha$ an function $(b, c)\mapsto \alpha(b, c)$ to arrows in $D$, $\alpha$ **natural in $b$** if for each $c\in C$, $\alpha(\_, c): S(\_, c)\to S'(\_, c)$ is a natural transformation of functors $B\to D$. proof use projects in dimensions
+* **natural transformations of bifunctors** for $S, S': B\times C\to D$, and $\alpha$ an function $(b, c)\mapsto \alpha(b, c)$ to arrows in $D$, $\alpha$ **natural in $b$** if for each $c\in C$, $\alpha(\_, c): S(\_, c)\to S'(\_, c)$ is a natural transformation of functors $B\to D$. such an $\alpha$ is a natural transformation iff natural in $b$ for each $c$ and natural in $c$ for each $b$. proof use projects in dimensions
 * **universal natural transformation** of $C$, $u$, in the sense that for any $\tau$, we have a unique bifunctor $F: C\times 2\to B$ and $Fu=\tau$
 
 
@@ -126,5 +127,21 @@ $$
 	7. trivial
 	8. $H: C\to B^2$, $F: C\times 2\to B$ `TODO`
 
+
 ## t
 
+
+* **horizontal composition of natural transformations**. proof use the line -> square -> cube diagram. if you think the category $(A, B, T)$ and arrows $(A, B, T) \to (A, B, S)$ is natural. but from above, we can also define $(A, B)\to (B, C)$ as objects, and we have another composition
+	* $(\tau'\cdot\sigma')\circ (\tau\cdot\sigma)=(\tau'\circ\tau)\cdot(\sigma'\circ\sigma)$, also $\id$ arrow for horizontal is $\id$ for vertical
+	* **double category** satisfies the interchange law, **2-category** add $\id$ for horizontal composition is $\id$ for vertical
+* the functor category $\_^{\_}$ is itself a functor $\Cat^\op\times \Cat\to \Cat$
+
+* exercises, c02, p44
+	1. bijection. first one is by composing with .... `TODO` too many details
+	2. `TODO`
+	3. `TODO`
+	4. `TODO: alg`
+	5. *Hilton-Eckmann* `TODO`
+	6. `TODO: alg`
+	7. `TODO`
+	8. `TODO`
