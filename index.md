@@ -2,14 +2,14 @@
 
 # snailya
 
-this is the personal site for molikto ([old site](index2.html))
+this is the personal site for molikto ()
 
 
 
 ## notes
 
 
-* matheamtics
+* matheamtics *([old math notes](molikto.github.io/mathematics.html) needs clean up)*
 	* [foundation](mathematics/foundation.html)
 	* [category](mathematics/category.html)
 * [plt](plt/package.html) *(programming language theory)*
@@ -28,6 +28,9 @@ this is the personal site for molikto ([old site](index2.html))
 
 links
 :   mail: [molikto@gmail.com](mailto:molikto@gmail.com)
+    Github: https://github.com/molikto
+    Twitter: https://twitter.com/molikto
+    StackExchange: http://stackexchange.com/users/1154520/molikto?tab=accounts
 
 
 ----
