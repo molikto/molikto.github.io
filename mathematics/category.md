@@ -12,9 +12,9 @@ $$
 $$
 
 * **directed graph** is a set $A$ of **arrows** and set $O$ of **object**. and two function $\dom$ and $\cod$ with type $A \to O$
-* product over the graph is just pairs of arrows with $\dom g = \text{cod} f$
+* (formal) product over the graph is just pairs of arrows with $\dom g = \text{cod} f$
 
-* a **category** is a graph with $\text{id}: O\to A$, $\circ : A \times_O A\to A$, where with proper domain conditions, and associativity law of composition, also unit axioms
+* a **category** is a graph with $\text{id}: O\to A$, $\circ : A \times A\to A$, where with proper domain conditions, and associativity law of composition, also unit axioms
 	* we have examples 1, 2, 3, discrete categories, monoids, groups, groupoids, preorders (only one arrow between two object in one direction), partial orders (only one arrow between two object), linear order (one and only one), ordinals, **simplicial category** (finite ordinals and order-preserving functions)
 	* **hom-set**, $\hom_C(a, b)$ is set of arrows $a\to b$ 
 	* **inverse** or $f$ is $g$: $fg = \text{id}, gf = \text{id}$
@@ -24,10 +24,10 @@ $$
 	* **endomorphism**, **idempotent**, **automorphism**
 	* **monic** or **left cancelable** $m$, $m\circ f_1=m\circ f_2\implies f_1 = f_2$, compose is also monic. $g\circ f$ monic then $f$ monic (trivial)
 	* **epi** or **right cancelable** $h$, $g_1\circ h=g_2\circ h\implies g_1 =g_2$, compose is also epi
-	* for $h: a\to b$ a **right inverse** or **section** is $r: b \to a$ such that $hr=1_b$ (not usually unique), and makes $h$ a **split epi**
-	* for $h: a\to b$ a **left inverse** or **retraction** is $l : b\to a$ such that $lh=1_a$ and makes $h$ a **split monic**
+	* for $h: a\to b$ a **right inverse** or **section** is $r: b \to a$ such that $hr=1_b$ (not usually unique), and makes $h$ a **split epi** *($r$ select from the domain $a$)*
+	* for $h: a\to b$ a **left inverse** or **retraction** is $l : b\to a$ such that $lh=1_a$ and makes $h$ a **split monic** *(image the domain is larger, and the $h$ is just a embeding, then $l$ will retract the codomain back)*
 	* if $fg=1_a$ then there is a left inverse, a right inverse and a idempotent, and it is a **split idempotent**
-	* **terminal**, **initial**, **null object**, **zero arrow**
+	* **terminal**, **initial**, **null object**, **zero arrow** factor through null object
 
 $$
 \def\Cat{\mathcal{Cat}}
@@ -35,20 +35,20 @@ $$
 $$
 
 * **functor** is a map between two category, consists obj map and arr map, preserve unit and associ, category and functors forms $\Cat$
-	* **forgetful functor** may be considered by (a, b) => (a) of a Sigma type
+	* **forgetful functor** may be considered by (a, b) => (a) of some Sigma type
 	* $T: C\to B$ and $S: B\to A$ has **composition** $S\circ T$,  is a functor $C\to A$. it is associ (because function composition is associ), and there is identity functor, so $\Cat$ of all small categories is a category
 	* **full functor**, $\forall c, c_1, \forall g: Tc\to Tc_1\exists f: c\to c_1: g = Tf$
 		* compose is full
 	* **faithful functor** $\forall c, c_1, \forall f, f_1: c\to c_1, Tf = Tf_1\implies f = f_1$
 		* compose if faithful
-	* **subcategory** and **inclusion functor** is faithful. **full subcategory** when the inclusion functor is full
+	* **subcategory** and **inclusion functor** is faithful *(sub meaning get from removing some obj and arr)*. **full subcategory** when the inclusion functor is full *(you are not removing arrows without removing one of it's domain)*
 
 * exercises, c01, p15
 	1. `TODO: alg`
 	2. trivial
 	3. trivial
-	4. `TODO: alg`
-	5. trivial
+	4. they are **symmetric groups**, consider the permutations of two elements, then map it two permutations of three elements by ignoring the third element. then map to permutations of two elements by ignoring the third element, the composition is $\id$
+	5. [evil answer](http://mathoverflow.net/questions/4276/two-functors-from-grp-to-grp)
 
 
 * **functor category** $B^C$, **natural transformation**  $\tau$, **component** $\tau c$ **natural in** $c$: from $S, T: C\to B$ assigns each object $c$ an arrow $\tau c$ (the shape), $\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf$
@@ -63,7 +63,7 @@ $$
 	3. `TODO: alg`
 	4. if there is, define the natural transform by that arrow. and we know that it is unique... trivial
 	5. trivial
-	6. `TODO: alg`
+	6. trivial
 
 
 * exercises, c01, p21
@@ -90,9 +90,9 @@ $$
 * **preadditive category** a category where each hom-set is a abelian group, and $(g+g')\circ(f+f')=g\circ f+g\circ f'+g'\circ f+g'\circ f'$
 	* a functor between two preadditive category is **additive** if each function between hom-sets is a homomorphism. compose is also additive. then $\AbCat$ is is the category of preadditive category with additive functors
 
-* **duality in categories**, **opposite category**, **contravariant functor**, **power-set functor**
-	* **covariant hom-functor** $\hom(a, \_): C \to \Set$, for $k: b\to b'$ we have it maps to $\hom(a, k)=k_*:\hom(a,b)\to\hom(a, b')$ by the functor
-	* **contravariant hom-functor** $\hom(\_, a):C^\op\to \Set$, send $g$ to $g^*$
+* **duality in categories** (by **elementary theory of absract category**), **opposite category**, **contravariant functor**, **power-set functor**
+	* **covariant hom-functor** $\hom(a, \_): C \to \Set$, for $k: b\to b'$ we have it maps to $\hom(a, k)=k_*:\hom(a,b)\to\hom(a, b')$ by the functor. $k_*(f) = k\circ f$
+	* **contravariant hom-functor** $\hom(\_, a):C^\op\to \Set$, send $g$ to $g^*$. $g^* (f) = f\circ g$
 	* for $g: a\to a'$, $f: b\to b'$ we have a diagram `img`, which is used to proof that $\hom$ is a bifunctor
 
 * **product category**, **projection functor**, **product of two functors** $U\times V: B\times C\to B'\times C'$
@@ -102,7 +102,7 @@ $$
 	* $(B\times C)^\op \simeq B^\op\times C^\op$. because they are just formal pairs
 
 
-* **bifunctors** $S: B\times C\to D$. equalivant way to discribe in term of functor: for $c\in C$ and $b\in B$ $L_c: B\to D$ and $M_d: C\to D$ and $M_b(c) = L_c(b)$, $\forall f: b\to b'\forall g: c\to c', M_b' g\circ L_c f = L_{c'} f\circ M_b g$. proof: see the book
+* **bifunctors** $S: B\times C\to D$. equalivant way to discribe in term of functor: for $c\in C$ and $b\in B$ $L_c: B\to D$ and $M_d: C\to D$ and $M_b(c) = L_c(b)$, $\forall f: b\to b'\forall g: c\to c', M_b' g\circ L_c f = L_{c'} f\circ M_b g$. proof: see the book *(it is just a easier statement of functoriality in the case of product category)* `TODO: proof`
 	* $\hom: C^\op\times C\to Set$ is a bifunctor
 
 * **natural transformations of bifunctors** for $S, S': B\times C\to D$, and $\alpha$ an function $(b, c)\mapsto \alpha(b, c)$ to arrows in $D$, $\alpha$ **natural in $b$** if for each $c\in C$, $\alpha(\_, c): S(\_, c)\to S'(\_, c)$ is a natural transformation of functors $B\to D$. such an $\alpha$ is a natural transformation iff natural in $b$ for each $c$ and natural in $c$ for each $b$. proof use projects in dimensions
