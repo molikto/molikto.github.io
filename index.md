@@ -33,8 +33,14 @@ links
 
 ## what is my goal?
 
-* experience and understand the world in the finite amount of time i have. quoting Yann Tiersen "I am gonna live anyhow". also *Adventure Time* S06E43 *The Comet*.
-* **added in 2015/11/15**. i really like the [personality of Paul Erdos](https://en.wikipedia.org/wiki/Paul_Erd%C5%91s#Personality). also I like the personality of Snailya, whom i will remember for my whole life and I used her name as the title of this site.
+
+**added in 2015/11/15**
+: i really like the [personality of Paul Erdos](https://en.wikipedia.org/wiki/Paul_Erd%C5%91s#Personality). also I like the personality of Snailya, whom i will remember for my whole life and I used her name as the title of this site.
+i think the goal should be changed. it shuold be "discover beauty". beauty takes various forms, it can be mathematics, physics, music, game, love, daily life, everything. and sometimes you need to have some second order goals in certain conditions, like making momey if you are poor (like I am now). but still this is a personal view, is this personal? I means in contrast what is global? the humanlity? all creature in earth? or all universe? it is not clear how this is defined. and i think personal is in some sense global. so maybe I shouldn't bother myself by this question anymore. 
+
+
+**original**
+: experience and understand the world in the finite amount of time i have. quoting Yann Tiersen "I am gonna live anyhow". also *Adventure Time* S06E43 *The Comet*.
 
 -----	
 ## trivialities
@@ -136,3 +142,4 @@ I claim that Yann Tiersen is god. it is the Grothendieck in music. I also like
 * Philip Glass
 * my little airport
 * 窦唯
+* Bach
