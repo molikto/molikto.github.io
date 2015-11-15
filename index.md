@@ -33,10 +33,10 @@ links
 
 ## what is my goal?
 
-experience and understand the world in the finite amount of time i have. quoting Yann Tiersen "I am gonna live anyhow". also *Adventure Time* S06E43 *The Comet*.
+* experience and understand the world in the finite amount of time i have. quoting Yann Tiersen "I am gonna live anyhow". also *Adventure Time* S06E43 *The Comet*.
+* **added in 2015/11/15** i wish i have the [personality of Paul Erdos](https://en.wikipedia.org/wiki/Paul_Erd%C5%91s#Personality).
 
------
-
+-----	
 ## trivialities
 
 I use some tools to make my life organized. i use OmniFocus to **plan** and as **inbox**, Google Calendar to **record** process and **index** result, blogging and Zetero to **store**. how do i know if something goes to store or inbox? simple, stuff has content goes to store, stuff does not (like a reading list) goes to inbox, after the actual content is retrieved, goes to store
