@@ -34,7 +34,7 @@ links
 ## what is my goal?
 
 * experience and understand the world in the finite amount of time i have. quoting Yann Tiersen "I am gonna live anyhow". also *Adventure Time* S06E43 *The Comet*.
-* **added in 2015/11/15** i wish i have the [personality of Paul Erdos](https://en.wikipedia.org/wiki/Paul_Erd%C5%91s#Personality).
+* **added in 2015/11/15**. i wish i have the [personality of Paul Erdos](https://en.wikipedia.org/wiki/Paul_Erd%C5%91s#Personality).
 
 -----	
 ## trivialities
