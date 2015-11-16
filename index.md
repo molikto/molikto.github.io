@@ -33,6 +33,8 @@ links
 
 ## what is my goal?
 
+**added in 2015/11/17**
+: 无论我们爱过多少错的 爱过多少对的 都可能是为了某个人 遇到某个人 也都不重要了 最重要的是这个对的人一旦出现的时候 你已经答应自己 以后都不要再有前任 起码这个人不可以成为前任
 
 **added in 2015/11/15**
 : i really like the [personality of Paul Erdos](https://en.wikipedia.org/wiki/Paul_Erd%C5%91s#Personality). also I like the personality of Snailya, whom i will remember for my whole life and I used her name as the title of this site.
