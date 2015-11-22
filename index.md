@@ -33,6 +33,9 @@ links
 
 ## what is my goal?
 
+**added in 2015/11/22**
+: I've read an article called "We are stardust". so maybe we are just the universe looking at itself
+
 **added in 2015/11/17**
 : 无论我们爱过多少错的 爱过多少对的 都可能是为了某个人 遇到某个人 也都不重要了 最重要的是这个对的人一旦出现的时候 你已经答应自己 以后都不要再有前任 起码这个人不可以成为前任
 
