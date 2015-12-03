@@ -69,7 +69,7 @@
 
 <h2 id="basic-type-theory">basic type theory</h2>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-19971">
+<p><script type="math/tex; mode=display" id="MathJax-Element-23048">
 \def\eqs{::=}
 \def\s{\operatorname{s}}
 \def\natrec{\operatorname{natrec}}
@@ -82,42 +82,42 @@
 <p>firstly we define several fundamental concept</p>
 
 <ul>
-<li><p>context <script type="math/tex" id="MathJax-Element-19972">\Gamma</script>, <script type="math/tex" id="MathJax-Element-19973">\Delta</script>, variable <script type="math/tex" id="MathJax-Element-19974">x</script></p>
+<li><p>context <script type="math/tex" id="MathJax-Element-23049">\Gamma</script>, <script type="math/tex" id="MathJax-Element-23050">\Delta</script>, variable <script type="math/tex" id="MathJax-Element-23051">x</script></p>
 
-<ul><li>empty context <script type="math/tex" id="MathJax-Element-19975">()</script></li>
-<li>context with a variable <script type="math/tex" id="MathJax-Element-19976">x</script> of type <script type="math/tex" id="MathJax-Element-19977">A</script>: <script type="math/tex" id="MathJax-Element-19978">\Gamma, x: A</script></li></ul></li>
-<li><p>term <script type="math/tex" id="MathJax-Element-19979">t</script>, <script type="math/tex" id="MathJax-Element-19980">u</script>, type <script type="math/tex" id="MathJax-Element-19981">A</script>, <script type="math/tex" id="MathJax-Element-19982">B</script></p>
+<ul><li>empty context <script type="math/tex" id="MathJax-Element-23052">()</script></li>
+<li>context with a variable <script type="math/tex" id="MathJax-Element-23053">x</script> of type <script type="math/tex" id="MathJax-Element-23054">A</script>: <script type="math/tex" id="MathJax-Element-23055">\Gamma, x: A</script></li></ul></li>
+<li><p>term <script type="math/tex" id="MathJax-Element-23056">t</script>, <script type="math/tex" id="MathJax-Element-23057">u</script>, type <script type="math/tex" id="MathJax-Element-23058">A</script>, <script type="math/tex" id="MathJax-Element-23059">B</script></p>
 
-<ul><li>variable: <script type="math/tex" id="MathJax-Element-19983">x</script></li>
-<li>pi type: <script type="math/tex" id="MathJax-Element-19984">(x: A) \to B</script></li>
-<li>lambda: <script type="math/tex" id="MathJax-Element-19985">\lambda x : A. t</script></li>
-<li>application: <script type="math/tex" id="MathJax-Element-19986">t\ u</script></li>
-<li>sigma type: <script type="math/tex" id="MathJax-Element-19987">(x: A)\times B</script></li>
-<li>pair: <script type="math/tex" id="MathJax-Element-19988">(t, u)</script></li>
-<li>projection: <script type="math/tex" id="MathJax-Element-19989">t.1</script>, <script type="math/tex" id="MathJax-Element-19990">t.2</script></li>
-<li>nat: <script type="math/tex" id="MathJax-Element-19991">N</script></li>
-<li>zero, succ: <script type="math/tex" id="MathJax-Element-19992">0</script>, <script type="math/tex" id="MathJax-Element-19993">\s u</script></li>
-<li>natrec: <script type="math/tex" id="MathJax-Element-19994">\natrec t\ u</script></li></ul></li>
-<li><p>substitutions <script type="math/tex" id="MathJax-Element-19995">\sigma=(x/u, ...,x/u)</script> <br>
+<ul><li>variable: <script type="math/tex" id="MathJax-Element-23060">x</script></li>
+<li>pi type: <script type="math/tex" id="MathJax-Element-23061">(x: A) \to B</script></li>
+<li>lambda: <script type="math/tex" id="MathJax-Element-23062">\lambda x : A. t</script></li>
+<li>application: <script type="math/tex" id="MathJax-Element-23063">t\ u</script></li>
+<li>sigma type: <script type="math/tex" id="MathJax-Element-23064">(x: A)\times B</script></li>
+<li>pair: <script type="math/tex" id="MathJax-Element-23065">(t, u)</script></li>
+<li>projection: <script type="math/tex" id="MathJax-Element-23066">t.1</script>, <script type="math/tex" id="MathJax-Element-23067">t.2</script></li>
+<li>nat: <script type="math/tex" id="MathJax-Element-23068">N</script></li>
+<li>zero, succ: <script type="math/tex" id="MathJax-Element-23069">0</script>, <script type="math/tex" id="MathJax-Element-23070">\s u</script></li>
+<li>natrec: <script type="math/tex" id="MathJax-Element-23071">\natrec t\ u</script></li></ul></li>
+<li><p>substitutions <script type="math/tex" id="MathJax-Element-23072">\sigma=(x/u, ...,x/u)</script> <br>
 then we have 5</p></li>
 <li><p>judgement and inference rules</p>
 
-<ul><li>is a context: <script type="math/tex" id="MathJax-Element-19996">\Gamma\vdash</script></li>
-<li>is a type <strong>under a context</strong>: <script type="math/tex" id="MathJax-Element-19997">\Gamma\vdash A</script></li>
-<li>is a term of type <strong>under a context</strong>: <script type="math/tex" id="MathJax-Element-19998">\Gamma\vdash t: A</script></li>
-<li>type eq <strong>under a context</strong>: <script type="math/tex" id="MathJax-Element-19999">\Gamma\vdash A = B</script></li>
+<ul><li>is a context: <script type="math/tex" id="MathJax-Element-23073">\Gamma\vdash</script></li>
+<li>is a type <strong>under a context</strong>: <script type="math/tex" id="MathJax-Element-23074">\Gamma\vdash A</script></li>
+<li>is a term of type <strong>under a context</strong>: <script type="math/tex" id="MathJax-Element-23075">\Gamma\vdash t: A</script></li>
+<li>type eq <strong>under a context</strong>: <script type="math/tex" id="MathJax-Element-23076">\Gamma\vdash A = B</script></li>
 <li>(<code>TODO</code> why there is a type eq? what about formulate them using universe?)</li>
-<li>term eq <strong>under a context</strong>: <script type="math/tex" id="MathJax-Element-20000">\Gamma\vdash a = b: A</script> <br>
-<ul><li>computation rule for <script type="math/tex" id="MathJax-Element-20001">(\lambda x: A. t) u = t(x/u)</script></li>
+<li>term eq <strong>under a context</strong>: <script type="math/tex" id="MathJax-Element-23077">\Gamma\vdash a = b: A</script> <br>
+<ul><li>computation rule for <script type="math/tex" id="MathJax-Element-23078">(\lambda x: A. t) u = t(x/u)</script></li>
 <li>computation rule for sigma</li>
 <li>for nat</li></ul></li></ul></li>
-<li><p>context morphisms <script type="math/tex" id="MathJax-Element-20002">\Delta\vdash \sigma: \Gamma</script></p>
+<li><p>context morphisms <script type="math/tex" id="MathJax-Element-23079">\Delta\vdash \sigma: \Gamma</script></p>
 
-<ul><li><script type="math/tex" id="MathJax-Element-20003">\Delta: () : ()</script> the first <script type="math/tex" id="MathJax-Element-20004">()</script> is an empty substitution, the second is an empty context</li>
-<li><script type="math/tex" id="MathJax-Element-20005">\Delta\vdash (\sigma, x/u): \Gamma, x: A</script> if <script type="math/tex" id="MathJax-Element-20006">\Delta\vdash \sigma: \Gamma</script> and <script type="math/tex" id="MathJax-Element-20007">\Gamma\vdash u: A\sigma</script></li></ul></li>
-<li>we use <script type="math/tex" id="MathJax-Element-20008">J</script> for a judgemnt and consider also hypothetical judgements <script type="math/tex" id="MathJax-Element-20009">\Gamma\vdash J</script> <br>
-<ul><li>weakening: <script type="math/tex" id="MathJax-Element-20010">\Gamma\vdash J</script> then valid in all extensions of <script type="math/tex" id="MathJax-Element-20011">\Gamma</script></li>
-<li>substitution: <script type="math/tex" id="MathJax-Element-20012">\Gamma\vdash J</script> and <script type="math/tex" id="MathJax-Element-20013">\Delta\vdash \sigma : \Gamma</script> then <script type="math/tex" id="MathJax-Element-20014">\Gamma\vdash J\sigma</script></li>
+<ul><li><script type="math/tex" id="MathJax-Element-23080">\Delta\vdash () : ()</script> the first <script type="math/tex" id="MathJax-Element-23081">()</script> is an empty substitution, the second is an empty context</li>
+<li><script type="math/tex" id="MathJax-Element-23082">\Delta\vdash (\sigma, x/u): \Gamma, x: A</script> if <script type="math/tex" id="MathJax-Element-23083">\Delta\vdash \sigma: \Gamma</script> and <script type="math/tex" id="MathJax-Element-23084">\Gamma\vdash u: A\sigma</script></li></ul></li>
+<li>we use <script type="math/tex" id="MathJax-Element-23085">J</script> for a judgemnt and consider also hypothetical judgements <script type="math/tex" id="MathJax-Element-23086">\Gamma\vdash J</script> <br>
+<ul><li>weakening: <script type="math/tex" id="MathJax-Element-23087">\Gamma\vdash J</script> then valid in all extensions of <script type="math/tex" id="MathJax-Element-23088">\Gamma</script></li>
+<li>substitution: <script type="math/tex" id="MathJax-Element-23089">\Gamma\vdash J</script> and <script type="math/tex" id="MathJax-Element-23090">\Delta\vdash \sigma : \Gamma</script> then <script type="math/tex" id="MathJax-Element-23091">\Gamma\vdash J\sigma</script></li>
 <li>from eq judgements we derive exists judgements and type judgements</li></ul></li>
 </ul>
 
@@ -189,13 +189,19 @@ then we have 5</p></li>
 <ul><li>if <script type="math/tex" id="MathJax-Element-5980">\psi</script> is independent of <script type="math/tex" id="MathJax-Element-5981">i</script>, then <script type="math/tex" id="MathJax-Element-5982">\psi \leq \varphi \iff \psi\leq \forall i.\varphi</script></li></ul></li>
 </ul>
 
-<h3 id="systems">systems</h3>
+<h2 id="systems">systems</h2>
 
 <ul>
 <li>we extends syntex of term and type by  <br>
-<ul><li><script type="math/tex" id="MathJax-Element-11102">S</script> system: <script type="math/tex" id="MathJax-Element-11103">[\varphi_1\ t_1, ..., \varphi_n\ t_n]</script></li></ul></li>
-<li>and judgements, all of them bellow under the condition <script type="math/tex" id="MathJax-Element-11104">\Gamma \vdash \varphi_1\lor...\lor\varphi_n = 1_\F: \F</script>, which means <script type="math/tex" id="MathJax-Element-11105">\Gamma</script> is sufficiently restricted( to allow the system to be a complete thing that can exists under the non <script type="math/tex" id="MathJax-Element-11106">\varphi</script> restricted context <script type="math/tex" id="MathJax-Element-11107">\Gamma</script>) <br>
-<ul><li>if under the contexts having types <script type="math/tex" id="MathJax-Element-11108">\Gamma, \varphi_n\vdash A_n</script> we have the types compatible <script type="math/tex" id="MathJax-Element-11109">\Gamma, \varphi_i\land\varphi_j\vdash A_i = A_j</script> then the system is a type <script type="math/tex" id="MathJax-Element-11110">\Gamma\vdash[\varphi_1 A_1,... , \varphi_n A_n]</script> (seems the equality is done by thinking of substitutions)</li>
-<li>if we have a <strong>single</strong> type <script type="math/tex" id="MathJax-Element-11111">\Gamma\vdash A</script> and we have <script type="math/tex" id="MathJax-Element-11112">\Gamma, \varphi_n\vdash t_n: A</script> and we have <script type="math/tex" id="MathJax-Element-11113">\Gamma,\varphi_i\land \varphi_j\vdash t_i = t_j: A</script> then <script type="math/tex" id="MathJax-Element-11114">\Gamma\vdash [..., \varphi_i t_i,...]: A</script></li></ul></li>
+<ul><li><script type="math/tex" id="MathJax-Element-26279">S</script> system: <script type="math/tex" id="MathJax-Element-26280">[\varphi_1\ t_1, ..., \varphi_n\ t_n]</script> <br>
+<ul><li>can be empty</li></ul></li></ul></li>
+<li>and judgements, all of them bellow under the condition <script type="math/tex" id="MathJax-Element-26281">\Gamma \vdash \varphi_1\lor...\lor\varphi_n = 1_\F: \F</script>, which means <script type="math/tex" id="MathJax-Element-26282">\Gamma</script> is sufficiently restricted( to allow the system to be a complete thing that can exists under the non <script type="math/tex" id="MathJax-Element-26283">\varphi</script> restricted context <script type="math/tex" id="MathJax-Element-26284">\Gamma</script>) <br>
+<ul><li>if under the contexts having types <script type="math/tex" id="MathJax-Element-26285">\Gamma, \varphi_n\vdash A_n</script> we have the types compatible <script type="math/tex" id="MathJax-Element-26286">\Gamma, \varphi_i\land\varphi_j\vdash A_i = A_j</script> then the system is a type <script type="math/tex">\Gamma\vdash[\varphi_1 A_1,... , \varphi_n A_n]</script> (seems the equality is done by thinking of substitutions)</li>
+<li>if we have a <strong>single</strong> type <script type="math/tex">\Gamma\vdash A</script> and we have <script type="math/tex">\Gamma, \varphi_n\vdash t_n: A</script> and we have <script type="math/tex">\Gamma,\varphi_i\land \varphi_j\vdash t_i = t_j: A</script> then <script type="math/tex">\Gamma\vdash [..., \varphi_i t_i,...]: A</script> <br>
+<ul><li>consider the case <script type="math/tex">n = 0</script> then <script type="math/tex">\Gamma\vdash []: A</script></li></ul></li>
+<li>if a judgement <script type="math/tex">J</script> is valid in all <script type="math/tex">\Gamma, \varphi_n</script> then it is valid in <script type="math/tex">\Gamma</script></li>
+<li><script type="math/tex">\Gamma\vdash \varphi_i = 1_\F: \F</script> then <script type="math/tex">\Gamma\vdash [...,\varphi_i A_i,...] = A_i</script></li>
+<li><script type="math/tex">\Gamma\vdash [..., \varphi_i t_i,...]: A</script> and <script type="math/tex">\Gamma\vdash \varphi_i = 1_\F: \F</script> then  <script type="math/tex">\Gamma\vdash [..., \varphi_i t_i,...]=t_i: A</script></li>
+<li>we extends the substituion judgement by <script type="math/tex">\Delta\vdash \sigma: \Gamma, \varphi</script> if <script type="math/tex">\Delta\vdash \sigma:\Gamma</script> and <script type="math/tex">\Gamma\vdash \varphi :\F</script> and <script type="math/tex">\Gamma\vdash\varphi\sigma=1_\F: \F</script></li></ul></li>
 </ul></div></body>
 </html>
