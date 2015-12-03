@@ -8,6 +8,7 @@
 
 * mathematics *([old math notes](mathematics.html) needs clean up)*
 	* [foundation](mathematics/foundation.html)
+	* [universal algebra](mathematics/universal_algebra.html)
 	* [category](mathematics/category.html)
 
 ----
