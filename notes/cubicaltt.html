@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>cubical type theory</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon" />
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/solarized-dark.css" />
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h1 id="notes-on-paper-cubicalttpdf">notes on paper <code>cubicaltt.pdf</code></h1>
+
+<p><div class="toc">
+<ul>
+<li><a href="#notes-on-paper-cubicalttpdf">notes on paper cubicaltt.pdf</a><ul>
+<li><a href="#lattice-theory">lattice theory</a></li>
+<li><a href="#basic-type-theory">basic type theory</a></li>
+<li><a href="#path-types">path types</a></li>
+<li><a href="#face-lattice">face lattice</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+
+<ul>
+<li>reference <br>
+<ul><li><a href="http://www.math.ias.edu/~amortberg/papers/cubicaltt.pdf">http://www.math.ias.edu/~amortberg/papers/cubicaltt.pdf</a></li></ul></li>
+</ul>
+
+
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-1">
+\def\sup{\operatorname{sup}}
+\def\inf{\operatorname{inf}}
+\def\Con{\operatorname{Con}}
+</script></p>
+
+
+
+<h2 id="lattice-theory">lattice theory</h2>
+
+<ul>
+<li>partialy ordered set <br>
+<ul><li>reflective <script type="math/tex" id="MathJax-Element-2">p \leq p</script></li>
+<li>transitive <script type="math/tex" id="MathJax-Element-3">p \leq b\land b\leq c\Rightarrow p \leq c</script></li>
+<li>antisymmetry <script type="math/tex" id="MathJax-Element-4">p \leq b\land b\leq p \Rightarrow p = b</script></li></ul></li>
+<li>lattice: each two objects in the pos has join, <script type="math/tex" id="MathJax-Element-5">\sup</script>, <script type="math/tex" id="MathJax-Element-6">a\lor b</script> and meet, <script type="math/tex" id="MathJax-Element-7">\inf</script>, <script type="math/tex" id="MathJax-Element-8">a\land b</script></li>
+<li>bounded lattice: have <script type="math/tex" id="MathJax-Element-9">0</script> and <script type="math/tex" id="MathJax-Element-10">1</script> and <script type="math/tex" id="MathJax-Element-11">0 \leq p \leq 1</script></li>
+<li>distributive lattice: <script type="math/tex" id="MathJax-Element-12">p \land (q \lor r) = (p\lor q)\land (p \lor r)</script></li>
+<li>complete lattice: all subset has join and meet, and it is a bounded lattice</li>
+<li>de Morgan algebra <br>
+<ul><li>bounded distributive lattice</li>
+<li>with <script type="math/tex" id="MathJax-Element-13">1 -p</script> satisfying <br>
+<ul><li><script type="math/tex" id="MathJax-Element-14">1-(p\land q) = (1-p)\lor(1-q)</script></li>
+<li><script type="math/tex" id="MathJax-Element-15">1-(1-p) = p</script></li></ul></li></ul></li>
+<li>congruence lattice of a algebra <script type="math/tex" id="MathJax-Element-16">\mathcal{A}</script> is the set of all congruence relations respect to the algebra. because there is a natural meet, and you can define the join by first take relations join, then the meet of all congruence relations containing the join, or say, the closure. it is complete and distributive lattice</li>
+</ul>
+
+
+
+<h2 id="basic-type-theory">basic type theory</h2>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-17">
+\def\eqs{::=}
+\def\s{\operatorname{s}}
+\def\natrec{\operatorname{natrec}}
+\def\I{\mathbb{I}\ }
+\def\F{\mathbb{F}\ }
+\newcommand{\P}[3]{\operatorname{Path}#1\ #2\ #3}
+\newcommand{\pa}[2]{\left<#1\right >\ #2}
+</script></p>
+
+<p>firstly we define several fundamental concept</p>
+
+<ul>
+<li><p>context <script type="math/tex" id="MathJax-Element-18">\Gamma</script>, <script type="math/tex" id="MathJax-Element-19">\Delta</script>, variable <script type="math/tex" id="MathJax-Element-20">x</script></p>
+
+<ul><li>empty context <script type="math/tex" id="MathJax-Element-21">()</script></li>
+<li>context with a variable <script type="math/tex" id="MathJax-Element-22">x</script> of type <script type="math/tex" id="MathJax-Element-23">A</script>: <script type="math/tex" id="MathJax-Element-24">\Gamma, x: A</script></li></ul></li>
+<li><p>term <script type="math/tex" id="MathJax-Element-25">t</script>, <script type="math/tex" id="MathJax-Element-26">u</script>, type <script type="math/tex" id="MathJax-Element-27">A</script>, <script type="math/tex" id="MathJax-Element-28">B</script></p>
+
+<ul><li>variable: <script type="math/tex" id="MathJax-Element-29">x</script></li>
+<li>pi type: <script type="math/tex" id="MathJax-Element-30">(x: A) \to B</script></li>
+<li>lambda: <script type="math/tex" id="MathJax-Element-31">\lambda x : A. t</script></li>
+<li>application: <script type="math/tex" id="MathJax-Element-32">t\ u</script></li>
+<li>sigma type: <script type="math/tex" id="MathJax-Element-33">(x: A)\times B</script></li>
+<li>pair: <script type="math/tex" id="MathJax-Element-34">(t, u)</script></li>
+<li>projection: <script type="math/tex" id="MathJax-Element-35">t.1</script>, <script type="math/tex" id="MathJax-Element-36">t.2</script></li>
+<li>nat: <script type="math/tex" id="MathJax-Element-37">N</script></li>
+<li>zero, succ: <script type="math/tex" id="MathJax-Element-38">0</script>, <script type="math/tex" id="MathJax-Element-39">\s u</script></li>
+<li>natrec: <script type="math/tex" id="MathJax-Element-40">\natrec t\ u</script></li></ul></li>
+<li><p>substitutions <script type="math/tex" id="MathJax-Element-41">\sigma=(x/u, ...,x/u)</script> <br>
+then we have 5</p></li>
+<li><p>judgement and inference rules</p>
+
+<ul><li>is a context: <script type="math/tex" id="MathJax-Element-42">\Gamma\vdash</script></li>
+<li>is a type under a context: <script type="math/tex" id="MathJax-Element-43">\Gamma\vdash A</script></li>
+<li>is a term of type under a context: <script type="math/tex" id="MathJax-Element-44">\Gamma\vdash t: A</script></li>
+<li>type eq: <script type="math/tex" id="MathJax-Element-45">\Gamma\vdash A = B</script></li>
+<li>(<code>TODO</code> why there is a type eq? what about formulate them using universe?)</li>
+<li>term eq: <script type="math/tex" id="MathJax-Element-46">\Gamma\vdash a = b: A</script> <br>
+<ul><li>computation rule for <script type="math/tex" id="MathJax-Element-47">(\lambda x: A. t) u = t(x/u)</script></li>
+<li>computation rule for sigma</li>
+<li>for nat</li></ul></li></ul></li>
+<li><p>context morphisms <script type="math/tex" id="MathJax-Element-48">\Delta\vdash \sigma: \Gamma</script></p>
+
+<ul><li><script type="math/tex" id="MathJax-Element-49">\Delta: () : ()</script> the first <script type="math/tex" id="MathJax-Element-50">()</script> is an empty substitution, the second is an empty context</li>
+<li><script type="math/tex" id="MathJax-Element-51">\Delta\vdash (\sigma, x/u): \Gamma, x: A</script> if <script type="math/tex" id="MathJax-Element-52">\Delta\vdash \sigma: \Gamma</script> and <script type="math/tex" id="MathJax-Element-53">\Gamma\vdash u: A\sigma</script></li></ul></li>
+</ul>
+
+
+
+<h2 id="path-types">path types</h2>
+
+<ul>
+<li>names <script type="math/tex" id="MathJax-Element-54">i</script>, <script type="math/tex" id="MathJax-Element-55">j</script>, <script type="math/tex" id="MathJax-Element-56">k</script> is a discete infinite set, and <script type="math/tex" id="MathJax-Element-57">\I</script> the free de Morgan algebra on it, or</li>
+<li>lattices nodes <script type="math/tex" id="MathJax-Element-58">r</script>, <script type="math/tex" id="MathJax-Element-59">s</script> <br>
+<ul><li><script type="math/tex" id="MathJax-Element-60">0</script>, <script type="math/tex" id="MathJax-Element-61">1</script>, <script type="math/tex" id="MathJax-Element-62">i</script>, <script type="math/tex" id="MathJax-Element-63">1- r</script>, <script type="math/tex" id="MathJax-Element-64">r\land s</script>, <script type="math/tex" id="MathJax-Element-65">r\lor s</script></li></ul></li>
+<li>we extends context <script type="math/tex" id="MathJax-Element-66">\Gamma</script>, <script type="math/tex" id="MathJax-Element-67">\Delta</script> with name declarations <br>
+<ul><li><script type="math/tex" id="MathJax-Element-68">\Gamma, i: \I</script></li>
+<li>also a rule that for any context <script type="math/tex" id="MathJax-Element-69">\Gamma\vdash</script>, and any <script type="math/tex" id="MathJax-Element-70">i</script> not in the context, <script type="math/tex" id="MathJax-Element-71">\Gamma, i: \I\vdash</script></li>
+<li><script type="math/tex" id="MathJax-Element-72">\Gamma\vdash r: \I</script> means <script type="math/tex" id="MathJax-Element-73">r</script> is a node depending only on names in <script type="math/tex" id="MathJax-Element-74">\Gamma</script></li>
+<li>judgement <script type="math/tex" id="MathJax-Element-75">\Gamma\vdash r= s: \I</script></li></ul></li>
+<li><p>we extends the terms with</p>
+
+<ul><li>path type: <script type="math/tex" id="MathJax-Element-76">\P{A}{t}{u}</script></li>
+<li>path abstraction: <script type="math/tex" id="MathJax-Element-77">\pa{i}{t}</script></li>
+<li>path application: <script type="math/tex" id="MathJax-Element-78"> t\ r</script></li></ul></li>
+<li><p>extends substitution with <script type="math/tex" id="MathJax-Element-79">(i/r)</script> forms and <script type="math/tex" id="MathJax-Element-80">(i/0)</script> written as <script type="math/tex" id="MathJax-Element-81">(i0)</script></p></li>
+<li><p>extends inference rules with</p>
+
+<ul><li><script type="math/tex" id="MathJax-Element-82">\Gamma\vdash A</script>, <script type="math/tex" id="MathJax-Element-83">\Gamma\vdash t, u: A</script> <script type="math/tex" id="MathJax-Element-84">\Rightarrow</script> <script type="math/tex" id="MathJax-Element-85">\Gamma\vdash\P{A}{t}{u}</script></li>
+<li><script type="math/tex" id="MathJax-Element-86">\Rightarrow</script> <script type="math/tex" id="MathJax-Element-87">\Gamma\vdash \pa{i}{t}: \P{A}{t(i0)}{t(i1)}</script></li>
+<li>a path in type <script type="math/tex" id="MathJax-Element-88">A</script> when applied with a point in <script type="math/tex" id="MathJax-Element-89">\I</script> will return again a value in type <script type="math/tex" id="MathJax-Element-90">A</script>: <script type="math/tex" id="MathJax-Element-91">\Rightarrow</script> <script type="math/tex" id="MathJax-Element-92">t\ r : A</script></li>
+<li><script type="math/tex" id="MathJax-Element-93">\Rightarrow</script> <script type="math/tex" id="MathJax-Element-94">\Gamma\vdash (\pa{i}{t})\ r = t(i/r):A</script></li>
+<li>appling at a end will return the end in the path type: <script type="math/tex" id="MathJax-Element-95">\Rightarrow</script> <script type="math/tex" id="MathJax-Element-96">t\ 0 = u_0</script> where <script type="math/tex" id="MathJax-Element-97">t: \P{A}{u_0}{u_1}</script></li>
+<li><script type="math/tex" id="MathJax-Element-98">1_a: \P{A}{a}{a} = \pa{i}{a}</script></li></ul></li>
+<li><p>effects of node substitution</p>
+
+<ul><li><script type="math/tex" id="MathJax-Element-99">(i/j)</script> is renaming dimenstion</li>
+<li><script type="math/tex" id="MathJax-Element-100">(i/1-i)</script> is reversing</li>
+<li>connections</li></ul></li>
+<li>examples <br>
+<ul><li>image of equal elements is equal</li>
+<li>funext</li>
+<li>singletons is contractible. the proof uses connections</li></ul></li>
+</ul>
+
+
+
+<h2 id="face-lattice">face lattice</h2>
+
+<ul>
+<li><p>face lattice <script type="math/tex" id="MathJax-Element-101">\varphi, \psi\in\F</script> is free distributive bounded lattice on symbols <script type="math/tex" id="MathJax-Element-102">(i = 1)</script> <script type="math/tex" id="MathJax-Element-103">(i= 0)</script> with relation <script type="math/tex" id="MathJax-Element-104">(i = 0)\land(i = 1) = 0_\F</script></p>
+
+<ul><li>any element is a union (join) of irreducible element (meets of <script type="math/tex" id="MathJax-Element-105">(i = 1, 0)</script>)</li>
+<li>there is a canoical map <script type="math/tex" id="MathJax-Element-106">\I\to\F</script> <br>
+<ul><li>sending <script type="math/tex" id="MathJax-Element-107">i</script> to <script type="math/tex" id="MathJax-Element-108">(i = 1)</script></li>
+<li>sending <script type="math/tex" id="MathJax-Element-109">(1-i)</script> to <script type="math/tex" id="MathJax-Element-110">(i= 0)</script></li>
+<li>we write <script type="math/tex" id="MathJax-Element-111">(r = 1)</script> for the image of <script type="math/tex" id="MathJax-Element-112">r</script> in <script type="math/tex" id="MathJax-Element-113">\F</script></li>
+<li>we write <script type="math/tex" id="MathJax-Element-114">(r = 0)</script> for the image of <script type="math/tex" id="MathJax-Element-115">1-r</script></li>
+<li>we have <script type="math/tex" id="MathJax-Element-116">(r = 1)\land (r = 0) = 0_\F</script></li></ul></li>
+<li>it can be seen as sub-polyhedra of a cube <br>
+<ul><li>boundary <script type="math/tex" id="MathJax-Element-117">\partial _I</script> is the greatest element <script type="math/tex" id="MathJax-Element-118">< 1_\F</script></li></ul></li></ul></li>
+<li><p>we extends the judgements: <script type="math/tex" id="MathJax-Element-119">\Gamma\vdash \psi : \F</script> means <script type="math/tex" id="MathJax-Element-120">\psi</script> is only using names in <script type="math/tex" id="MathJax-Element-121">\Gamma</script></p></li>
+<li><p>context restriction: <script type="math/tex" id="MathJax-Element-122">\Gamma\vdash \psi : \F</script> <script type="math/tex" id="MathJax-Element-123">\Rightarrow</script> <script type="math/tex" id="MathJax-Element-124">\Gamma, \psi\vdash</script></p></li>
+<li><p>canonical (lattice) map from <script type="math/tex" id="MathJax-Element-125">\F</script> to <script type="math/tex" id="MathJax-Element-126">\Con(\I)</script> (seems the order is <strong>reversed</strong>)</p>
+
+<ul><li><script type="math/tex" id="MathJax-Element-127">(i = 1)</script> to the congruence identifying <script type="math/tex" id="MathJax-Element-128">i</script> with <script type="math/tex" id="MathJax-Element-129">1</script></li>
+<li><script type="math/tex" id="MathJax-Element-130">(i = 0)</script> to the congruence identifying <script type="math/tex" id="MathJax-Element-131">i</script> with <script type="math/tex" id="MathJax-Element-132">0</script></li>
+<li>then any <script type="math/tex" id="MathJax-Element-133">\psi\in \F</script> defines a congruence <script type="math/tex" id="MathJax-Element-134">r = s\mod{\psi}</script></li>
+<li>if <script type="math/tex" id="MathJax-Element-135">\psi</script> is irreducible like <script type="math/tex" id="MathJax-Element-136">(i = 0)\land(j = 1)</script> then <script type="math/tex" id="MathJax-Element-137">r = s\mod{\psi}</script> is equivalent to <script type="math/tex" id="MathJax-Element-138">r(i0)(j1) = s(i0)(j1)</script></li>
+<li>and the join is mapped to meet</li></ul></li>
+<li>to any context <script type="math/tex" id="MathJax-Element-139">\Gamma</script> we have a congruence of <script type="math/tex" id="MathJax-Element-140">\I</script> defined on it. the empty context is identity on <script type="math/tex" id="MathJax-Element-141">\I</script>, adding variable or name doesn’t change it, adding a restriction will change it</li>
+<li>and any context defines a congruence on <script type="math/tex" id="MathJax-Element-142">\F</script>  with <script type="math/tex" id="MathJax-Element-143">\Gamma, \psi\vdash\varphi_1 = \varphi_2: \F</script> means <script type="math/tex" id="MathJax-Element-144">\Gamma\vdash\psi\land\varphi_1= \psi\land\varphi_2: \F</script></li>
+<li>we define <script type="math/tex" id="MathJax-Element-145">\forall i .\varphi</script> as the join of all irreducible elements <script type="math/tex" id="MathJax-Element-146">\leq \varphi</script> independent of <script type="math/tex" id="MathJax-Element-147">i</script> <br>
+<ul><li>if <script type="math/tex" id="MathJax-Element-148">\psi</script> is independent of <script type="math/tex" id="MathJax-Element-149">i</script>, then <script type="math/tex" id="MathJax-Element-150">\psi \leq \varphi \iff \psi\leq \forall i.\varphi</script></li></ul></li>
+</ul></div></body>
+</html>
