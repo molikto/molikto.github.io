@@ -11,7 +11,7 @@
 	* [universal algebra](mathematics/universal_algebra.html)
 	* [category](mathematics/category.html)
 * notes
-	* [on `cubicaltt.pdf`](notes/cubicaltt)
+	* [on `cubicaltt.pdf`](notes/cubicaltt.html)
 
 ----
 
