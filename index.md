@@ -10,6 +10,8 @@
 	* [foundation](mathematics/foundation.html)
 	* [universal algebra](mathematics/universal_algebra.html)
 	* [category](mathematics/category.html)
+* notes
+	* [on `cubicaltt.pdf`](notes/cubicaltt)
 
 ----
 
