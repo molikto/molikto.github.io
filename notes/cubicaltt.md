@@ -80,7 +80,7 @@ then we have 5
 	  * for nat
 
 * context morphisms $\Delta\vdash \sigma: \Gamma$
-	* $\Delta: () : ()$ the first $()$ is an empty substitution, the second is an empty context
+	* $\Delta\vdash () : ()$ the first $()$ is an empty substitution, the second is an empty context
 	* $\Delta\vdash (\sigma, x/u): \Gamma, x: A$ if $\Delta\vdash \sigma: \Gamma$ and $\Gamma\vdash u: A\sigma$
 * we use $J$ for a judgemnt and consider also hypothetical judgements $\Gamma\vdash J$
 	* weakening: $\Gamma\vdash J$ then valid in all extensions of $\Gamma$
@@ -149,10 +149,16 @@ then we have 5
 * we define $\forall i .\varphi$ as the join of all irreducible elements $\leq \varphi$ independent of $i$
 	* if $\psi$ is independent of $i$, then $\psi \leq \varphi \iff \psi\leq \forall i.\varphi$
 
-### systems
+## systems
 
 * we extends syntex of term and type by 
 	* $S$ system: $[\varphi_1\ t_1, ..., \varphi_n\ t_n]$
+		* can be empty
 * and judgements, all of them bellow under the condition $\Gamma \vdash \varphi_1\lor...\lor\varphi_n = 1_\F: \F$, which means $\Gamma$ is sufficiently restricted( to allow the system to be a complete thing that can exists under the non $\varphi$ restricted context $\Gamma$)
 	* if under the contexts having types $\Gamma, \varphi_n\vdash A_n$ we have the types compatible $\Gamma, \varphi_i\land\varphi_j\vdash A_i = A_j$ then the system is a type $\Gamma\vdash[\varphi_1 A_1,... , \varphi_n A_n]$ (seems the equality is done by thinking of substitutions)
 	* if we have a **single** type $\Gamma\vdash A$ and we have $\Gamma, \varphi_n\vdash t_n: A$ and we have $\Gamma,\varphi_i\land \varphi_j\vdash t_i = t_j: A$ then $\Gamma\vdash [..., \varphi_i t_i,...]: A$
+		* consider the case $n = 0$ then $\Gamma\vdash []: A$
+	* if a judgement $J$ is valid in all $\Gamma, \varphi_n$ then it is valid in $\Gamma$
+	* $\Gamma\vdash \varphi_i = 1_\F: \F$ then $\Gamma\vdash [...,\varphi_i A_i,...] = A_i$
+	* $\Gamma\vdash [..., \varphi_i t_i,...]: A$ and $\Gamma\vdash \varphi_i = 1_\F: \F$ then  $\Gamma\vdash [..., \varphi_i t_i,...]=t_i: A$
+	* we extends the substituion judgement by $\Delta\vdash \sigma: \Gamma, \varphi$ if $\Delta\vdash \sigma:\Gamma$ and $\Gamma\vdash \varphi :\F$ and $\Gamma\vdash\varphi\sigma=1_\F: \F$
