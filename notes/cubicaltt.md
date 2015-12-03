@@ -70,11 +70,11 @@ then we have 5
 
 * judgement and inference rules
   * is a context: $\Gamma\vdash$
-  * is a type under a context: $\Gamma\vdash A$
-  * is a term of type under a context: $\Gamma\vdash t: A$
-  * type eq: $\Gamma\vdash A = B$
+  * is a type **under a context**: $\Gamma\vdash A$
+  * is a term of type **under a context**: $\Gamma\vdash t: A$
+  * type eq **under a context**: $\Gamma\vdash A = B$
     * (`TODO` why there is a type eq? what about formulate them using universe?)
-  * term eq: $\Gamma\vdash a = b: A$
+  * term eq **under a context**: $\Gamma\vdash a = b: A$
 	  * computation rule for $(\lambda x: A. t) u = t(x/u)$
 	  * computation rule for sigma
 	  * for nat
@@ -82,6 +82,10 @@ then we have 5
 * context morphisms $\Delta\vdash \sigma: \Gamma$
 	* $\Delta: () : ()$ the first $()$ is an empty substitution, the second is an empty context
 	* $\Delta\vdash (\sigma, x/u): \Gamma, x: A$ if $\Delta\vdash \sigma: \Gamma$ and $\Gamma\vdash u: A\sigma$
+* we use $J$ for a judgemnt and consider also hypothetical judgements $\Gamma\vdash J$
+	* weakening: $\Gamma\vdash J$ then valid in all extensions of $\Gamma$
+	* substitution: $\Gamma\vdash J$ and $\Delta\vdash \sigma : \Gamma$ then $\Gamma\vdash J\sigma$
+	* from eq judgements we derive exists judgements and type judgements
 
 ## path types
 
@@ -132,6 +136,7 @@ then we have 5
 
 * we extends the judgements: $\Gamma\vdash \psi : \F$ means $\psi$ is only using names in $\Gamma$
 * context restriction: $\Gamma\vdash \psi : \F$ $\Rightarrow$ $\Gamma, \psi\vdash$
+* then we extends the type (**?**), by saying a type in a restricted context is a union of compatible faces of the **original** unrestricted cube
 
 * canonical (lattice) map from $\F$ to $\Con(\I)$ (seems the order is **reversed**)
 	* $(i = 1)$ to the congruence identifying $i$ with $1$
@@ -143,3 +148,11 @@ then we have 5
 * and any context defines a congruence on $\F$  with $\Gamma, \psi\vdash\varphi_1 = \varphi_2: \F$ means $\Gamma\vdash\psi\land\varphi_1= \psi\land\varphi_2: \F$
 * we define $\forall i .\varphi$ as the join of all irreducible elements $\leq \varphi$ independent of $i$
 	* if $\psi$ is independent of $i$, then $\psi \leq \varphi \iff \psi\leq \forall i.\varphi$
+
+### systems
+
+* we extends syntex of term and type by 
+	* $S$ system: $[\varphi_1\ t_1, ..., \varphi_n\ t_n]$
+* and judgements, all of them bellow under the condition $\Gamma \vdash \varphi_1\lor...\lor\varphi_n = 1_\F: \F$, which means $\Gamma$ is sufficiently restricted( to allow the system to be a complete thing that can exists under the non $\varphi$ restricted context $\Gamma$)
+	* if under the contexts having types $\Gamma, \varphi_n\vdash A_n$ we have the types compatible $\Gamma, \varphi_i\land\varphi_j\vdash A_i = A_j$ then the system is a type $\Gamma\vdash[\varphi_1 A_1,... , \varphi_n A_n]$ (seems the equality is done by thinking of substitutions)
+	* if we have a **single** type $\Gamma\vdash A$ and we have $\Gamma, \varphi_n\vdash t_n: A$ and we have $\Gamma,\varphi_i\land \varphi_j\vdash t_i = t_j: A$ then $\Gamma\vdash [..., \varphi_i t_i,...]: A$
