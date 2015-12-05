@@ -26,7 +26,7 @@ $$
 * lattice: each two objects in the pos has join, $\sup$, $a\lor b$ and meet, $\inf$, $a\land b$
 * bounded lattice: have $0$ and $1$ and $0 \leq p \leq 1$
 * distributive lattice: $p \land (q \lor r) = (p\lor q)\land (p \lor r)$
-* complete lattice: all subset has join and meet, and it is a bounded lattice
+* complete lattice: all subset has join and meet, so it is a bounded lattice
 * de Morgan algebra
 	* bounded distributive lattice
 	* with $1 -p$ satisfying
@@ -45,6 +45,8 @@ $$
 \def\F{\mathbb{F}\ }
 \newcommand{\P}[3]{\operatorname{Path}#1\ #2\ #3}
 \newcommand{\pa}[2]{\left<#1\right >\ #2}
+\def\comp{\operatorname{comp}}
+\def\fill{\operatorname{fill}}
 $$
 
 firstly we define several fundamental concept
@@ -66,9 +68,8 @@ firstly we define several fundamental concept
   * natrec: $\natrec t\ u$
 
 * substitutions $\sigma=(x/u, ...,x/u)$
-then we have 5
 
-* judgement and inference rules
+* then we have 5 judgement and inference rules
   * is a context: $\Gamma\vdash$
   * is a type **under a context**: $\Gamma\vdash A$
   * is a term of type **under a context**: $\Gamma\vdash t: A$
@@ -81,7 +82,7 @@ then we have 5
 
 * context morphisms $\Delta\vdash \sigma: \Gamma$
 	* $\Delta\vdash () : ()$ the first $()$ is an empty substitution, the second is an empty context
-	* $\Delta\vdash (\sigma, x/u): \Gamma, x: A$ if $\Delta\vdash \sigma: \Gamma$ and $\Gamma\vdash u: A\sigma$
+	* $\Delta\vdash (\sigma, x/u): \Gamma, x: A$ if $\Delta\vdash \sigma: \Gamma$ and $\Gamma\vdash u: A\sigma$. this is adding a variable to a context, as before the context morphism contains more information than the context
 * we use $J$ for a judgemnt and consider also hypothetical judgements $\Gamma\vdash J$
 	* weakening: $\Gamma\vdash J$ then valid in all extensions of $\Gamma$
 	* substitution: $\Gamma\vdash J$ and $\Delta\vdash \sigma : \Gamma$ then $\Gamma\vdash J\sigma$
@@ -95,6 +96,7 @@ then we have 5
 * we extends context $\Gamma$, $\Delta$ with name declarations
 	* $\Gamma, i: \I$
 	*  also a rule that for any context $\Gamma\vdash$, and any $i$ not in the context, $\Gamma, i: \I\vdash$
+		* we can understand a type $A$ in this context as a cube, square, becuase getting this context is easy, then we can use $i$ inside $A$ to obtain a type like a cube
 	* $\Gamma\vdash r: \I$ means $r$ is a node depending only on names in $\Gamma$
 	* judgement $\Gamma\vdash r= s: \I$
 * we extends the terms with
@@ -116,9 +118,9 @@ then we have 5
 	* $(i/j)$ is renaming dimenstion
 	* $(i/1-i)$ is reversing
 	* connections
-* examples
+* examples. all of them will request you have a non-trivial path first then get another path, but by far the only way to get a path is by identity
 	* image of equal elements is equal
-	* funext
+	* funext. proof by type checking
 	* singletons is contractible. the proof uses connections
 
 ## face lattice
@@ -136,7 +138,7 @@ then we have 5
 
 * we extends the judgements: $\Gamma\vdash \psi : \F$ means $\psi$ is only using names in $\Gamma$
 * context restriction: $\Gamma\vdash \psi : \F$ $\Rightarrow$ $\Gamma, \psi\vdash$
-* then we extends the type (**?**), by saying a type in a restricted context is a union of compatible faces of the **original** unrestricted cube
+	* then we extends the type (**?**), by saying a type in a restricted context is a union of compatible faces of the **original** unrestricted cube
 
 * canonical (lattice) map from $\F$ to $\Con(\I)$ (seems the order is **reversed**)
 	* $(i = 1)$ to the congruence identifying $i$ with $1$
@@ -161,4 +163,37 @@ then we have 5
 	* if a judgement $J$ is valid in all $\Gamma, \varphi_n$ then it is valid in $\Gamma$
 	* $\Gamma\vdash \varphi_i = 1_\F: \F$ then $\Gamma\vdash [...,\varphi_i A_i,...] = A_i$
 	* $\Gamma\vdash [..., \varphi_i t_i,...]: A$ and $\Gamma\vdash \varphi_i = 1_\F: \F$ then  $\Gamma\vdash [..., \varphi_i t_i,...]=t_i: A$
-	* we extends the substituion judgement by $\Delta\vdash \sigma: \Gamma, \varphi$ if $\Delta\vdash \sigma:\Gamma$ and $\Gamma\vdash \varphi :\F$ and $\Gamma\vdash\varphi\sigma=1_\F: \F$
+
+* we extends the substituion judgement by $\Delta\vdash \sigma: \Gamma, \varphi$ if $\Delta\vdash \sigma:\Gamma$ and $\Gamma\vdash \varphi :\F$ and $\Gamma\vdash\varphi\sigma=1_\F: \F$
+
+* we write $\Gamma\vdash a: A[\varphi_1\to u_1,...,\varphi_k\to u_k]$ if $\Gamma \vdash a: A$ and $\Gamma, \varphi_i\vdash a =u_i: A$
+	* the great element $a$ is a witness of the parital elements $u$ is **connected**
+
+* the follows rules with $J$
+	* $\Gamma\vdash \varphi\leq \psi$ then any judgemnt $J$ valid in bigger restriction is true in the smaller one
+	* adding $1_F$ is trivial
+	* merging $\varphi$ and $\psi$ into $\varphi\land \psi$ is trivial
+	* if $i$ and $\varphi$ is **independent**, then exchange them in context is trivial
+		* $\Gamma, i: \I, \varphi\vdash J$ then $\Gamma, \forall i, \varphi, i: \I\vdash J$
+
+## composition operation
+
+* we extends the syntax by
+	* $\comp^i A[\varphi\to u] a_0$ where $u$ is a system
+* the typing rule
+	* if firstly the context $\Gamma$ is itself a cube and can be restricted by $\varphi$: $\Gamma\vdash \varphi$
+	* and we have a type $A$ depending on an extra dimension: $\Gamma, i: \I: A$
+	* and in theis restricted * new dimension settting we have an element of $A$: $\Gamma, \varphi, i: \I\vdash u: A$
+	* and we have in one end of the new dimension, the partial elemnt $u$ is connected:
+	 $\Gamma\vdash a_0: A(i0)[\varphi\to  u(i0)]$
+	* then on the other end it is also connected:
+	 $\Gamma\vdash \comp^i A[\varphi\to u]a_0: A(i1)[\varphi\to  u(i1)]$. where $\comp^i$ binds $i$ in $A$ and $u$
+		* in particular if $\varphi=1_\F$, the last result is written as $\Gamma\vdash \comp^i A [1_\F\to u]a_0=u(i1)$
+* if we have a substitution $\Delta\vdash \sigma\Gamma$ then the $i$ in $A$ $u$ is replaced by a fresh variable $j$. corresponds to the **uniformity** (?) of composition
+
+* a troubling remark: use $[\varphi_1\to u_1, ..., \varphi_n\to u_n]$ for $[\lor_i\varphi_i\to[\varphi_1 u_1, ..., \varphi_n u_n]]]$  also $[]$ for $[0_\F\to []]$
+* we can proof path transitivity by using comp
+
+## Kan filling
+
+* $\Gamma, i: \I\vdash \fill^i A[\varphi\to u]a_0= \comp^j A(i/i\land j)[\varphi\to u(i/i\land j), (i = 0)\to a_0]a_0: A$
