@@ -10,6 +10,7 @@
 	* [foundation](mathematics/foundation.html)
 	* [universal algebra](mathematics/universal_algebra.html)
 	* [category](mathematics/category.html)
+	* [algebraic topology](mathematics/algebraic_topology.html)
 * notes
 	* [on `cubicaltt.pdf`](notes/cubicaltt.html)
 
