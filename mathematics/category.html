@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <title>category</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon" />
 <link rel="stylesheet" href="https://stackedit.io/res-min/themes/solarized-dark.css" />
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
@@ -16,7 +18,15 @@
 </head>
 <body><div class="container"><h2 id="category">category</h2>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-4644">
+<ul>
+<li>references <br>
+<ul><li><code>CTWM</code> Category Theory for Working Mathematicians, <em>Saunders Mac Lane</em></li>
+<li><code>MCHT</code> Modern Classical Homotopy Theory, <em>Jeffrey Strom</em>, Chapter 1</li></ul></li>
+</ul>
+
+
+
+<p>$$
 \def\dom{\operatorname{dom}}
 \def\cod{\operatorname{cod}}
 \def\img{\operatorname{img}}
@@ -25,136 +35,161 @@
 \def\hom{\operatorname{hom}}
 \def\op{\text{op}}
 \def\AbCat{\mathbf{Ab}\text{-}\Cat}
-</script></p>
+$$</p>
 
 <ul>
-<li><strong>directed graph</strong> is a set <script type="math/tex" id="MathJax-Element-4645">A</script> of <strong>arrows</strong> and set <script type="math/tex" id="MathJax-Element-4646">O</script> of <strong>object</strong>. and two function <script type="math/tex" id="MathJax-Element-4647">\dom</script> and <script type="math/tex" id="MathJax-Element-4648">\cod</script> with type <script type="math/tex" id="MathJax-Element-4649">A \to O</script></li>
-<li><p>(formal) product over the graph is just pairs of arrows with <script type="math/tex" id="MathJax-Element-4650">\dom g = \text{cod} f</script></p></li>
-<li><p>a <strong>category</strong> is a graph with <script type="math/tex" id="MathJax-Element-4651">\text{id}: O\to A</script>, <script type="math/tex" id="MathJax-Element-4652">\circ : A \times A\to A</script>, where with proper domain conditions, and associativity law of composition, also unit axioms</p>
+<li><p><strong>directed graph</strong> is a set $A$ of <strong>arrows</strong> and set $O$ of <strong>object</strong>. and two function $\dom$ and $\cod$ with type $A \to O$</p>
+
+<ul><li>(formal) product over the graph is just pairs of arrows with $\dom g = \text{cod} f$. it is just pairs, not triples</li>
+<li>expanded graph (? is the compositions finite or not?)</li>
+<li>commutative diagram (all possible composition between two object is the same arrow <br>
+<ul><li><code>MCHT 1.1</code> show diagram commutative iff expanded diagram commutative</li></ul></li></ul></li>
+<li><p>a <strong>category</strong> is a graph with $\text{id}: O\to A$, $\circ : A \times A\to A$, where with proper domain conditions, and associativity law of composition, also unit axioms. it is <strong>small</strong> in universe $U$ if the set of objects and arrows is in $U$</p>
 
 <ul><li>we have examples 1, 2, 3, discrete categories, monoids, groups, groupoids, preorders (only one arrow between two object in one direction), partial orders (only one arrow between two object), linear order (one and only one), ordinals, <strong>simplicial category</strong> (finite ordinals and order-preserving functions)</li>
-<li><strong>hom-set</strong>, <script type="math/tex" id="MathJax-Element-4653">\hom_C(a, b)</script> is set of arrows <script type="math/tex" id="MathJax-Element-4654">a\to b</script> </li>
-<li><strong>inverse</strong> or <script type="math/tex" id="MathJax-Element-4655">f</script> is <script type="math/tex" id="MathJax-Element-4656">g</script>: <script type="math/tex" id="MathJax-Element-4657">fg = \text{id}, gf = \text{id}</script> <br>
-<ul><li>inverse is unique. <script type="math/tex" id="MathJax-Element-4658">g=gfg_1=g_1</script></li>
-<li>reflective</li>
+<li><strong>hom-set</strong>, $\hom_C(a, b)$ is set of arrows $a\to b$ </li>
+<li><strong>inverse</strong> or $f$ is $g$: $fg = \text{id}, gf = \text{id}$ <br>
+<ul><li>inverse is unique. $g=gfg_1=g_1$</li>
+<li>reflective, transitive, and symmetry. thus define a equivalence relation</li>
 <li><strong>isomorphism</strong>: a arrow has inverse, <strong>isomorphic</strong> objects has isomorphism between</li></ul></li>
 <li><strong>endomorphism</strong>, <strong>idempotent</strong>, <strong>automorphism</strong></li>
-<li><strong>monic</strong> or <strong>left cancelable</strong> <script type="math/tex" id="MathJax-Element-4659">m</script>, <script type="math/tex" id="MathJax-Element-4660">m\circ f_1=m\circ f_2\implies f_1 = f_2</script>, compose is also monic. <script type="math/tex" id="MathJax-Element-4661">g\circ f</script> monic then <script type="math/tex" id="MathJax-Element-4662">f</script> monic (trivial)</li>
-<li><strong>epi</strong> or <strong>right cancelable</strong> <script type="math/tex" id="MathJax-Element-4663">h</script>, <script type="math/tex" id="MathJax-Element-4664">g_1\circ h=g_2\circ h\implies g_1 =g_2</script>, compose is also epi</li>
-<li>for <script type="math/tex" id="MathJax-Element-4665">h: a\to b</script> a <strong>right inverse</strong> or <strong>section</strong> is <script type="math/tex" id="MathJax-Element-4666">r: b \to a</script> such that <script type="math/tex" id="MathJax-Element-4667">hr=1_b</script> (not usually unique), and makes <script type="math/tex" id="MathJax-Element-4668">h</script> a <strong>split epi</strong> <em>(<script type="math/tex" id="MathJax-Element-4669">r</script> select from the domain <script type="math/tex" id="MathJax-Element-4670">a</script>)</em></li>
-<li>for <script type="math/tex" id="MathJax-Element-4671">h: a\to b</script> a <strong>left inverse</strong> or <strong>retraction</strong> is <script type="math/tex" id="MathJax-Element-4672">l : b\to a</script> such that <script type="math/tex" id="MathJax-Element-4673">lh=1_a</script> and makes <script type="math/tex" id="MathJax-Element-4674">h</script> a <strong>split monic</strong> <em>(image the domain is larger, and the <script type="math/tex" id="MathJax-Element-4675">h</script> is just a embeding, then <script type="math/tex" id="MathJax-Element-4676">l</script> will retract the codomain back)</em></li>
-<li>if <script type="math/tex" id="MathJax-Element-4677">fg=1_a</script> then there is a left inverse, a right inverse and a idempotent, and it is a <strong>split idempotent</strong></li>
-<li><strong>terminal</strong>, <strong>initial</strong>, <strong>null object</strong>, <strong>zero arrow</strong> factor through null object</li></ul></li>
+<li><strong>monic</strong> or <strong>left cancelable</strong> $m$, $m\circ f_1=m\circ f_2\implies f_1 = f_2$, compose is also monic. $g\circ f$ monic then $f$ monic (trivial)</li>
+<li><strong>epi</strong> or <strong>right cancelable</strong> $h$, $g_1\circ h=g_2\circ h\implies g_1 =g_2$, compose is also epi</li>
+<li>for $h: a\to b$ a <strong>right inverse</strong> or <strong>section</strong> is $r: b \to a$ such that $hr=1_b$ (not usually unique), and makes $h$ a <strong>split epi</strong> <em>($r$ select from the domain $a$)</em> <br>
+<ul><li><code>MCHT 1.6</code> a arrow having a left inverse which has a left inverse is a isomorphism pair</li></ul></li>
+<li>for $h: a\to b$ a <strong>left inverse</strong> or <strong>retraction</strong> is $l : b\to a$ such that $lh=1_a$ and makes $h$ a <strong>split monic</strong>. the $a$ is sometimes called a <strong>retract</strong> of $b$. <em>(imagine the domain is larger, and the $h$ is just a embedding, then $l$ will retract the codomain back)</em> <br>
+<ul><li><code>MCHT 1.9  TODO</code> show that in the arrow category of certain category, $f$ is retract of $g$. then if $g$ is a isomorphism, $f$ is. and $f$ is, then $g$ maybe not. first part is trivial. second part is also trivial. all other maps is $\id$ except $g$</li></ul></li>
+<li>if $fg=1_a$ then there is a left inverse, a right inverse and a idempotent, and it is a <strong>split idempotent</strong></li>
+<li><strong>terminal</strong>, <strong>initial</strong></li>
+<li><strong>null object</strong>,<strong>pointed category</strong>, <strong>zero arrow</strong> (trivial morphism) factor through null object, <strong>wedge</strong></li></ul></li>
 </ul>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-40167">
+<p>$$
 \def\Cat{\mathcal{Cat}}
 \def \Set{\mathcal{Set}}
-</script></p>
+$$</p>
 
 <ul>
-<li><p><strong>functor</strong> is a map between two category, consists obj map and arr map, preserve unit and associ, category and functors forms <script type="math/tex" id="MathJax-Element-40168">\Cat</script></p>
+<li><p><strong>functor</strong> is a map between two category, consists obj map and arr map, preserve unit and associ, category and functors in one universe $U$ forms $\Cat$ in another universe</p>
 
-<ul><li><strong>forgetful functor</strong> may be considered by (a, b) =&gt; (a) of some Sigma type</li>
-<li><script type="math/tex" id="MathJax-Element-40169">T: C\to B</script> and <script type="math/tex" id="MathJax-Element-40170">S: B\to A</script> has <strong>composition</strong> <script type="math/tex" id="MathJax-Element-40171">S\circ T</script>,  is a functor <script type="math/tex" id="MathJax-Element-40172">C\to A</script>. it is associ (because function composition is associ), and there is identity functor, so <script type="math/tex" id="MathJax-Element-40173">\Cat</script> of all small categories is a category</li>
-<li><strong>full functor</strong>, <script type="math/tex" id="MathJax-Element-40174">\forall c, c_1, \forall g: Tc\to Tc_1\exists f: c\to c_1: g = Tf</script> <br>
+<ul><li><strong>forgetful functor</strong> (vague) may be considered by (a, b) =&gt; (a) of some Sigma type</li>
+<li>$T: C\to B$ and $S: B\to A$ has <strong>composition</strong> $S\circ T$,  is a functor $C\to A$. it is associ (because function composition is associ), and there is identity functor, so $\Cat$ of all small categories is a category</li>
+<li><strong>full functor</strong>, $\forall c, c_1, \forall g: Tc\to Tc_1\exists f: c\to c_1: g = Tf$ <br>
 <ul><li>compose is full</li></ul></li>
-<li><strong>faithful functor</strong> <script type="math/tex" id="MathJax-Element-40175">\forall c, c_1, \forall f, f_1: c\to c_1, Tf = Tf_1\implies f = f_1</script> <br>
+<li><strong>faithful functor</strong> $\forall c, c_1, \forall f, f_1: c\to c_1, Tf = Tf_1\implies f = f_1$ <br>
 <ul><li>compose if faithful</li></ul></li>
 <li><strong>subcategory</strong> and <strong>inclusion functor</strong> is faithful <em>(sub meaning get from removing some obj and arr)</em>. <strong>full subcategory</strong> when the inclusion functor is full <em>(you are not removing arrows without removing one of it’s domain)</em></li></ul></li>
-<li><p>exercises, c01, p15</p>
+<li><p><code>CTWM c01 p15</code></p>
 
-<ol><li><code>TODO: alg</code></li>
+<ol><li><code>TODO alg</code></li>
 <li>trivial</li>
 <li>trivial</li>
-<li>they are <strong>symmetric groups</strong>, consider the permutations of two elements, then map it two permutations of three elements by ignoring the third element. then map to permutations of two elements by ignoring the third element, the composition is <script type="math/tex" id="MathJax-Element-40176">\id</script></li>
+<li>they are <strong>symmetric groups</strong>, consider the permutations of two elements, then map it two permutations of three elements by ignoring the third element. then map to permutations of two elements by ignoring the third element, the composition is $\id$</li>
 <li><a href="http://mathoverflow.net/questions/4276/two-functors-from-grp-to-grp">evil answer</a></li></ol></li>
-<li><p><strong>functor category</strong> <script type="math/tex" id="MathJax-Element-40177">B^C</script>, <strong>natural transformation</strong>  <script type="math/tex" id="MathJax-Element-40178">\tau</script>, <strong>component</strong> <script type="math/tex" id="MathJax-Element-40179">\tau c</script> <strong>natural in</strong> <script type="math/tex" id="MathJax-Element-40180">c</script>: from <script type="math/tex" id="MathJax-Element-40181">S, T: C\to B</script> assigns each object <script type="math/tex" id="MathJax-Element-40182">c</script> an arrow <script type="math/tex" id="MathJax-Element-40183">\tau c</script> (the shape), <script type="math/tex" id="MathJax-Element-40184">\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf</script></p>
+<li><p><strong>functor category</strong> $B^C$, <strong>natural transformation</strong>  $\tau$, <strong>component</strong> $\tau c$ <strong>natural in</strong> $c$: from $S, T: C\to B$ assigns each object $c$ an arrow $\tau c$ (the shape), $\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf$</p>
 
-<ul><li>they form the functor category <script type="math/tex" id="MathJax-Element-40185">B^C</script>. and <strong>natural isomorphism</strong> iff each component is isomorphism (trivial. componentwise)</li>
-<li><script type="math/tex" id="MathJax-Element-40186">B^2</script> is the <strong>category of arrows</strong></li>
-<li><strong>equivalence of categories</strong> <script type="math/tex" id="MathJax-Element-40187">C</script>, <script type="math/tex" id="MathJax-Element-40188">D</script> is <script type="math/tex" id="MathJax-Element-40189">(S, T, \tau_1, \tau_2)</script>, such that <script type="math/tex" id="MathJax-Element-40190">\tau_1: I_C\simeq T\circ S</script> and <script type="math/tex" id="MathJax-Element-40191">\tau_2: I_D\simeq S\circ T</script></li></ul></li>
-<li><p>exercises, c01, p18</p>
+<ul><li>they form the functor category $B^C$. and <strong>natural isomorphism</strong> iff each component is isomorphism (trivial. componentwise)</li>
+<li>$B^2$ is the <strong>category of arrows</strong></li>
+<li><strong>equivalence of categories</strong> $C$, $D$ is $(S, T, \tau_1, \tau_2)$, such that $\tau_1: I_C\simeq T\circ S$ and $\tau_2: I_D\simeq S\circ T$</li></ul></li>
+<li><p><code>CTWM c01 p18</code></p>
 
-<ol><li><script type="math/tex" id="MathJax-Element-40192">e</script> is natural trasformation…</li>
+<ol><li>$e$ is natural trasformation…</li>
 <li>trivial</li>
-<li><code>TODO: alg</code></li>
+<li><code>TODO alg</code></li>
 <li>if there is, define the natural transform by that arrow. and we know that it is unique… trivial</li>
 <li>trivial</li>
 <li>trivial</li></ol></li>
-<li><p>exercises, c01, p21</p>
+<li><p><code>CTWM c01 p21</code></p>
 
 <ol><li>trivial</li>
 <li>trivial</li>
 <li>trivial</li>
-<li><code>TODO: alg</code></li>
-<li><code>TODO: alg</code></li>
-<li>all idempotents in <script type="math/tex" id="MathJax-Element-40193">\Set</script> split. for <script type="math/tex" id="MathJax-Element-40194">f: C \to D</script>, <script type="math/tex" id="MathJax-Element-40195">A = \{x|f(x) = x\}</script>, then <script type="math/tex" id="MathJax-Element-40196">\img f= A</script>, because if <script type="math/tex" id="MathJax-Element-40197">y\in\img f\land y = f(x)</script> then <script type="math/tex" id="MathJax-Element-40198">f(y)=f(f(x))=f(x)=y</script>, and also clearly <script type="math/tex" id="MathJax-Element-40199">A\subset \img f</script> because every <script type="math/tex" id="MathJax-Element-40200">x\in A</script> is image of itself. so <script type="math/tex" id="MathJax-Element-40201">f = \proj_{\img f}\circ f </script> also <script type="math/tex" id="MathJax-Element-40202">\id_{\img f} = f\circ \proj_{\img f}</script></li>
-<li>an arrow <script type="math/tex" id="MathJax-Element-40203">f: a \to b</script> is <strong>regular</strong> if there is <script type="math/tex" id="MathJax-Element-40204">g: b\to a</script> such that <script type="math/tex" id="MathJax-Element-40205">f = f g f</script> <br>
-<ol><li><script type="math/tex" id="MathJax-Element-40206">f</script> has left or right inverse then is regular. trivial</li>
-<li>in <script type="math/tex" id="MathJax-Element-40207">\Set</script> every arrow with <script type="math/tex" id="MathJax-Element-40208">a\neq \emptyset</script> is regular. for everyone in <script type="math/tex" id="MathJax-Element-40209">y\in\img f\land f(x) = y</script> define <script type="math/tex" id="MathJax-Element-40210">g(y) = x</script> and for other values, define at any element. then <script type="math/tex" id="MathJax-Element-40211">\forall x, f(g(f(x)))=f(x_1)</script>, where <script type="math/tex" id="MathJax-Element-40212">x_1</script> has property <script type="math/tex" id="MathJax-Element-40213">f(x_1) = f(x)</script></li></ol></li>
-<li>we define the arrow by pointing <script type="math/tex" id="MathJax-Element-40214">f(0)=e'</script> and <script type="math/tex" id="MathJax-Element-40215">f(1) = t'(e')</script> and so on. we can see we can define and the definition is unique</li>
-<li><script type="math/tex" id="MathJax-Element-40216">fg=fk\implies TfTg=TfTk\implies Tg=Tk \implies g=k</script></li></ol></li>
-<li><p>exercises, c01, p24</p>
+<li><code>TODO alg</code></li>
+<li><code>TODO alg</code></li>
+<li>all idempotents in $\Set$ split. for $f: C \to D$, $A = \{x|f(x) = x\}$, then $\img f= A$, because if $y\in\img f\land y = f(x)$ then $f(y)=f(f(x))=f(x)=y$, and also clearly $A\subset \img f$ because every $x\in A$ is image of itself. so $f = \proj_{\img f}\circ f $ also $\id_{\img f} = f\circ \proj_{\img f}$</li>
+<li>an arrow $f: a \to b$ is <strong>regular</strong> if there is $g: b\to a$ such that $f = f g f$ <br>
+<ol><li>$f$ has left or right inverse then is regular. trivial</li>
+<li>in $\Set$ every arrow with $a\neq \emptyset$ is regular. for everyone in $y\in\img f\land f(x) = y$ define $g(y) = x$ and for other values, define at any element. then $\forall x, f(g(f(x)))=f(x_1)$, where $x_1$ has property $f(x_1) = f(x)$</li></ol></li>
+<li>we define the arrow by pointing $f(0)=e'$ and $f(1) = t'(e')$ and so on. we can see we can define and the definition is unique</li>
+<li>$fg=fk\implies TfTg=TfTk\implies Tg=Tk \implies g=k$</li></ol></li>
+<li><p><code>CTWM c01 p24</code></p>
 
 <ol><li><code>omit</code></li>
 <li><code>omit</code></li>
 <li><code>omit</code></li></ol></li>
-<li><p><strong>concrete category</strong> <script type="math/tex" id="MathJax-Element-40217">(C, U)</script> where <script type="math/tex" id="MathJax-Element-40218">U: C\to \Set</script> is a faithful functor </p></li>
-<li><p><strong>preadditive category</strong> a category where each hom-set is a abelian group, and <script type="math/tex" id="MathJax-Element-40219">(g+g')\circ(f+f')=g\circ f+g\circ f'+g'\circ f+g'\circ f'</script></p>
+<li><p><strong>concrete category</strong> $(C, U)$ where $U: C\to \Set$ is a faithful functor </p></li>
+<li><p><strong>preadditive category</strong> a category where each hom-set is a abelian group, and $(g+g')\circ(f+f')=g\circ f+g\circ f'+g'\circ f+g'\circ f'$</p>
 
-<ul><li>a functor between two preadditive category is <strong>additive</strong> if each function between hom-sets is a homomorphism. compose is also additive. then <script type="math/tex" id="MathJax-Element-40220">\AbCat</script> is is the category of preadditive category with additive functors</li></ul></li>
+<ul><li>a functor between two preadditive category is <strong>additive</strong> if each function between hom-sets is a homomorphism. compose is also additive. then $\AbCat$ is is the category of preadditive category with additive functors</li></ul></li>
 <li><p><strong>duality in categories</strong> (by <strong>elementary theory of absract category</strong>), <strong>opposite category</strong>, <strong>contravariant functor</strong>, <strong>power-set functor</strong></p>
 
-<ul><li><strong>covariant hom-functor</strong> <script type="math/tex" id="MathJax-Element-40221">\hom(a, \_): C \to \Set</script>, for <script type="math/tex" id="MathJax-Element-40222">k: b\to b'</script> we have it maps to <script type="math/tex" id="MathJax-Element-40223">\hom(a, k)=k_*:\hom(a,b)\to\hom(a, b')</script> by the functor. <script type="math/tex" id="MathJax-Element-40224">k_*(f) = k\circ f</script></li>
-<li><strong>contravariant hom-functor</strong> <script type="math/tex" id="MathJax-Element-40225">\hom(\_, a):C^\op\to \Set</script>, send <script type="math/tex" id="MathJax-Element-40226">g</script> to <script type="math/tex" id="MathJax-Element-40227">g^*</script>. <script type="math/tex" id="MathJax-Element-40228">g^* (f) = f\circ g</script></li>
-<li>for <script type="math/tex" id="MathJax-Element-40229">g: a\to a'</script>, <script type="math/tex" id="MathJax-Element-40230">f: b\to b'</script> we have a diagram <code>img</code>, which is used to proof that <script type="math/tex" id="MathJax-Element-40231">\hom</script> is a bifunctor</li></ul></li>
-<li><p><strong>product category</strong>, <strong>projection functor</strong>, <strong>product of two functors</strong> <script type="math/tex" id="MathJax-Element-40232">U\times V: B\times C\to B'\times C'</script></p>
+<ul><li><strong>covariant hom-functor</strong> $\hom(a, \_): C \to \Set$, for $k: b\to b'$ we have it maps to $\hom(a, k)=k_*:\hom(a,b)\to\hom(a, b')$ by the functor. $k_*(f) = k\circ f$</li>
+<li><strong>contravariant hom-functor</strong> $\hom(\_, a):C^\op\to \Set$, send $g$ to $g^*$. $g^* (f) = f\circ g$</li>
+<li>for $g: a\to a'$, $f: b\to b'$ we have a diagram <code>img</code>, which is used to proof that $\hom$ is a bifunctor</li></ul></li>
+<li><p><strong>product category</strong>, <strong>projection functor</strong>, <strong>product of two functors</strong> $U\times V: B\times C\to B'\times C'$ can be defined by universal arrow</p>
 
-<ul><li><script type="math/tex" id="MathJax-Element-40233">(U'\times V')\circ(U\times V)=U'U\times V'V</script></li>
-<li>then <script type="math/tex" id="MathJax-Element-40234">\times : \Cat\times \Cat \to \Cat</script> can be considered as a functor itself (in the domain, you can consider them formal pairs of categories, the above line proofs associ)</li>
+<ul><li>$(U'\times V')\circ(U\times V)=U'U\times V'V$</li>
+<li>then $\times : \Cat\times \Cat \to \Cat$ can be considered as a functor itself (in the domain, you can consider them formal pairs of categories, the above line proofs associ)</li>
 <li>also in the definition, we know a functor into a product category is always just two functor!</li>
-<li><script type="math/tex" id="MathJax-Element-40235">(B\times C)^\op \simeq B^\op\times C^\op</script>. because they are just formal pairs</li></ul></li>
-<li><p><strong>bifunctors</strong> <script type="math/tex" id="MathJax-Element-40236">S: B\times C\to D</script>. equalivant way to discribe in term of functor: for <script type="math/tex" id="MathJax-Element-40237">c\in C</script> and <script type="math/tex" id="MathJax-Element-40238">b\in B</script> <script type="math/tex" id="MathJax-Element-40239">L_c: B\to D</script> and <script type="math/tex" id="MathJax-Element-40240">M_d: C\to D</script> and <script type="math/tex" id="MathJax-Element-40241">M_b(c) = L_c(b)</script>, <script type="math/tex" id="MathJax-Element-40242">\forall f: b\to b'\forall g: c\to c', M_b' g\circ L_c f = L_{c'} f\circ M_b g</script>. proof: see the book <em>(it is just a easier statement of functoriality in the case of product category)</em> <code>TODO: proof</code></p>
+<li>$(B\times C)^\op \simeq B^\op\times C^\op$. because they are just formal pairs</li></ul></li>
+<li><p><strong>bifunctors</strong> $S: B\times C\to D$. euqualivant way to discribe in term of functor: for $c\in C$ and $b\in B$ $L_c: B\to D$ and $M_d: C\to D$ and $M_b(c) = L_c(b)$, $\forall f: b\to b'\forall g: c\to c', M_b' g\circ L_c f = L_{c'} f\circ M_b g$. proof: see the book <em>(it is just a easier statement of functoriality in the case of product category)</em>. proof is easy</p>
 
-<ul><li><script type="math/tex" id="MathJax-Element-40243">\hom: C^\op\times C\to Set</script> is a bifunctor</li></ul></li>
-<li><p><strong>natural transformations of bifunctors</strong> for <script type="math/tex" id="MathJax-Element-40244">S, S': B\times C\to D</script>, and <script type="math/tex" id="MathJax-Element-40245">\alpha</script> an function <script type="math/tex" id="MathJax-Element-40246">(b, c)\mapsto \alpha(b, c)</script> to arrows in <script type="math/tex" id="MathJax-Element-40247">D</script>, <script type="math/tex" id="MathJax-Element-40248">\alpha</script> <strong>natural in <script type="math/tex" id="MathJax-Element-40249">b</script></strong> if for each <script type="math/tex" id="MathJax-Element-40250">c\in C</script>, <script type="math/tex" id="MathJax-Element-40251">\alpha(\_, c): S(\_, c)\to S'(\_, c)</script> is a natural transformation of functors <script type="math/tex" id="MathJax-Element-40252">B\to D</script>. such an <script type="math/tex" id="MathJax-Element-40253">\alpha</script> is a natural transformation iff natural in <script type="math/tex" id="MathJax-Element-40254">b</script> for each <script type="math/tex" id="MathJax-Element-40255">c</script> and natural in <script type="math/tex" id="MathJax-Element-40256">c</script> for each <script type="math/tex" id="MathJax-Element-40257">b</script>. proof use projects in dimensions</p></li>
-<li><p><strong>universal natural transformation</strong> of <script type="math/tex" id="MathJax-Element-40258">C</script>, <script type="math/tex" id="MathJax-Element-40259">u</script>, in the sense that for any <script type="math/tex" id="MathJax-Element-40260">\tau</script>, we have a unique bifunctor <script type="math/tex" id="MathJax-Element-40261">F: C\times 2\to B</script> and <script type="math/tex" id="MathJax-Element-40262">Fu=\tau</script></p></li>
-<li><p>exercises, c02, p39</p>
+<ul><li>$\hom: C^\op\times C\to Set$ is a bifunctor</li></ul></li>
+<li><p><strong>natural transformations of bifunctors</strong> for $S, S': B\times C\to D$, and $\alpha$ an function $(b, c)\mapsto \alpha(b, c)$ to arrows in $D$, $S(b, c)\to S'(b,c)$, $\alpha$ <strong>natural in $b$</strong> (b is dumy variable) if for each $c\in C$, $\alpha(\_, c): S(\_, c)\to S'(\_, c)$ is a natural transformation of functors $B\to D$. such an $\alpha$ is a natural transformation iff natural in $b$ for each $c$ and natural in $c$ for each $b$. proof use projects in dimensions</p></li>
+<li><p><strong>universal natural transformation</strong> of $C$, $u$, in the sense that for any $\tau$, we have a unique bifunctor $F: C\times 2\to B$ and $Fu=\tau$</p></li>
+<li><p><code>CTWM c02 p39</code></p>
 
 <ol><li>trivial</li>
 <li>only one times only one is only one</li>
 <li>trivial</li>
-<li><code>TODO: alg</code></li>
-<li><code>TODO: alg</code></li></ol></li>
-<li><p>exercises, c02, p41</p>
+<li><code>TODO alg</code></li>
+<li><code>TODO alg</code></li></ol></li>
+<li><p><code>CTWM c02 p41</code></p>
 
-<ol><li><code>TODO: alg</code></li>
+<ol><li><code>TODO alg</code></li>
 <li>trivial</li>
 <li>trivial</li>
-<li><script type="math/tex" id="MathJax-Element-40263">Q^P</script> is preorder. they are only determined by the nodes in the image, also a natural transformation is requires that all arrows exists. so if there is one, there is only one</li>
+<li>$Q^P$ is preorder. they are only determined by the nodes in the image, also a natural transformation is requires that all arrows exists. so if there is one, there is only one</li>
 <li><code>TODO: alg</code></li>
 <li><code>TODO: alg</code></li>
 <li>trivial</li>
-<li><script type="math/tex" id="MathJax-Element-40264">H: C\to B^2</script>, <script type="math/tex" id="MathJax-Element-40265">F: C\times 2\to B</script> <code>TODO</code></li></ol></li>
+<li>$H: C\to B^2$, $F: C\times 2\to B$ <code>TODO</code></li></ol></li>
+<li><p><strong>horizontal composition of natural transformations</strong> (notice the writing order). proof use the line -&gt; square -&gt; cube diagram</p>
+
+<ul><li>$\tau'\circ \tau = (T' \circ \tau)\cdot (\tau' \circ S)=\ldots$</li>
+<li>$(\tau'\cdot\sigma')\circ (\tau\cdot\sigma)=(\tau'\circ\tau)\cdot(\sigma'\circ\sigma)$, also $\id$ arrow for horizontal is $\id$ for vertical. proof by the 4 cube diagram</li>
+<li><strong>double category</strong> satisfies the interchange law, <strong>2-category</strong> add $\id$ for horizontal composition is $\id$ for vertical</li></ul></li>
+<li><p>the functor category $\_^{\_}$ is itself a functor $\Cat^\op\times \Cat\to \Cat$ which looks like $\hom$</p></li>
+<li><p><code>CTWM c02 p44</code></p>
+
+<ol><li>bijection. first one is by composing with…. <code>TODO</code> too many details</li>
+<li><code>TODO</code></li>
+<li><code>TODO</code></li>
+<li><code>TODO alg</code></li>
+<li><em>Hilton-Eckmann</em> <code>TODO</code></li>
+<li><code>TODO alg</code></li>
+<li><code>TODO</code></li>
+<li><code>TODO</code></li></ol></li>
+<li><p><strong>comma category</strong> $(T\downarrow S)$ where $T: E\to C$ and $S: D\to C$. $(C\downarrow a)$ objects over $a$. $a\downarrow C$ objects under $a$</p></li>
+<li><p><code>CMWM c03 p48</code></p>
+
+<ol><li>$K$-algebra as comma category</li>
+<li>trivial</li>
+<li>trivial</li>
+<li>trivial</li>
+<li><code>TODO</code></li>
+<li><code>TODO</code></li></ol></li>
+<li><p><strong>free category</strong></p></li>
+<li><p><code>CMWM c03 p51 TODO</code></p></li>
+<li><p><strong>quotient category</strong></p></li>
+<li><p><code>CMWM c03 p51 TODO</code></p></li>
 </ul>
+
+
 
 <h2 id="t">t</h2>
 
 <ul>
-<li><strong>horizontal composition of natural transformations</strong>. proof use the line -&gt; square -&gt; cube diagram. if you think the category <script type="math/tex" id="MathJax-Element-127">(A, B, T)</script> and arrows <script type="math/tex" id="MathJax-Element-128">(A, B, T) \to (A, B, S)</script> is natural. but from above, we can also define <script type="math/tex" id="MathJax-Element-129">(A, B)\to (B, C)</script> as objects, and we have another composition <br>
-<ul><li><script type="math/tex" id="MathJax-Element-130">(\tau'\cdot\sigma')\circ (\tau\cdot\sigma)=(\tau'\circ\tau)\cdot(\sigma'\circ\sigma)</script>, also <script type="math/tex" id="MathJax-Element-131">\id</script> arrow for horizontal is <script type="math/tex" id="MathJax-Element-132">\id</script> for vertical</li>
-<li><strong>double category</strong> satisfies the interchange law, <strong>2-category</strong> add <script type="math/tex" id="MathJax-Element-133">\id</script> for horizontal composition is <script type="math/tex" id="MathJax-Element-134">\id</script> for vertical</li></ul></li>
-<li><p>the functor category <script type="math/tex" id="MathJax-Element-135">\_^{\_}</script> is itself a functor <script type="math/tex" id="MathJax-Element-136">\Cat^\op\times \Cat\to \Cat</script></p></li>
-<li><p>exercises, c02, p44</p>
-
-<ol><li>bijection. first one is by composing with …. <code>TODO</code> too many details</li>
-<li><code>TODO</code></li>
-<li><code>TODO</code></li>
-<li><code>TODO: alg</code></li>
-<li><em>Hilton-Eckmann</em> <code>TODO</code></li>
-<li><code>TODO: alg</code></li>
-<li><code>TODO</code></li>
-<li><code>TODO</code></li></ol></li>
+<li><strong>product</strong>, <strong>diagonal map</strong></li>
 </ul></div></body>
 </html>
