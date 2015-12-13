@@ -12,7 +12,10 @@
 	* [category](mathematics/category.html)
 	* abstract algebra
 	* general topology
+	* functions of a real variable
 	* [algebraic topology](mathematics/algebraic_topology.html)
+	* tvs & real analysis
+	* differential geometry
 * notes
 	* [on `cubicaltt.pdf`](notes/cubicaltt.html)
 
