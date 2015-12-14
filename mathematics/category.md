@@ -1,12 +1,16 @@
-## category
+# category
 
 * references
-	* `CTWM` Category Theory for Working Mathematicians, *Saunders Mac Lane*
+	* `CWM` Categoris for Working Mathematicians, *Saunders Mac Lane*
 	* `MCHT` Modern Classical Homotopy Theory, *Jeffrey Strom*, Chapter 1
+
+[TOC]
+
 
 $$
 \def\dom{\operatorname{dom}}
 \def\cod{\operatorname{cod}}
+\def\Ab{\mathbf{Ab}}
 \def\img{\operatorname{img}}
 \def\proj{\operatorname{proj}}
 \def\id{\operatorname{id}}
@@ -14,6 +18,8 @@ $$
 \def\op{\text{op}}
 \def\AbCat{\mathbf{Ab}\text{-}\Cat}
 $$
+
+## chapter 01. categories, functors, and natural transformations
 
 * **directed graph** is a set $A$ of **arrows** and set $O$ of **object**. and two function $\dom$ and $\cod$ with type $A \to O$
 	* (formal) product over the graph is just pairs of arrows with $\dom g = \text{cod} f$. it is just pairs, not triples
@@ -45,6 +51,7 @@ $$
 $$
 
 * **functor** is a map between two category, consists obj map and arr map, preserve unit and associ, category and functors in one universe $U$ forms $\Cat$ in another universe
+	* isomorphism iff bijection on object and arrows. this is super natual, because category is a set construction so there isomorphism is a set bijection thing
 	* **forgetful functor** (vague) may be considered by (a, b) => (a) of some Sigma type
 	* $T: C\to B$ and $S: B\to A$ has **composition** $S\circ T$,  is a functor $C\to A$. it is associ (because function composition is associ), and there is identity functor, so $\Cat$ of all small categories is a category
 	* **full functor**, $\forall c, c_1, \forall g: Tc\to Tc_1\exists f: c\to c_1: g = Tf$
@@ -53,7 +60,7 @@ $$
 		* compose if faithful
 	* **subcategory** and **inclusion functor** is faithful *(sub meaning get from removing some obj and arr)*. **full subcategory** when the inclusion functor is full *(you are not removing arrows without removing one of it's domain)*
 
-* `CTWM c01 p15`
+* `CWM c01 p15`
 	1. `TODO alg`
 	2. trivial
 	3. trivial
@@ -65,9 +72,10 @@ $$
 	* they form the functor category $B^C$. and **natural isomorphism** iff each component is isomorphism (trivial. componentwise)
 	* $B^2$ is the **category of arrows**
 	* **equivalence of categories** $C$, $D$ is $(S, T, \tau_1, \tau_2)$, such that $\tau_1: I_C\simeq T\circ S$ and $\tau_2: I_D\simeq S\circ T$
+		* idea: compare alike category of different "size"
 
 
-* `CTWM c01 p18`
+* `CWM c01 p18`
 	1. $e$ is natural trasformation...
 	2. trivial
 	3. `TODO alg`
@@ -76,7 +84,7 @@ $$
 	6. trivial
 
 
-* `CTWM c01 p21`
+* `CWM c01 p21`
 	1.  trivial
 	2.  trivial
 	3. trivial
@@ -90,15 +98,18 @@ $$
 	9. $fg=fk\implies TfTg=TfTk\implies Tg=Tk \implies g=k$
 
 
-* `CTWM c01 p24`
-	1. `omit`
+* `CWM c01 p24`
+	1. for a function with domain $I$ in $U$ and each value point $f_i$ in $U$, then the cartesian product $\prod_i f_i$ is in $U$ 
 	2. `omit`
 	3. `omit`
 
 * **concrete category** $(C, U)$ where $U: C\to \Set$ is a faithful functor 
 
 * **preadditive category** a category where each hom-set is a abelian group, and $(g+g')\circ(f+f')=g\circ f+g\circ f'+g'\circ f+g'\circ f'$
+	* if we use $\hom$ set to define categories, then we see in the definition of preadditive category a similar pattern: using $\Ab$ and tensor product. these is called **enriched category**
 	* a functor between two preadditive category is **additive** if each function between hom-sets is a homomorphism. compose is also additive. then $\AbCat$ is is the category of preadditive category with additive functors
+
+## chapter 02. constructions on categories
 
 * **duality in categories** (by **elementary theory of absract category**), **opposite category**, **contravariant functor**, **power-set functor**
 	* **covariant hom-functor** $\hom(a, \_): C \to \Set$, for $k: b\to b'$ we have it maps to $\hom(a, k)=k_*:\hom(a,b)\to\hom(a, b')$ by the functor. $k_*(f) = k\circ f$
@@ -108,7 +119,6 @@ $$
 * **product category**, **projection functor**, **product of two functors** $U\times V: B\times C\to B'\times C'$ can be defined by universal arrow
 	* $(U'\times V')\circ(U\times V)=U'U\times V'V$
 	* then $\times : \Cat\times \Cat \to \Cat$ can be considered as a functor itself (in the domain, you can consider them formal pairs of categories, the above line proofs associ)
-	* also in the definition, we know a functor into a product category is always just two functor!
 	* $(B\times C)^\op \simeq B^\op\times C^\op$. because they are just formal pairs
 
 
@@ -120,14 +130,14 @@ $$
 
 
 
-* `CTWM c02 p39`
+* `CWM c02 p39`
 	1. trivial
 	2. only one times only one is only one
 	3. trivial
 	4. `TODO alg`
 	5. `TODO alg`
 
-* `CTWM c02 p41`
+* `CWM c02 p41`
 	1. `TODO alg`
 	2. trivial
 	3. trivial
@@ -145,7 +155,7 @@ $$
 	* **double category** satisfies the interchange law, **2-category** add $\id$ for horizontal composition is $\id$ for vertical
 * the functor category $\_^{\_}$ is itself a functor $\Cat^\op\times \Cat\to \Cat$ which looks like $\hom$
 
-* `CTWM c02 p44`
+* `CWM c02 p44`
 	1. bijection. first one is by composing with.... `TODO` too many details
 	2. `TODO`
 	3. `TODO`
@@ -161,7 +171,7 @@ $$
 
 * **comma category** $(T\downarrow S)$ where $T: E\to C$ and $S: D\to C$. $(C\downarrow a)$ objects over $a$. $a\downarrow C$ objects under $a$
 
-* `CMWM c03 p48`
+* `CWM c02 p48`
 	1. $K$-algebra as comma category
 	2. trivial
 	3. trivial
@@ -171,15 +181,70 @@ $$
 
 * **free category**
 
-* `CMWM c03 p51 TODO`
+* `CWM c02 p51 TODO`
 
 * **quotient category**
 
-* `CMWM c03 p51 TODO`
+* `CWM c02 p51 TODO`
 
 
-## t
+## chapter 03. universals and limits
 
 
 
-* **product**, **diagonal map**
+* $S: D\to C$ is a functor and $c\in C$ **universal arrow** from $c$ to $S$ is a $r\in D$ and $u: c\to Sr$, which is inital in comma category $(c\downarrow S)$ (or say: such that every pair $d$, $f$ there is a unique arrow $f': r\to d$ where $Sf'\circ u = f$. or every arrow $f$ to $S$ factors uniquely through the universal arrow $u$)
+	* universal element
+	* iff the compose by $u$ function is a bijection $D(r, d)\cong C(c, S d)$ for each $d$ and natural in $d$ (viewing each side as a $C\to \Set$). (proof: bijection is easy, natual is )
+	* $K: D\to \Set$ is **representable functor** if there is natural isomorphism $D(r, \_)\cong K$
+	* `TODO` any repsentation of functor $K$ is from a universal arrow from one point set $*$
+
+* `TODO` for $K: D\to \Set$ and $r\in D$ there is $y: \hom(D(r, \_), K)\cong Kr$, and it is natural in ($K$ and $r$) (both side viewed as a functor from... to $\Set$)
+
+
+* `CWM c03 p59`
+	1. `TODO`
+	2. `TODO`
+	3. `TODO`
+	4. `TODO`
+	5. `TODO`
+	6. `TODO`
+	7. `TODO`
+
+* `CWM c03 p62`
+	1. `TODO`
+	2. `TODO`
+	3. `TODO`
+	4. `TODO`
+
+* **colimit** is universal arrow from $F\in C^J$ to diagnoal functor $\delta: C\to C^J$ (means it maps into a master object, and the master object maps to other ones which mapped into by old objects) the arrows are *cone* (maps into the vertex)
+	* **diagonal functor**, **coproduct**, **injection**
+		* **infinite coproduct**
+		* **copower** if $A$ in coproduct is equal. $\coprod_x b$ write as $X\cdot b$ (consider in $\Set$ it is $X\times Y$)
+	* **cokernel** (normalily a quotient object)
+		* **coqualizer**
+	* **pushout**
+		* **cokernel pair** is the pushout of same arrow
+
+* `CWM c03 p68 TODO`
+
+* **limit**
+	* **product**, **projection**, **diagonal map**
+
+* `CWM c03 p72 TODO`
+
+* **category with finite product**
+
+* `CWM c03 p74 TODO`
+
+* **group object**
+
+* `CWM c03 p76 TODO`
+
+* any functor $K: D\to \Set$ from a small category $D$ is a colimit of representable functors $\hom(d, \_)$
+
+
+## chapter 04. adjoints
+
+
+* **adjoint**
+	* ways to determine an adjoint
