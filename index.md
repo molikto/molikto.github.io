@@ -7,15 +7,21 @@
 
 
 * mathematics *([old math notes](mathematics.html) needs clean up)*
-	* [foundation](mathematics/foundation.html)
+	* **logic and computation**
+	* **[set theory](mathematics/foundation.html)**
 	* [universal algebra](mathematics/universal_algebra.html)
-	* [category](mathematics/category.html)
-	* abstract algebra
-	* general topology
+	* **[category](mathematics/category.html)**
+	* **abstract algebra**
+	* **general topology**
 	* functions of a real variable
 	* [algebraic topology](mathematics/algebraic_topology.html)
-	* tvs & real analysis
+	* differential topology
+	* topological vector space & real analysis & functional analysis
+	* complex analysis
 	* differential geometry
+	* Lie algebra
+	* number theory
+	* algebraic geometry
 * notes
 	* [on `cubicaltt.pdf`](notes/cubicaltt.html)
 
@@ -41,6 +47,9 @@ links
 ----
 
 ## what is my goal?
+
+**added in 2015/12/17**
+: How we spend our days is, of course, how we spend our lives.
 
 **added in 2015/11/22**
 : I've read an article called "We are stardust". so maybe we are just the universe looking at itself
