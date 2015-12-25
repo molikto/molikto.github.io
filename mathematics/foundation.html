@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>set theory</title>
+<title>mathematics</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon" />
 <link rel="stylesheet" href="https://stackedit.io/res-min/themes/solarized-dark.css" />
 
@@ -18,7 +18,7 @@
 </head>
 <body><div class="container"><h1 id="mathematics">mathematics</h1>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-69404">
+<p><script type="math/tex; mode=display" id="MathJax-Element-79102">
 \def\ZZ{\mathbb{Z}}
 \def\RR{\mathbb{R}}
 \def\Cat{\mathcal{Cat}}
@@ -72,6 +72,13 @@
 </li>
 <li><a href="#universal-algebra">universal algebra</a><ul>
 <li><a href="#lattice-theory">lattice theory</a></li>
+</ul>
+</li>
+<li><a href="#category-theory">category theory</a><ul>
+<li><a href="#chapter-01-categories-functors-and-natural-transformations">chapter 01. categories, functors, and natural transformations</a></li>
+<li><a href="#chapter-02-constructions-on-categories">chapter 02. constructions on categories</a></li>
+<li><a href="#chapter-03-universals-and-limits">chapter 03. universals and limits</a></li>
+<li><a href="#chapter-04-adjoints">chapter 04. adjoints</a></li>
 </ul>
 </li>
 </ul>
@@ -129,31 +136,31 @@
 <ul><li><p>definition</p>
 
 <ul><li>a <strong>first order logic</strong> with <strong>equality</strong></li>
-<li>another predicate <script type="math/tex" id="MathJax-Element-69405">\in</script></li>
+<li>another predicate <script type="math/tex" id="MathJax-Element-79103">\in</script></li>
 <li><p><strong>axioms</strong></p>
 
 <ul><li>basic axioms <br>
-<ul><li><strong>extensionality</strong>. <script type="math/tex" id="MathJax-Element-69406">\forall a, b (\forall z, z \in a \to z \in b) \to a =b</script></li>
-<li><strong>pairing</strong>. there is a set <script type="math/tex" id="MathJax-Element-69407">\{a, b\}</script></li>
+<ul><li><strong>extensionality</strong>. <script type="math/tex" id="MathJax-Element-79104">\forall a, b (\forall z, z \in a \to z \in b) \to a =b</script></li>
+<li><strong>pairing</strong>. there is a set <script type="math/tex" id="MathJax-Element-79105">\{a, b\}</script></li>
 <li><strong>schema of separation</strong></li>
-<li><strong>regularity (foundation)</strong>. <script type="math/tex" id="MathJax-Element-69408">\forall S(S\neq \emptyset \implies (\exists x\in S, S\cap x = \emptyset))</script></li>
-<li><strong>union</strong>. it is <script type="math/tex" id="MathJax-Element-69409">\bigcup X</script>, not binary</li></ul></li>
+<li><strong>regularity (foundation)</strong>. <script type="math/tex" id="MathJax-Element-79106">\forall S(S\neq \emptyset \implies (\exists x\in S, S\cap x = \emptyset))</script></li>
+<li><strong>union</strong>. it is <script type="math/tex" id="MathJax-Element-79107">\bigcup X</script>, not binary</li></ul></li>
 <li>size increasing axioms <br>
-<ul><li><strong>power set</strong> <script type="math/tex" id="MathJax-Element-69410">P(X)</script></li>
+<ul><li><strong>power set</strong> <script type="math/tex" id="MathJax-Element-79108">P(X)</script></li>
 <li><strong>schema of replacement</strong> (in Jech this is defined by functions, which is a class, but it can be also formulated by a logical property, which is more extendable)</li></ul></li>
 <li><p>size assertion axiom</p>
 
 <ul><li><strong>infinity</strong></li></ul></li>
 <li><p><strong>choice</strong>: family of non-empty sets has a choice function</p></li></ul></li></ul></li>
 <li>examples <br>
-<ul><li><strong>empty set</strong> <script type="math/tex" id="MathJax-Element-69411">\emptyset</script> by separation and infinite axioms</li></ul></li>
+<ul><li><strong>empty set</strong> <script type="math/tex" id="MathJax-Element-79109">\emptyset</script> by separation and infinite axioms</li></ul></li>
 <li>methods <br>
-<ul><li><script type="math/tex" id="MathJax-Element-69412">A\cap B</script> <script type="math/tex" id="MathJax-Element-69413">A-B</script>, <script type="math/tex" id="MathJax-Element-69414">\bigcap C</script> (c is a class) etc. by separation</li>
-<li><strong>disjoint</strong> <script type="math/tex" id="MathJax-Element-69415">X\cap Y = \emptyset</script></li>
-<li><script type="math/tex" id="MathJax-Element-69416">A\cup B</script> etc.</li>
-<li><script type="math/tex" id="MathJax-Element-69417">X\symdiff Y = (X-Y)\cup(Y- X)</script></li>
-<li><strong>product set</strong> <script type="math/tex" id="MathJax-Element-69418">A\times B</script> is defined by power set axiom, <script type="math/tex" id="MathJax-Element-69419">A\times B\times C = (A\times B)\times C</script>, <script type="math/tex" id="MathJax-Element-69420">X^n</script></li>
-<li>a family of set is disjoint if any two is disjoint. a <strong>partition</strong> of <script type="math/tex" id="MathJax-Element-69421">X</script> is a disjoint family of non-empty set with union <script type="math/tex" id="MathJax-Element-69422">X</script></li></ul></li>
+<ul><li><script type="math/tex" id="MathJax-Element-79110">A\cap B</script> <script type="math/tex" id="MathJax-Element-79111">A-B</script>, <script type="math/tex" id="MathJax-Element-79112">\bigcap C</script> (c is a class) etc. by separation</li>
+<li><strong>disjoint</strong> <script type="math/tex" id="MathJax-Element-79113">X\cap Y = \emptyset</script></li>
+<li><script type="math/tex" id="MathJax-Element-79114">A\cup B</script> etc.</li>
+<li><script type="math/tex" id="MathJax-Element-79115">X\symdiff Y = (X-Y)\cup(Y- X)</script></li>
+<li><strong>product set</strong> <script type="math/tex" id="MathJax-Element-79116">A\times B</script> is defined by power set axiom, <script type="math/tex" id="MathJax-Element-79117">A\times B\times C = (A\times B)\times C</script>, <script type="math/tex" id="MathJax-Element-79118">X^n</script></li>
+<li>a family of set is disjoint if any two is disjoint. a <strong>partition</strong> of <script type="math/tex" id="MathJax-Element-79119">X</script> is a disjoint family of non-empty set with union <script type="math/tex" id="MathJax-Element-79120">X</script></li></ul></li>
 <li>theorems <br>
 <ul><li><strong>well-ordering theroem</strong></li></ul></li></ul></li>
 </ul>
@@ -163,50 +170,50 @@
 <h3 id="other-definitions">other definitions</h3>
 
 <ul>
-<li><strong>class</strong> is a logical device, it behaves like set in terms of <script type="math/tex" id="MathJax-Element-69423">\subset</script>, <script type="math/tex" id="MathJax-Element-69424">C \cup D</script>, <script type="math/tex" id="MathJax-Element-69425">C\cap D</script>, <script type="math/tex" id="MathJax-Element-69426">\bigcup C</script></li>
-<li><strong>ordered pair</strong> can be defined formally as <script type="math/tex" id="MathJax-Element-69427">(a,b)=\{\{a\}, \{a, b\}\}</script>, further, <script type="math/tex" id="MathJax-Element-69428">(a, b, c) = ((a, b), c)</script>, …</li>
-<li><script type="math/tex" id="MathJax-Element-69429">n</script>-ary <strong>relation</strong> is just a set of <script type="math/tex" id="MathJax-Element-69430">n</script>-triples, <strong>on</strong> <script type="math/tex" id="MathJax-Element-69431">X</script> if <script type="math/tex" id="MathJax-Element-69432">R\subset X^n</script> <br>
-<ul><li><strong>domain</strong> of a relation <script type="math/tex" id="MathJax-Element-69433">\dom R</script></li>
-<li><strong>range</strong> <script type="math/tex" id="MathJax-Element-69434">\ran R</script></li>
+<li><strong>class</strong> is a logical device, it behaves like set in terms of <script type="math/tex" id="MathJax-Element-79121">\subset</script>, <script type="math/tex" id="MathJax-Element-79122">C \cup D</script>, <script type="math/tex" id="MathJax-Element-79123">C\cap D</script>, <script type="math/tex" id="MathJax-Element-79124">\bigcup C</script></li>
+<li><strong>ordered pair</strong> can be defined formally as <script type="math/tex" id="MathJax-Element-79125">(a,b)=\{\{a\}, \{a, b\}\}</script>, further, <script type="math/tex" id="MathJax-Element-79126">(a, b, c) = ((a, b), c)</script>, …</li>
+<li><script type="math/tex" id="MathJax-Element-79127">n</script>-ary <strong>relation</strong> is just a set of <script type="math/tex" id="MathJax-Element-79128">n</script>-triples, <strong>on</strong> <script type="math/tex" id="MathJax-Element-79129">X</script> if <script type="math/tex" id="MathJax-Element-79130">R\subset X^n</script> <br>
+<ul><li><strong>domain</strong> of a relation <script type="math/tex" id="MathJax-Element-79131">\dom R</script></li>
+<li><strong>range</strong> <script type="math/tex" id="MathJax-Element-79132">\ran R</script></li>
 <li>in general we can define relation as class</li></ul></li>
-<li><strong>function</strong> is a binary relation such that… (also can be a class). <strong>on</strong> X if <script type="math/tex" id="MathJax-Element-69435">X = \dom f</script>, <strong>onto</strong> <script type="math/tex" id="MathJax-Element-69436">Y</script> if <script type="math/tex" id="MathJax-Element-69437">Y = \ran f</script>. all functions with <script type="math/tex" id="MathJax-Element-69438">\dom f = X</script> and <script type="math/tex" id="MathJax-Element-69439">\ran f \subset Y</script> is <script type="math/tex" id="MathJax-Element-69440">Y^X</script> and it is a set <br>
+<li><strong>function</strong> is a binary relation such that… (also can be a class). <strong>on</strong> X if <script type="math/tex" id="MathJax-Element-79133">X = \dom f</script>, <strong>onto</strong> <script type="math/tex" id="MathJax-Element-79134">Y</script> if <script type="math/tex" id="MathJax-Element-79135">Y = \ran f</script>. all functions with <script type="math/tex" id="MathJax-Element-79136">\dom f = X</script> and <script type="math/tex" id="MathJax-Element-79137">\ran f \subset Y</script> is <script type="math/tex" id="MathJax-Element-79138">Y^X</script> and it is a set <br>
 <ul><li>we understand function as it’s graph, so a function might have different “type”</li>
-<li><script type="math/tex" id="MathJax-Element-69441">x\mapsto x * 2</script> is actually “lambda expression”</li>
+<li><script type="math/tex" id="MathJax-Element-79139">x\mapsto x * 2</script> is actually “lambda expression”</li>
 <li><strong>injective</strong>. <strong>surjective</strong>. <strong>bijective</strong></li>
-<li><strong>restriction</strong> <script type="math/tex" id="MathJax-Element-69442">f\funrestri X</script>. <strong>extension</strong></li>
+<li><strong>restriction</strong> <script type="math/tex" id="MathJax-Element-79140">f\funrestri X</script>. <strong>extension</strong></li>
 <li><strong>composition</strong></li>
-<li><strong>image</strong> <script type="math/tex" id="MathJax-Element-69443">f(X)</script>, <script type="math/tex" id="MathJax-Element-69444">f\fimg X</script></li>
-<li><strong>inverse image</strong> <script type="math/tex" id="MathJax-Element-69445">f\iimg Y</script></li>
-<li><strong>inverse</strong> <script type="math/tex" id="MathJax-Element-69446">f\inv</script></li></ul></li>
+<li><strong>image</strong> <script type="math/tex" id="MathJax-Element-79141">f(X)</script>, <script type="math/tex" id="MathJax-Element-79142">f\fimg X</script></li>
+<li><strong>inverse image</strong> <script type="math/tex" id="MathJax-Element-79143">f\iimg Y</script></li>
+<li><strong>inverse</strong> <script type="math/tex" id="MathJax-Element-79144">f\inv</script></li></ul></li>
 <li><strong>binary relations</strong> <br>
 <ul><li><strong>reflective</strong>. <strong>transitive</strong>. <strong>symmetry</strong></li>
-<li><strong>antisymmetry</strong> <script type="math/tex" id="MathJax-Element-69447">p \leq b\land b\leq p \Rightarrow p = b</script></li>
-<li><strong>equivalence relation</strong> <script type="math/tex" id="MathJax-Element-69448">\equiv</script> is reflective, transitive, symmetry <br>
-<ul><li><script type="math/tex" id="MathJax-Element-69449">X/\equiv</script> <strong>quotient</strong> of <script type="math/tex" id="MathJax-Element-69450">X</script> by <script type="math/tex" id="MathJax-Element-69451">\equiv</script> is a partition. conversely a partition defines a equivalence relation…</li></ul></li>
+<li><strong>antisymmetry</strong> <script type="math/tex" id="MathJax-Element-79145">p \leq b\land b\leq p \Rightarrow p = b</script></li>
+<li><strong>equivalence relation</strong> <script type="math/tex" id="MathJax-Element-79146">\equiv</script> is reflective, transitive, symmetry <br>
+<ul><li><script type="math/tex" id="MathJax-Element-79147">X/\equiv</script> <strong>quotient</strong> of <script type="math/tex" id="MathJax-Element-79148">X</script> by <script type="math/tex" id="MathJax-Element-79149">\equiv</script> is a partition. conversely a partition defines a equivalence relation…</li></ul></li>
 <li><strong>poset</strong> is reflective, transitive, antisymmetry</li>
-<li><strong>linear ordering</strong> is poset and (forall <script type="math/tex" id="MathJax-Element-69452">p</script>, <script type="math/tex" id="MathJax-Element-69453">q</script> we have <script type="math/tex" id="MathJax-Element-69454">p \leq q</script> or <script type="math/tex" id="MathJax-Element-69455">q \leq p</script>)</li></ul></li>
-<li><strong>binary operation</strong>, <strong>law of composition</strong>, <script type="math/tex" id="MathJax-Element-69456">X\times X\to X</script> <br>
+<li><strong>linear ordering</strong> is poset and (forall <script type="math/tex" id="MathJax-Element-79150">p</script>, <script type="math/tex" id="MathJax-Element-79151">q</script> we have <script type="math/tex" id="MathJax-Element-79152">p \leq q</script> or <script type="math/tex" id="MathJax-Element-79153">q \leq p</script>)</li></ul></li>
+<li><strong>binary operation</strong>, <strong>law of composition</strong>, <script type="math/tex" id="MathJax-Element-79154">X\times X\to X</script> <br>
 <ul><li>associative</li></ul></li>
-<li><p>poset <script type="math/tex" id="MathJax-Element-69457">P</script></p>
+<li><p>poset <script type="math/tex" id="MathJax-Element-79155">P</script></p>
 
 <ul><li>methods <br>
-<ul><li>subset <script type="math/tex" id="MathJax-Element-69458">X\subset P</script> <br>
+<ul><li>subset <script type="math/tex" id="MathJax-Element-79156">X\subset P</script> <br>
 <ul><li><strong>maximal</strong>: _ not smaller than any</li>
 <li><strong>minimal</strong>: no one is smaller than _</li>
 <li><strong>greatest</strong></li>
 <li><strong>least</strong></li>
 <li><strong>upper bound</strong></li>
 <li><strong>lower bound</strong></li>
-<li><strong>supremum</strong>, <strong>lub</strong>, <strong>least upper bound</strong> <script type="math/tex" id="MathJax-Element-69459">\sup X</script></li>
-<li><strong>infimum</strong>, <strong>glb</strong>, <strong>greatest lower bound</strong>, <script type="math/tex" id="MathJax-Element-69460">\inf X</script></li></ul></li>
-<li><script type="math/tex" id="MathJax-Element-69461">F: P \to Q</script> <br>
-<ul><li><strong>order-preserving</strong>, <strong>increasing</strong>: <script type="math/tex" id="MathJax-Element-69462">x < y\implies f(x) < f(y)</script></li></ul></li></ul></li></ul></li>
-<li><p><strong>well-ordering</strong> <script type="math/tex" id="MathJax-Element-69463">W</script> is a linear ordering such that each non-empty subset hes least element</p>
+<li><strong>supremum</strong>, <strong>lub</strong>, <strong>least upper bound</strong> <script type="math/tex" id="MathJax-Element-79157">\sup X</script></li>
+<li><strong>infimum</strong>, <strong>glb</strong>, <strong>greatest lower bound</strong>, <script type="math/tex" id="MathJax-Element-79158">\inf X</script></li></ul></li>
+<li><script type="math/tex" id="MathJax-Element-79159">F: P \to Q</script> <br>
+<ul><li><strong>order-preserving</strong>, <strong>increasing</strong>: <script type="math/tex" id="MathJax-Element-79160">x < y\implies f(x) < f(y)</script></li></ul></li></ul></li></ul></li>
+<li><p><strong>well-ordering</strong> <script type="math/tex" id="MathJax-Element-79161">W</script> is a linear ordering such that each non-empty subset hes least element</p>
 
 <ul><li>methods <br>
-<ul><li><strong>initial segment</strong> <script type="math/tex" id="MathJax-Element-69464">u\in W</script>,  is all elements less than <script type="math/tex" id="MathJax-Element-69465">u</script></li></ul></li>
+<ul><li><strong>initial segment</strong> <script type="math/tex" id="MathJax-Element-79162">u\in W</script>,  is all elements less than <script type="math/tex" id="MathJax-Element-79163">u</script></li></ul></li>
 <li>theorems <br>
-<ul><li><script type="math/tex" id="MathJax-Element-69466">f: W\to W</script> is increasing, then <script type="math/tex" id="MathJax-Element-69467">\forall x\in W,f(x)\geq x</script> <br>
+<ul><li><script type="math/tex" id="MathJax-Element-79164">f: W\to W</script> is increasing, then <script type="math/tex" id="MathJax-Element-79165">\forall x\in W,f(x)\geq x</script> <br>
 <ul><li>corollary. there is only one automorphism and isomorphism if exists between well-orderings</li></ul></li>
 <li>two well ordering can be isomorphic or one is isomorphic to the initial segment of the other</li></ul></li></ul></li>
 </ul>
@@ -216,17 +223,17 @@
 <h3 id="ordinal-numbers">ordinal numbers</h3>
 
 <ul>
-<li><strong>transitive</strong> set is every element of <script type="math/tex" id="MathJax-Element-69468">T</script> is subset of <script type="math/tex" id="MathJax-Element-69469">T</script></li>
-<li><strong>ordinal number</strong> is transitive and well ordered by <script type="math/tex" id="MathJax-Element-69470">\in</script> <br>
+<li><strong>transitive</strong> set is every element of <script type="math/tex" id="MathJax-Element-79166">T</script> is subset of <script type="math/tex" id="MathJax-Element-79167">T</script></li>
+<li><strong>ordinal number</strong> is transitive and well ordered by <script type="math/tex" id="MathJax-Element-79168">\in</script> <br>
 <ul><li>methods <br>
-<ul><li><script type="math/tex" id="MathJax-Element-69471">\alpha + 1 =  \alpha \cup \{\alpha\}</script> is <strong>successor ordinal</strong></li>
-<li><strong>limit ordinal</strong>. example <script type="math/tex" id="MathJax-Element-69472">0=\emptyset</script>, <script type="math/tex" id="MathJax-Element-69473">\omega = \infty</script></li>
+<ul><li><script type="math/tex" id="MathJax-Element-79169">\alpha + 1 =  \alpha \cup \{\alpha\}</script> is <strong>successor ordinal</strong></li>
+<li><strong>limit ordinal</strong>. example <script type="math/tex" id="MathJax-Element-79170">0=\emptyset</script>, <script type="math/tex" id="MathJax-Element-79171">\omega = \infty</script></li>
 <li><strong>finite</strong>. <strong>infinite</strong>. <strong>finite/infinite sequence</strong></li>
-<li><strong>transfinite sequence</strong>, <script type="math/tex" id="MathJax-Element-69474">\alpha</script>-<strong>sequence</strong></li>
-<li><strong>limit</strong> of non-decreasing ordinal <script type="math/tex" id="MathJax-Element-69475">\alpha</script>-sequence</li>
-<li><strong>normal</strong> sequence <script type="math/tex" id="MathJax-Element-69476">\gamma_\alpha</script>: increasing and <strong>continuous</strong> (limit at limit ordinal is itself)</li>
+<li><strong>transfinite sequence</strong>, <script type="math/tex" id="MathJax-Element-79172">\alpha</script>-<strong>sequence</strong></li>
+<li><strong>limit</strong> of non-decreasing ordinal <script type="math/tex" id="MathJax-Element-79173">\alpha</script>-sequence</li>
+<li><strong>normal</strong> sequence <script type="math/tex" id="MathJax-Element-79174">\gamma_\alpha</script>: increasing and <strong>continuous</strong> (limit at limit ordinal is itself)</li>
 <li><strong>ordinal arithmetic</strong></li>
-<li><strong>cumulative hierarchy</strong> <script type="math/tex" id="MathJax-Element-69477">V_\alpha</script></li></ul></li>
+<li><strong>cumulative hierarchy</strong> <script type="math/tex" id="MathJax-Element-79175">V_\alpha</script></li></ul></li>
 <li>theorems <br>
 <ul><li>every well order set isomorphic to an ordinal</li>
 <li><strong>transfinite recursion</strong></li></ul></li></ul></li>
@@ -240,26 +247,26 @@
 <li>comparing size of sets <br>
 <ul><li>defintion <br>
 <ul><li>two set has same <strong>cardinality</strong> if there is bijection</li>
-<li><script type="math/tex" id="MathJax-Element-69478">|X| \leq |Y|</script> by exists injection</li>
-<li><script type="math/tex" id="MathJax-Element-69479">\kappa+\lambda = |A\cup B|</script>. where <script type="math/tex" id="MathJax-Element-69480">\kappa = </script>…</li>
-<li><script type="math/tex" id="MathJax-Element-69481">\kappa\cdot\lambda = |A\times B|</script></li>
-<li><script type="math/tex" id="MathJax-Element-69482">\kappa^\lambda = |A^B|</script></li></ul></li>
+<li><script type="math/tex" id="MathJax-Element-79176">|X| \leq |Y|</script> by exists injection</li>
+<li><script type="math/tex" id="MathJax-Element-79177">\kappa+\lambda = |A\cup B|</script>. where <script type="math/tex" id="MathJax-Element-79178">\kappa = </script>…</li>
+<li><script type="math/tex" id="MathJax-Element-79179">\kappa\cdot\lambda = |A\times B|</script></li>
+<li><script type="math/tex" id="MathJax-Element-79180">\kappa^\lambda = |A^B|</script></li></ul></li>
 <li>theorems <br>
-<ul><li><script type="math/tex" id="MathJax-Element-69483">|X| <|P(X)|</script></li>
-<li><script type="math/tex" id="MathJax-Element-69484">|A|\leq |B|</script> and <script type="math/tex" id="MathJax-Element-69485">|B|\leq|A|</script> then <script type="math/tex" id="MathJax-Element-69486">|A|=|B|</script></li>
-<li><script type="math/tex" id="MathJax-Element-69487">|P(A)| = 2^{|A|}</script></li>
+<ul><li><script type="math/tex" id="MathJax-Element-79181">|X| <|P(X)|</script></li>
+<li><script type="math/tex" id="MathJax-Element-79182">|A|\leq |B|</script> and <script type="math/tex" id="MathJax-Element-79183">|B|\leq|A|</script> then <script type="math/tex" id="MathJax-Element-79184">|A|=|B|</script></li>
+<li><script type="math/tex" id="MathJax-Element-79185">|P(A)| = 2^{|A|}</script></li>
 <li><strong>cardinal arithmetic</strong> …</li></ul></li></ul></li>
-<li><strong>cardinal number</strong> is ordinal <script type="math/tex" id="MathJax-Element-69488">\alpha</script> such that <script type="math/tex" id="MathJax-Element-69489">|\alpha|\neq|\beta|</script> for <script type="math/tex" id="MathJax-Element-69490">\beta < \alpha</script>. <br>
+<li><strong>cardinal number</strong> is ordinal <script type="math/tex" id="MathJax-Element-79186">\alpha</script> such that <script type="math/tex" id="MathJax-Element-79187">|\alpha|\neq|\beta|</script> for <script type="math/tex" id="MathJax-Element-79188">\beta < \alpha</script>. <br>
 <ul><li>methods <br>
-<ul><li>infinite cardinal is <strong>aleph</strong>. <strong>countable</strong> is <script type="math/tex" id="MathJax-Element-69491">\aleph_0</script>. <strong>uncountable</strong></li>
+<ul><li>infinite cardinal is <strong>aleph</strong>. <strong>countable</strong> is <script type="math/tex" id="MathJax-Element-79189">\aleph_0</script>. <strong>uncountable</strong></li>
 <li><strong>limit cardinal</strong></li>
 <li><strong>strong limit</strong></li>
 <li><strong>regular</strong></li>
 <li><strong>inaccessible</strong></li>
-<li><strong>Grothendieck universe</strong> is <script type="math/tex" id="MathJax-Element-69492">V_\alpha</script> for some inaccessible <script type="math/tex" id="MathJax-Element-69493">\alpha</script></li></ul></li>
+<li><strong>Grothendieck universe</strong> is <script type="math/tex" id="MathJax-Element-79190">V_\alpha</script> for some inaccessible <script type="math/tex" id="MathJax-Element-79191">\alpha</script></li></ul></li>
 <li>theorems <br>
-<ul><li><script type="math/tex" id="MathJax-Element-69494">\aleph_\alpha \cdot \aleph_\alpha = \aleph_\alpha</script></li>
-<li><script type="math/tex" id="MathJax-Element-69495">\RR</script> is uncountable</li></ul></li></ul></li>
+<ul><li><script type="math/tex" id="MathJax-Element-79192">\aleph_\alpha \cdot \aleph_\alpha = \aleph_\alpha</script></li>
+<li><script type="math/tex" id="MathJax-Element-79193">\RR</script> is uncountable</li></ul></li></ul></li>
 </ul>
 
 
@@ -267,7 +274,7 @@
 <h3 id="universe-axiom">universe axiom</h3>
 
 <ul>
-<li><strong>universe</strong> any set is contained in a universe <script type="math/tex" id="MathJax-Element-69496">U</script> <br>
+<li><strong>universe</strong> any set is contained in a universe <script type="math/tex" id="MathJax-Element-79194">U</script> <br>
 <ul><li>comments <br>
 <ul><li><a href="http://math.stackexchange.com/questions/79343/is-the-axiom-of-universes-harmless">http://math.stackexchange.com/questions/79343/is-the-axiom-of-universes-harmless</a></li></ul></li></ul></li>
 </ul>
@@ -281,17 +288,17 @@
 <h3 id="lattice-theory">lattice theory</h3>
 
 <ul>
-<li><strong>lattice</strong>: each two objects in the pos has join, <script type="math/tex" id="MathJax-Element-69746">\sup</script>, <script type="math/tex" id="MathJax-Element-69747">a\lor b</script> and meet, <script type="math/tex" id="MathJax-Element-69748">\inf</script>, <script type="math/tex" id="MathJax-Element-69749">a\land b</script></li>
-<li><strong>bounded lattice</strong>: have <script type="math/tex" id="MathJax-Element-69750">0</script> and <script type="math/tex" id="MathJax-Element-69751">1</script> and <script type="math/tex" id="MathJax-Element-69752">0 \leq p \leq 1</script></li>
-<li><strong>distributive lattice</strong>: <script type="math/tex" id="MathJax-Element-69753">p \land (q \lor r) = (p\lor q)\land (p \lor r)</script></li>
+<li><strong>lattice</strong>: each two objects in the pos has join, <script type="math/tex" id="MathJax-Element-79195">\sup</script>, <script type="math/tex" id="MathJax-Element-79196">a\lor b</script> and meet, <script type="math/tex" id="MathJax-Element-79197">\inf</script>, <script type="math/tex" id="MathJax-Element-79198">a\land b</script></li>
+<li><strong>bounded lattice</strong>: have <script type="math/tex" id="MathJax-Element-79199">0</script> and <script type="math/tex" id="MathJax-Element-79200">1</script> and <script type="math/tex" id="MathJax-Element-79201">0 \leq p \leq 1</script></li>
+<li><strong>distributive lattice</strong>: <script type="math/tex" id="MathJax-Element-79202">p \land (q \lor r) = (p\lor q)\land (p \lor r)</script></li>
 <li><strong>complete lattice</strong>: all subset has join and meet, so it is a bounded lattice</li>
 <li><strong>de Morgan algebra</strong> <br>
 <ul><li>defintion <br>
 <ul><li>bounded distributive lattice</li>
-<li>with <script type="math/tex" id="MathJax-Element-69754">1 -p</script> satisfying <br>
-<ul><li><script type="math/tex" id="MathJax-Element-69755">1-(p\land q) = (1-p)\lor(1-q)</script></li>
-<li><script type="math/tex" id="MathJax-Element-69756">1-(1-p) = p</script></li></ul></li></ul></li></ul></li>
-<li><strong>congruence lattice of a algebra <script type="math/tex" id="MathJax-Element-69757">\mathcal{A}</script></strong>: the set of all congruence relations respect to the algebra. because there is a natural meet, and you can define the join by first take relations join, then the meet of all congruence relations containing the join, or say, the closure <br>
+<li>with <script type="math/tex" id="MathJax-Element-79203">1 -p</script> satisfying <br>
+<ul><li><script type="math/tex" id="MathJax-Element-79204">1-(p\land q) = (1-p)\lor(1-q)</script></li>
+<li><script type="math/tex" id="MathJax-Element-79205">1-(1-p) = p</script></li></ul></li></ul></li></ul></li>
+<li><strong>congruence lattice of a algebra <script type="math/tex" id="MathJax-Element-79206">\mathcal{A}</script></strong>: the set of all congruence relations respect to the algebra. because there is a natural meet, and you can define the join by first take relations join, then the meet of all congruence relations containing the join, or say, the closure <br>
 <ul><li>theorems <br>
 <ul><li>it is complete and distributive lattice</li></ul></li></ul></li>
 </ul>
@@ -300,59 +307,61 @@
 
 <h2 id="category-theory">category theory</h2>
 
+
+
 <h3 id="chapter-01-categories-functors-and-natural-transformations">chapter 01. categories, functors, and natural transformations</h3>
 
 <ul>
-<li><p><strong>directed graph</strong> is a set <script type="math/tex" id="MathJax-Element-78349">A</script> of <strong>arrows</strong> and set <script type="math/tex" id="MathJax-Element-78350">O</script> of <strong>object</strong>. and two function <script type="math/tex" id="MathJax-Element-78351">\dom</script> and <script type="math/tex" id="MathJax-Element-78352">\cod</script> with type <script type="math/tex" id="MathJax-Element-78353">A \to O</script></p>
+<li><p><strong>directed graph</strong> is a set <script type="math/tex" id="MathJax-Element-79207">A</script> of <strong>arrows</strong> and set <script type="math/tex" id="MathJax-Element-79208">O</script> of <strong>object</strong>. and two function <script type="math/tex" id="MathJax-Element-79209">\dom</script> and <script type="math/tex" id="MathJax-Element-79210">\cod</script> with type <script type="math/tex" id="MathJax-Element-79211">A \to O</script></p>
 
-<ul><li>(formal) product over the graph is just pairs of arrows with <script type="math/tex" id="MathJax-Element-78354">\dom g = \text{cod} f</script>. it is just pairs, not triples</li>
+<ul><li>(formal) product over the graph is just pairs of arrows with <script type="math/tex" id="MathJax-Element-79212">\dom g = \text{cod} f</script>. it is just pairs, not triples</li>
 <li>expanded graph (? is the compositions finite or not?)</li>
 <li>commutative diagram (all possible composition between two object is the same arrow <br>
 <ul><li><code>MCHT 1.1</code> show diagram commutative iff expanded diagram commutative</li></ul></li></ul></li>
-<li><p>a <strong>category</strong> is a graph with <script type="math/tex" id="MathJax-Element-78355">\text{id}: O\to A</script>, <script type="math/tex" id="MathJax-Element-78356">\circ : A \times A\to A</script>, where with proper domain conditions, and associativity law of composition, also unit axioms</p>
+<li><p>a <strong>category</strong> is a graph with <script type="math/tex" id="MathJax-Element-79213">\text{id}: O\to A</script>, <script type="math/tex" id="MathJax-Element-79214">\circ : A \times A\to A</script>, where with proper domain conditions, and associativity law of composition, also unit axioms</p>
 
 <ul><li>examples. 1, 2, 3, discrete categories, monoids, groups, groupoids, preorders (only one arrow between two object in one direction), partial orders (only one arrow between two object, this is a great example!), linear order (one and only one), ordinals, <strong>simplicial category</strong> (finite ordinals and order-preserving functions)</li>
 <li>methods <br>
-<ul><li><strong>hom-set</strong>, <script type="math/tex" id="MathJax-Element-78357">\hom_C(a, b)</script> is set of arrows <script type="math/tex" id="MathJax-Element-78358">a\to b</script> </li>
-<li>it is <strong>small</strong> in universe <script type="math/tex" id="MathJax-Element-78359">U</script> if the set of objects and arrows is in <script type="math/tex" id="MathJax-Element-78360">U</script></li>
-<li><strong>inverse</strong> or <script type="math/tex" id="MathJax-Element-78361">f</script> is <script type="math/tex" id="MathJax-Element-78362">g</script>: <script type="math/tex" id="MathJax-Element-78363">fg = \text{id}, gf = \text{id}</script> <br>
-<ul><li>inverse is unique. <script type="math/tex" id="MathJax-Element-78364">g=gfg_1=g_1</script></li>
+<ul><li><strong>hom-set</strong>, <script type="math/tex" id="MathJax-Element-79215">\hom_C(a, b)</script> is set of arrows <script type="math/tex" id="MathJax-Element-79216">a\to b</script> </li>
+<li>it is <strong>small</strong> in universe <script type="math/tex" id="MathJax-Element-79217">U</script> if the set of objects and arrows is in <script type="math/tex" id="MathJax-Element-79218">U</script></li>
+<li><strong>inverse</strong> or <script type="math/tex" id="MathJax-Element-79219">f</script> is <script type="math/tex" id="MathJax-Element-79220">g</script>: <script type="math/tex" id="MathJax-Element-79221">fg = \text{id}, gf = \text{id}</script> <br>
+<ul><li>inverse is unique. <script type="math/tex" id="MathJax-Element-79222">g=gfg_1=g_1</script></li>
 <li>reflective, transitive, and symmetry. thus define a equivalence relation</li>
 <li><strong>isomorphism</strong>: a arrow has inverse, <strong>isomorphic</strong> objects has isomorphism between</li></ul></li>
-<li><strong>endomorphism</strong> <script type="math/tex" id="MathJax-Element-78365">\endo A</script>, <strong>idempotent</strong>, <strong>automorphism</strong> <script type="math/tex" id="MathJax-Element-78366">\aut A</script></li></ul></li>
-<li><strong>monic</strong> or <strong>left cancelable</strong> <script type="math/tex" id="MathJax-Element-78367">m</script>, <script type="math/tex" id="MathJax-Element-78368">m\circ f_1=m\circ f_2\implies f_1 = f_2</script>, compose is also monic. <script type="math/tex" id="MathJax-Element-78369">g\circ f</script> monic then <script type="math/tex" id="MathJax-Element-78370">f</script> monic (trivial)</li>
-<li><strong>epi</strong> or <strong>right cancelable</strong> <script type="math/tex" id="MathJax-Element-78371">h</script>, <script type="math/tex" id="MathJax-Element-78372">g_1\circ h=g_2\circ h\implies g_1 =g_2</script>, compose is also epi</li>
-<li>for <script type="math/tex" id="MathJax-Element-78373">h: a\to b</script> a <strong>right inverse</strong> or <strong>section</strong> is <script type="math/tex" id="MathJax-Element-78374">r: b \to a</script> such that <script type="math/tex" id="MathJax-Element-78375">hr=1_b</script> (not usually unique), and makes <script type="math/tex" id="MathJax-Element-78376">h</script> a <strong>split epi</strong> <em>(<script type="math/tex" id="MathJax-Element-78377">r</script> select from the domain <script type="math/tex" id="MathJax-Element-78378">a</script>)</em> <br>
+<li><strong>endomorphism</strong> <script type="math/tex" id="MathJax-Element-79223">\endo A</script>, <strong>idempotent</strong>, <strong>automorphism</strong> <script type="math/tex" id="MathJax-Element-79224">\aut A</script></li></ul></li>
+<li><strong>monic</strong> or <strong>left cancelable</strong> <script type="math/tex" id="MathJax-Element-79225">m</script>, <script type="math/tex" id="MathJax-Element-79226">m\circ f_1=m\circ f_2\implies f_1 = f_2</script>, compose is also monic. <script type="math/tex" id="MathJax-Element-79227">g\circ f</script> monic then <script type="math/tex" id="MathJax-Element-79228">f</script> monic (trivial)</li>
+<li><strong>epi</strong> or <strong>right cancelable</strong> <script type="math/tex" id="MathJax-Element-79229">h</script>, <script type="math/tex" id="MathJax-Element-79230">g_1\circ h=g_2\circ h\implies g_1 =g_2</script>, compose is also epi</li>
+<li>for <script type="math/tex" id="MathJax-Element-79231">h: a\to b</script> a <strong>right inverse</strong> or <strong>section</strong> is <script type="math/tex" id="MathJax-Element-79232">r: b \to a</script> such that <script type="math/tex" id="MathJax-Element-79233">hr=1_b</script> (not usually unique), and makes <script type="math/tex" id="MathJax-Element-79234">h</script> a <strong>split epi</strong> <em>(<script type="math/tex" id="MathJax-Element-79235">r</script> select from the domain <script type="math/tex" id="MathJax-Element-79236">a</script>)</em> <br>
 <ul><li><code>MCHT 1.6</code> a arrow having a left inverse which has a left inverse is a isomorphism pair</li>
-<li>for <script type="math/tex" id="MathJax-Element-78379">h: a\to b</script> a <strong>left inverse</strong> or <strong>retraction</strong> is <script type="math/tex" id="MathJax-Element-78380">l : b\to a</script> such that <script type="math/tex" id="MathJax-Element-78381">lh=1_a</script> and makes <script type="math/tex" id="MathJax-Element-78382">h</script> a <strong>split monic</strong>. the <script type="math/tex" id="MathJax-Element-78383">a</script> is sometimes called a <strong>retract</strong> of <script type="math/tex" id="MathJax-Element-78384">b</script>. <em>(imagine the domain is larger, and the <script type="math/tex" id="MathJax-Element-78385">h</script> is just a embedding, then <script type="math/tex" id="MathJax-Element-78386">l</script> will retract the codomain back)</em> <br>
-<ul><li><code>MCHT 1.9</code> show that in the arrow category of certain category, <script type="math/tex" id="MathJax-Element-78387">f</script> is retract of <script type="math/tex" id="MathJax-Element-78388">g</script>. then if <script type="math/tex" id="MathJax-Element-78389">g</script> is a isomorphism, <script type="math/tex" id="MathJax-Element-78390">f</script> is. and <script type="math/tex" id="MathJax-Element-78391">f</script> is, then <script type="math/tex" id="MathJax-Element-78392">g</script> maybe not. first part is trivial. second part is also trivial. all other maps is <script type="math/tex" id="MathJax-Element-78393">\id</script> except <script type="math/tex" id="MathJax-Element-78394">g</script></li></ul></li>
-<li>if <script type="math/tex" id="MathJax-Element-78395">fg=1_a</script> then there is a left inverse, a right inverse and a idempotent, and it is a <strong>split idempotent</strong></li>
+<li>for <script type="math/tex" id="MathJax-Element-79237">h: a\to b</script> a <strong>left inverse</strong> or <strong>retraction</strong> is <script type="math/tex" id="MathJax-Element-79238">l : b\to a</script> such that <script type="math/tex" id="MathJax-Element-79239">lh=1_a</script> and makes <script type="math/tex" id="MathJax-Element-79240">h</script> a <strong>split monic</strong>. the <script type="math/tex" id="MathJax-Element-79241">a</script> is sometimes called a <strong>retract</strong> of <script type="math/tex" id="MathJax-Element-79242">b</script>. <em>(imagine the domain is larger, and the <script type="math/tex" id="MathJax-Element-79243">h</script> is just a embedding, then <script type="math/tex" id="MathJax-Element-79244">l</script> will retract the codomain back)</em> <br>
+<ul><li><code>MCHT 1.9</code> show that in the arrow category of certain category, <script type="math/tex" id="MathJax-Element-79245">f</script> is retract of <script type="math/tex" id="MathJax-Element-79246">g</script>. then if <script type="math/tex" id="MathJax-Element-79247">g</script> is a isomorphism, <script type="math/tex" id="MathJax-Element-79248">f</script> is. and <script type="math/tex" id="MathJax-Element-79249">f</script> is, then <script type="math/tex" id="MathJax-Element-79250">g</script> maybe not. first part is trivial. second part is also trivial. all other maps is <script type="math/tex" id="MathJax-Element-79251">\id</script> except <script type="math/tex" id="MathJax-Element-79252">g</script></li></ul></li>
+<li>if <script type="math/tex" id="MathJax-Element-79253">fg=1_a</script> then there is a left inverse, a right inverse and a idempotent, and it is a <strong>split idempotent</strong></li>
 <li><strong>terminal</strong>. <strong>initial</strong></li>
 <li><strong>null object</strong>. <strong>pointed category</strong>. <strong>zero arrow</strong> (trivial morphism) factor through null object. <strong>wedge</strong> is coproduct in pointed categories</li></ul></li></ul></li>
-<li><p><strong>functor</strong> is a map between two category, consists obj map and arr map, preserve unit and associ, category and functors in one universe <script type="math/tex" id="MathJax-Element-78396">U</script> forms <script type="math/tex" id="MathJax-Element-78397">\Cat</script> in another universe  </p>
+<li><p><strong>functor</strong> is a map between two category, consists obj map and arr map, preserve unit and associ, category and functors in one universe <script type="math/tex" id="MathJax-Element-79254">U</script> forms <script type="math/tex" id="MathJax-Element-79255">\Cat</script> in another universe    </p>
 
-<ul><li><script type="math/tex" id="MathJax-Element-78398">T: C\to B</script> and <script type="math/tex" id="MathJax-Element-78399">S: B\to A</script> has <strong>composition</strong> <script type="math/tex" id="MathJax-Element-78400">S\circ T</script>,  is a functor <script type="math/tex" id="MathJax-Element-78401">C\to A</script>. it is associ (because function composition is associ), and there is identity functor, so <script type="math/tex" id="MathJax-Element-78402">\Cat</script> of all small categories is a category</li>
+<ul><li><script type="math/tex" id="MathJax-Element-79256">T: C\to B</script> and <script type="math/tex" id="MathJax-Element-79257">S: B\to A</script> has <strong>composition</strong> <script type="math/tex" id="MathJax-Element-79258">S\circ T</script>,  is a functor <script type="math/tex" id="MathJax-Element-79259">C\to A</script>. it is associ (because function composition is associ), and there is identity functor, so <script type="math/tex" id="MathJax-Element-79260">\Cat</script> of all small categories is a category</li>
 <li>isomorphism iff bijection on object and arrows. this is super natual, because category is a set construction so there isomorphism is a set bijection thing</li>
 <li>methods <br>
 <ul><li><strong>forgetful functor</strong> (vague) may be considered by (a, b) =&gt; (a) of some Sigma type</li>
-<li><strong>full functor</strong>, <script type="math/tex" id="MathJax-Element-78403">\forall c, c_1, \forall g: Tc\to Tc_1\exists f: c\to c_1: g = Tf</script> <br>
+<li><strong>full functor</strong>, <script type="math/tex" id="MathJax-Element-79261">\forall c, c_1, \forall g: Tc\to Tc_1\exists f: c\to c_1: g = Tf</script> <br>
 <ul><li>compose is full</li></ul></li>
-<li><strong>faithful functor</strong> <script type="math/tex" id="MathJax-Element-78404">\forall c, c_1, \forall f, f_1: c\to c_1, Tf = Tf_1\implies f = f_1</script> <br>
+<li><strong>faithful functor</strong> <script type="math/tex" id="MathJax-Element-79262">\forall c, c_1, \forall f, f_1: c\to c_1, Tf = Tf_1\implies f = f_1</script> <br>
 <ul><li>compose if faithful</li></ul></li>
 <li><strong>subcategory</strong> and <strong>inclusion functor</strong> is faithful <em>(sub meaning get from removing some obj and arr)</em>. <strong>full subcategory</strong> when the inclusion functor is full <em>(you are not removing arrows without removing one of it’s domain)</em></li></ul></li></ul></li>
 <li><p><code>CWM c01 p15</code></p>
 
-<ul><li><code>4</code> they are <strong>symmetric groups</strong>, consider the permutations of two elements, then map it two permutations of three elements by ignoring the third element. then map to permutations of two elements by ignoring the third element, the composition is <script type="math/tex" id="MathJax-Element-78405">\id</script></li>
+<ul><li><code>4</code> they are <strong>symmetric groups</strong>, consider the permutations of two elements, then map it two permutations of three elements by ignoring the third element. then map to permutations of two elements by ignoring the third element, the composition is <script type="math/tex" id="MathJax-Element-79263">\id</script></li>
 <li><code>5</code> <a href="http://mathoverflow.net/questions/4276/two-functors-from-grp-to-grp">evil answer</a></li></ul></li>
-<li><p><strong>functor category</strong> <script type="math/tex" id="MathJax-Element-78406">B^C</script>, <strong>natural transformation</strong>  <script type="math/tex" id="MathJax-Element-78407">\tau</script>, <strong>component</strong> <script type="math/tex" id="MathJax-Element-78408">\tau c</script> <strong>natural in</strong> <script type="math/tex" id="MathJax-Element-78409">c</script>: from <script type="math/tex" id="MathJax-Element-78410">S, T: C\to B</script> assigns each object <script type="math/tex" id="MathJax-Element-78411">c</script> an arrow <script type="math/tex" id="MathJax-Element-78412">\tau c</script> (the shape), <script type="math/tex" id="MathJax-Element-78413">\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf</script></p>
+<li><p><strong>functor category</strong> <script type="math/tex" id="MathJax-Element-79264">B^C</script>, <strong>natural transformation</strong>  <script type="math/tex" id="MathJax-Element-79265">\tau</script>, <strong>component</strong> <script type="math/tex" id="MathJax-Element-79266">\tau c</script> <strong>natural in</strong> <script type="math/tex" id="MathJax-Element-79267">c</script>: from <script type="math/tex" id="MathJax-Element-79268">S, T: C\to B</script> assigns each object <script type="math/tex" id="MathJax-Element-79269">c</script> an arrow <script type="math/tex" id="MathJax-Element-79270">\tau c</script> (the shape), <script type="math/tex" id="MathJax-Element-79271">\forall c',f: c\to c', Tf\circ\tau c=\tau c'\circ Sf</script></p>
 
-<ul><li>they form the functor category <script type="math/tex" id="MathJax-Element-78414">B^C</script>. and <strong>natural isomorphism</strong> iff each component is isomorphism (trivial. componentwise)</li>
-<li><script type="math/tex" id="MathJax-Element-78415">B^2</script> is the <strong>category of arrows</strong></li>
-<li><strong>equivalence of categories</strong> <script type="math/tex" id="MathJax-Element-78416">C</script>, <script type="math/tex" id="MathJax-Element-78417">D</script> is <script type="math/tex" id="MathJax-Element-78418">(S, T, \tau_1, \tau_2)</script>, such that <script type="math/tex" id="MathJax-Element-78419">\tau_1: I_C\simeq T\circ S</script> and <script type="math/tex" id="MathJax-Element-78420">\tau_2: I_D\simeq S\circ T</script> <br>
+<ul><li>they form the functor category <script type="math/tex" id="MathJax-Element-79272">B^C</script>. and <strong>natural isomorphism</strong> iff each component is isomorphism (trivial. componentwise)</li>
+<li><script type="math/tex" id="MathJax-Element-79273">B^2</script> is the <strong>category of arrows</strong></li>
+<li><strong>equivalence of categories</strong> <script type="math/tex" id="MathJax-Element-79274">C</script>, <script type="math/tex" id="MathJax-Element-79275">D</script> is <script type="math/tex" id="MathJax-Element-79276">(S, T, \tau_1, \tau_2)</script>, such that <script type="math/tex" id="MathJax-Element-79277">\tau_1: I_C\simeq T\circ S</script> and <script type="math/tex" id="MathJax-Element-79278">\tau_2: I_D\simeq S\circ T</script> <br>
 <ul><li>idea: compare alike category of different “size”</li></ul></li></ul></li>
 <li><p><code>CWM c01 p18</code></p>
 
-<ol><li><script type="math/tex" id="MathJax-Element-78421">e</script> is natural trasformation…</li>
+<ol><li><script type="math/tex" id="MathJax-Element-79279">e</script> is natural trasformation…</li>
 <li>trivial</li>
 <li><code>TODO alg</code></li>
 <li>if there is, define the natural transform by that arrow. and we know that it is unique… trivial</li>
@@ -365,42 +374,44 @@
 <li>trivial</li>
 <li><code>TODO alg</code></li>
 <li><code>TODO alg</code></li>
-<li>all idempotents in <script type="math/tex" id="MathJax-Element-78422">\Set</script> split. for <script type="math/tex" id="MathJax-Element-78423">f: C \to D</script>, <script type="math/tex" id="MathJax-Element-78424">A = \{x|f(x) = x\}</script>, then <script type="math/tex" id="MathJax-Element-78425">\img f= A</script>, because if <script type="math/tex" id="MathJax-Element-78426">y\in\img f\land y = f(x)</script> then <script type="math/tex" id="MathJax-Element-78427">f(y)=f(f(x))=f(x)=y</script>, and also clearly <script type="math/tex" id="MathJax-Element-78428">A\subset \img f</script> because every <script type="math/tex" id="MathJax-Element-78429">x\in A</script> is image of itself. so <script type="math/tex" id="MathJax-Element-78430">f = \proj_{\img f}\circ f </script> also <script type="math/tex" id="MathJax-Element-78431">\id_{\img f} = f\circ \proj_{\img f}</script></li>
-<li>an arrow <script type="math/tex" id="MathJax-Element-78432">f: a \to b</script> is <strong>regular</strong> if there is <script type="math/tex" id="MathJax-Element-78433">g: b\to a</script> such that <script type="math/tex" id="MathJax-Element-78434">f = f g f</script> <br>
-<ol><li><script type="math/tex" id="MathJax-Element-78435">f</script> has left or right inverse then is regular. trivial</li>
-<li>in <script type="math/tex" id="MathJax-Element-78436">\Set</script> every arrow with <script type="math/tex" id="MathJax-Element-78437">a\neq \emptyset</script> is regular. for everyone in <script type="math/tex" id="MathJax-Element-78438">y\in\img f\land f(x) = y</script> define <script type="math/tex" id="MathJax-Element-78439">g(y) = x</script> and for other values, define at any element. then <script type="math/tex" id="MathJax-Element-78440">\forall x, f(g(f(x)))=f(x_1)</script>, where <script type="math/tex" id="MathJax-Element-78441">x_1</script> has property <script type="math/tex" id="MathJax-Element-78442">f(x_1) = f(x)</script></li></ol></li>
-<li>we define the arrow by pointing <script type="math/tex" id="MathJax-Element-78443">f(0)=e'</script> and <script type="math/tex" id="MathJax-Element-78444">f(1) = t'(e')</script> and so on. we can see we can define and the definition is unique</li>
-<li><script type="math/tex" id="MathJax-Element-78445">fg=fk\implies TfTg=TfTk\implies Tg=Tk \implies g=k</script></li></ol></li>
+<li>all idempotents in <script type="math/tex" id="MathJax-Element-79280">\Set</script> split. for <script type="math/tex" id="MathJax-Element-79281">f: C \to D</script>, <script type="math/tex" id="MathJax-Element-79282">A = \{x|f(x) = x\}</script>, then <script type="math/tex" id="MathJax-Element-79283">\img f= A</script>, because if <script type="math/tex" id="MathJax-Element-79284">y\in\img f\land y = f(x)</script> then <script type="math/tex" id="MathJax-Element-79285">f(y)=f(f(x))=f(x)=y</script>, and also clearly <script type="math/tex" id="MathJax-Element-79286">A\subset \img f</script> because every <script type="math/tex" id="MathJax-Element-79287">x\in A</script> is image of itself. so <script type="math/tex" id="MathJax-Element-79288">f = \proj_{\img f}\circ f </script> also <script type="math/tex" id="MathJax-Element-79289">\id_{\img f} = f\circ \proj_{\img f}</script></li>
+<li>an arrow <script type="math/tex" id="MathJax-Element-79290">f: a \to b</script> is <strong>regular</strong> if there is <script type="math/tex" id="MathJax-Element-79291">g: b\to a</script> such that <script type="math/tex" id="MathJax-Element-79292">f = f g f</script> <br>
+<ol><li><script type="math/tex" id="MathJax-Element-79293">f</script> has left or right inverse then is regular. trivial</li>
+<li>in <script type="math/tex" id="MathJax-Element-79294">\Set</script> every arrow with <script type="math/tex" id="MathJax-Element-79295">a\neq \emptyset</script> is regular. for everyone in <script type="math/tex" id="MathJax-Element-79296">y\in\img f\land f(x) = y</script> define <script type="math/tex" id="MathJax-Element-79297">g(y) = x</script> and for other values, define at any element. then <script type="math/tex" id="MathJax-Element-79298">\forall x, f(g(f(x)))=f(x_1)</script>, where <script type="math/tex" id="MathJax-Element-79299">x_1</script> has property <script type="math/tex" id="MathJax-Element-79300">f(x_1) = f(x)</script></li></ol></li>
+<li>we define the arrow by pointing <script type="math/tex" id="MathJax-Element-79301">f(0)=e'</script> and <script type="math/tex" id="MathJax-Element-79302">f(1) = t'(e')</script> and so on. we can see we can define and the definition is unique</li>
+<li><script type="math/tex" id="MathJax-Element-79303">fg=fk\implies TfTg=TfTk\implies Tg=Tk \implies g=k</script></li></ol></li>
 <li><p><code>CWM c01 p24</code></p>
 
-<ol><li>for a function with domain <script type="math/tex" id="MathJax-Element-78446">I</script> in <script type="math/tex" id="MathJax-Element-78447">U</script> and each value point <script type="math/tex" id="MathJax-Element-78448">f_i</script> in <script type="math/tex" id="MathJax-Element-78449">U</script>, then the cartesian product <script type="math/tex" id="MathJax-Element-78450">\prod_i f_i</script> is in <script type="math/tex" id="MathJax-Element-78451">U</script> </li>
+<ol><li>for a function with domain <script type="math/tex" id="MathJax-Element-79304">I</script> in <script type="math/tex" id="MathJax-Element-79305">U</script> and each value point <script type="math/tex" id="MathJax-Element-79306">f_i</script> in <script type="math/tex" id="MathJax-Element-79307">U</script>, then the cartesian product <script type="math/tex" id="MathJax-Element-79308">\prod_i f_i</script> is in <script type="math/tex" id="MathJax-Element-79309">U</script> </li>
 <li><code>omit</code></li>
 <li><code>omit</code></li></ol></li>
-<li><p><strong>concrete category</strong> <script type="math/tex" id="MathJax-Element-78452">(C, U)</script> where <script type="math/tex" id="MathJax-Element-78453">U: C\to \Set</script> is a faithful functor </p></li>
-<li><p><strong>preadditive category</strong> a category where each hom-set is a abelian group, and <script type="math/tex" id="MathJax-Element-78454">(g+g')\circ(f+f')=g\circ f+g\circ f'+g'\circ f+g'\circ f'</script></p>
+<li><p><strong>concrete category</strong> <script type="math/tex" id="MathJax-Element-79310">(C, U)</script> where <script type="math/tex" id="MathJax-Element-79311">U: C\to \Set</script> is a faithful functor </p></li>
+<li><p><strong>preadditive category</strong> a category where each hom-set is a abelian group, and <script type="math/tex" id="MathJax-Element-79312">(g+g')\circ(f+f')=g\circ f+g\circ f'+g'\circ f+g'\circ f'</script></p>
 
-<ul><li>if we use <script type="math/tex" id="MathJax-Element-78455">\hom</script> set to define categories, then we see in the definition of preadditive category a similar pattern: using <script type="math/tex" id="MathJax-Element-78456">\Ab</script> and tensor product. these is called <strong>enriched category</strong></li>
-<li>a functor between two preadditive category is <strong>additive</strong> if each function between hom-sets is a homomorphism. compose is also additive. then <script type="math/tex" id="MathJax-Element-78457">\AbCat</script> is is the category of preadditive category with additive functors</li></ul></li>
+<ul><li>if we use <script type="math/tex" id="MathJax-Element-79313">\hom</script> set to define categories, then we see in the definition of preadditive category a similar pattern: using <script type="math/tex" id="MathJax-Element-79314">\Ab</script> and tensor product. these is called <strong>enriched category</strong></li>
+<li>a functor between two preadditive category is <strong>additive</strong> if each function between hom-sets is a homomorphism. compose is also additive. then <script type="math/tex" id="MathJax-Element-79315">\AbCat</script> is is the category of preadditive category with additive functors</li></ul></li>
 </ul>
+
+
 
 <h3 id="chapter-02-constructions-on-categories">chapter 02. constructions on categories</h3>
 
 <ul>
 <li><p><strong>duality in categories</strong> (by <strong>elementary theory of absract category</strong>), <strong>opposite category</strong>, <strong>contravariant functor</strong>, <strong>power-set functor</strong></p>
 
-<ul><li><strong>covariant hom-functor</strong> <script type="math/tex" id="MathJax-Element-69867">\hom(a, \_): C \to \Set</script>, for <script type="math/tex" id="MathJax-Element-69868">k: b\to b'</script> we have it maps to <script type="math/tex" id="MathJax-Element-69869">\hom(a, k)=k_*:\hom(a,b)\to\hom(a, b')</script> by the functor. <script type="math/tex" id="MathJax-Element-69870">k_*(f) = k\circ f</script></li>
-<li><strong>contravariant hom-functor</strong> <script type="math/tex" id="MathJax-Element-69871">\hom(\_, a):C^\op\to \Set</script>, send <script type="math/tex" id="MathJax-Element-69872">g</script> to <script type="math/tex" id="MathJax-Element-69873">g^*</script>. <script type="math/tex" id="MathJax-Element-69874">g^* (f) = f\circ g</script></li>
-<li>for <script type="math/tex" id="MathJax-Element-69875">g: a\to a'</script>, <script type="math/tex" id="MathJax-Element-69876">f: b\to b'</script> we have a diagram <code>img</code>, which is used to proof that <script type="math/tex" id="MathJax-Element-69877">\hom</script> is a bifunctor</li></ul></li>
-<li><p><strong>product category</strong>, <strong>projection functor</strong>, <strong>product of two functors</strong> <script type="math/tex" id="MathJax-Element-69878">U\times V: B\times C\to B'\times C'</script> can be defined by universal arrow</p>
+<ul><li><strong>covariant hom-functor</strong> <script type="math/tex" id="MathJax-Element-79316">\hom(a, \_): C \to \Set</script>, for <script type="math/tex" id="MathJax-Element-79317">k: b\to b'</script> we have it maps to <script type="math/tex" id="MathJax-Element-79318">\hom(a, k)=k_*:\hom(a,b)\to\hom(a, b')</script> by the functor. <script type="math/tex" id="MathJax-Element-79319">k_*(f) = k\circ f</script></li>
+<li><strong>contravariant hom-functor</strong> <script type="math/tex" id="MathJax-Element-79320">\hom(\_, a):C^\op\to \Set</script>, send <script type="math/tex" id="MathJax-Element-79321">g</script> to <script type="math/tex" id="MathJax-Element-79322">g^*</script>. <script type="math/tex" id="MathJax-Element-79323">g^* (f) = f\circ g</script></li>
+<li>for <script type="math/tex" id="MathJax-Element-79324">g: a\to a'</script>, <script type="math/tex" id="MathJax-Element-79325">f: b\to b'</script> we have a diagram <code>img</code>, which is used to proof that <script type="math/tex" id="MathJax-Element-79326">\hom</script> is a bifunctor</li></ul></li>
+<li><p><strong>product category</strong>, <strong>projection functor</strong>, <strong>product of two functors</strong> <script type="math/tex" id="MathJax-Element-79327">U\times V: B\times C\to B'\times C'</script> can be defined by universal arrow</p>
 
-<ul><li><script type="math/tex" id="MathJax-Element-69879">(U'\times V')\circ(U\times V)=U'U\times V'V</script></li>
-<li>then <script type="math/tex" id="MathJax-Element-69880">\times : \Cat\times \Cat \to \Cat</script> can be considered as a functor itself (in the domain, you can consider them formal pairs of categories, the above line proofs associ)</li>
-<li><script type="math/tex" id="MathJax-Element-69881">(B\times C)^\op \simeq B^\op\times C^\op</script>. because they are just formal pairs</li></ul></li>
-<li><p><strong>bifunctors</strong> <script type="math/tex" id="MathJax-Element-69882">S: B\times C\to D</script>. euqualivant way to discribe in term of functor: for <script type="math/tex" id="MathJax-Element-69883">c\in C</script> and <script type="math/tex" id="MathJax-Element-69884">b\in B</script> <script type="math/tex" id="MathJax-Element-69885">L_c: B\to D</script> and <script type="math/tex" id="MathJax-Element-69886">M_d: C\to D</script> and <script type="math/tex" id="MathJax-Element-69887">M_b(c) = L_c(b)</script>, <script type="math/tex" id="MathJax-Element-69888">\forall f: b\to b'\forall g: c\to c', M_b' g\circ L_c f = L_{c'} f\circ M_b g</script>. proof: see the book <em>(it is just a easier statement of functoriality in the case of product category)</em>. proof is easy</p>
+<ul><li><script type="math/tex" id="MathJax-Element-79328">(U'\times V')\circ(U\times V)=U'U\times V'V</script></li>
+<li>then <script type="math/tex" id="MathJax-Element-79329">\times : \Cat\times \Cat \to \Cat</script> can be considered as a functor itself (in the domain, you can consider them formal pairs of categories, the above line proofs associ)</li>
+<li><script type="math/tex" id="MathJax-Element-79330">(B\times C)^\op \simeq B^\op\times C^\op</script>. because they are just formal pairs</li></ul></li>
+<li><p><strong>bifunctors</strong> <script type="math/tex" id="MathJax-Element-79331">S: B\times C\to D</script>. euqualivant way to discribe in term of functor: for <script type="math/tex" id="MathJax-Element-79332">c\in C</script> and <script type="math/tex" id="MathJax-Element-79333">b\in B</script> <script type="math/tex" id="MathJax-Element-79334">L_c: B\to D</script> and <script type="math/tex" id="MathJax-Element-79335">M_d: C\to D</script> and <script type="math/tex" id="MathJax-Element-79336">M_b(c) = L_c(b)</script>, <script type="math/tex" id="MathJax-Element-79337">\forall f: b\to b'\forall g: c\to c', M_b' g\circ L_c f = L_{c'} f\circ M_b g</script>. proof: see the book <em>(it is just a easier statement of functoriality in the case of product category)</em>. proof is easy</p>
 
-<ul><li><script type="math/tex" id="MathJax-Element-69889">\hom: C^\op\times C\to Set</script> is a bifunctor</li></ul></li>
-<li><p><strong>natural transformations of bifunctors</strong> for <script type="math/tex" id="MathJax-Element-69890">S, S': B\times C\to D</script>, and <script type="math/tex" id="MathJax-Element-69891">\alpha</script> an function <script type="math/tex" id="MathJax-Element-69892">(b, c)\mapsto \alpha(b, c)</script> to arrows in <script type="math/tex" id="MathJax-Element-69893">D</script>, <script type="math/tex" id="MathJax-Element-69894">S(b, c)\to S'(b,c)</script>, <script type="math/tex" id="MathJax-Element-69895">\alpha</script> <strong>natural in <script type="math/tex" id="MathJax-Element-69896">b</script></strong> (b is dumy variable) if for each <script type="math/tex" id="MathJax-Element-69897">c\in C</script>, <script type="math/tex" id="MathJax-Element-69898">\alpha(\_, c): S(\_, c)\to S'(\_, c)</script> is a natural transformation of functors <script type="math/tex" id="MathJax-Element-69899">B\to D</script>. such an <script type="math/tex" id="MathJax-Element-69900">\alpha</script> is a natural transformation iff natural in <script type="math/tex" id="MathJax-Element-69901">b</script> for each <script type="math/tex" id="MathJax-Element-69902">c</script> and natural in <script type="math/tex" id="MathJax-Element-69903">c</script> for each <script type="math/tex" id="MathJax-Element-69904">b</script>. proof use projects in dimensions</p></li>
-<li><p><strong>universal natural transformation</strong> of <script type="math/tex" id="MathJax-Element-69905">C</script>, <script type="math/tex" id="MathJax-Element-69906">u</script>, in the sense that for any <script type="math/tex" id="MathJax-Element-69907">\tau</script>, we have a unique bifunctor <script type="math/tex" id="MathJax-Element-69908">F: C\times 2\to B</script> and <script type="math/tex" id="MathJax-Element-69909">Fu=\tau</script></p></li>
+<ul><li><script type="math/tex" id="MathJax-Element-79338">\hom: C^\op\times C\to Set</script> is a bifunctor</li></ul></li>
+<li><p><strong>natural transformations of bifunctors</strong> for <script type="math/tex" id="MathJax-Element-79339">S, S': B\times C\to D</script>, and <script type="math/tex" id="MathJax-Element-79340">\alpha</script> an function <script type="math/tex" id="MathJax-Element-79341">(b, c)\mapsto \alpha(b, c)</script> to arrows in <script type="math/tex" id="MathJax-Element-79342">D</script>, <script type="math/tex" id="MathJax-Element-79343">S(b, c)\to S'(b,c)</script>, <script type="math/tex" id="MathJax-Element-79344">\alpha</script> <strong>natural in <script type="math/tex" id="MathJax-Element-79345">b</script></strong> (b is dumy variable) if for each <script type="math/tex" id="MathJax-Element-79346">c\in C</script>, <script type="math/tex" id="MathJax-Element-79347">\alpha(\_, c): S(\_, c)\to S'(\_, c)</script> is a natural transformation of functors <script type="math/tex" id="MathJax-Element-79348">B\to D</script>. such an <script type="math/tex" id="MathJax-Element-79349">\alpha</script> is a natural transformation iff natural in <script type="math/tex" id="MathJax-Element-79350">b</script> for each <script type="math/tex" id="MathJax-Element-79351">c</script> and natural in <script type="math/tex" id="MathJax-Element-79352">c</script> for each <script type="math/tex" id="MathJax-Element-79353">b</script>. proof use projects in dimensions</p></li>
+<li><p><strong>universal natural transformation</strong> of <script type="math/tex" id="MathJax-Element-79354">C</script>, <script type="math/tex" id="MathJax-Element-79355">u</script>, in the sense that for any <script type="math/tex" id="MathJax-Element-79356">\tau</script>, we have a unique bifunctor <script type="math/tex" id="MathJax-Element-79357">F: C\times 2\to B</script> and <script type="math/tex" id="MathJax-Element-79358">Fu=\tau</script></p></li>
 <li><p><code>CWM c02 p39</code></p>
 
 <ol><li>trivial</li>
@@ -413,17 +424,17 @@
 <ol><li><code>TODO alg</code></li>
 <li>trivial</li>
 <li>trivial</li>
-<li><script type="math/tex" id="MathJax-Element-69910">Q^P</script> is preorder. they are only determined by the nodes in the image, also a natural transformation is requires that all arrows exists. so if there is one, there is only one</li>
+<li><script type="math/tex" id="MathJax-Element-79359">Q^P</script> is preorder. they are only determined by the nodes in the image, also a natural transformation is requires that all arrows exists. so if there is one, there is only one</li>
 <li><code>TODO: alg</code></li>
 <li><code>TODO: alg</code></li>
 <li>trivial</li>
-<li><script type="math/tex" id="MathJax-Element-69911">H: C\to B^2</script>, <script type="math/tex" id="MathJax-Element-69912">F: C\times 2\to B</script> <code>TODO</code></li></ol></li>
+<li><script type="math/tex" id="MathJax-Element-79360">H: C\to B^2</script>, <script type="math/tex" id="MathJax-Element-79361">F: C\times 2\to B</script> <code>TODO</code></li></ol></li>
 <li><p><strong>horizontal composition of natural transformations</strong> (notice the writing order). proof use the line -&gt; square -&gt; cube diagram</p>
 
-<ul><li><script type="math/tex" id="MathJax-Element-69913">\tau'\circ \tau = (T' \circ \tau)\cdot (\tau' \circ S)=\ldots</script></li>
-<li><script type="math/tex" id="MathJax-Element-69914">(\tau'\cdot\sigma')\circ (\tau\cdot\sigma)=(\tau'\circ\tau)\cdot(\sigma'\circ\sigma)</script>, also <script type="math/tex" id="MathJax-Element-69915">\id</script> arrow for horizontal is <script type="math/tex" id="MathJax-Element-69916">\id</script> for vertical. proof by the 4 cube diagram</li>
-<li><strong>double category</strong> satisfies the interchange law, <strong>2-category</strong> add <script type="math/tex" id="MathJax-Element-69917">\id</script> for horizontal composition is <script type="math/tex" id="MathJax-Element-69918">\id</script> for vertical</li></ul></li>
-<li><p>the functor category <script type="math/tex" id="MathJax-Element-69919">\_^{\_}</script> is itself a functor <script type="math/tex" id="MathJax-Element-69920">\Cat^\op\times \Cat\to \Cat</script> which looks like <script type="math/tex" id="MathJax-Element-69921">\hom</script></p></li>
+<ul><li><script type="math/tex" id="MathJax-Element-79362">\tau'\circ \tau = (T' \circ \tau)\cdot (\tau' \circ S)=\ldots</script></li>
+<li><script type="math/tex" id="MathJax-Element-79363">(\tau'\cdot\sigma')\circ (\tau\cdot\sigma)=(\tau'\circ\tau)\cdot(\sigma'\circ\sigma)</script>, also <script type="math/tex" id="MathJax-Element-79364">\id</script> arrow for horizontal is <script type="math/tex" id="MathJax-Element-79365">\id</script> for vertical. proof by the 4 cube diagram</li>
+<li><strong>double category</strong> satisfies the interchange law, <strong>2-category</strong> add <script type="math/tex" id="MathJax-Element-79366">\id</script> for horizontal composition is <script type="math/tex" id="MathJax-Element-79367">\id</script> for vertical</li></ul></li>
+<li><p>the functor category <script type="math/tex" id="MathJax-Element-79368">\_^{\_}</script> is itself a functor <script type="math/tex" id="MathJax-Element-79369">\Cat^\op\times \Cat\to \Cat</script> which looks like <script type="math/tex" id="MathJax-Element-79370">\hom</script></p></li>
 <li><p><code>CWM c02 p44</code></p>
 
 <ol><li>bijection. first one is by composing with…. <code>TODO</code> too many details</li>
@@ -434,10 +445,10 @@
 <li><code>TODO alg</code></li>
 <li><code>TODO</code></li>
 <li><code>TODO</code></li></ol></li>
-<li><p><strong>comma category</strong> <script type="math/tex" id="MathJax-Element-69922">(T\downarrow S)</script> where <script type="math/tex" id="MathJax-Element-69923">T: E\to C</script> and <script type="math/tex" id="MathJax-Element-69924">S: D\to C</script>. <script type="math/tex" id="MathJax-Element-69925">(C\downarrow a)</script> objects over <script type="math/tex" id="MathJax-Element-69926">a</script>. <script type="math/tex" id="MathJax-Element-69927">a\downarrow C</script> objects under <script type="math/tex" id="MathJax-Element-69928">a</script></p></li>
+<li><p><strong>comma category</strong> <script type="math/tex" id="MathJax-Element-79371">(T\downarrow S)</script> where <script type="math/tex" id="MathJax-Element-79372">T: E\to C</script> and <script type="math/tex" id="MathJax-Element-79373">S: D\to C</script>. <script type="math/tex" id="MathJax-Element-79374">(C\downarrow a)</script> objects over <script type="math/tex" id="MathJax-Element-79375">a</script>. <script type="math/tex" id="MathJax-Element-79376">a\downarrow C</script> objects under <script type="math/tex" id="MathJax-Element-79377">a</script></p></li>
 <li><p><code>CWM c02 p48</code></p>
 
-<ol><li><script type="math/tex" id="MathJax-Element-69929">K</script>-algebra as comma category</li>
+<ol><li><script type="math/tex" id="MathJax-Element-79378">K</script>-algebra as comma category</li>
 <li>trivial</li>
 <li>trivial</li>
 <li>trivial</li>
@@ -449,16 +460,18 @@
 <li><p><code>CWM c02 p51 TODO</code></p></li>
 </ul>
 
+
+
 <h3 id="chapter-03-universals-and-limits">chapter 03. universals and limits</h3>
 
 <ul>
-<li><p><script type="math/tex" id="MathJax-Element-69930">S: D\to C</script> is a functor and <script type="math/tex" id="MathJax-Element-69931">c\in C</script> <strong>universal arrow</strong> from <script type="math/tex" id="MathJax-Element-69932">c</script> to <script type="math/tex" id="MathJax-Element-69933">S</script> is a <script type="math/tex" id="MathJax-Element-69934">r\in D</script> and <script type="math/tex" id="MathJax-Element-69935">u: c\to Sr</script>, which is inital in comma category <script type="math/tex" id="MathJax-Element-69936">(c\downarrow S)</script> (or say: such that every pair <script type="math/tex" id="MathJax-Element-69937">d</script>, <script type="math/tex" id="MathJax-Element-69938">f</script> there is a unique arrow <script type="math/tex" id="MathJax-Element-69939">f': r\to d</script> where <script type="math/tex" id="MathJax-Element-69940">Sf'\circ u = f</script>. or every arrow <script type="math/tex" id="MathJax-Element-69941">f</script> to <script type="math/tex" id="MathJax-Element-69942">S</script> factors uniquely through the universal arrow <script type="math/tex" id="MathJax-Element-69943">u</script>)</p>
+<li><p><script type="math/tex" id="MathJax-Element-79379">S: D\to C</script> is a functor and <script type="math/tex" id="MathJax-Element-79380">c\in C</script> <strong>universal arrow</strong> from <script type="math/tex" id="MathJax-Element-79381">c</script> to <script type="math/tex" id="MathJax-Element-79382">S</script> is a <script type="math/tex" id="MathJax-Element-79383">r\in D</script> and <script type="math/tex" id="MathJax-Element-79384">u: c\to Sr</script>, which is inital in comma category <script type="math/tex" id="MathJax-Element-79385">(c\downarrow S)</script> (or say: such that every pair <script type="math/tex" id="MathJax-Element-79386">d</script>, <script type="math/tex" id="MathJax-Element-79387">f</script> there is a unique arrow <script type="math/tex" id="MathJax-Element-79388">f': r\to d</script> where <script type="math/tex" id="MathJax-Element-79389">Sf'\circ u = f</script>. or every arrow <script type="math/tex" id="MathJax-Element-79390">f</script> to <script type="math/tex" id="MathJax-Element-79391">S</script> factors uniquely through the universal arrow <script type="math/tex" id="MathJax-Element-79392">u</script>)</p>
 
 <ul><li>universal element</li>
-<li>iff the compose by <script type="math/tex" id="MathJax-Element-69944">u</script> function is a bijection <script type="math/tex" id="MathJax-Element-69945">D(r, d)\cong C(c, S d)</script> for each <script type="math/tex" id="MathJax-Element-69946">d</script> and natural in <script type="math/tex" id="MathJax-Element-69947">d</script> (viewing each side as a <script type="math/tex" id="MathJax-Element-69948">C\to \Set</script>). (proof: bijection is easy, natual is )</li>
-<li><script type="math/tex" id="MathJax-Element-69949">K: D\to \Set</script> is <strong>representable functor</strong> if there is natural isomorphism <script type="math/tex" id="MathJax-Element-69950">D(r, \_)\cong K</script></li>
-<li><code>TODO</code> any repsentation of functor <script type="math/tex" id="MathJax-Element-69951">K</script> is from a universal arrow from one point set <script type="math/tex" id="MathJax-Element-69952">*</script></li></ul></li>
-<li><p><code>TODO</code> for <script type="math/tex" id="MathJax-Element-69953">K: D\to \Set</script> and <script type="math/tex" id="MathJax-Element-69954">r\in D</script> there is <script type="math/tex" id="MathJax-Element-69955">y: \hom(D(r, \_), K)\cong Kr</script>, and it is natural in (<script type="math/tex" id="MathJax-Element-69956">K</script> and <script type="math/tex" id="MathJax-Element-69957">r</script>) (both side viewed as a functor from… to <script type="math/tex" id="MathJax-Element-69958">\Set</script>)</p></li>
+<li>iff the compose by <script type="math/tex" id="MathJax-Element-79393">u</script> function is a bijection <script type="math/tex" id="MathJax-Element-79394">D(r, d)\cong C(c, S d)</script> for each <script type="math/tex" id="MathJax-Element-79395">d</script> and natural in <script type="math/tex" id="MathJax-Element-79396">d</script> (viewing each side as a <script type="math/tex" id="MathJax-Element-79397">C\to \Set</script>). (proof: bijection is easy, natual is )</li>
+<li><script type="math/tex" id="MathJax-Element-79398">K: D\to \Set</script> is <strong>representable functor</strong> if there is natural isomorphism <script type="math/tex" id="MathJax-Element-79399">D(r, \_)\cong K</script></li>
+<li><code>TODO</code> any repsentation of functor <script type="math/tex" id="MathJax-Element-79400">K</script> is from a universal arrow from one point set <script type="math/tex" id="MathJax-Element-79401">*</script></li></ul></li>
+<li><p><code>TODO</code> for <script type="math/tex" id="MathJax-Element-79402">K: D\to \Set</script> and <script type="math/tex" id="MathJax-Element-79403">r\in D</script> there is <script type="math/tex" id="MathJax-Element-79404">y: \hom(D(r, \_), K)\cong Kr</script>, and it is natural in (<script type="math/tex" id="MathJax-Element-79405">K</script> and <script type="math/tex" id="MathJax-Element-79406">r</script>) (both side viewed as a functor from… to <script type="math/tex" id="MathJax-Element-79407">\Set</script>)</p></li>
 <li><p><code>CWM c03 p59</code></p>
 
 <ol><li><code>TODO</code></li>
@@ -474,11 +487,11 @@
 <li><code>TODO</code></li>
 <li><code>TODO</code></li>
 <li><code>TODO</code></li></ol></li>
-<li><p><strong>colimit</strong> is universal arrow from <script type="math/tex" id="MathJax-Element-69959">F\in C^J</script> to diagnoal functor <script type="math/tex" id="MathJax-Element-69960">\delta: C\to C^J</script> (means it maps into a master object, and the master object maps to other ones which mapped into by old objects) the arrows are <em>cone</em> (maps into the vertex)</p>
+<li><p><strong>colimit</strong> is universal arrow from <script type="math/tex" id="MathJax-Element-79408">F\in C^J</script> to diagnoal functor <script type="math/tex" id="MathJax-Element-79409">\delta: C\to C^J</script> (means it maps into a master object, and the master object maps to other ones which mapped into by old objects) the arrows are <em>cone</em> (maps into the vertex)</p>
 
 <ul><li><strong>diagonal functor</strong>, <strong>coproduct</strong>, <strong>injection</strong> <br>
 <ul><li><strong>infinite coproduct</strong></li>
-<li><strong>copower</strong> if <script type="math/tex" id="MathJax-Element-69961">A</script> in coproduct is equal. <script type="math/tex" id="MathJax-Element-69962">\coprod_x b</script> write as <script type="math/tex" id="MathJax-Element-69963">X\cdot b</script> (consider in <script type="math/tex" id="MathJax-Element-69964">\Set</script> it is <script type="math/tex" id="MathJax-Element-69965">X\times Y</script>)</li></ul></li>
+<li><strong>copower</strong> if <script type="math/tex" id="MathJax-Element-79410">A</script> in coproduct is equal. <script type="math/tex" id="MathJax-Element-79411">\coprod_x b</script> write as <script type="math/tex" id="MathJax-Element-79412">X\cdot b</script> (consider in <script type="math/tex" id="MathJax-Element-79413">\Set</script> it is <script type="math/tex" id="MathJax-Element-79414">X\times Y</script>)</li></ul></li>
 <li><strong>cokernel</strong> (normalily a quotient object) <br>
 <ul><li><strong>coqualizer</strong></li></ul></li>
 <li><strong>pushout</strong> <br>
@@ -487,14 +500,16 @@
 <li><p><strong>limit</strong></p>
 
 <ul><li><strong>product</strong>, <strong>projection</strong>, <strong>diagonal map</strong> <br>
-<ul><li>for all map <script type="math/tex" id="MathJax-Element-69966">f</script> have have <script type="math/tex" id="MathJax-Element-69967">f\times f</script></li></ul></li></ul></li>
+<ul><li>for all map <script type="math/tex" id="MathJax-Element-79415">f</script> have have <script type="math/tex" id="MathJax-Element-79416">f\times f</script></li></ul></li></ul></li>
 <li><p><code>CWM c03 p72 TODO</code></p></li>
 <li><p><strong>category with finite product</strong></p></li>
 <li><p><code>CWM c03 p74 TODO</code></p></li>
 <li><p><strong>group object</strong></p></li>
 <li><p><code>CWM c03 p76 TODO</code></p></li>
-<li><p>any functor <script type="math/tex" id="MathJax-Element-69968">K: D\to \Set</script> from a small category <script type="math/tex" id="MathJax-Element-69969">D</script> is a colimit of representable functors <script type="math/tex" id="MathJax-Element-69970">\hom(d, \_)</script></p></li>
+<li><p>any functor <script type="math/tex" id="MathJax-Element-79417">K: D\to \Set</script> from a small category <script type="math/tex" id="MathJax-Element-79418">D</script> is a colimit of representable functors <script type="math/tex" id="MathJax-Element-79419">\hom(d, \_)</script></p></li>
 </ul>
+
+
 
 <h3 id="chapter-04-adjoints">chapter 04. adjoints</h3>
 
