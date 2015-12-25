@@ -6,22 +6,7 @@
 ## notes
 
 
-* mathematics *([old math notes](mathematics.html) needs clean up)*
-	* **logic and computation**
-	* **[set theory](mathematics/foundation.html)**
-	* [universal algebra](mathematics/universal_algebra.html)
-	* **[category](mathematics/category.html)**
-	* **abstract algebra**
-	* **general topology**
-	* functions of a real variable
-	* [algebraic topology](mathematics/algebraic_topology.html)
-	* differential topology
-	* topological vector space & real analysis & functional analysis
-	* complex analysis
-	* differential geometry
-	* Lie algebra
-	* number theory
-	* algebraic geometry
+* [mathematics](mathematics/foundation.html) *([old math notes](mathematics.html) needs clean up)*
 * notes
 	* [on `cubicaltt.pdf`](notes/cubicaltt.html)
 
