@@ -1,6 +1,6 @@
 
 
-# snailya
+# <font color='#002b36'>अनात्मन्<font>
 
 
 ## notes
@@ -20,7 +20,7 @@
 ## about and links
 
 2015
-:   I am a dying programmer in Beijing
+:   I am a programmer in Beijing
 
 links
 :   mail: [molikto@gmail.com](mailto:molikto@gmail.com)
@@ -32,6 +32,9 @@ links
 ----
 
 ## what is my goal?
+
+**2015/12/27**
+: forget your existance.
 
 **added in 2015/12/17**
 : How we spend our days is, of course, how we spend our lives.
@@ -74,75 +77,7 @@ I use some tools to make my life organized. i use OmniFocus to **plan** and as *
 	* the GTM collection in my disk and other book collections
 	* the Internet
 
------
-## some quotes
-
-
-
-### science
-
-> *The scientist does not study nature because it is useful; he studies it because he delights in it, and he delights in it because it is beautiful. If nature were not beautiful, it would not be worth knowing, and if nature were not worth knowing, life would not be worth living.*
->
-> --- [Henri Poincaré](http://en.wikiquote.org/wiki/Henri_Poincar%C3%A9)
-
-<a></a>
-
-> *The most dangerous thought you can have as a creative person is to think you know what you're doing.*
->
-> --- [Richard Hamming](http://worrydream.com/refs/Hamming-TheArtOfDoingScienceAndEngineering.pdf)
-
-<a></a>
-
-> *The sciences do not try to explain, they hardly even try to interpret, they mainly make models. By a model is meant a mathematical construct which, with the addition of certain verbal interpretations, describes observed phenomena. The justification of such a mathematical construct is solely and precisely that it is expected to work.*
->
-> --- John von Neumann
-
-
-### math
-
-> *The mathematician’s patterns, like the painter’s or the poet’s must be beautiful; the ideas like the colours or the words, must fit together in a harmonious way. Beauty is the first test: there is no permanent place in the world for ugly mathematics.*
-> 
-> --- G. H. Hardy
-
-<a></a>
-
-> *Mathematics is the subject in which we never know what we are talking about, nor whether what we are saying is true.*
->
-> --- Bertrand Russell
-
-<a></a>
-> *In mathematics you don’t understand things. You just get used to them.*
->
-> --- John von Neumann
-
-<a></a>
-
-> *Mathematics is the art of giving the same name to different things.*
-> 
-> --- Henri Poincaré
-
-### programming
-
-> *I look at programming as having essentially two parts: figuring out what the processor actually needs to do to get something done, and then figuring out the most efficient way to express that in the language I’m using.*
-> 
-> --- [link](http://mollyrocket.com/casey/stream_0019.html#Semantic)
-
-<a></a>
-
-> *It's not the programming that pisses me off, it's the countless little annoyances that come with programming.*
-> 
-> --- [link](https://twitter.com/rickasaurus/status/476989822213840896)
-
-### ?
-
-> *To be uncertain is uncomfortable; but to be certain is ridiculous.*
-> 
-> --- ?
-
-
------
-
-
+----
 ## music
 
 I claim that Yann Tiersen is god. it is the Grothendieck in music. I also like
