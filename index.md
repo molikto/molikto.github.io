@@ -12,11 +12,6 @@
 
 ----
 
-
-[TOC]
-
-----
-
 ## about and links
 
 2015
