@@ -1,6 +1,6 @@
 
 
-# <font color='#002b36'>अनात्मन्<font>
+# Snailya<font color='#002b36'>, अनात्मन्<font>
 
 
 ## notes
@@ -29,7 +29,7 @@ links
 ## what is my goal?
 
 **2015/12/27**
-: forget your existance.
+: forget your existence.
 
 **added in 2015/12/17**
 : How we spend our days is, of course, how we spend our lives.
@@ -51,26 +51,12 @@ i think the goal should be changed. it should be "discover beauty". beauty takes
 -----	
 ## trivialities
 
-I use some tools to make my life organized. i use OmniFocus to **plan** and as **inbox**, Google Calendar to **record** process and **index** result, blogging and Zetero to **store**. how do i know if something goes to store or inbox? simple, stuff has content goes to store, stuff does not (like a reading list) goes to inbox, after the actual content is retrieved, goes to store
-
-* stackedit.io and export as blog
-	* big trunk of notes in relatively good formating
-	* meta-notes about all the stuff listed
-* Google Calendar and Calendar on Mac OS X
-    * used to record time usages it provide pointers into other sections
-    * also used to record non-technical stuff such as diary
-* OmniFocus
-    * keeps big project of todos
-    * small inboxes per project base
-    * todo for non-technical
-    * use the forecast view to determine what to do
-* Zetero --- stuff inside is stuff that at least you know about what it is
-    * books --- sometimes with inline notes
-    * papers --- sometimes with inline notes
-    * notes
+* root: [this page](https://github.com/molikto/molikto.github.io)
+* plan & todo: TODO
+* index by time: [Google Calendar](calendar.html)
+* index by subject: Zetero
+* notes taken: [this site](https://github.com/molikto/molikto.github.io)
 * outside world
-	* the GTM collection in my disk and other book collections
-	* the Internet
 
 ----
 ## music
@@ -81,3 +67,4 @@ I claim that Yann Tiersen is god. it is the Grothendieck in music. I also like
 * my little airport
 * 窦唯
 * Bach
+* and [more on Netease Music...](http://music.163.com/#/user/home?id=80469881)
