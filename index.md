@@ -52,8 +52,7 @@ i think the goal should be changed. it should be "discover beauty". beauty takes
 ## trivialities
 
 * root: [this page](https://github.com/molikto/molikto.github.io)
-* plan & todo: TODO
-* index by time: [Google Calendar](calendar.html)
+* plan & todo & index by time: [Google Calendar](calendar.html)
 * index by subject: Zetero
 * notes taken: [this site](https://github.com/molikto/molikto.github.io)
 * outside world
