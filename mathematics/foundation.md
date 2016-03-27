@@ -40,7 +40,7 @@ $$
 
 ## preface
 
-### references
+### roadmap
 
 * Set Theory, *Thomas Jech*
 * [Set Theory for Category Theory](http://arxiv.org/abs/0810.1279), *Michael A. Shulman*
