@@ -55,7 +55,7 @@ i think the goal should be changed. it should be "discover beauty". beauty takes
 * plan & todo & index by time: Google Calendar (cloud)
 	* item starts with TODO or DONE
 * things might needs look at: Bookmarks in Chrome (cloud)
-* index by subject: [Google Drive](https://drive.google.com/open?id=0B0Z2cAgdq7v6QkZjTEFOQjhaOVU) (cloud)
+* index by subject: Zotero (cloud)
 * notes taken: [this site](https://github.com/molikto/molikto.github.io) (github)
 * outside world
 
