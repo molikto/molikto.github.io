@@ -48,15 +48,16 @@ i think the goal should be changed. it should be "discover beauty". beauty takes
 **original**
 : experience and understand the world in the finite amount of time i have. quoting Yann Tiersen "I am gonna live anyhow". also *Adventure Time* S06E43 *The Comet*.
 
------	
+-----
+
 ## trivialities
 
-* root: [this site](https://github.com/molikto/molikto.github.io) (github)
+* root: this site (github)
 * plan & todo & index by time: Google Calendar (cloud)
-	* item starts with TODO or DONE
+	* item starts with TODO, ABORT, NONEED or DONE
 * things might needs look at: Bookmarks in Chrome (cloud)
 * index by subject: Zotero (cloud)
-* notes taken: [this site](https://github.com/molikto/molikto.github.io) (github)
+* notes taken: this site (github)
 * outside world
 
 ----
