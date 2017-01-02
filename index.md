@@ -34,4 +34,4 @@ I claim that Yann Tiersen is god. it is the Grothendieck in music. I also like
 * my little airport
 * 窦唯
 * Bach
-* and [more on Netease Music...](http://music.163.com/#/user/home?id=80469881)
+* and more on [Netease Music](http://music.163.com/#/user/home?id=80469881)
