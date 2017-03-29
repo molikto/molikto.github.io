@@ -1,7 +1,7 @@
 body {
  color: #c0c5ce;
  background-color: #2b303b;
- font-size: 1.1rem;
+ font-size: 1.05rem;
  font-family: 'Gentium Book Basic', serif;
 }
 
@@ -40,4 +40,20 @@ h2 {
 
 h1, h2, h3, h4, h5, h6, h7 {
     font-weight: normal;
+}
+
+.time, .time:hover, .time:focus {
+  color : #696f7d;
+}
+
+.index-time {
+  width: 7em;
+  text-align: center;
+  display: inline-block;
+}
+
+blockquote {
+    padding: .5rem 1rem 0rem 1rem;
+    margin-bottom: 0.5rem;
+    border-left: .25rem solid rgba(255, 255, 255, 0.1);
 }

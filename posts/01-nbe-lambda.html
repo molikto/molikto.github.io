@@ -1,8 +1,8 @@
-<html><head><meta charset="UTF-8" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><title>Tutorial: Compiled Normalization by Evaluation for Untyped Lambda Calculus (in Scala)</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /><script>if (window.location.protocol == "https:")
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic" rel="stylesheet" type="text/css" /><link href="/resources/solarized-dark.css" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" type="text/css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script><script src="/resources/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>Tutorial: Compiled Normalization by Evaluation for Untyped Lambda Calculus (in Scala)</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /><script>if (window.location.protocol == "https:")
     window.location.href = "http:" + window.location.href.substring(window.location.protocol.length);
-    </script></head><body><div style="padding: 24px;margin: 0 auto;max-width: 960px;"><h1><a href="/">Snailya</a></h1><h2>Tutorial: Compiled Normalization by Evaluation for Untyped Lambda Calculus (in Scala)</h2><blockquote>
+  </script></head><body><div style="padding: 24px;margin: 0 auto;max-width: 960px;"><h1><a href="/">Snailya</a></h1><div><a class="time" href="https://github.com/molikto/blog/commits/master/markdown/posts/01-nbe-lambda.md"><time datetime="2017-03-29T10:51:42+08:00">2017-03-29</time></a></div><h2>Tutorial: Compiled Normalization by Evaluation for Untyped Lambda Calculus (in Scala)</h2><blockquote>
 <p>This tutorial assumes you know untyped lambda calculus. And jargons like &quot;normal form&quot;, &quot;$\beta$-reduction&quot;. <em>Types and Programming Languages</em>, Chapter 3 will be sufficient.
-The code will be written in Scala, but the code should be readable for any one familiar with other functional languages</p>
+The code will be written in Scala, but it should be readable for any one familiar with functional languages</p>
 </blockquote>
 <h2>Basics</h2>
 <p>Our terms of lambda calculus is defined as this, we are using <a href="https://en.wikipedia.org/wiki/De_Bruijn_index">de Bruijn index</a>:</p>
@@ -87,6 +87,18 @@ def nbe(t: Term): Term = {
   readback(compiled)
 }
 </code></pre>
-<p>Structure of the code:
-<code>emitScala</code> will emit the Scala code that we can compile later</p>
-</div></body></html>
+<p>Full code <a href="https://github.com/molikto/ChihuahuaLang/blob/master/common/src/main/scala/UntypedLambdaCalculus.scala#L135">here</a>.</p>
+<script>
+renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\(", right: "\\)", display: false}
+              ]
+          }
+      );
+
+</script></div></body></html>
