@@ -1,0 +1,43 @@
+body {
+ color: #c0c5ce;
+ background-color: #2b303b;
+ font-size: 1.1rem;
+ font-family: 'Gentium Book Basic', serif;
+}
+
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #3f4553;
+    margin: 1em 0;
+    padding: 0;
+}
+
+a {
+  color: #D98C74;
+}
+
+a:hover, a:focus {
+  color: #D98C74;
+  // background-color: rgba(217, 140, 116, 0.15);
+}
+
+h1 > a, h1 > a:hover, h1 > a:focus {
+    color: #8fa0b4;
+    font-size: 4rem;
+}
+
+h1 {
+    text-align: center;
+    margin: 0em auto 1.5em auto;
+}
+h2 {
+    font-size: 2.5rem;
+}
+
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-weight: normal;
+}
