@@ -1,0 +1,168 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic" rel="stylesheet" type="text/css" /><link href="/resources/solarized-dark.css" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" type="text/css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script><script src="/resources/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>Algorithm Cheatsheet</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /></head><body><div id="body"><h1><a href="/">Snailya</a></h1><div><a class="time" href="https://github.com/molikto/blog/commits/master//markdown/posts/02-algorithm-cheatsheet.md"><time datetime="2017-04-08T15:02:45+08:00">2017-04-08</time></a></div><h2>Algorithm Cheatsheet</h2><ul>
+<li>
+<p><strong>numbers</strong></p>
+<ul>
+<li>integer add, multi, division, module</li>
+<li><strong>gcd</strong> using <strong>Euclid rule</strong> <code>gcd(a, b) = gcd(a mod b, b)</code></li>
+</ul>
+</li>
+<li>
+<p><strong>linear structures</strong></p>
+<ul>
+<li>store elements with <em>external</em> order</li>
+<li>most space is <code>n</code></li>
+<li><strong>array</strong>
+<ul>
+<li>access <code>1</code></li>
+<li>search, insert, delete <code>n</code></li>
+</ul>
+</li>
+<li><strong>linked list</strong>
+<ul>
+<li><strong>functional</strong>
+<ul>
+<li>functional linked list allows structural sharing, they are actually trees where child points parent</li>
+<li>cannot do insert, delete</li>
+</ul>
+</li>
+<li><strong>singly linked</strong>
+<ul>
+<li>head <code>1</code></li>
+<li>last <code>n</code></li>
+</ul>
+</li>
+<li><strong>doubly linked</strong>
+<ul>
+<li>head <code>1</code></li>
+<li>last <code>1</code></li>
+<li>can be used to implement deque</li>
+</ul>
+</li>
+<li>access, search <code>n</code></li>
+<li>insert, delete <code>1</code></li>
+</ul>
+</li>
+<li><strong>skip list</strong> (TODO)</li>
+<li><strong>sorting</strong> <a href="https://www.toptal.com/developers/sorting-algorithms">animations</a> <a href="http://algs4.cs.princeton.edu/cheatsheet/">Sedgewick</a>
+<ul>
+<li>if the content of the linear structure has internal order, it can be sorted, and thus became a symbol table</li>
+<li>except for mergesort, all others can be made <strong>inplace</strong></li>
+<li><strong>selection</strong> select the ith element forall n, swap (not stable) ith element with it. <code>1/2 * n^2</code></li>
+<li><strong>insertion</strong> insert ith element into prefix, stable. best <code>n</code>, worst <code>1/2 * n^2</code></li>
+<li><strong>bubble</strong> pop small element on the way, to ith for all n, is stable. same as insertion</li>
+<li><strong>shellsort</strong></li>
+<li><strong>mergesort</strong> sort left, then sort right, then merge, stable. <code>n * lg n</code></li>
+<li><strong>quicksort</strong> select a pivot, move it to top (not stable), then move all element smaller before it, then sort two sub array. average <code>n * lg n</code>, worst <code>1/2 * n^2</code></li>
+<li><strong>heapsort</strong> in place, not stable, best <code>n</code>, worst <code>2 * n * lg n</code> (TODO)</li>
+<li><strong>counting sort</strong> for bounded finite domain, <code>n</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>graph structures</strong></p>
+<ul>
+<li>
+<p>undirected graph</p>
+<ul>
+<li><strong>shortest path</strong>
+<ul>
+<li><strong>BFS</strong> for unit weights <code>E + V</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>directed graph</p>
+</li>
+<li>
+<p>weighted graph</p>
+<ul>
+<li><strong>Dijkstra</strong> for non-negative weights <code>E * log V</code></li>
+<li><strong>Bellman-Ford</strong> for negative weights <code>V(V + E)</code></li>
+</ul>
+</li>
+<li>
+<p><strong>all pair shortest path</strong></p>
+<ul>
+<li><strong>Floyd-Warshall</strong> <code>V^3</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Eulerian cycle</strong> DFS</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>disjoint sets</strong></p>
+<ul>
+<li><strong>quick-union</strong> and <strong>weighted quick union</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>priority queues</strong> insert, delete, <code>lg n</code>, find min <code>1</code></p>
+<ul>
+<li><strong>binary heap</strong>, complete binary tree (using an array) that childs is smaller than parent
+<ul>
+<li>insert: append the element, and move it up until...</li>
+<li>delete: move last element their, then move it down</li>
+</ul>
+</li>
+<li><strong>Fibonacci heap</strong> (TODO)</li>
+</ul>
+</li>
+<li>
+<p><strong>lookup tables</strong></p>
+<ul>
+<li>no constraints
+<ul>
+<li>linear structures not sorted
+<ul>
+<li>search, insert, delete <code>n</code></li>
+</ul>
+</li>
+<li><strong>hash table</strong> (separate chaining, linear probing)
+<ul>
+<li><strong>uniform hashing</strong></li>
+<li>search, insert, delete, average <code>1</code>, worst <code>n</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>elements with linear order
+<ul>
+<li>sorted array
+<ul>
+<li>search <code>log n</code></li>
+<li>insert delete <code>n</code></li>
+</ul>
+</li>
+<li>tree structure. their average (worst except bst) search, insert, delete is all <code>log n</code>
+<ul>
+<li><strong>binary search tree</strong></li>
+<li><strong>red-black tree</strong></li>
+<li><strong>Cartesian tree</strong> (TODO)</li>
+<li><strong>B-tree</strong> (TODO)</li>
+<li><strong>splay tree</strong> (TODO)</li>
+<li><strong>AVL tree</strong> (TODO)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<script>
+renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\(", right: "\\)", display: false}
+              ]
+          }
+      );
+
+</script></div></body></html>
