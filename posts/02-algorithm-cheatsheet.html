@@ -3,7 +3,7 @@
 <p><strong>numbers</strong></p>
 <ul>
 <li>integer add, multi, division, module</li>
-<li><strong>gcd</strong> using <strong>Euclid rule</strong> <code>gcd(a, b) = gcd(a mod b, b)</code></li>
+<li><strong>gcd</strong> using <strong>Euclid rule</strong> $gcd(a, b) = gcd(a \text{ mod } b, b)$</li>
 </ul>
 </li>
 <li>
@@ -40,51 +40,21 @@
 <li><strong>sorting</strong>, <a href="https://www.toptal.com/developers/sorting-algorithms">animations</a>, <a href="http://algs4.cs.princeton.edu/cheatsheet/">Sedgewick</a>
 <ul>
 <li>if the content of the linear structure has internal order, it can be sorted, and thus became a symbol table</li>
-<li>except for mergesort, all others can be made <strong>inplace</strong></li>
+<li>except for mergesort, all others can be made <strong>in-place</strong></li>
 <li><strong>selection</strong> select the ith element forall n, swap (not stable) ith element with it. <code>1/2 * n^2</code></li>
 <li><strong>insertion</strong> insert ith element into prefix, stable. best <code>n</code>, worst <code>1/2 * n^2</code></li>
 <li><strong>bubble</strong> pop small element on the way, to ith for all n, is stable. same as insertion</li>
-<li><strong>shellsort</strong></li>
+<li><strong>shellsort</strong> (TODO)</li>
 <li><strong>mergesort</strong> sort left, then sort right, then merge, stable. <code>n * lg n</code></li>
-<li><strong>quicksort</strong> select a pivot, move it to top (not stable), then move all element smaller before it, then sort two sub array. average <code>n * lg n</code>, worst <code>1/2 * n^2</code></li>
+<li><strong>quicksort</strong> select a pivot, move it to top (not stable), then move all element smaller before it, then sort two sub array. average <code>n * lg n</code>, worst <code>1/2 * n^2</code>
+<ul>
+<li>also can implement <strong>quickselect</strong></li>
+</ul>
+</li>
 <li><strong>heapsort</strong> in place, not stable, best <code>n</code>, worst <code>2 * n * lg n</code> (TODO)</li>
+</ul>
+</li>
 <li><strong>counting sort</strong> for bounded finite domain, <code>n</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>graph structures</strong></p>
-<ul>
-<li>
-<p>undirected graph</p>
-<ul>
-<li><strong>shortest path</strong>
-<ul>
-<li><strong>BFS</strong> for unit weights <code>E + V</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>directed graph</p>
-</li>
-<li>
-<p>weighted graph</p>
-<ul>
-<li><strong>Dijkstra</strong> for non-negative weights <code>E * log V</code></li>
-<li><strong>Bellman-Ford</strong> for negative weights <code>V(V + E)</code></li>
-</ul>
-</li>
-<li>
-<p><strong>all pair shortest path</strong></p>
-<ul>
-<li><strong>Floyd-Warshall</strong> <code>V^3</code></li>
-</ul>
-</li>
-<li>
-<p><strong>Eulerian cycle</strong> DFS</p>
-</li>
 </ul>
 </li>
 <li>
@@ -144,6 +114,41 @@
 </ul>
 </li>
 </ul>
+</li>
+<li>
+<p><strong>graph</strong>, represented by adjacency lists</p>
+<ul>
+<li>algorithms</li>
+<li><strong>DFS</strong>, mark current, then recursively call adjs, ignore marked <code>V + E</code>
+<ul>
+<li><strong>topological sort</strong> and <strong>cycle detection</strong>, by finding final trees in it, and add all things are final to an array</li>
+<li><strong>connected components</strong></li>
+</ul>
+</li>
+<li><strong>BFS</strong> <code>V + E</code>, <strong>Dijkstra</strong> <code>E * log V</code>, <strong>A*</strong>, mark current, put childs into PQ, try next
+<ul>
+<li>directed/undirected <strong>single source shortest path</strong> for uniform/positive-weighted graph</li>
+</ul>
+</li>
+<li><strong>IDDFS</strong>, <strong>IDA*</strong> (TODO)</li>
+<li><strong>Bellman-Ford</strong> for negative weights <strong>single source shorted path</strong>, detects negative cycles <code>V(V + E)</code></li>
+<li><strong>Floyd-Warshall</strong> for <strong>all pair shorted path</strong> negative weights without negative cycles <code>V^3</code></li>
+<li><strong>Kosaraju</strong> for <strong>strong components</strong> in directed graphs. dfs in the order of (reverse postorder of the reverse graph) <code>V + E</code>.
+consider a tree with first branch directional down, second bidirectional. if you reverse it, you get a tree
+with first branch directional up, second bidirectional. if you do the reverse postorder search from end of first
+tree, you will do it one pass, if you do it from left tree, you get two pass, the top of stack is always elements
+least reached if you follow (in original graph) the arrow... (TODO)</li>
+<li><strong>minimal spanning tree</strong>
+<ul>
+<li><strong>Prim</strong></li>
+<li><strong>Boruvka</strong></li>
+</ul>
+</li>
+<li><strong>Eulerian cycle</strong> DFS</li>
+</ul>
+</li>
+<li>
+<p><strong>string</strong></p>
 </li>
 </ul>
 <script>
