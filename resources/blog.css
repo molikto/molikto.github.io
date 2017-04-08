@@ -5,6 +5,13 @@ body {
  font-family: 'Gentium Book Basic', serif;
 }
 
+strong {
+    font-weight: bold;
+    color: #a0a5ce;
+    font-size: 90%;
+    font-family: 'Roboto', sans-serif;
+}
+
 #body {
  max-width: 60em;
  margin: 0 auto;
@@ -68,9 +75,24 @@ h1, h2, h3, h4, h5, h6, h7 {
   display: inline-block;
 }
 
+li > p {
+  margin-bottom: 0px;
+}
 
 blockquote {
     padding: .5rem 1rem 0rem 1rem;
     margin-bottom: 0.5rem;
     border-left: .25rem solid rgba(255, 255, 255, 0.1);
 }
+
+code {
+    font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    padding: .15rem .2rem;
+    font-size: 90%;
+    color: #f0c5ce;
+    background-color: #3b404b;
+    border-radius: .15rem;
+}
+
+
+
