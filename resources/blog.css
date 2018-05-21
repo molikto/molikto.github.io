@@ -87,6 +87,7 @@ blockquote {
 
 code {
     font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    color: #c5c6b4;
     padding: .15rem .2rem;
     font-size: 90%;
     color: #f0c5ce;
