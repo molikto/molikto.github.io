@@ -18,9 +18,13 @@ examples of this kind is not included in this comparison, these are basically pl
 ### differences between WYSIWYG and structural editor
 there are editors that are both structural and WYSIWYG. compare them with this example:
 
-* only WYSIWYG: ![](03/Screen%20Shot%202018-05-21%20at%2012.16.49%201.png). you don’t know if you type  a new character, what format will it appear in
-* structural: ![](03/Screen%20Shot%202018-05-21%20at%2012.17.18%201.png). you know the cursor format by some additional glyphs that won’t show up when printed
-* both: ![](03/May-21-2018%2012-20-02.gif)
+* only WYSIWYG (Google Docs): ![](03/Screen%20Shot%202018-05-21%20at%2012.16.49%201.png). you don’t know if you type  a new character, what format will it appear in (but you can if the current format is displayed in like for example a format menu)
+* structural (Bear.app): ![](03/Screen%20Shot%202018-05-21%20at%2012.17.18%201.png). you know the cursor format by some additional glyphs that won’t show up when printed
+* both (TeXmacs): ![](03/May-21-2018%2012-20-02.gif) it works like the structural one, with a zero-width control glyph
+
+there are also other differences: structural editor usually has some semantical AST construction (heading), while WYSIWYG editor usually has some surface AST construction (font, font size).
+but there is no hard rules
+
 ### differences between a plain text editor and structural editor
 
 structural editor might has different editing operations you can perform. also the presentation is more “WYSIWYG” than plain text editors, for example, showing a url with no url plain text (but a modal dialog to edit the url), displaying images inline (instead of a url/file name)
@@ -71,6 +75,8 @@ so there are `Document` which is a list of **block**s and each block is either a
 * no complex text layout support ![](03/Screen%20Shot%202018-05-21%20at%2012.51.04.png)
 * complex selection and copy & paste behavior ![](03/May-21-2018%2012-35-35.gif)
 * editing commands ![](03/May-21-2018%2013-22-42.gif)
+    * seems all commands will start with `\`, and when this char is entered, it create a command node immediately 
+    * copy pasting `\` char will not create a command
 * interoperability with other format: import/export as LaTeX
 
 ## Bear.app
