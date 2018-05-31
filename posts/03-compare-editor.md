@@ -40,12 +40,16 @@ so there are `Document` which is a list of **block**s and each block is either a
 ## Aspects
 * type of editor
 * underlining tech stack
-	* macOS Cocoa text API: provides out of box spell checker, RTL support
-	* web: provides out of box spell checker, RTL support
+	* macOS Cocoa text API: provides out of box spell checker, RTL support, multiple selection (by Command and Option keys)
+	* web: provides out of box spell checker, RTL support, no multiple selection
 	* custom made
 * [RTL script](https://en.wikipedia.org/wiki/Right-to-left) support
-* selection behavior: some editor will only allow you to select a whole block level item when you across the block boundary
+* selection behavior
+    * structural editors might only allow you to select block level items when you across the block boundary
+    * some editor support multiple selections
+    * (not in our scope, but some plain text editor support multiple cursors)
 * copy & paste behavior
+    * for macOS for example, when you copy something, you copy the content to each of all available pasteboard, depending on where you are pasting to, a proper pasteboard is selected to paste from it
 * mouse free editing
 	* text to AST smart conversion
 	* keyboard navigation like Vim: most of the candidates has poor support for this
@@ -73,7 +77,9 @@ so there are `Document` which is a list of **block**s and each block is either a
     ![](03/May-21-2018%2012-47-23.gif)
 * custom tech (?)
 * no complex text layout support ![](03/Screen%20Shot%202018-05-21%20at%2012.51.04.png)
-* complex selection and copy & paste behavior ![](03/May-21-2018%2012-35-35.gif)
+* complex selection and copy & paste behavior:
+there is two level of selection block level and inline level
+![](03/May-21-2018%2012-35-35.gif)
 * editing commands ![](03/May-21-2018%2013-22-42.gif)
     * seems all commands will start with `\`, and when this char is entered, it create a command node immediately 
     * copy pasting `\` char will not create a command
@@ -87,6 +93,7 @@ so there are `Document` which is a list of **block**s and each block is either a
 		* ![](03/May-21-2018%2013-10-58.gif)
 		* ![](03/May-21-2018%2013-12-36.gif)
 * the implementation is based on macOS Cocoa text API
+* selection: can select multiple ranges, and can use keyboard to navigate them
 * data model: import/export from Markdown works ok, but not entirely the same
 ## web based WYSIWYG editors
 seems all work the same to me…
