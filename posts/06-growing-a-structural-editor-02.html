@@ -1,4 +1,12 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel="alternate" type="application/atom+xml" href="https://molikto.github.io/feed.xml" title="molikto's weblog" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700|Roboto" rel="stylesheet" type="text/css" /><link href="/resources/solarized-dark.css" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" type="text/css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script><script src="/resources/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>Growing a Structural Editor: Layout Combinators</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /></head><body><div id="body"><h1><a href="/">molikto's weblog</a></h1><div><a class="time" href="https://github.com/molikto/blog/commits/master//markdown/posts/06-growing-a-structural-editor-02.md"><time datetime="2019-12-15T16:48:53+08:00">2019-12-15</time></a></div><h2>Growing a Structural Editor: Layout Combinators</h2><p>We have a tree editor now, but the visualization as a tree is not user-friendly, we need to layout the information in the tree in a compat way.</p>
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel="alternate" type="application/atom+xml" href="https://molikto.github.io/feed.xml" title="molikto's weblog" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700|Roboto" rel="stylesheet" type="text/css" /><link href="/resources/solarized-dark.css" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" type="text/css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script><script src="/resources/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>Growing a Structural Editor: Layout Combinators</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /></head><body><div id="body"><h1><a href="/">molikto's weblog</a></h1><div><a class="time" href="https://github.com/molikto/blog/commits/master//markdown/posts/06-growing-a-structural-editor-02.md"><time datetime="2019-12-15T16:48:53+08:00">2019-12-15</time></a></div><h2>Growing a Structural Editor: Layout Combinators</h2><ul>
+<li>Series
+<ol>
+<li><a href="posts/05-growing-a-structural-editor.html">A Bootstrapped Tree Editor</a></li>
+<li><a href="posts/05-growing-a-structural-editor-02.html">Layout Combinators</a></li>
+</ol>
+</li>
+</ul>
+<p>We have a tree editor now, but the visualization as a tree is not user-friendly, we need to layout the information in the tree in a compat way.</p>
 <p>The algorithm to do this is called a pretty printer. It is just traditionally pretty print print to a plain text file, but our pretty printer will try to layout GUI widgets.</p>
 <p>The reverse of a parser combinator is a layout combinator. We have these basic combinator:</p>
 <pre><code class="language-scala">sealed trait Template
@@ -6,10 +14,10 @@ object Template {
   case class Str(content: String) extends Template
   case class Field(name: String) extends Template
   case class Tree(
-    before: Seq[Template],
+    start: Seq[Template],
     content: Seq[Template],
     separator: Option[Template],
-    after: Seq[Template]
+    end: Seq[Template]
   ) extends Template
   case class Compose(content: Seq[Template]) extends Template
 }
