@@ -63,3 +63,7 @@ Here `BlockFrag.Compose` will have the invariant that one of it's content must b
 
 Each AST node can have it's `Frag`, and we have created a representation of the layout result in a compositional way. This makes caching possible, so we don't re-line-break or re-measure when possible.
 
+The thing looks like this:
+
+![](growing-structural/02.png)
+

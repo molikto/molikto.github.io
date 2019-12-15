@@ -60,6 +60,10 @@ val type = Type.Sum(
 )
 ```
 
+The whole thing kind looks like this:
+
+![](growing-structural/01.png)
+
 --- 
 
 The idea of a generic framework for structural editor is largely inspired by JetBrains MPS.
