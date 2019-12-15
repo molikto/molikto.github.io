@@ -66,4 +66,6 @@ The whole thing kind looks like this:
 
 --- 
 
+[Project source code](https://github.com/molikto/medit).
+
 The idea of a generic framework for structural editor is largely inspired by JetBrains MPS.

@@ -67,3 +67,7 @@ The thing looks like this:
 
 <img src="growing-structural/02.png" alt="drawing" width="800px"/>
 
+------
+
+[Project source code](https://github.com/molikto/medit).
+
