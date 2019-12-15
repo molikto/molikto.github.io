@@ -1,0 +1,61 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel="alternate" type="application/atom+xml" href="https://molikto.github.io/feed.xml" title="molikto's weblog" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700|Roboto" rel="stylesheet" type="text/css" /><link href="/resources/solarized-dark.css" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" type="text/css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script><script src="/resources/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>Growing a Structural Editor: A Bootstrapped Tree Editor</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /></head><body><div id="body"><h1><a href="/">molikto's weblog</a></h1><div><a class="time" href="https://github.com/molikto/blog/commits/master//markdown/posts/05-growing-a-structural-editor.md"><time datetime="2019-12-15T16:48:53+08:00">2019-12-15</time></a></div><h2>Growing a Structural Editor: A Bootstrapped Tree Editor</h2><ol>
+<li><a href="05-growing-a-structural-editor.html">A Bootstrapped Tree Editor</a></li>
+<li><a href="05-growing-a-structural-editor-02.html">Layout Combinators</a></li>
+</ol>
+<p>Programming language compilers normally parse texts into ASTs, and an alternative is to let users to directly edit the AST.</p>
+<p>We then need a editor for AST. We want our editor to be a framework for all ASTs. So first we need a way to specify an AST. A basic structure is like this:</p>
+<p>A language is a sequence of named types, and a type tag of the root type.</p>
+<pre><code class="language-scala">case class Language(types: Seq[Type], root: TypeTag)
+</code></pre>
+<p><code>Type</code> is just sum and product:</p>
+<pre><code class="language-scala">sealed trait Type
+object Type {
+  case class Record(name: String, fields: Seq[NameTypeTag]) extends Type
+  case class Sum(name: String, cases: Seq[Case]) extends Type
+}
+
+case class NameTypeTag(name: String, tag: TypeTag)
+
+case class Case(name: String, fields: Seq[NameTypeTag])
+</code></pre>
+<p>And <code>TypeTag</code> is collections or a reference to a named tag, or a primtive type, like <code>Str</code>:</p>
+<pre><code class="language-scala">sealed trait TypeTag
+object TypeTag {
+  case object Str extends TypeTag
+  case class Opt(item: TypeTag) extends TypeTag
+  case class Arr(item: TypeTag) extends TypeTag
+  case class Bag(item: TypeTag) extends TypeTag
+  case class Ref(name: String) extends TypeTag
+}
+</code></pre>
+<p>Then it just so happens this framework is able to express it's own grammar. With some basic UI and basic key-binding, we will be able to create a syntax tree editor, and then bootstrap to edit the meta-syntax.</p>
+<p>For example, <code>Type</code> in it's own meta language is:</p>
+<pre><code class="language-scala">val type = Type.Sum(
+  &quot;type&quot;,
+  Seq(
+    Case(&quot;record&quot;, Seq(
+      NameTypeTag(&quot;name&quot;, TypeTag.Str),
+      NameTypeTag(&quot;fields&quot;, TypeTag.Arr(TypedTag.Ref(&quot;name_type_tag&quot;))),
+    )),
+    Case(&quot;sum&quot;, Seq(
+      ...
+    ))
+  )
+)
+</code></pre>
+<hr />
+<p>The idea of a generic framework for structural editor is largely inspired by JetBrains MPS.</p>
+<script>
+renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\(", right: "\\)", display: false}
+              ]
+          }
+      );
+
+</script><div id="commento"><script src="https://cdn.commento.io/js/commento.js" data-css-override="https://molikto.github.io/resources/my-commento.css"></script></div></div></body></html>

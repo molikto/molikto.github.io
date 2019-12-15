@@ -1,0 +1,228 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel="alternate" type="application/atom+xml" href="https://molikto.github.io/feed.xml" title="molikto's weblog" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700|Roboto" rel="stylesheet" type="text/css" /><link href="/resources/solarized-dark.css" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" type="text/css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script><script src="/resources/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>Algorithm Cheatsheet</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /></head><body><div id="body"><h1><a href="/">molikto's weblog</a></h1><div><a class="time" href="https://github.com/molikto/blog/commits/master//markdown/posts/02-algorithm-cheatsheet.md"><time datetime="2017-04-08T15:02:45+08:00">2017-04-08</time></a></div><h2>Algorithm Cheatsheet</h2><p>mostly based on <a href="http://algs4.cs.princeton.edu/cheatsheet/">Sedgewick book</a></p>
+<hr />
+<ul>
+<li><strong>numbers</strong>
+<ul>
+<li>integer add, multi, division, module</li>
+<li><strong>gcd</strong> using <strong>Euclid rule</strong> $gcd(a, b) = gcd(a \text{ mod } b, b)$</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li><strong>linear structures</strong>
+<ul>
+<li>store elements with <em>external</em> order</li>
+<li>most space is <code>n</code></li>
+<li><strong>array</strong>
+<ul>
+<li>access <code>1</code></li>
+<li>search, insert, delete <code>n</code></li>
+</ul>
+</li>
+<li><strong>linked list</strong>
+<ul>
+<li><strong>functional</strong>
+<ul>
+<li>functional linked list allows structural sharing, they are actually trees where child points parent</li>
+<li>cannot do insert, delete</li>
+</ul>
+</li>
+<li><strong>singly linked</strong></li>
+<li><strong>doubly linked</strong>
+<ul>
+<li>last <code>1</code></li>
+<li>can be used to implement deque</li>
+</ul>
+</li>
+<li>head <code>1</code>, access, search <code>n</code></li>
+<li>insert, delete <code>1</code></li>
+</ul>
+</li>
+<li><strong>sorting</strong>, <a href="https://www.toptal.com/developers/sorting-algorithms">animations</a>
+<ul>
+<li>general data
+<ul>
+<li>if the content of the linear structure has internal order, it can be sorted, and thus became a symbol table</li>
+<li>except for mergesort, all others can be made <strong>in-place</strong></li>
+<li><strong>selection</strong> select the ith element forall n, swap (not stable) ith element with it. <code>1/2 * n^2</code></li>
+<li><strong>insertion</strong> insert ith element into prefix, stable. best <code>n</code>, worst <code>1/2 * n^2</code></li>
+<li><strong>bubble</strong> pop small element on the way, to ith for all n, is stable. same as insertion</li>
+<li><strong>shellsort</strong> (TODO)</li>
+<li><strong>mergesort</strong> sort left, then sort right, then merge, stable. <code>n * lg n</code>
+<ul>
+<li><strong>swap count problem</strong></li>
+</ul>
+</li>
+<li><strong>quicksort</strong> select a pivot, move it to top (not stable), then move all element smaller before it, then sort two sub array. average <code>n * lg n</code>, worst <code>1/2 * n^2</code>
+<ul>
+<li>also can implement <strong>quickselect</strong></li>
+</ul>
+</li>
+<li><strong>heapsort</strong> in place, not stable, best <code>n</code>, worst <code>2 * n * lg n</code> (TODO)</li>
+</ul>
+</li>
+<li><strong>counting sort</strong> for bounded finite domain, <code>n</code></li>
+<li><strong>string sort</strong> with small alphabet (TODO)</li>
+</ul>
+</li>
+<li><strong>string substring</strong> algorithms (TODO)
+<ul>
+<li><strong>regex</strong> by building a NFA</li>
+</ul>
+</li>
+<li><strong>compression</strong> (TODO)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li><strong>disjoint sets</strong>
+<ul>
+<li><strong>quick-union</strong> and <strong>weighted quick union</strong></li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li><strong>priority queues</strong> insert, delete, <code>lg n</code>, find min <code>1</code>
+<ul>
+<li><strong>binary heap</strong>, complete binary tree (using an array) that childs is smaller than parent
+<ul>
+<li>insert: append the element, and move it up until...</li>
+<li>delete: move last element their, then move it down</li>
+</ul>
+</li>
+<li><strong>Fibonacci heap</strong> (TODO)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li><strong>lookup tables</strong>
+<ul>
+<li>no constraints
+<ul>
+<li>linear structures not sorted
+<ul>
+<li>search, insert, delete <code>n</code></li>
+</ul>
+</li>
+<li><strong>hash table</strong> (separate chaining, linear probing)
+<ul>
+<li><strong>uniform hashing</strong></li>
+<li>search, insert, delete, average <code>1</code>, worst <code>n</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>elements with linear order
+<ul>
+<li>sorted array
+<ul>
+<li><strong>binary search</strong> <code>log n</code></li>
+<li>insert, delete <code>n</code></li>
+</ul>
+</li>
+<li>tree structure. their average (worst except bst) search, insert, delete is all <code>log n</code>
+<ul>
+<li><strong>binary search tree</strong></li>
+<li>balanced trees (TODO)
+<ul>
+<li><strong>red-black tree</strong></li>
+<li><strong>B-tree</strong></li>
+<li><strong>splay tree</strong></li>
+<li><strong>AVL tree</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>multi-dimensional elements (TODO)
+<ul>
+<li><strong>Cartesian tree</strong></li>
+<li><strong>k-d tree</strong></li>
+</ul>
+</li>
+<li><strong>string lookup</strong> with with small alphabet
+<ul>
+<li><strong>trie</strong>
+<ul>
+<li><strong>prefix lookup</strong></li>
+<li><strong>wildcard lookup</strong></li>
+</ul>
+</li>
+<li><strong>bk-tree</strong>
+<ul>
+<li><strong>spell checking with edit distance</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>other tree structure
+<ul>
+<li><strong>Fenwick Tree</strong></li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li><strong>graph</strong>, represented by adjacency lists
+<ul>
+<li><strong>DFS</strong>, mark current, then recursively call adjs, ignore marked <code>V + E</code>
+<ul>
+<li><strong>topological sort</strong> and <strong>cycle detection</strong>, by finding final trees in it, and add all things are final to an array</li>
+<li><strong>connected components</strong></li>
+<li>undirected graph with each node has even degree has <strong>Eulerian cycle</strong>, only two odd degree has <strong>Eulerian path</strong>, then they can be constructed by DFS</li>
+<li>directed graph's <strong>Eulerian trail</strong> and <strong>Eulerian cycle</strong> depends on in-out degree and strong components</li>
+</ul>
+</li>
+<li><strong>BFS</strong> <code>V + E</code>, <strong>Dijkstra</strong> <code>E * log V</code>, <strong>A*</strong>, mark current, put childs into PQ, try next
+<ul>
+<li>directed/undirected <strong>single source shortest path</strong> for uniform/positive-weighted graph</li>
+</ul>
+</li>
+<li><strong>shortest/longest path for DAG</strong> relax by topological order <code>V + E</code>
+<ul>
+<li><strong>parallel job scheduling</strong> using longest path</li>
+</ul>
+</li>
+<li><strong>IDDFS</strong>, <strong>IDA*</strong> (TODO)</li>
+<li><strong>Bellman-Ford</strong> for negative weights <strong>single source shorted path</strong>, detects negative cycles, <code>V * E</code>. scan all edges and relax them
+in <code>V-1</code> times, if you can still relax, then you got a negative cycle</li>
+<li><strong>Floyd-Warshall</strong> for <strong>all pair shorted path</strong> negative weights without negative cycles <code>V^3</code></li>
+<li><strong>Kosaraju</strong> for <strong>strong components</strong> in directed graphs. dfs in the order of (reverse postorder of the reverse graph) <code>V + E</code>.
+consider a tree with first branch directional down, second bidirectional. if you reverse it, you get a tree
+with first branch directional up, second bidirectional. if you do the reverse postorder search from end of first
+tree, you will do it one pass, if you do it from left tree, you get two pass, the top of stack is always elements
+least reached if you follow (in original graph) the arrow... (TODO)</li>
+<li><strong>minimal spanning tree</strong> for weighted undirected graph
+<ul>
+<li><strong>Prim</strong> add the minimal edge and vertex to the tree each step, using a PQ, <code>E * log V</code></li>
+<li><strong>Kruskal</strong> add edges in order of length, skip the ones already connected</li>
+<li><strong>Boruvka</strong> initialize each vertex as disjoint components, for each component, add shortest edge to outside</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<script>
+renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\(", right: "\\)", display: false}
+              ]
+          }
+      );
+
+</script><div id="commento"><script src="https://cdn.commento.io/js/commento.js" data-css-override="https://molikto.github.io/resources/my-commento.css"></script></div></div></body></html>
