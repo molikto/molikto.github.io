@@ -65,5 +65,5 @@ Each AST node can have it's `Frag`, and we have created a representation of the 
 
 The thing looks like this:
 
-![](growing-structural/02.png)
+<img src="growing-structural/02.png" alt="drawing" width="800px"/>
 

@@ -62,7 +62,7 @@ val type = Type.Sum(
 
 The whole thing kind looks like this:
 
-![](growing-structural/01.png)
+<img src="growing-structural/01.png" alt="drawing" width="600px"/>
 
 --- 
 
