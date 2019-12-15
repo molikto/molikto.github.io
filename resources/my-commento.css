@@ -5,3 +5,7 @@
 .commento-name {
     color: #8fa0b4 !important;
 }
+
+.commento-root .commento-card {
+    border-top: 1px solid #464c58;
+}
