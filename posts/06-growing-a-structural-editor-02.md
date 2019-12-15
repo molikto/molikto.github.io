@@ -2,13 +2,13 @@
 title: Growing a Structural Editor: Layout Combinators
 ---
 
-* Series
-    1. [A Bootstrapped Tree Editor](posts/05-growing-a-structural-editor.html)
-    2. [Layout Combinators](posts/05-growing-a-structural-editor-02.html)
+1. [A Bootstrapped Tree Editor](05-growing-a-structural-editor.html)
+2. [Layout Combinators](05-growing-a-structural-editor-02.html)
+
 
 We have a tree editor now, but the visualization as a tree is not user-friendly, we need to layout the information in the tree in a compat way.
 
-The algorithm to do this is called a pretty printer. It is just traditionally pretty print print to a plain text file, but our pretty printer will try to layout GUI widgets.
+The algorithm to do this is called a pretty printer. It is just traditionally pretty-printers print to a plain text file, but our pretty printer will try to layout GUI widgets.
 
 The reverse of a parser combinator is a layout combinator. We have these basic combinator: 
 
