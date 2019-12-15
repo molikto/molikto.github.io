@@ -3,7 +3,7 @@ title: Growing a Structural Editor: Layout Combinators
 ---
 
 1. [A Bootstrapped Tree Editor](05-growing-a-structural-editor.html)
-2. [Layout Combinators](05-growing-a-structural-editor-02.html)
+2. [Layout Combinators](06-growing-a-structural-editor-02.html)
 
 
 We have a tree editor now, but the visualization as a tree is not user-friendly, we need to layout the information in the tree in a compat way.
