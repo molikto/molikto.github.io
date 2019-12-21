@@ -4,7 +4,7 @@ title: Growing a Structural Editor: Handling Mouse Clicking
 
 1. [A Bootstrapped Tree Editor](05-growing-a-structural-editor.html)
 2. [Layout Combinators](06-growing-a-structural-editor-02.html)
-3. [Handling Mouse Clicking](06-growing-a-structural-editor-03.html)
+3. [Handling Mouse Clicking](07-growing-a-structural-editor-03.html)
 
 
 In the last post, we didn't say how exactly the we go from `Frag` to pixels. One problem is because we want to support `LineFrag.Text` with different text sizes, we need to align texts in one line by baseline.

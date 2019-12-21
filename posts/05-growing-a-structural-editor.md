@@ -4,7 +4,7 @@ title: Growing a Structural Editor: A Bootstrapped Tree Editor
 
 1. [A Bootstrapped Tree Editor](05-growing-a-structural-editor.html)
 2. [Layout Combinators](06-growing-a-structural-editor-02.html)
-3. [Handling Mouse Clicking](06-growing-a-structural-editor-03.html)
+3. [Handling Mouse Clicking](07-growing-a-structural-editor-03.html)
 
 Programming language compilers normally parse texts into ASTs, and an alternative is to let users to directly edit the AST.
 
