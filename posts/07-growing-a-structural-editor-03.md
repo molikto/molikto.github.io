@@ -25,7 +25,7 @@ As we said before, the algorithm to line break is incremental. We also try to ma
 
 Lines starts with red color is lines needs to be redrawn when the text at the cursor is changed, most line is cached so layout after small text edit is super fast:
 
-<img src="growing-structural/03.png" alt="drawing" width="800px"/>
+<img src="growing-structural/03.png" alt="drawing" width="600px"/>
 
 -------
 
