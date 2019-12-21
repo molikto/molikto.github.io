@@ -4,6 +4,7 @@ title: Growing a Structural Editor: Layout Combinators
 
 1. [A Bootstrapped Tree Editor](05-growing-a-structural-editor.html)
 2. [Layout Combinators](06-growing-a-structural-editor-02.html)
+3. [Handling Mouse Clicking](06-growing-a-structural-editor-03.html)
 
 
 We have a tree editor now, but the visualization as a tree is not user-friendly, we need to layout the information in the tree in a compat way.
@@ -50,12 +51,12 @@ sealed trait Frag
 sealed trait BlockFrag extends Frag
 sealed trait LineFrag extends Frag
 object BlockFrag {
-  case class Compose(content: Seq[Frag]) extends BlockFrag
-  case class Tree(...) extends BlockFrag
+  class Compose(content: Seq[Frag]) extends BlockFrag
+  class Tree(...) extends BlockFrag
 }
 object LineFrag {
-  case class Compose(content: Seq[LineFrag]) extends BlockFrag
-  case class Text(content: String) extends BlockFrag
+  class Compose(content: Seq[LineFrag]) extends BlockFrag
+  class Text(content: String) extends BlockFrag
 }
 ```
 

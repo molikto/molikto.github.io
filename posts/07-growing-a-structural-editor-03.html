@@ -1,0 +1,34 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel="alternate" type="application/atom+xml" href="https://molikto.github.io/feed.xml" title="molikto’s weblog" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700|Roboto" rel="stylesheet" type="text/css" /><link href="/resources/solarized-dark.css" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" type="text/css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script><script src="/resources/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>Growing a Structural Editor: Handling Mouse Clicking</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /></head><body><div id="body"><h1><a href="/">molikto’s weblog</a></h1><div><a class="time" href="https://github.com/molikto/blog/commits/master//markdown/posts/07-growing-a-structural-editor-03.md"><time datetime="2019-12-21T23:17:01+08:00">2019-12-21</time></a></div><h2>Growing a Structural Editor: Handling Mouse Clicking</h2><ol>
+<li><a href="05-growing-a-structural-editor.html">A Bootstrapped Tree Editor</a></li>
+<li><a href="06-growing-a-structural-editor-02.html">Layout Combinators</a></li>
+<li><a href="06-growing-a-structural-editor-03.html">Handling Mouse Clicking</a></li>
+</ol>
+<p>In the last post, we didn't say how exactly the we go from <code>Frag</code> to pixels. One problem is because we want to support <code>LineFrag.Text</code> with different text sizes, we need to align texts in one line by baseline.</p>
+<p>After some experiment, the implementation is the most simple one:</p>
+<pre><code class="language-scala">class Line(pad: Float, items: Seq[LineFrag.Text])
+class Page(lines: Seq[Line])
+
+case class Pos(line: Int, cursor: Int)
+</code></pre>
+<p>Then each line can be measured. Then drawn.</p>
+<p>During measuring, each frag will cache it's start/end position using type <code>Pos</code>. This way from pixels in screen, we can easily lookup which line and <code>LineFrag.Text</code> is user pointing to, and then from information in <code>Frag</code> we can get which fragment does it corresponds to.</p>
+<p>As we said before, the algorithm to line break is incremental. We also try to make sure we don't produce <code>Line</code> when unnecessary by caching <code>Frag</code> which corresponds to entire lines.</p>
+<p>Lines starts with red color is lines needs to be redrawn then the text at the cursor is changed, most line is cached so layout after small text edit is super fast:</p>
+<img src="growing-structural/03.png" alt="drawing" width="800px"/>
+<hr />
+<p>Before this change, I tried to work directly with <code>Frag</code> and give each <code>Frag</code> a position relative to parent <code>Frag</code> and width and height, and draw directly using these information. This creates overly complicated and fragile code. So I guess the most direct way to program something is almost always the best.</p>
+<p><a href="https://github.com/molikto/medit">Project source code</a>.</p>
+<script>
+renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\(", right: "\\)", display: false}
+              ]
+          }
+      );
+
+</script><div id="commento"><script src="https://cdn.commento.io/js/commento.js" data-css-override="https://molikto.github.io/resources/my-commento.css"></script></div></div></body></html>
