@@ -4,7 +4,7 @@ title: Middle Grounds between Structural Editing and Text Editing
 
 
 
-For editors of programming languages, where user manipulate some textual representation of the AST, users usually have some level of freedom to break out what is considered valid AST, and we list some of them from the most strict ones:
+For editors of programming languages, where user manipulate some textual representation of the AST, users usually have some level of freedom to break out what is considered valid AST, and we list some of them from the most strict ones to least:
 * [Hazel](https://hazel.org/) is an editor where no **typing error** is allowed
 * [Lamdu](https://www.lamdu.org/) is an editor where no syntax error is allowed
 * [MPS](https://www.jetbrains.com/mps/)  is an editor that constantly performs syntax-directed and type-directed editing on the AST, but mimics text-editors
