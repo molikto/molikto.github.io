@@ -14,7 +14,7 @@ case class Pos(line: Int, cursor: Int)
 <p>During measuring, each frag will cache it's start/end position in the page using type <code>Pos</code>. This way from pixels in screen, we can easily lookup which line and <code>LineFrag.Text</code> is user pointing to, and then from information in <code>Frag</code> we can get which fragment does it corresponds to.</p>
 <p>As we said before, the algorithm to line break is incremental. We also try to make sure we don't produce <code>Line</code> when unnecessary by caching <code>Frag</code> which corresponds to entire lines.</p>
 <p>Lines starts with red color is lines needs to be redrawn when the text at the cursor is changed, most line is cached so layout after small text edit is super fast:</p>
-<img src="growing-structural/03.png" alt="drawing" width="600px"/>
+<img src="growing-structural/03.png" alt="drawing" width="700px"/>
 <hr />
 <p>Before this change, I tried to work directly with <code>Frag</code> and give each <code>Frag</code> a position relative to parent <code>Frag</code> and width and height, and draw directly using these information. This creates overly complicated and fragile code. So I guess the most direct way to program something is almost always the best.</p>
 <p><a href="https://github.com/molikto/medit">Project source code</a>.</p>

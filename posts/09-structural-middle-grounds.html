@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel="alternate" type="application/atom+xml" href="https://molikto.github.io/feed.xml" title="molikto’s weblog" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700|Roboto" rel="stylesheet" type="text/css" /><link href="/resources/solarized-dark.css" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" type="text/css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script><script src="/resources/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>Middle Grounds between Structural Editing and Text Editing</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /></head><body><div id="body"><h1><a href="/">molikto’s weblog</a></h1><div><a class="time" href="https://github.com/molikto/blog/commits/master//markdown/posts/09-structural-middle-grounds.md"><time datetime="2019-12-30T20:31:50+08:00">2019-12-30</time></a></div><h2>Middle Grounds between Structural Editing and Text Editing</h2><p>For editors of programming languages, where user manipulate some textual representation of the AST, users usually have some level of freedom to break out what is considered valid AST, and we list some of them from the most strict ones:</p>
+<ul>
+<li><a href="https://hazel.org/">Hazel</a> is an editor where no <strong>typing error</strong> is allowed</li>
+<li><a href="https://www.lamdu.org/">Lamdu</a> is an editor where no syntax error is allowed</li>
+<li><a href="https://www.jetbrains.com/mps/">MPS</a>  is an editor that constantly performs syntax-directed and type-directed editing on the AST, but mimics text-editors</li>
+<li><a href="https://github.com/softdevteam/eco">Eco</a> is an editor that works like a text editor when you are editing in a single language, but you can compose different languages and these language boxes works in a structural editor way</li>
+<li>text editors</li>
+</ul>
+<p>I think editors more strict (including) than MPS has their problems (which I don't want to elaborate).</p>
+<p>Let's consider what's between MPS and Eco, remembering Eco's idea is based on incremental parsing:</p>
+<ul>
+<li>An editor where lexicon is edited structurally like MPS but syntax is incrementally parsed like Eco.</li>
+</ul>
+<p>This has the advantage:</p>
+<ul>
+<li>Escape characters is not needed, so you can have a keyword <code>define</code> and a variable <code>define</code> and they will be displayed in different color</li>
+<li>Edits will not change lexicon's type, which is most of time undesired. We can have a &quot;paste as plain text&quot; like rich text editors to escape from this restriction</li>
+<li>Color and font matters: for example in a <a href="https://github.com/agda/cubical">cubical type theory</a> <code>1</code> can means number literal or a constant formula, but in Cubical Agda you need to write <code>i1</code> for the second case. In the proposed editor, they can have different font, and which lexicon is selected is edited in a type-directed way</li>
+</ul>
+<p>Also this allows a much more text-editor like UX: actually it is just a rich text editor.</p>
+<hr />
+<p>(This might be what I am going to do with the medit project, because I found whole structural way is too restricted and not practical, and generally I think this is an unexplored land)</p>
+<script>
+renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\(", right: "\\)", display: false}
+              ]
+          }
+      );
+
+</script><div id="commento"><script src="https://cdn.commento.io/js/commento.js" data-css-override="https://molikto.github.io/resources/my-commento.css"></script></div></div></body></html>
