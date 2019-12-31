@@ -7,13 +7,13 @@
 <li>text editors</li>
 </ul>
 <p>I think editors more strict (including) than MPS has their problems (which I don't want to elaborate).</p>
-<p>Let's consider what's between MPS and Eco, remembering Eco's idea is based on incremental parsing:</p>
+<p>Let's consider what's between MPS and Eco, remembering Eco's idea is based on incremental lexing &amp; parsing:</p>
 <ul>
 <li>An editor where lexicon is edited structurally like MPS but syntax is incrementally parsed like Eco.</li>
 </ul>
 <p>This has the advantage:</p>
 <ul>
-<li>Because whitespace is insignificant after lexing, we can do automate layout: you cannot do this in Eco because lexicon is incrementally parsed and can be edited arbitrarily, so you must preserve the whitespace and new lines exactly</li>
+<li>Because whitespace is insignificant after lexing, we can do automate layout: you cannot do this in Eco because lexicon is incrementally lexed and can be edited arbitrarily, so you must preserve the whitespace and new lines exactly</li>
 <li>Escape characters is not needed, so you can have a keyword <code>define</code> and a variable <code>define</code> and they will be displayed in different color</li>
 <li>Edits will not change lexicon's type, which is most of time undesired. We can have a &quot;paste as plain text&quot; like rich text editors to escape from this restriction</li>
 <li>Color and font matters: for example in a <a href="https://github.com/agda/cubical">cubical type theory</a> <code>1</code> can means number literal or a constant formula, but in Cubical Agda you need to write <code>i1</code> for the second case. In the proposed editor, they can have different font, and which lexicon is selected is edited in a type-directed way</li>
