@@ -6,7 +6,8 @@ title: Middle Grounds between Structural Editing and Text Editing
 
 For editors of programming languages, where user manipulate some textual representation of the AST, users usually have some level of freedom to break out what is considered valid AST, and we list some of them from the most strict ones to least:
 * [Hazel](https://hazel.org/) is an editor where no **typing error** is allowed
-* [MPS](https://www.jetbrains.com/mps/)  is an editor that constantly performs syntax-directed and type-directed editing on the AST, but mimics text-editors
+* Most structural editor only allow syntax-correct programs
+* [MPS](https://www.jetbrains.com/mps/)  is an editor that constantly performs syntax-directed and type-directed editing on the AST, but mimics text-editors. It allows some level of incorrect syntax. But in general the AST is not parsed, you cannot perform some complex editing, for example, wrapping some code by  `{}` and hope it just works like in a text editor
 * [Eco](https://github.com/softdevteam/eco) is an editor that works like a text editor when you are editing in a single language, but you can compose different languages and these language boxes works in a structural editor way
 * text editors
 
