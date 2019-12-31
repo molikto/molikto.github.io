@@ -28,7 +28,3 @@ This has the advantage:
 Also this allows a much more text-editor like UX: actually it is just a rich text editor.
 
 
----------
-
-(This might be what I am going to do with the medit project, because I found whole structural way is too restricted and not practical, and generally I think this is an unexplored land)
-
