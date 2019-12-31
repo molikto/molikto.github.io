@@ -15,14 +15,14 @@ I think editors more strict (including) than MPS has their problems (which I wil
  
 Let's consider what's between MPS and Eco, remembering Eco's idea is based on incremental lexing & parsing:
 
-* An editor where lexicon is edited structurally like MPS but syntax is incrementally parsed like Eco. So the data format in this editor is not a syntax tree (like in MPS), or string (like in text editors, and to some extends, Eco), but is a sequence of lexicons
+* An editor where token is edited structurally like MPS but syntax is incrementally parsed like Eco. So the data format in this editor is not a syntax tree (like in MPS), or string (like in text editors, and to some extends, Eco), but is a sequence of tokens
  
 This has the advantage:
  
-* Because whitespace is insignificant after lexing, we can do automate layout: you cannot do this in Eco because lexicon is incrementally lexed and can be edited arbitrarily, so you must preserve the whitespace and new lines exactly
+* Because whitespace is insignificant after lexing, we can do automate layout: you cannot do this in Eco because tokens is incrementally lexed, so you must preserve the whitespace and new lines exactly as whitespace will affect lexing result
 * Escape characters is not needed, so you can have a keyword `define` and a variable `define` and they will be displayed in different color
-* Edits will not change lexicon's type, which is most of time undesired. We can have a "paste as plain text" like rich text editors to escape from this restriction
-* Color and font matters: for example in a [cubical type theory](https://github.com/agda/cubical) `1` can means number literal or a constant formula, but in Cubical Agda you need to write `i1` for the second case. In the proposed editor, they can have different font, and which lexicon is selected is edited in a type-directed way
+* Edits will not change token's type, which is most of time undesired. We can have a "paste as plain text" like rich text editors to escape from this restriction
+* Color and font matters: for example in a [cubical type theory](https://github.com/agda/cubical) `1` can means number literal or a constant formula, but in Cubical Agda you need to write `i1` for the second case. In the proposed editor, they can have different font, and which one is selected is edited in a type-directed way
 
 Also this allows a much more text-editor like UX: actually it is just a rich text editor.
 
