@@ -29,8 +29,8 @@ object TypeTag {
   case class Ref(name: String) extends TypeTag
 }
 </code></pre>
-<p>Then it just so happens this framework is able to express it's own grammar. With some basic UI and basic key-binding, we will be able to create a syntax tree editor, and then bootstrap to edit the meta-syntax.</p>
-<p>For example, <code>Type</code> in it's own meta language is:</p>
+<p>Then it just so happens this framework is able to express it&rsquo;s own grammar. With some basic UI and basic key-binding, we will be able to create a syntax tree editor, and then bootstrap to edit the meta-syntax.</p>
+<p>For example, <code>Type</code> in it&rsquo;s own meta language is:</p>
 <pre><code class="language-scala">val type = Type.Sum(
   &quot;type&quot;,
   Seq(

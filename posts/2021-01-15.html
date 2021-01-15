@@ -1,7 +1,7 @@
 <!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel="alternate" type="application/atom+xml" href="https://molikto.github.io/feed.xml" title="molikto’s weblog" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700|Roboto" rel="stylesheet" type="text/css" /><link href="/resources/solarized-dark.css" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" type="text/css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script><script src="/resources/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>Note on 2021-01-15</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /></head><body><div id="body"><h1><a href="/">molikto’s weblog</a></h1><div><a class="time" href="https://github.com/molikto/blog/commits/master/markdown/posts/2021-01-15.md"><time datetime="2021-01-15T22:55:51+08:00">2021-01-15T22:55:51Z</time></a></div><h2>Note on 2021-01-15</h2><ul>
 <li>Q: How to integrate dependent type with mutability?
 <ul>
-<li>motivation: I am amazed by how <a href="https://github.com/leanprover/lean4">lean4</a> write it's elaborator in Lean itself: the elaborator code uses monadic code all the time. So I wonder if one can create a dependent typed language with good old mutable states?</li>
+<li>motivation: I am amazed by how <a href="https://github.com/leanprover/lean4">lean4</a> write it&rsquo;s elaborator in Lean itself: the elaborator code uses monadic code all the time. So I wonder if one can create a dependent typed language with good old mutable states?</li>
 <li>mutable reference is easy: <a href="https://softwareengineering.stackexchange.com/questions/255077/how-does-a-dependently-typed-programming-language-cope-with-mutability">link</a></li>
 <li>mutable cells? It seems we can just create a new sort <code>prop &lt; set &lt; mem</code>
 <ul>
@@ -19,7 +19,7 @@
 </li>
 <li>Q: Then how does other languages handle recursive functions in semantic domain?
 <ul>
-<li>in MiniTT <a href="https://github.com/kino3/Mini-TT/blob/master/Main.hs#L120">this line</a> is the key. The evaluation envirment doesn't contain semantical values of the recursive definition, but syntax of the recursive definition, with cycle breaked by indirection.</li>
+<li>in MiniTT <a href="https://github.com/kino3/Mini-TT/blob/master/Main.hs#L120">this line</a> is the key. The evaluation envirment doesn&rsquo;t contain semantical values of the recursive definition, but syntax of the recursive definition, with cycle breaked by indirection.</li>
 </ul>
 </li>
 </ul>

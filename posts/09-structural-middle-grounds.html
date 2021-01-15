@@ -6,7 +6,7 @@
 <li>text editors</li>
 </ul>
 <p>I think editors more strict (including) than MPS has their problems (which I will not elaborate here).</p>
-<p>Let's consider what's between MPS and Eco, remembering Eco's idea is based on incremental lexing &amp; parsing:</p>
+<p>Let&rsquo;s consider what&rsquo;s between MPS and Eco, remembering Eco&rsquo;s idea is based on incremental lexing &amp; parsing:</p>
 <ul>
 <li>An editor where token is edited structurally like MPS but syntax is incrementally parsed like Eco. So the data format in this editor is not a syntax tree (like in MPS), or string (like in text editors, and to some extends, Eco), but is a sequence of tokens</li>
 </ul>
@@ -14,7 +14,7 @@
 <ul>
 <li>Because whitespace is insignificant after lexing, we can do automate layout: you cannot do this in Eco because tokens is incrementally lexed, so you must preserve the whitespace and new lines exactly as whitespace will affect lexing result</li>
 <li>Escape characters is not needed, so you can have a keyword <code>define</code> and a variable <code>define</code> and they will be displayed in different color</li>
-<li>Edits will not change token's type, which is most of time undesired. We can have a &quot;paste as plain text&quot; like rich text editors to escape from this restriction</li>
+<li>Edits will not change token&rsquo;s type, which is most of time undesired. We can have a &ldquo;paste as plain text&rdquo; like rich text editors to escape from this restriction</li>
 <li>Color and font matters: for example in a <a href="https://github.com/agda/cubical">cubical type theory</a> <code>1</code> can means number literal or a constant formula, but in Cubical Agda you need to write <code>i1</code> for the second case. In the proposed editor, they can have different font, and which one is selected is edited in a type-directed way</li>
 </ul>
 <p>Also this allows a much more text-editor like UX: actually it is just a rich text editor.</p>

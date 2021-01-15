@@ -3,7 +3,7 @@
 <li><a href="06-growing-a-structural-editor-02.html">Layout Combinators</a></li>
 <li><a href="07-growing-a-structural-editor-03.html">Handling Mouse Clicking</a></li>
 </ol>
-<p>In the last post, we didn't say how exactly we go from <code>Frag</code> to pixels. One problem is because we want to support <code>LineFrag.Text</code> with different text sizes, we need to align texts in one line by baseline.</p>
+<p>In the last post, we didn&rsquo;t say how exactly we go from <code>Frag</code> to pixels. One problem is because we want to support <code>LineFrag.Text</code> with different text sizes, we need to align texts in one line by baseline.</p>
 <p>After some experiment, the implementation is the most simple one:</p>
 <pre><code class="language-scala">class Line(pad: Float, items: Seq[LineFrag.Text])
 class Page(lines: Seq[Line])
@@ -11,8 +11,8 @@ class Page(lines: Seq[Line])
 case class Pos(line: Int, cursor: Int)
 </code></pre>
 <p>Then each line can be measured. Then drawn.</p>
-<p>During measuring, each frag will cache it's start/end position in the page using type <code>Pos</code>. This way from pixels in screen, we can easily lookup which line and <code>LineFrag.Text</code> is user pointing to, and then from information in <code>Frag</code> we can get which fragment does it corresponds to.</p>
-<p>As we said before, the algorithm to line break is incremental. We also try to make sure we don't produce <code>Line</code> when unnecessary by caching <code>Frag</code> which corresponds to entire lines.</p>
+<p>During measuring, each frag will cache it&rsquo;s start/end position in the page using type <code>Pos</code>. This way from pixels in screen, we can easily lookup which line and <code>LineFrag.Text</code> is user pointing to, and then from information in <code>Frag</code> we can get which fragment does it corresponds to.</p>
+<p>As we said before, the algorithm to line break is incremental. We also try to make sure we don&rsquo;t produce <code>Line</code> when unnecessary by caching <code>Frag</code> which corresponds to entire lines.</p>
 <p>Lines starts with red color is lines needs to be redrawn when the text at the cursor is changed, most line is cached so layout after small text edit is super fast:</p>
 <img src="growing-structural/03.png" alt="drawing" width="700px"/>
 <hr />
