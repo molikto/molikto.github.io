@@ -7,7 +7,7 @@
 <ul>
 <li>mutable state is done by having fields in a telescope mutable, <code>def list(T: mem): men = record { mut head: T, tail: list(T) }</code></li>
 <li>a records/enum with mutable state will not allow dependency on <code>mut</code> field</li>
-<li>do we need sort polymorphic definitions? like <code>def point(T: α): α = record { first: T, second: T}</code>
+<li>do we need sort polymorphic definitions, like <code>def point(T: α): α = record { first: T, second: T}</code>?
 <ul>
 <li>much like <a href="https://pigworker.wordpress.com/2015/01/09/universe-hierarchies/">universe lifting</a>, no actual variable is introduced, but we just duplicate the definition at all sorts, and type check all of them</li>
 <li>does these non-first-class features enough? It reminds me of <a href="https://effekt-lang.org/design-considerations.html">non first class blocks in Effekt language</a></li>
