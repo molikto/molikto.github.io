@@ -79,11 +79,10 @@ blockquote {
 code {
     font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 
-    padding: .15rem .2rem;
+    padding: .1rem .1.5rem;
     font-size: 88%;
     color: #f0c5ce;
     background-color: #3b404b;
-    border-radius: .13rem;
 }
 
 
