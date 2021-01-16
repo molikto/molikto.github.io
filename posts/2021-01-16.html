@@ -25,9 +25,41 @@
 <li>(Tabled Type class Resolution)[https://arxiv.org/abs/2001.04301]</li>
 </ul>
 </li>
-<li>Q: How is extension methods implemented; are they just baby typeclasses?
+<li>Q: How is extension methods implemented
 <ul>
-<li>Lean seems to have it, <a href="https://arxiv.org/abs/1505.04324">this paper</a> and <a href="https://github.com/leanprover/lean4/blob/d3d245c711bba039ddf2f7e35ce483505aa2970e/tests/elabissues/overload_with_list_coercion.lean#L1">this</a></li>
+<li>Are they just baby typeclasses? No, because they can have different types. It is called ad-hoc overloading in <a href="https://arxiv.org/abs/1505.04324">Elaboration in Dependent Type Theory</a> and <a href="https://github.com/leanprover/lean4/blob/d3d245c711bba039ddf2f7e35ce483505aa2970e/tests/elabissues/overload_with_list_coercion.lean#L1">this</a></li>
+</ul>
+</li>
+<li>Q: Again, how the elaborator as a whole works: integrate meta solving, type class resolution, ad-hoc overloading and coercions?
+<ul>
+<li>The Lean 2 paper seems not apply very well to Lean 4 implementation</li>
+</ul>
+</li>
+<li>Overview of Lean 4 source code
+<ul>
+<li><a href="http://leanprover.github.io/talks/vu2019.pdf">slides from 2019</a>
+<ul>
+<li>outdated, compiler is in Lean</li>
+</ul>
+</li>
+<li><a href="http://leanprover.github.io/talks/LeanACL2.pdf">slides from 2020</a>
+<ul>
+<li>the object header is 1 word, it use 64bits to encode a lot of information</li>
+</ul>
+</li>
+<li>(Lean 4)[https://github.com/leanprover/lean4] repo <code>/src</code></li>
+<li><code>Lean</code> is the elaborator &amp; compiler of Lean implemented in Lean
+<ul>
+<li><code>Compiler</code> backend</li>
+<li><code>Elab</code> is the elaborator
+<ul>
+<li><code>PreDefinition</code> is termination checking, or translation to eliminators</li>
+</ul>
+</li>
+<li><code>Meta</code> is meta solving and all that</li>
+<li><code>Parser</code> is the extensible parsers and all that</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
