@@ -37,7 +37,7 @@
 <li>if we have rich text as source code, then we can require user to use color codes to represent implicit variables, or better, the &ldquo;auto bound implicit arguments&rdquo; rule is enabled only for currently opened editor, and elaborator is allowed to add the color code to the source code
 <ul>
 <li>no more editing is performed by the user, the user type the same amount of keys</li>
-<li>and the information saved in the source code is explicit, not implicit using very complex elaboration rules</li>
+<li>and the information saved in the source code is explicit, not implicit using fragile elaboration rules</li>
 </ul>
 </li>
 <li>for plain text, an alternative syntax for implicit arguments will do: <code>def comp: (f: #(x: C) → #y) → (g: y → #z)</code> where <code>#x</code> introduces a implicit argument, and <code>#(x: C)</code> introduces a implicit argument with type annotation</li>
