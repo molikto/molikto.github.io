@@ -11,7 +11,13 @@
 <li>the files of a project should be acyclic, <a href="https://github.com/lihaoyi/acyclic">lihaoyi/acyclic for Scala</a>, we should be able to linearly order all files in a project automately</li>
 <li>but I think it is not so ok to require folders to be acyclic, so we cannot automately reorder folders</li>
 <li>but still, I think each package should have a z-index, and there should be a linter to suggest reorderings based on dependency</li>
-<li>it is like my idea of language syntax based on rich text (nolex) instead of plain text, there are some similar design principle: the difference between editing stage and viewing stage, and doing more stuff at editing stage enables more possibilities</li>
+<li>it is like my idea of language syntax based on rich text (nolex) instead of plain text, there are some similar design principle: the difference between editing stage and elaboration stage, and doing more stuff at editing stage enables more possibilities</li>
+</ul>
+</li>
+<li>Why I am not using Lean but doing my own stuff?
+<ul>
+<li>I don&rsquo;t like universe variables, I wonder if lifting will work?</li>
+<li>I have some my own ideas on how to have a more natual syntax for math (see above), but arguably one should try improve upon Lean instead do your own.</li>
 </ul>
 </li>
 </ul>
