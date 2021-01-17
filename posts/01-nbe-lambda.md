@@ -1,5 +1,5 @@
 ---
-title: Tutorial: Compiled Normalization by Evaluation for Untyped Lambda Calculus (in Scala)
+title: Compiled Normalization by Evaluation for Untyped Lambda Calculus (in Scala)
 ---
 
 
