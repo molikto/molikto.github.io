@@ -2,7 +2,7 @@
 <p>This tutorial assumes you know untyped lambda calculus. And jargons like &ldquo;normal form&rdquo;, &ldquo;$\beta$-reduction&rdquo;. <em>Types and Programming Languages</em>, Chapter 3 will be sufficient.
 The code will be written in Scala, but it should be readable for any one familiar with functional languages</p>
 </blockquote>
-<h2>Basics</h2>
+<h2><a href="#basics" id="basics">Basics</a></h2>
 <p>Our terms of lambda calculus is defined as this, we are using <a href="https://en.wikipedia.org/wiki/De_Bruijn_index">de Bruijn index</a>:</p>
 <pre><code class="language-scala">abstract class Term
 abstract class Value extends Term
@@ -30,7 +30,7 @@ or in code <code>val c2 = Abs(Abs(App(v1, App(v1, v0))))</code></li>
 <p>For example: <code>eval(App(suc, c1))</code> is $\lambda s \lambda z. s (((\lambda x. \lambda y. (x\ y)) s) z)$
 or in code: <code>Abs(Abs(App(v1,App(App(Abs(Abs(App(v1,v0))),v1),v0))))</code></p>
 <p>but we can still reduce $((\lambda x. \lambda y. (x\ y)) s$ to $\lambda y (s\ y)$ inside the above lambda expression, and finally reduce the body to Church numeral 2.</p>
-<h2>Normalizers</h2>
+<h2><a href="#normalizers" id="normalizers">Normalizers</a></h2>
 <p>Unlike normal interpreters, normalizers will reduce inside the lambda expression and get normal form of possibly open expressions.</p>
 <p>Normalizers has their applications in partial evaluation and proof checkers like Coq.</p>
 <p>One can imagine create a normalizer that reduce the terms in the same fashion like a &ldquo;substitutional interpreter&rdquo;, but can reduce inside lambda expressions.  That&rsquo;s one way to create normalizers.</p>

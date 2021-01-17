@@ -1,18 +1,18 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel="alternate" type="application/atom+xml" href="https://molikto.github.io/feed.xml" title="molikto’s weblog" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700|Roboto" rel="stylesheet" type="text/css" /><link href="/resources/solarized-dark.css" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" type="text/css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script><script src="/resources/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>Comparison &amp; Observation of Rich Text Editors</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /></head><body><div id="body"><h1><a href="/">molikto’s weblog</a></h1><div><a class="time" href="https://github.com/molikto/blog/commits/master/markdown/posts/03-compare-editor.md"><time datetime="2018-05-21T13:51:08+08:00">2018-05-21</time></a></div><h2>Comparison &amp; Observation of Rich Text Editors</h2><h2>Types of text editors</h2>
-<h3>WYSIWYG</h3>
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel="alternate" type="application/atom+xml" href="https://molikto.github.io/feed.xml" title="molikto’s weblog" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700|Roboto" rel="stylesheet" type="text/css" /><link href="/resources/solarized-dark.css" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" type="text/css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script><script src="/resources/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>Comparison &amp; Observation of Rich Text Editors</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /></head><body><div id="body"><h1><a href="/">molikto’s weblog</a></h1><div><a class="time" href="https://github.com/molikto/blog/commits/master/markdown/posts/03-compare-editor.md"><time datetime="2018-05-21T13:51:08+08:00">2018-05-21</time></a></div><h2>Comparison &amp; Observation of Rich Text Editors</h2><h2><a href="#types-of-text-editors" id="types-of-text-editors">Types of text editors</a></h2>
+<h3><a href="#wysiwyg" id="wysiwyg">WYSIWYG</a></h3>
 <blockquote>
 <p>WYSIWYG editor is a system in which content (text and graphics) can be edited in a form closely resembling its appearance when printed or displayed as a finished product<br />
 — Wikipedia</p>
 </blockquote>
-<h3>Structural editor</h3>
+<h3><a href="#structural-editor" id="structural-editor">Structural editor</a></h3>
 <blockquote>
 <p>A structure editor, also structured editor or projectional editor, is any document editor that is cognizant of the document’s underlying structure.<br />
 — Wikipedia</p>
 </blockquote>
-<h3>Plain text editors with live preview</h3>
+<h3><a href="#plain-text-editors-with-live-preview" id="plain-text-editors-with-live-preview">Plain text editors with live preview</a></h3>
 <p>the plain text itself might be parsed into a AST. but you are not editing the AST, but editing that plain text, and you need to take care yourself if the edited result can be parsed or not</p>
 <p>examples of this kind is not included in this comparison, these are basically plain text editors, with syntax highlighting. example:  <a href="https://stackedit.io/">StackEdit</a></p>
-<h3>differences between WYSIWYG and structural editor</h3>
+<h3><a href="#differences-between-wysiwyg-and-structural-editor" id="differences-between-wysiwyg-and-structural-editor">differences between WYSIWYG and structural editor</a></h3>
 <p>there are editors that are both structural and WYSIWYG. compare them with this example:</p>
 <ul>
 <li>only WYSIWYG (Google Docs): <img src="03/Screen%20Shot%202018-05-21%20at%2012.16.49%201.png" alt="" />. you don’t know if you type  a new character, what format will it appear in (but you can if the current format is displayed in like for example a format menu)</li>
@@ -21,16 +21,16 @@
 </ul>
 <p>there are also other differences: structural editor usually has some semantical AST construction (heading), while WYSIWYG editor usually has some surface AST construction (font, font size).
 but there is no hard rules</p>
-<h3>differences between a plain text editor and structural editor</h3>
+<h3><a href="#differences-between-a-plain-text-editor-and-structural-editor" id="differences-between-a-plain-text-editor-and-structural-editor">differences between a plain text editor and structural editor</a></h3>
 <p>structural editor might has different editing operations you can perform. also the presentation is more “WYSIWYG” than plain text editors, for example, showing a url with no url plain text (but a modal dialog to edit the url), displaying images inline (instead of a url/file name)</p>
-<h2>Common data model</h2>
+<h2><a href="#common-data-model" id="common-data-model">Common data model</a></h2>
 <p>our data model will be similar to something like this:</p>
 <pre><code>Document = [Block]
 Block = BlockType1(content: [Inline]) | BlockType2(blocks: [Block])
 Inline = PlainText(string: String) | FormatedInline(format: Format, content: [Inline]) | EmbededImage(url: String)
 </code></pre>
 <p>so there are <code>Document</code> which is a list of <strong>block</strong>s and each block is either again some blocks (for example, <code>Blockquote(blocks: [Block])</code>) or a list of <strong>Inline</strong> elements</p>
-<h2>Aspects</h2>
+<h2><a href="#aspects" id="aspects">Aspects</a></h2>
 <ul>
 <li>type of editor</li>
 <li>underlining tech stack
@@ -62,7 +62,7 @@ Inline = PlainText(string: String) | FormatedInline(format: Format, content: [In
 <li>data model &amp; interoperability with other format</li>
 <li>tables?</li>
 </ul>
-<h2>candidates</h2>
+<h2><a href="#candidates" id="candidates">candidates</a></h2>
 <ul>
 <li>structural
 <ul>
@@ -84,7 +84,7 @@ Inline = PlainText(string: String) | FormatedInline(format: Format, content: [In
 </ul>
 </li>
 </ul>
-<h2>TeXmacs</h2>
+<h2><a href="#texmacs" id="texmacs">TeXmacs</a></h2>
 <ul>
 <li>
 <p>a structural editor that layout content WYSIWYG</p>
@@ -113,7 +113,7 @@ there is two level of selection block level and inline level
 <p>interoperability with other format: import/export as LaTeX</p>
 </li>
 </ul>
-<h2>Bear.app</h2>
+<h2><a href="#bearapp" id="bearapp">Bear.app</a></h2>
 <ul>
 <li>a structural editor that makes itself less (or more?) awkward by working like a Markdown plain text editor
 <ul>
@@ -134,7 +134,7 @@ there is two level of selection block level and inline level
 <li>selection: can select multiple ranges, and can use keyboard to navigate them</li>
 <li>data model: import/export from Markdown works ok, but not entirely the same</li>
 </ul>
-<h2>web based WYSIWYG editors</h2>
+<h2><a href="#web-based-wysiwyg-editors" id="web-based-wysiwyg-editors">web based WYSIWYG editors</a></h2>
 <p>seems all work the same to me…</p>
 <script>
 renderMathInElement(
