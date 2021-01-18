@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel="alternate" type="application/atom+xml" href="https://molikto.github.io/feed.xml" title="molikto’s weblog" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700|Roboto" rel="stylesheet" type="text/css" /><link href="/resources/solarized-dark.css" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" type="text/css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script><script src="/resources/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>Notes on various topic on dependent type theory</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /></head><body><div id="body"><h1><a href="/">molikto’s weblog</a></h1><div><a class="time" href="https://github.com/molikto/blog/commits/master/markdown/posts/2021-01-17.md"><time datetime="2021-01-17T12:59:39+08:00">2021-01-17</time></a></div><h2>Notes on various topic on dependent type theory</h2><ul>
+=======
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><link rel="alternate" type="application/atom+xml" href="https://molikto.github.io/feed.xml" title="molikto’s weblog" /><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700|Roboto" rel="stylesheet" type="text/css" /><link href="/resources/solarized-dark.css" rel="stylesheet" type="text/css" /><link href="/resources/blog.css" rel="stylesheet" type="text/css" /><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" rel="stylesheet" type="text/css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script><script src="/resources/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script><title>Note on various topic on dependent type theory</title><meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" /></head><body><div id="body"><h1><a href="/">molikto’s weblog</a></h1><div><a class="time" href="https://github.com/molikto/blog/commits/master/markdown/posts/2021-01-17.md"><time datetime="2021-01-17T12:59:39+08:00">2021-01-17</time></a></div><h2>Note on various topic on dependent type theory</h2><ul>
+>>>>>>> 5216947d165278282824db19e926722b4c2c9bd2
 <li><a href="https://www.youtube.com/watch?v=OmNqXP9Hp_A&amp;t=1725s">Memory layout and staging part 1: type-passing polymorphism, two-level type theory introduction</a>
 <ul>
 <li>only watched the first part</li>
@@ -8,32 +12,53 @@
 <ul>
 <li>take a look at <a href="https://github.com/leanprover-community/mathlib/tree/master/src">Lean mathlib</a>, I wish these packages are ordered like a math book chapters, by dependency relations</li>
 <li>it is misfit for using folders and files to represent packages</li>
+<<<<<<< HEAD
 <li>the files of a project should be acyclic, <a href="https://github.com/lihaoyi/acyclic">lihaoyi/acyclic for Scala</a>, we should be able to linearly order all files in a project automatically</li>
 <li>but I think it is not so ok to require folders to be acyclic, so we cannot automatically reorder folders</li>
 <li>but still, I think each package should have a z-index, and there should be a linter to suggest reorders based on dependency</li>
+=======
+<li>the files of a project should be acyclic, <a href="https://github.com/lihaoyi/acyclic">lihaoyi/acyclic for Scala</a>, we should be able to linearly order all files in a project automately</li>
+<li>but I think it is not so ok to require folders to be acyclic, so we cannot automately reorder folders</li>
+<li>but still, I think each package should have a z-index, and there should be a linter to suggest reorderings based on dependency</li>
+>>>>>>> 5216947d165278282824db19e926722b4c2c9bd2
 <li>it is like my idea of language syntax based on rich text (nolex) instead of plain text, there are some similar design principle: the difference between editing stage and elaboration stage, and doing more stuff at editing stage enables more possibilities</li>
 </ul>
 </li>
 <li>Why I am not using Lean but doing my own stuff?
 <ul>
 <li>I don&rsquo;t like universe variables, I wonder if lifting will work?</li>
+<<<<<<< HEAD
 <li>I have some my own ideas on how to have a more natural syntax for math (see above), but arguably one should try improve upon Lean instead do your own.</li>
+=======
+<li>I have some my own ideas on how to have a more natual syntax for math (see above), but arguably one should try improve upon Lean instead do your own.</li>
+>>>>>>> 5216947d165278282824db19e926722b4c2c9bd2
 </ul>
 </li>
 </ul>
 <h2><a href="#syntax" id="syntax">Syntax</a></h2>
 <ul>
+<<<<<<< HEAD
 <li>trying out Lean4. I don&rsquo;t understand why <code>camelCase</code> is preferred
 <ul>
 <li>it is ugly to write <code>idComp</code> and <code>compId</code>, the symmetry of <code>IdComp</code>/<code>CompId</code> or <code>id_comp</code>/<code>comp_id</code> is lost</li>
 <li>there are legibility issues with <code>snake_case.property</code>, because for me it looks like <code>snake</code> and <code>case.property</code>. but they can be mitigated:<br />
+=======
+<li>trying out Lean4. I don&rsquo;t understand why <code>camelCase</code> is prefered
+<ul>
+<li>it is ugly to write <code>idComp</code> and <code>compId</code>, the symmetry of <code>IdComp</code>/<code>CompId</code> or <code>id_comp</code>/<code>comp_id</code> is lost</li>
+<li>there are eligibility issues with <code>snake_case.property</code>, because for me it looks like <code>snake</code> and <code>case.property</code>. but they can be mitigated:<br />
+>>>>>>> 5216947d165278282824db19e926722b4c2c9bd2
 <img src="2021-01-17_demo.svg" alt="" /></li>
 </ul>
 </li>
 <li>idea: color coded syntax for introducing implicit variables, the two color bellow introduces normal variables and implicit variables:<br />
 <img src="2021-01-17_demo_color_code.svg" alt="" />
 <ul>
+<<<<<<< HEAD
 <li>for code in plain text (which is the case for all popular PLs), you can have elaboration rules like <a href="https://leanprover.github.io/lean4/doc/autobound.html#auto-bound-implict-arguments">Auto Bound Implicit Arguments</a>, but as said in that page &ldquo;some users may feel uncomfortable with it&rdquo;</li>
+=======
+<li>for code in plain text (which is the case for all popular PLs), you can have elaboration rules like <a href="https://leanprover.github.io/lean4/doc/autobound.html#auto-bound-implict-arguments">Auto Bound Implict Arguments</a>, but as said in that page &ldquo;some users may feel uncomfortable with it&rdquo;</li>
+>>>>>>> 5216947d165278282824db19e926722b4c2c9bd2
 <li>if we have rich text as source code, then we can require user to use color codes to represent implicit variables, or better, the &ldquo;auto bound implicit arguments&rdquo; rule is enabled only for currently opened editor, and elaborator is allowed to add the color code to the source code
 <ul>
 <li>no more editing is performed by the user, the user type the same amount of keys</li>
